@@ -225,10 +225,10 @@
 #define METATILE_General_RoughDeepWater        0x14F
 #define METATILE_General_RoughWater            0x14E
 #define METATILE_General_SandPit_Center        0x121
-#define METATILE_General_SecretBase_TreeLeft   0x026
-#define METATILE_General_SecretBase_TreeRight  0x027
-#define METATILE_General_SecretBase_VineLeft   0x036
-#define METATILE_General_SecretBase_VineRight  0x037
+#define METATILE_General_SecretBase_TreeLeft   0x1E6
+#define METATILE_General_SecretBase_TreeRight  0x1E7
+#define METATILE_General_SecretBase_VineLeft   0x1E4
+#define METATILE_General_SecretBase_VineRight  0x1E5
 #define METATILE_General_TallGrass             0x00D
 #define METATILE_General_TallGrass_TreeLeft    0x1C6
 #define METATILE_General_TallGrass_TreeRight   0x1C7
@@ -391,7 +391,7 @@
 // gTileset_Petalburg
 #define METATILE_Petalburg_Door_BirchsLab   0x249
 #define METATILE_Petalburg_Door_Littleroot  0x248
-#define METATILE_Petalburg_Door_Oldale      0x287
+#define METATILE_Petalburg_Door_Oldale      0x27A
 
 // gTileset_PokemonCenter
 #define METATILE_PokemonCenter_CounterBarrier            0x25D
