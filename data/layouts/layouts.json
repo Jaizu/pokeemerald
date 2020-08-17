@@ -4450,6 +4450,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/CelantoTown_Library/border.bin",
       "blockdata_filepath": "data/layouts/CelantoTown_Library/map.bin"
+    },
+    {
+      "id": "LAYOUT_RELIQUIA_RUINS",
+      "name": "ReliquiaRuins_Layout",
+      "width": 44,
+      "height": 58,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ReliquiaRuins/border.bin",
+      "blockdata_filepath": "data/layouts/ReliquiaRuins/map.bin"
     }
   ]
 }

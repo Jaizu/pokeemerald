@@ -1,4 +1,5 @@
 .equ LOCALID_OLD_MAN, 6
+.equ LOCALID_CELANTO_PATH_GUARD, 7
 
 // TODO: Remove temporary defines:
 .equ SPECIES_SHAYMIN, 0x221 // TODO: Actually add Shaymin Pokémon
@@ -106,6 +107,26 @@ CelantoTown_Text_MySisterWentOutWithoutAPokemon::
     .string "Now I've dedicated my life to\n"
     .string "safeguarding the town from Pokémon.$"
 
+CelantoTown_EventScript_CelantoPathGuardTrigger::
+    lock
+	applymovement LOCALID_CELANTO_PATH_GUARD, Common_Movement_WalkInPlaceFastestDown
+	waitmovement 0
+	playse SE_PIN
+	applymovement LOCALID_CELANTO_PATH_GUARD, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_CELANTO_PATH_GUARD, Common_Movement_Delay48
+	waitmovement 0
+    msgbox CelantoTown_Text_YouCantGoOutThere, MSGBOX_AUTOCLOSE
+    applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+    release
+    end
+
+CelantoTown_Text_YouCantGoOutThere:
+    .string "{COLOR BLUE}Hey! You can't go out there\n"
+    .string "without a Pokémon!\p"
+    .string "It's way too dangerous!$"
+    
 CelantoTown_EventScript_RuinManiac::
 	msgbox CelantoTown_Text_MyLifesDream, MSGBOX_NPC
 	end

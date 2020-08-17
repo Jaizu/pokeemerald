@@ -12,7 +12,13 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "direction": "down",
+      "offset": 20,
+      "map": "MAP_RELIQUIA_RUINS"
+    }
+  ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MOM",
@@ -149,27 +155,27 @@
       "x": 6,
       "y": 19,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_CELANTO_TOWN_STATE",
+      "var_value": "4",
+      "script": "CelantoTown_EventScript_CelantoPathGuardTrigger"
     },
     {
       "type": "trigger",
       "x": 6,
       "y": 20,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_CELANTO_TOWN_STATE",
+      "var_value": "4",
+      "script": "CelantoTown_EventScript_CelantoPathGuardTrigger"
     },
     {
       "type": "trigger",
       "x": 6,
       "y": 21,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_CELANTO_TOWN_STATE",
+      "var_value": "4",
+      "script": "CelantoTown_EventScript_CelantoPathGuardTrigger"
     },
     {
       "type": "trigger",
