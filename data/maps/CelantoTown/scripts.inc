@@ -158,4 +158,4 @@ CelantoTown_EventScript_LibrarySign::
 CelantoTown_Text_LibrarySign::
     .string "Celanto Library\p"
     .string "Knowledge is learned,\n"
-    .string "Wisdom is earned.$"
+    .string "wisdom is earned.$"
