@@ -36,4 +36,10 @@ CelantoTown_PlayersHouse_2F_Text_PlayedWithTheNES::
 
 CelantoTown_PlayersHouse_2F_EventScript_DustyTome::
     finditem ITEM_DUSTY_TOME
+    compare VAR_CELANTO_TOWN_STATE, 2
+    call_if_eq CelantoTown_PlayersHouse_2F_EventScript_EnableRunningShoesTrigger
     end
+    
+CelantoTown_PlayersHouse_2F_EventScript_EnableRunningShoesTrigger:
+    setvar VAR_CELANTO_TOWN_STATE, 3
+    return

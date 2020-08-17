@@ -45,7 +45,24 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_CELANTO_TOWN_STATE",
+      "var_value": "3",
+      "script": "CelantoTown_PlayersHouse_1F_EventScript_GiveRunningShoesTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_CELANTO_TOWN_STATE",
+      "var_value": "2",
+      "script": "CelantoTown_PlayersHouse_1F_EventScript_GetTheBookTrigger"
+    }
   ],
   "bg_events": [
 
