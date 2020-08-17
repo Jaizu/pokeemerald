@@ -1,7 +1,8 @@
-.equ SPECIES_SHAYMIN, 0x221
-.equ ITEM_GRACIDEA, 0x181
 .equ LOCALID_OLD_MAN, 6
-.equ VAR_POST_GAME, 0x4095
+
+// TODO: Remove temporary defines:
+.equ SPECIES_SHAYMIN, 0x221 // TODO: Actually add Shaymin Pokémon
+.equ ITEM_GRACIDEA, 0x181   // TODO: Actually add Gracidea item
 
 CelantoTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, CelantoTown_OnTransition
@@ -13,19 +14,19 @@ CelantoTown_OnTransition::
 	end
 
 CelantoTown_OnFrame::
-	map_script_2 VAR_POST_GAME, 2, CelantoTown_EventScript_RedwoodValorTicket
+	map_script_2 VAR_POST_GAME_STATE, 2, CelantoTown_EventScript_RedwoodValorTicket
 	.2byte 0
 
 CelantoTown_EventScript_RedwoodValorTicket::
     lockall
-    setvar VAR_POST_GAME, 3
+    setvar VAR_POST_GAME_STATE, 3
 	releaseall
 	end
 
 CelantoTown_EventScript_OldMan::
     lock
     faceplayer
-    goto_if_set FLAG_UNUSED_0x020, CelantoTown_EventScript_OldManDiscussGracidea
+    goto_if_set FLAG_GOT_GRACIDEA, CelantoTown_EventScript_OldManDiscussGracidea
 	msgbox CelantoTown_Text_ThisFlowerIsStriking
     setvar VAR_0x8004, SPECIES_SHAYMIN
     specialvar VAR_RESULT, IsPokemonJumpSpeciesInParty // TODO: Port DoesPlayerPartyContainSpecies
@@ -42,7 +43,7 @@ CelantoTown_EventScript_OldManTryGiveGracidea::
 	waitmovement 0
     msgbox CelantoTown_Text_YourShayminIsBeautiful
 	giveitem ITEM_GRACIDEA
-	setflag FLAG_UNUSED_0x020
+	setflag FLAG_GOT_GRACIDEA
 	additem ITEM_GRACIDEA
 	goto CelantoTown_EventScript_OldManDiscussGracidea
 
