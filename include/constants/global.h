@@ -109,4 +109,6 @@
 #define DIR_NORTHWEST   7
 #define DIR_NORTHEAST   8
 
+#define SLOW_MOVEMENT_ON_STAIRS         TRUE
+
 #endif // GUARD_CONSTANTS_GLOBAL_H
