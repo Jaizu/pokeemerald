@@ -830,3 +830,14 @@ gTileset_UnionRoom:: @ 83DFDFC
 	.4byte gMetatiles_UnionRoom
 	.4byte gMetatileAttributes_UnionRoom
 	.4byte NULL @ animation callback
+
+	.align 2
+gTileset_Indoors::
+	.byte TRUE @ is compressed
+	.byte FALSE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_Indoors
+	.4byte gTilesetPalettes_Indoors
+	.4byte gMetatiles_Indoors
+	.4byte gMetatileAttributes_Indoors
+	.4byte NULL

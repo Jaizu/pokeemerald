@@ -50,7 +50,7 @@ extern const u8 EventScript_ResetAllMapFlags[];
 
 // this file's functions
 static void ClearFrontierRecord(void);
-static void WarpToTruck(void);
+static void WarpToPlayersRoom(void);
 static void ResetMiniGamesResults(void);
 
 // EWRAM vars
@@ -126,9 +126,9 @@ static void ClearFrontierRecord(void)
     gSaveBlock2Ptr->frontier.opponentNames[1][0] = EOS;
 }
 
-static void WarpToTruck(void)
+static void WarpToPlayersRoom(void)
 {
-    SetWarpDestination(MAP_GROUP(CELANTO_TOWN), MAP_NUM(CELANTO_TOWN), -1, 37, 16);
+    SetWarpDestination(MAP_GROUP(CELANTO_TOWN_PLAYERS_HOUSE_2F), MAP_NUM(CELANTO_TOWN_PLAYERS_HOUSE_2F), -1, 5, 6);
     WarpIntoMap();
 }
 
@@ -194,7 +194,7 @@ void NewGameInitData(void)
     InitDewfordTrend();
     ResetFanClub();
     ResetLotteryCorner();
-    WarpToTruck();
+    WarpToPlayersRoom();
     ScriptContext2_RunNewScript(EventScript_ResetAllMapFlags);
     ResetMiniGamesResults();
     InitUnionRoomChatRegisteredTexts();
