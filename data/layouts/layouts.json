@@ -4440,6 +4440,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/CelantoTown_PlayersHouse_2F/border.bin",
       "blockdata_filepath": "data/layouts/CelantoTown_PlayersHouse_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_CELANTO_TOWN_LIBRARY",
+      "name": "CelantoTown_Library_Layout",
+      "width": 17,
+      "height": 14,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/CelantoTown_Library/border.bin",
+      "blockdata_filepath": "data/layouts/CelantoTown_Library/map.bin"
     }
   ]
 }
