@@ -1062,3 +1062,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/text/birch_speech.inc"
 
 	.include "data/maps/CelantoTown/scripts.inc"
+
+	.include "data/maps/CelantoTown_PlayersHouse_1F/scripts.inc"

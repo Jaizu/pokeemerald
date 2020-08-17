@@ -4420,6 +4420,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/CelantoTown/border.bin",
       "blockdata_filepath": "data/layouts/CelantoTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_CELANTO_TOWN_PLAYERS_HOUSE_1F",
+      "name": "CelantoTown_PlayersHouse_1F_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/CelantoTown_PlayersHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/CelantoTown_PlayersHouse_1F/map.bin"
     }
   ]
 }
