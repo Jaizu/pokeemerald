@@ -11,7 +11,7 @@ CelantoTown_PlayersHouse_2F_OnWarp:
 
 CelantoTown_PlayersHouse_2F_EventScript_TurnPlayerNorth::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
-    setvar VAR_CELANTO_TOWN_STATE, 1
+	setvar VAR_CELANTO_TOWN_STATE, 1
 	end
 
 CelantoTown_PlayersHouse_2F_EventScript_PC::
@@ -25,20 +25,20 @@ CelantoTown_PlayersHouse_2F_EventScript_PC::
 	end
 
 CelantoTown_PlayersHouse_2F_EventScript_NES::
-    msgbox CelantoTown_PlayersHouse_2F_Text_PlayedWithTheNES, MSGBOX_SIGN
-    end
+	msgbox CelantoTown_PlayersHouse_2F_Text_PlayedWithTheNES, MSGBOX_SIGN
+	end
 
 CelantoTown_PlayersHouse_2F_Text_PlayedWithTheNES::
-    .string "{PLAYER} played with the NES.\p"
-    .string "…Okay!\n"
-    .string "It's time to go!$"
+	.string "{PLAYER} played with the NES.\p"
+	.string "…Okay!\n"
+	.string "It's time to go!$"
 
 CelantoTown_PlayersHouse_2F_EventScript_DustyTome::
-    finditem ITEM_DUSTY_TOME
-    compare VAR_CELANTO_TOWN_STATE, 2
-    call_if_eq CelantoTown_PlayersHouse_2F_EventScript_EnableRunningShoesTrigger
-    end
-    
+	finditem ITEM_DUSTY_TOME
+	compare VAR_CELANTO_TOWN_STATE, 2
+	call_if_eq CelantoTown_PlayersHouse_2F_EventScript_EnableRunningShoesTrigger
+	end
+
 CelantoTown_PlayersHouse_2F_EventScript_EnableRunningShoesTrigger:
-    setvar VAR_CELANTO_TOWN_STATE, 3
-    return
+	setvar VAR_CELANTO_TOWN_STATE, 3
+	return
