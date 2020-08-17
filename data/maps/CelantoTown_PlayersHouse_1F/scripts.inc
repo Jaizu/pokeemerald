@@ -40,8 +40,7 @@ CelantoTown_PlayersHouse_1F_EventScript_DeliverLetterScene::
     msgbox CelantoTown_PlayersHouse_1F_Text_HowStrange
     call CelantoTown_PlayersHouse_1F_EventScript_GiveRunningShoes
 	applymovement LOCALID_MOM, CelantoTown_PlayersHouse_1F_Movement_MomReturnToTable
-	waitmovement 0    
-    setvar VAR_CELANTO_TOWN_STATE, 4
+	waitmovement 0
 	releaseall
 	end
 
@@ -107,9 +106,6 @@ CelantoTown_PlayersHouse_1F_EventScript_GiveRunningShoesTrigger::
     call CelantoTown_PlayersHouse_1F_EventScript_GiveRunningShoes
 	applymovement LOCALID_MOM, CelantoTown_PlayersHouse_1F_Movement_MomWalkFromExitToTable
 	waitmovement 0
-    setmetatile 3, 7, METATILE_Indoors_UnlockedDoor, 0
-	special DrawWholeMapView    
-    setvar VAR_CELANTO_TOWN_STATE, 4
 	releaseall
 	end
 
@@ -137,10 +133,14 @@ CelantoTown_PlayersHouse_1F_EventScript_GiveRunningShoes::
 	msgbox CelantoTown_PlayersHouse_1F_Text_OhIJustRemembered
 	playfanfare MUS_FANFA4
 	message LittlerootTown_Text_SwitchShoesWithRunningShoes
-	setflag FLAG_SYS_B_DASH
 	waitfanfare
+	setflag FLAG_SYS_B_DASH
     waitmessage
+    delay 30
 	msgbox CelantoTown_PlayersHouse_1F_Text_ExplainRunningShoes, MSGBOX_AUTOCLOSE
+    setvar VAR_CELANTO_TOWN_STATE, 4
+    setmetatile 3, 7, METATILE_Indoors_UnlockedDoor, 0
+	special DrawWholeMapView
     return
 
 CelantoTown_PlayersHouse_1F_Text_OhPlayer:
@@ -178,3 +178,33 @@ CelantoTown_PlayersHouse_1F_EventScript_GetTheBookTrigger::
 CelantoTown_PlayersHouse_1F_Text_GetTheBookFirst:
     .string "Mom: {COLOR RED}Don't forget to get your\n"
     .string "book, from upstairs, first!$"
+
+CelantoTown_PlayersHouse_1F_EventScript_Mom::
+    lock
+    faceplayer
+    compare VAR_CELANTO_TOWN_STATE, 4
+    call_if_eq CelantoTown_PlayersHouse_1F_EventScript_MomDontLeaveHerWaiting
+    compare VAR_CELANTO_TOWN_STATE, 3
+    call_if_eq CelantoTown_PlayersHouse_1F_EventScript_GiveRunningShoes
+    compare VAR_CELANTO_TOWN_STATE, 2
+    call_if_eq CelantoTown_PlayersHouse_1F_EventScript_MomGoGetBook
+    applymovement LOCALID_MOM, Common_Movement_FaceOriginalDirection
+    waitmovement 0
+    release
+    end
+
+CelantoTown_PlayersHouse_1F_EventScript_MomDontLeaveHerWaiting:
+    msgbox CelantoTown_PlayersHouse_1F_Text_DontLeaveHerWaiting
+    return
+
+CelantoTown_PlayersHouse_1F_Text_DontLeaveHerWaiting:
+    .string "Mom: {COLOR RED}Those Running Shoes should\n"
+    .string "help you get there faster!\p"
+    .string "The Letter asked to meet at the\n"
+    .string "{COLOR GREEN}Reliquia Ruins{COLOR RED}, right?\p"
+    .string "Well, make sure you stay safe!\n"
+    .string "I love you, {PLAYER}!$"
+
+CelantoTown_PlayersHouse_1F_EventScript_MomGoGetBook:
+    msgbox CelantoTown_PlayersHouse_1F_Text_GetTheBookFirst
+    return
