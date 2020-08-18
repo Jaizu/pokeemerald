@@ -395,7 +395,6 @@
 #define METATILE_PetalburgGym_SlidingDoor_Frame4  0x21C
 
 // gTileset_Petalburg
-#define METATILE_Petalburg_Door_BirchsLab     0x249
 #define METATILE_Petalburg_Door_Condominiums  0x27A
 #define METATILE_Petalburg_Door_Littleroot    0x248
 
