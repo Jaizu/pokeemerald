@@ -91,13 +91,14 @@
 #define FLAG_UNUSED_0x04F    0x4F // Unused Flag
 
 // Scripts
-#define FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT  0x50
+#define FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT  0x50 // TODO: Remove references to this
+#define FLAG_GOT_GRACIDEA                    0x50 // FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT in Emerald
 #define FLAG_SET_WALL_CLOCK                  0x51
 #define FLAG_RESCUED_BIRCH                   0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS       0x53
 
-#define FLAG_GOT_GRACIDEA                    0x54  // Unused in Emerald
-#define FLAG_HIDE_DUSTY_TOME                 0x55  // Unused in Emerald
+#define FLAG_UNUSED_0x054                    0x54  // Unused Flag
+#define FLAG_UNUSED_0x055                    0x55  // Unused Flag
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
 #define FLAG_MET_RIVAL_MOM                   0x57
@@ -594,9 +595,12 @@
 #define FLAG_HIDDEN_ITEM_SAFARI_ZONE_SOUTH_EAST_FULL_RESTORE (FLAG_HIDDEN_ITEMS_START + 0x69)
 #define FLAG_HIDDEN_ITEM_SS_TIDAL_LOWER_DECK_LEFTOVERS       (FLAG_HIDDEN_ITEMS_START + 0x23)
 #define FLAG_HIDDEN_ITEM_VICTORY_ROAD_1F_ULTRA_BALL          (FLAG_HIDDEN_ITEMS_START + 0x51)
-#define FLAG_HIDDEN_ITEM_ROUTE_104_SUPER_POTION              (FLAG_HIDDEN_ITEMS_START + 0x2C)
-#define FLAG_HIDDEN_ITEM_ROUTE_104_POKE_BALL                 (FLAG_HIDDEN_ITEMS_START + 0x3E)
-#define FLAG_HIDDEN_ITEM_ROUTE_104_POTION                    (FLAG_HIDDEN_ITEMS_START + 0x25)
+#define FLAG_HIDDEN_ITEM_ROUTE_104_SUPER_POTION              (FLAG_HIDDEN_ITEMS_START + 0x2C) // TODO: Remove references to this
+#define FLAG_HIDDEN_ITEM_RELIQUIA_RUINS_POTION               (FLAG_HIDDEN_ITEMS_START + 0x2C) // FLAG_HIDDEN_ITEM_ROUTE_104_SUPER_POTION in Emerald
+#define FLAG_HIDDEN_ITEM_ROUTE_104_POKE_BALL                 (FLAG_HIDDEN_ITEMS_START + 0x3E) // TODO: Remove references to this
+#define FLAG_HIDDEN_ITEM_RELIQUIA_RUINS_HYPER_POTION         (FLAG_HIDDEN_ITEMS_START + 0x3E) // FLAG_HIDDEN_ITEM_ROUTE_104_POKE_BALL in Emerald
+#define FLAG_HIDDEN_ITEM_ROUTE_104_POTION                    (FLAG_HIDDEN_ITEMS_START + 0x25) // TODO: Remove references to this
+#define FLAG_HIDDEN_ITEM_RELIQUIA_RUINS_BLUE_SHARD           (FLAG_HIDDEN_ITEMS_START + 0x25) // FLAG_HIDDEN_ITEM_ROUTE_104_POTION in Emerald
 #define FLAG_HIDDEN_ITEM_ROUTE_104_ANTIDOTE                  (FLAG_HIDDEN_ITEMS_START + 0x55)
 #define FLAG_HIDDEN_ITEM_ROUTE_104_HEART_SCALE               (FLAG_HIDDEN_ITEMS_START + 0x58)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_HEART_SCALE               (FLAG_HIDDEN_ITEMS_START + 0x59)
@@ -740,13 +744,20 @@
 #define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag
 
 // Event Flags
-#define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
-#define FLAG_HIDE_APPRENTICE                                        0x2BD
-#define FLAG_HIDE_POKEMON_CENTER_2F_MYSTERY_GIFT_MAN                0x2BE
-#define FLAG_HIDE_UNION_ROOM_PLAYER_1                               0x2BF
-#define FLAG_HIDE_UNION_ROOM_PLAYER_2                               0x2C0
-#define FLAG_HIDE_UNION_ROOM_PLAYER_3                               0x2C1
-#define FLAG_HIDE_UNION_ROOM_PLAYER_4                               0x2C2
+#define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC // TODO: Remove references to this
+#define FLAG_HIDE_DUSTY_TOME                                        0x2BC // FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG in Emerald
+#define FLAG_HIDE_APPRENTICE                                        0x2BD // TODO: Remove references to this
+#define FLAG_HIDE_CELANTO_TOWN_MOM                                  0x2BD // FLAG_HIDE_APPRENTICE in Emerald
+#define FLAG_HIDE_POKEMON_CENTER_2F_MYSTERY_GIFT_MAN                0x2BE // TODO: Remove references to this
+#define FLAG_HIDE_CELANTO_TOWN_REDWOOD                              0x2BE // FLAG_HIDE_POKEMON_CENTER_2F_MYSTERY_GIFT_MAN in Emerald
+#define FLAG_HIDE_UNION_ROOM_PLAYER_1                               0x2BF // TODO: Remove references to this
+#define FLAG_HIDE_RELIQUIA_RUINS_MORGANA                            0x2BF // FLAG_HIDE_UNION_ROOM_PLAYER_1 in Emerald
+#define FLAG_HIDE_UNION_ROOM_PLAYER_2                               0x2C0 // TODO: Remove references to this
+#define FLAG_HIDE_CELANTO_LIBRARY_COULTER                           0x2C0 // FLAG_HIDE_UNION_ROOM_PLAYER_2 in Emerald
+#define FLAG_HIDE_UNION_ROOM_PLAYER_3                               0x2C1 // TODO: Remove references to this
+#define FLAG_HIDE_CELANTO_LIBRARY_RICHTER                           0x2C1 // FLAG_HIDE_UNION_ROOM_PLAYER_3 in Emerald
+#define FLAG_HIDE_UNION_ROOM_PLAYER_4                               0x2C2 // TODO: Remove references to this
+#define FLAG_HIDE_CELANTO_LIBRARY_REDWOOD                           0x2C2 // FLAG_HIDE_UNION_ROOM_PLAYER_4 in Emerald
 #define FLAG_HIDE_UNION_ROOM_PLAYER_5                               0x2C3
 #define FLAG_HIDE_UNION_ROOM_PLAYER_6                               0x2C4
 #define FLAG_HIDE_UNION_ROOM_PLAYER_7                               0x2C5
@@ -1044,9 +1055,12 @@
 #define FLAG_HIDE_RUSTBORO_CITY_POKEMON_SCHOOL_SCOTT                0x3E7
 
 // Item Ball Flags
-#define FLAG_ITEM_ROUTE_102_POTION                                  0x3E8
-#define FLAG_ITEM_ROUTE_116_X_SPECIAL                               0x3E9
-#define FLAG_ITEM_ROUTE_104_PP_UP                                   0x3EA
+#define FLAG_ITEM_ROUTE_102_POTION                                  0x3E8 // TODO: Remove references to this
+#define FLAG_ITEM_RELIQUIA_RUINS_REVIVE                             0x3E8 // FLAG_ITEM_ROUTE_102_POTION in Emerald
+#define FLAG_ITEM_ROUTE_116_X_SPECIAL                               0x3E9 // TODO: Remove references to this
+#define FLAG_ITEM_RELIQUIA_RUINS_SHINY_STONE                        0x3E9 // FLAG_ITEM_ROUTE_116_X_SPECIAL in Emerald
+#define FLAG_ITEM_ROUTE_104_PP_UP                                   0x3EA // TODO: Remove references to this
+#define FLAG_ITEM_RELIQUIA_RUINS_TM37                               0x3EA // FLAG_ITEM_ROUTE_104_PP_UP in Emerald
 #define FLAG_ITEM_ROUTE_105_IRON                                    0x3EB
 #define FLAG_ITEM_ROUTE_106_PROTEIN                                 0x3EC
 #define FLAG_ITEM_ROUTE_109_PP_UP                                   0x3ED

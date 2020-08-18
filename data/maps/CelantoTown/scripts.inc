@@ -1,3 +1,4 @@
+.equ LOCALID_MOM, 1
 .equ LOCALID_OLD_MAN, 6
 .equ LOCALID_CELANTO_PATH_GUARD, 7
 
@@ -7,21 +8,10 @@
 
 CelantoTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, CelantoTown_OnTransition
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, CelantoTown_OnFrame
 	.byte 0
 
 CelantoTown_OnTransition::
 	setflag FLAG_VISITED_PETALBURG_CITY
-	end
-
-CelantoTown_OnFrame::
-	map_script_2 VAR_POST_GAME_STATE, 2, CelantoTown_EventScript_RedwoodValorTicket
-	.2byte 0
-
-CelantoTown_EventScript_RedwoodValorTicket::
-	lockall
-	setvar VAR_POST_GAME_STATE, 3
-	releaseall
 	end
 
 CelantoTown_EventScript_OldMan::
@@ -83,7 +73,8 @@ CelantoTown_Text_ThatGracideaYourPokemonWillLoveIt::
 CelantoTown_EventScript_CelantoPathGuard::
 	lock
 	faceplayer
-	goto_if_set FLAG_SYS_POKEMON_GET, CelantoTown_EventScript_CelantoPathGuardSisterStory
+	compare VAR_CELANTO_TOWN_GUARD, 1
+	goto_if_ge CelantoTown_EventScript_CelantoPathGuardSisterStory
 	msgbox CelantoTown_Text_WildPokemonPastHereAreDangerous
 	release
 	end
@@ -181,3 +172,126 @@ CelantoTown_Text_LibrarySign::
 	.string "Celanto Library\p"
 	.string "Knowledge is learned,\n"
 	.string "wisdom is earned.$"
+
+CelantoTown_EventScript_MomLibrary_Trigger0::
+	lockall
+	setvar VAR_0x8008, 0
+	goto CelantoTown_EventScript_MomLibraryScene
+	end
+
+CelantoTown_EventScript_MomLibrary_Trigger1::
+	lockall
+	setvar VAR_0x8008, 1
+	goto CelantoTown_EventScript_MomLibraryScene
+	end
+
+CelantoTown_EventScript_MomLibrary_Trigger2::
+	lockall
+	setvar VAR_0x8008, 2
+	goto CelantoTown_EventScript_MomLibraryScene
+	end
+
+CelantoTown_EventScript_MomLibraryScene:
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	addobject LOCALID_MOM
+	applymovement LOCALID_MOM, Common_Movement_WalkDown
+	waitmovement 0
+	delay 30
+	playse SE_PIN
+	applymovement LOCALID_MOM, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_MOM, Common_Movement_Delay48
+	waitmovement 0
+	msgbox CelantoTown_Text_MomPlayer
+	closemessage
+	compare VAR_0x8008, 0
+	call_if_eq CelantoTown_EventScript_MomWalkToPlayer0
+	compare VAR_0x8008, 1
+	call_if_eq CelantoTown_EventScript_MomWalkToPlayer1
+	compare VAR_0x8008, 2
+	call_if_eq CelantoTown_EventScript_MomWalkToPlayer2
+	msgbox CelantoTown_Text_DidYouMeetUp
+	closemessage
+	applymovement LOCALID_MOM, CelantoTown_Movement_MomExit
+	waitmovement 0
+	removeobject LOCALID_MOM
+	setflag FLAG_HIDE_CELANTO_LIBRARY_REDWOOD
+	setvar VAR_CELANTO_TOWN_STATE, 2
+	releaseall
+	end
+	
+CelantoTown_Text_MomPlayer:
+	.string "Mom: {COLOR RED}{PLAYER}!$"
+
+CelantoTown_Text_DidYouMeetUp:
+	.string "Mom: {COLOR RED}How are you?\n"
+	.string "Did you deliver that book?\p"
+	.string "She said it was hers? Sounds like\n"
+	.string "you did the right thing, then!\p"
+	.string "I realized you could have been\n"
+	.string "attacked by wild Pokémon just now.\p"
+	.string "Well, I've got good news.\n"
+	.string "I was just in the library!\p"
+	.string "The Pokémon Professor, Redwood, is\n"
+	.string "giving out Pokémon to Trainers!\p"
+	.string "You should go talk to him.\p"
+	.string "It's about time you got your own\n"
+	.string "Pokémon, wouldn't you say?\p"
+	.string "{COLOR DARK_GREY}Mom: {COLOR RED}Stay safe, {PLAYER}!\n"
+	.string "I love you!$"
+
+CelantoTown_Movement_MomExit:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+CelantoTown_EventScript_MomWalkToPlayer0:
+	applymovement LOCALID_MOM, CelantoTown_Movement_MomWalkToPlayer0
+	waitmovement 0
+	return
+
+CelantoTown_EventScript_MomWalkToPlayer1:
+	applymovement LOCALID_MOM, CelantoTown_Movement_MomWalkToPlayer1
+	waitmovement 0
+	return
+
+CelantoTown_EventScript_MomWalkToPlayer2:
+	applymovement LOCALID_MOM, CelantoTown_Movement_MomWalkToPlayer2
+	waitmovement 0
+	return
+
+CelantoTown_Movement_MomWalkToPlayer0:
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	step_end
+
+CelantoTown_Movement_MomWalkToPlayer1:
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	step_end
+
+CelantoTown_Movement_MomWalkToPlayer2:
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	step_end

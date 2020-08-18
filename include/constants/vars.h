@@ -94,12 +94,11 @@
 #define VAR_POKELOT_RND1                     0x404B
 #define VAR_POKELOT_RND2                     0x404C
 #define VAR_POKELOT_PRIZE_PLACE              0x404D
-#define VAR_POST_GAME_STATE                  0x404E // Unused in Emerald
+#define VAR_CELANTO_TOWN_GUARD               0x404E // VAR_UNUSED_0x404E in Emerald
 #define VAR_LOTAD_SIZE_RECORD                0x404F
 
-#define VAR_LITTLEROOT_TOWN_STATE            0x4050 // VAR_LITTLEROOT_TOWN_STATE in Emerald
-#define VAR_CELANTO_TOWN_STATE               0x4050 // Rename
-
+#define VAR_LITTLEROOT_TOWN_STATE            0x4050 // TODO: Remove references to this
+#define VAR_CELANTO_TOWN_STATE               0x4050 // VAR_LITTLEROOT_TOWN_STATE in Emerald
 #define VAR_OLDALE_TOWN_STATE                0x4051
 #define VAR_DEWFORD_TOWN_STATE               0x4052 // Unused Var
 #define VAR_LAVARIDGE_TOWN_STATE             0x4053
@@ -115,7 +114,8 @@
 #define VAR_MOSSDEEP_CITY_STATE              0x405D
 #define VAR_SOOTOPOLIS_CITY_STATE            0x405E
 #define VAR_EVER_GRANDE_CITY_STATE           0x405F // Unused Var
-#define VAR_ROUTE101_STATE                   0x4060
+#define VAR_ROUTE101_STATE                   0x4060 // TODO: Remove references to this
+#define VAR_RELIQUIA_RUINS_STATE             0x4060 // VAR_ROUTE101_STATE in Emerald
 #define VAR_ROUTE102_STATE                   0x4061 // Unused Var
 #define VAR_ROUTE103_STATE                   0x4062 // Unused Var
 #define VAR_ROUTE104_STATE                   0x4063
@@ -149,7 +149,8 @@
 #define VAR_ROUTE132_STATE                   0x407F // Unused Var
 #define VAR_ROUTE133_STATE                   0x4080 // Unused Var
 #define VAR_ROUTE134_STATE                   0x4081 // Unused Var
-#define VAR_LITTLEROOT_HOUSES_STATE_MAY      0x4082
+#define VAR_LITTLEROOT_HOUSES_STATE_MAY      0x4082 // TODO: Remove references to this
+#define VAR_PLAYERS_HOUSE_STATE              0x4082 // VAR_LITTLEROOT_HOUSES_STATE_MAY in Emerald
 #define VAR_UNUSED_0x4083                    0x4083 // Unused Var
 #define VAR_BIRCH_LAB_STATE                  0x4084
 #define VAR_PETALBURG_GYM_STATE              0x4085 // 0-1: Wally tutorial, 2-6: 0-4 badges, 7: Defeated Norman, 8: Rematch Norman 

@@ -6,12 +6,12 @@ CelantoTown_PlayersHouse_2F_MapScripts::
 	.byte 0
 
 CelantoTown_PlayersHouse_2F_OnWarp:
-	map_script_2 VAR_CELANTO_TOWN_STATE, 0, CelantoTown_PlayersHouse_2F_EventScript_TurnPlayerNorth
+	map_script_2 VAR_PLAYERS_HOUSE_STATE, 0, CelantoTown_PlayersHouse_2F_EventScript_TurnPlayerNorth
 	.2byte 0
 
 CelantoTown_PlayersHouse_2F_EventScript_TurnPlayerNorth::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
-	setvar VAR_CELANTO_TOWN_STATE, 1
+	setvar VAR_PLAYERS_HOUSE_STATE, 1
 	end
 
 CelantoTown_PlayersHouse_2F_EventScript_PC::
@@ -35,10 +35,10 @@ CelantoTown_PlayersHouse_2F_Text_PlayedWithTheNES::
 
 CelantoTown_PlayersHouse_2F_EventScript_DustyTome::
 	finditem ITEM_DUSTY_TOME
-	compare VAR_CELANTO_TOWN_STATE, 2
+	compare VAR_PLAYERS_HOUSE_STATE, 2
 	call_if_eq CelantoTown_PlayersHouse_2F_EventScript_EnableRunningShoesTrigger
 	end
 
 CelantoTown_PlayersHouse_2F_EventScript_EnableRunningShoesTrigger:
-	setvar VAR_CELANTO_TOWN_STATE, 3
+	setvar VAR_PLAYERS_HOUSE_STATE, 3
 	return

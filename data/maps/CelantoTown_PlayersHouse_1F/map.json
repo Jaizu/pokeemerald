@@ -50,7 +50,7 @@
       "x": 3,
       "y": 7,
       "elevation": 0,
-      "var": "VAR_CELANTO_TOWN_STATE",
+      "var": "VAR_PLAYERS_HOUSE_STATE",
       "var_value": "3",
       "script": "CelantoTown_PlayersHouse_1F_EventScript_GiveRunningShoesTrigger"
     },
@@ -59,7 +59,7 @@
       "x": 3,
       "y": 7,
       "elevation": 0,
-      "var": "VAR_CELANTO_TOWN_STATE",
+      "var": "VAR_PLAYERS_HOUSE_STATE",
       "var_value": "2",
       "script": "CelantoTown_PlayersHouse_1F_EventScript_GetTheBookTrigger"
     }

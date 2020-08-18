@@ -6,7 +6,7 @@ CelantoTown_PlayersHouse_1F_MapScripts::
 	.byte 0
 
 CelantoTown_PlayersHouse_1F_OnLoad:
-	compare VAR_CELANTO_TOWN_STATE, 4
+	compare VAR_PLAYERS_HOUSE_STATE, 4
 	call_if_lt CelantoTown_PlayersHouse_1F_EventScript_LockDoor
 	end
 
@@ -15,7 +15,7 @@ CelantoTown_PlayersHouse_1F_EventScript_LockDoor::
 	return
 
 CelantoTown_PlayersHouse_1F_OnFrame::
-	map_script_2 VAR_CELANTO_TOWN_STATE, 1, CelantoTown_PlayersHouse_1F_EventScript_DeliverLetterScene
+	map_script_2 VAR_PLAYERS_HOUSE_STATE, 1, CelantoTown_PlayersHouse_1F_EventScript_DeliverLetterScene
 	.2byte 0
 
 CelantoTown_PlayersHouse_1F_EventScript_DeliverLetterScene::
@@ -48,7 +48,7 @@ CelantoTown_PlayersHouse_1F_EventScript_GoGetTheBook:
 	msgbox CelantoTown_PlayersHouse_1F_Text_MaybeYouShouldGetIt, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_MOM, CelantoTown_PlayersHouse_1F_Movement_MomReturnToTable
 	waitmovement 0	
-	setvar VAR_CELANTO_TOWN_STATE, 2
+	setvar VAR_PLAYERS_HOUSE_STATE, 2
 	releaseall
 	end
 
@@ -138,7 +138,7 @@ CelantoTown_PlayersHouse_1F_EventScript_GiveRunningShoes::
 	waitmessage
 	delay 30
 	msgbox CelantoTown_PlayersHouse_1F_Text_ExplainRunningShoes, MSGBOX_AUTOCLOSE
-	setvar VAR_CELANTO_TOWN_STATE, 4
+	setvar VAR_PLAYERS_HOUSE_STATE, 4
 	setmetatile 3, 7, METATILE_Indoors_UnlockedDoor, 0
 	special DrawWholeMapView
 	return
@@ -182,11 +182,11 @@ CelantoTown_PlayersHouse_1F_Text_GetTheBookFirst:
 CelantoTown_PlayersHouse_1F_EventScript_Mom::
 	lock
 	faceplayer
-	compare VAR_CELANTO_TOWN_STATE, 4
+	compare VAR_PLAYERS_HOUSE_STATE, 4
 	call_if_eq CelantoTown_PlayersHouse_1F_EventScript_MomDontLeaveHerWaiting
-	compare VAR_CELANTO_TOWN_STATE, 3
+	compare VAR_PLAYERS_HOUSE_STATE, 3
 	call_if_eq CelantoTown_PlayersHouse_1F_EventScript_GiveRunningShoes
-	compare VAR_CELANTO_TOWN_STATE, 2
+	compare VAR_PLAYERS_HOUSE_STATE, 2
 	call_if_eq CelantoTown_PlayersHouse_1F_EventScript_MomGoGetBook
 	applymovement LOCALID_MOM, Common_Movement_FaceOriginalDirection
 	waitmovement 0

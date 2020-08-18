@@ -1,5 +1,29 @@
-Route102_EventScript_ItemPotion:: @ 8290CD8
+// TODO: Actually create these items
+.equ ITEM_SHINY_STONE, 0x0
+
+EventScript_ItemPotion::
+Route102_EventScript_ItemPotion::
+Route104_EventScript_ItemPotion::
+Route109_EventScript_ItemPotion::
+Route116_EventScript_ItemPotion::
 	finditem ITEM_POTION
+	end
+
+EventScript_ItemRevive::
+Route117_EventScript_ItemRevive::
+Route120_EventScript_ItemRevive::
+Route121_EventScript_ItemRevive::
+AbandonedShip_Rooms2_1F_EventScript_ItemRevive::
+	finditem ITEM_REVIVE
+	end
+
+EventScript_ItemTM37::
+Route111_EventScript_ItemTM37::
+	finditem ITEM_TM37
+	end
+
+EventScript_ItemShinyStone::
+	finditem ITEM_SHINY_STONE
 	end
 
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
@@ -22,10 +46,6 @@ Route104_EventScript_ItemXAccuracy:: @ 8290D19
 	finditem ITEM_X_ACCURACY
 	end
 
-Route104_EventScript_ItemPotion:: @ 8290D26
-	finditem ITEM_POTION
-	end
-
 Route105_EventScript_ItemIron:: @ 8290D33
 	finditem ITEM_IRON
 	end
@@ -42,10 +62,6 @@ Route109_EventScript_ItemPPUp:: @ 8290D5A
 	finditem ITEM_PP_UP
 	end
 
-Route109_EventScript_ItemPotion:: @ 8290D67
-	finditem ITEM_POTION
-	end
-
 Route110_EventScript_ItemRareCandy:: @ 8290D74
 	finditem ITEM_RARE_CANDY
 	end
@@ -56,10 +72,6 @@ Route110_EventScript_ItemDireHit:: @ 8290D81
 
 Route110_EventScript_ItemElixir:: @ 8290D8E
 	finditem ITEM_ELIXIR
-	end
-
-Route111_EventScript_ItemTM37:: @ 8290D9B
-	finditem ITEM_TM37
 	end
 
 Route111_EventScript_ItemStardust:: @ 8290DA8
@@ -142,16 +154,8 @@ Route116_EventScript_ItemHPUp:: @ 8290E9F
 	finditem ITEM_HP_UP
 	end
 
-Route116_EventScript_ItemPotion:: @ 8290EAC
-	finditem ITEM_POTION
-	end
-
 Route117_EventScript_ItemGreatBall:: @ 8290EB9
 	finditem ITEM_GREAT_BALL
-	end
-
-Route117_EventScript_ItemRevive:: @ 8290EC6
-	finditem ITEM_REVIVE
 	end
 
 Route118_EventScript_ItemHyperPotion:: @ 8290ED3
@@ -206,16 +210,8 @@ Route120_EventScript_ItemNestBall:: @ 8290F6F
 	finditem ITEM_NEST_BALL
 	end
 
-Route120_EventScript_ItemRevive:: @ 8290F7C
-	finditem ITEM_REVIVE
-	end
-
 Route121_EventScript_ItemCarbos:: @ 8290F89
 	finditem ITEM_CARBOS
-	end
-
-Route121_EventScript_ItemRevive:: @ 8290F96
-	finditem ITEM_REVIVE
 	end
 
 Route121_EventScript_ItemZinc:: @ 8290FA3
@@ -432,10 +428,6 @@ AbandonedShip_Rooms2_B1F_EventScript_ItemDiveBall:: @ 8291247
 
 AbandonedShip_Room_B1F_EventScript_ItemTM13:: @ 8291254
 	finditem ITEM_TM13
-	end
-
-AbandonedShip_Rooms2_1F_EventScript_ItemRevive:: @ 8291261
-	finditem ITEM_REVIVE
 	end
 
 AbandonedShip_CaptainsOffice_EventScript_ItemStorageKey:: @ 829126E
