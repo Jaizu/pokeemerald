@@ -4,6 +4,7 @@
 #include "blit.h"
 #include "dma3.h"
 #include "event_data.h"
+#include "event_object_movement.h"
 #include "graphics.h"
 #include "main.h"
 #include "menu.h"
@@ -19,6 +20,7 @@
 #include "text_window.h"
 #include "window.h"
 #include "constants/songs.h"
+#include "constants/event_objects.h"
 
 #define DLG_WINDOW_PALETTE_NUM 15
 #define DLG_WINDOW_BASE_TILE_NUM 0x200
@@ -2176,4 +2178,37 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
             *endOfString = EOS;
             break;
     }
+}
+
+u8 ContextNpcGetTextColor(void)
+{
+    const struct ObjectEventGraphicsInfo *graphicsInfo;
+    u8 gfxId;
+    u8 color;
+    
+    if (gSelectedObjectEvent == 0)
+        return COLOR_MODE_DARK_GREY;
+    
+    gfxId = gObjectEvents[gSelectedObjectEvent].graphicsId;
+    if (gfxId >= OBJ_EVENT_GFX_VAR_0)
+        gfxId = VarGetObjectEventGraphicsId(gfxId - OBJ_EVENT_GFX_VAR_0);
+
+    graphicsInfo = GetObjectEventGraphicsInfo(gfxId);
+    
+    return graphicsInfo->textColor;
+}
+
+void AddTextPrinterForMessageWithTextColor(bool8 allowSkippingDelayWithButtonPress)
+{
+    u8 colorMode;
+    void (*callback)(struct TextPrinterTemplate *, u16) = NULL;
+    gTextFlags.canABSpeedUpPrint = allowSkippingDelayWithButtonPress;
+    
+    colorMode = ContextNpcGetTextColor();
+    if (colorMode == COLOR_MODE_BLUE)
+        AddTextPrinterParameterized2(0, 1, gStringVar4, GetPlayerTextSpeedDelay(), callback, 8, 1, 3);
+    else if (colorMode == COLOR_MODE_RED)
+        AddTextPrinterParameterized2(0, 1, gStringVar4, GetPlayerTextSpeedDelay(), callback, 4, 1, 3);
+    else
+        AddTextPrinterParameterized2(0, 1, gStringVar4, GetPlayerTextSpeedDelay(), callback, 2, 1, 3);
 }

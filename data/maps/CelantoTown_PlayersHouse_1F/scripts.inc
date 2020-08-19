@@ -53,7 +53,7 @@ CelantoTown_PlayersHouse_1F_EventScript_GoGetTheBook:
 	end
 
 CelantoTown_PlayersHouse_1F_Text_OhHiPlayer:
-	.string "Mom: {COLOR RED}Oh!\n"
+	.string "{COLOR DARK_GREY}Mom: {COLOR RED}Oh!\n"
 	.string "Hi, {PLAYER}!$"
 
 CelantoTown_PlayersHouse_1F_Movement_MomApproachPlayer:
@@ -63,19 +63,19 @@ CelantoTown_PlayersHouse_1F_Movement_MomApproachPlayer:
 	step_end
 
 CelantoTown_PlayersHouse_1F_Text_WeGotThisLetter:
-	.string "Mom: {COLOR RED}We got this {COLOR GREEN}Letter{COLOR RED} in\n"
+	.string "{COLOR DARK_GREY}Mom: {COLOR RED}We got this {COLOR GREEN}Letter{COLOR RED} in\n"
 	.string "the mail.\p"
 	.string "It's addressed to you!\n"
 	.string "Here, read it.$"
 
 CelantoTown_PlayersHouse_1F_Text_SoMeetAtReliquia:
-	.string "Mom: {COLOR RED}So, they want to meet at\n"
+	.string "{COLOR DARK_GREY}Mom: {COLOR RED}So, they want to meet at\n"
 	.string "the {COLOR GREEN}Reliquia Ruins{COLOR RED}?\p"
 	.string "And they mentioned that book you\n"
 	.string "have, from the Library?$"
 
 CelantoTown_PlayersHouse_1F_Text_HowStrange:
-	.string "Mom: {COLOR RED}How strange.\p"
+	.string "{COLOR DARK_GREY}Mom: {COLOR RED}How strange.\p"
 	.string "I suppose you shouldn't keep them\n"
 	.string "waiting, though!$"
 
@@ -87,7 +87,7 @@ CelantoTown_PlayersHouse_1F_Movement_MomReturnToTable:
 	step_end
 
 CelantoTown_PlayersHouse_1F_Text_MaybeYouShouldGetIt:
-	.string "Mom: {COLOR RED}Maybe you should get it from\n"
+	.string "{COLOR DARK_GREY}Mom: {COLOR RED}Maybe you should get it from\n"
 	.string "upstairs, and bring it with you.$"
 
 CelantoTown_PlayersHouse_1F_EventScript_GiveRunningShoesTrigger::
@@ -132,7 +132,7 @@ CelantoTown_PlayersHouse_1F_Movement_MomWalkFromExitToTable:
 CelantoTown_PlayersHouse_1F_EventScript_GiveRunningShoes::
 	msgbox CelantoTown_PlayersHouse_1F_Text_OhIJustRemembered
 	playfanfare MUS_FANFA4
-	message LittlerootTown_Text_SwitchShoesWithRunningShoes
+	message CelantoTown_PlayersHouse_1F_Text_SwitchShoesWithRunningShoes
 	waitfanfare
 	setflag FLAG_SYS_B_DASH
 	waitmessage
@@ -144,15 +144,19 @@ CelantoTown_PlayersHouse_1F_EventScript_GiveRunningShoes::
 	return
 
 CelantoTown_PlayersHouse_1F_Text_OhPlayer:
-	.string "Mom: {COLOR RED}Oh, {PLAYER}!$"
+	.string "{COLOR DARK_GREY}Mom: {COLOR RED}Oh, {PLAYER}!$"
 
 CelantoTown_PlayersHouse_1F_Text_OhIJustRemembered:
-	.string "Mom: {COLOR RED}I just remembered!\p"
+	.string "{COLOR DARK_GREY}Mom: {COLOR RED}I just remembered!\p"
 	.string "These {COLOR GREEN}Running Shoes{COLOR RED} came in the\n"
 	.string "mail, too! Go ahead, try them on.$"
 
+CelantoTown_PlayersHouse_1F_Text_SwitchShoesWithRunningShoes:
+	.string "{COLOR DARK_GREY}{PLAYER} switched shoes with the\n"
+	.string "Running Shoes. A perfect fit!$"
+
 CelantoTown_PlayersHouse_1F_Text_ExplainRunningShoes:
-	.string "Mom: {COLOR RED}You know how to use them,\n"
+	.string "{COLOR DARK_GREY}Mom: {COLOR RED}You know how to use them,\n"
 	.string "right? Just hold down the B Button!\p"
 	.string "Now, you be careful out there.\n"
 	.string "I love you!$"
@@ -176,7 +180,7 @@ CelantoTown_PlayersHouse_1F_EventScript_GetTheBookTrigger::
 	end
 
 CelantoTown_PlayersHouse_1F_Text_GetTheBookFirst:
-	.string "Mom: {COLOR RED}Don't forget to get your\n"
+	.string "{COLOR DARK_GREY}Mom: {COLOR RED}Don't forget to get your\n"
 	.string "book, from upstairs, first!$"
 
 CelantoTown_PlayersHouse_1F_EventScript_Mom::
@@ -198,7 +202,7 @@ CelantoTown_PlayersHouse_1F_EventScript_MomDontLeaveHerWaiting:
 	return
 
 CelantoTown_PlayersHouse_1F_Text_DontLeaveHerWaiting:
-	.string "Mom: {COLOR RED}Those Running Shoes should\n"
+	.string "{COLOR DARK_GREY}Mom: {COLOR RED}Those Running Shoes should\n"
 	.string "help you get there faster!\p"
 	.string "The Letter asked to meet at the\n"
 	.string "{COLOR GREEN}Reliquia Ruins{COLOR RED}, right?\p"
