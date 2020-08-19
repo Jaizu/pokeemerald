@@ -187,7 +187,7 @@ CelantoTown_PlayersHouse_1F_EventScript_Mom::
 	lock
 	faceplayer
 	compare VAR_PLAYERS_HOUSE_STATE, 4
-	call_if_eq CelantoTown_PlayersHouse_1F_EventScript_MomDontLeaveHerWaiting
+	call_if_eq CelantoTown_PlayersHouse_1F_EventScript_MomAfterGivenRunningShoes
 	compare VAR_PLAYERS_HOUSE_STATE, 3
 	call_if_eq CelantoTown_PlayersHouse_1F_EventScript_GiveRunningShoes
 	compare VAR_PLAYERS_HOUSE_STATE, 2
@@ -197,13 +197,13 @@ CelantoTown_PlayersHouse_1F_EventScript_Mom::
 	release
 	end
 
-CelantoTown_PlayersHouse_1F_EventScript_MomDontLeaveHerWaiting:
+CelantoTown_PlayersHouse_1F_EventScript_MomAfterGivenRunningShoes:
 	compare VAR_CELANTO_TOWN_STATE, 2
 	goto_if_ge CelantoTown_PlayersHouse_1F_EventScript_MomHaveYouCheckedLibrary
-	msgbox CelantoTown_PlayersHouse_1F_Text_DontLeaveHerWaiting
+	msgbox CelantoTown_PlayersHouse_1F_Text_ThoseRunningShoesShouldHelp
 	return
 
-CelantoTown_PlayersHouse_1F_Text_DontLeaveHerWaiting:
+CelantoTown_PlayersHouse_1F_Text_ThoseRunningShoesShouldHelp:
 	.string "{COLOR DARK_GREY}Mom: {COLOR RED}Those Running Shoes should\n"
 	.string "help you get there faster!\p"
 	.string "The Letter asked to meet at the\n"
