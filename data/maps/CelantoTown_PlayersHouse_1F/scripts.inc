@@ -198,6 +198,8 @@ CelantoTown_PlayersHouse_1F_EventScript_Mom::
 	end
 
 CelantoTown_PlayersHouse_1F_EventScript_MomDontLeaveHerWaiting:
+	compare VAR_CELANTO_TOWN_STATE, 2
+	goto_if_ge CelantoTown_PlayersHouse_1F_EventScript_MomHaveYouCheckedLibrary
 	msgbox CelantoTown_PlayersHouse_1F_Text_DontLeaveHerWaiting
 	return
 
@@ -208,6 +210,18 @@ CelantoTown_PlayersHouse_1F_Text_DontLeaveHerWaiting:
 	.string "{COLOR GREEN}Reliquia Ruins{COLOR RED}, right?\p"
 	.string "Well, make sure you stay safe!\n"
 	.string "I love you, {PLAYER}!$"
+
+CelantoTown_PlayersHouse_1F_EventScript_MomHaveYouCheckedLibrary:
+	msgbox CelantoTown_PlayersHouse_1F_Text_HaveYouCheckLibrary
+	return
+
+CelantoTown_PlayersHouse_1F_Text_HaveYouCheckLibrary:
+	.string "{COLOR DARK_GREY}Mom: {COLOR RED}Have you checked out\n"
+	.string "the {COLOR GREEN}Celanto Library{COLOR RED} yet?\p"
+	.string "Prof. Redwood is giving out\n"
+	.string "Pokémon to Trainers there!\p"
+	.string "Isn't that exciting?\n"
+	.string "You should go see him.$"
 
 CelantoTown_PlayersHouse_1F_EventScript_MomGoGetBook:
 	msgbox CelantoTown_PlayersHouse_1F_Text_GetTheBookFirst
