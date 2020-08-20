@@ -1,2 +1,7 @@
 CelantoTown_BackOfLibrary_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, CelantoTown_BackOfLibrary_OnTransition
 	.byte 0
+
+CelantoTown_BackOfLibrary_OnTransition:
+	call Common_EventScript_SetupRivalGfxId
+	end

@@ -101,12 +101,12 @@
     "CelantoTown_PlayersHouse_1F",
     "CelantoTown_PlayersHouse_2F",
     "CelantoTown_Library",
+    "CelantoTown_BackOfLibrary",
     "LittlerootTown_BrendansHouse_1F",
     "LittlerootTown_BrendansHouse_2F",
     "LittlerootTown_MaysHouse_1F",
     "LittlerootTown_MaysHouse_2F",
-    "LittlerootTown_ProfessorBirchsLab",
-    "CelantoTown_BackOfLibrary"
+    "LittlerootTown_ProfessorBirchsLab"
   ],
   "gMapGroup2": [
     "OldaleTown_House1",
