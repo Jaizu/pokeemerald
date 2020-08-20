@@ -1070,3 +1070,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/CelantoTown_Library/scripts.inc"
 
 	.include "data/maps/ReliquiaRuins/scripts.inc"
+
+	.include "data/maps/CelantoTown_BackOfLibrary/scripts.inc"

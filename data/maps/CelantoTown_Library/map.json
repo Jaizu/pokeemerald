@@ -170,7 +170,7 @@
       "x": 8,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_CELANTO_TOWN_LIBRARY",
+      "dest_map": "MAP_CELANTO_TOWN_BACK_OF_LIBRARY",
       "dest_warp_id": 0
     }
   ],

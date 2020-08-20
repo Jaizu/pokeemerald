@@ -75,6 +75,7 @@
 #define MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F        (5 | (1 << 8))
 #define MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F        (6 | (1 << 8))
 #define MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB (7 | (1 << 8))
+#define MAP_CELANTO_TOWN_BACK_OF_LIBRARY         (8 | (1 << 8))
 
 // Map Group 2
 #define MAP_OLDALE_TOWN_HOUSE1            (0 | (2 << 8))
