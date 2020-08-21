@@ -1,6 +1,3 @@
-// TODO: Actually create these items
-.equ ITEM_SHINY_STONE, 0x0
-
 EventScript_ItemPotion::
 Route102_EventScript_ItemPotion::
 Route104_EventScript_ItemPotion::
@@ -139,7 +136,7 @@ Route115_EventScript_ItemPPUp:: @ 8290E6B
 	end
 
 Route116_EventScript_ItemXSpecial:: @ 8290E78
-	finditem ITEM_X_SPECIAL
+	finditem ITEM_X_SP_ATK
 	end
 
 Route116_EventScript_ItemEther:: @ 8290E85
@@ -311,7 +308,7 @@ MauvilleCity_EventScript_ItemXSpeed:: @ 82910CE
 	end
 
 RustboroCity_EventScript_ItemXDefend:: @ 82910DB
-	finditem ITEM_X_DEFEND
+	finditem ITEM_X_DEFENSE
 	end
 
 LilycoveCity_EventScript_ItemMaxRepel:: @ 82910E8

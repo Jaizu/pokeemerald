@@ -2,10 +2,6 @@
 .equ LOCALID_OLD_MAN, 6
 .equ LOCALID_CELANTO_PATH_GUARD, 7
 
-// TODO: Remove temporary defines:
-.equ SPECIES_SHAYMIN, 0x221 // TODO: Actually add Shaymin Pokémon
-.equ ITEM_GRACIDEA, 0x181   // TODO: Actually add Gracidea item
-
 CelantoTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, CelantoTown_OnTransition
 	.byte 0

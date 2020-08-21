@@ -1,7 +1,7 @@
 .equ LOCALID_MORGANA, 1
 
 // TODO: Remove temporary defines:
-.equ ITEM_DUSTY_TOME, 267 // TODO: Actually add Dusty Tome item
+.equ ITEM_DUSTY_TOME, ITEM_DEVON_GOODS // TODO: Actually add Dusty Tome item
 
 ReliquiaRuins_MapScripts::
 	.byte 0

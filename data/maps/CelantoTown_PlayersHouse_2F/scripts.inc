@@ -1,5 +1,5 @@
 // TODO: Remove temporary defines:
-.equ ITEM_DUSTY_TOME, 267 // TODO: Actually add Dusty Tome item
+.equ ITEM_DUSTY_TOME, ITEM_DEVON_GOODS // TODO: Actually add Dusty Tome item
 
 CelantoTown_PlayersHouse_2F_MapScripts::
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, CelantoTown_PlayersHouse_2F_OnWarp
