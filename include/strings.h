@@ -354,6 +354,7 @@ extern const u8 gText_BirchBoy[];
 extern const u8 gText_BirchGirl[];
 extern const u8 gText_DefaultNameTerra[];
 extern const u8 gText_DefaultNameGaia[];
+extern const u8 gText_DefaultNameCoulter[];
 
 extern const u8 gText_BirchInTrouble[];
 extern const u8 gText_ConfirmStarterChoice[];

@@ -24,6 +24,7 @@
 #include "mevent.h"
 #include "match_call.h"
 #include "menu.h"
+#include "naming_screen.h"
 #include "overworld.h"
 #include "party_menu.h"
 #include "pokeblock.h"
@@ -4328,4 +4329,16 @@ void SetPlayerGotFirstFans(void)
 u8 Script_TryGainNewFanFromCounter(void)
 {
     return TryGainNewFanFromCounter(gSpecialVar_0x8004);
+}
+
+static void CB2_HandleGivenRivalName(void)
+{
+    gFieldCallback = FieldCB_ContinueScriptHandleMusic;
+    SetMainCallback2(CB2_ReturnToField);
+}
+
+void DoRivalNamingScreen(void)
+{
+    StringCopy(gSaveBlock2Ptr->rivalName, gText_DefaultNameCoulter);
+    DoNamingScreen(NAMING_SCREEN_RIVAL, gSaveBlock2Ptr->rivalName, 0, 0, 0, CB2_HandleGivenRivalName);
 }

@@ -326,9 +326,8 @@ CelantoTown_BackOfLibrary_EventScript_CoulterFacesRight:
 CelantoTown_BackOfLibrary_EventScript_SetRivalName:
 	closemessage
 	fadescreen FADE_TO_BLACK
-	// TODO: Implement SetRivalName special
-	// special nullsub_37
-	// waitstate
+	special DoRivalNamingScreen
+	waitstate
 	fadescreen FADE_FROM_BLACK
 	msgbox CelantoTown_BackOfLibrary_Text_IsHisNameRival, MSGBOX_YESNO
 	compare VAR_RESULT, NO

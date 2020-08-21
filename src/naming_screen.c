@@ -184,6 +184,7 @@ extern u16 gKeyRepeatStartDelay;
 // extern text
 extern const u8 gText_MoveOkBack[];
 extern const u8 gText_YourName[];
+extern const u8 gText_RivalsName[];
 extern const u8 gText_BoxName[];
 extern const u8 gText_PkmnsNickname[];
 extern const u8 gText_TellHimTheWords[];
@@ -1372,17 +1373,29 @@ static void CreateTextEntrySprites(void)
 
 static void NamingScreen_NoIcon(void);
 static void NamingScreen_CreatePlayerIcon(void);
+static void NamingScreen_CreateRivalIcon(void);
 static void NamingScreen_CreatePCIcon(void);
 static void NamingScreen_CreateMonIcon(void);
 static void NamingScreen_CreateWaldaDadIcon(void);
+
+enum
+{
+    NAMESCREEN_ICON_FX_NONE,
+    NAMESCREEN_ICON_FX_PLAYER,
+    NAMESCREEN_ICON_FX_RIVAL,
+    NAMESCREEN_ICON_FX_PC,
+    NAMESCREEN_ICON_FX_MON,
+    NAMESCREEN_ICON_FX_WALDA_DAD
+};
 
 static void (*const sIconFunctions[])(void) =
 {
     NamingScreen_NoIcon,
     NamingScreen_CreatePlayerIcon,
+    NamingScreen_CreateRivalIcon,
     NamingScreen_CreatePCIcon,
     NamingScreen_CreateMonIcon,
-    NamingScreen_CreateWaldaDadIcon,
+    NamingScreen_CreateWaldaDadIcon
 };
 
 static void CreateInputTargetIcon(void)
@@ -1402,6 +1415,15 @@ static void NamingScreen_CreatePlayerIcon(void)
 
     rivalGfxId = GetRivalAvatarGraphicsIdByStateIdAndGender(0, sNamingScreen->monSpecies);
     spriteId = AddPseudoObjectEvent(rivalGfxId, SpriteCallbackDummy, 56, 37, 0);
+    gSprites[spriteId].oam.priority = 3;
+    StartSpriteAnim(&gSprites[spriteId], 4);
+}
+
+static void NamingScreen_CreateRivalIcon(void)
+{
+    u8 spriteId;
+
+    spriteId = AddPseudoObjectEvent(OBJ_EVENT_GFX_WALLY, SpriteCallbackDummy, 56, 37, 0);
     gSprites[spriteId].oam.priority = 3;
     StartSpriteAnim(&gSprites[spriteId], 4);
 }
@@ -1724,6 +1746,7 @@ static void DrawMonTextEntryBox(void)
 static void (*const sDrawTextEntryBoxFuncs[])(void) =
 {
     [NAMING_SCREEN_PLAYER]     = DrawNormalTextEntryBox,
+    [NAMING_SCREEN_RIVAL]      = DrawNormalTextEntryBox,
     [NAMING_SCREEN_BOX]        = DrawNormalTextEntryBox,
     [NAMING_SCREEN_CAUGHT_MON] = DrawMonTextEntryBox,
     [NAMING_SCREEN_NICKNAME]   = DrawMonTextEntryBox,
@@ -2090,18 +2113,29 @@ static const struct NamingScreenTemplate sPlayerNamingScreenTemplate =
 {
     .copyExistingString = FALSE,
     .maxChars = 7,
-    .iconFunction = 1,
+    .iconFunction = NAMESCREEN_ICON_FX_PLAYER,
     .addGenderIcon = FALSE,
     .initialPage = KBPAGE_LETTERS_UPPER,
     .unused = 35,
     .title = gText_YourName,
 };
 
+static const struct NamingScreenTemplate sRivalNamingScreenTemplate =
+{
+    .copyExistingString = FALSE,
+    .maxChars = 7,
+    .iconFunction = NAMESCREEN_ICON_FX_RIVAL,
+    .addGenderIcon = FALSE,
+    .initialPage = KBPAGE_LETTERS_UPPER,
+    .unused = 35,
+    .title = gText_RivalsName,
+};
+
 static const struct NamingScreenTemplate sPCBoxNamingTemplate =
 {
     .copyExistingString = FALSE,
     .maxChars = 8,
-    .iconFunction = 2,
+    .iconFunction = NAMESCREEN_ICON_FX_PC,
     .addGenderIcon = FALSE,
     .initialPage = KBPAGE_LETTERS_UPPER,
     .unused = 19,
@@ -2112,7 +2146,7 @@ static const struct NamingScreenTemplate sMonNamingScreenTemplate =
 {
     .copyExistingString = FALSE,
     .maxChars = 10,
-    .iconFunction = 3,
+    .iconFunction = NAMESCREEN_ICON_FX_MON,
     .addGenderIcon = TRUE,
     .initialPage = KBPAGE_LETTERS_UPPER,
     .unused = 35,
@@ -2123,7 +2157,7 @@ static const struct NamingScreenTemplate sWaldaWordsScreenTemplate =
 {
     .copyExistingString = TRUE,
     .maxChars = 15,
-    .iconFunction = 4,
+    .iconFunction = NAMESCREEN_ICON_FX_WALDA_DAD,
     .addGenderIcon = FALSE,
     .initialPage = KBPAGE_LETTERS_UPPER,
     .unused = 11,
@@ -2133,6 +2167,7 @@ static const struct NamingScreenTemplate sWaldaWordsScreenTemplate =
 static const struct NamingScreenTemplate *const sNamingScreenTemplates[] =
 {
     [NAMING_SCREEN_PLAYER]     = &sPlayerNamingScreenTemplate,
+    [NAMING_SCREEN_RIVAL]      = &sRivalNamingScreenTemplate,
     [NAMING_SCREEN_BOX]        = &sPCBoxNamingTemplate,
     [NAMING_SCREEN_CAUGHT_MON] = &sMonNamingScreenTemplate,
     [NAMING_SCREEN_NICKNAME]   = &sMonNamingScreenTemplate,
