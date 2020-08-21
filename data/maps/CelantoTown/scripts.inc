@@ -222,10 +222,9 @@ CelantoTown_Text_MomPlayer:
 	.string "Mom: {COLOR RED}{PLAYER}!$"
 
 CelantoTown_Text_DidYouMeetUp:
-	.string "Mom: {COLOR RED}How are you?\n"
-	.string "Did you deliver that book?\p"
-	.string "She said it was hers? Sounds like\n"
-	.string "you did the right thing, then!\p"
+	.string "Mom: {COLOR RED}How did it go?\p"
+	.string "…She said it was hers?\n"
+	.string "Hm, that's strange…\p"
 	.string "I realized you could have been\n"
 	.string "attacked by wild Pokémon just now.\p"
 	.string "Well, I've got good news.\n"

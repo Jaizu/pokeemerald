@@ -758,12 +758,18 @@
 #define FLAG_HIDE_CELANTO_LIBRARY_RICHTER                           0x2C1 // FLAG_HIDE_UNION_ROOM_PLAYER_3 in Emerald
 #define FLAG_HIDE_UNION_ROOM_PLAYER_4                               0x2C2 // TODO: Remove references to this
 #define FLAG_HIDE_CELANTO_LIBRARY_REDWOOD                           0x2C2 // FLAG_HIDE_UNION_ROOM_PLAYER_4 in Emerald
-#define FLAG_HIDE_UNION_ROOM_PLAYER_5                               0x2C3
-#define FLAG_HIDE_UNION_ROOM_PLAYER_6                               0x2C4
-#define FLAG_HIDE_UNION_ROOM_PLAYER_7                               0x2C5
-#define FLAG_HIDE_UNION_ROOM_PLAYER_8                               0x2C6
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_1               0x2C7
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_2               0x2C8
+#define FLAG_HIDE_UNION_ROOM_PLAYER_5                               0x2C3 // TODO: Remove references to this
+#define FLAG_HIDE_LIBRARY_BACK_ROOM_OPP_GENDER                      0x2C3 // FLAG_HIDE_UNION_ROOM_PLAYER_5 in Emerald
+#define FLAG_HIDE_UNION_ROOM_PLAYER_6                               0x2C4 // TODO: Remove references to this
+#define FLAG_HIDE_TURTWIG_BALL                                      0x2C4 // FLAG_HIDE_UNION_ROOM_PLAYER_6 in Emerald
+#define FLAG_HIDE_UNION_ROOM_PLAYER_7                               0x2C5 // TODO: Remove references to this
+#define FLAG_HIDE_CHIMCHAR_BALL                                     0x2C5 // FLAG_HIDE_UNION_ROOM_PLAYER_7 in Emerald
+#define FLAG_HIDE_UNION_ROOM_PLAYER_8                               0x2C6 // TODO: Remove references to this
+#define FLAG_HIDE_PIPLUP_BALL                                       0x2C6 // FLAG_HIDE_UNION_ROOM_PLAYER_8 in Emerald
+#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_1               0x2C7 // TODO: Remove references to this
+#define FLAG_HIDE_LIBRARY_BACK_ROOM_REDWOOD                         0x2C7 // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_1 in Emerald
+#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_2               0x2C8 // TODO: Remove references to this
+#define FLAG_HIDE_LIBRARY_BACK_ROOM_COULTER                         0x2C8 // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_2 in Emerald
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_3               0x2C9
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_4               0x2CA
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_5               0x2CB

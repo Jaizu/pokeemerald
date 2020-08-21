@@ -186,6 +186,8 @@ CelantoTown_PlayersHouse_1F_Text_GetTheBookFirst:
 CelantoTown_PlayersHouse_1F_EventScript_Mom::
 	lock
 	faceplayer
+	compare VAR_CELANTO_LIBRARY_STATE, 2
+	call_if_ge CelantoTown_PlayersHouse_1F_EventScript_MomSeesPokemon
 	compare VAR_PLAYERS_HOUSE_STATE, 4
 	call_if_eq CelantoTown_PlayersHouse_1F_EventScript_MomAfterGivenRunningShoes
 	compare VAR_PLAYERS_HOUSE_STATE, 3
@@ -196,6 +198,24 @@ CelantoTown_PlayersHouse_1F_EventScript_Mom::
 	waitmovement 0
 	release
 	end
+
+CelantoTown_PlayersHouse_1F_EventScript_MomSeesPokemon:
+	msgbox CelantoTown_PlayersHouse_1F_Text_OhYouGotAPokemon
+	applymovement LOCALID_MOM, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
+CelantoTown_PlayersHouse_1F_Text_OhYouGotAPokemon:
+	.string "{COLOR DARK_GREY}Mom: {COLOR RED}Oh, {PLAYER}!\n"
+	.string "You got a Pokémon, then?\p"
+	.string "How adorable!\p"
+	.string "Will you be working for the Prof.?\n"
+	.string "That's exciting!\p"
+	.string "He lives in Archan Town, right?\n"
+	.string "You should head west.\p"
+	.string "Stay safe out there, honey.\n"
+	.string "I love you so much!$"
 
 CelantoTown_PlayersHouse_1F_EventScript_MomAfterGivenRunningShoes:
 	compare VAR_CELANTO_TOWN_STATE, 2
