@@ -11526,12 +11526,12 @@
               {
                 "min_level": 14,
                 "max_level": 16,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_ELGYEM"
               },
               {
                 "min_level": 14,
                 "max_level": 16,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_ELGYEM"
               },
               {
                 "min_level": 14,
@@ -11546,7 +11546,7 @@
               {
                 "min_level": 14,
                 "max_level": 16,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_SIGILYPH"
               },
               {
                 "min_level": 14,
@@ -11556,7 +11556,7 @@
               {
                 "min_level": 14,
                 "max_level": 16,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_SIGILYPH"
               }
             ]
           },
