@@ -3798,12 +3798,12 @@ const struct Item gItems[] =
         .secondaryId = 0,
     },
 
-    [ITEM_DEVON_GOODS] =
+    [ITEM_DUSTY_TOME] =
     {
-        .name = _("Devon Goods"),
-        .itemId = ITEM_DEVON_GOODS,
+        .name = _("Dusty Tome"),
+        .itemId = ITEM_DUSTY_TOME,
         .price = 0,
-        .description = sDevonGoodsDesc,
+        .description = sDustyTomeDesc,
         .importance = 2,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,

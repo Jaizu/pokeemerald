@@ -1410,10 +1410,10 @@ static const u8 sWailmerPailDesc[] = _(
     "watering BERRIES\n"
     "and plants.");
 
-static const u8 sDevonGoodsDesc[] = _(
-    "A package that\n"
-    "contains DEVON's\n"
-    "machine parts.");
+static const u8 sDustyTomeDesc[] = _(
+    "An old library book\n"
+    "that tells of an\n"
+    "ancient power.");
 
 static const u8 sSootSackDesc[] = _(
     "A sack used to\n"
@@ -1436,9 +1436,9 @@ static const u8 sPokeblockCaseDesc[] = _(
     "a BERRY BLENDER.");
 
 static const u8 sLetterDesc[] = _(
-    "A letter to STEVEN\n"
-    "from the PRESIDENT\n"
-    "of the DEVON CORP.");
+    "A letter for you!\n"
+    "It asks to meet at\n"
+    "the Reliquia Ruins.");
 
 static const u8 sEonTicketDesc[] = _(
     "The ticket for a\n"
