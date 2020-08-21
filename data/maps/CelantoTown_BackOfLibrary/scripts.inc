@@ -148,8 +148,7 @@ CelantoTown_BackOfLibrary_EventScript_PiplupBall::
 CelantoTown_BackOfLibrary_EventScript_PokemonSelection:
 	bufferspeciesname 0, VAR_0x8008
 	playmoncry VAR_0x8008, 0
-	// TODO: Implement drawmonpic and erasemonpic
-	// drawmonpic VAR_0x8008, 10, 3
+	showmonpic VAR_0x8008, 10, 3
 	compare VAR_0x8008, SPECIES_TURTWIG
 	call_if_eq CelantoTown_BackOfLibrary_EventScript_PrintTurtwig
 	compare VAR_0x8008, SPECIES_CHIMCHAR
@@ -159,24 +158,23 @@ CelantoTown_BackOfLibrary_EventScript_PokemonSelection:
 	waitmoncry
 	msgbox CelantoTown_BackOfLibrary_Text_ChooseThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq CelantoTown_BackOfLibrary_EventScript_EraseMonPicEnd
+	goto_if_eq CelantoTown_BackOfLibrary_EventScript_HideMonPicEnd
 	compare VAR_0x8008, SPECIES_TURTWIG
 	call_if_eq CelantoTown_BackOfLibrary_EventScript_ChoseTurtwig
 	compare VAR_0x8008, SPECIES_CHIMCHAR
 	call_if_eq CelantoTown_BackOfLibrary_EventScript_ChoseChimchar
 	compare VAR_0x8008, SPECIES_PIPLUP
 	call_if_eq CelantoTown_BackOfLibrary_EventScript_ChosePiplup
-	// erasemonpic
+	hidemonpic
 	givemon VAR_0x8008, 5, ITEM_NONE
 	setflag FLAG_SYS_POKEMON_GET
 	playfanfare MUS_RG_FAN5
 	message CelantoTown_BackOfLibrary_Text_ReceivedStarter
 	waitmessage
 	waitfanfare
-	// TODO: Implement GetNature special
-	// special nullsub_37
-	// waitstate
-	// msgbox CelantoTown_BackOfLibrary_Text_ItsNatureAppearsToBe, MSGBOX_DEFAULT
+	setvar 0x8004 0
+	special BufferMonNatureName
+	msgbox CelantoTown_BackOfLibrary_Text_ItsNatureAppearsToBe, MSGBOX_DEFAULT
 	msgbox CelantoTown_BackOfLibrary_Text_WouldYouLikeToGiveANickname, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	call_if_eq CelantoTown_BackOfLibrary_EventScript_NicknameStarter
@@ -249,8 +247,8 @@ CelantoTown_BackOfLibrary_EventScript_PrintPiplup:
 	msgbox CelantoTown_BackOfLibrary_Text_PenguinPokemon, MSGBOX_DEFAULT
 	return
 
-CelantoTown_BackOfLibrary_EventScript_EraseMonPicEnd:
-	// erasemonpic
+CelantoTown_BackOfLibrary_EventScript_HideMonPicEnd:
+	hidemonpic
 	releaseall
 	end
 
@@ -369,7 +367,8 @@ CelantoTown_BackOfLibrary_Text_ReceivedStarter:
 	.string "the {STR_VAR_1}!$"
 
 CelantoTown_BackOfLibrary_Text_ItsNatureAppearsToBe:
-	.string "Its nature appears to be {COLOR GREEN}{STR_VAR_2}{COLOR DARK_GREY}!$"
+	.string "Its nature appears to be\n"
+	.string "{COLOR GREEN}{STR_VAR_2}{COLOR DARK_GREY}!$"
 
 CelantoTown_BackOfLibrary_Text_WouldYouLikeToGiveANickname:
 	.string "Would you like to give\n"
