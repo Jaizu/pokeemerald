@@ -536,3 +536,5 @@ gSpecials:: @ 81DBA64
 	def_special CloseDeptStoreElevatorWindow
 	def_special TrySetBattleTowerLinkType
 	def_special DoRivalNamingScreen
+	def_special GetPartyPokemonBall
+	def_special SetPartyPokemonBall

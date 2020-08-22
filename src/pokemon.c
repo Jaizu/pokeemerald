@@ -7110,3 +7110,13 @@ u8 *sub_806F4F8(u8 id, u8 arg1)
         return structPtr->byteArrays[arg1];
     }
 }
+
+u8 GetPartyPokemonBall(void)
+{
+    return GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_POKEBALL, NULL);
+}
+
+void SetPartyPokemonBall(void)
+{
+    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_POKEBALL, &gSpecialVar_0x8005);
+}
