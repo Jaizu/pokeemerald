@@ -106,7 +106,9 @@
     "LittlerootTown_BrendansHouse_2F",
     "LittlerootTown_MaysHouse_1F",
     "LittlerootTown_MaysHouse_2F",
-    "LittlerootTown_ProfessorBirchsLab"
+    "LittlerootTown_ProfessorBirchsLab",
+    "CelantoTown_House1",
+    "CelantoTown_House2"
   ],
   "gMapGroup2": [
     "OldaleTown_House1",

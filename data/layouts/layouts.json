@@ -4470,6 +4470,26 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/CelantoTown_BackOfLibrary/border.bin",
       "blockdata_filepath": "data/layouts/CelantoTown_BackOfLibrary/map.bin"
+    },
+    {
+      "id": "LAYOUT_CELANTO_TOWN_HOUSE1",
+      "name": "CelantoTown_House1_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/CelantoTown_House1/border.bin",
+      "blockdata_filepath": "data/layouts/CelantoTown_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_CELANTO_TOWN_HOUSE2",
+      "name": "CelantoTown_House2_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/CelantoTown_House2/border.bin",
+      "blockdata_filepath": "data/layouts/CelantoTown_House2/map.bin"
     }
   ]
 }

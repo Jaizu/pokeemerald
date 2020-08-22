@@ -93,8 +93,10 @@
 // Scripts
 #define FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT  0x50 // TODO: Remove references to this
 #define FLAG_GOT_GRACIDEA                    0x50 // FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT in Emerald
-#define FLAG_SET_WALL_CLOCK                  0x51
-#define FLAG_RESCUED_BIRCH                   0x52
+#define FLAG_SET_WALL_CLOCK                  0x51 // TODO: Remove references to this
+#define FLAG_FED_CELANTO_MEOWTH              0x51 // FLAG_SET_WALL_CLOCK in Emerald
+#define FLAG_RESCUED_BIRCH                   0x52 // TODO: Remove references to this
+#define FLAG_GOT_CELANTO_WHITE_HERB          0x52 // FLAG_RESCUED_BIRCH in Emerald
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS       0x53
 
 #define FLAG_UNUSED_0x054                    0x54  // Unused Flag
