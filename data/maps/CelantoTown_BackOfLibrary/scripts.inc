@@ -328,7 +328,6 @@ CelantoTown_BackOfLibrary_EventScript_SetRivalName:
 	fadescreen FADE_TO_BLACK
 	special DoRivalNamingScreen
 	waitstate
-	fadescreen FADE_FROM_BLACK
 	msgbox CelantoTown_BackOfLibrary_Text_IsHisNameRival, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq CelantoTown_BackOfLibrary_EventScript_SetRivalName

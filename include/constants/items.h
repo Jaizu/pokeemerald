@@ -744,6 +744,37 @@
 #define GOOD_ROD  1
 #define SUPER_ROD 2
 
+// Ball IDs
+#define BALL_POKE 0
+#define BALL_GREAT 1
+#define BALL_SAFARI 2
+#define BALL_ULTRA 3
+#define BALL_MASTER 4
+#define BALL_NET 5
+#define BALL_DIVE 6
+#define BALL_NEST 7
+#define BALL_REPEAT 8
+#define BALL_TIMER 9
+#define BALL_LUXURY 10
+#define BALL_PREMIER 11
+#define BALL_LEVEL 12
+#define BALL_LURE 13
+#define BALL_MOON 14
+#define BALL_FRIEND 15
+#define BALL_LOVE 16
+#define BALL_HEAVY 17
+#define BALL_FAST 18
+#define BALL_SPORT 19
+#define BALL_DUSK 20
+#define BALL_QUICK 21
+#define BALL_HEAL 22
+#define BALL_CHERISH 23
+#define BALL_PARK 24
+#define BALL_DREAM 25
+#define BALL_BEAST 26
+
+#define POKEBALL_COUNT 27
+
 // Check if the item is one that can be used on a Pokemon.
 #define ITEM_HAS_EFFECT(item) ((item) >= ITEM_POTION && (item) <= LAST_BERRY_INDEX)
 

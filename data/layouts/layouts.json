@@ -4490,6 +4490,26 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/CelantoTown_House2/border.bin",
       "blockdata_filepath": "data/layouts/CelantoTown_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_CELANTO_TOWN_CONDOMINIUMS_1F",
+      "name": "CelantoTown_Condominiums_1F_Layout",
+      "width": 15,
+      "height": 20,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/CelantoTown_Condominiums_1F/border.bin",
+      "blockdata_filepath": "data/layouts/CelantoTown_Condominiums_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_CELANTO_TOWN_CONDOMINIUMS_2F",
+      "name": "CelantoTown_Condominiums_2F_Layout",
+      "width": 15,
+      "height": 19,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/CelantoTown_Condominiums_2F/border.bin",
+      "blockdata_filepath": "data/layouts/CelantoTown_Condominiums_2F/map.bin"
     }
   ]
 }

@@ -92,12 +92,13 @@
 
 // Scripts
 #define FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT  0x50 // TODO: Remove references to this
-#define FLAG_GOT_GRACIDEA                    0x50 // FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT in Emerald
+#define FLAG_RECEIVED_GRACIDEA               0x50 // FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT in Emerald
 #define FLAG_SET_WALL_CLOCK                  0x51 // TODO: Remove references to this
 #define FLAG_FED_CELANTO_MEOWTH              0x51 // FLAG_SET_WALL_CLOCK in Emerald
 #define FLAG_RESCUED_BIRCH                   0x52 // TODO: Remove references to this
-#define FLAG_GOT_CELANTO_WHITE_HERB          0x52 // FLAG_RESCUED_BIRCH in Emerald
-#define FLAG_LEGENDARIES_IN_SOOTOPOLIS       0x53
+#define FLAG_RECEIVED_CELANTO_WHITE_HERB     0x52 // FLAG_RESCUED_BIRCH in Emerald
+#define FLAG_LEGENDARIES_IN_SOOTOPOLIS       0x53 // TODO: Remove references to this
+#define FLAG_RECEIVED_CELANTO_DUSK_STONE     0x53 // FLAG_LEGENDARIES_IN_SOOTOPOLIS in Emerald
 
 #define FLAG_UNUSED_0x054                    0x54  // Unused Flag
 #define FLAG_UNUSED_0x055                    0x55  // Unused Flag
@@ -603,7 +604,8 @@
 #define FLAG_HIDDEN_ITEM_RELIQUIA_RUINS_HYPER_POTION         (FLAG_HIDDEN_ITEMS_START + 0x3E) // FLAG_HIDDEN_ITEM_ROUTE_104_POKE_BALL in Emerald
 #define FLAG_HIDDEN_ITEM_ROUTE_104_POTION                    (FLAG_HIDDEN_ITEMS_START + 0x25) // TODO: Remove references to this
 #define FLAG_HIDDEN_ITEM_RELIQUIA_RUINS_BLUE_SHARD           (FLAG_HIDDEN_ITEMS_START + 0x25) // FLAG_HIDDEN_ITEM_ROUTE_104_POTION in Emerald
-#define FLAG_HIDDEN_ITEM_ROUTE_104_ANTIDOTE                  (FLAG_HIDDEN_ITEMS_START + 0x55)
+#define FLAG_HIDDEN_ITEM_ROUTE_104_ANTIDOTE                  (FLAG_HIDDEN_ITEMS_START + 0x55) // TODO: Remove references to this
+#define FLAG_HIDDEN_ITEM_CELANTO_CONDOMINIUMS_POTION         (FLAG_HIDDEN_ITEMS_START + 0x55) // FLAG_HIDDEN_ITEM_ROUTE_104_ANTIDOTE in Emerald
 #define FLAG_HIDDEN_ITEM_ROUTE_104_HEART_SCALE               (FLAG_HIDDEN_ITEMS_START + 0x58)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_HEART_SCALE               (FLAG_HIDDEN_ITEMS_START + 0x59)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)

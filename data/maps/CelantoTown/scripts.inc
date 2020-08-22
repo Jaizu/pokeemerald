@@ -13,7 +13,7 @@ CelantoTown_OnTransition::
 CelantoTown_EventScript_OldMan::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_GRACIDEA, CelantoTown_EventScript_OldManDiscussGracidea
+	goto_if_set FLAG_RECEIVED_GRACIDEA, CelantoTown_EventScript_OldManDiscussGracidea
 	msgbox CelantoTown_Text_ThisFlowerIsStriking
 	setvar VAR_0x8004, SPECIES_SHAYMIN
 	specialvar VAR_RESULT, IsPokemonJumpSpeciesInParty // TODO: Port DoesPlayerPartyContainSpecies
@@ -30,7 +30,7 @@ CelantoTown_EventScript_OldManTryGiveGracidea::
 	waitmovement 0
 	msgbox CelantoTown_Text_YourShayminIsBeautiful
 	giveitem ITEM_GRACIDEA
-	setflag FLAG_GOT_GRACIDEA
+	setflag FLAG_RECEIVED_GRACIDEA
 	additem ITEM_GRACIDEA
 	goto CelantoTown_EventScript_OldManDiscussGracidea
 

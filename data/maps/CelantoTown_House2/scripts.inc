@@ -53,11 +53,11 @@ CelantoTown_House2_EventScript_FeedMeowth:
 	end
 
 CelantoTown_House2_EventScript_TryGiveWhiteHerb:
-	goto_if_set FLAG_GOT_CELANTO_WHITE_HERB, CelantoTown_House2_EventScript_MeowthIsBetter
+	goto_if_set FLAG_RECEIVED_CELANTO_WHITE_HERB, CelantoTown_House2_EventScript_MeowthIsBetter
 	giveitem ITEM_WHITE_HERB
 	compare VAR_RESULT, FALSE
 	goto_if_eq Common_EventScript_ShowBagIsFull
-	setflag FLAG_GOT_CELANTO_WHITE_HERB
+	setflag FLAG_RECEIVED_CELANTO_WHITE_HERB
 	goto CelantoTown_House2_EventScript_MeowthIsBetter
 	end
 
