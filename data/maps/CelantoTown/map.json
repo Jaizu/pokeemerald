@@ -15,17 +15,17 @@
   "connections": [
     {
       "direction": "down",
-      "offset": 20,
+      "offset": 22,
       "map": "MAP_RELIQUIA_RUINS"
     },
     {
       "direction": "right",
-      "offset": 6,
+      "offset": 2,
       "map": "MAP_CELANTO_GROVE"
     },
     {
       "direction": "left",
-      "offset": -4,
+      "offset": -6,
       "map": "MAP_CELANTO_PATH"
     }
   ],
@@ -33,7 +33,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MOM",
       "x": 36,
-      "y": 23,
+      "y": 21,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -46,7 +46,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
       "x": 46,
-      "y": 16,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -59,7 +59,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
       "x": 42,
-      "y": 9,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 3,
@@ -72,7 +72,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 27,
-      "y": 14,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 4,
@@ -85,7 +85,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
       "x": 16,
-      "y": 13,
+      "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_UP_AND_RIGHT",
       "movement_range_x": 0,
@@ -98,7 +98,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
       "x": 44,
-      "y": 13,
+      "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -111,7 +111,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_4",
       "x": 7,
-      "y": 18,
+      "y": 16,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -125,41 +125,59 @@
   "warp_events": [
     {
       "x": 37,
-      "y": 15,
+      "y": 13,
       "elevation": 0,
       "dest_map": "MAP_CELANTO_TOWN_PLAYERS_HOUSE_1F",
       "dest_warp_id": 0
     },
     {
       "x": 36,
-      "y": 23,
+      "y": 21,
       "elevation": 0,
       "dest_map": "MAP_CELANTO_TOWN_LIBRARY",
       "dest_warp_id": 0
     },
     {
       "x": 12,
-      "y": 18,
+      "y": 16,
       "elevation": 0,
       "dest_map": "MAP_CELANTO_TOWN_CONDOMINIUMS_1F",
       "dest_warp_id": 0
     },
     {
       "x": 21,
-      "y": 11,
+      "y": 9,
       "elevation": 0,
       "dest_map": "MAP_CELANTO_TOWN_HOUSE1",
       "dest_warp_id": 0
     },
     {
       "x": 33,
-      "y": 8,
+      "y": 6,
       "elevation": 0,
       "dest_map": "MAP_CELANTO_TOWN_HOUSE2",
       "dest_warp_id": 0
     }
   ],
   "coord_events": [
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_CELANTO_TOWN_GUARD",
+      "var_value": "0",
+      "script": "CelantoTown_EventScript_CelantoPathGuardTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_CELANTO_TOWN_GUARD",
+      "var_value": "0",
+      "script": "CelantoTown_EventScript_CelantoPathGuardTrigger"
+    },
     {
       "type": "trigger",
       "x": 6,
@@ -171,26 +189,8 @@
     },
     {
       "type": "trigger",
-      "x": 6,
-      "y": 20,
-      "elevation": 0,
-      "var": "VAR_CELANTO_TOWN_GUARD",
-      "var_value": "0",
-      "script": "CelantoTown_EventScript_CelantoPathGuardTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 6,
-      "y": 21,
-      "elevation": 0,
-      "var": "VAR_CELANTO_TOWN_GUARD",
-      "var_value": "0",
-      "script": "CelantoTown_EventScript_CelantoPathGuardTrigger"
-    },
-    {
-      "type": "trigger",
       "x": 40,
-      "y": 27,
+      "y": 25,
       "elevation": 0,
       "var": "VAR_CELANTO_TOWN_STATE",
       "var_value": "1",
@@ -199,7 +199,7 @@
     {
       "type": "trigger",
       "x": 41,
-      "y": 27,
+      "y": 25,
       "elevation": 0,
       "var": "VAR_CELANTO_TOWN_STATE",
       "var_value": "1",
@@ -208,7 +208,7 @@
     {
       "type": "trigger",
       "x": 42,
-      "y": 27,
+      "y": 25,
       "elevation": 0,
       "var": "VAR_CELANTO_TOWN_STATE",
       "var_value": "1",
@@ -219,7 +219,7 @@
     {
       "type": "sign",
       "x": 39,
-      "y": 15,
+      "y": 13,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CelantoTown_EventScript_PlayersHouseSign"
@@ -227,7 +227,7 @@
     {
       "type": "sign",
       "x": 22,
-      "y": 15,
+      "y": 13,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CelantoTown_EventScript_TownSign"
@@ -235,7 +235,7 @@
     {
       "type": "sign",
       "x": 39,
-      "y": 23,
+      "y": 21,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CelantoTown_EventScript_LibrarySign"
@@ -243,7 +243,7 @@
     {
       "type": "sign",
       "x": 15,
-      "y": 18,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CelantoTown_EventScript_CondominiumsSign"

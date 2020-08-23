@@ -15,7 +15,7 @@
   "connections": [
     {
       "direction": "right",
-      "offset": -8,
+      "offset": -12,
       "map": "MAP_CELANTO_PATH"
     }
   ],
@@ -25,70 +25,70 @@
   "warp_events": [
     {
       "x": 29,
-      "y": 15,
+      "y": 11,
       "elevation": 0,
       "dest_map": "MAP_ARCHAN_TOWN",
       "dest_warp_id": 0
     },
     {
       "x": 17,
-      "y": 23,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_ARCHAN_TOWN",
       "dest_warp_id": 0
     },
     {
       "x": 24,
-      "y": 15,
+      "y": 11,
       "elevation": 0,
       "dest_map": "MAP_ARCHAN_TOWN",
       "dest_warp_id": 0
     },
     {
       "x": 6,
-      "y": 23,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_ARCHAN_TOWN",
       "dest_warp_id": 0
     },
     {
       "x": 19,
-      "y": 9,
+      "y": 5,
       "elevation": 0,
       "dest_map": "MAP_ARCHAN_TOWN",
       "dest_warp_id": 0
     },
     {
       "x": 35,
-      "y": 10,
+      "y": 6,
       "elevation": 0,
       "dest_map": "MAP_ARCHAN_TOWN",
       "dest_warp_id": 0
     },
     {
       "x": 45,
-      "y": 10,
+      "y": 6,
       "elevation": 0,
       "dest_map": "MAP_ARCHAN_TOWN",
       "dest_warp_id": 0
     },
     {
       "x": 13,
-      "y": 23,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_ARCHAN_TOWN",
       "dest_warp_id": 0
     },
     {
       "x": 29,
-      "y": 23,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_ARCHAN_TOWN",
       "dest_warp_id": 0
     },
     {
       "x": 39,
-      "y": 20,
+      "y": 16,
       "elevation": 0,
       "dest_map": "MAP_ARCHAN_TOWN",
       "dest_warp_id": 0
@@ -101,7 +101,7 @@
     {
       "type": "sign",
       "x": 32,
-      "y": 15,
+      "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
@@ -109,7 +109,7 @@
     {
       "type": "sign",
       "x": 20,
-      "y": 15,
+      "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
@@ -117,7 +117,7 @@
     {
       "type": "sign",
       "x": 14,
-      "y": 10,
+      "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
@@ -125,7 +125,7 @@
     {
       "type": "hidden_item",
       "x": 27,
-      "y": 11,
+      "y": 7,
       "elevation": 3,
       "item": "ITEM_NONE",
       "flag": "FLAG_TEMP_1"

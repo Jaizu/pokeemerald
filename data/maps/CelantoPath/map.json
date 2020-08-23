@@ -15,12 +15,12 @@
   "connections": [
     {
       "direction": "right",
-      "offset": 4,
+      "offset": 6,
       "map": "MAP_CELANTO_TOWN"
     },
     {
       "direction": "left",
-      "offset": 8,
+      "offset": 12,
       "map": "MAP_ARCHAN_TOWN"
     }
   ],
