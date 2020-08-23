@@ -17,6 +17,11 @@
       "direction": "down",
       "offset": 20,
       "map": "MAP_RELIQUIA_RUINS"
+    },
+    {
+      "direction": "right",
+      "offset": 6,
+      "map": "MAP_CELANTO_GROVE"
     }
   ],
   "object_events": [

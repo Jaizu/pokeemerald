@@ -4510,6 +4510,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/CelantoTown_Condominiums_2F/border.bin",
       "blockdata_filepath": "data/layouts/CelantoTown_Condominiums_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_CELANTO_GROVE",
+      "name": "CelantoGrove_Layout",
+      "width": 36,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/CelantoGrove/border.bin",
+      "blockdata_filepath": "data/layouts/CelantoGrove/map.bin"
     }
   ]
 }
