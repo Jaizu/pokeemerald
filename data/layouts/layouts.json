@@ -4415,7 +4415,7 @@
       "id": "LAYOUT_CELANTO_TOWN",
       "name": "CelantoTown_Layout",
       "width": 52,
-      "height": 32,
+      "height": 28,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/CelantoTown/border.bin",

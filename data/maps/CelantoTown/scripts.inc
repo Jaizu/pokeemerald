@@ -213,6 +213,7 @@ CelantoTown_EventScript_MomLibraryScene:
 	waitmovement 0
 	removeobject LOCALID_MOM
 	setflag FLAG_HIDE_CELANTO_LIBRARY_REDWOOD
+	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	setvar VAR_CELANTO_TOWN_STATE, 2
 	releaseall
 	end

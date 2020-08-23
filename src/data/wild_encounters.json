@@ -11496,7 +11496,7 @@
           "map": "MAP_RELIQUIA_RUINS",
           "base_label": "gReliquiaRuins0",
           "land_mons": {
-            "encounter_rate": 14,
+            "encounter_rate": 5,
             "mons": [
               {
                 "min_level": 14,
@@ -11561,7 +11561,7 @@
             ]
           },
           "water_mons": {
-            "encounter_rate": 2,
+            "encounter_rate": 1,
             "mons": [
               {
                 "min_level": 15,
@@ -11595,7 +11595,7 @@
           "map": "MAP_CELANTO_PATH",
           "base_label": "gCelantoPath0",
           "land_mons": {
-            "encounter_rate": 14,
+            "encounter_rate": 5,
             "mons": [
               {
                 "min_level": 2,
