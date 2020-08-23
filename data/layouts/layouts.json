@@ -4520,6 +4520,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/CelantoGrove/border.bin",
       "blockdata_filepath": "data/layouts/CelantoGrove/map.bin"
+    },
+    {
+      "id": "LAYOUT_CELANTO_PATH",
+      "name": "CelantoPath_Layout",
+      "width": 44,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/CelantoPath/border.bin",
+      "blockdata_filepath": "data/layouts/CelantoPath/map.bin"
     }
   ]
 }

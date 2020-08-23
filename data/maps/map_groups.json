@@ -38,6 +38,9 @@
   ],
   "gMapGroup0": [
     "CelantoTown",
+    "ReliquiaRuins",
+    "CelantoGrove",
+    "CelantoPath",
     "PetalburgCity",
     "SlateportCity",
     "MauvilleCity",
@@ -54,8 +57,6 @@
     "FallarborTown",
     "VerdanturfTown",
     "PacifidlogTown",
-    "ReliquiaRuins",
-    "CelantoGrove",
     "Route101",
     "Route102",
     "Route103",

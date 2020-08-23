@@ -22,6 +22,11 @@
       "direction": "right",
       "offset": 6,
       "map": "MAP_CELANTO_GROVE"
+    },
+    {
+      "direction": "left",
+      "offset": -4,
+      "map": "MAP_CELANTO_PATH"
     }
   ],
   "object_events": [
