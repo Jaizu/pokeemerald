@@ -5,7 +5,7 @@
   "music": "MUS_DOORO1",
   "region_map_section": "MAPSEC_ROUTE_103",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
+  "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_ROUTE",
   "allow_cycling": true,
   "allow_escaping": false,
@@ -17,6 +17,11 @@
       "direction": "right",
       "offset": 4,
       "map": "MAP_CELANTO_TOWN"
+    },
+    {
+      "direction": "left",
+      "offset": 12,
+      "map": "MAP_ARCHAN_TOWN"
     }
   ],
   "object_events": [

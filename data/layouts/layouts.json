@@ -4530,6 +4530,16 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/CelantoPath/border.bin",
       "blockdata_filepath": "data/layouts/CelantoPath/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARCHAN_TOWN",
+      "name": "ArchanTown_Layout",
+      "width": 48,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/ArchanTown/border.bin",
+      "blockdata_filepath": "data/layouts/ArchanTown/map.bin"
     }
   ]
 }

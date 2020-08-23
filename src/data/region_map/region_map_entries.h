@@ -2,7 +2,7 @@
 #define GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H
 
 static const u8 sMapName_LittlerootTown[] = _("Celanto Town");
-static const u8 sMapName_OldaleTown[] = _("OLDALE TOWN");
+static const u8 sMapName_OldaleTown[] = _("Archan Town");
 static const u8 sMapName_DewfordTown[] = _("DEWFORD TOWN");
 static const u8 sMapName_LavaridgeTown[] = _("LAVARIDGE TOWN");
 static const u8 sMapName_FallarborTown[] = _("FALLARBOR TOWN");
