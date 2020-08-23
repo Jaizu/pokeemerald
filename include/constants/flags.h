@@ -99,8 +99,8 @@
 #define FLAG_RECEIVED_CELANTO_WHITE_HERB     0x52 // FLAG_RESCUED_BIRCH in Emerald
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS       0x53 // TODO: Remove references to this
 #define FLAG_RECEIVED_CELANTO_DUSK_STONE     0x53 // FLAG_LEGENDARIES_IN_SOOTOPOLIS in Emerald
+#define FLAG_RECEIVED_TM32                   0x54 // FLAG_UNUSED_0x054 in Emerald
 
-#define FLAG_UNUSED_0x054                    0x54  // Unused Flag
 #define FLAG_UNUSED_0x055                    0x55  // Unused Flag
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
@@ -605,7 +605,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_104_POTION                    (FLAG_HIDDEN_ITEMS_START + 0x25) // TODO: Remove references to this
 #define FLAG_HIDDEN_ITEM_RELIQUIA_RUINS_BLUE_SHARD           (FLAG_HIDDEN_ITEMS_START + 0x25) // FLAG_HIDDEN_ITEM_ROUTE_104_POTION in Emerald
 #define FLAG_HIDDEN_ITEM_ROUTE_104_ANTIDOTE                  (FLAG_HIDDEN_ITEMS_START + 0x55) // TODO: Remove references to this
-#define FLAG_HIDDEN_ITEM_CELANTO_CONDOMINIUMS_POTION         (FLAG_HIDDEN_ITEMS_START + 0x55) // FLAG_HIDDEN_ITEM_ROUTE_104_ANTIDOTE in Emerald
+#define FLAG_HIDDEN_ITEM_CELANTO_GROVE_HYPER_POTION          (FLAG_HIDDEN_ITEMS_START + 0x55) // FLAG_HIDDEN_ITEM_ROUTE_104_ANTIDOTE in Emerald
 #define FLAG_HIDDEN_ITEM_ROUTE_104_HEART_SCALE               (FLAG_HIDDEN_ITEMS_START + 0x58)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_HEART_SCALE               (FLAG_HIDDEN_ITEMS_START + 0x59)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
@@ -1071,7 +1071,8 @@
 #define FLAG_ITEM_RELIQUIA_RUINS_SHINY_STONE                        0x3E9 // FLAG_ITEM_ROUTE_116_X_SPECIAL in Emerald
 #define FLAG_ITEM_ROUTE_104_PP_UP                                   0x3EA // TODO: Remove references to this
 #define FLAG_ITEM_RELIQUIA_RUINS_TM37                               0x3EA // FLAG_ITEM_ROUTE_104_PP_UP in Emerald
-#define FLAG_ITEM_ROUTE_105_IRON                                    0x3EB
+#define FLAG_ITEM_ROUTE_105_IRON                                    0x3EB // TODO: Remove references to this
+#define FLAG_ITEM_CELANTO_CONDOMINIUMS_POTION                       0x3EB // FLAG_ITEM_ROUTE_105_IRON in Emerald
 #define FLAG_ITEM_ROUTE_106_PROTEIN                                 0x3EC
 #define FLAG_ITEM_ROUTE_109_PP_UP                                   0x3ED
 #define FLAG_ITEM_ROUTE_109_RARE_CANDY                              0x3EE
