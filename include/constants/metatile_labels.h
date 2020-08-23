@@ -205,8 +205,7 @@
 #define METATILE_General_CaveEntrance_Top      0x09F
 #define METATILE_General_Door_Contest          0x1DB
 #define METATILE_General_Door_Gym              0x1CD
-#define METATILE_General_Door_PokeCenter       0x061
-#define METATILE_General_Door_PokeMart         0x041
+#define METATILE_General_Door_PokeCenter       0x042
 #define METATILE_General_Grass                 0x001
 #define METATILE_General_Grass_TreeLeft        0x1CE
 #define METATILE_General_Grass_TreeRight       0x1CF
@@ -433,8 +432,8 @@
 #define METATILE_RS_MossdeepGym_Switch_Up       0x238
 
 // gTileset_Rustboro
-#define METATILE_Rustboro_Door_Gray  0x21F
-#define METATILE_Rustboro_Door_Tan   0x22F
+#define METATILE_Rustboro_Door_Gray  0x258
+#define METATILE_Rustboro_Door_Tan   0x25E
 
 // gTileset_SecretBase
 #define METATILE_SecretBase_AttractMat_BottomLeft       0x313

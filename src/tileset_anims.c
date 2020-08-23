@@ -684,7 +684,7 @@ void InitTilesetAnim_Rustboro(void)
 {
     sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
-    sSecondaryTilesetAnimCallback = TilesetAnim_Rustboro;
+    sSecondaryTilesetAnimCallback = NULL;
 }
 
 void InitTilesetAnim_Dewford(void)
