@@ -188,7 +188,6 @@ CelantoTown_EventScript_MomLibrary_Trigger2::
 	end
 
 CelantoTown_EventScript_MomLibraryScene:
-	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	addobject LOCALID_MOM

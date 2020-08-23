@@ -1,29 +1,24 @@
-static const struct TrainerMonNoItemDefaultMoves sParty_Sawyer1[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_CoulterCelantoPathChimchar[] = {
     {
     .iv = 0,
-    .lvl = 21,
-    .species = SPECIES_GEODUDE,
+    .lvl = 5,
+    .species = SPECIES_CHIMCHAR,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout1[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_CoulterCelantoPathPiplup[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 5,
+    .species = SPECIES_PIPLUP,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout2[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_CoulterCelantoPathTurtwig[] = {
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_ZUBAT,
-    },
-    {
-    .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_CARVANHA,
+    .lvl = 5,
+    .species = SPECIES_TURTWIG,
     }
 };
 
