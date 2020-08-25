@@ -205,7 +205,7 @@
 #define METATILE_General_CaveEntrance_Top      0x09F
 #define METATILE_General_Door_Contest          0x1DB
 #define METATILE_General_Door_Gym              0x1CD
-#define METATILE_General_Door_PokeCenter       0x042
+#define METATILE_General_Door_PokeCenter       0x02A
 #define METATILE_General_Grass                 0x001
 #define METATILE_General_Grass_TreeLeft        0x1CE
 #define METATILE_General_Grass_TreeRight       0x1CF

@@ -1322,8 +1322,6 @@ static void Task_NewGameBirchSpeech_MainSpeech(u8 taskId)
     }
 }
 
-#define tState data[0]
-
 static void Task_NewGameBirchSpeechSub_InitPokeBall(u8 taskId)
 {
     u8 spriteId = gTasks[sBirchSpeechMainTaskId].tLotadSpriteId;
@@ -1349,8 +1347,6 @@ static void Task_NewGameBirchSpeechSub_WaitForLotad(u8 taskId)
         DestroyTask(taskId);
     }
 }
-
-#undef tState
 
 static void Task_NewGameBirchSpeech_AndYouAre(u8 taskId)
 {

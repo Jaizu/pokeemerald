@@ -1,3 +1,5 @@
+// TODO: Remove duplicate definition labels
+
 EventScript_ItemPotion::
 Route102_EventScript_ItemPotion::
 Route104_EventScript_ItemPotion::
@@ -6,12 +8,29 @@ Route116_EventScript_ItemPotion::
 	finditem ITEM_POTION
 	end
 
+EventScript_ItemSuperPotion::
+Route115_EventScript_ItemSuperPotion::
+	finditem ITEM_SUPER_POTION
+	end
+
 EventScript_ItemRevive::
 Route117_EventScript_ItemRevive::
 Route120_EventScript_ItemRevive::
 Route121_EventScript_ItemRevive::
 AbandonedShip_Rooms2_1F_EventScript_ItemRevive::
 	finditem ITEM_REVIVE
+	end
+
+EventScript_ItemRareCandy::
+Route110_EventScript_ItemRareCandy::
+Route114_EventScript_ItemRareCandy::
+Route119_EventScript_ItemRareCandy::
+Route127_EventScript_ItemRareCandy::
+Route132_EventScript_ItemRareCandy::
+GraniteCave_B2F_EventScript_ItemRareCandy::
+ShoalCave_LowTideInnerRoom_EventScript_ItemRareCandy::
+MagmaHideout_1F_EventScript_ItemRareCandy::
+	finditem ITEM_RARE_CANDY
 	end
 
 EventScript_ItemTM37::
@@ -59,10 +78,6 @@ Route109_EventScript_ItemPPUp:: @ 8290D5A
 	finditem ITEM_PP_UP
 	end
 
-Route110_EventScript_ItemRareCandy:: @ 8290D74
-	finditem ITEM_RARE_CANDY
-	end
-
 Route110_EventScript_ItemDireHit:: @ 8290D81
 	finditem ITEM_DIRE_HIT
 	end
@@ -99,20 +114,12 @@ Route113_EventScript_ItemHyperPotion:: @ 8290DF6
 	finditem ITEM_HYPER_POTION
 	end
 
-Route114_EventScript_ItemRareCandy:: @ 8290E03
-	finditem ITEM_RARE_CANDY
-	end
-
 Route114_EventScript_ItemProtein:: @ 8290E10
 	finditem ITEM_PROTEIN
 	end
 
 Route114_EventScript_ItemEnergyPowder:: @ 8290E1D
 	finditem ITEM_ENERGY_POWDER
-	end
-
-Route115_EventScript_ItemSuperPotion:: @ 8290E2A
-	finditem ITEM_SUPER_POTION
 	end
 
 Route115_EventScript_ItemTM01:: @ 8290E37
@@ -173,10 +180,6 @@ Route119_EventScript_ItemElixir:: @ 8290EFA
 
 Route119_EventScript_ItemLeafStone:: @ 8290F07
 	finditem ITEM_LEAF_STONE
-	end
-
-Route119_EventScript_ItemRareCandy:: @ 8290F14
-	finditem ITEM_RARE_CANDY
 	end
 
 Route119_EventScript_ItemHyperPotion:: @ 8290F21
@@ -263,14 +266,6 @@ Route127_EventScript_ItemCarbos:: @ 829103F
 	finditem ITEM_CARBOS
 	end
 
-Route127_EventScript_ItemRareCandy:: @ 829104C
-	finditem ITEM_RARE_CANDY
-	end
-
-Route132_EventScript_ItemRareCandy:: @ 8291059
-	finditem ITEM_RARE_CANDY
-	end
-
 Route132_EventScript_ItemProtein:: @ 8291066
 	finditem ITEM_PROTEIN
 	end
@@ -353,10 +348,6 @@ GraniteCave_B1F_EventScript_ItemPokeBall:: @ 829115D
 
 GraniteCave_B2F_EventScript_ItemRepel:: @ 829116A
 	finditem ITEM_REPEL
-	end
-
-GraniteCave_B2F_EventScript_ItemRareCandy:: @ 8291177
-	finditem ITEM_RARE_CANDY
 	end
 
 JaggedPass_EventScript_ItemBurnHeal:: @ 8291184
@@ -535,10 +526,6 @@ ShoalCave_LowTideEntranceRoom_EventScript_ItemBigPearl:: @ 82913C0
 	finditem ITEM_BIG_PEARL
 	end
 
-ShoalCave_LowTideInnerRoom_EventScript_ItemRareCandy:: @ 82913CD
-	finditem ITEM_RARE_CANDY
-	end
-
 ShoalCave_LowTideStairsRoom_EventScript_ItemIceHeal:: @ 82913DA
 	finditem ITEM_ICE_HEAL
 	end
@@ -617,10 +604,6 @@ ArtisanCave_B1F_EventScript_ItemHPUp:: @ 82914C4
 
 ArtisanCave_1F_EventScript_ItemCarbos:: @ 82914D1
 	finditem ITEM_CARBOS
-	end
-
-MagmaHideout_1F_EventScript_ItemRareCandy:: @ 82914DE
-	finditem ITEM_RARE_CANDY
 	end
 
 MagmaHideout_2F_2R_EventScript_MaxElixir:: @ 82914EB
