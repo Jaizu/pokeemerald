@@ -1,61 +1,48 @@
-gText_Birch_Welcome:: @ 82C897B
-	.string "Hi! Sorry to keep you waiting!\p"
-	.string "Welcome to the world of POKéMON!\p"
-	.string "My name is BIRCH.\p"
-	.string "But everyone calls me the POKéMON\n"
-	.string "PROFESSOR.\p"
-	.string "$"
+gText_Birch_Welcome::
+	.string "Hello there!\p"
+	.string "Welcome to the wonderful world of\n"
+	.string "Pokémon!\p"
+	.string "The name's Redwood!\n"
+	.string "I'm a Pokémon Professor.\p"
+	.string "I study our fascinating world, and\n"
+	.string "the creatures that inhabit it.\p"
+	.string "I am also an archaeologist!\n"
+	.string "Unravelling the past is my passion.\p$"
 
-gText_Birch_Pokemon:: @ 82C89FB
-	.string "This is what we call a “POKéMON.”\p"
-	.string "\n"
-	.string "$"
+gText_Birch_Pokemon::
+	.string "This is Kabuto, a Pokémon!{PAUSE 96}\p$"
 
-gText_Birch_MainSpeech:: @ 82C8A1F
-	.string "This world is widely inhabited by\n"
-	.string "creatures known as POKéMON.\p"
-	.string "We humans live alongside POKéMON,\n"
-	.string "at times as friendly playmates, and\l"
-	.string "at times as cooperative workmates.\p"
-	.string "And sometimes, we band together\n"
-	.string "and battle others like us.\p"
-	.string "But despite our closeness, we don't\n"
-	.string "know everything about POKéMON.\p"
-	.string "In fact, there are many, many\n"
-	.string "secrets surrounding POKéMON.\p"
-	.string "To unravel POKéMON mysteries,\n"
-	.string "I've been undertaking research.\l"
-	.string "That's what I do.\p"
-	.string "$"
+gText_Birch_MainSpeech::
+	.string "Pokémon are our friends, pets, and\n"
+	.string "work partners!\p"
+	.string "With today's technology, we can\n"
+	.string "revive Kabuto from mere Fossils.\p"
+	.string "Indeed, the tenacity of life is\n"
+	.string "something to behold.\p$"
 
-gText_Birch_AndYouAre:: @ 82C8BD0
-	.string "And you are?$"
+gText_Birch_AndYouAre::
+	.string "But enough about me!$"
 
-gText_Birch_BoyOrGirl:: @ 82C8BDD
-	.string "Are you a boy?\n"
-	.string "Or are you a girl?$"
+gText_Birch_BoyOrGirl::
+	.string "Tell me, are you a boy, or a girl?$"
 
-gText_Birch_WhatsYourName:: @ 82C8BFF
-	.string "All right.\n"
-	.string "What's your name?$"
+gText_Birch_WhatsYourName::
+	.string "I see!\n"
+	.string "And your name is?$"
 
-gText_Birch_SoItsPlayer:: @ 82C8C1C
-	.string "So it's {PLAYER}{KUN}?$"
+gText_Birch_SoItsPlayer::
+	.string "Ah!\n"
+	.string "Your name is {PLAYER}?$"
 
-gText_Birch_YourePlayer:: @ 82C8C2A
-	.string "Ah, okay!\p"
-	.string "You're {PLAYER}{KUN} who's moving to my\n"
-	.string "hometown of LITTLEROOT.\l"
-	.string "I get it now!\p"
-	.string "$"
+gText_Birch_YourePlayer::
+	.string "Wonderful, {PLAYER}!\p"
+	.string "You say you live in Celanto Town?\n"
+	.string "I'll be headed there myself, soon.\p"
+	.string "How exciting!\p$"
 
-gText_Birch_AreYouReady:: @ 82C8C7A
-	.string "All right, are you ready?\p"
-	.string "Your very own adventure is about\n"
-	.string "to unfold.\p"
-	.string "Take courage, and leap into the\n"
-	.string "world of POKéMON where dreams,\l"
-	.string "adventure, and friendships await!\p"
-	.string "Well, I'll be expecting you later.\n"
-	.string "Come see me in my POKéMON LAB.\p"
-	.string "$"
+gText_Birch_AreYouReady::
+	.string "Now!\n"
+	.string "This adventure of yours…\p"
+	.string "It will surely be one for the\n"
+	.string "history books!\p"
+	.string "Make it count, okay?\p$"

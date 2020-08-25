@@ -1248,7 +1248,7 @@ static void Task_NewGameBirchSpeech_Init(u8 taskId)
     gTasks[taskId].func = Task_NewGameBirchSpeech_WaitToShowBirch;
     gTasks[taskId].tPlayerSpriteId = 0xFF;
     gTasks[taskId].data[3] = 0xFF;
-    gTasks[taskId].tTimer = 0xD8;
+    gTasks[taskId].tTimer = 0;
     PlayBGM(MUS_DOORO_X4);
     ShowBg(0);
     ShowBg(1);
@@ -1269,9 +1269,9 @@ static void Task_NewGameBirchSpeech_WaitToShowBirch(u8 taskId)
         gSprites[spriteId].pos1.y = 60;
         gSprites[spriteId].invisible = FALSE;
         gSprites[spriteId].oam.objMode = ST_OAM_OBJ_BLEND;
-        NewGameBirchSpeech_StartFadeInTarget1OutTarget2(taskId, 10);
-        NewGameBirchSpeech_StartFadePlatformOut(taskId, 20);
-        gTasks[taskId].tTimer = 80;
+        NewGameBirchSpeech_StartFadeInTarget1OutTarget2(taskId, 5);
+        NewGameBirchSpeech_StartFadePlatformOut(taskId, 5);
+        gTasks[taskId].tTimer = 10;
         gTasks[taskId].func = Task_NewGameBirchSpeech_WaitForSpriteFadeInWelcome;
     }
 }
@@ -1306,7 +1306,7 @@ static void Task_NewGameBirchSpeech_ThisIsAPokemon(u8 taskId)
     if (!gPaletteFade.active && !RunTextPrintersAndIsPrinter0Active())
     {
         gTasks[taskId].func = Task_NewGameBirchSpeech_MainSpeech;
-        StringExpandPlaceholders(gStringVar4, gText_ThisIsAPokemon);
+        StringExpandPlaceholders(gStringVar4, gText_Birch_Pokemon);
         AddTextPrinterWithCallbackForMessage(1, NewGameBirchSpeech_ShowPokeBallPrinterCallback);
         sBirchSpeechMainTaskId = taskId;
     }
@@ -1333,7 +1333,7 @@ static void Task_NewGameBirchSpeechSub_InitPokeBall(u8 taskId)
     gSprites[spriteId].invisible = FALSE;
     gSprites[spriteId].data[0] = 0;
 
-    CreatePokeballSpriteToReleaseMon(spriteId, gSprites[spriteId].oam.paletteNum, 112, 58, 0, 0, 32, 0x0000FFFF, SPECIES_LOTAD);
+    CreatePokeballSpriteToReleaseMon(spriteId, gSprites[spriteId].oam.paletteNum, 112, 58, 0, 0, 32, 0x0000FFFF, SPECIES_KABUTO);
     gTasks[taskId].func = Task_NewGameBirchSpeechSub_WaitForLotad;
     gTasks[sBirchSpeechMainTaskId].tTimer = 0;
 }
@@ -1343,29 +1343,10 @@ static void Task_NewGameBirchSpeechSub_WaitForLotad(u8 taskId)
     s16 *data = gTasks[taskId].data;
     struct Sprite *sprite = &gSprites[gTasks[sBirchSpeechMainTaskId].tLotadSpriteId];
 
-    switch (tState)
+    if (sprite->callback == SpriteCallbackDummy)
     {
-        case 0:
-            if (sprite->callback == SpriteCallbackDummy)
-            {
-                sprite->oam.affineMode = ST_OAM_AFFINE_OFF;
-                goto incrementStateAndTimer;
-            }
-            break;
-        case 1:
-            if (gTasks[sBirchSpeechMainTaskId].tTimer >= 96)
-            {
-                DestroyTask(taskId);
-                if (gTasks[sBirchSpeechMainTaskId].tTimer < 0x4000)
-                    gTasks[sBirchSpeechMainTaskId].tTimer++;
-            }
-            break;
-        incrementStateAndTimer:
-        default:
-            tState++;
-            if (gTasks[sBirchSpeechMainTaskId].tTimer < 0x4000)
-                gTasks[sBirchSpeechMainTaskId].tTimer++;
-            break;
+        sprite->oam.affineMode = ST_OAM_AFFINE_OFF;
+        DestroyTask(taskId);
     }
 }
 
@@ -1375,7 +1356,7 @@ static void Task_NewGameBirchSpeech_AndYouAre(u8 taskId)
 {
     if (!RunTextPrintersAndIsPrinter0Active())
     {
-        gUnknown_02022D04 = 0;
+        // gUnknown_02022D04 = 0;
         StringExpandPlaceholders(gStringVar4, gText_Birch_AndYouAre);
         AddTextPrinterForMessage(1);
         gTasks[taskId].func = Task_NewGameBirchSpeech_StartBirchLotadPlatformFade;
@@ -1657,7 +1638,7 @@ static void Task_NewGameBirchSpeech_WaitForSpriteFadeInAndTextPrinter(u8 taskId)
             gSprites[gTasks[taskId].tLotadSpriteId].oam.objMode = ST_OAM_OBJ_BLEND;
             NewGameBirchSpeech_StartFadeOutTarget1InTarget2(taskId, 2);
             NewGameBirchSpeech_StartFadePlatformIn(taskId, 1);
-            gTasks[taskId].tTimer = 64;
+            gTasks[taskId].tTimer = 10;
             gTasks[taskId].func = Task_NewGameBirchSpeech_AreYouReady;
         }
     }
@@ -1840,7 +1821,7 @@ static void SpriteCB_MovePlayerDownWhileShrinking(struct Sprite *sprite)
 
 static u8 NewGameBirchSpeech_CreateLotadSprite(u8 a, u8 b)
 {
-    return CreatePicSprite2(SPECIES_LOTAD, SHINY_ODDS, 0, 1, a, b, 14, -1);
+    return CreatePicSprite2(SPECIES_KABUTO, SHINY_ODDS, 0, 1, a, b, 14, -1);
 }
 
 static void AddBirchSpeechObjects(u8 taskId)
@@ -2214,7 +2195,7 @@ static void NewGameBirchSpeech_ClearWindow(u8 windowId)
 
 static void NewGameBirchSpeech_ShowPokeBallPrinterCallback(struct TextPrinterTemplate *printer, u16 a)
 {
-    if (*(printer->currentChar - 2) == 8 && gUnknown_02022D04 == 0)
+    if (gUnknown_02022D04 == 0)
     {
         gUnknown_02022D04 = 1;
         CreateTask(Task_NewGameBirchSpeechSub_InitPokeBall, 0);
