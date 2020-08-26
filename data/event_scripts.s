@@ -898,15 +898,6 @@ gText_ComeBackWithSecretPower:: @ 8272E30
 	.string "We'll accept you as a member and sell\n"
 	.string "you good stuff in secrecy.$"
 
-gText_PokerusExplanation:: @ 8272F07
-	.string "Your POKéMON may be infected with\n"
-	.string "POKéRUS.\p"
-	.string "Little is known about the POKéRUS\n"
-	.string "except that they are microscopic life-\l"
-	.string "forms that attach to POKéMON.\p"
-	.string "While infected, POKéMON are said to\n"
-	.string "grow exceptionally well.$"
-
 	.include "data/text/surf.inc"
 
 gText_DoorOpenedFarAway:: @ 827301B
@@ -1088,3 +1079,7 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/ArchanTown/scripts.inc"
 
 	.include "data/maps/ArchanTown_RedwoodResidence/scripts.inc"
+
+	.include "data/maps/ArchanTown_RedwoodResidenceUpstairs/scripts.inc"
+
+	.include "data/maps/ArchanTown_PokemonCenter/scripts.inc"

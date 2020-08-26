@@ -121,7 +121,9 @@
     "OldaleTown_PokemonCenter_1F",
     "OldaleTown_PokemonCenter_2F",
     "OldaleTown_Mart",
-    "ArchanTown_RedwoodResidence"
+    "ArchanTown_RedwoodResidence",
+    "ArchanTown_RedwoodResidenceUpstairs",
+    "ArchanTown_PokemonCenter"
   ],
   "gMapGroup3": [
     "DewfordTown_House1",

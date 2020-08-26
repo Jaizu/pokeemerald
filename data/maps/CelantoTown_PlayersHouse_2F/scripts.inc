@@ -13,6 +13,7 @@ CelantoTown_PlayersHouse_2F_EventScript_TurnPlayerNorth::
 
 CelantoTown_PlayersHouse_2F_EventScript_PC::
 	lockall
+	setvar VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE
 	special DoPCTurnOnEffect
 	playse SE_PC_ON
 	msgbox gText_PlayerHouseBootPC, MSGBOX_DEFAULT

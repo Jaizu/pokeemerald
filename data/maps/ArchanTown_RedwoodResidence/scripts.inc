@@ -48,6 +48,8 @@ ArchanTown_RedwoodResidence_EventScript_CarePackageScene:
 	msgbox ArchanTown_RedwoodResidence_Text_OpenedItUp, MSGBOX_DEFAULT
 	playfanfare MUS_FANFA4
 	message ArchanTown_RedwoodResidence_Text_ObtainedTheOrbtusPokedex
+	setflag FLAG_SYS_POKEDEX_GET
+	special SetUnlockedPokedexFlags
 	waitfanfare
 	msgbox ArchanTown_RedwoodResidence_Text_PlayerPutPokedexInBag, MSGBOX_DEFAULT
 	playfanfare MUS_FANFA4
@@ -71,7 +73,9 @@ ArchanTown_RedwoodResidence_EventScript_CarePackageScene:
 	closemessage
 	setflag FLAG_HIDE_MAP_NAME_POPUP
 	setflag FLAG_DONT_TRANSITION_MUSIC
+	setflag FLAG_DONT_CLEAR_SAVED_MUSIC
 	playbgm MUS_TSURETEK, 0
+	savebgm MUS_TSURETEK
 	applymovement LOCALID_REDWOOD, ArchanTown_RedwoodResidence_Movement_ExitRedwood
 	waitmovement 0	
 	playse SE_KAIDAN

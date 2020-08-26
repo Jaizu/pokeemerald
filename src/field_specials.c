@@ -1092,8 +1092,28 @@ static void PCTurnOnEffect_0(struct Task *task)
 static void PCTurnOnEffect_1(s16 isPcTurnedOn, s8 dx, s8 dy)
 {
     u16 tileId = 0;
-    if (isPcTurnedOn) tileId = METATILE_BrendansMaysHouse_PC_Off;
-    else tileId = METATILE_BrendansMaysHouse_PC_On;
+    if (isPcTurnedOn)
+    {
+        if (gSpecialVar_0x8004 == PC_LOCATION_BRENDANS_HOUSE)
+        {
+            tileId = METATILE_BrendansMaysHouse_PC_Off;
+        }
+        else
+        {
+            tileId = METATILE_Indoors_PC_Off;
+        }
+    }
+    else
+    {
+        if (gSpecialVar_0x8004 == PC_LOCATION_BRENDANS_HOUSE)
+        {
+            tileId = METATILE_BrendansMaysHouse_PC_On;
+        }
+        else
+        {
+            tileId = METATILE_Indoors_PC_On;
+        }
+    }
     MapGridSetMetatileIdAt(gSaveBlock1Ptr->pos.x + dx + 7, gSaveBlock1Ptr->pos.y + dy + 7, tileId | METATILE_COLLISION_MASK);
 }
 
@@ -1123,7 +1143,14 @@ static void PCTurnOffEffect(void)
             dy = -1;
             break;
     }
-    tileId = METATILE_BrendansMaysHouse_PC_Off;
+    if (gSpecialVar_0x8004 == PC_LOCATION_BRENDANS_HOUSE)
+    {
+        tileId = METATILE_BrendansMaysHouse_PC_Off;
+    }
+    else
+    {
+        tileId = METATILE_Indoors_PC_Off;
+    }
     MapGridSetMetatileIdAt(gSaveBlock1Ptr->pos.x + dx + 7, gSaveBlock1Ptr->pos.y + dy + 7, tileId | METATILE_COLLISION_MASK);
     DrawWholeMapView();
 }

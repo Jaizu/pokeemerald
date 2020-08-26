@@ -604,9 +604,9 @@
     {
       "id": "LAYOUT_POKEMON_CENTER_1F",
       "name": "PokemonCenter_1F_Layout",
-      "width": 14,
-      "height": 9,
-      "primary_tileset": "gTileset_Building",
+      "width": 15,
+      "height": 10,
+      "primary_tileset": "gTileset_Indoors",
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/PokemonCenter_1F/border.bin",
       "blockdata_filepath": "data/layouts/PokemonCenter_1F/map.bin"
@@ -4550,6 +4550,26 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/ArchanTown_RedwoodResidence/border.bin",
       "blockdata_filepath": "data/layouts/ArchanTown_RedwoodResidence/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARCHAN_TOWN_REDWOOD_RESIDENCE_UPSTAIRS",
+      "name": "ArchanTown_RedwoodResidenceUpstairs_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/ArchanTown_RedwoodResidenceUpstairs/border.bin",
+      "blockdata_filepath": "data/layouts/ArchanTown_RedwoodResidenceUpstairs/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARCHAN_TOWN_POKEMON_CENTER",
+      "name": "ArchanTown_PokemonCenter_Layout",
+      "width": 15,
+      "height": 10,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/ArchanTown_PokemonCenter/border.bin",
+      "blockdata_filepath": "data/layouts/ArchanTown_PokemonCenter/map.bin"
     }
   ]
 }
