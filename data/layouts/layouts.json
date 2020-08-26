@@ -4540,6 +4540,16 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/ArchanTown/border.bin",
       "blockdata_filepath": "data/layouts/ArchanTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARCHAN_TOWN_REDWOOD_RESIDENCE",
+      "name": "ArchanTown_RedwoodResidence_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/ArchanTown_RedwoodResidence/border.bin",
+      "blockdata_filepath": "data/layouts/ArchanTown_RedwoodResidence/map.bin"
     }
   ]
 }

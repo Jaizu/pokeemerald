@@ -779,8 +779,10 @@
 #define FLAG_HIDE_LIBRARY_BACK_ROOM_COULTER                         0x2C8 // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_2 in Emerald
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_3               0x2C9 // TODO: Remove references to this
 #define FLAG_HIDE_CELANTO_PATH_COULTER                              0x2C9 // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_3 in Emerald
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_4               0x2CA
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_5               0x2CB
+#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_4               0x2CA // TODO: Remove references to this
+#define FLAG_HIDE_ARCHAN_TOWN_REDWOOD                               0x2CA // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_4 in Emerald
+#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_5               0x2CB // TODO: Remove references to this
+#define FLAG_HIDE_ARCHAN_TOWN_COULTER                               0x2CB // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_5 in Emerald
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_6               0x2CC
 #define FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS            0x2CD
 #define FLAG_HIDE_MEW                                               0x2CE
@@ -1392,8 +1394,10 @@
 #define NUM_BADGES                                   (1 + FLAG_BADGE08_GET - FLAG_BADGE01_GET)
 
 // Towns and Cities
-#define FLAG_VISITED_LITTLEROOT_TOWN                (SYSTEM_FLAGS + 0xF)
-#define FLAG_VISITED_OLDALE_TOWN                    (SYSTEM_FLAGS + 0x10)
+#define FLAG_VISITED_LITTLEROOT_TOWN                (SYSTEM_FLAGS + 0xF) // TODO: Remove references to this
+#define FLAG_VISITED_CELANTO_TOWN                   (SYSTEM_FLAGS + 0xF) // FLAG_VISITED_LITTLEROOT_TOWN in Emerald
+#define FLAG_VISITED_OLDALE_TOWN                    (SYSTEM_FLAGS + 0x10) // TODO: Remove references to this
+#define FLAG_VISITED_ARCHAN_TOWN                    (SYSTEM_FLAGS + 0x10) // FLAG_VISITED_OLDALE_TOWN in Emerald
 #define FLAG_VISITED_DEWFORD_TOWN                   (SYSTEM_FLAGS + 0x11)
 #define FLAG_VISITED_LAVARIDGE_TOWN                 (SYSTEM_FLAGS + 0x12)
 #define FLAG_VISITED_FALLARBOR_TOWN                 (SYSTEM_FLAGS + 0x13)

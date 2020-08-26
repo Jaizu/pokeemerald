@@ -81,10 +81,12 @@ EventScript_ResetAllBerries:: @ 827149D
 	setberrytree 82, ITEM_TO_BERRY(ITEM_LIECHI_BERRY), BERRY_STAGE_BERRIES
 	return
 
-EventScript_ResetAllMapFlags:: @ 82715DE
+EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_CELANTO_TOWN_MOM
 	setflag FLAG_HIDE_CELANTO_TOWN_REDWOOD
 	setflag FLAG_HIDE_CELANTO_LIBRARY_COULTER
 	setflag FLAG_HIDE_CELANTO_LIBRARY_RICHTER
+	setflag FLAG_HIDE_ARCHAN_TOWN_REDWOOD
+	setflag FLAG_HIDE_ARCHAN_TOWN_COULTER
 	call EventScript_ResetAllBerries
 	end

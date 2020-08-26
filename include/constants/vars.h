@@ -99,7 +99,8 @@
 
 #define VAR_LITTLEROOT_TOWN_STATE            0x4050 // TODO: Remove references to this
 #define VAR_CELANTO_TOWN_STATE               0x4050 // VAR_LITTLEROOT_TOWN_STATE in Emerald
-#define VAR_OLDALE_TOWN_STATE                0x4051
+#define VAR_OLDALE_TOWN_STATE                0x4051 // TODO: Remove references to this
+#define VAR_ARCHAN_TOWN_STATE                0x4051 // VAR_OLDALE_TOWN_STATE in Emerald
 #define VAR_DEWFORD_TOWN_STATE               0x4052 // Unused Var
 #define VAR_LAVARIDGE_TOWN_STATE             0x4053
 #define VAR_CURRENT_SECRET_BASE              0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point

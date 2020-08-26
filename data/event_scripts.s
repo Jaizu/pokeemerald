@@ -1086,3 +1086,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/CelantoPath/scripts.inc"
 
 	.include "data/maps/ArchanTown/scripts.inc"
+
+	.include "data/maps/ArchanTown_RedwoodResidence/scripts.inc"

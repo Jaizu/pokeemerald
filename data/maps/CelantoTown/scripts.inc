@@ -7,7 +7,7 @@ CelantoTown_MapScripts::
 	.byte 0
 
 CelantoTown_OnTransition::
-	setflag FLAG_VISITED_PETALBURG_CITY
+	setflag FLAG_VISITED_CELANTO_TOWN
 	end
 
 CelantoTown_EventScript_OldMan::
