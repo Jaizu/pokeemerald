@@ -240,11 +240,11 @@ const u8 *const gReturnToXStringsTable2[] =
 };
 
 const u8 gText_ReturnToVar1[] = _("Return to\n{STR_VAR_1}.");
-const u8 gText_ItemsPocket[] = _("ITEMS");
-const u8 gText_PokeBallsPocket[] = _("POKé BALLS");
+const u8 gText_ItemsPocket[] = _("Items");
+const u8 gText_PokeBallsPocket[] = _("Poké Balls");
 const u8 gText_TMHMPocket[] = _("TMs & HMs");
-const u8 gText_BerriesPocket[] = _("BERRIES");
-const u8 gText_KeyItemsPocket[] = _("KEY ITEMS");
+const u8 gText_BerriesPocket[] = _("Berries");
+const u8 gText_KeyItemsPocket[] = _("Key Items");
 
 const u8 *const gPocketNamesStringsTable[] =
 {
@@ -1778,6 +1778,6 @@ const u8 gText_Cancel5[] = _("CANCEL");
 const u8 gText_Ok2[] = _("OK");
 const u8 gText_Quiz[] = _("QUIZ");
 const u8 gText_Answer[] = _("ANSWER");
-const u8 gText_PokeBalls[] = _("POKé BALLS");
-const u8 gText_Berry[] = _("BERRY");
-const u8 gText_Berries[] = _("BERRIES");
+const u8 gText_PokeBalls[] = _("Poké Balls");
+const u8 gText_Berry[] = _("Berry");
+const u8 gText_Berries[] = _("Berries");
