@@ -100,9 +100,10 @@
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS       0x53 // TODO: Remove references to this
 #define FLAG_RECEIVED_CELANTO_DUSK_STONE     0x53 // FLAG_LEGENDARIES_IN_SOOTOPOLIS in Emerald
 #define FLAG_RECEIVED_TM32                   0x54 // FLAG_UNUSED_0x054 in Emerald
-#define FLAG_RECEIVED_ARCHAN_HOUSE_POTION    0x55  // FLAG_UNUSED_0x055 in Emerald
+#define FLAG_RECEIVED_ARCHAN_HOUSE_POTION    0x55 // FLAG_UNUSED_0x055 in Emerald
+#define FLAG_HIDE_CONTEST_POKE_BALL          0x56 // TODO: Remove references to this
+#define FLAG_PLEASE_FIND_STINGA              0x56 // FLAG_HIDE_CONTEST_POKE_BALL in Emerald
 
-#define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
 #define FLAG_MET_RIVAL_MOM                   0x57
 #define FLAG_BIRCH_AIDE_MET                  0x58
 #define FLAG_DECLINED_BIKE                   0x59
@@ -786,7 +787,8 @@
 #define FLAG_HIDE_REDWOOD_RESIDENCE_REDWOOD                         0x2CC // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_6 in Emerald
 #define FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS            0x2CD // TODO: Remove references to this
 #define FLAG_HIDE_REDWOOD_RESIDENCE_COULTER                         0x2CD // FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS in Emerald
-#define FLAG_HIDE_MEW                                               0x2CE
+#define FLAG_HIDE_MEW                                               0x2CE // TODO: Remove references to this
+#define FLAG_HIDE_ARCHAN_TUNNEL_STINGA_BOY                          0x2CE // FLAG_HIDE_MEW in Emerald
 #define FLAG_HIDE_ROUTE_104_RIVAL                                   0x2CF
 #define FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE                  0x2D0
 #define FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH                  0x2D1

@@ -4620,6 +4620,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/ArchanTown_House4/border.bin",
       "blockdata_filepath": "data/layouts/ArchanTown_House4/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARCHAN_TUNNEL_1F_1R",
+      "name": "ArchanTunnel_1F_1R_Layout",
+      "width": 16,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/ArchanTunnel_1F_1R/border.bin",
+      "blockdata_filepath": "data/layouts/ArchanTunnel_1F_1R/map.bin"
     }
   ]
 }
