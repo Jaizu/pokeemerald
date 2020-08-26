@@ -24,18 +24,16 @@ ArchanTown_EventScript_MoveExpertM:
 
 ArchanTown_EventScript_TabletScene:
 	lockall
-	delay 20
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestLeft
 	waitmovement 0
 	msgbox ArchanTown_Text_RedwoodThisWay, MSGBOX_DEFAULT
 	closemessage
-	playbgm MUS_TSURETEK, 0
 	applymovement LOCALID_REDWOOD, ArchanTown_Movement_RedwoodToTablet
 	applymovement LOCALID_COULTER, ArchanTown_Movement_CoulterPlayerToTablet
 	applymovement OBJ_EVENT_ID_PLAYER, ArchanTown_Movement_CoulterPlayerToTablet
 	waitmovement 0
-	fadedefaultbgm
 	delay 20
+	fadedefaultbgm
 	msgbox ArchanTown_Text_AncientTabletExplanation, MSGBOX_DEFAULT
 	closemessage
 	playbgm MUS_RG_OHKIDO, 0
@@ -56,6 +54,8 @@ ArchanTown_EventScript_TabletScene:
 	removeobject LOCALID_COULTER
 	fadedefaultbgm
 	delay 10
+	clearflag FLAG_HIDE_MAP_NAME_POPUP
+	clearflag FLAG_DONT_TRANSITION_MUSIC
 	setvar VAR_ARCHAN_TOWN_STATE, 2
 	releaseall
 	end
@@ -70,16 +70,18 @@ ArchanTown_Text_AncientTabletExplanation:
 	.string "I fear they will only get worse.\p"
 	.string "Data suggests the {COLOR GREEN}Ancient Tablet{COLOR BLUE}\n"
 	.string "here is linked to the quakes!\p"
-	.string "I've also received data from within\n"
-	.string "{COLOR GREEN}Archan Tunnel{COLOR BLUE}!\p"
+	.string "I've received similar data from\n"
+	.string "within the {COLOR GREEN}Archan Tunnel{COLOR BLUE}.\p"
 	.string "I theorize there's a {COLOR GREEN}second Tablet{COLOR BLUE}\n"
 	.string "buried somewhere close by.\p"
 	.string "It would account for the converging\n"
-	.string "seismic epicenters of… Ah, sorry.\p"
-	.string	"I tend to ramble. {COLOR GREEN}Find this second\n"
-	.string "Tablet{COLOR BLUE}! That's what's important.\p"
+	.string "seismic epicenters of…\p"
+	.string "…Ah, I see your eyes glazing over.\n"
+	.string	"Sorry, I tend to ramble.\p"
+	.string "{COLOR GREEN}Find this second Tablet{COLOR BLUE}!\n"
+	.string "That's what's important.\p"
 	.string "The Tunnel leads to {COLOR GREEN}Seros Village{COLOR BLUE}.\n"
-	.string "I'll see you two there!$"
+	.string "Let's meet there! Good luck!$"
 
 ArchanTown_Text_RaceToFindTheSecondTablet:
 	.string "{RIVAL}: {COLOR BLUE}I'm sorry about earlier,\n"

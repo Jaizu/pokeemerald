@@ -783,8 +783,10 @@
 #define FLAG_HIDE_ARCHAN_TOWN_REDWOOD                               0x2CA // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_4 in Emerald
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_5               0x2CB // TODO: Remove references to this
 #define FLAG_HIDE_ARCHAN_TOWN_COULTER                               0x2CB // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_5 in Emerald
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_6               0x2CC
-#define FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS            0x2CD
+#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_6               0x2CC // TODO: Remove references to this
+#define FLAG_HIDE_REDWOOD_RESIDENCE_REDWOOD                         0x2CC // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_6 in Emerald
+#define FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS            0x2CD // TODO: Remove references to this
+#define FLAG_HIDE_REDWOOD_RESIDENCE_COULTER                         0x2CD // FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS in Emerald
 #define FLAG_HIDE_MEW                                               0x2CE
 #define FLAG_HIDE_ROUTE_104_RIVAL                                   0x2CF
 #define FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE                  0x2D0

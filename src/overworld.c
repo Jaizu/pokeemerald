@@ -852,7 +852,7 @@ static void LoadMapFromWarp(bool32 a1)
     if (isOutdoors)
         FlagClear(FLAG_SYS_USE_FLASH);
     SetDefaultFlashLevel();
-    Overworld_ClearSavedMusic();
+    // Overworld_ClearSavedMusic();
     RunOnTransitionMapScript();
     UpdateLocationHistoryForRoamer();
     RoamerMoveToOtherLocationSet();

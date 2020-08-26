@@ -153,7 +153,8 @@
 #define VAR_LITTLEROOT_HOUSES_STATE_MAY      0x4082 // TODO: Remove references to this
 #define VAR_PLAYERS_HOUSE_STATE              0x4082 // VAR_LITTLEROOT_HOUSES_STATE_MAY in Emerald
 #define VAR_CELANTO_LIBRARY_STATE            0x4083 // VAR_UNUSED_0x4083 in Emerald
-#define VAR_BIRCH_LAB_STATE                  0x4084
+#define VAR_BIRCH_LAB_STATE                  0x4084 // TODO: Remove references to this
+#define VAR_REDWOOD_RESIDENCE_STATE          0x4084 // VAR_BIRCH_LAB_STATE in Emerald
 #define VAR_PETALBURG_GYM_STATE              0x4085 // 0-1: Wally tutorial, 2-6: 0-4 badges, 7: Defeated Norman, 8: Rematch Norman 
 #define VAR_CONTEST_HALL_STATE               0x4086
 #define VAR_CABLE_CLUB_STATE                 0x4087
