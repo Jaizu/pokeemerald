@@ -1083,3 +1083,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/ArchanTown_RedwoodResidenceUpstairs/scripts.inc"
 
 	.include "data/maps/ArchanTown_PokemonCenter/scripts.inc"
+
+	.include "data/maps/ArchanTown_Mart/scripts.inc"

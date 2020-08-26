@@ -1322,33 +1322,33 @@ CableClub_EventScript_AdapterNotConnected:: @ 8277BB4
 	end
 
 CableClub_EventScript_OpenUnionRoomBarrier:: @ 8277BBE
-	setmetatile 5, 2, METATILE_PokemonCenter_Floor_ShadowTop_Alt, 0
-	setmetatile 5, 3, METATILE_PokemonCenter_Floor_Plain_Alt, 0
+	// setmetatile 5, 2, METATILE_PokemonCenter_Floor_ShadowTop_Alt, 0
+	// setmetatile 5, 3, METATILE_PokemonCenter_Floor_Plain_Alt, 0
 	return
 
 CableClub_EventScript_CloseUnionRoomBarrier:: @ 8277BD1
-	setmetatile 5, 2, METATILE_PokemonCenter_Floor_ShadowTop, 1
-	setmetatile 5, 3, METATILE_PokemonCenter_CounterBarrier, 1
+	// setmetatile 5, 2, METATILE_PokemonCenter_Floor_ShadowTop, 1
+	// setmetatile 5, 3, METATILE_PokemonCenter_CounterBarrier, 1
 	return
 
 CableClub_EventScript_OpenDirectCornerBarrier:: @ 8277BE4
-	setmetatile 9, 2, METATILE_PokemonCenter_Floor_ShadowTop_Alt, 0
-	setmetatile 9, 3, METATILE_PokemonCenter_Floor_Plain_Alt, 0
+	// setmetatile 9, 2, METATILE_PokemonCenter_Floor_ShadowTop_Alt, 0
+	// setmetatile 9, 3, METATILE_PokemonCenter_Floor_Plain_Alt, 0
 	return
 
 CableClub_EventScript_CloseDirectCornerBarrier:: @ 8277BF7
-	setmetatile 9, 2, METATILE_PokemonCenter_Floor_ShadowTop, 1
-	setmetatile 9, 3, METATILE_PokemonCenter_CounterBarrier, 1
+	// setmetatile 9, 2, METATILE_PokemonCenter_Floor_ShadowTop, 1
+	// setmetatile 9, 3, METATILE_PokemonCenter_CounterBarrier, 1
 	return
 
 EventScript_OpenMossdeepGameCornerBarrier:: @ 8277C0A
-	setmetatile 5, 2, METATILE_MossdeepGameCorner_CounterOpen_Top, 0
-	setmetatile 5, 3, METATILE_MossdeepGameCorner_CounterOpen_Bottom, 0
+	// setmetatile 5, 2, METATILE_MossdeepGameCorner_CounterOpen_Top, 0
+	// setmetatile 5, 3, METATILE_MossdeepGameCorner_CounterOpen_Bottom, 0
 	return
 
 EventScript_CloseMossdeepGameCornerBarrier:: @ 8277C1D
-	setmetatile 5, 2, METATILE_MossdeepGameCorner_CounterClosed_Top, 1
-	setmetatile 5, 3, METATILE_MossdeepGameCorner_CounterClosed_Bottom, 1
+	// setmetatile 5, 2, METATILE_MossdeepGameCorner_CounterClosed_Top, 1
+	// setmetatile 5, 3, METATILE_MossdeepGameCorner_CounterClosed_Bottom, 1
 	return
 
 CableClub_OnResume: @ 8277C30

@@ -15,7 +15,7 @@ static void Task_DrawTeleporterCable(u8 taskId);
 
 #define ESCALATOR_STAGES     3
 #define LAST_ESCALATOR_STAGE (ESCALATOR_STAGES - 1)
-
+/* 
 static const u16 sEscalatorMetatiles_1F_0[ESCALATOR_STAGES] = {
     METATILE_PokemonCenter_Escalator1F_Tile0_Frame2,
     METATILE_PokemonCenter_Escalator1F_Tile0_Frame1,
@@ -57,7 +57,7 @@ static const u16 sEscalatorMetatiles_2F_2[ESCALATOR_STAGES] = {
     METATILE_PokemonCenter_Escalator2F_Tile2_Frame1,
     METATILE_PokemonCenter_Escalator2F_Tile2_Frame2
 };
-
+ */
 #define tState            data[0]
 #define tTransitionStage  data[1]
 #define tGoingUp          data[2]
@@ -117,7 +117,7 @@ static void Task_DrawEscalator(u8 taskId)
     s16 *data = gTasks[taskId].data;
 
     tDrawingEscalator = TRUE;
-
+    /* 
     // Set tile for each section of the escalator in sequence for current transition stage
     switch (tState)
     {
@@ -143,6 +143,7 @@ static void Task_DrawEscalator(u8 taskId)
             SetEscalatorMetatile(taskId, sEscalatorMetatiles_2F_2, 0);
             break;
     }
+    */
 
     tState = (tState + 1) & 7;
 

@@ -93,6 +93,7 @@
 #define MAP_ARCHAN_TOWN_REDWOOD_RESIDENCE          (5 | (2 << 8))
 #define MAP_ARCHAN_TOWN_REDWOOD_RESIDENCE_UPSTAIRS (6 | (2 << 8))
 #define MAP_ARCHAN_TOWN_POKEMON_CENTER             (7 | (2 << 8))
+#define MAP_ARCHAN_TOWN_MART                       (8 | (2 << 8))
 
 // Map Group 3
 #define MAP_DEWFORD_TOWN_HOUSE1            (0 | (3 << 8))

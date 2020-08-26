@@ -57,6 +57,7 @@ ArchanTown_EventScript_TabletScene:
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	clearflag FLAG_DONT_TRANSITION_MUSIC
 	clearflag FLAG_DONT_CLEAR_SAVED_MUSIC
+	setflag FLAG_ADVENTURE_STARTED
 	setvar VAR_ARCHAN_TOWN_STATE, 2
 	releaseall
 	end

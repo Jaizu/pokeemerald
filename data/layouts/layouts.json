@@ -626,7 +626,7 @@
       "name": "Mart_Layout",
       "width": 11,
       "height": 8,
-      "primary_tileset": "gTileset_Building",
+      "primary_tileset": "gTileset_Indoors",
       "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/Mart/border.bin",
       "blockdata_filepath": "data/layouts/Mart/map.bin"
@@ -4570,6 +4570,16 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/ArchanTown_PokemonCenter/border.bin",
       "blockdata_filepath": "data/layouts/ArchanTown_PokemonCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARCHAN_TOWN_MART",
+      "name": "ArchanTown_Mart_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/ArchanTown_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/ArchanTown_Mart/map.bin"
     }
   ]
 }
