@@ -4580,6 +4580,46 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/ArchanTown_Mart/border.bin",
       "blockdata_filepath": "data/layouts/ArchanTown_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARCHAN_TOWN_HOUSE1",
+      "name": "ArchanTown_House1_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/ArchanTown_House1/border.bin",
+      "blockdata_filepath": "data/layouts/ArchanTown_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARCHAN_TOWN_HOUSE2",
+      "name": "ArchanTown_House2_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/ArchanTown_House2/border.bin",
+      "blockdata_filepath": "data/layouts/ArchanTown_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARCHAN_TOWN_HOUSE3",
+      "name": "ArchanTown_House3_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/ArchanTown_House3/border.bin",
+      "blockdata_filepath": "data/layouts/ArchanTown_House3/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARCHAN_TOWN_HOUSE4",
+      "name": "ArchanTown_House4_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/ArchanTown_House4/border.bin",
+      "blockdata_filepath": "data/layouts/ArchanTown_House4/map.bin"
     }
   ]
 }

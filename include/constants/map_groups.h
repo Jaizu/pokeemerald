@@ -85,15 +85,19 @@
 #define MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB (12 | (1 << 8))
 
 // Map Group 2
-#define MAP_OLDALE_TOWN_HOUSE1                     (0 | (2 << 8))
-#define MAP_OLDALE_TOWN_HOUSE2                     (1 | (2 << 8))
-#define MAP_OLDALE_TOWN_POKEMON_CENTER_1F          (2 | (2 << 8))
-#define MAP_OLDALE_TOWN_POKEMON_CENTER_2F          (3 | (2 << 8))
-#define MAP_OLDALE_TOWN_MART                       (4 | (2 << 8))
-#define MAP_ARCHAN_TOWN_REDWOOD_RESIDENCE          (5 | (2 << 8))
-#define MAP_ARCHAN_TOWN_REDWOOD_RESIDENCE_UPSTAIRS (6 | (2 << 8))
-#define MAP_ARCHAN_TOWN_POKEMON_CENTER             (7 | (2 << 8))
-#define MAP_ARCHAN_TOWN_MART                       (8 | (2 << 8))
+#define MAP_ARCHAN_TOWN_POKEMON_CENTER             (0 | (2 << 8))
+#define MAP_ARCHAN_TOWN_MART                       (1 | (2 << 8))
+#define MAP_ARCHAN_TOWN_REDWOOD_RESIDENCE          (2 | (2 << 8))
+#define MAP_ARCHAN_TOWN_REDWOOD_RESIDENCE_UPSTAIRS (3 | (2 << 8))
+#define MAP_ARCHAN_TOWN_HOUSE1                     (4 | (2 << 8))
+#define MAP_ARCHAN_TOWN_HOUSE2                     (5 | (2 << 8))
+#define MAP_ARCHAN_TOWN_HOUSE3                     (6 | (2 << 8))
+#define MAP_ARCHAN_TOWN_HOUSE4                     (7 | (2 << 8))
+#define MAP_OLDALE_TOWN_HOUSE1                     (8 | (2 << 8))
+#define MAP_OLDALE_TOWN_HOUSE2                     (9 | (2 << 8))
+#define MAP_OLDALE_TOWN_POKEMON_CENTER_1F          (10 | (2 << 8))
+#define MAP_OLDALE_TOWN_POKEMON_CENTER_2F          (11 | (2 << 8))
+#define MAP_OLDALE_TOWN_MART                       (12 | (2 << 8))
 
 // Map Group 3
 #define MAP_DEWFORD_TOWN_HOUSE1            (0 | (3 << 8))

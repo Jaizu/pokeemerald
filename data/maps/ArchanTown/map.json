@@ -204,28 +204,28 @@
       "x": 35,
       "y": 6,
       "elevation": 0,
-      "dest_map": "MAP_ARCHAN_TOWN",
+      "dest_map": "MAP_ARCHAN_TOWN_HOUSE1",
       "dest_warp_id": 0
     },
     {
       "x": 45,
       "y": 6,
       "elevation": 0,
-      "dest_map": "MAP_ARCHAN_TOWN",
+      "dest_map": "MAP_ARCHAN_TOWN_HOUSE2",
       "dest_warp_id": 0
     },
     {
       "x": 13,
       "y": 19,
       "elevation": 0,
-      "dest_map": "MAP_ARCHAN_TOWN",
+      "dest_map": "MAP_ARCHAN_TOWN_HOUSE3",
       "dest_warp_id": 0
     },
     {
       "x": 29,
       "y": 19,
       "elevation": 0,
-      "dest_map": "MAP_ARCHAN_TOWN",
+      "dest_map": "MAP_ARCHAN_TOWN_HOUSE4",
       "dest_warp_id": 0
     },
     {

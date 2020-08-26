@@ -100,8 +100,7 @@
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS       0x53 // TODO: Remove references to this
 #define FLAG_RECEIVED_CELANTO_DUSK_STONE     0x53 // FLAG_LEGENDARIES_IN_SOOTOPOLIS in Emerald
 #define FLAG_RECEIVED_TM32                   0x54 // FLAG_UNUSED_0x054 in Emerald
-
-#define FLAG_UNUSED_0x055                    0x55  // Unused Flag
+#define FLAG_RECEIVED_ARCHAN_HOUSE_POTION    0x55  // FLAG_UNUSED_0x055 in Emerald
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
 #define FLAG_MET_RIVAL_MOM                   0x57
