@@ -561,9 +561,12 @@
 #define FLAG_HIDDEN_ITEM_ARCHAN_TUNNEL_POKE_BALL             (FLAG_HIDDEN_ITEMS_START + 0x08) // FLAG_HIDDEN_ITEM_UNDERWATER_1_CARBOS in Emerald
 #define FLAG_HIDDEN_ITEM_UNDERWATER_1_GREEN_SHARD            (FLAG_HIDDEN_ITEMS_START + 0x09) // TODO: Remove references to this
 #define FLAG_HIDDEN_ITEM_ARCHAN_TUNNEL_RARE_BONE             (FLAG_HIDDEN_ITEMS_START + 0x09) // FLAG_HIDDEN_ITEM_UNDERWATER_1_GREEN_SHARD in Emerald
-#define FLAG_HIDDEN_ITEM_UNDERWATER_1_PEARL                  (FLAG_HIDDEN_ITEMS_START + 0x0A)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_1_BIG_PEARL              (FLAG_HIDDEN_ITEMS_START + 0x0B)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_2_BLUE_SHARD             (FLAG_HIDDEN_ITEMS_START + 0x0C)
+#define FLAG_HIDDEN_ITEM_UNDERWATER_1_PEARL                  (FLAG_HIDDEN_ITEMS_START + 0x0A) // TODO: Remove references to this
+#define FLAG_HIDDEN_ITEM_ARCHAN_TUNNEL_NUGGET                (FLAG_HIDDEN_ITEMS_START + 0x0A) // FLAG_HIDDEN_ITEM_UNDERWATER_1_PEARL in Emerald
+#define FLAG_HIDDEN_ITEM_UNDERWATER_1_BIG_PEARL              (FLAG_HIDDEN_ITEMS_START + 0x0B) // TODO: Remove references to this
+#define FLAG_HIDDEN_ITEM_ARCHAN_TUNNEL_BLUE_SHARD            (FLAG_HIDDEN_ITEMS_START + 0x0B) // FLAG_HIDDEN_ITEM_UNDERWATER_1_BIG_PEARL in Emerald
+#define FLAG_HIDDEN_ITEM_UNDERWATER_2_BLUE_SHARD             (FLAG_HIDDEN_ITEMS_START + 0x0C) // TODO: Remove references to this
+#define FLAG_HIDDEN_ITEM_ARCHAN_TUNNEL_AWAKENING             (FLAG_HIDDEN_ITEMS_START + 0x0C) // FLAG_HIDDEN_ITEM_UNDERWATER_2_BLUE_SHARD in Emerald
 #define FLAG_HIDDEN_ITEM_UNDERWATER_1_HEART_SCALE_1          (FLAG_HIDDEN_ITEMS_START + 0x0D)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_2_HEART_SCALE            (FLAG_HIDDEN_ITEMS_START + 0x0E)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_2_ULTRA_BALL             (FLAG_HIDDEN_ITEMS_START + 0x0F)
@@ -1093,8 +1096,10 @@
 #define FLAG_ITEM_ARCHAN_TUNNEL_ESCAPE_ROPE                         0x3EE // FLAG_ITEM_ROUTE_109_RARE_CANDY in Emerald
 #define FLAG_ITEM_ROUTE_110_DIRE_HIT                                0x3EF // TODO: Remove references to this
 #define FLAG_ITEM_ARCHAN_TUNNEL_MAX_ETHER                           0x3EF // FLAG_ITEM_ROUTE_110_DIRE_HIT in Emerald
-#define FLAG_ITEM_ROUTE_111_TM_37                                   0x3F0
-#define FLAG_ITEM_ROUTE_111_STARDUST                                0x3F1
+#define FLAG_ITEM_ROUTE_111_TM_37                                   0x3F0 // TODO: Remove references to this
+#define FLAG_ITEM_ARCHAN_TUNNEL_RARE_CANDY                          0x3F0 // FLAG_ITEM_ROUTE_111_TM_37 in Emerald
+#define FLAG_ITEM_ROUTE_111_STARDUST                                0x3F1 // TODO: Remove references to this
+#define FLAG_ITEM_ARCHAN_TUNNEL_MOON_STONE                          0x3F1 // FLAG_ITEM_ROUTE_111_STARDUST in Emerald
 #define FLAG_ITEM_ROUTE_111_HP_UP                                   0x3F2
 #define FLAG_ITEM_ROUTE_112_NUGGET                                  0x3F3
 #define FLAG_ITEM_ROUTE_113_MAX_ETHER                               0x3F4

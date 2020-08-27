@@ -53,52 +53,42 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Cory[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern2[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Georg[] = {
     {
     .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_CARVANHA,
+    .lvl = 3,
+    .species = SPECIES_SPINARAK,
+    },
+    {
+    .iv = 0,
+    .lvl = 4,
+    .species = SPECIES_SPINARAK,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern3[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Bob[] = {
     {
     .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_ZUBAT,
+    .lvl = 3,
+    .species = SPECIES_DRILBUR,
+    },
+    {
+    .iv = 0,
+    .lvl = 4,
+    .species = SPECIES_DRILBUR,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Gabrielle1[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Iggy[] = {
     {
     .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_SKITTY,
+    .lvl = 4,
+    .species = SPECIES_ROGGENROLA,
     },
     {
     .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_POOCHYENA,
-    },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_ZIGZAGOON,
-    },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_LOTAD,
-    },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_SEEDOT,
-    },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_TAILLOW,
+    .lvl = 4,
+    .species = SPECIES_SHINX,
     }
 };
 

@@ -1,6 +1,10 @@
 {
   "layouts_table_label": "gMapLayouts",
   "group_order": [
+    "gMapGroup_Outdoors",
+    "gMapGroup_Dungeons",
+    "gMapGroup_CelantoTown",
+    "gMapGroup_ArchanTown",
     "gMapGroup0",
     "gMapGroup1",
     "gMapGroup2",
@@ -36,12 +40,43 @@
     "gMapGroup32",
     "gMapGroup33"
   ],
-  "gMapGroup0": [
+  "gMapGroup_Outdoors": [
     "CelantoTown",
     "ArchanTown",
     "ReliquiaRuins",
     "CelantoGrove",
-    "CelantoPath",
+    "CelantoPath"
+  ],
+  "gMapGroup_Dungeons": [
+    "ArchanTunnel_1F_1R",
+    "ArchanTunnel_1F_2R",
+    "ArchanTunnel_1F_3R",
+    "ArchanTunnel_B1F_1R",
+    "ArchanTunnel_B1F_1R_OvarrBlocked",
+    "ArchanTunnel_B1F_2R",
+    "ArchanTunnel_B2F_1R"
+  ],
+  "gMapGroup_CelantoTown": [
+    "CelantoTown_PlayersHouse_1F",
+    "CelantoTown_PlayersHouse_2F",
+    "CelantoTown_Library",
+    "CelantoTown_BackOfLibrary",
+    "CelantoTown_Condominiums_1F",
+    "CelantoTown_Condominiums_2F",
+    "CelantoTown_House1",
+    "CelantoTown_House2"
+  ],
+  "gMapGroup_ArchanTown": [
+    "ArchanTown_PokemonCenter",
+    "ArchanTown_Mart",
+    "ArchanTown_RedwoodResidence",
+    "ArchanTown_RedwoodResidenceUpstairs",
+    "ArchanTown_House1",
+    "ArchanTown_House2",
+    "ArchanTown_House3",
+    "ArchanTown_House4"
+  ],
+  "gMapGroup0": [
     "PetalburgCity",
     "SlateportCity",
     "MauvilleCity",
@@ -101,14 +136,6 @@
     "Underwater7"
   ],
   "gMapGroup1": [
-    "CelantoTown_PlayersHouse_1F",
-    "CelantoTown_PlayersHouse_2F",
-    "CelantoTown_Library",
-    "CelantoTown_BackOfLibrary",
-    "CelantoTown_Condominiums_1F",
-    "CelantoTown_Condominiums_2F",
-    "CelantoTown_House1",
-    "CelantoTown_House2",
     "LittlerootTown_BrendansHouse_1F",
     "LittlerootTown_BrendansHouse_2F",
     "LittlerootTown_MaysHouse_1F",
@@ -116,14 +143,6 @@
     "LittlerootTown_ProfessorBirchsLab"
   ],
   "gMapGroup2": [
-    "ArchanTown_PokemonCenter",
-    "ArchanTown_Mart",
-    "ArchanTown_RedwoodResidence",
-    "ArchanTown_RedwoodResidenceUpstairs",
-    "ArchanTown_House1",
-    "ArchanTown_House2",
-    "ArchanTown_House3",
-    "ArchanTown_House4",
     "OldaleTown_House1",
     "OldaleTown_House2",
     "OldaleTown_PokemonCenter_1F",
@@ -344,12 +363,6 @@
     "Route121_SafariZoneEntrance"
   ],
   "gMapGroup24": [
-    "ArchanTunnel_1F_1R",
-    "ArchanTunnel_B1F_1R",
-    "ArchanTunnel_B1F_1R_OvarrBlocked",
-    "ArchanTunnel_B2F_1R",
-    "ArchanTunnel_1F_2R",
-    "ArchanTunnel_1F_3R",
     "MeteorFalls_1F_1R",
     "MeteorFalls_1F_2R",
     "MeteorFalls_B1F_1R",

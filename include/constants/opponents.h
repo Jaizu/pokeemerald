@@ -14,9 +14,12 @@
 #define TRAINER_QUINN                         5 // TRAINER_GRUNT_AQUA_HIDEOUT_4 in Emerald
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_1       6 // TODO: Remove references to this
 #define TRAINER_CORY                          6 // TRAINER_GRUNT_SEAFLOOR_CAVERN_1 in Emerald
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_2       7
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_3       8
-#define TRAINER_GABRIELLE_1                   9
+#define TRAINER_GRUNT_SEAFLOOR_CAVERN_2       7 // TODO: Remove references to this
+#define TRAINER_GEORG                         7 // TRAINER_GRUNT_SEAFLOOR_CAVERN_2 in Emerald
+#define TRAINER_GRUNT_SEAFLOOR_CAVERN_3       8 // TODO: Remove references to this
+#define TRAINER_BOB                           8 // TRAINER_GRUNT_SEAFLOOR_CAVERN_3 in Emerald
+#define TRAINER_GABRIELLE_1                   9 // TODO: Remove references to this
+#define TRAINER_IGGY                          9 // TRAINER_GABRIELLE_1 in Emerald
 #define TRAINER_GRUNT_PETALBURG_WOODS        10
 #define TRAINER_MARCEL                       11
 #define TRAINER_ALBERTO                      12

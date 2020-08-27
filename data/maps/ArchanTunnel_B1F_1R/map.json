@@ -153,6 +153,13 @@
       "elevation": 0,
       "dest_map": "MAP_ARCHAN_TUNNEL_1F_3R",
       "dest_warp_id": 0
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_ARCHAN_TUNNEL_B1F_1R",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [

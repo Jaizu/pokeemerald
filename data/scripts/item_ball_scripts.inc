@@ -56,6 +56,21 @@ Route113_EventScript_ItemMaxEther::
 	finditem ITEM_MAX_ETHER
 	end
 
+MeteorFalls_1F_1R_EventScript_ItemMoonStone::
+EventScript_ItemMoonStone::
+	finditem ITEM_MOON_STONE
+	end
+
+Route112_EventScript_ItemNugget::
+Route120_EventScript_ItemNugget::
+SafariZone_Northeast_EventScript_ItemNugget::
+AquaHideout_B1F_EventScript_ItemNugget::
+Route119_EventScript_ItemNugget::
+MagmaHideout_3F_1R_EventScript_ItemNugget::
+EventScript_ItemNugget::
+	finditem ITEM_NUGGET
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
@@ -110,10 +125,6 @@ Route111_EventScript_ItemHPUp:: @ 8290DB5
 
 Route111_EventScript_ItemElixir:: @ 8290DC2
 	finditem ITEM_ELIXIR
-	end
-
-Route112_EventScript_ItemNugget:: @ 8290DCF
-	finditem ITEM_NUGGET
 	end
 
 Route113_EventScript_ItemSuperRepel:: @ 8290DE9
@@ -202,10 +213,6 @@ Route119_EventScript_ItemHyperPotion2:: @ 8290F2E
 
 Route119_EventScript_ItemElixir2:: @ 8290F3B
 	finditem ITEM_ELIXIR
-	end
-
-Route120_EventScript_ItemNugget:: @ 8290F48
-	finditem ITEM_NUGGET
 	end
 
 Route120_EventScript_ItemFullHeal:: @ 8290F55
@@ -372,10 +379,6 @@ MeteorFalls_1F_1R_EventScript_ItemFullHeal:: @ 82911B8
 	finditem ITEM_FULL_HEAL
 	end
 
-MeteorFalls_1F_1R_EventScript_ItemMoonStone:: @ 82911C5
-	finditem ITEM_MOON_STONE
-	end
-
 MeteorFalls_1F_1R_EventScript_ItemPPUP:: @ 82911D2
 	finditem ITEM_PP_UP
 	end
@@ -448,10 +451,6 @@ SafariZone_Southwest_EventScript_ItemMaxRevive:: @ 82912D6
 	finditem ITEM_MAX_REVIVE
 	end
 
-SafariZone_Northeast_EventScript_ItemNugget:: @ 82912E3
-	finditem ITEM_NUGGET
-	end
-
 SafariZone_Southeast_EventScript_ItemBigPearl:: @ 82912F0
 	finditem ITEM_BIG_PEARL
 	end
@@ -488,10 +487,6 @@ AquaHideout_B1F_EventScript_ItemMasterBall:: @ 8291358
 	finditem ITEM_MASTER_BALL
 	end
 
-AquaHideout_B1F_EventScript_ItemNugget:: @ 8291365
-	finditem ITEM_NUGGET
-	end
-
 AquaHideout_B1F_EventScript_ItemMaxElixir:: @ 8291372
 	finditem ITEM_MAX_ELIXIR
 	end
@@ -502,10 +497,6 @@ AquaHideout_B2F_EventScript_ItemNestBall:: @ 829137F
 
 AquaHideout_B2F_EventScript_ItemMasterBall:: @ 829138C
 	finditem ITEM_MASTER_BALL      // Unused
-	end
-
-Route119_EventScript_ItemNugget:: @ 8291399
-	finditem ITEM_NUGGET
 	end
 
 Route119_EventScript_ItemMaxElixir:: @ 82913A6
@@ -606,10 +597,6 @@ MagmaHideout_2F_2R_EventScript_MaxElixir:: @ 82914EB
 
 MagmaHideout_2F_2R_EventScript_ItemFullRestore:: @ 82914F8
 	finditem ITEM_FULL_RESTORE
-	end
-
-MagmaHideout_3F_1R_EventScript_ItemNugget:: @ 8291505
-	finditem ITEM_NUGGET
 	end
 
 MagmaHideout_3F_2R_EventScript_ItemPPMax:: @ 8291512
