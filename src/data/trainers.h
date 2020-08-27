@@ -55,46 +55,46 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_CoulterCelantoPathTurtwig},
     },
 
-    [TRAINER_GRUNT_AQUA_HIDEOUT_3] =
+    [TRAINER_LOUISE] =
     {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_PICNICKER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
+        .trainerPic = TRAINER_PIC_PICNICKER,
+        .trainerName = _("Louise"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_GruntAquaHideout3),
-        .party = {.NoItemDefaultMoves = sParty_GruntAquaHideout3},
+        .partySize = ARRAY_COUNT(sParty_Louise),
+        .party = {.NoItemCustomMoves = sParty_Louise},
     },
 
-    [TRAINER_GRUNT_AQUA_HIDEOUT_4] =
+    [TRAINER_QUINN] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .trainerClass = TRAINER_CLASS_HIKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_HIKER,
+        .trainerName = _("Quinn"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_GruntAquaHideout4),
-        .party = {.NoItemDefaultMoves = sParty_GruntAquaHideout4},
+        .partySize = ARRAY_COUNT(sParty_Quinn),
+        .party = {.NoItemDefaultMoves = sParty_Quinn},
     },
 
-    [TRAINER_GRUNT_SEAFLOOR_CAVERN_1] =
+    [TRAINER_CORY] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .trainerClass = TRAINER_CLASS_YOUNGSTER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
+        .trainerName = _("Cory"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_GruntSeafloorCavern1),
-        .party = {.NoItemDefaultMoves = sParty_GruntSeafloorCavern1},
+        .partySize = ARRAY_COUNT(sParty_Cory),
+        .party = {.NoItemDefaultMoves = sParty_Cory},
     },
 
     [TRAINER_GRUNT_SEAFLOOR_CAVERN_2] =

@@ -1097,3 +1097,9 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/ArchanTunnel_1F_1R/scripts.inc"
 
 	.include "data/maps/ArchanTunnel_B1F_1R/scripts.inc"
+
+	.include "data/maps/ArchanTunnel_B2F_1R/scripts.inc"
+
+	.include "data/maps/ArchanTunnel_1F_2R/scripts.inc"
+
+	.include "data/maps/ArchanTunnel_1F_3R/scripts.inc"

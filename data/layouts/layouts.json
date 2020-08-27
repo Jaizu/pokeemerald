@@ -4640,6 +4640,36 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/ArchanTunnel_B1F_1R/border.bin",
       "blockdata_filepath": "data/layouts/ArchanTunnel_B1F_1R/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARCHAN_TUNNEL_B2F_1R",
+      "name": "ArchanTunnel_B2F_1R_Layout",
+      "width": 30,
+      "height": 70,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/ArchanTunnel_B2F_1R/border.bin",
+      "blockdata_filepath": "data/layouts/ArchanTunnel_B2F_1R/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARCHAN_TUNNEL_1F_2R",
+      "name": "ArchanTunnel_1F_2R_Layout",
+      "width": 7,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/ArchanTunnel_1F_2R/border.bin",
+      "blockdata_filepath": "data/layouts/ArchanTunnel_1F_2R/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARCHAN_TUNNEL_1F_3R",
+      "name": "ArchanTunnel_1F_3R_Layout",
+      "width": 7,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/ArchanTunnel_1F_3R/border.bin",
+      "blockdata_filepath": "data/layouts/ArchanTunnel_1F_3R/map.bin"
     }
   ]
 }

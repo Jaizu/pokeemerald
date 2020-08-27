@@ -197,8 +197,8 @@
       "x": 19,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_ARCHAN_TOWN",
-      "dest_warp_id": 0
+      "dest_map": "MAP_ARCHAN_TUNNEL_1F_3R",
+      "dest_warp_id": 1
     },
     {
       "x": 35,

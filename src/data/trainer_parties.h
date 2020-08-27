@@ -22,27 +22,34 @@ static const struct TrainerMonNoItemDefaultMoves sParty_CoulterCelantoPathTurtwi
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout3[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_Louise[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_ZUBAT,
+    .lvl = 3,
+    .species = SPECIES_HOPPIP,
+    .moves = {MOVE_ABSORB, MOVE_SPLASH, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 3,
+    .species = SPECIES_STARLY,
+    .moves = {MOVE_TACKLE, MOVE_GROWL, MOVE_NONE, MOVE_NONE}
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout4[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Quinn[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_CARVANHA,
+    .lvl = 3,
+    .species = SPECIES_WHISMUR,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern1[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Cory[] = {
     {
     .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 3,
+    .species = SPECIES_PIDGEY,
     }
 };
 
