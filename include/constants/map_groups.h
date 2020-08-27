@@ -1,10 +1,6 @@
 #ifndef GUARD_CONSTANTS_MAP_GROUPS_H
 #define GUARD_CONSTANTS_MAP_GROUPS_H
 
-//
-// DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/map_groups.json
-//
-
 // Map Group 0
 #define MAP_CELANTO_TOWN     (0 | (0 << 8))
 #define MAP_ARCHAN_TOWN      (1 | (0 << 8))
@@ -422,6 +418,7 @@
 #define MAP_TERRA_CAVE_END                           (106 | (24 << 8))
 #define MAP_ALTERING_CAVE                            (107 | (24 << 8))
 #define MAP_METEOR_FALLS_STEVENS_CAVE                (108 | (24 << 8))
+#define MAP_ARCHAN_TUNNEL_B1F_1R                     (109 | (24 << 8))
 
 // Map Group 25
 #define MAP_SECRET_BASE_RED_CAVE1           (0 | (25 << 8))

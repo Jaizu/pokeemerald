@@ -4630,6 +4630,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/ArchanTunnel_1F_1R/border.bin",
       "blockdata_filepath": "data/layouts/ArchanTunnel_1F_1R/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARCHAN_TUNNEL_B1F_1R",
+      "name": "ArchanTunnel_B1F_1R_Layout",
+      "width": 54,
+      "height": 54,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/ArchanTunnel_B1F_1R/border.bin",
+      "blockdata_filepath": "data/layouts/ArchanTunnel_B1F_1R/map.bin"
     }
   ]
 }
