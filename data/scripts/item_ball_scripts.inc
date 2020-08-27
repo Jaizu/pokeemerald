@@ -42,6 +42,20 @@ EventScript_ItemShinyStone::
 	finditem ITEM_SHINY_STONE
 	end
 
+EventScript_ItemEscapeRope::
+GraniteCave_1F_EventScript_ItemEscapeRope::
+NewMauville_Inside_EventScript_ItemEscapeRope::
+AbandonedShip_Rooms_B1F_EventScript_ItemEscapeRope::
+MagmaHideout_3F_3R_EventScript_ItemEscapeRope::
+	finditem ITEM_ESCAPE_ROPE
+	end
+
+EventScript_ItemMaxEther::
+RusturfTunnel_EventScript_ItemMaxEther::
+Route113_EventScript_ItemMaxEther::
+	finditem ITEM_MAX_ETHER
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
@@ -100,10 +114,6 @@ Route111_EventScript_ItemElixir:: @ 8290DC2
 
 Route112_EventScript_ItemNugget:: @ 8290DCF
 	finditem ITEM_NUGGET
-	end
-
-Route113_EventScript_ItemMaxEther:: @ 8290DDC
-	finditem ITEM_MAX_ETHER
 	end
 
 Route113_EventScript_ItemSuperRepel:: @ 8290DE9
@@ -334,14 +344,6 @@ RusturfTunnel_EventScript_ItemPokeBall:: @ 8291136
 	finditem ITEM_POKE_BALL
 	end
 
-RusturfTunnel_EventScript_ItemMaxEther:: @ 8291143
-	finditem ITEM_MAX_ETHER
-	end
-
-GraniteCave_1F_EventScript_ItemEscapeRope:: @ 8291150
-	finditem ITEM_ESCAPE_ROPE
-	end
-
 GraniteCave_B1F_EventScript_ItemPokeBall:: @ 829115D
 	finditem ITEM_POKE_BALL
 	end
@@ -386,10 +388,6 @@ NewMauville_Inside_EventScript_ItemUltraRope:: @ 82911EC
 	finditem ITEM_ULTRA_BALL
 	end
 
-NewMauville_Inside_EventScript_ItemEscapeRope:: @ 82911F9
-	finditem ITEM_ESCAPE_ROPE
-	end
-
 NewMauville_Inside_EventScript_ItemThunderStone:: @ 8291206
 	finditem ITEM_THUNDER_STONE
 	end
@@ -404,10 +402,6 @@ NewMauville_Inside_EventScript_ItemParalyzeHeal:: @ 8291220
 
 AbandonedShip_Rooms_1F_EventScript_ItemHarborMail:: @ 829122D
 	finditem ITEM_HARBOR_MAIL
-	end
-
-AbandonedShip_Rooms_B1F_EventScript_ItemEscapeRope:: @ 829123A
-	finditem ITEM_ESCAPE_ROPE
 	end
 
 AbandonedShip_Rooms2_B1F_EventScript_ItemDiveBall:: @ 8291247
@@ -624,8 +618,4 @@ MagmaHideout_3F_2R_EventScript_ItemPPMax:: @ 8291512
 
 MagmaHideout_4F_EventScript_MaxRevive:: @ 829151F
 	finditem ITEM_MAX_REVIVE
-	end
-
-MagmaHideout_3F_3R_EventScript_ItemEscapeRope:: @ 829152C
-	finditem ITEM_ESCAPE_ROPE
 	end

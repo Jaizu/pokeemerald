@@ -1,7 +1,16 @@
 ArchanTunnel_B1F_1R_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, ArchanTunnel_B1F_1R_OnTransition
 	.byte 0
 
-Archan_Tunnel_B1F_1R_Louise::
+ArchanTunnel_B1F_1R_OnTransition:
+	call_if_unset FLAG_VISITED_OVARR_TOWN, ArchanTunnel_B1F_1R_EventScript_BlockOvarr
+	end
+	
+ArchanTunnel_B1F_1R_EventScript_BlockOvarr:
+	setmaplayoutindex LAYOUT_ARCHAN_TUNNEL_B1F_1R_OVARR_BLOCKED
+	return
+
+Archan_Tunnel_B1F_1R_EventScript_Louise::
 	trainerbattle_single TRAINER_LOUISE, Archan_Tunnel_B1F_1R_Text_LouiseIntro, Archan_Tunnel_B1F_1R_Text_LouiseDefeated
 	msgbox Archan_Tunnel_B1F_1R_Text_LouisePostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -18,7 +27,7 @@ Archan_Tunnel_B1F_1R_Text_LouisePostBattle:
 	.string "Winning Pokémon battles comes down\n"
 	.string "to reading your opponent.$"
 
-Archan_Tunnel_B1F_1R_Quinn::
+Archan_Tunnel_B1F_1R_EventScript_Quinn::
 	trainerbattle_single TRAINER_QUINN, Archan_Tunnel_B1F_1R_Text_QuinnIntro, Archan_Tunnel_B1F_1R_Text_QuinnDefeated
 	msgbox Archan_Tunnel_B1F_1R_Text_QuinnPostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -34,7 +43,7 @@ Archan_Tunnel_B1F_1R_Text_QuinnPostBattle:
 	.string "Earthquakes are caused when tectonic\n"
     .string "plates scrape past one another.$"
 
-Archan_Tunnel_B1F_1R_Cory::
+Archan_Tunnel_B1F_1R_EventScript_Cory::
 	trainerbattle_single TRAINER_CORY, Archan_Tunnel_B1F_1R_Text_CoryIntro, Archan_Tunnel_B1F_1R_Text_CoryDefeated
 	msgbox Archan_Tunnel_B1F_1R_Text_CoryPostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -50,3 +59,24 @@ Archan_Tunnel_B1F_1R_Text_CoryDefeated:
 
 Archan_Tunnel_B1F_1R_Text_CoryPostBattle:
 	.string "So, what is the Prof. researching?$"
+
+Archan_Tunnel_B1F_1R_EventScript_Worker::
+	msgbox Archan_Tunnel_B1F_1R_Text_WeveBeenForcedToHalt, MSGBOX_NPC
+	end
+
+Archan_Tunnel_B1F_1R_Text_WeveBeenForcedToHalt:
+	.string "We've been forced to halt\n"
+	.string "construction on the tunnel to\l"
+	.string "Ovarr Town.\p"
+	.string "The tremors just make construction\n"
+	.string "too dangerous!$"
+
+Archan_Tunnel_B1F_1R_EventScript_Hiker::
+	msgbox Archan_Tunnel_B1F_1R_Text_CarelessTrainersDropItems, MSGBOX_NPC
+	end
+
+Archan_Tunnel_B1F_1R_Text_CarelessTrainersDropItems:
+	.string "Careless Trainers often drop items\n"
+	.string "when they walk through dark caves.\p"
+	.string "That's great for observant\n"
+	.string "explorers like myself!$"

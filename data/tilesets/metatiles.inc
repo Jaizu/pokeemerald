@@ -565,3 +565,11 @@ gMetatiles_Indoors::
 	.align 1
 gMetatileAttributes_Indoors::
 	.incbin "data/tilesets/primary/indoors/metatile_attributes.bin"
+
+	.align 1
+gMetatiles_ArchanTunnel::
+	.incbin "data/tilesets/secondary/archantunnel/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_ArchanTunnel::
+	.incbin "data/tilesets/secondary/archantunnel/metatile_attributes.bin"
