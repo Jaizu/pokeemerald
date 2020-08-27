@@ -852,3 +852,14 @@ gTileset_ArchanTunnel::
 	.4byte gMetatiles_ArchanTunnel
 	.4byte gMetatileAttributes_ArchanTunnel
 	.4byte NULL
+
+	.align 2
+gTileset_HiddenGrottoSecretTemple::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_HiddenGrottoSecretTemple
+	.4byte gTilesetPalettes_HiddenGrottoSecretTemple
+	.4byte gMetatiles_HiddenGrottoSecretTemple
+	.4byte gMetatileAttributes_HiddenGrottoSecretTemple
+	.4byte NULL

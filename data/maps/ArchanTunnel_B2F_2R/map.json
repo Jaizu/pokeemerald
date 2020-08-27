@@ -1,8 +1,8 @@
 {
-  "id": "MAP_ARCHAN_TUNNEL_B1F_2R",
-  "name": "ArchanTunnel_B1F_2R",
-  "layout": "LAYOUT_ARCHAN_TUNNEL_B1F_2R",
-  "music": "MUS_DAN01",
+  "id": "MAP_ARCHAN_TUNNEL_B2F_2R",
+  "name": "ArchanTunnel_B2F_2R",
+  "layout": "LAYOUT_ARCHAN_TUNNEL_B2F_2R",
+  "music": "MUS_AJITO",
   "region_map_section": "MAPSEC_GRANITE_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -18,17 +18,17 @@
   ],
   "warp_events": [
     {
-      "x": 17,
-      "y": 27,
+      "x": 5,
+      "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_ARCHAN_TUNNEL_B2F_1R",
-      "dest_warp_id": 2
+      "dest_map": "MAP_ARCHAN_TUNNEL_B1F_2R",
+      "dest_warp_id": 1
     },
     {
-      "x": 3,
-      "y": 3,
+      "x": 5,
+      "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_ARCHAN_TUNNEL_B2F_2R",
+      "dest_map": "MAP_ARCHAN_TUNNEL_SECRET_TEMPLE",
       "dest_warp_id": 0
     }
   ],
@@ -36,13 +36,6 @@
 
   ],
   "bg_events": [
-    {
-      "type": "hidden_item",
-      "x": 6,
-      "y": 18,
-      "elevation": 4,
-      "item": "ITEM_AWAKENING",
-      "flag": "FLAG_HIDDEN_ITEM_ARCHAN_TUNNEL_AWAKENING"
-    }
+
   ]
 }

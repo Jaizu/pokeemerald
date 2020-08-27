@@ -573,3 +573,10 @@ gMetatiles_ArchanTunnel::
 	.align 1
 gMetatileAttributes_ArchanTunnel::
 	.incbin "data/tilesets/secondary/archantunnel/metatile_attributes.bin"
+	.align 1
+gMetatiles_HiddenGrottoSecretTemple::
+	.incbin "data/tilesets/secondary/hiddengrottosecrettemple/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_HiddenGrottoSecretTemple::
+	.incbin "data/tilesets/secondary/hiddengrottosecrettemple/metatile_attributes.bin"

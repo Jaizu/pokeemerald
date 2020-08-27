@@ -1,5 +1,26 @@
+.equ LOCALID_BOB, 5
+
 ArchanTunnel_B2F_1R_MapScripts::
 	.byte 0
+
+Archan_Tunnel_B2F_1R_EventScript_TremorTrigger::
+	lockall
+	setvar VAR_0x8004, 2  @ vertical pan
+	setvar VAR_0x8005, 1  @ horizontal pan
+	setvar VAR_0x8006, 8  @ num shakes
+	setvar VAR_0x8007, 5  @ shake delay
+	special ShakeCamera
+	waitstate
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	applymovement LOCALID_BOB, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	applymovement LOCALID_BOB, Common_Movement_Delay48
+	waitmovement 0
+	setvar VAR_ARCHAN_TUNNEL_STATE, 2
+	releaseall
+	end
 
 Archan_Tunnel_B2F_1R_EventScript_Georg::
 	trainerbattle_single TRAINER_GEORG, Archan_Tunnel_B2F_1R_Text_GeorgIntro, Archan_Tunnel_B2F_1R_Text_GeorgDefeated
