@@ -8,9 +8,10 @@
 // Map Group 0
 #define MAP_CELANTO_TOWN   (0 | (0 << 8))
 #define MAP_ARCHAN_TOWN    (1 | (0 << 8))
-#define MAP_RELIQUIA_RUINS (2 | (0 << 8))
-#define MAP_CELANTO_GROVE  (3 | (0 << 8))
-#define MAP_CELANTO_PATH   (4 | (0 << 8))
+#define MAP_SEROS_VILLAGE  (2 | (0 << 8))
+#define MAP_RELIQUIA_RUINS (3 | (0 << 8))
+#define MAP_CELANTO_GROVE  (4 | (0 << 8))
+#define MAP_CELANTO_PATH   (5 | (0 << 8))
 
 // Map Group 1
 #define MAP_ARCHAN_TUNNEL_1F_1R                (0 | (1 << 8))

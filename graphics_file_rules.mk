@@ -78,7 +78,7 @@ $(CHERRIMGFXDIR)/shiny.gbapal: $(CHERRIMGFXDIR)/shiny_normal.gbapal \
 ### Tilesets ###
 
 $(TILESETGFXDIR)/secondary/petalburg/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 224
+	$(GFX) $< $@ -num_tiles 256
 
 $(TILESETGFXDIR)/secondary/rustboro/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 498

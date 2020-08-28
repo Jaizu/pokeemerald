@@ -6,7 +6,7 @@ ArchanTunnel_1F_1R_MapScripts::
 
 ArchanTunnel_1F_1R_OnTransition::
 	compare VAR_ARCHAN_TUNNEL_STATE, 1
-	call_if_eq ArchanTunnel_1F_1R_EventScript_MoveStingaBoy
+	call_if_ge ArchanTunnel_1F_1R_EventScript_MoveStingaBoy
 	end
 
 ArchanTunnel_1F_1R_EventScript_MoveStingaBoy:

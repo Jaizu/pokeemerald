@@ -4710,6 +4710,16 @@
       "secondary_tileset": "gTileset_HiddenGrottoSecretTemple",
       "border_filepath": "data/layouts/ArchanTunnel_SecretTemple/border.bin",
       "blockdata_filepath": "data/layouts/ArchanTunnel_SecretTemple/map.bin"
+    },
+    {
+      "id": "LAYOUT_SEROS_VILLAGE",
+      "name": "SerosVillage_Layout",
+      "width": 44,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/SerosVillage/border.bin",
+      "blockdata_filepath": "data/layouts/SerosVillage/map.bin"
     }
   ]
 }
