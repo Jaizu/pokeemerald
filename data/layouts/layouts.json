@@ -4720,6 +4720,26 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/SerosVillage/border.bin",
       "blockdata_filepath": "data/layouts/SerosVillage/map.bin"
+    },
+    {
+      "id": "LAYOUT_SEROS_PATH",
+      "name": "SerosPath_Layout",
+      "width": 42,
+      "height": 62,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/SerosPath/border.bin",
+      "blockdata_filepath": "data/layouts/SerosPath/map.bin"
+    },
+    {
+      "id": "LAYOUT_AEROUS_ROAD",
+      "name": "AerousRoad_Layout",
+      "width": 104,
+      "height": 38,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/AerousRoad/border.bin",
+      "blockdata_filepath": "data/layouts/AerousRoad/map.bin"
     }
   ]
 }

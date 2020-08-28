@@ -46,7 +46,9 @@
     "SerosVillage",
     "ReliquiaRuins",
     "CelantoGrove",
-    "CelantoPath"
+    "CelantoPath",
+    "SerosPath",
+    "AerousRoad"
   ],
   "gMapGroup_Dungeons": [
     "ArchanTunnel_1F_1R",

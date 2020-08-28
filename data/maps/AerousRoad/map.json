@@ -1,0 +1,34 @@
+{
+  "id": "MAP_AEROUS_ROAD",
+  "name": "AerousRoad",
+  "layout": "LAYOUT_AEROUS_ROAD",
+  "music": "MUS_DOORO1",
+  "region_map_section": "MAPSEC_ROUTE_105",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "direction": "left",
+      "offset": -2,
+      "map": "MAP_SEROS_VILLAGE"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

@@ -393,11 +393,13 @@
 #define METATILE_PetalburgGym_SlidingDoor_Frame4  0x21C
 
 // gTileset_Petalburg
-#define METATILE_Petalburg_BlueFlower_Encounters  0x290
-#define METATILE_Petalburg_Door_Blue              0x27A
-#define METATILE_Petalburg_Door_Littleroot        0x248
-#define METATILE_Petalburg_Door_Tan               0x21D
-#define METATILE_Petalburg_RedFlower_Encounters   0x291
+#define METATILE_Petalburg_BlueFlower_Encounters              0x290
+#define METATILE_Petalburg_Door_Blue                          0x27A
+#define METATILE_Petalburg_Door_Littleroot                    0x248
+#define METATILE_Petalburg_Door_Tan                           0x21D
+#define METATILE_Petalburg_LeftTreeTopBlueFlower_Encounters   0x2CC
+#define METATILE_Petalburg_RedFlower_Encounters               0x291
+#define METATILE_Petalburg_RightTreeTopBlueFlower_Encounters  0x2CD
 
 // gTileset_RS
 #define METATILE_RS_MossdeepGym_RedArrow_Down   0x205

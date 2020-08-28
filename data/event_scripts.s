@@ -1113,3 +1113,7 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/ArchanTunnel_SecretTemple/scripts.inc"
 
 	.include "data/maps/SerosVillage/scripts.inc"
+
+	.include "data/maps/SerosPath/scripts.inc"
+
+	.include "data/maps/AerousRoad/scripts.inc"
