@@ -49,6 +49,7 @@
 
 // Map Group 4
 #define MAP_SEROS_VILLAGE_POKEMON_CENTER (0 | (4 << 8))
+#define MAP_SEROS_VILLAGE_MART           (1 | (4 << 8))
 
 // Map Group 5
 #define MAP_PETALBURG_CITY   (0 | (5 << 8))

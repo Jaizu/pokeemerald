@@ -1121,3 +1121,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/ArchanHills/scripts.inc"
 
 	.include "data/maps/SerosVillage_PokemonCenter/scripts.inc"
+
+	.include "data/maps/SerosVillage_Mart/scripts.inc"

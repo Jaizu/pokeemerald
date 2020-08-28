@@ -84,7 +84,8 @@
     "ArchanTown_House4"
   ],
   "gMapGroup_SerosVillage": [
-    "SerosVillage_PokemonCenter"
+    "SerosVillage_PokemonCenter",
+    "SerosVillage_Mart"
   ],
   "gMapGroup0": [
     "PetalburgCity",

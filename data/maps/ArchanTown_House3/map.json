@@ -1,7 +1,7 @@
 {
   "id": "MAP_ARCHAN_TOWN_HOUSE3",
   "name": "ArchanTown_House3",
-  "layout": "LAYOUT_ARCHAN_TOWN_HOUSE3",
+  "layout": "LAYOUT_ARCHAN_TOWN_HOUSE",
   "music": "MUS_MACHI_S3",
   "region_map_section": "MAPSEC_OLDALE_TOWN",
   "requires_flash": false,
