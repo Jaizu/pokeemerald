@@ -4535,7 +4535,7 @@
       "id": "LAYOUT_ARCHAN_TOWN",
       "name": "ArchanTown_Layout",
       "width": 48,
-      "height": 24,
+      "height": 28,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/ArchanTown/border.bin",
@@ -4740,6 +4740,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/AerousRoad/border.bin",
       "blockdata_filepath": "data/layouts/AerousRoad/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARCHAN_HILLS",
+      "name": "ArchanHills_Layout",
+      "width": 32,
+      "height": 58,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/ArchanHills/border.bin",
+      "blockdata_filepath": "data/layouts/ArchanHills/map.bin"
     }
   ]
 }

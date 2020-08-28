@@ -1,9 +1,9 @@
 {
-  "id": "MAP_AEROUS_ROAD",
-  "name": "AerousRoad",
-  "layout": "LAYOUT_AEROUS_ROAD",
+  "id": "MAP_ARCHAN_HILLS",
+  "name": "ArchanHills",
+  "layout": "LAYOUT_ARCHAN_HILLS",
   "music": "MUS_DOORO1",
-  "region_map_section": "MAPSEC_ROUTE_106",
+  "region_map_section": "MAPSEC_ROUTE_104",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_ROUTE",
@@ -14,9 +14,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "left",
-      "offset": -2,
-      "map": "MAP_SEROS_VILLAGE"
+      "direction": "up",
+      "offset": -12,
+      "map": "MAP_ARCHAN_TOWN"
     }
   ],
   "object_events": [

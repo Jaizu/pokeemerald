@@ -12,8 +12,9 @@
 #define MAP_RELIQUIA_RUINS (3 | (0 << 8))
 #define MAP_CELANTO_GROVE  (4 | (0 << 8))
 #define MAP_CELANTO_PATH   (5 | (0 << 8))
-#define MAP_SEROS_PATH     (6 | (0 << 8))
-#define MAP_AEROUS_ROAD    (7 | (0 << 8))
+#define MAP_ARCHAN_HILLS   (6 | (0 << 8))
+#define MAP_SEROS_PATH     (7 | (0 << 8))
+#define MAP_AEROUS_ROAD    (8 | (0 << 8))
 
 // Map Group 1
 #define MAP_ARCHAN_TUNNEL_1F_1R                (0 | (1 << 8))

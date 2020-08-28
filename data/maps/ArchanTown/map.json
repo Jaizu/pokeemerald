@@ -17,6 +17,11 @@
       "direction": "right",
       "offset": -12,
       "map": "MAP_CELANTO_PATH"
+    },
+    {
+      "direction": "down",
+      "offset": 12,
+      "map": "MAP_ARCHAN_HILLS"
     }
   ],
   "object_events": [
