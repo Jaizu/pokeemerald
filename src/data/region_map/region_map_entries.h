@@ -3,7 +3,7 @@
 
 static const u8 sMapName_LittlerootTown[] = _("Celanto Town");
 static const u8 sMapName_OldaleTown[] = _("Archan Town");
-static const u8 sMapName_DewfordTown[] = _("DEWFORD TOWN");
+static const u8 sMapName_DewfordTown[] = _("Seros Village");
 static const u8 sMapName_LavaridgeTown[] = _("LAVARIDGE TOWN");
 static const u8 sMapName_FallarborTown[] = _("FALLARBOR TOWN");
 static const u8 sMapName_VerdanturfTown[] = _("VERDANTURF TOWN");
