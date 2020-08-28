@@ -16,8 +16,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "x": 22,
-      "y": 18,
+      "x": 21,
+      "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -29,8 +29,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 21,
-      "y": 11,
+      "x": 20,
+      "y": 3,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -42,8 +42,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 17,
-      "y": 66,
+      "x": 16,
+      "y": 54,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -55,62 +55,75 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 19,
-      "y": 22,
+      "x": 18,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "Archan_Tunnel_B2F_1R_EventScript_Georg",
+      "script": "ArchanTunnel_B2F_1R_EventScript_Georg",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 12,
-      "y": 36,
+      "x": 11,
+      "y": 28,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "Archan_Tunnel_B2F_1R_EventScript_Bob",
+      "script": "ArchanTunnel_B2F_1R_EventScript_Bob",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
-      "x": 13,
-      "y": 65,
+      "x": 12,
+      "y": 53,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "02",
-      "script": "Archan_Tunnel_B2F_1R_EventScript_Iggy",
+      "script": "ArchanTunnel_B2F_1R_EventScript_Iggy",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AZURILL",
+      "x": 10,
+      "y": 45,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ArchanTunnel_B2F_1R_EventScript_Stinga",
+      "flag": "FLAG_HIDE_ARCHAN_TUNNEL_STINGA"
     }
   ],
   "warp_events": [
     {
-      "x": 14,
+      "x": 13,
       "y": 2,
       "elevation": 0,
       "dest_map": "MAP_ARCHAN_TUNNEL_B1F_1R",
       "dest_warp_id": 1
     },
     {
-      "x": 22,
-      "y": 47,
+      "x": 21,
+      "y": 39,
       "elevation": 0,
       "dest_map": "MAP_ARCHAN_TUNNEL_1F_2R",
       "dest_warp_id": 0
     },
     {
-      "x": 8,
-      "y": 23,
+      "x": 7,
+      "y": 15,
       "elevation": 0,
       "dest_map": "MAP_ARCHAN_TUNNEL_B1F_2R",
       "dest_warp_id": 0
@@ -119,72 +132,72 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 15,
-      "y": 33,
+      "x": 14,
+      "y": 25,
       "elevation": 0,
       "var": "VAR_ARCHAN_TUNNEL_STATE",
       "var_value": "1",
-      "script": "Archan_Tunnel_B2F_1R_EventScript_TremorTrigger"
+      "script": "ArchanTunnel_B2F_1R_EventScript_TremorTrigger"
     },
     {
       "type": "trigger",
-      "x": 15,
-      "y": 34,
+      "x": 14,
+      "y": 26,
       "elevation": 0,
       "var": "VAR_ARCHAN_TUNNEL_STATE",
       "var_value": "1",
-      "script": "Archan_Tunnel_B2F_1R_EventScript_TremorTrigger"
+      "script": "ArchanTunnel_B2F_1R_EventScript_TremorTrigger"
     },
     {
       "type": "trigger",
-      "x": 15,
-      "y": 35,
+      "x": 14,
+      "y": 27,
       "elevation": 0,
       "var": "VAR_ARCHAN_TUNNEL_STATE",
       "var_value": "1",
-      "script": "Archan_Tunnel_B2F_1R_EventScript_TremorTrigger"
+      "script": "ArchanTunnel_B2F_1R_EventScript_TremorTrigger"
     },
     {
       "type": "trigger",
-      "x": 15,
-      "y": 36,
+      "x": 14,
+      "y": 28,
       "elevation": 0,
       "var": "VAR_ARCHAN_TUNNEL_STATE",
       "var_value": "1",
-      "script": "Archan_Tunnel_B2F_1R_EventScript_TremorTrigger"
+      "script": "ArchanTunnel_B2F_1R_EventScript_TremorTrigger"
     },
     {
       "type": "trigger",
-      "x": 15,
-      "y": 37,
+      "x": 14,
+      "y": 29,
       "elevation": 0,
       "var": "VAR_ARCHAN_TUNNEL_STATE",
       "var_value": "1",
-      "script": "Archan_Tunnel_B2F_1R_EventScript_TremorTrigger"
+      "script": "ArchanTunnel_B2F_1R_EventScript_TremorTrigger"
     },
     {
       "type": "trigger",
-      "x": 15,
-      "y": 38,
+      "x": 14,
+      "y": 30,
       "elevation": 0,
       "var": "VAR_ARCHAN_TUNNEL_STATE",
       "var_value": "1",
-      "script": "Archan_Tunnel_B2F_1R_EventScript_TremorTrigger"
+      "script": "ArchanTunnel_B2F_1R_EventScript_TremorTrigger"
     }
   ],
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 24,
-      "y": 33,
+      "x": 23,
+      "y": 25,
       "elevation": 3,
       "item": "ITEM_NUGGET",
       "flag": "FLAG_HIDDEN_ITEM_ARCHAN_TUNNEL_NUGGET"
     },
     {
       "type": "hidden_item",
-      "x": 14,
-      "y": 53,
+      "x": 8,
+      "y": 45,
       "elevation": 4,
       "item": "ITEM_BLUE_SHARD",
       "flag": "FLAG_HIDDEN_ITEM_ARCHAN_TUNNEL_BLUE_SHARD"

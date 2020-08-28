@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Archan_Tunnel_B1F_1R_EventScript_Louise",
+      "script": "ArchanTunnel_B1F_1R_EventScript_Louise",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "Archan_Tunnel_B1F_1R_EventScript_Quinn",
+      "script": "ArchanTunnel_B1F_1R_EventScript_Quinn",
       "flag": "0"
     },
     {
@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Archan_Tunnel_B1F_1R_EventScript_Cory",
+      "script": "ArchanTunnel_B1F_1R_EventScript_Cory",
       "flag": "0"
     },
     {
@@ -89,7 +89,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Archan_Tunnel_B1F_1R_EventScript_Worker",
+      "script": "ArchanTunnel_B1F_1R_EventScript_Worker",
       "flag": "0"
     },
     {
@@ -102,7 +102,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Archan_Tunnel_B1F_1R_EventScript_Hiker",
+      "script": "ArchanTunnel_B1F_1R_EventScript_Hiker",
       "flag": "0"
     },
     {

@@ -2,13 +2,107 @@
 
 ArchanTunnel_1F_1R_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, ArchanTunnel_1F_1R_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, ArchanTunnel_1F_1R_OnFrame
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, ArchanTunnel_1F_1R_OnWarp
 	.byte 0
 
-ArchanTunnel_1F_1R_OnTransition::
+ArchanTunnel_1F_1R_OnWarp:
+	map_script_2 VAR_STINGA_STATE, 1, ArchanTunnel_1F_1R_EventScript_TurnPlayerNorth
+	.2byte 0
+
+ArchanTunnel_1F_1R_OnFrame:
+	map_script_2 VAR_STINGA_STATE, 1, ArchanTunnel_1F_1R_EventScript_ReturnStingaScene
+	.2byte 0
+
+ArchanTunnel_1F_1R_OnTransition:
 	compare VAR_ARCHAN_TUNNEL_STATE, 1
 	call_if_ge ArchanTunnel_1F_1R_EventScript_MoveStingaBoy
 	end
 
+ArchanTunnel_1F_1R_EventScript_TurnPlayerNorth:
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	end
+
+ArchanTunnel_1F_1R_EventScript_ReturnStingaScene:
+	lockall
+	playfanfare MUS_FANFA1
+	message ArchanTunnel_1F_1R_Text_PlayerReturnedStinga
+	waitfanfare
+	waitmessage
+	applymovement LOCALID_STINGA_BOY, Common_Movement_WalkInPlaceFastestDown
+	waitmovement 0
+	msgbox ArchanTunnel_1F_1R_Text_ThankYouSoMuch, MSGBOX_DEFAULT
+	giveitem ITEM_SOOTHE_BELL
+	compare VAR_RESULT, FALSE
+	goto_if_eq ArchanTunnel_1F_1R_EventScript_BagIsFull
+	setflag FLAG_RECEIVED_STINGA_SOOTHE_BELL
+	goto ArchanTunnel_1F_1R_EventScript_StingaBoyGoesHome
+	end
+
+ArchanTunnel_1F_1R_EventScript_BagIsFull:
+	msgbox gText_TooBadBagIsFull, MSGBOX_DEFAULT
+	msgbox ArchanTunnel_1F_1R_Text_ThatsTooBad, MSGBOX_DEFAULT
+	goto ArchanTunnel_1F_1R_EventScript_StingaBoyGoesHome
+	end
+
+ArchanTunnel_1F_1R_EventScript_StingaBoyGoesHome:
+	waitse
+	playmoncry SPECIES_WEEDLE, 0
+	msgbox Archan_Tunnel_1F_1R_Text_Stinga, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_STINGA_BOY, ArchanTunnel_1F_1R_Movement_StingaBoyLeave
+	waitmovement 0
+	playse SE_KAIDAN
+	waitse
+	removeobject LOCALID_STINGA_BOY
+	clearflag FLAG_HIDE_HOUSE_STINGA_BOY
+	setflag FLAG_HIDE_ARCHAN_TUNNEL_STINGA
+	clearflag FLAG_HIDE_HOUSE_STINGA
+	clearflag FLAG_HIDE_MAP_NAME_POPUP
+	clearflag FLAG_DONT_TRANSITION_MUSIC
+	setvar VAR_STINGA_STATE, 2
+	releaseall
+	end
+
+ArchanTunnel_1F_1R_Text_PlayerReturnedStinga:
+	.string "{PLAYER} returned Stinga\n"
+	.string "to the boy!$"
+
+ArchanTunnel_1F_1R_Text_ThankYouSoMuch:
+	.string "{COLOR BLUE}Thank you so much!\p"
+	.string "Sniff…\n"
+	.string "I was so worried about Stinga!\p"
+	.string "I know it's not much, but…\n"
+	.string "I want you to have this!$"
+
+ArchanTunnel_1F_1R_Text_ThatsTooBad:
+	.string "{COLOR BLUE}That's too bad…\p"
+	.string "Well, me and Stinga are going\n"
+	.string "home now.\p"
+	.string "It's been a very long day!\p"
+	.string "Come visit us, okay?$"
+
+Archan_Tunnel_1F_1R_Text_Stinga:
+	.string "Stinga: {COLOR BLUE}Burrk!\p"
+	.string "Come on Stinga, let's go home.$"
+
+ArchanTunnel_1F_1R_Movement_StingaBoyLeave:
+	walk_left
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+	
 ArchanTunnel_1F_1R_EventScript_MoveStingaBoy:
 	setobjectxyperm LOCALID_STINGA_BOY, 7, 2
 	setobjectmovementtype LOCALID_STINGA_BOY, MOVEMENT_TYPE_FACE_DOWN

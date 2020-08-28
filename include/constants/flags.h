@@ -3,6 +3,8 @@
 
 #include "constants/opponents.h"
 
+// TODO: Remove references to old, Emerald flag symbols
+
 // Temporary Flags
 // These temporary flags are are cleared every time a map is loaded. They are used
 // for things like shortening an NPCs introduction text if the player already spoke
@@ -91,20 +93,21 @@
 #define FLAG_UNUSED_0x04F    0x4F // Unused Flag
 
 // Scripts
-#define FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT  0x50 // TODO: Remove references to this
+#define FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT  0x50
 #define FLAG_RECEIVED_GRACIDEA               0x50 // FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT in Emerald
-#define FLAG_SET_WALL_CLOCK                  0x51 // TODO: Remove references to this
+#define FLAG_SET_WALL_CLOCK                  0x51
 #define FLAG_FED_CELANTO_MEOWTH              0x51 // FLAG_SET_WALL_CLOCK in Emerald
-#define FLAG_RESCUED_BIRCH                   0x52 // TODO: Remove references to this
+#define FLAG_RESCUED_BIRCH                   0x52
 #define FLAG_RECEIVED_CELANTO_WHITE_HERB     0x52 // FLAG_RESCUED_BIRCH in Emerald
-#define FLAG_LEGENDARIES_IN_SOOTOPOLIS       0x53 // TODO: Remove references to this
+#define FLAG_LEGENDARIES_IN_SOOTOPOLIS       0x53
 #define FLAG_RECEIVED_CELANTO_DUSK_STONE     0x53 // FLAG_LEGENDARIES_IN_SOOTOPOLIS in Emerald
 #define FLAG_RECEIVED_TM32                   0x54 // FLAG_UNUSED_0x054 in Emerald
 #define FLAG_RECEIVED_ARCHAN_HOUSE_POTION    0x55 // FLAG_UNUSED_0x055 in Emerald
-#define FLAG_HIDE_CONTEST_POKE_BALL          0x56 // TODO: Remove references to this
+#define FLAG_HIDE_CONTEST_POKE_BALL          0x56
 #define FLAG_PLEASE_FIND_STINGA              0x56 // FLAG_HIDE_CONTEST_POKE_BALL in Emerald
-
 #define FLAG_MET_RIVAL_MOM                   0x57
+#define FLAG_RECEIVED_STINGA_SOOTHE_BELL     0x57 // FLAG_MET_RIVAL_MOM in Emerald
+
 #define FLAG_BIRCH_AIDE_MET                  0x58
 #define FLAG_DECLINED_BIKE                   0x59
 #define FLAG_RECEIVED_BIKE                   0x5A
@@ -541,31 +544,31 @@
 
 // Hidden Items
 #define FLAG_HIDDEN_ITEMS_START                                                         0x1F4
-#define FLAG_HIDDEN_ITEM_LAVARIDGE_TOWN_ICE_HEAL             (FLAG_HIDDEN_ITEMS_START + 0x00) // TODO: Remove references to this
+#define FLAG_HIDDEN_ITEM_LAVARIDGE_TOWN_ICE_HEAL             (FLAG_HIDDEN_ITEMS_START + 0x00)
 #define FLAG_HIDDEN_ITEM_RELIQUIA_RUINS_POTION               (FLAG_HIDDEN_ITEMS_START + 0x00) // FLAG_HIDDEN_ITEM_LAVARIDGE_TOWN_ICE_HEAL in Emerald
-#define FLAG_HIDDEN_ITEM_TRICK_HOUSE_NUGGET                  (FLAG_HIDDEN_ITEMS_START + 0x01) // TODO: Remove references to this
+#define FLAG_HIDDEN_ITEM_TRICK_HOUSE_NUGGET                  (FLAG_HIDDEN_ITEMS_START + 0x01)
 #define FLAG_HIDDEN_ITEM_RELIQUIA_RUINS_BLUE_SHARD           (FLAG_HIDDEN_ITEMS_START + 0x01) // FLAG_HIDDEN_ITEM_TRICK_HOUSE_NUGGET in Emerald
-#define FLAG_HIDDEN_ITEM_ROUTE_111_STARDUST                  (FLAG_HIDDEN_ITEMS_START + 0x02) // TODO: Remove references to this
+#define FLAG_HIDDEN_ITEM_ROUTE_111_STARDUST                  (FLAG_HIDDEN_ITEMS_START + 0x02)
 #define FLAG_HIDDEN_ITEM_RELIQUIA_RUINS_HYPER_POTION         (FLAG_HIDDEN_ITEMS_START + 0x02) // FLAG_HIDDEN_ITEM_ROUTE_111_STARDUST in Emerald
-#define FLAG_HIDDEN_ITEM_ROUTE_113_ETHER                     (FLAG_HIDDEN_ITEMS_START + 0x03) // TODO: Remove references to this
+#define FLAG_HIDDEN_ITEM_ROUTE_113_ETHER                     (FLAG_HIDDEN_ITEMS_START + 0x03)
 #define FLAG_HIDDEN_ITEM_CELANTO_GROVE_HYPER_POTION          (FLAG_HIDDEN_ITEMS_START + 0x03) // FLAG_HIDDEN_ITEM_ROUTE_113_ETHER in Emerald
-#define FLAG_HIDDEN_ITEM_ROUTE_114_CARBOS                    (FLAG_HIDDEN_ITEMS_START + 0x04) // TODO: Remove references to this
+#define FLAG_HIDDEN_ITEM_ROUTE_114_CARBOS                    (FLAG_HIDDEN_ITEMS_START + 0x04)
 #define FLAG_HIDDEN_ITEM_CELANTO_PATH_ANTIDOTE               (FLAG_HIDDEN_ITEMS_START + 0x04) // FLAG_HIDDEN_ITEM_ROUTE_114_CARBOS in Emerald
-#define FLAG_HIDDEN_ITEM_ROUTE_119_CALCIUM                   (FLAG_HIDDEN_ITEMS_START + 0x05) // TODO: Remove references to this
+#define FLAG_HIDDEN_ITEM_ROUTE_119_CALCIUM                   (FLAG_HIDDEN_ITEMS_START + 0x05)
 #define FLAG_HIDDEN_ITEM_CELANTO_PATH_BURN_HEAL              (FLAG_HIDDEN_ITEMS_START + 0x05) // FLAG_HIDDEN_ITEM_ROUTE_119_CALCIUM in Emerald
-#define FLAG_HIDDEN_ITEM_ROUTE_119_ULTRA_BALL                (FLAG_HIDDEN_ITEMS_START + 0x06) // TODO: Remove references to this
+#define FLAG_HIDDEN_ITEM_ROUTE_119_ULTRA_BALL                (FLAG_HIDDEN_ITEMS_START + 0x06)
 #define FLAG_HIDDEN_ITEM_ARCHAN_TOWN_POTION                  (FLAG_HIDDEN_ITEMS_START + 0x06) // FLAG_HIDDEN_ITEM_ROUTE_119_ULTRA_BALL
-#define FLAG_HIDDEN_ITEM_ROUTE_123_SUPER_REPEL               (FLAG_HIDDEN_ITEMS_START + 0x07) // TODO: Remove references to this
+#define FLAG_HIDDEN_ITEM_ROUTE_123_SUPER_REPEL               (FLAG_HIDDEN_ITEMS_START + 0x07)
 #define FLAG_HIDDEN_ITEM_ARCHAN_TUNNEL_POTION                (FLAG_HIDDEN_ITEMS_START + 0x07) // FLAG_HIDDEN_ITEM_ROUTE_123_SUPER_REPEL in Emerald
-#define FLAG_HIDDEN_ITEM_UNDERWATER_1_CARBOS                 (FLAG_HIDDEN_ITEMS_START + 0x08) // TODO: Remove references to this
+#define FLAG_HIDDEN_ITEM_UNDERWATER_1_CARBOS                 (FLAG_HIDDEN_ITEMS_START + 0x08)
 #define FLAG_HIDDEN_ITEM_ARCHAN_TUNNEL_POKE_BALL             (FLAG_HIDDEN_ITEMS_START + 0x08) // FLAG_HIDDEN_ITEM_UNDERWATER_1_CARBOS in Emerald
-#define FLAG_HIDDEN_ITEM_UNDERWATER_1_GREEN_SHARD            (FLAG_HIDDEN_ITEMS_START + 0x09) // TODO: Remove references to this
+#define FLAG_HIDDEN_ITEM_UNDERWATER_1_GREEN_SHARD            (FLAG_HIDDEN_ITEMS_START + 0x09)
 #define FLAG_HIDDEN_ITEM_ARCHAN_TUNNEL_RARE_BONE             (FLAG_HIDDEN_ITEMS_START + 0x09) // FLAG_HIDDEN_ITEM_UNDERWATER_1_GREEN_SHARD in Emerald
-#define FLAG_HIDDEN_ITEM_UNDERWATER_1_PEARL                  (FLAG_HIDDEN_ITEMS_START + 0x0A) // TODO: Remove references to this
+#define FLAG_HIDDEN_ITEM_UNDERWATER_1_PEARL                  (FLAG_HIDDEN_ITEMS_START + 0x0A)
 #define FLAG_HIDDEN_ITEM_ARCHAN_TUNNEL_NUGGET                (FLAG_HIDDEN_ITEMS_START + 0x0A) // FLAG_HIDDEN_ITEM_UNDERWATER_1_PEARL in Emerald
-#define FLAG_HIDDEN_ITEM_UNDERWATER_1_BIG_PEARL              (FLAG_HIDDEN_ITEMS_START + 0x0B) // TODO: Remove references to this
+#define FLAG_HIDDEN_ITEM_UNDERWATER_1_BIG_PEARL              (FLAG_HIDDEN_ITEMS_START + 0x0B)
 #define FLAG_HIDDEN_ITEM_ARCHAN_TUNNEL_BLUE_SHARD            (FLAG_HIDDEN_ITEMS_START + 0x0B) // FLAG_HIDDEN_ITEM_UNDERWATER_1_BIG_PEARL in Emerald
-#define FLAG_HIDDEN_ITEM_UNDERWATER_2_BLUE_SHARD             (FLAG_HIDDEN_ITEMS_START + 0x0C) // TODO: Remove references to this
+#define FLAG_HIDDEN_ITEM_UNDERWATER_2_BLUE_SHARD             (FLAG_HIDDEN_ITEMS_START + 0x0C)
 #define FLAG_HIDDEN_ITEM_ARCHAN_TUNNEL_AWAKENING             (FLAG_HIDDEN_ITEMS_START + 0x0C) // FLAG_HIDDEN_ITEM_UNDERWATER_2_BLUE_SHARD in Emerald
 #define FLAG_HIDDEN_ITEM_UNDERWATER_1_HEART_SCALE_1          (FLAG_HIDDEN_ITEMS_START + 0x0D)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_2_HEART_SCALE            (FLAG_HIDDEN_ITEMS_START + 0x0E)
@@ -757,47 +760,50 @@
 #define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag
 
 // Event Flags
-#define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC // TODO: Remove references to this
+#define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
 #define FLAG_HIDE_DUSTY_TOME                                        0x2BC // FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG in Emerald
-#define FLAG_HIDE_APPRENTICE                                        0x2BD // TODO: Remove references to this
+#define FLAG_HIDE_APPRENTICE                                        0x2BD
 #define FLAG_HIDE_CELANTO_TOWN_MOM                                  0x2BD // FLAG_HIDE_APPRENTICE in Emerald
-#define FLAG_HIDE_POKEMON_CENTER_2F_MYSTERY_GIFT_MAN                0x2BE // TODO: Remove references to this
+#define FLAG_HIDE_POKEMON_CENTER_2F_MYSTERY_GIFT_MAN                0x2BE
 #define FLAG_HIDE_CELANTO_TOWN_REDWOOD                              0x2BE // FLAG_HIDE_POKEMON_CENTER_2F_MYSTERY_GIFT_MAN in Emerald
-#define FLAG_HIDE_UNION_ROOM_PLAYER_1                               0x2BF // TODO: Remove references to this
+#define FLAG_HIDE_UNION_ROOM_PLAYER_1                               0x2BF
 #define FLAG_HIDE_RELIQUIA_RUINS_MORGANA                            0x2BF // FLAG_HIDE_UNION_ROOM_PLAYER_1 in Emerald
-#define FLAG_HIDE_UNION_ROOM_PLAYER_2                               0x2C0 // TODO: Remove references to this
+#define FLAG_HIDE_UNION_ROOM_PLAYER_2                               0x2C0
 #define FLAG_HIDE_CELANTO_LIBRARY_COULTER                           0x2C0 // FLAG_HIDE_UNION_ROOM_PLAYER_2 in Emerald
-#define FLAG_HIDE_UNION_ROOM_PLAYER_3                               0x2C1 // TODO: Remove references to this
+#define FLAG_HIDE_UNION_ROOM_PLAYER_3                               0x2C1
 #define FLAG_HIDE_CELANTO_LIBRARY_RICHTER                           0x2C1 // FLAG_HIDE_UNION_ROOM_PLAYER_3 in Emerald
-#define FLAG_HIDE_UNION_ROOM_PLAYER_4                               0x2C2 // TODO: Remove references to this
+#define FLAG_HIDE_UNION_ROOM_PLAYER_4                               0x2C2
 #define FLAG_HIDE_CELANTO_LIBRARY_REDWOOD                           0x2C2 // FLAG_HIDE_UNION_ROOM_PLAYER_4 in Emerald
-#define FLAG_HIDE_UNION_ROOM_PLAYER_5                               0x2C3 // TODO: Remove references to this
+#define FLAG_HIDE_UNION_ROOM_PLAYER_5                               0x2C3
 #define FLAG_HIDE_LIBRARY_BACK_ROOM_OPP_GENDER                      0x2C3 // FLAG_HIDE_UNION_ROOM_PLAYER_5 in Emerald
-#define FLAG_HIDE_UNION_ROOM_PLAYER_6                               0x2C4 // TODO: Remove references to this
+#define FLAG_HIDE_UNION_ROOM_PLAYER_6                               0x2C4
 #define FLAG_HIDE_TURTWIG_BALL                                      0x2C4 // FLAG_HIDE_UNION_ROOM_PLAYER_6 in Emerald
-#define FLAG_HIDE_UNION_ROOM_PLAYER_7                               0x2C5 // TODO: Remove references to this
+#define FLAG_HIDE_UNION_ROOM_PLAYER_7                               0x2C5
 #define FLAG_HIDE_CHIMCHAR_BALL                                     0x2C5 // FLAG_HIDE_UNION_ROOM_PLAYER_7 in Emerald
-#define FLAG_HIDE_UNION_ROOM_PLAYER_8                               0x2C6 // TODO: Remove references to this
+#define FLAG_HIDE_UNION_ROOM_PLAYER_8                               0x2C6
 #define FLAG_HIDE_PIPLUP_BALL                                       0x2C6 // FLAG_HIDE_UNION_ROOM_PLAYER_8 in Emerald
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_1               0x2C7 // TODO: Remove references to this
+#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_1               0x2C7
 #define FLAG_HIDE_LIBRARY_BACK_ROOM_REDWOOD                         0x2C7 // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_1 in Emerald
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_2               0x2C8 // TODO: Remove references to this
+#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_2               0x2C8
 #define FLAG_HIDE_LIBRARY_BACK_ROOM_COULTER                         0x2C8 // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_2 in Emerald
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_3               0x2C9 // TODO: Remove references to this
+#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_3               0x2C9
 #define FLAG_HIDE_CELANTO_PATH_COULTER                              0x2C9 // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_3 in Emerald
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_4               0x2CA // TODO: Remove references to this
+#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_4               0x2CA
 #define FLAG_HIDE_ARCHAN_TOWN_REDWOOD                               0x2CA // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_4 in Emerald
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_5               0x2CB // TODO: Remove references to this
+#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_5               0x2CB
 #define FLAG_HIDE_ARCHAN_TOWN_COULTER                               0x2CB // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_5 in Emerald
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_6               0x2CC // TODO: Remove references to this
+#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_6               0x2CC
 #define FLAG_HIDE_REDWOOD_RESIDENCE_REDWOOD                         0x2CC // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_6 in Emerald
-#define FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS            0x2CD // TODO: Remove references to this
+#define FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS            0x2CD
 #define FLAG_HIDE_REDWOOD_RESIDENCE_COULTER                         0x2CD // FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS in Emerald
-#define FLAG_HIDE_MEW                                               0x2CE // TODO: Remove references to this
+#define FLAG_HIDE_MEW                                               0x2CE
 #define FLAG_HIDE_ARCHAN_TUNNEL_STINGA_BOY                          0x2CE // FLAG_HIDE_MEW in Emerald
 #define FLAG_HIDE_ROUTE_104_RIVAL                                   0x2CF
+#define FLAG_HIDE_ARCHAN_TUNNEL_STINGA                              0x2CF // FLAG_HIDE_ROUTE_104_RIVAL in Emerald
 #define FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE                  0x2D0
+#define FLAG_HIDE_HOUSE_STINGA_BOY                                  0x2D0 // FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE in Emerald
 #define FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH                  0x2D1
+#define FLAG_HIDE_HOUSE_STINGA                                      0x2D1 // FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH in Emerald
 #define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM          0x2D2
 #define FLAG_HIDE_ROUTE_103_RIVAL                                   0x2D3
 #define FLAG_HIDE_PETALBURG_WOODS_DEVON_EMPLOYEE                    0x2D4
@@ -1080,25 +1086,25 @@
 #define FLAG_HIDE_RUSTBORO_CITY_POKEMON_SCHOOL_SCOTT                0x3E7
 
 // Item Ball Flags
-#define FLAG_ITEM_ROUTE_102_POTION                                  0x3E8 // TODO: Remove references to this
+#define FLAG_ITEM_ROUTE_102_POTION                                  0x3E8
 #define FLAG_ITEM_RELIQUIA_RUINS_REVIVE                             0x3E8 // FLAG_ITEM_ROUTE_102_POTION in Emerald
-#define FLAG_ITEM_ROUTE_116_X_SPECIAL                               0x3E9 // TODO: Remove references to this
+#define FLAG_ITEM_ROUTE_116_X_SPECIAL                               0x3E9
 #define FLAG_ITEM_RELIQUIA_RUINS_SHINY_STONE                        0x3E9 // FLAG_ITEM_ROUTE_116_X_SPECIAL in Emerald
-#define FLAG_ITEM_ROUTE_104_PP_UP                                   0x3EA // TODO: Remove references to this
+#define FLAG_ITEM_ROUTE_104_PP_UP                                   0x3EA
 #define FLAG_ITEM_RELIQUIA_RUINS_TM37                               0x3EA // FLAG_ITEM_ROUTE_104_PP_UP in Emerald
-#define FLAG_ITEM_ROUTE_105_IRON                                    0x3EB // TODO: Remove references to this
+#define FLAG_ITEM_ROUTE_105_IRON                                    0x3EB
 #define FLAG_ITEM_CELANTO_CONDOMINIUMS_POTION                       0x3EB // FLAG_ITEM_ROUTE_105_IRON in Emerald
-#define FLAG_ITEM_ROUTE_106_PROTEIN                                 0x3EC // TODO: Remove references to this
+#define FLAG_ITEM_ROUTE_106_PROTEIN                                 0x3EC
 #define FLAG_ITEM_ARCHAN_TOWN_SUPER_POTION                          0x3EC // FLAG_ITEM_ROUTE_106_PROTEIN in Emerald
-#define FLAG_ITEM_ROUTE_109_PP_UP                                   0x3ED // TODO: Remove references to this
+#define FLAG_ITEM_ROUTE_109_PP_UP                                   0x3ED
 #define FLAG_ITEM_ARCHAN_TOWN_RARE_CANDY                            0x3ED // FLAG_ITEM_ROUTE_109_PP_UP in Emerald
-#define FLAG_ITEM_ROUTE_109_RARE_CANDY                              0x3EE // TODO: Remove references to this
+#define FLAG_ITEM_ROUTE_109_RARE_CANDY                              0x3EE
 #define FLAG_ITEM_ARCHAN_TUNNEL_ESCAPE_ROPE                         0x3EE // FLAG_ITEM_ROUTE_109_RARE_CANDY in Emerald
-#define FLAG_ITEM_ROUTE_110_DIRE_HIT                                0x3EF // TODO: Remove references to this
+#define FLAG_ITEM_ROUTE_110_DIRE_HIT                                0x3EF
 #define FLAG_ITEM_ARCHAN_TUNNEL_MAX_ETHER                           0x3EF // FLAG_ITEM_ROUTE_110_DIRE_HIT in Emerald
-#define FLAG_ITEM_ROUTE_111_TM_37                                   0x3F0 // TODO: Remove references to this
+#define FLAG_ITEM_ROUTE_111_TM_37                                   0x3F0
 #define FLAG_ITEM_ARCHAN_TUNNEL_RARE_CANDY                          0x3F0 // FLAG_ITEM_ROUTE_111_TM_37 in Emerald
-#define FLAG_ITEM_ROUTE_111_STARDUST                                0x3F1 // TODO: Remove references to this
+#define FLAG_ITEM_ROUTE_111_STARDUST                                0x3F1
 #define FLAG_ITEM_ARCHAN_TUNNEL_MOON_STONE                          0x3F1 // FLAG_ITEM_ROUTE_111_STARDUST in Emerald
 #define FLAG_ITEM_ROUTE_111_HP_UP                                   0x3F2
 #define FLAG_ITEM_ROUTE_112_NUGGET                                  0x3F3
@@ -1407,9 +1413,9 @@
 #define NUM_BADGES                                   (1 + FLAG_BADGE08_GET - FLAG_BADGE01_GET)
 
 // Towns and Cities
-#define FLAG_VISITED_LITTLEROOT_TOWN                (SYSTEM_FLAGS + 0xF) // TODO: Remove references to this
+#define FLAG_VISITED_LITTLEROOT_TOWN                (SYSTEM_FLAGS + 0xF)
 #define FLAG_VISITED_CELANTO_TOWN                   (SYSTEM_FLAGS + 0xF) // FLAG_VISITED_LITTLEROOT_TOWN in Emerald
-#define FLAG_VISITED_OLDALE_TOWN                    (SYSTEM_FLAGS + 0x10) // TODO: Remove references to this
+#define FLAG_VISITED_OLDALE_TOWN                    (SYSTEM_FLAGS + 0x10)
 #define FLAG_VISITED_ARCHAN_TOWN                    (SYSTEM_FLAGS + 0x10) // FLAG_VISITED_OLDALE_TOWN in Emerald
 #define FLAG_VISITED_DEWFORD_TOWN                   (SYSTEM_FLAGS + 0x11)
 #define FLAG_VISITED_LAVARIDGE_TOWN                 (SYSTEM_FLAGS + 0x12)
@@ -1424,7 +1430,7 @@
 #define FLAG_VISITED_LILYCOVE_CITY                  (SYSTEM_FLAGS + 0x1B)
 #define FLAG_VISITED_MOSSDEEP_CITY                  (SYSTEM_FLAGS + 0x1C)
 #define FLAG_VISITED_SOOTOPOLIS_CITY                (SYSTEM_FLAGS + 0x1D)
-#define FLAG_VISITED_EVER_GRANDE_CITY               (SYSTEM_FLAGS + 0x1E) // TODO: Remove references to this
+#define FLAG_VISITED_EVER_GRANDE_CITY               (SYSTEM_FLAGS + 0x1E)
 #define FLAG_VISITED_OVARR_TOWN                     (SYSTEM_FLAGS + 0x1E) // FLAG_VISITED_EVER_GRANDE_CITY in Emerald
 
 #define FLAG_IS_CHAMPION                            (SYSTEM_FLAGS + 0x1F) // Seems to be related to linking.

@@ -88,5 +88,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_CELANTO_LIBRARY_RICHTER
 	setflag FLAG_HIDE_ARCHAN_TOWN_REDWOOD
 	setflag FLAG_HIDE_ARCHAN_TOWN_COULTER
+	setflag FLAG_HIDE_HOUSE_STINGA_BOY
+	setflag FLAG_HIDE_HOUSE_STINGA
 	call EventScript_ResetAllBerries
 	end

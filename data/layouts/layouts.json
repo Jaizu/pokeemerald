@@ -4644,8 +4644,8 @@
     {
       "id": "LAYOUT_ARCHAN_TUNNEL_B2F_1R",
       "name": "ArchanTunnel_B2F_1R_Layout",
-      "width": 30,
-      "height": 70,
+      "width": 28,
+      "height": 58,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_ArchanTunnel",
       "border_filepath": "data/layouts/ArchanTunnel_B2F_1R/border.bin",
