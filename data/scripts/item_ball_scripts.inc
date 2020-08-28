@@ -71,6 +71,10 @@ EventScript_ItemNugget::
 	finditem ITEM_NUGGET
 	end
 
+EventScript_ItemAssaultVest::
+	finditem ITEM_ASSAULT_VEST
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end

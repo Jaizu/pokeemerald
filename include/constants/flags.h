@@ -806,7 +806,9 @@
 #define FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH                  0x2D1
 #define FLAG_HIDE_HOUSE_STINGA                                      0x2D1 // FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH in Emerald
 #define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM          0x2D2
+#define FLAG_HIDE_SEROS_VILLAGE_REDWOOD                             0x2D2 // FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM in Emerald
 #define FLAG_HIDE_ROUTE_103_RIVAL                                   0x2D3
+#define FLAG_HIDE_SEROS_VILLAGE_COULTER                             0x2D3 // FLAG_HIDE_ROUTE_103_RIVAL in Emerald
 #define FLAG_HIDE_PETALBURG_WOODS_DEVON_EMPLOYEE                    0x2D4
 #define FLAG_HIDE_PETALBURG_WOODS_AQUA_GRUNT                        0x2D5
 #define FLAG_HIDE_PETALBURG_CITY_WALLY                              0x2D6
@@ -1108,6 +1110,7 @@
 #define FLAG_ITEM_ROUTE_111_STARDUST                                0x3F1
 #define FLAG_ITEM_ARCHAN_TUNNEL_MOON_STONE                          0x3F1 // FLAG_ITEM_ROUTE_111_STARDUST in Emerald
 #define FLAG_ITEM_ROUTE_111_HP_UP                                   0x3F2
+#define FLAG_ITEM_SEROS_VILLAGE_ASSAULT_VEST                        0x3F2 // FLAG_ITEM_ROUTE_111_HP_UP in Emerald
 #define FLAG_ITEM_ROUTE_112_NUGGET                                  0x3F3
 #define FLAG_ITEM_ROUTE_113_MAX_ETHER                               0x3F4
 #define FLAG_ITEM_ROUTE_113_SUPER_REPEL                             0x3F5
@@ -1419,6 +1422,7 @@
 #define FLAG_VISITED_OLDALE_TOWN                    (SYSTEM_FLAGS + 0x10)
 #define FLAG_VISITED_ARCHAN_TOWN                    (SYSTEM_FLAGS + 0x10) // FLAG_VISITED_OLDALE_TOWN in Emerald
 #define FLAG_VISITED_DEWFORD_TOWN                   (SYSTEM_FLAGS + 0x11)
+#define FLAG_VISITED_SEROS_VILLAGE                  (SYSTEM_FLAGS + 0x11) // FLAG_VISITED_DEWFORD_TOWN in Emerald
 #define FLAG_VISITED_LAVARIDGE_TOWN                 (SYSTEM_FLAGS + 0x12)
 #define FLAG_VISITED_FALLARBOR_TOWN                 (SYSTEM_FLAGS + 0x13)
 #define FLAG_VISITED_VERDANTURF_TOWN                (SYSTEM_FLAGS + 0x14)
