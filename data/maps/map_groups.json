@@ -5,6 +5,7 @@
     "gMapGroup_Dungeons",
     "gMapGroup_CelantoTown",
     "gMapGroup_ArchanTown",
+    "gMapGroup_SerosVillage",
     "gMapGroup0",
     "gMapGroup1",
     "gMapGroup2",
@@ -81,6 +82,9 @@
     "ArchanTown_House2",
     "ArchanTown_House3",
     "ArchanTown_House4"
+  ],
+  "gMapGroup_SerosVillage": [
+    "SerosVillage_PokemonCenter"
   ],
   "gMapGroup0": [
     "PetalburgCity",

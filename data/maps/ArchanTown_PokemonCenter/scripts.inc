@@ -1,4 +1,4 @@
-.set LOCALID_NURSE, 1
+.equ LOCALID_NURSE, 1
 
 ArchanTown_PokemonCenter_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, ArchanTown_PokemonCenter_OnTransition

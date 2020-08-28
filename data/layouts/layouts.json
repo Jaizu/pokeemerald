@@ -4562,14 +4562,14 @@
       "blockdata_filepath": "data/layouts/ArchanTown_RedwoodResidenceUpstairs/map.bin"
     },
     {
-      "id": "LAYOUT_ARCHAN_TOWN_POKEMON_CENTER",
-      "name": "ArchanTown_PokemonCenter_Layout",
+      "id": "LAYOUT_POKEMON_CENTER",
+      "name": "PokemonCenter_Layout",
       "width": 15,
       "height": 10,
       "primary_tileset": "gTileset_Indoors",
       "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/ArchanTown_PokemonCenter/border.bin",
-      "blockdata_filepath": "data/layouts/ArchanTown_PokemonCenter/map.bin"
+      "border_filepath": "data/layouts/PokemonCenter/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonCenter/map.bin"
     },
     {
       "id": "LAYOUT_ARCHAN_TOWN_MART",
