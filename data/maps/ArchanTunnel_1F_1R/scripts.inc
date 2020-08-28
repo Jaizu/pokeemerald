@@ -59,7 +59,6 @@ ArchanTunnel_1F_1R_EventScript_StingaBoyGoesHome:
 	setflag FLAG_HIDE_ARCHAN_TUNNEL_STINGA
 	clearflag FLAG_HIDE_HOUSE_STINGA
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
-	clearflag FLAG_DONT_TRANSITION_MUSIC
 	setvar VAR_STINGA_STATE, 2
 	releaseall
 	end

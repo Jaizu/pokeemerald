@@ -4,8 +4,18 @@ ArchanTown_House4_MapScripts::
 ArchanTown_House4_EventScript_Woman::
 	lock
 	faceplayer
-	goto_if_unset FLAG_HIDE_HOUSE_STINGA_BOY, ArchanTown_House4_EventScript_WomanThankYou
+	goto_if_unset FLAG_HIDE_HOUSE_STINGA_BOY, ArchanTown_House4_EventScript_TryGiveBerries
 	msgbox ArchanTown_House4_Text_MySonsWeedle, MSGBOX_DEFAULT
+	release
+	end
+
+ArchanTown_House4_EventScript_TryGiveBerries:
+	goto_if_set FLAG_RECEIVED_STINGA_BERRIES, ArchanTown_House4_EventScript_WomanThankYou
+	msgbox ArchanTown_House4_Text_YouHelpedTakeThese, MSGBOX_DEFAULT
+	giveitem ITEM_ORAN_BERRY, 3
+	compare VAR_RESULT, FALSE
+	goto_if_eq Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_STINGA_BERRIES
 	release
 	end
 
@@ -19,6 +29,10 @@ ArchanTown_House4_Text_MySonsWeedle:
 	.string "the Archan Tunnel after a tremor.\p"
 	.string "He's very upset, but it's just too\n"
 	.string "dangerous to go searching for it!$"
+
+ArchanTown_House4_Text_YouHelpedTakeThese:
+	.string "You helped my son find his Weedle?\n"
+	.string "Thank you! Please, take these.$"
 
 ArchanTown_House4_Text_MySonIsRelieved:
 	.string "My son is relieved now that\n"

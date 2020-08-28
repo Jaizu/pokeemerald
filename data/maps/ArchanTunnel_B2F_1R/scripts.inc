@@ -55,7 +55,6 @@ ArchanTunnel_B2F_1R_EventScript_RescueStinga:
 	applymovement LOCALID_STINGA, Common_Movement_Delay48
 	waitmovement 0
 	setflag FLAG_HIDE_MAP_NAME_POPUP
-	setflag FLAG_DONT_TRANSITION_MUSIC
 	setvar VAR_STINGA_STATE, 1
 	warp MAP_ARCHAN_TUNNEL_1F_1R, -1, 7, 3
 	waitstate

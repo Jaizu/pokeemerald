@@ -107,8 +107,9 @@
 #define FLAG_PLEASE_FIND_STINGA              0x56 // FLAG_HIDE_CONTEST_POKE_BALL in Emerald
 #define FLAG_MET_RIVAL_MOM                   0x57
 #define FLAG_RECEIVED_STINGA_SOOTHE_BELL     0x57 // FLAG_MET_RIVAL_MOM in Emerald
-
 #define FLAG_BIRCH_AIDE_MET                  0x58
+#define FLAG_RECEIVED_STINGA_BERRIES         0x58 // FLAG_BIRCH_AIDE_MET in Emerald
+
 #define FLAG_DECLINED_BIKE                   0x59
 #define FLAG_RECEIVED_BIKE                   0x5A
 #define FLAG_WATTSON_REMATCH_AVAILABLE       0x5B
