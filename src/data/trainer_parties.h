@@ -92,24 +92,33 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Iggy[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntPetalburgWoods[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_Jenson1[] = {
     {
     .iv = 0,
-    .lvl = 9,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 4,
+    .species = SPECIES_BUNEARY,
+    .moves = {MOVE_POUND, MOVE_DEFENSE_CURL, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_MAREEP,
+    .moves = {MOVE_TACKLE, MOVE_GROWL, MOVE_THUNDER_WAVE, MOVE_NONE}
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Marcel[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_Lanessa1[] = {
     {
-    .iv = 100,
-    .lvl = 29,
-    .species = SPECIES_MANECTRIC,
+    .iv = 0,
+    .lvl = 4,
+    .species = SPECIES_RALTS,
+    .moves = {MOVE_CONFUSION, MOVE_GROWL, MOVE_NONE, MOVE_NONE}
     },
     {
-    .iv = 100,
-    .lvl = 29,
-    .species = SPECIES_SHIFTRY,
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_SNUBBULL,
+    .moves = {MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE}
     }
 };
 

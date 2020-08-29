@@ -1,27 +1,31 @@
 #ifndef GUARD_CONSTANTS_OPPONENTS_H
 #define GUARD_CONSTANTS_OPPONENTS_H
 
+// TODO: Remove references to old, Emerald symbols
+
 #define TRAINER_NONE                          0
-#define TRAINER_SAWYER_1                      1 // TODO: Remove references to this
+#define TRAINER_SAWYER_1                      1
 #define TRAINER_COULTER_CELANTO_PATH_CHIMCHAR 1 // TRAINER_SAWYER_1 in Emerald
-#define TRAINER_GRUNT_AQUA_HIDEOUT_1          2 // TODO: Remove references to this
+#define TRAINER_GRUNT_AQUA_HIDEOUT_1          2
 #define TRAINER_COULTER_CELANTO_PATH_PIPLUP   2 // TRAINER_GRUNT_AQUA_HIDEOUT_1 in Emerald
-#define TRAINER_GRUNT_AQUA_HIDEOUT_2          3 // TODO: Remove references to this
+#define TRAINER_GRUNT_AQUA_HIDEOUT_2          3
 #define TRAINER_COULTER_CELANTO_PATH_TURTWIG  3 // TRAINER_GRUNT_AQUA_HIDEOUT_2 in Emerald
-#define TRAINER_GRUNT_AQUA_HIDEOUT_3          4 // TODO: Remove references to this
+#define TRAINER_GRUNT_AQUA_HIDEOUT_3          4
 #define TRAINER_LOUISE                        4 // TRAINER_GRUNT_AQUA_HIDEOUT_3 in Emerald
-#define TRAINER_GRUNT_AQUA_HIDEOUT_4          5 // TODO: Remove references to this
+#define TRAINER_GRUNT_AQUA_HIDEOUT_4          5
 #define TRAINER_QUINN                         5 // TRAINER_GRUNT_AQUA_HIDEOUT_4 in Emerald
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_1       6 // TODO: Remove references to this
+#define TRAINER_GRUNT_SEAFLOOR_CAVERN_1       6
 #define TRAINER_CORY                          6 // TRAINER_GRUNT_SEAFLOOR_CAVERN_1 in Emerald
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_2       7 // TODO: Remove references to this
+#define TRAINER_GRUNT_SEAFLOOR_CAVERN_2       7
 #define TRAINER_GEORG                         7 // TRAINER_GRUNT_SEAFLOOR_CAVERN_2 in Emerald
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_3       8 // TODO: Remove references to this
+#define TRAINER_GRUNT_SEAFLOOR_CAVERN_3       8
 #define TRAINER_BOB                           8 // TRAINER_GRUNT_SEAFLOOR_CAVERN_3 in Emerald
-#define TRAINER_GABRIELLE_1                   9 // TODO: Remove references to this
+#define TRAINER_GABRIELLE_1                   9
 #define TRAINER_IGGY                          9 // TRAINER_GABRIELLE_1 in Emerald
 #define TRAINER_GRUNT_PETALBURG_WOODS        10
+#define TRAINER_JENSON_1                     10 // TRAINER_GRUNT_PETALBURG_WOODS in Emerald
 #define TRAINER_MARCEL                       11
+#define TRAINER_LANESSA_1                    11 // TRAINER_MARCEL in Emerald
 #define TRAINER_ALBERTO                      12
 #define TRAINER_ED                           13
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_4      14

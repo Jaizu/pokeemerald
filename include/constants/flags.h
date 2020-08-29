@@ -3,7 +3,7 @@
 
 #include "constants/opponents.h"
 
-// TODO: Remove references to old, Emerald flag symbols
+// TODO: Remove references to old, Emerald symbols
 
 // Temporary Flags
 // These temporary flags are are cleared every time a map is loaded. They are used
@@ -572,6 +572,7 @@
 #define FLAG_HIDDEN_ITEM_UNDERWATER_2_BLUE_SHARD             (FLAG_HIDDEN_ITEMS_START + 0x0C)
 #define FLAG_HIDDEN_ITEM_ARCHAN_TUNNEL_AWAKENING             (FLAG_HIDDEN_ITEMS_START + 0x0C) // FLAG_HIDDEN_ITEM_UNDERWATER_2_BLUE_SHARD in Emerald
 #define FLAG_HIDDEN_ITEM_UNDERWATER_1_HEART_SCALE_1          (FLAG_HIDDEN_ITEMS_START + 0x0D)
+#define FLAG_HIDDEN_ITEM_SEROS_PATH_NEST_BALL                (FLAG_HIDDEN_ITEMS_START + 0x0D) // FLAG_HIDDEN_ITEM_UNDERWATER_1_HEART_SCALE_1 in Emerald
 #define FLAG_HIDDEN_ITEM_UNDERWATER_2_HEART_SCALE            (FLAG_HIDDEN_ITEMS_START + 0x0E)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_2_ULTRA_BALL             (FLAG_HIDDEN_ITEMS_START + 0x0F)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_2_STARDUST               (FLAG_HIDDEN_ITEMS_START + 0x10)
@@ -812,6 +813,7 @@
 #define FLAG_HIDE_PETALBURG_WOODS_DEVON_EMPLOYEE                    0x2D4
 #define FLAG_HIDE_SEROS_POKEMON_CENTER_REDWOOD                      0x2D4 // FLAG_HIDE_PETALBURG_WOODS_DEVON_EMPLOYEE in Emerald
 #define FLAG_HIDE_PETALBURG_WOODS_AQUA_GRUNT                        0x2D5
+#define FLAG_HIDE_SEROS_PATH_BATTLING_TRAINERS                      0x2D5 // FLAG_HIDE_PETALBURG_WOODS_AQUA_GRUNT in Emerald
 #define FLAG_HIDE_PETALBURG_CITY_WALLY                              0x2D6
 #define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY   0x2D7
 #define FLAG_HIDE_PETALBURG_CITY_WALLYS_AUNT                        0x2D8
@@ -1113,6 +1115,7 @@
 #define FLAG_ITEM_ROUTE_111_HP_UP                                   0x3F2
 #define FLAG_ITEM_SEROS_VILLAGE_ASSAULT_VEST                        0x3F2 // FLAG_ITEM_ROUTE_111_HP_UP in Emerald
 #define FLAG_ITEM_ROUTE_112_NUGGET                                  0x3F3
+#define FLAG_ITEM_SEROS_PATH_POTION                                 0x3F3 // FLAG_ITEM_ROUTE_112_NUGGET in Emerald
 #define FLAG_ITEM_ROUTE_113_MAX_ETHER                               0x3F4
 #define FLAG_ITEM_ROUTE_113_SUPER_REPEL                             0x3F5
 #define FLAG_ITEM_ROUTE_114_RARE_CANDY                              0x3F6

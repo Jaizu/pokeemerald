@@ -3,6 +3,8 @@
 
 #define VARS_START 0x4000
 
+// TODO: Remove references to old, Emerald symbols
+
 // temporary vars
 // The first 0x10 vars are are temporary--they are cleared every time a map is loaded.
 #define TEMP_VARS_START            0x4000
@@ -89,7 +91,7 @@
 #define VAR_NATIONAL_DEX                     0x4046
 #define VAR_SEEDOT_SIZE_RECORD               0x4047
 #define VAR_ASH_GATHER_COUNT                 0x4048
-#define VAR_BIRCH_STATE                      0x4049 // TODO: Remove references to this
+#define VAR_BIRCH_STATE                      0x4049
 #define VAR_STINGA_STATE                     0x4049 // VAR_BIRCH_STATE in Emerald
 #define VAR_CRUISE_STEP_COUNT                0x404A
 #define VAR_POKELOT_RND1                     0x404B
@@ -98,9 +100,9 @@
 #define VAR_CELANTO_TOWN_GUARD               0x404E // VAR_UNUSED_0x404E in Emerald
 #define VAR_LOTAD_SIZE_RECORD                0x404F
 
-#define VAR_LITTLEROOT_TOWN_STATE            0x4050 // TODO: Remove references to this
+#define VAR_LITTLEROOT_TOWN_STATE            0x4050
 #define VAR_CELANTO_TOWN_STATE               0x4050 // VAR_LITTLEROOT_TOWN_STATE in Emerald
-#define VAR_OLDALE_TOWN_STATE                0x4051 // TODO: Remove references to this
+#define VAR_OLDALE_TOWN_STATE                0x4051
 #define VAR_ARCHAN_TOWN_STATE                0x4051 // VAR_OLDALE_TOWN_STATE in Emerald
 #define VAR_SEROS_VILLAGE_STATE              0x4052 // VAR_DEWFORD_TOWN_STATE in Emerald
 #define VAR_LAVARIDGE_TOWN_STATE             0x4053
@@ -116,7 +118,7 @@
 #define VAR_MOSSDEEP_CITY_STATE              0x405D
 #define VAR_SOOTOPOLIS_CITY_STATE            0x405E
 #define VAR_EVER_GRANDE_CITY_STATE           0x405F // Unused Var
-#define VAR_ROUTE101_STATE                   0x4060 // TODO: Remove references to this
+#define VAR_ROUTE101_STATE                   0x4060
 #define VAR_RELIQUIA_RUINS_STATE             0x4060 // VAR_ROUTE101_STATE in Emerald
 #define VAR_CELANTO_GROVE_STATE              0x4061 // VAR_ROUTE102_STATE in Emerald
 #define VAR_CELANTO_PATH_STATE               0x4062 // VAR_ROUTE103_STATE in Emerald
@@ -151,12 +153,12 @@
 #define VAR_ROUTE132_STATE                   0x407F // Unused Var
 #define VAR_ROUTE133_STATE                   0x4080 // Unused Var
 #define VAR_ROUTE134_STATE                   0x4081 // Unused Var
-#define VAR_LITTLEROOT_HOUSES_STATE_MAY      0x4082 // TODO: Remove references to this
+#define VAR_LITTLEROOT_HOUSES_STATE_MAY      0x4082
 #define VAR_PLAYERS_HOUSE_STATE              0x4082 // VAR_LITTLEROOT_HOUSES_STATE_MAY in Emerald
 #define VAR_CELANTO_LIBRARY_STATE            0x4083 // VAR_UNUSED_0x4083 in Emerald
-#define VAR_BIRCH_LAB_STATE                  0x4084 // TODO: Remove references to this
+#define VAR_BIRCH_LAB_STATE                  0x4084
 #define VAR_REDWOOD_RESIDENCE_STATE          0x4084 // VAR_BIRCH_LAB_STATE in Emerald
-#define VAR_PETALBURG_GYM_STATE              0x4085 // TODO: Remove references to this
+#define VAR_PETALBURG_GYM_STATE              0x4085
 #define VAR_ARCHAN_TUNNEL_STATE              0x4085 // VAR_PETALBURG_GYM_STATE in Emerald
 #define VAR_CONTEST_HALL_STATE               0x4086
 #define VAR_CABLE_CLUB_STATE                 0x4087
