@@ -93,21 +93,14 @@
 #define FLAG_UNUSED_0x04F    0x4F // Unused Flag
 
 // Scripts
-#define FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT  0x50
 #define FLAG_RECEIVED_GRACIDEA               0x50 // FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT in Emerald
-#define FLAG_SET_WALL_CLOCK                  0x51
 #define FLAG_FED_CELANTO_MEOWTH              0x51 // FLAG_SET_WALL_CLOCK in Emerald
-#define FLAG_RESCUED_BIRCH                   0x52
 #define FLAG_RECEIVED_CELANTO_WHITE_HERB     0x52 // FLAG_RESCUED_BIRCH in Emerald
-#define FLAG_LEGENDARIES_IN_SOOTOPOLIS       0x53
 #define FLAG_RECEIVED_CELANTO_DUSK_STONE     0x53 // FLAG_LEGENDARIES_IN_SOOTOPOLIS in Emerald
 #define FLAG_RECEIVED_TM32                   0x54 // FLAG_UNUSED_0x054 in Emerald
 #define FLAG_RECEIVED_ARCHAN_HOUSE_POTION    0x55 // FLAG_UNUSED_0x055 in Emerald
-#define FLAG_HIDE_CONTEST_POKE_BALL          0x56
 #define FLAG_PLEASE_FIND_STINGA              0x56 // FLAG_HIDE_CONTEST_POKE_BALL in Emerald
-#define FLAG_MET_RIVAL_MOM                   0x57
 #define FLAG_RECEIVED_STINGA_SOOTHE_BELL     0x57 // FLAG_MET_RIVAL_MOM in Emerald
-#define FLAG_BIRCH_AIDE_MET                  0x58
 #define FLAG_RECEIVED_STINGA_BERRIES         0x58 // FLAG_BIRCH_AIDE_MET in Emerald
 
 #define FLAG_DECLINED_BIKE                   0x59

@@ -60,12 +60,12 @@ LittlerootTown_MaysHouse_2F_EventScript_WallClock:: @ 829278D
 	end
 
 PlayersHouse_2F_EventScript_WallClock:: @ 8292799
-	goto_if_set FLAG_SET_WALL_CLOCK, PlayersHouse_2F_EventScript_CheckWallClock
+	goto_if_set 0, PlayersHouse_2F_EventScript_CheckWallClock
 	msgbox PlayersHouse_2F_Text_ClockIsStopped, MSGBOX_DEFAULT
 	call PlayersHouse_2F_EventScript_SetWallClock
 	delay 30
 	setvar VAR_LITTLEROOT_INTRO_STATE, 6
-	setflag FLAG_SET_WALL_CLOCK
+	setflag 0
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_1
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_2
 	checkplayergender
@@ -315,7 +315,7 @@ PlayersHouse_1F_EventScript_Mom:: @ 82929C5
 	compare VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 4
 	goto_if_eq PlayersHouse_1F_EventScript_DontPushYourselfTooHard
 	goto_if_set FLAG_HAS_MATCH_CALL, PlayersHouse_1F_EventScript_TryRegisterMom
-	goto_if_set FLAG_RESCUED_BIRCH, PlayersHouse_1F_EventScript_MomHealsParty
+	goto_if_set 0, PlayersHouse_1F_EventScript_MomHealsParty
 	compare VAR_TEMP_1, 1
 	goto_if_eq PlayersHouse_1F_EventScript_SeeYouHoney
 	compare VAR_LITTLEROOT_INTRO_STATE, 7

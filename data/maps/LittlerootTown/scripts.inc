@@ -44,7 +44,7 @@ LittlerootTown_OnTransition: @ 81E7DDB
 	call Common_EventScript_SetupRivalGfxId
 	compare VAR_LITTLEROOT_INTRO_STATE, 2
 	call_if_eq LittlerootTown_EventScript_MoveMomToMaysDoor
-	call_if_unset FLAG_RESCUED_BIRCH, LittlerootTown_EventScript_SetTwinPos
+	call_if_unset 0, LittlerootTown_EventScript_SetTwinPos
 	compare VAR_LITTLEROOT_TOWN_STATE, 3
 	call_if_eq LittlerootTown_EventScript_SetMomStandingInFrontOfDoorPos
 	compare VAR_LITTLEROOT_HOUSES_STATE_MAY, 4
@@ -270,7 +270,7 @@ LittlerootTown_EventScript_Twin:: @ 81E8034
 	lock
 	faceplayer
 	goto_if_set FLAG_ADVENTURE_STARTED, LittlerootTown_EventScript_GoodLuck
-	goto_if_set FLAG_RESCUED_BIRCH, LittlerootTown_EventScript_YouSavedBirch
+	goto_if_set 0, LittlerootTown_EventScript_YouSavedBirch
 	compare VAR_LITTLEROOT_TOWN_STATE, 0
 	goto_if_ne LittlerootTown_EventScript_GoSaveBirch
 	msgbox LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut, MSGBOX_DEFAULT
