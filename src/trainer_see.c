@@ -66,6 +66,7 @@ EWRAM_DATA u8 gApproachingTrainerId = 0;
 static const u8 sEmotion_ExclamationMarkGfx[] = INCBIN_U8("graphics/misc/emotion_exclamation.4bpp");
 static const u8 sEmotion_QuestionMarkGfx[] = INCBIN_U8("graphics/misc/emotion_question.4bpp");
 static const u8 sEmotion_HeartGfx[] = INCBIN_U8("graphics/misc/emotion_heart.4bpp");
+static const u8 sEmotion_XGfx[] = INCBIN_U8("graphics/misc/emotion_x.4bpp");
 
 static u8 (*const sDirectionalApproachDistanceFuncs[])(struct ObjectEvent *trainerObj, s16 range, s16 x, s16 y) =
 {
@@ -136,6 +137,14 @@ static const struct SpriteFrameImage sSpriteImageTable_HeartIcon[] =
     }
 };
 
+static const struct SpriteFrameImage sSpriteImageTable_XIcon[] =
+{
+    {
+        .data = sEmotion_XGfx,
+        .size = 0x80
+    }
+};
+
 static const union AnimCmd sSpriteAnim_Icons1[] =
 {
     ANIMCMD_FRAME(0, 60),
@@ -172,6 +181,17 @@ static const struct SpriteTemplate sSpriteTemplate_HeartIcon =
     .oam = &sOamData_Icons,
     .anims = sSpriteAnimTable_Icons,
     .images = sSpriteImageTable_HeartIcon,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCB_TrainerIcons
+};
+
+static const struct SpriteTemplate sSpriteTemplate_XIcon =
+{
+    .tileTag = 0xffff,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_0,
+    .oam = &sOamData_Icons,
+    .anims = sSpriteAnimTable_Icons,
+    .images = sSpriteImageTable_XIcon,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCB_TrainerIcons
 };
@@ -717,6 +737,26 @@ u8 FldEff_HeartIcon(void)
         struct Sprite *sprite = &gSprites[spriteId];
 
         SetIconSpriteData(sprite, FLDEFF_HEART_ICON, 0);
+        sprite->oam.paletteNum = IndexOfSpritePaletteTag(0x1004);
+    }
+
+    return 0;
+}
+
+u8 FldEff_XIcon(void)
+{
+    u8 spriteId;
+
+    LoadSpritePalette(&gSpritePalette_GeneralFieldEffect0);
+    UpdatePaletteGammaType(IndexOfSpritePaletteTag(0x1004), GAMMA_ALT);
+    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(0x1004));
+    spriteId = CreateSpriteAtEnd(&sSpriteTemplate_XIcon, 0, 0, 0x52);
+
+    if (spriteId != MAX_SPRITES)
+    {
+        struct Sprite *sprite = &gSprites[spriteId];
+
+        SetIconSpriteData(sprite, FLDEFF_X_ICON, 0);
         sprite->oam.paletteNum = IndexOfSpritePaletteTag(0x1004);
     }
 

@@ -52,7 +52,7 @@ gFieldEffectScriptPointers:: @ 82DB9D4
 	.4byte gFieldEffectScript_UseDive                   @ FLDEFF_USE_DIVE
 	.4byte gFieldEffectScript_Pokeball                  @ FLDEFF_POKEBALL
 	.4byte gFieldEffectScript_HeartIcon                 @ FLDEFF_HEART_ICON
-	.4byte gFieldEffectScript_Nop47                     @ FLDEFF_NOP_47
+	.4byte gFieldEffectScript_XIcon                     @ FLDEFF_NOP_47 in Emerald
 	.4byte gFieldEffectScript_Nop48                     @ FLDEFF_NOP_48
 	.4byte gFieldEffectScript_AshPuff                   @ FLDEFF_ASH_PUFF
 	.4byte gFieldEffectScript_AshLaunch                 @ FLDEFF_ASH_LAUNCH
@@ -263,8 +263,8 @@ gFieldEffectScript_HeartIcon:: @ 82DBC56
 	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffect0, FldEff_HeartIcon
 	field_eff_end
 
-gFieldEffectScript_Nop47:: @ 82DBC60
-	field_eff_callnative FldEff_Nop47
+gFieldEffectScript_XIcon:: @ Formerly Nop47
+	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffect0, FldEff_XIcon
 	field_eff_end
 
 gFieldEffectScript_Nop48:: @ 82DBC66

@@ -127,5 +127,8 @@
 	create_movement_action fly_up
 	create_movement_action fly_down
 
+	enum_start 0xa2
+	create_movement_action emote_x
+	
 	enum_start 0xfe
 	create_movement_action step_end

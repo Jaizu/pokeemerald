@@ -72,7 +72,7 @@ CelantoTown_BackOfLibrary_Text_AtLastThirdPerson:
 	.string "For that reason, I need helpers!$"
 
 CelantoTown_BackOfLibrary_Movement_X:
-	emote_heart // TODO: Port the [X] emote from FireRed
+	emote_x
 	step_end
 
 CelantoTown_BackOfLibrary_Movement_ExitOppGender:
