@@ -34,8 +34,6 @@
 
 extern const u16 gObjectEventPalette8[];
 extern const u16 gObjectEventPalette17[];
-extern const u16 gObjectEventPalette33[];
-extern const u16 gObjectEventPalette34[];
 
 static const u8 gUnknown_0858D8EC[] = { 3, 4, 5, 14 };
 
@@ -280,9 +278,9 @@ void LoadLinkContestPlayerPalettes(void)
             if (version == VERSION_RUBY || version == VERSION_SAPPHIRE)
             {
                 if (gLinkPlayers[i].gender == MALE)
-                    LoadPalette(gObjectEventPalette33, 0x160 + i * 0x10, 0x20);
+                    LoadPalette(gObjectEventPalette8, 0x160 + i * 0x10, 0x20);
                 else
-                    LoadPalette(gObjectEventPalette34, 0x160 + i * 0x10, 0x20);
+                    LoadPalette(gObjectEventPalette17, 0x160 + i * 0x10, 0x20);
             }
             else
             {

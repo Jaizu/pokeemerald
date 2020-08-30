@@ -425,17 +425,18 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_23 0x1117
 #define OBJ_EVENT_PAL_TAG_24 0x1118
 #define OBJ_EVENT_PAL_TAG_25 0x1119
-#define OBJ_EVENT_PAL_TAG_26 0x111A
-#define OBJ_EVENT_PAL_TAG_27 0x111B
-#define OBJ_EVENT_PAL_TAG_28 0x111C
-#define OBJ_EVENT_PAL_TAG_29 0x111D
-#define OBJ_EVENT_PAL_TAG_30 0x111E
-#define OBJ_EVENT_PAL_TAG_31 0x111F
-#define OBJ_EVENT_PAL_TAG_32 0x1120
-#define OBJ_EVENT_PAL_TAG_33 0x1121
-#define OBJ_EVENT_PAL_TAG_34 0x1122
-#define OBJ_EVENT_PAL_TAG_35 0x1123
-#define OBJ_EVENT_PAL_TAG_36 0x1124
+#define OBJ_EVENT_PAL_TAG_MORGANA 0x111A
+#define OBJ_EVENT_PAL_TAG_HEX_MANIAC 0x111B
+#define OBJ_EVENT_PAL_TAG_YOUNGSTER 0x111C
+#define OBJ_EVENT_PAL_TAG_DEOXYS 0x111D
+#define OBJ_EVENT_PAL_TAG_BIRTH_ISLAND_STONE 0x111E
+#define OBJ_EVENT_PAL_TAG_HOOH 0x111F
+#define OBJ_EVENT_PAL_TAG_LUGIA 0x1120
+#define OBJ_EVENT_PAL_TAG_PLAYER 0x1121
+#define OBJ_EVENT_PAL_TAG_MOM 0x1122
+#define OBJ_EVENT_PAL_TAG_HIKER 0x1123
+#define OBJ_EVENT_PAL_TAG_REDWOOD 0x1124
+#define OBJ_EVENT_PAL_TAG_COULTER 0x1125
 #define OBJ_EVENT_PAL_TAG_NONE 0x11FF
 
 #include "data/field_effects/field_effect_object_template_pointers.h"
@@ -473,17 +474,18 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPalette23, OBJ_EVENT_PAL_TAG_23},
     {gObjectEventPalette24, OBJ_EVENT_PAL_TAG_24},
     {gObjectEventPalette25, OBJ_EVENT_PAL_TAG_25},
-    {gObjectEventPalette26, OBJ_EVENT_PAL_TAG_26},
-    {gObjectEventPalette27, OBJ_EVENT_PAL_TAG_27},
-    {gObjectEventPalette28, OBJ_EVENT_PAL_TAG_28},
-    {gObjectEventPalette29, OBJ_EVENT_PAL_TAG_29},
-    {gObjectEventPalette30, OBJ_EVENT_PAL_TAG_30},
-    {gObjectEventPalette31, OBJ_EVENT_PAL_TAG_31},
-    {gObjectEventPalette32, OBJ_EVENT_PAL_TAG_32},
-    {gObjectEventPalette33, OBJ_EVENT_PAL_TAG_33},
-    {gObjectEventPalette34, OBJ_EVENT_PAL_TAG_34},
-    {gObjectEventPalette35, OBJ_EVENT_PAL_TAG_35},
-    {gObjectEventPalette36, OBJ_EVENT_PAL_TAG_36},
+    {gObjectEventPaletteMorgana, OBJ_EVENT_PAL_TAG_MORGANA},
+    {gObjectEventPaletteHexManiac, OBJ_EVENT_PAL_TAG_HEX_MANIAC},
+    {gObjectEventPaletteYoungster, OBJ_EVENT_PAL_TAG_YOUNGSTER},
+    {gObjectEventPaletteDeoxys, OBJ_EVENT_PAL_TAG_DEOXYS},
+    {gObjectEventPaletteBirthIslandStone, OBJ_EVENT_PAL_TAG_BIRTH_ISLAND_STONE},
+    {gObjectEventPaletteHoOh, OBJ_EVENT_PAL_TAG_HOOH},
+    {gObjectEventPaletteLugia, OBJ_EVENT_PAL_TAG_LUGIA},
+    {gObjectEventPalettePlayer, OBJ_EVENT_PAL_TAG_PLAYER},
+    {gObjectEventPaletteMom, OBJ_EVENT_PAL_TAG_MOM},
+    {gObjectEventPaletteHiker, OBJ_EVENT_PAL_TAG_HIKER},
+    {gObjectEventPaletteRedwood, OBJ_EVENT_PAL_TAG_REDWOOD},
+    {gObjectEventPaletteCoulter, OBJ_EVENT_PAL_TAG_COULTER},
     {NULL,                  0x0000},
 };
 

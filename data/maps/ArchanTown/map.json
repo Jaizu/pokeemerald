@@ -143,7 +143,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
+      "graphics_id": "OBJ_EVENT_GFX_REDWOOD",
       "x": 22,
       "y": 12,
       "elevation": 3,
@@ -156,7 +156,7 @@
       "flag": "FLAG_HIDE_ARCHAN_TOWN_REDWOOD"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WALLY",
+      "graphics_id": "OBJ_EVENT_GFX_COULTER",
       "x": 23,
       "y": 12,
       "elevation": 3,

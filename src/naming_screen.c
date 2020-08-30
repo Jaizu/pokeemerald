@@ -1423,7 +1423,7 @@ static void NamingScreen_CreateRivalIcon(void)
 {
     u8 spriteId;
 
-    spriteId = AddPseudoObjectEvent(OBJ_EVENT_GFX_WALLY, SpriteCallbackDummy, 56, 37, 0);
+    spriteId = AddPseudoObjectEvent(OBJ_EVENT_GFX_COULTER, SpriteCallbackDummy, 56, 37, 0);
     gSprites[spriteId].oam.priority = 3;
     StartSpriteAnim(&gSprites[spriteId], 4);
 }
