@@ -19,6 +19,8 @@ CelantoTown_PlayersHouse_2F_EventScript_PC::
 	msgbox gText_PlayerHouseBootPC, MSGBOX_DEFAULT
 	special BedroomPC
 	waitstate
+	playse SE_PC_OFF
+	special DoPCTurnOffEffect
 	releaseall
 	end
 
