@@ -21,6 +21,7 @@
 #include "constants/trainer_types.h"
 
 extern const struct SpritePalette sObjectEventSpritePalettes[];
+extern const struct SpritePalette gSpritePalette_GeneralFieldEffect0;
 
 // this file's functions
 static u8 CheckTrainer(u8 objectEventId);
@@ -167,7 +168,7 @@ static const struct SpriteTemplate sSpriteTemplate_ExclamationQuestionMark =
 static const struct SpriteTemplate sSpriteTemplate_HeartIcon =
 {
     .tileTag = 0xffff,
-    .paletteTag = 0x1004,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_0,
     .oam = &sOamData_Icons,
     .anims = sSpriteAnimTable_Icons,
     .images = sSpriteImageTable_HeartIcon,
@@ -706,7 +707,7 @@ u8 FldEff_HeartIcon(void)
 {
     u8 spriteId;
 
-    LoadObjectEventPalette(0x1004);
+    LoadSpritePalette(&gSpritePalette_GeneralFieldEffect0);
     UpdatePaletteGammaType(IndexOfSpritePaletteTag(0x1004), GAMMA_ALT);
     UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(0x1004));
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_HeartIcon, 0, 0, 0x52);
@@ -716,7 +717,7 @@ u8 FldEff_HeartIcon(void)
         struct Sprite *sprite = &gSprites[spriteId];
 
         SetIconSpriteData(sprite, FLDEFF_HEART_ICON, 0);
-        sprite->oam.paletteNum = 2;
+        sprite->oam.paletteNum = IndexOfSpritePaletteTag(0x1004);
     }
 
     return 0;
