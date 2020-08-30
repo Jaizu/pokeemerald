@@ -10,6 +10,10 @@ Common_Movement_Heart:
 	emote_heart
 	step_end
 
+Common_Movement_X:
+	emote_x
+	step_end
+
 Common_Movement_Delay48: @ 827259A
 	delay_16
 	delay_16

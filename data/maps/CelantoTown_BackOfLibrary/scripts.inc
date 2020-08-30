@@ -32,7 +32,7 @@ CelantoTown_BackOfLibrary_EventScript_RedwoodWelcome:
 	msgbox CelantoTown_BackOfLibrary_Text_AtLastThirdPerson, MSGBOX_DEFAULT
 	closemessage
 	playse SE_BOO
-	applymovement LOCALID_OPP_GENDER, CelantoTown_BackOfLibrary_Movement_X
+	applymovement LOCALID_OPP_GENDER, Common_Movement_X
 	waitmovement 0
 	applymovement LOCALID_OPP_GENDER, Common_Movement_Delay48
 	waitmovement 0
@@ -70,10 +70,6 @@ CelantoTown_BackOfLibrary_Text_AtLastThirdPerson:
 	.string "I can't keep up with the fieldwork\n"
 	.string "my research necessitates.\p"
 	.string "For that reason, I need helpers!$"
-
-CelantoTown_BackOfLibrary_Movement_X:
-	emote_x
-	step_end
 
 CelantoTown_BackOfLibrary_Movement_ExitOppGender:
 	walk_down
