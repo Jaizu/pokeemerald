@@ -27,7 +27,9 @@
 #define TRAINER_MARCEL                       11
 #define TRAINER_LANESSA_1                    11 // TRAINER_MARCEL in Emerald
 #define TRAINER_ALBERTO                      12
+#define TRAINER_HARRY_1                      12 // TRAINER_ALBERTO in Emerald
 #define TRAINER_ED                           13
+#define TRAINER_PHOEBE_1                     13 // TRAINER_ED in Emerald
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_4      14
 #define TRAINER_DECLAN                       15
 #define TRAINER_GRUNT_RUSTURF_TUNNEL         16

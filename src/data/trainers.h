@@ -167,32 +167,32 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemCustomMoves = sParty_Lanessa1},
     },
 
-    [TRAINER_ALBERTO] =
+    [TRAINER_HARRY_1] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_BIRD_KEEPER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_BIRD_KEEPER,
-        .trainerName = _("ALBERTO"),
+        .trainerClass = TRAINER_CLASS_YOUNGSTER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
+        .trainerName = _("Harry"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Alberto),
-        .party = {.NoItemDefaultMoves = sParty_Alberto},
+        .partySize = ARRAY_COUNT(sParty_Harry1),
+        .party = {.NoItemDefaultMoves = sParty_Harry1},
     },
 
-    [TRAINER_ED] =
+    [TRAINER_PHOEBE_1] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_COLLECTOR,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
-        .trainerPic = TRAINER_PIC_COLLECTOR,
-        .trainerName = _("ED"),
+        .trainerClass = TRAINER_CLASS_LASS,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_LASS,
+        .trainerName = _("Phoebe"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Ed),
-        .party = {.NoItemDefaultMoves = sParty_Ed},
+        .partySize = ARRAY_COUNT(sParty_Phoebe1),
+        .party = {.NoItemDefaultMoves = sParty_Phoebe1},
     },
 
     [TRAINER_GRUNT_SEAFLOOR_CAVERN_4] =

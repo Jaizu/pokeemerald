@@ -56,6 +56,15 @@ Route113_EventScript_ItemMaxEther::
 	finditem ITEM_MAX_ETHER
 	end
 
+EventScript_ItemElixir::
+Route123_EventScript_ItemElixir::
+Route119_EventScript_ItemElixir2::
+Route119_EventScript_ItemElixir::
+Route111_EventScript_ItemElixir::
+Route110_EventScript_ItemElixir::
+	finditem ITEM_ELIXIR
+	end
+
 MeteorFalls_1F_1R_EventScript_ItemMoonStone::
 EventScript_ItemMoonStone::
 	finditem ITEM_MOON_STONE
@@ -115,10 +124,6 @@ Route110_EventScript_ItemDireHit:: @ 8290D81
 	finditem ITEM_DIRE_HIT
 	end
 
-Route110_EventScript_ItemElixir:: @ 8290D8E
-	finditem ITEM_ELIXIR
-	end
-
 Route111_EventScript_ItemStardust:: @ 8290DA8
 	finditem ITEM_STARDUST
 	end
@@ -127,9 +132,6 @@ Route111_EventScript_ItemHPUp:: @ 8290DB5
 	finditem ITEM_HP_UP
 	end
 
-Route111_EventScript_ItemElixir:: @ 8290DC2
-	finditem ITEM_ELIXIR
-	end
 
 Route113_EventScript_ItemSuperRepel:: @ 8290DE9
 	finditem ITEM_SUPER_REPEL
@@ -199,10 +201,6 @@ Route119_EventScript_ItemZinc:: @ 8290EED
 	finditem ITEM_ZINC
 	end
 
-Route119_EventScript_ItemElixir:: @ 8290EFA
-	finditem ITEM_ELIXIR
-	end
-
 Route119_EventScript_ItemLeafStone:: @ 8290F07
 	finditem ITEM_LEAF_STONE
 	end
@@ -213,10 +211,6 @@ Route119_EventScript_ItemHyperPotion:: @ 8290F21
 
 Route119_EventScript_ItemHyperPotion2:: @ 8290F2E
 	finditem ITEM_HYPER_POTION
-	end
-
-Route119_EventScript_ItemElixir2:: @ 8290F3B
-	finditem ITEM_ELIXIR
 	end
 
 Route120_EventScript_ItemFullHeal:: @ 8290F55
@@ -245,10 +239,6 @@ Route123_EventScript_ItemCalcium:: @ 8290FB0
 
 Route123_EventScript_ItemUltraBall:: @ 8290FBD
 	finditem ITEM_ULTRA_BALL
-	end
-
-Route123_EventScript_ItemElixir:: @ 8290FCA
-	finditem ITEM_ELIXIR
 	end
 
 Route123_EventScript_ItemPPUp:: @ 8290FD7

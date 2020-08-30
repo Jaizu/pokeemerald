@@ -122,29 +122,24 @@ static const struct TrainerMonNoItemCustomMoves sParty_Lanessa1[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Alberto[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Harry1[] = {
     {
     .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_PELIPPER,
+    .lvl = 4,
+    .species = SPECIES_PHANPY,
     },
     {
     .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_XATU,
+    .lvl = 5,
+    .species = SPECIES_FLETCHLING,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Ed[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Phoebe1[] = {
     {
     .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_ZANGOOSE,
-    },
-    {
-    .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_SEVIPER,
+    .lvl = 5,
+    .species = SPECIES_SKIDDO,
     }
 };
 
