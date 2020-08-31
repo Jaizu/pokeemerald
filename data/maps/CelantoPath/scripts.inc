@@ -22,7 +22,7 @@ CelantoPath_Text_JustPastThisLedge:
 	.string "You've got to walk through the\n"
 	.string "tall grass to get there from here.$"
 
-CelantoPath_EventScript_ExpertM::
+CelantoPath_EventScript_OldMan::
 	msgbox CelantoPath_Text_HeadedToNestpineTown, MSGBOX_NPC
 	end
 

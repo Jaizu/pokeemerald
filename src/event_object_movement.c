@@ -412,15 +412,15 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_10 0x110A
 #define OBJ_EVENT_PAL_TAG_11 0x110B
 #define OBJ_EVENT_PAL_TAG_12 0x110C
-#define OBJ_EVENT_PAL_TAG_13 0x110D
-#define OBJ_EVENT_PAL_TAG_14 0x110E
-#define OBJ_EVENT_PAL_TAG_15 0x110F
-#define OBJ_EVENT_PAL_TAG_16 0x1110
-#define OBJ_EVENT_PAL_TAG_17 0x1111
-#define OBJ_EVENT_PAL_TAG_18 0x1112
-#define OBJ_EVENT_PAL_TAG_19 0x1113
-#define OBJ_EVENT_PAL_TAG_20 0x1114
-#define OBJ_EVENT_PAL_TAG_21 0x1115
+#define OBJ_EVENT_PAL_TAG_NURSE 0x110D
+#define OBJ_EVENT_PAL_TAG_ACE_TRAINER 0x110E
+#define OBJ_EVENT_PAL_TAG_PICNICKER 0x110F
+#define OBJ_EVENT_PAL_TAG_WORKER 0x1110
+#define OBJ_EVENT_PAL_TAG_RUIN_MANIAC 0x1111
+#define OBJ_EVENT_PAL_TAG_TEALA 0x1112
+#define OBJ_EVENT_PAL_TAG_BATTLE_GIRL 0x1113
+#define OBJ_EVENT_PAL_TAG_CABLE_CAR 0x1114
+#define OBJ_EVENT_PAL_TAG_FISHERMAN 0x1115
 #define OBJ_EVENT_PAL_TAG_FAT_MAN 0x1116
 #define OBJ_EVENT_PAL_TAG_BEAUTY 0x1117
 #define OBJ_EVENT_PAL_TAG_RICH_BOY 0x1118
@@ -461,15 +461,15 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPalette10, OBJ_EVENT_PAL_TAG_10},
     {gObjectEventPalette11, OBJ_EVENT_PAL_TAG_11},
     {gObjectEventPalette12, OBJ_EVENT_PAL_TAG_12},
-    {gObjectEventPalette13, OBJ_EVENT_PAL_TAG_13},
-    {gObjectEventPalette14, OBJ_EVENT_PAL_TAG_14},
-    {gObjectEventPalette15, OBJ_EVENT_PAL_TAG_15},
-    {gObjectEventPalette16, OBJ_EVENT_PAL_TAG_16},
-    {gObjectEventPalette17, OBJ_EVENT_PAL_TAG_17},
-    {gObjectEventPalette18, OBJ_EVENT_PAL_TAG_18},
-    {gObjectEventPalette19, OBJ_EVENT_PAL_TAG_19},
-    {gObjectEventPalette20, OBJ_EVENT_PAL_TAG_20},
-    {gObjectEventPalette21, OBJ_EVENT_PAL_TAG_21},
+    {gObjectEventPaletteNurse, OBJ_EVENT_PAL_TAG_NURSE},
+    {gObjectEventPaletteAceTrainer, OBJ_EVENT_PAL_TAG_ACE_TRAINER},
+    {gObjectEventPalettePicnicker, OBJ_EVENT_PAL_TAG_PICNICKER},
+    {gObjectEventPaletteWorker, OBJ_EVENT_PAL_TAG_WORKER},
+    {gObjectEventPaletteRuinManiac, OBJ_EVENT_PAL_TAG_RUIN_MANIAC},
+    {gObjectEventPaletteTeala, OBJ_EVENT_PAL_TAG_TEALA},
+    {gObjectEventPaletteBattleGirl, OBJ_EVENT_PAL_TAG_BATTLE_GIRL},
+    {gObjectEventPaletteCableCar, OBJ_EVENT_PAL_TAG_CABLE_CAR},
+    {gObjectEventPaletteFisherman, OBJ_EVENT_PAL_TAG_FISHERMAN},
     {gObjectEventPaletteFatMan, OBJ_EVENT_PAL_TAG_FAT_MAN},
     {gObjectEventPaletteBeauty, OBJ_EVENT_PAL_TAG_BEAUTY},
     {gObjectEventPaletteRichBoy, OBJ_EVENT_PAL_TAG_RICH_BOY},

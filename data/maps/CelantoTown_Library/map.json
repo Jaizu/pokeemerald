@@ -54,7 +54,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+      "graphics_id": "OBJ_EVENT_GFX_BATTLE_GIRL",
       "x": 15,
       "y": 9,
       "elevation": 3,
@@ -132,7 +132,7 @@
       "flag": "FLAG_HIDE_CELANTO_LIBRARY_REDWOOD"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WALLY",
+      "graphics_id": "OBJ_EVENT_GFX_COULTER",
       "x": 12,
       "y": 11,
       "elevation": 3,

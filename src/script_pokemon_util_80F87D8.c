@@ -32,8 +32,7 @@
 #include "constants/tv.h"
 #include "constants/battle_frontier.h"
 
-extern const u16 gObjectEventPalette8[];
-extern const u16 gObjectEventPalette17[];
+extern const u16 gObjectEventPalettePlayer[];
 
 static const u8 gUnknown_0858D8EC[] = { 3, 4, 5, 14 };
 
@@ -278,16 +277,16 @@ void LoadLinkContestPlayerPalettes(void)
             if (version == VERSION_RUBY || version == VERSION_SAPPHIRE)
             {
                 if (gLinkPlayers[i].gender == MALE)
-                    LoadPalette(gObjectEventPalette8, 0x160 + i * 0x10, 0x20);
+                    LoadPalette(gObjectEventPalettePlayer, 0x160 + i * 0x10, 0x20);
                 else
-                    LoadPalette(gObjectEventPalette17, 0x160 + i * 0x10, 0x20);
+                    LoadPalette(gObjectEventPalettePlayer, 0x160 + i * 0x10, 0x20);
             }
             else
             {
                 if (gLinkPlayers[i].gender == MALE)
-                    LoadPalette(gObjectEventPalette8, 0x160 + i * 0x10, 0x20);
+                    LoadPalette(gObjectEventPalettePlayer, 0x160 + i * 0x10, 0x20);
                 else
-                    LoadPalette(gObjectEventPalette17, 0x160 + i * 0x10, 0x20);
+                    LoadPalette(gObjectEventPalettePlayer, 0x160 + i * 0x10, 0x20);
             }
         }
     }

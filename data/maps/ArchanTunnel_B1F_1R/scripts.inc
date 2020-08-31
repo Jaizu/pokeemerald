@@ -71,7 +71,7 @@ ArchanTunnel_B1F_1R_Text_WeveBeenForcedToHalt:
 	.string "The tremors just make construction\n"
 	.string "too dangerous!$"
 
-ArchanTunnel_B1F_1R_EventScript_Hiker::
+ArchanTunnel_B1F_1R_EventScript_RuinManiac::
 	msgbox ArchanTunnel_B1F_1R_Text_CarelessTrainersDropItems, MSGBOX_NPC
 	end
 

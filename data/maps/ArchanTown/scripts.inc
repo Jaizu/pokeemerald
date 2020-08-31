@@ -1,4 +1,4 @@
-.equ LOCALID_EXPERTM, 9
+.equ LOCALID_OLD_MAN, 9
 .equ LOCALID_REDWOOD, 10
 .equ LOCALID_COULTER, 11
 
@@ -10,16 +10,16 @@ ArchanTown_MapScripts::
 ArchanTown_OnTransition::
 	setflag FLAG_VISITED_ARCHAN_TOWN
 	compare VAR_ARCHAN_TOWN_STATE, 1
-	call_if_eq ArchanTown_EventScript_MoveExpertM
+	call_if_eq ArchanTown_EventScript_MoveOldMan
 	end
 
 ArchanTown_OnFrame:
 	map_script_2 VAR_ARCHAN_TOWN_STATE, 1, ArchanTown_EventScript_TabletScene
 	.2byte 0
 
-ArchanTown_EventScript_MoveExpertM:
-	setobjectxyperm LOCALID_EXPERTM, 21, 17
-	setobjectmovementtype LOCALID_EXPERTM, MOVEMENT_TYPE_WANDER_UP_AND_DOWN
+ArchanTown_EventScript_MoveOldMan:
+	setobjectxyperm LOCALID_OLD_MAN, 21, 17
+	setobjectmovementtype LOCALID_OLD_MAN, MOVEMENT_TYPE_WANDER_UP_AND_DOWN
 	return
 
 ArchanTown_EventScript_TabletScene:
@@ -200,7 +200,7 @@ ArchanTown_Text_AncientTabletSign:
 	.string "It appears to portray the Pokémon\n"
 	.string "Relicanth.$"
 
-ArchanTown_EventScript_ExpertF::
+ArchanTown_EventScript_OldWoman::
 	msgbox ArchanTown_Text_ProfRedwoodsHouse, MSGBOX_NPC
 	end
 
@@ -257,7 +257,7 @@ ArchanTown_Text_WhatsYourTheory:
 	.string "What's your theory on why the\n"
 	.string "tremors are happening?$"
 
-ArchanTown_EventScript_ExpertM::
+ArchanTown_EventScript_OldMan::
 	lock
 	faceplayer
 	msgbox ArchanTown_Text_LotsOfDifferentFolkTales, MSGBOX_DEFAULT
