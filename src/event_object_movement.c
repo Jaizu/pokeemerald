@@ -421,10 +421,10 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_19 0x1113
 #define OBJ_EVENT_PAL_TAG_20 0x1114
 #define OBJ_EVENT_PAL_TAG_21 0x1115
-#define OBJ_EVENT_PAL_TAG_22 0x1116
-#define OBJ_EVENT_PAL_TAG_23 0x1117
-#define OBJ_EVENT_PAL_TAG_24 0x1118
-#define OBJ_EVENT_PAL_TAG_25 0x1119
+#define OBJ_EVENT_PAL_TAG_FAT_MAN 0x1116
+#define OBJ_EVENT_PAL_TAG_BEAUTY 0x1117
+#define OBJ_EVENT_PAL_TAG_RICH_BOY 0x1118
+#define OBJ_EVENT_PAL_TAG_LASS 0x1119
 #define OBJ_EVENT_PAL_TAG_MORGANA 0x111A
 #define OBJ_EVENT_PAL_TAG_HEX_MANIAC 0x111B
 #define OBJ_EVENT_PAL_TAG_YOUNGSTER 0x111C
@@ -470,10 +470,10 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPalette19, OBJ_EVENT_PAL_TAG_19},
     {gObjectEventPalette20, OBJ_EVENT_PAL_TAG_20},
     {gObjectEventPalette21, OBJ_EVENT_PAL_TAG_21},
-    {gObjectEventPalette22, OBJ_EVENT_PAL_TAG_22},
-    {gObjectEventPalette23, OBJ_EVENT_PAL_TAG_23},
-    {gObjectEventPalette24, OBJ_EVENT_PAL_TAG_24},
-    {gObjectEventPalette25, OBJ_EVENT_PAL_TAG_25},
+    {gObjectEventPaletteFatMan, OBJ_EVENT_PAL_TAG_FAT_MAN},
+    {gObjectEventPaletteBeauty, OBJ_EVENT_PAL_TAG_BEAUTY},
+    {gObjectEventPaletteRichBoy, OBJ_EVENT_PAL_TAG_RICH_BOY},
+    {gObjectEventPaletteLass, OBJ_EVENT_PAL_TAG_LASS},
     {gObjectEventPaletteMorgana, OBJ_EVENT_PAL_TAG_MORGANA},
     {gObjectEventPaletteHexManiac, OBJ_EVENT_PAL_TAG_HEX_MANIAC},
     {gObjectEventPaletteYoungster, OBJ_EVENT_PAL_TAG_YOUNGSTER},
