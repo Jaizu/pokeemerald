@@ -84,6 +84,14 @@ EventScript_ItemAssaultVest::
 	finditem ITEM_ASSAULT_VEST
 	end
 
+EventScript_ItemCleanseTag::
+	finditem ITEM_CLEANSE_TAG
+	end
+
+EventScript_ItemTM10::
+	finditem ITEM_TM10
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end

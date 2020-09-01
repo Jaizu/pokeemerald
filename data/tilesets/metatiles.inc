@@ -580,3 +580,11 @@ gMetatiles_HiddenGrottoSecretTemple::
 	.align 1
 gMetatileAttributes_HiddenGrottoSecretTemple::
 	.incbin "data/tilesets/secondary/hiddengrottosecrettemple/metatile_attributes.bin"
+
+	.align 1
+gMetatiles_WispForest::
+	.incbin "data/tilesets/secondary/wispforest/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_WispForest::
+	.incbin "data/tilesets/secondary/wispforest/metatile_attributes.bin"

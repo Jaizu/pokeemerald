@@ -61,7 +61,8 @@
     "ArchanTunnel_B1F_2R",
     "ArchanTunnel_B2F_1R",
     "ArchanTunnel_B2F_2R",
-    "ArchanTunnel_SecretTemple"
+    "ArchanTunnel_SecretTemple",
+    "WispForest"
   ],
   "gMapGroup_CelantoTown": [
     "CelantoTown_PlayersHouse_1F",

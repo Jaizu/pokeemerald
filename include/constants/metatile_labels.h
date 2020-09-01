@@ -759,4 +759,22 @@
 #define METATILE_Underwater_FloorShadow  0x228
 #define METATILE_Underwater_RockWall     0x21E
 
+// gTileset_WispForest
+#define METATILE_WispForest_Grass_WispTreeBottomLeft              0x218
+#define METATILE_WispForest_Grass_WispTreeBottomRight             0x21B
+#define METATILE_WispForest_Grass_WispTreeMiddleLeft              0x210
+#define METATILE_WispForest_Grass_WispTreeMiddleRight             0x213
+#define METATILE_WispForest_Grass_WispTreeTopLeft                 0x209
+#define METATILE_WispForest_Grass_WispTreeTopLeftWithCorner       0x21E
+#define METATILE_WispForest_Grass_WispTreeTopRight                0x20A
+#define METATILE_WispForest_Grass_WispTreeTopRightWithCorner      0x21F
+#define METATILE_WispForest_TallGrass_WispTreeBottomLeft          0x20C
+#define METATILE_WispForest_TallGrass_WispTreeBottomRight         0x20D
+#define METATILE_WispForest_TallGrass_WispTreeMiddleLeft          0x204
+#define METATILE_WispForest_TallGrass_WispTreeMiddleRight         0x205
+#define METATILE_WispForest_TallGrass_WispTreeTopLeft             0x21C
+#define METATILE_WispForest_TallGrass_WispTreeTopLeftWithCorner   0x216
+#define METATILE_WispForest_TallGrass_WispTreeTopRight            0x21D
+#define METATILE_WispForest_TallGrass_WispTreeTopRightWithCorner  0x217
+
 #endif // GUARD_METATILE_LABELS_H

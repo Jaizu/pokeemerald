@@ -4760,6 +4760,16 @@
       "secondary_tileset": "gTileset_RustboroGym",
       "border_filepath": "data/layouts/SerosVillage_Gym/border.bin",
       "blockdata_filepath": "data/layouts/SerosVillage_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_WISP_FOREST",
+      "name": "WispForest_Layout",
+      "width": 52,
+      "height": 38,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_WispForest",
+      "border_filepath": "data/layouts/WispForest/border.bin",
+      "blockdata_filepath": "data/layouts/WispForest/map.bin"
     }
   ]
 }
