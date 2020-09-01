@@ -102,9 +102,11 @@
 #define FLAG_PLEASE_FIND_STINGA              0x56 // FLAG_HIDE_CONTEST_POKE_BALL in Emerald
 #define FLAG_RECEIVED_STINGA_SOOTHE_BELL     0x57 // FLAG_MET_RIVAL_MOM in Emerald
 #define FLAG_RECEIVED_STINGA_BERRIES         0x58 // FLAG_BIRCH_AIDE_MET in Emerald
-
 #define FLAG_DECLINED_BIKE                   0x59
+#define FLAG_FERNANDO_STORMED_OFF            0x59 // FLAG_DECLINED_BIKE in Emerald
 #define FLAG_RECEIVED_BIKE                   0x5A
+#define FLAG_FERNANDO_RESCUED                0x5A // FLAG_RECEIVED_BIKE in Emerald
+
 #define FLAG_WATTSON_REMATCH_AVAILABLE       0x5B
 #define FLAG_COLLECTED_ALL_SILVER_SYMBOLS    0x5C
 #define FLAG_GOOD_LUCK_SAFARI_ZONE           0x5D // Set after talking to NPC blocking Safari Zone entrance/exit once.
@@ -815,6 +817,7 @@
 #define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY   0x2D7
 #define FLAG_HIDE_COULTERS_HOUSE_COULTER                            0x2D7 // FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY in Emerald
 #define FLAG_HIDE_PETALBURG_CITY_WALLYS_AUNT                        0x2D8
+#define FLAG_HIDE_SEROS_GYM_FERNANDO                                0x2D8 // FLAG_HIDE_PETALBURG_CITY_WALLYS_AUNT in Emerald
 
 #define FLAG_UNUSED_0x2D9                                           0x2D9 // Unused Flag
 
@@ -1370,6 +1373,7 @@
 #define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
+#define FLAG_DEFEATED_SEROS_GYM                                     0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
 #define FLAG_DEFEATED_MAUVILLE_GYM                                  0x4F2
 #define FLAG_DEFEATED_LAVARIDGE_GYM                                 0x4F3

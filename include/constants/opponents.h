@@ -31,9 +31,13 @@
 #define TRAINER_ED                           13
 #define TRAINER_PHOEBE_1                     13 // TRAINER_ED in Emerald
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_4      14
+#define TRAINER_ROSE                         14 // TRAINER_GRUNT_SEAFLOOR_CAVERN_4 in Emerald
 #define TRAINER_DECLAN                       15
+#define TRAINER_COURTNEY                     15 // TRAINER_DECLAN in Emerald
 #define TRAINER_GRUNT_RUSTURF_TUNNEL         16
+#define TRAINER_DAZ                          16 // TRAINER_GRUNT_RUSTURF_TUNNEL in Emerald
 #define TRAINER_GRUNT_WEATHER_INST_1         17
+#define TRAINER_HANA                         17 // TRAINER_GRUNT_WEATHER_INST_1 in Emerald
 #define TRAINER_GRUNT_WEATHER_INST_2         18
 #define TRAINER_GRUNT_WEATHER_INST_3         19
 #define TRAINER_GRUNT_MUSEUM_1               20
@@ -282,6 +286,7 @@
 #define TRAINER_GLACIA                      263
 #define TRAINER_DRAKE                       264
 #define TRAINER_ROXANNE_1                   265
+#define TRAINER_LEADER_FERNANDO_1           265 // TRAINER_ROXANNE_1 in Emerald
 #define TRAINER_BRAWLY_1                    266
 #define TRAINER_WATTSON_1                   267
 #define TRAINER_FLANNERY_1                  268

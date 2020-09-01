@@ -143,40 +143,60 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Phoebe1[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern4[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Rose[] = {
     {
     .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_CARVANHA,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_Declan[] = {
-    {
-    .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_GYARADOS,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntRusturfTunnel[] = {
-    {
-    .iv = 0,
-    .lvl = 11,
-    .species = SPECIES_POOCHYENA,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst1[] = {
-    {
-    .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_ZUBAT,
+    .lvl = 6,
+    .species = SPECIES_CLEFFA,
     },
     {
     .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 6,
+    .species = SPECIES_AZURILL,
+    },
+    {
+    .iv = 0,
+    .lvl = 6,
+    .species = SPECIES_IGGLYBUFF,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Courtney[] = {
+    {
+    .iv = 0,
+    .lvl = 7,
+    .species = SPECIES_COTTONEE,
+    },
+    {
+    .iv = 0,
+    .lvl = 8,
+    .species = SPECIES_FLABEBE,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Daz[] = {
+    {
+    .iv = 0,
+    .lvl = 6,
+    .species = SPECIES_SNUBBULL,
+    },
+    {
+    .iv = 0,
+    .lvl = 7,
+    .species = SPECIES_SNUBBULL,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Hana[] = {
+    {
+    .iv = 0,
+    .lvl = 8,
+    .species = SPECIES_SPRITZEE,
+    },
+    {
+    .iv = 0,
+    .lvl = 8,
+    .species = SPECIES_SWIRLIX,
     }
 };
 
@@ -3360,27 +3380,27 @@ static const struct TrainerMonItemCustomMoves sParty_Drake[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
+static const struct TrainerMonItemCustomMoves sParty_LeaderFernando1[] = {
     {
-    .iv = 100,
-    .lvl = 12,
-    .species = SPECIES_GEODUDE,
+    .iv = 80,
+    .lvl = 11,
+    .species = SPECIES_CLEFAIRY,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_TACKLE, MOVE_DEFENSE_CURL, MOVE_ROCK_THROW, MOVE_ROCK_TOMB}
+    .moves = {MOVE_DISARMING_VOICE, MOVE_ROCK_SMASH, MOVE_DOUBLE_SLAP, MOVE_NONE}
+    },
+    {
+    .iv = 80,
+    .lvl = 11,
+    .species = SPECIES_RALTS,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_DISARMING_VOICE, MOVE_CONFUSION, MOVE_GROWL, MOVE_DISABLE}
     },
     {
     .iv = 100,
-    .lvl = 12,
-    .species = SPECIES_GEODUDE,
+    .lvl = 13,
+    .species = SPECIES_JIGGLYPUFF,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_TACKLE, MOVE_DEFENSE_CURL, MOVE_ROCK_THROW, MOVE_ROCK_TOMB}
-    },
-    {
-    .iv = 200,
-    .lvl = 15,
-    .species = SPECIES_NOSEPASS,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_BLOCK, MOVE_HARDEN, MOVE_TACKLE, MOVE_ROCK_TOMB}
+    .moves = {MOVE_DISARMING_VOICE, MOVE_POUND, MOVE_FAKE_TEARS, MOVE_DEFENSE_CURL}
     }
 };
 

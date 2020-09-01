@@ -14,7 +14,84 @@
   "battle_scene": "MAP_BATTLE_SCENE_GYM",
   "connections": 0,
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_2",
+      "x": 17,
+      "y": 49,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SerosVillage_Gym_EventScript_JimGai",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
+      "x": 16,
+      "y": 33,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "SerosVillage_Gym_EventScript_Rose",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AROMA_LADY",
+      "x": 16,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "SerosVillage_Gym_EventScript_Courtney",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "x": 43,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "SerosVillage_Gym_EventScript_Daz",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
+      "x": 49,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "SerosVillage_Gym_EventScript_Hana",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROXANNE",
+      "x": 46,
+      "y": 32,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SerosVillage_Gym_EventScript_Fernando",
+      "flag": "FLAG_HIDE_SEROS_GYM_FERNANDO"
+    }
   ],
   "warp_events": [
     {
@@ -23,12 +100,258 @@
       "elevation": 0,
       "dest_map": "MAP_SEROS_VILLAGE",
       "dest_warp_id": 4
+    },
+    {
+      "x": 16,
+      "y": 46,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 16,
+      "y": 40,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 8,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 24,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 16,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 24,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 16,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 10
+    },
+    {
+      "x": 16,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 8
+    },
+    {
+      "x": 46,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 8
+    },
+    {
+      "x": 46,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 12
+    },
+    {
+      "x": 46,
+      "y": 40,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 11
+    },
+    {
+      "x": 38,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 14
+    },
+    {
+      "x": 54,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 13
+    },
+    {
+      "x": 46,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 15,
+      "y": 46,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 18
+    },
+    {
+      "x": 17,
+      "y": 46,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 19
+    },
+    {
+      "x": 15,
+      "y": 40,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 16
+    },
+    {
+      "x": 17,
+      "y": 40,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 17
+    },
+    {
+      "x": 15,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 18
+    },
+    {
+      "x": 17,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 19
+    },
+    {
+      "x": 15,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 26
+    },
+    {
+      "x": 17,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 27
+    },
+    {
+      "x": 15,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 22
+    },
+    {
+      "x": 17,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 23
+    },
+    {
+      "x": 45,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 22
+    },
+    {
+      "x": 47,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 23
+    },
+    {
+      "x": 45,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 30
+    },
+    {
+      "x": 47,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 31
+    },
+    {
+      "x": 45,
+      "y": 40,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 28
+    },
+    {
+      "x": 47,
+      "y": 40,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 29
+    },
+    {
+      "x": 45,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 16
+    },
+    {
+      "x": 47,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
+      "dest_warp_id": 17
     }
   ],
   "coord_events": [
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 49,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SerosVillage_Gym_EventScript_GymSign"
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 49,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SerosVillage_Gym_EventScript_GymSign"
+    }
   ]
 }
