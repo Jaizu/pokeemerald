@@ -1123,3 +1123,13 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/SerosVillage_PokemonCenter/scripts.inc"
 
 	.include "data/maps/SerosVillage_Mart/scripts.inc"
+
+	.include "data/maps/SerosVillage_CoultersHouse_1F/scripts.inc"
+
+	.include "data/maps/SerosVillage_CoultersHouse_2F/scripts.inc"
+
+	.include "data/maps/SerosVillage_DayCareCenter/scripts.inc"
+
+	.include "data/maps/SerosVillage_House/scripts.inc"
+
+	.include "data/maps/SerosVillage_Gym/scripts.inc"

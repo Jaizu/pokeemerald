@@ -48,8 +48,13 @@
 #define MAP_ARCHAN_TOWN_HOUSE4                     (7 | (3 << 8))
 
 // Map Group 4
-#define MAP_SEROS_VILLAGE_POKEMON_CENTER (0 | (4 << 8))
-#define MAP_SEROS_VILLAGE_MART           (1 | (4 << 8))
+#define MAP_SEROS_VILLAGE_POKEMON_CENTER    (0 | (4 << 8))
+#define MAP_SEROS_VILLAGE_MART              (1 | (4 << 8))
+#define MAP_SEROS_VILLAGE_GYM               (2 | (4 << 8))
+#define MAP_SEROS_VILLAGE_DAY_CARE_CENTER   (3 | (4 << 8))
+#define MAP_SEROS_VILLAGE_COULTERS_HOUSE_1F (4 | (4 << 8))
+#define MAP_SEROS_VILLAGE_COULTERS_HOUSE_2F (5 | (4 << 8))
+#define MAP_SEROS_VILLAGE_HOUSE             (6 | (4 << 8))
 
 // Map Group 5
 #define MAP_PETALBURG_CITY   (0 | (5 << 8))

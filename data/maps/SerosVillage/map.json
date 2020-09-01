@@ -176,28 +176,28 @@
       "x": 22,
       "y": 15,
       "elevation": 0,
-      "dest_map": "MAP_SEROS_VILLAGE",
+      "dest_map": "MAP_SEROS_VILLAGE_GYM",
       "dest_warp_id": 0
     },
     {
       "x": 4,
       "y": 15,
       "elevation": 0,
-      "dest_map": "MAP_SEROS_VILLAGE",
+      "dest_map": "MAP_SEROS_VILLAGE_DAY_CARE_CENTER",
       "dest_warp_id": 0
     },
     {
       "x": 32,
       "y": 15,
       "elevation": 0,
-      "dest_map": "MAP_SEROS_VILLAGE",
+      "dest_map": "MAP_SEROS_VILLAGE_COULTERS_HOUSE_1F",
       "dest_warp_id": 0
     },
     {
       "x": 14,
       "y": 22,
       "elevation": 0,
-      "dest_map": "MAP_SEROS_VILLAGE",
+      "dest_map": "MAP_SEROS_VILLAGE_HOUSE",
       "dest_warp_id": 0
     }
   ],

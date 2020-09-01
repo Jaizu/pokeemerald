@@ -85,7 +85,12 @@
   ],
   "gMapGroup_SerosVillage": [
     "SerosVillage_PokemonCenter",
-    "SerosVillage_Mart"
+    "SerosVillage_Mart",
+    "SerosVillage_Gym",
+    "SerosVillage_DayCareCenter",
+    "SerosVillage_CoultersHouse_1F",
+    "SerosVillage_CoultersHouse_2F",
+    "SerosVillage_House"
   ],
   "gMapGroup0": [
     "PetalburgCity",

@@ -4710,6 +4710,56 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/ArchanHills/border.bin",
       "blockdata_filepath": "data/layouts/ArchanHills/map.bin"
+    },
+    {
+      "id": "LAYOUT_SEROS_VILLAGE_COULTERS_HOUSE_1F",
+      "name": "SerosVillage_CoultersHouse_1F_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/SerosVillage_CoultersHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/SerosVillage_CoultersHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SEROS_VILLAGE_COULTERS_HOUSE_2F",
+      "name": "SerosVillage_CoultersHouse_2F_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/SerosVillage_CoultersHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/SerosVillage_CoultersHouse_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SEROS_VILLAGE_DAY_CARE_CENTER",
+      "name": "SerosVillage_DayCareCenter_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/SerosVillage_DayCareCenter/border.bin",
+      "blockdata_filepath": "data/layouts/SerosVillage_DayCareCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_SEROS_VILLAGE_HOUSE",
+      "name": "SerosVillage_House_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/SerosVillage_House/border.bin",
+      "blockdata_filepath": "data/layouts/SerosVillage_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_SEROS_VILLAGE_GYM",
+      "name": "SerosVillage_Gym_Layout",
+      "width": 64,
+      "height": 56,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_RustboroGym",
+      "border_filepath": "data/layouts/SerosVillage_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/SerosVillage_Gym/map.bin"
     }
   ]
 }
