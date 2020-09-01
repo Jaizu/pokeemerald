@@ -2,7 +2,7 @@
   "id": "MAP_SEROS_VILLAGE_DAY_CARE_CENTER",
   "name": "SerosVillage_DayCareCenter",
   "layout": "LAYOUT_SEROS_VILLAGE_DAY_CARE_CENTER",
-  "music": "MUS_AJITO",
+  "music": "MUS_GOTOWN",
   "region_map_section": "MAPSEC_DEWFORD_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

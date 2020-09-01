@@ -176,8 +176,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 37,
-      "y": 34,
+      "x": 12,
+      "y": 25,
       "elevation": 3,
       "item": "ITEM_RARE_BONE",
       "flag": "FLAG_HIDDEN_ITEM_ARCHAN_TUNNEL_RARE_BONE"
