@@ -1,7 +1,131 @@
-.set LOCALID_DAYCARE_LADY, 1
+.set LOCALID_DAYCARE_WOMAN, 1
+.set LOCALID_DAYCARE_MAN, 2
+.set LOCALID_FERNANDO, 3
 
 SerosVillage_DayCareCenter_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SerosVillage_DayCareCenter_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SerosVillage_DayCareCenter_OnFrame
 	.byte 0
+
+SerosVillage_DayCareCenter_OnTransition:
+	compare VAR_DAY_CARE_CENTER_STATE, 1
+	call_if_eq SerosVillage_DayCareCenter_MoveDayCareWoman
+	end
+
+SerosVillage_DayCareCenter_MoveDayCareWoman:
+	setobjectxyperm LOCALID_DAYCARE_WOMAN, 8, 3
+	setobjectmovementtype LOCALID_DAYCARE_WOMAN, MOVEMENT_TYPE_FACE_LEFT
+	return
+
+SerosVillage_DayCareCenter_OnFrame:
+	map_script_2 VAR_DAY_CARE_CENTER_STATE, 1, SerosVillage_DayCareCenter_GiveHM01Scene
+	.2byte 0
+
+SerosVillage_DayCareCenter_GiveHM01Scene:
+	lockall
+	setflag FLAG_FERNANDO_RESCUED
+	msgbox SerosVillage_DayCareCenter_Text_ThankYou, MSGBOX_DEFAULT
+	giveitem ITEM_HM01
+	setflag FLAG_RECEIVED_HM01
+	msgbox SerosVillage_DayCareCenter_Text_ThatHMContainsCut, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_DAYCARE_WOMAN, Common_Movement_WalkInPlaceFastestLeft
+	waitmovement 0
+	delay 10
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestRight
+	waitmovement 0
+	msgbox SerosVillage_DayCareCenter_Text_IWantToThankYou, MSGBOX_DEFAULT
+	applymovement LOCALID_FERNANDO, Common_Movement_WalkInPlaceFastestUp
+	waitmovement 0
+	delay 10
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestDown
+	waitmovement 0
+	msgbox SerosVillage_DayCareCenter_Text_GrandmaImNotLikeThatAnymore, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_FERNANDO, SerosVillage_DayCareCenter_Movement_ExitFernando
+	waitmovement 0
+	playse SE_KAIDAN
+	waitse
+	removeobject LOCALID_FERNANDO
+	clearflag FLAG_HIDE_SEROS_GYM_FERNANDO
+	delay 10
+	msgbox SerosVillage_DayCareCenter_Text_IAlsoNeedToGetBackToWork, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_DAYCARE_MAN, SerosVillage_DayCareCenter_Movement_ExitDayCareMan
+	waitmovement 0
+	playse SE_KAIDAN
+	waitse
+	removeobject LOCALID_DAYCARE_MAN
+	fadescreen FADE_TO_BLACK
+	setobjectxy LOCALID_DAYCARE_WOMAN, 1, 3
+	setobjectxyperm LOCALID_DAYCARE_WOMAN, 1, 3
+	setobjectmovementtype LOCALID_DAYCARE_WOMAN, MOVEMENT_TYPE_FACE_DOWN
+	turnobject LOCALID_DAYCARE_WOMAN, DIR_SOUTH
+	fadescreen FADE_FROM_BLACK
+	setvar VAR_DAY_CARE_CENTER_STATE, 2
+	releaseall
+	end
+
+SerosVillage_DayCareCenter_Text_ThankYou:
+	.string "Day-Care Man: {COLOR BLUE}Thank you for\n"
+	.string "bringing my grandson back.\p"
+	.string "We were so worried about him!\p"
+	.string "Especially because he had no\n"
+	.string "Pokémon.\p"
+	.string "Anyway, I would like to give you\n"
+	.string "this, as a token of my appreciation.$"
+
+SerosVillage_DayCareCenter_Text_ThatHMContainsCut:
+	.string "Day-Care Man: {COLOR BLUE}That's HM01.\n"
+	.string "It contains the move Cut.\p"
+	.string "I am sure a Trainer like you will\n"
+	.string "find it very useful!$"
+
+SerosVillage_DayCareCenter_Text_IWantToThankYou:
+	.string "Day-Care Lady: {COLOR RED}I want to thank\n"
+	.string "you for knocking some sense into\l"
+	.string "my grandson.\p"
+	.string "He's a… sensitive one.$"
+
+SerosVillage_DayCareCenter_Text_GrandmaImNotLikeThatAnymore:
+	.string "Fernando: {COLOR BLUE}Grandma!\n"
+	.string "I'm not like that anymore.\p"
+	.string "From now on I'm going to be like\n"
+	.string "{PLAYER}.\p"
+	.string "I'm going to be a cool, silent\n"
+	.string "Trainer!\p"
+	.string "Now!\n"
+	.string "I've got a Gym to go run.$"
+
+SerosVillage_DayCareCenter_Text_IAlsoNeedToGetBackToWork:
+	.string "Day-Care Man: {COLOR BLUE}I also need to get\n"
+	.string "back to work.\p"
+	.string "Thanks again, {PLAYER}, and feel\n"
+	.string "free to leave your Pokémon here if\l"
+	.string "they ever need a rest!$"
+
+SerosVillage_DayCareCenter_Movement_ExitFernando:
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_in_place_fastest_down
+	set_invisible
+	step_end
+
+SerosVillage_DayCareCenter_Movement_ExitDayCareMan:
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_in_place_fastest_down
+	set_invisible
+	step_end
 
 SerosVillage_DayCareCenter_EventScript_DaycareWoman:: @ 8291D11
 	lock
@@ -149,7 +273,7 @@ SerosVillage_DayCareCenter_EventScript_CheckEnoughMoney:: @ 8291EC8
 	end
 
 SerosVillage_DayCareCenter_EventScript_RetrieveMon:: @ 8291EE2
-	applymovement LOCALID_DAYCARE_LADY, SerosVillage_DayCareCenter_Movement_RetrieveDaycareMon
+	applymovement LOCALID_DAYCARE_WOMAN, SerosVillage_DayCareCenter_Movement_RetrieveDaycareMon
 	waitmovement 0
 	specialvar VAR_RESULT, TakePokemonFromDaycare
 	special SubtractMoneyFromVar0x8005
@@ -223,7 +347,8 @@ SerosVillage_DayCareCenter_Text_PleaseHelpFernando:
 	.string "Please, you must help him!$"
 
 SerosVillage_DayCareCenter_Text_WouldYouLikeUsToRaiseAMon: @ 82922F4
-	.string "I'm the Day-Care Lady.\p"
+	.string "Oh, {PLAYER}!\n"
+	.string "How are you?\p"
 	.string "We can raise Pokémon for you.\p"
 	.string "Would you like us to raise one?$"
 
@@ -259,7 +384,7 @@ SerosVillage_DayCareCenter_Text_ComeAgain: @ 8292476
 	.string "Come again.$"
 
 SerosVillage_DayCareCenter_Text_GoodToSeeYou: @ 8292488
-	.string "Ah, it's you! Good to see you.\n"
+	.string "Ah, {PLAYER}!\n"
 	.string "Your Pokémon can only be doing good!$"
 
 SerosVillage_DayCareCenter_Text_YourMonHasGrownXLevels: @ 82924CC

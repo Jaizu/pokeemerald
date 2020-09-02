@@ -277,7 +277,7 @@ SerosVillage_Text_SoManyColorfulFlabebe:
 SerosVillage_EventScript_DaycareMan:: @ 8291C18
 	lock
 	faceplayer
-	call_if_set FLAG_FERNANDO_STORMED_OFF, SerosVillage_EventScript_CheckIfFernandoIsBack
+	goto_if_unset FLAG_FERNANDO_RESCUED, SerosVillage_EventScript_CheckIfFernandoIsBack
 	special GetDaycareMonNicknames
 	specialvar VAR_RESULT, GetDaycareState
 	compare VAR_RESULT, DAYCARE_EGG_WAITING
@@ -291,8 +291,10 @@ SerosVillage_EventScript_DaycareMan:: @ 8291C18
 	end
 
 SerosVillage_EventScript_CheckIfFernandoIsBack:
-	goto_if_unset FLAG_FERNANDO_RESCUED, SerosVillage_EventScript_PleaseHelpFernando
-	return
+	goto_if_set FLAG_FERNANDO_STORMED_OFF, SerosVillage_EventScript_PleaseHelpFernando
+	msgbox SerosVillage_Text_WeAreAtFullCapacity, MSGBOX_DEFAULT
+	release
+	end
 
 SerosVillage_EventScript_PleaseHelpFernando:
 	msgbox SerosVillage_Text_PleaseHelpFernando, MSGBOX_DEFAULT
@@ -363,6 +365,17 @@ SerosVillage_EventScript_CheckOnTwoMons::
 	release
 	end
 
+SerosVillage_Text_WeAreAtFullCapacity:
+	.string "I'm the Day-Care Man.\p"
+	.string "I help take care of the precious\n"
+	.string "Pokémon of Trainers.\p"
+	.string "Unfortunately, we are at full\n"
+	.string "capacity right now.\p"
+	.string "Why not challenge the Gym, if\n"
+	.string "you're looking to train?\p"
+	.string "My grandson, Fernando, is the\n"
+	.string "Gym Leader.$"
+
 SerosVillage_Text_PleaseHelpFernando:
 	.string "Wisp Forest is to the west of the\n"
 	.string "village.\p"
@@ -371,14 +384,12 @@ SerosVillage_Text_PleaseHelpFernando:
 	.string "Thank you, Trainer!$"
 
 SerosVillage_Text_SeeWifeIfYoudLikeMeToRaiseMon:
-	.string "I'm the Day-Care Man.\p"
-	.string "I help take care of the precious\n"
-	.string "Pokémon of Trainers.\p"
+	.string "Ah, {PLAYER}!\p"
 	.string "If you'd like me to raise your Pokémon,\n"
 	.string "have a word with my wife.$"
 
 SerosVillage_Text_DoYouWantEgg:
-	.string "Ah, it's you!\p"
+	.string "Ah, {PLAYER}!\p"
 	.string "We were raising your Pokémon,\n"
 	.string "and my goodness, were we surprised!\p"
 	.string "Your Pokémon had an Egg!\p"
@@ -387,7 +398,7 @@ SerosVillage_Text_DoYouWantEgg:
 	.string "You do want it, yes?$"
 
 SerosVillage_Text_YourMonIsDoingFine: @ 8292114
-	.string "Ah, it's you! Good to see you.\n"
+	.string "Ah, {PLAYER}!\n"
 	.string "Your {STR_VAR_1}'s doing fine.$"
 
 SerosVillage_Text_IllKeepIt: @ 8292149
@@ -413,7 +424,8 @@ SerosVillage_Text_FriendlyWithOtherTrainersMon: @ 82921E5
 	.string "a piece of Mail.$"
 
 SerosVillage_Text_YourMonsAreDoingFine: @ 8292299
-	.string "Ah, it's you! Your {STR_VAR_1} and\n"
+	.string "Ah, hello {PLAYER}!\p"
+	.string "Your {STR_VAR_1} and\n"
 	.string "{STR_VAR_2} are doing fine.$"
 
 SerosVillage_Text_IWillKeepDoYouWantIt: @ 82922C6

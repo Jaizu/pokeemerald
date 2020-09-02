@@ -36,14 +36,17 @@ WispForest_EventScript_FernandoRescueScene::
 	call_if_eq WispForest_EventScript_PanCameraToPlayerFernandoWalkToPlayer1
 	msgbox WispForest_Text_ImSorry, MSGBOX_DEFAULT
 	setflag FLAG_BADGE01_GET
+	setflag FLAG_DEFEATED_SEROS_GYM
 	message WispForest_Text_ReceivedMysticBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
 	applymovement LOCALID_FERNANDO, Common_Movement_WalkInPlaceFastestLeft
 	waitmovement 0
 	msgbox WispForest_Text_QuickLetsGetOutOfHere, MSGBOX_DEFAULT
-	setflag FLAG_HIDE_WISP_FOREST_FERNANDO
+	clearflag FLAG_HIDE_DAY_CARE_CENTER_DAY_CARE_MAN
+	clearflag FLAG_HIDE_DAY_CARE_CENTER_FERNANDO
 	setvar VAR_DAY_CARE_CENTER_STATE, 1
+	setflag FLAG_HIDE_WISP_FOREST_FERNANDO
 	setvar VAR_WISP_FOREST_STATE, 1
 	warp MAP_SEROS_VILLAGE_DAY_CARE_CENTER, -1, 7, 3
 	waitstate

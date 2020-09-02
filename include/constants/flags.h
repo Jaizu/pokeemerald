@@ -821,9 +821,11 @@
 #define FLAG_HIDE_PETALBURG_CITY_WALLYS_AUNT                        0x2D8
 #define FLAG_HIDE_SEROS_GYM_FERNANDO                                0x2D8 // FLAG_HIDE_PETALBURG_CITY_WALLYS_AUNT in Emerald
 #define FLAG_HIDE_WISP_FOREST_FERNANDO                              0x2D9 // FLAG_UNUSED_0x2D9 in Emerald
-
 #define FLAG_HIDE_LILYCOVE_FAN_CLUB_INTERVIEWER                     0x2DA
+#define FLAG_HIDE_DAY_CARE_CENTER_DAY_CARE_MAN                      0x2DA // FLAG_HIDE_LILYCOVE_FAN_CLUB_INTERVIEWER in Emerald
 #define FLAG_HIDE_RUSTBORO_CITY_AQUA_GRUNT                          0x2DB
+#define FLAG_HIDE_DAY_CARE_CENTER_FERNANDO                          0x2DB // FLAG_HIDE_RUSTBORO_CITY_AQUA_GRUNT in Emerald
+
 #define FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1                    0x2DC
 #define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_KYOGRE_2                   0x2DD
 #define FLAG_HIDE_PLAYERS_HOUSE_DAD                                 0x2DE

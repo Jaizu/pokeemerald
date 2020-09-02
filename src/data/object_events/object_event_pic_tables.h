@@ -1227,16 +1227,16 @@ const struct SpriteFrameImage gObjectEventPicTable_Drake[] = {
     overworld_frame(gObjectEventPic_Drake, 2, 4, 2),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_Roxanne[] = {
-    overworld_frame(gObjectEventPic_Roxanne, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Roxanne, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Roxanne, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Roxanne, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Roxanne, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Roxanne, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Roxanne, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Roxanne, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Roxanne, 2, 4, 2),
+const struct SpriteFrameImage gObjectEventPicTable_Fernando[] = {
+    overworld_frame(gObjectEventPic_Fernando, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Fernando, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Fernando, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Fernando, 2, 4, 3),
+    overworld_frame(gObjectEventPic_Fernando, 2, 4, 4),
+    overworld_frame(gObjectEventPic_Fernando, 2, 4, 5),
+    overworld_frame(gObjectEventPic_Fernando, 2, 4, 6),
+    overworld_frame(gObjectEventPic_Fernando, 2, 4, 7),
+    overworld_frame(gObjectEventPic_Fernando, 2, 4, 8),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Brawly[] = {

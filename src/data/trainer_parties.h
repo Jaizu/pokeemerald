@@ -219,11 +219,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Shiro[] = {
     {
     .iv = 0,
     .lvl = 8,
-    .species = SPECIES_LITLEO,
-    },
-    {
-    .iv = 0,
-    .lvl = 8,
     .species = SPECIES_BUDEW,
     }
 };
@@ -231,17 +226,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Shiro[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Cadence[] = {
     {
     .iv = 0,
-    .lvl = 9,
+    .lvl = 7,
     .species = SPECIES_PUMPKABOO,
     },
     {
     .iv = 0,
-    .lvl = 9,
+    .lvl = 7,
     .species = SPECIES_SHUPPET,
     },
     {
     .iv = 0,
-    .lvl = 10,
+    .lvl = 8,
     .species = SPECIES_MURKROW,
     }
 };

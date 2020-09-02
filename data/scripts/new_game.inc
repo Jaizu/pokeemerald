@@ -90,5 +90,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_ARCHAN_TOWN_COULTER
 	setflag FLAG_HIDE_HOUSE_STINGA_BOY
 	setflag FLAG_HIDE_HOUSE_STINGA
+	setflag FLAG_HIDE_DAY_CARE_CENTER_DAY_CARE_MAN
+	setflag FLAG_HIDE_DAY_CARE_CENTER_FERNANDO
 	call EventScript_ResetAllBerries
 	end

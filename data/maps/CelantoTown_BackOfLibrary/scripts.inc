@@ -192,13 +192,11 @@ CelantoTown_BackOfLibrary_EventScript_PokemonSelection:
 	call_if_eq CelantoTown_BackOfLibrary_EventScript_RedwoodPicksUpChimcharBall
 	msgbox CelantoTown_BackOfLibrary_Text_CongratulationsMeetMeArchanTown, MSGBOX_DEFAULT
 	closemessage
-	playbgm MUS_RG_OHKIDO, 0
 	applymovement LOCALID_REDWOOD, CelantoTown_BackOfLibrary_Movement_RedwoodExit
 	waitmovement 0
 	playse SE_KAIDAN
 	waitse
 	removeobject LOCALID_REDWOOD
-	fadedefaultbgm
 	delay 10
 	compare VAR_0x8008, SPECIES_PIPLUP
 	call_if_eq CelantoTown_BackOfLibrary_EventScript_CoulterFacesRight

@@ -117,7 +117,7 @@ SerosVillage_Gym_Text_HanaPostBattle:
 
 SerosVillage_Gym_EventScript_Fernando::
 	trainerbattle_single TRAINER_LEADER_FERNANDO_1, SerosVillage_Gym_Text_FernandoIntro, SerosVillage_Gym_Text_FernandoDefeat, SerosVillage_Gym_EventScript_FernandoFlees, NO_MUSIC
-	// goto_if_unset FLAG_RECEIVED_TM03, SerosVillage_Gym_EventScript_GiveDisarmingVoice2
+	goto_if_unset FLAG_RECEIVED_TM03, SerosVillage_Gym_EventScript_GiveDisarmingVoice
 	msgbox SerosVillage_Gym_Text_FernandoPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -143,6 +143,14 @@ SerosVillage_Gym_EventScript_FernandoWalkRight:
 	waitmovement 0
 	return
 
+SerosVillage_Gym_EventScript_GiveDisarmingVoice:
+	msgbox SerosVillage_Gym_Text_ThankYouAgain, MSGBOX_DEFAULT
+	giveitem ITEM_TM03
+	setflag FLAG_RECEIVED_TM03
+	msgbox SerosVillage_Gym_Text_ThatsDisarmingVoice, MSGBOX_DEFAULT
+	release
+	end
+
 SerosVillage_Gym_Text_FernandoIntro:
 	.string "{COLOR DARK_GREY}Fernando: {COLOR BLUE}Ahem…\p"
 	.string "H-hello.\n"
@@ -167,10 +175,29 @@ SerosVillage_Gym_Text_FernandoRefuses:
 	.string "You can't make me!$"
 
 SerosVillage_Gym_Text_FernandoPostBattle:
+	.string "{COLOR DARK_GREY}Fernando: {COLOR BLUE}I bet you want to get the\n"
+	.string "next Gym Badge now, right?\p"
+	.string "I think the next Gym is in\n"
+	.string "{COLOR GREEN}Nestpine Town{COLOR BLUE}.\p"
+	.string "Aria is the Gym Leader!\n"
+	.string "She uses Flying-types.\p"
+	.string "But, don't worry, she isn't a\n"
+	.string "crybaby like I am!$"
+
+SerosVillage_Gym_Text_ThankYouAgain:
+	.string "{COLOR DARK_GREY}Fernando: {COLOR BLUE}{PLAYER}!\p"
 	.string "Thanks again for saving me from\n"
-	.string "that spooky Forest!\p"
+	.string "Wisp Forest…\p"
 	.string "I'm sorry for not being nice when\n"
-	.string "you beat me.$"
+	.string "you beat me, so…\p"
+	.string "I want you to take this.\n"
+	.string "It's TM03!$"
+
+SerosVillage_Gym_Text_ThatsDisarmingVoice:
+	.string "{COLOR DARK_GREY}Fernando: {COLOR BLUE}TM03 contains\n"
+	.string "{COLOR GREEN}Disarming Voice{COLOR BLUE}.\p"
+	.string "Pokémon who use it let out a cry.\n"
+	.string "Fitting for me, right?$"
 
 SerosVillage_Gym_Movement_ExitFernando:
 	walk_up

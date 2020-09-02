@@ -36,11 +36,9 @@ ArchanTown_EventScript_TabletScene:
 	fadedefaultbgm
 	msgbox ArchanTown_Text_AncientTabletExplanation, MSGBOX_DEFAULT
 	closemessage
-	playbgm MUS_RG_OHKIDO, 0
 	applymovement LOCALID_REDWOOD, ArchanTown_Movement_RedwoodExit
 	waitmovement 0
 	removeobject LOCALID_REDWOOD
-	fadedefaultbgm
 	delay 10
 	applymovement LOCALID_COULTER, Common_Movement_WalkInPlaceFastestRight
 	waitmovement 0
