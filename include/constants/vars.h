@@ -162,7 +162,9 @@
 #define VAR_PETALBURG_GYM_STATE              0x4085
 #define VAR_ARCHAN_TUNNEL_STATE              0x4085 // VAR_PETALBURG_GYM_STATE in Emerald
 #define VAR_CONTEST_HALL_STATE               0x4086
+#define VAR_WISP_FOREST_STATE                0x4086 // VAR_CONTEST_HALL_STATE in Emerald
 #define VAR_CABLE_CLUB_STATE                 0x4087
+#define VAR_DAY_CARE_CENTER_STATE            0x4087 // VAR_CABLE_CLUB_STATE in Emerald
 #define VAR_CONTEST_TYPE                     0x4088
 #define VAR_SECRET_BASE_INITIALIZED          0x4089
 #define VAR_CONTEST_PRIZE_PICKUP             0x408A

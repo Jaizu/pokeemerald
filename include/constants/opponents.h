@@ -39,8 +39,11 @@
 #define TRAINER_GRUNT_WEATHER_INST_1         17
 #define TRAINER_HANA                         17 // TRAINER_GRUNT_WEATHER_INST_1 in Emerald
 #define TRAINER_GRUNT_WEATHER_INST_2         18
+#define TRAINER_DMITRI                       18 // TRAINER_GRUNT_WEATHER_INST_2 in Emerald
 #define TRAINER_GRUNT_WEATHER_INST_3         19
+#define TRAINER_SHIRO                        19 // TRAINER_GRUNT_WEATHER_INST_3 in Emerald
 #define TRAINER_GRUNT_MUSEUM_1               20
+#define TRAINER_CADENCE                      20 // TRAINER_GRUNT_MUSEUM_1 in Emerald
 #define TRAINER_GRUNT_MUSEUM_2               21
 #define TRAINER_GRUNT_SPACE_CENTER_1         22
 #define TRAINER_GRUNT_MT_PYRE_1              23

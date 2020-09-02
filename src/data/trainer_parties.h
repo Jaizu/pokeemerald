@@ -200,42 +200,49 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Hana[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst2[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_Dmitri[] = {
     {
     .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 9,
+    .species = SPECIES_WEEDLE,
+    .moves = {MOVE_POISON_STING, MOVE_STRING_SHOT, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_CARVANHA,
+    .lvl = 9,
+    .species = SPECIES_KAKUNA,
+    .moves = {MOVE_POISON_STING, MOVE_HARDEN, MOVE_NONE, MOVE_NONE}
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst3[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Shiro[] = {
     {
     .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 8,
+    .species = SPECIES_LITLEO,
     },
     {
     .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_ZUBAT,
-    },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_CARVANHA,
+    .lvl = 8,
+    .species = SPECIES_BUDEW,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntMuseum1[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Cadence[] = {
     {
     .iv = 0,
-    .lvl = 15,
-    .species = SPECIES_CARVANHA,
+    .lvl = 9,
+    .species = SPECIES_PUMPKABOO,
+    },
+    {
+    .iv = 0,
+    .lvl = 9,
+    .species = SPECIES_SHUPPET,
+    },
+    {
+    .iv = 0,
+    .lvl = 10,
+    .species = SPECIES_MURKROW,
     }
 };
 
