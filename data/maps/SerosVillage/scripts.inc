@@ -431,3 +431,87 @@ SerosVillage_Text_YourMonsAreDoingFine: @ 8292299
 SerosVillage_Text_IWillKeepDoYouWantIt: @ 82922C6
 	.string "I really will keep it.\n"
 	.string "You do want this, yes?$"
+
+SerosVillage_EventScript_SecondTunnelDiscoveryTrigger0::
+	lockall
+	setvar VAR_0x8008, 0
+	goto SerosVillage_EventScript_SecondTunnelDiscoveryScene
+	end
+
+SerosVillage_EventScript_SecondTunnelDiscoveryTrigger1::
+	lockall
+	setvar VAR_0x8008, 1
+	goto SerosVillage_EventScript_SecondTunnelDiscoveryScene
+	end
+
+SerosVillage_EventScript_SecondTunnelDiscoveryScene::
+	lock
+	addobject LOCALID_REDWOOD
+	setobjectxy LOCALID_REDWOOD, 24, 10
+	msgbox SerosVillage_Text_Player, MSGBOX_DEFAULT
+	closemessage
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	delay 5
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestDown
+	compare VAR_0x8008, 0
+	call_if_eq SerosVillage_EventScript_EnterRedwood0
+	compare VAR_0x8008, 1
+	call_if_eq SerosVillage_EventScript_EnterRedwood1
+	waitmovement 0
+	msgbox SerosVillage_Text_IWasLookingForYou, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_SEROS_VILLAGE_STATE, 4
+	warp MAP_ARCHAN_TUNNEL_TANGROWTH_TABLET_ROOM, 0, 0, 0
+	waitstate
+	release
+	end
+
+SerosVillage_EventScript_EnterRedwood0:
+	applymovement LOCALID_REDWOOD, SerosVillage_Movement_EnterRedwood0
+	return
+
+SerosVillage_EventScript_EnterRedwood1:
+	applymovement LOCALID_REDWOOD, SerosVillage_Movement_EnterRedwood1
+	return
+
+SerosVillage_Text_Player:
+	.string "{COLOR BLUE}{PLAYER}!$"
+
+SerosVillage_Text_IWasLookingForYou:
+	.string "Redwood: {COLOR BLUE}There you are!\n"
+	.string "I was looking for you.\p"
+	.string "I heard that you had quite an\n"
+	.string "adventure with Fernando.\p"
+	.string "I wanted to congratulate you\n"
+	.string "on beating your first Gym!\p"
+	.string "And, magnificent, I see you\n"
+	.string "found that second entrance!\p"
+	.string "I will go fetch {RIVAL}.$"
+
+SerosVillage_Movement_EnterRedwood0:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_left
+	walk_up
+	step_end
+
+SerosVillage_Movement_EnterRedwood1:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	step_end

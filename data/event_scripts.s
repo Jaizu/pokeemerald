@@ -1135,3 +1135,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/SerosVillage_Gym/scripts.inc"
 
 	.include "data/maps/WispForest/scripts.inc"
+
+	.include "data/maps/ArchanTunnel_TangrowthTabletRoom/scripts.inc"

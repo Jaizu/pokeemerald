@@ -17,16 +17,17 @@
 #define MAP_AEROUS_ROAD    (8 | (0 << 8))
 
 // Map Group 1
-#define MAP_ARCHAN_TUNNEL_1F_1R                (0 | (1 << 8))
-#define MAP_ARCHAN_TUNNEL_1F_2R                (1 | (1 << 8))
-#define MAP_ARCHAN_TUNNEL_1F_3R                (2 | (1 << 8))
-#define MAP_ARCHAN_TUNNEL_B1F_1R               (3 | (1 << 8))
-#define MAP_ARCHAN_TUNNEL_B1F_1R_OVARR_BLOCKED (4 | (1 << 8))
-#define MAP_ARCHAN_TUNNEL_B1F_2R               (5 | (1 << 8))
-#define MAP_ARCHAN_TUNNEL_B2F_1R               (6 | (1 << 8))
-#define MAP_ARCHAN_TUNNEL_B2F_2R               (7 | (1 << 8))
-#define MAP_ARCHAN_TUNNEL_SECRET_TEMPLE        (8 | (1 << 8))
-#define MAP_WISP_FOREST                        (9 | (1 << 8))
+#define MAP_ARCHAN_TUNNEL_1F_1R                 (0 | (1 << 8))
+#define MAP_ARCHAN_TUNNEL_1F_2R                 (1 | (1 << 8))
+#define MAP_ARCHAN_TUNNEL_1F_3R                 (2 | (1 << 8))
+#define MAP_ARCHAN_TUNNEL_TANGROWTH_TABLET_ROOM (3 | (1 << 8))
+#define MAP_ARCHAN_TUNNEL_B1F_1R                (4 | (1 << 8))
+#define MAP_ARCHAN_TUNNEL_B1F_1R_OVARR_BLOCKED  (5 | (1 << 8))
+#define MAP_ARCHAN_TUNNEL_B1F_2R                (6 | (1 << 8))
+#define MAP_ARCHAN_TUNNEL_B2F_1R                (7 | (1 << 8))
+#define MAP_ARCHAN_TUNNEL_B2F_2R                (8 | (1 << 8))
+#define MAP_ARCHAN_TUNNEL_SECRET_TEMPLE         (9 | (1 << 8))
+#define MAP_WISP_FOREST                         (10 | (1 << 8))
 
 // Map Group 2
 #define MAP_CELANTO_TOWN_PLAYERS_HOUSE_1F (0 | (2 << 8))

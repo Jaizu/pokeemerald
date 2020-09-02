@@ -4770,6 +4770,16 @@
       "secondary_tileset": "gTileset_WispForest",
       "border_filepath": "data/layouts/WispForest/border.bin",
       "blockdata_filepath": "data/layouts/WispForest/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARCHAN_TUNNEL_TANGROWTH_TABLET_ROOM",
+      "name": "ArchanTunnel_TangrowthTabletRoom_Layout",
+      "width": 24,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_ArchanTunnel",
+      "border_filepath": "data/layouts/ArchanTunnel_TangrowthTabletRoom/border.bin",
+      "blockdata_filepath": "data/layouts/ArchanTunnel_TangrowthTabletRoom/map.bin"
     }
   ]
 }

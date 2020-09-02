@@ -355,14 +355,18 @@ static void SetCutGrassMetatile(s16 x, s16 y)
 
     switch (metatileId)
     {
+    case METATILE_Petalburg_BlueFlower_Encounters:
+    case METATILE_Petalburg_RedFlower_Encounters:
     case METATILE_Fortree_LongGrass_Root:
     case METATILE_General_LongGrass:
     case METATILE_General_TallGrass:
         MapGridSetMetatileIdAt(x, y, METATILE_General_Grass);
         break;
+    case METATILE_Petalburg_LeftTreeTopBlueFlower_Encounters:
     case METATILE_General_TallGrass_TreeLeft:
         MapGridSetMetatileIdAt(x, y, METATILE_General_Grass_TreeLeft);
         break;
+    case METATILE_Petalburg_RightTreeTopBlueFlower_Encounters:
     case METATILE_General_TallGrass_TreeRight:
         MapGridSetMetatileIdAt(x, y, METATILE_General_Grass_TreeRight);
         break;
@@ -385,6 +389,30 @@ static void SetCutGrassMetatile(s16 x, s16 y)
         break;
     case METATILE_General_TallGrass_TreeUp:
         MapGridSetMetatileIdAt(x, y, METATILE_General_Grass_TreeUp);
+        break;
+    case METATILE_WispForest_TallGrass_WispTreeTopLeft:
+        MapGridSetMetatileIdAt(x, y, METATILE_WispForest_Grass_WispTreeTopLeft);
+        break;
+    case METATILE_WispForest_TallGrass_WispTreeTopRight:
+        MapGridSetMetatileIdAt(x, y, METATILE_WispForest_Grass_WispTreeTopRight);
+        break;
+    case METATILE_WispForest_TallGrass_WispTreeTopLeftWithCorner:
+        MapGridSetMetatileIdAt(x, y, METATILE_WispForest_Grass_WispTreeTopLeftWithCorner);
+        break;
+    case METATILE_WispForest_TallGrass_WispTreeTopRightWithCorner:
+        MapGridSetMetatileIdAt(x, y, METATILE_WispForest_Grass_WispTreeTopRightWithCorner);
+        break;
+    case METATILE_WispForest_TallGrass_WispTreeMiddleLeft:
+        MapGridSetMetatileIdAt(x, y, METATILE_WispForest_Grass_WispTreeMiddleLeft);
+        break;
+    case METATILE_WispForest_TallGrass_WispTreeMiddleRight:
+        MapGridSetMetatileIdAt(x, y, METATILE_WispForest_Grass_WispTreeMiddleRight);
+        break;
+    case METATILE_WispForest_TallGrass_WispTreeBottomLeft:
+        MapGridSetMetatileIdAt(x, y, METATILE_WispForest_Grass_WispTreeBottomLeft);
+        break;
+    case METATILE_WispForest_TallGrass_WispTreeBottomRight:
+        MapGridSetMetatileIdAt(x, y, METATILE_WispForest_Grass_WispTreeBottomRight);
         break;
     }
 }
