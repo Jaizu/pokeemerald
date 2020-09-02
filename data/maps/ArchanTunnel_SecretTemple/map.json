@@ -1,7 +1,7 @@
 {
   "id": "MAP_ARCHAN_TUNNEL_SECRET_TEMPLE",
   "name": "ArchanTunnel_SecretTemple",
-  "layout": "LAYOUT_ARCHAN_TUNNEL_SECRET_TEMPLE",
+  "layout": "LAYOUT_SECRET_TEMPLE",
   "music": "MUS_SHINKA",
   "region_map_section": "MAPSEC_GRANITE_CAVE",
   "requires_flash": false,

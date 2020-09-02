@@ -102,8 +102,6 @@ EWRAM_DATA static u8 *sTrainerBBattleScriptRetAddr = NULL;
 EWRAM_DATA static bool8 sShouldCheckTrainerBScript = FALSE;
 EWRAM_DATA static u8 sNoOfPossibleTrainerRetScripts = 0;
 
-extern u16 *const gSpecialVars[];
-
 // const rom data
 
 // The first transition is used if the enemy pokemon are lower level than our pokemon.

@@ -4662,14 +4662,14 @@
       "blockdata_filepath": "data/layouts/ArchanTunnel_B2F_2R/map.bin"
     },
     {
-      "id": "LAYOUT_ARCHAN_TUNNEL_SECRET_TEMPLE",
-      "name": "ArchanTunnel_SecretTemple_Layout",
+      "id": "LAYOUT_SECRET_TEMPLE",
+      "name": "SecretTemple_Layout",
       "width": 13,
       "height": 16,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_HiddenGrottoSecretTemple",
-      "border_filepath": "data/layouts/ArchanTunnel_SecretTemple/border.bin",
-      "blockdata_filepath": "data/layouts/ArchanTunnel_SecretTemple/map.bin"
+      "border_filepath": "data/layouts/SecretTemple/border.bin",
+      "blockdata_filepath": "data/layouts/SecretTemple/map.bin"
     },
     {
       "id": "LAYOUT_SEROS_VILLAGE",
