@@ -3,6 +3,7 @@
   "group_order": [
     "gMapGroup_Outdoors",
     "gMapGroup_Dungeons",
+    "gMapGroup_HiddenGrottosSecretTemples",
     "gMapGroup_CelantoTown",
     "gMapGroup_ArchanTown",
     "gMapGroup_SerosVillage",
@@ -50,8 +51,7 @@
     "CelantoPath",
     "ArchanHills",
     "SerosPath",
-    "AerousRoad",
-    "CelantoPath_HiddenGrotto"
+    "AerousRoad"
   ],
   "gMapGroup_Dungeons": [
     "ArchanTunnel_1F_1R",
@@ -63,9 +63,12 @@
     "ArchanTunnel_B1F_2R",
     "ArchanTunnel_B2F_1R",
     "ArchanTunnel_B2F_2R",
-    "ArchanTunnel_SecretTemple",
-    "WispForest",
+    "WispForest"
+  ],
+  "gMapGroup_HiddenGrottosSecretTemples": [
+    "CelantoPath_HiddenGrotto",
     "ArchanTown_HiddenGrotto",
+    "ArchanTunnel_SecretTemple",
     "AerousRoad_HiddenGrotto"
   ],
   "gMapGroup_CelantoTown": [
