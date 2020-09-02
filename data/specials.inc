@@ -538,3 +538,4 @@ gSpecials:: @ 81DBA64
 	def_special DoRivalNamingScreen
 	def_special GetPartyPokemonBall
 	def_special SetPartyPokemonBall
+	def_special StartCustomMovesBattle

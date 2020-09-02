@@ -2,7 +2,7 @@
   "id": "MAP_ARCHAN_TUNNEL_TANGROWTH_TABLET_ROOM",
   "name": "ArchanTunnel_TangrowthTabletRoom",
   "layout": "LAYOUT_ARCHAN_TUNNEL_TANGROWTH_TABLET_ROOM",
-  "music": "MUS_AJITO",
+  "music": "MUS_DAN01",
   "region_map_section": "MAPSEC_GRANITE_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

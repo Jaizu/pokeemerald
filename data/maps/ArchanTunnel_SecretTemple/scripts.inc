@@ -1,2 +1,64 @@
 ArchanTunnel_SecretTemple_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, ArchanTunnel_SecretTemple_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, ArchanTunnel_SecretTemple_OnTransition
 	.byte 0
+
+ArchanTunnel_SecretTemple_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, ArchanTunnel_SecretTemple_TryRemoveClefairy
+	end
+
+ArchanTunnel_SecretTemple_TryRemoveClefairy:
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_ne Common_EventScript_NopReturn
+	removeobject VAR_LAST_TALKED
+	return
+
+ArchanTunnel_SecretTemple_OnTransition:
+	call_if_unset FLAG_DEFEATED_ARCHAN_TUNNEL_SECRET_TEMPLE_CLEFAIRY, ArchanTunnel_SecretTemple_EventScript_TryShowClefairy
+	end
+
+ArchanTunnel_SecretTemple_EventScript_TryShowClefairy:
+	goto_if_unset FLAG_CAUGHT_ARCHAN_TUNNEL_SECRET_TEMPLE_CLEFAIRY, ArchanTunnel_SecretTemple_EventScript_ShowClefairy
+	return
+ 
+ArchanTunnel_SecretTemple_EventScript_ShowClefairy:
+	clearflag FLAG_HIDE_ARCHAN_TUNNEL_SECRET_TEMPLE_CLEFAIRY
+	return
+
+ArchanTunnel_SecretTemple_EventScript_Clefairy::
+	lock
+	faceplayer
+	setwildbattle SPECIES_CLEFAIRY, 8, ITEM_NONE
+	waitse
+	playmoncry SPECIES_CLEFAIRY, 2
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	setvar VAR_0x8000, MOVE_METRONOME
+	setvar VAR_0x8001, MOVE_DISARMING_VOICE
+	setvar VAR_0x8002, MOVE_SWEET_KISS
+	setvar VAR_0x8003, MOVE_DOUBLE_SLAP
+	special StartCustomMovesBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq ArchanTunnel_SecretTemple_EventScript_DefeatedClefairy
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq ArchanTunnel_SecretTemple_EventScript_RanFromClefairy
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq ArchanTunnel_SecretTemple_EventScript_RanFromClefairy
+	setflag FLAG_CAUGHT_ARCHAN_TUNNEL_SECRET_TEMPLE_CLEFAIRY
+	release
+	end
+
+ArchanTunnel_SecretTemple_EventScript_DefeatedClefairy::
+	setflag FLAG_DEFEATED_ARCHAN_TUNNEL_SECRET_TEMPLE_CLEFAIRY
+	goto Common_EventScript_RemoveStaticPokemon
+	end
+
+ArchanTunnel_SecretTemple_EventScript_RanFromClefairy::
+	setvar VAR_0x8004, SPECIES_CLEFAIRY
+	goto Common_EventScript_PokemonFled
+	end

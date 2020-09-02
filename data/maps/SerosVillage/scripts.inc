@@ -454,13 +454,19 @@ SerosVillage_EventScript_SecondTunnelDiscoveryScene::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	delay 5
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestDown
+	playbgm MUS_RG_OHKIDO, 0
 	compare VAR_0x8008, 0
 	call_if_eq SerosVillage_EventScript_EnterRedwood0
 	compare VAR_0x8008, 1
 	call_if_eq SerosVillage_EventScript_EnterRedwood1
 	waitmovement 0
 	msgbox SerosVillage_Text_IWasLookingForYou, MSGBOX_DEFAULT
-	closemessage
+	playse SE_PIN
+	applymovement LOCALID_REDWOOD, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_REDWOOD, Common_Movement_Delay48
+	waitmovement 0
+	msgbox SerosVillage_Text_OhYouFoundTheSecondEntrance, MSGBOX_DEFAULT
 	setvar VAR_SEROS_VILLAGE_STATE, 4
 	warp MAP_ARCHAN_TUNNEL_TANGROWTH_TABLET_ROOM, 0, 0, 0
 	waitstate
@@ -485,9 +491,14 @@ SerosVillage_Text_IWasLookingForYou:
 	.string "adventure with Fernando.\p"
 	.string "I wanted to congratulate you\n"
 	.string "on beating your first Gym!\p"
-	.string "And, magnificent, I see you\n"
-	.string "found that second entrance!\p"
-	.string "I will go fetch {RIVAL}.$"
+	.string "It's an important step for--$"
+
+SerosVillage_Text_OhYouFoundTheSecondEntrance:
+	.string "Redwood: {COLOR BLUE}Oh!\n"
+	.string "You found the second entrance!\p"
+	.string "You continue to impress,\n"
+	.string "{PLAYER}!\p"
+	.string "I'll go fetch {RIVAL}.$"
 
 SerosVillage_Movement_EnterRedwood0:
 	walk_left

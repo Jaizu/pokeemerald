@@ -28,6 +28,7 @@ void BattleSetup_StartLatiBattle(void);
 void BattleSetup_StartLegendaryBattle(void);
 void StartGroudonKyogreBattle(void);
 void StartRegiBattle(void);
+void StartCustomMovesBattle(void);
 u8 BattleSetup_GetTerrainId(void);
 u8 GetWildBattleTransition(void);
 u8 GetTrainerBattleTransition(void);

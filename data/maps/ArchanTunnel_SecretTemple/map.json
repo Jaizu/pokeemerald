@@ -2,7 +2,7 @@
   "id": "MAP_ARCHAN_TUNNEL_SECRET_TEMPLE",
   "name": "ArchanTunnel_SecretTemple",
   "layout": "LAYOUT_ARCHAN_TUNNEL_SECRET_TEMPLE",
-  "music": "MUS_AJITO",
+  "music": "MUS_SHINKA",
   "region_map_section": "MAPSEC_GRANITE_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -19,13 +19,13 @@
       "x": 6,
       "y": 5,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "ArchanTunnel_SecretTemple_EventScript_Clefairy",
+      "flag": "FLAG_HIDE_ARCHAN_TUNNEL_SECRET_TEMPLE_CLEFAIRY"
     }
   ],
   "warp_events": [

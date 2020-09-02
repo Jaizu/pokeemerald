@@ -946,6 +946,9 @@ gText_Sudowoodo_Attacked:: @ 82731BD
 gText_LegendaryFlewAway:: @ 8273204
 	.string "The {STR_VAR_1} flew away!$"
 
+gText_PokemonFled::
+    .string "The {STR_VAR_1} fled!$"
+
 	.include "data/text/pc_transfer.inc"
 	.include "data/text/mevent.inc"
 	.include "data/text/abnormal_weather.inc"
@@ -993,6 +996,15 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	fadescreenswapbuffers FADE_FROM_BLACK
 	bufferspeciesname 0, VAR_0x8004
 	msgbox gText_LegendaryFlewAway, MSGBOX_DEFAULT
+	release
+	end
+
+Common_EventScript_PokemonFled::
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreenswapbuffers FADE_FROM_BLACK
+	bufferspeciesname 0, VAR_0x8004
+	msgbox gText_PokemonFled, MSGBOX_DEFAULT
 	release
 	end
 

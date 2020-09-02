@@ -102,6 +102,8 @@ EWRAM_DATA static u8 *sTrainerBBattleScriptRetAddr = NULL;
 EWRAM_DATA static bool8 sShouldCheckTrainerBScript = FALSE;
 EWRAM_DATA static u8 sNoOfPossibleTrainerRetScripts = 0;
 
+extern u16 *const gSpecialVars[];
+
 // const rom data
 
 // The first transition is used if the enemy pokemon are lower level than our pokemon.
@@ -595,6 +597,25 @@ void StartRegiBattle(void)
     }
     CreateBattleStartTask(transitionId, MUS_BATTLE36);
 
+    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
+    IncrementGameStat(GAME_STAT_WILD_BATTLES);
+    IncrementDailyWildBattles();
+    TryUpdateGymLeaderRematchFromWild();
+}
+
+void StartCustomMovesBattle(void)
+{
+    ScriptContext2_Enable();
+    gMain.savedCallback = CB2_EndScriptedWildBattle;
+    gBattleTypeFlags = 0;
+    
+    SetMonMoveSlot(&gEnemyParty[0], gSpecialVar_0x8000, 0);
+    SetMonMoveSlot(&gEnemyParty[0], gSpecialVar_0x8001, 1);
+    SetMonMoveSlot(&gEnemyParty[0], gSpecialVar_0x8002, 2);
+    SetMonMoveSlot(&gEnemyParty[0], gSpecialVar_0x8003, 3);
+
+    CreateBattleStartTask(GetWildBattleTransition(), 0);
+    
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
     IncrementDailyWildBattles();
