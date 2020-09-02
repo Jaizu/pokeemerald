@@ -29,7 +29,7 @@ ArchanTunnel_SecretTemple_EventScript_ShowClefairy:
 ArchanTunnel_SecretTemple_EventScript_Clefairy::
 	lock
 	faceplayer
-	setwildbattle SPECIES_CLEFAIRY, 8, ITEM_NONE
+	setwildbattle SPECIES_CLEFAIRY, 5, ITEM_NONE
 	waitse
 	playmoncry SPECIES_CLEFAIRY, 2
 	delay 40

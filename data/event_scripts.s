@@ -1149,3 +1149,9 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/WispForest/scripts.inc"
 
 	.include "data/maps/ArchanTunnel_TangrowthTabletRoom/scripts.inc"
+
+	.include "data/maps/ArchanTown_HiddenGrotto/scripts.inc"
+
+	.include "data/maps/AerousRoad_HiddenGrotto/scripts.inc"
+
+	.include "data/maps/CelantoPath_HiddenGrotto/scripts.inc"

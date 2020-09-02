@@ -1,0 +1,64 @@
+AerousRoad_HiddenGrotto_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, AerousRoad_HiddenGrotto_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, AerousRoad_HiddenGrotto_OnTransition
+	.byte 0
+
+AerousRoad_HiddenGrotto_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, AerousRoad_HiddenGrotto_TryRemoveVenonat
+	end
+
+AerousRoad_HiddenGrotto_TryRemoveVenonat:
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_ne Common_EventScript_NopReturn
+	removeobject VAR_LAST_TALKED
+	return
+
+AerousRoad_HiddenGrotto_OnTransition:
+	call_if_unset FLAG_DEFEATED_AEROUS_ROAD_HIDDEN_GROTTO_VENONAT, AerousRoad_HiddenGrotto_EventScript_TryShowVenonat
+	end
+
+AerousRoad_HiddenGrotto_EventScript_TryShowVenonat:
+	goto_if_unset FLAG_CAUGHT_AEROUS_ROAD_HIDDEN_GROTTO_VENONAT, AerousRoad_HiddenGrotto_EventScript_ShowVenonat
+	return
+ 
+AerousRoad_HiddenGrotto_EventScript_ShowVenonat:
+	clearflag FLAG_HIDE_AEROUS_ROAD_HIDDEN_GROTTO_VENONAT
+	return
+
+AerousRoad_HiddenGrotto_EventScript_Venonat::
+	lock
+	faceplayer
+	setwildbattle SPECIES_VENONAT, 7, ITEM_NONE
+	waitse
+	playmoncry SPECIES_VENONAT, 2
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	setvar VAR_0x8000, MOVE_POISON_FANG
+	setvar VAR_0x8001, MOVE_CONFUSION
+	setvar VAR_0x8002, MOVE_TACKLE
+	setvar VAR_0x8003, MOVE_STUN_SPORE
+	special StartCustomMovesBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq AerousRoad_HiddenGrotto_EventScript_DefeatedVenonat
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq AerousRoad_HiddenGrotto_EventScript_RanFromVenonat
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq AerousRoad_HiddenGrotto_EventScript_RanFromVenonat
+	setflag FLAG_CAUGHT_AEROUS_ROAD_HIDDEN_GROTTO_VENONAT
+	release
+	end
+
+AerousRoad_HiddenGrotto_EventScript_DefeatedVenonat::
+	setflag FLAG_DEFEATED_AEROUS_ROAD_HIDDEN_GROTTO_VENONAT
+	goto Common_EventScript_RemoveStaticPokemon
+	end
+
+AerousRoad_HiddenGrotto_EventScript_RanFromVenonat::
+	setvar VAR_0x8004, SPECIES_VENONAT
+	goto Common_EventScript_PokemonFled
+	end

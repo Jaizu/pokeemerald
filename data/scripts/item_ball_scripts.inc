@@ -92,6 +92,14 @@ EventScript_ItemTM10::
 	finditem ITEM_TM10
 	end
 
+EventScript_ItemTM39::
+	finditem ITEM_TM39
+	end
+
+EventScript_ItemEviolite::
+	finditem ITEM_EVIOLITE
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end

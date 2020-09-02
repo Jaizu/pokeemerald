@@ -110,9 +110,11 @@
 #define FLAG_CAUGHT_ARCHAN_TUNNEL_SECRET_TEMPLE_CLEFAIRY   0x5B // FLAG_WATTSON_REMATCH_AVAILABLE in Emerald
 #define FLAG_COLLECTED_ALL_SILVER_SYMBOLS                  0x5C
 #define FLAG_DEFEATED_ARCHAN_TUNNEL_SECRET_TEMPLE_CLEFAIRY 0x5C // FLAG_COLLECTED_ALL_SILVER_SYMBOLS in Emerald
+#define FLAG_GOOD_LUCK_SAFARI_ZONE                         0x5D // Set after talking to NPC blocking Safari Zone entrance/exit once.
+#define FLAG_CAUGHT_AEROUS_ROAD_HIDDEN_GROTTO_VENONAT      0x5D // FLAG_GOOD_LUCK_SAFARI_ZONE in Emerald
+#define FLAG_RECEIVED_WAILMER_PAIL                         0x5E
+#define FLAG_DEFEATED_AEROUS_ROAD_HIDDEN_GROTTO_VENONAT    0x5E // FLAG_RECEIVED_WAILMER_PAIL in Emerald
 
-#define FLAG_GOOD_LUCK_SAFARI_ZONE           0x5D // Set after talking to NPC blocking Safari Zone entrance/exit once.
-#define FLAG_RECEIVED_WAILMER_PAIL           0x5E
 #define FLAG_RECEIVED_POKEBLOCK_CASE         0x5F
 #define FLAG_RECEIVED_SECRET_POWER           0x60
 #define FLAG_MET_TEAM_AQUA_HARBOR            0x61
@@ -839,8 +841,9 @@
 #define FLAG_HIDE_TANGROWTH_TABLET_ROOM_COULTER                     0x2E0 // FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_SIBLING in Emerald
 #define FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_MAGMA_NOTE             0x2E1
 #define FLAG_HIDE_ARCHAN_TUNNEL_SECRET_TEMPLE_CLEFAIRY              0x2E1 // FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_MAGMA_NOTE
-
 #define FLAG_HIDE_ROUTE_104_MR_BRINEY                               0x2E2
+#define FLAG_HIDE_AEROUS_ROAD_HIDDEN_GROTTO_VENONAT                 0x2E2 // FLAG_HIDE_ROUTE_104_MR_BRINEY in Emerald
+
 #define FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY                           0x2E3
 #define FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN                            0x2E4
 #define FLAG_HIDE_ROUTE_109_MR_BRINEY                               0x2E5
@@ -1137,7 +1140,9 @@
 #define FLAG_ITEM_ROUTE_114_PROTEIN                                 0x3F7
 #define FLAG_ITEM_WISP_FOREST_TM10                                  0x3F7 // FLAG_ITEM_ROUTE_114_PROTEIN in Emerald
 #define FLAG_ITEM_ROUTE_115_SUPER_POTION                            0x3F8
+#define FLAG_ITEM_ARCHAN_TOWN_HIDDEN_GROTTO_TM39                    0x3F8 // FLAG_ITEM_ROUTE_115_SUPER_POTION in Emerald
 #define FLAG_ITEM_ROUTE_115_TM_01                                   0x3F9
+#define FLAG_ITEM_CELANTO_PATH_HIDDEN_GROTTO_EVIOLITE               0x3F9 // FLAG_ITEM_ROUTE_115_TM_01 in Emerald
 #define FLAG_ITEM_ROUTE_115_IRON                                    0x3FA
 #define FLAG_ITEM_ROUTE_116_ETHER                                   0x3FB
 #define FLAG_ITEM_ROUTE_116_REPEL                                   0x3FC

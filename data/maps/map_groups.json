@@ -50,7 +50,8 @@
     "CelantoPath",
     "ArchanHills",
     "SerosPath",
-    "AerousRoad"
+    "AerousRoad",
+    "CelantoPath_HiddenGrotto"
   ],
   "gMapGroup_Dungeons": [
     "ArchanTunnel_1F_1R",
@@ -63,7 +64,9 @@
     "ArchanTunnel_B2F_1R",
     "ArchanTunnel_B2F_2R",
     "ArchanTunnel_SecretTemple",
-    "WispForest"
+    "WispForest",
+    "ArchanTown_HiddenGrotto",
+    "AerousRoad_HiddenGrotto"
   ],
   "gMapGroup_CelantoTown": [
     "CelantoTown_PlayersHouse_1F",

@@ -6,15 +6,16 @@
 //
 
 // Map Group 0
-#define MAP_CELANTO_TOWN   (0 | (0 << 8))
-#define MAP_ARCHAN_TOWN    (1 | (0 << 8))
-#define MAP_SEROS_VILLAGE  (2 | (0 << 8))
-#define MAP_RELIQUIA_RUINS (3 | (0 << 8))
-#define MAP_CELANTO_GROVE  (4 | (0 << 8))
-#define MAP_CELANTO_PATH   (5 | (0 << 8))
-#define MAP_ARCHAN_HILLS   (6 | (0 << 8))
-#define MAP_SEROS_PATH     (7 | (0 << 8))
-#define MAP_AEROUS_ROAD    (8 | (0 << 8))
+#define MAP_CELANTO_TOWN               (0 | (0 << 8))
+#define MAP_ARCHAN_TOWN                (1 | (0 << 8))
+#define MAP_SEROS_VILLAGE              (2 | (0 << 8))
+#define MAP_RELIQUIA_RUINS             (3 | (0 << 8))
+#define MAP_CELANTO_GROVE              (4 | (0 << 8))
+#define MAP_CELANTO_PATH               (5 | (0 << 8))
+#define MAP_ARCHAN_HILLS               (6 | (0 << 8))
+#define MAP_SEROS_PATH                 (7 | (0 << 8))
+#define MAP_AEROUS_ROAD                (8 | (0 << 8))
+#define MAP_CELANTO_PATH_HIDDEN_GROTTO (9 | (0 << 8))
 
 // Map Group 1
 #define MAP_ARCHAN_TUNNEL_1F_1R                 (0 | (1 << 8))
@@ -28,6 +29,8 @@
 #define MAP_ARCHAN_TUNNEL_B2F_2R                (8 | (1 << 8))
 #define MAP_ARCHAN_TUNNEL_SECRET_TEMPLE         (9 | (1 << 8))
 #define MAP_WISP_FOREST                         (10 | (1 << 8))
+#define MAP_ARCHAN_TOWN_HIDDEN_GROTTO           (11 | (1 << 8))
+#define MAP_AEROUS_ROAD_HIDDEN_GROTTO           (12 | (1 << 8))
 
 // Map Group 2
 #define MAP_CELANTO_TOWN_PLAYERS_HOUSE_1F (0 | (2 << 8))

@@ -104,7 +104,7 @@
       "x": 6,
       "y": 24,
       "elevation": 0,
-      "dest_map": "MAP_AEROUS_ROAD",
+      "dest_map": "MAP_AEROUS_ROAD_HIDDEN_GROTTO",
       "dest_warp_id": 0
     }
   ],

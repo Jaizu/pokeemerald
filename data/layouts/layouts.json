@@ -4780,6 +4780,16 @@
       "secondary_tileset": "gTileset_ArchanTunnel",
       "border_filepath": "data/layouts/ArchanTunnel_TangrowthTabletRoom/border.bin",
       "blockdata_filepath": "data/layouts/ArchanTunnel_TangrowthTabletRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_HIDDEN_GROTTO",
+      "name": "HiddenGrotto_Layout",
+      "width": 11,
+      "height": 14,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_HiddenGrottoSecretTemple",
+      "border_filepath": "data/layouts/HiddenGrotto/border.bin",
+      "blockdata_filepath": "data/layouts/HiddenGrotto/map.bin"
     }
   ]
 }

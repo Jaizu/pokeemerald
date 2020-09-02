@@ -237,7 +237,7 @@
       "x": 39,
       "y": 16,
       "elevation": 0,
-      "dest_map": "MAP_ARCHAN_TOWN",
+      "dest_map": "MAP_ARCHAN_TOWN_HIDDEN_GROTTO",
       "dest_warp_id": 0
     }
   ],
