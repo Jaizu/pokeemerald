@@ -17,6 +17,11 @@
       "direction": "up",
       "offset": -12,
       "map": "MAP_ARCHAN_TOWN"
+    },
+    {
+      "direction": "down",
+      "offset": 2,
+      "map": "MAP_AEROUS_CITY"
     }
   ],
   "object_events": [

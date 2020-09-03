@@ -1,0 +1,39 @@
+{
+  "id": "MAP_AEROUS_CITY",
+  "name": "AerousCity",
+  "layout": "LAYOUT_AEROUS_CITY",
+  "music": "MUS_FINECITY",
+  "region_map_section": "MAPSEC_LAVARIDGE_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "direction": "left",
+      "offset": 6,
+      "map": "MAP_AEROUS_ROAD"
+    },
+    {
+      "direction": "up",
+      "offset": -2,
+      "map": "MAP_ARCHAN_HILLS"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

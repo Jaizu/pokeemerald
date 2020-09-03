@@ -118,8 +118,9 @@ CelantoTown_Condominiums_2F_EventScript_Maniac::
 	faceplayer
 	goto_if_set FLAG_RECEIVED_CELANTO_DUSK_STONE, CelantoTown_Condominiums_2F_EventScript_ExplainDuskStone
 	msgbox CelantoTown_Condominiums_2F_Text_AlwaysWantedToSeeShuppet, MSGBOX_DEFAULT
-	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
-	compare VAR_RESULT, SPECIES_SHUPPET
+	setvar VAR_0x8004, SPECIES_SHUPPET
+	specialvar VAR_RESULT, CheckPartyForMon
+	compare VAR_RESULT, TRUE
 	goto_if_eq CelantoTown_Condominiums_2F_EventScript_GiveDuskStone
 	release
 	end

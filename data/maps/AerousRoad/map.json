@@ -17,6 +17,11 @@
       "direction": "left",
       "offset": -2,
       "map": "MAP_SEROS_VILLAGE"
+    },
+    {
+      "direction": "right",
+      "offset": -6,
+      "map": "MAP_AEROUS_CITY"
     }
   ],
   "object_events": [
@@ -204,7 +209,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "x": 60,
+      "x": 58,
       "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",

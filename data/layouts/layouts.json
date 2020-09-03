@@ -4790,6 +4790,16 @@
       "secondary_tileset": "gTileset_HiddenGrottoSecretTemple",
       "border_filepath": "data/layouts/HiddenGrotto/border.bin",
       "blockdata_filepath": "data/layouts/HiddenGrotto/map.bin"
+    },
+    {
+      "id": "LAYOUT_AEROUS_CITY",
+      "name": "AerousCity_Layout",
+      "width": 80,
+      "height": 48,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/AerousCity/border.bin",
+      "blockdata_filepath": "data/layouts/AerousCity/map.bin"
     }
   ]
 }

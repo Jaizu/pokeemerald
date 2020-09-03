@@ -4366,3 +4366,18 @@ void DoRivalNamingScreen(void)
     StringCopy(gSaveBlock2Ptr->rivalName, gText_DefaultNameCoulter);
     DoNamingScreen(NAMING_SCREEN_RIVAL, gSaveBlock2Ptr->rivalName, 0, 0, 0, CB2_HandleGivenRivalName);
 }
+
+bool8 CheckPartyForMon(void)
+{
+    bool8 result = FALSE;
+    u8 slot;
+    u16 species;
+    
+    for (slot = 0; slot < PARTY_SIZE; slot++) {
+        species = GetMonData(&gPlayerParty[slot], MON_DATA_SPECIES2, NULL);
+        if (species == gSpecialVar_0x8004)
+            return TRUE;
+    }
+    
+    return FALSE;
+}

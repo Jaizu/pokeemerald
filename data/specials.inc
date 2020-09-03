@@ -540,3 +540,4 @@ gSpecials:: @ 81DBA64
 	def_special SetPartyPokemonBall
 	def_special StartCustomMovesBattle
 	def_special DoWarpAtPlayerPos
+	def_special CheckPartyForMon
