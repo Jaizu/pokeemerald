@@ -99,7 +99,7 @@
       "flag": "FLAG_ITEM_RELIQUIA_RUINS_SHINY_STONE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_TM_BALL",
       "x": 8,
       "y": 16,
       "elevation": 3,
