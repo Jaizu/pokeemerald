@@ -145,7 +145,7 @@ AerousRoad_EventScript_MichaelRematch::
 AerousRoad_Text_MichaelIntro:
 	.string "“Bug-types are weak.”\n"
 	.string "“Bug-types suck!”\p"
-    .string "I'll show them\n"
+    .string "I'll show them!\n"
     .string "I'll show you, too!$"
 
 AerousRoad_Text_MichaelDefeat:
@@ -273,9 +273,8 @@ AerousRoad_Text_JonDefeat:
     .string "my embarrassment!$"
 
 AerousRoad_Text_JonPostBattle:
-	.string "I wonder if the bridge is\n"
-    .string "weaker because of the Pokémon\l"
-    .string "swimming around in the pond?$"
+	.string "I wonder if the bridge is weakened\n"
+    .string "from Pokémon swimming by?$"
 
 AerousRoad_EventScript_Arthur::
 	trainerbattle_single TRAINER_ARTHUR_1, AerousRoad_Text_ArthurIntro, AerousRoad_Text_ArthurDefeat
