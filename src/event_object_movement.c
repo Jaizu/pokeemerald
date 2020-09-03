@@ -407,7 +407,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_5 0x1105
 #define OBJ_EVENT_PAL_TAG_6 0x1106
 #define OBJ_EVENT_PAL_TAG_TM_BALL 0x1107
-#define OBJ_EVENT_PAL_TAG_8 0x1108
+#define OBJ_EVENT_PAL_TAG_FIELD_EFFECTS 0x1108
 #define OBJ_EVENT_PAL_TAG_BUG_CATCHER 0x1109
 #define OBJ_EVENT_PAL_TAG_GENTLEMAN 0x110A
 #define OBJ_EVENT_PAL_TAG_UNDERWATER 0x110B
@@ -456,7 +456,7 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPalette5, OBJ_EVENT_PAL_TAG_5},
     {gObjectEventPalette6, OBJ_EVENT_PAL_TAG_6},
     {gObjectEventPaletteTMBall, OBJ_EVENT_PAL_TAG_TM_BALL},
-    {gObjectEventPalette8, OBJ_EVENT_PAL_TAG_8},
+    {gObjectEventPaletteFieldEffects, OBJ_EVENT_PAL_TAG_FIELD_EFFECTS},
     {gObjectEventPaletteBugCatcher, OBJ_EVENT_PAL_TAG_BUG_CATCHER},
     {gObjectEventPaletteGentleman, OBJ_EVENT_PAL_TAG_GENTLEMAN},
     {gObjectEventPaletteUnderwater, OBJ_EVENT_PAL_TAG_UNDERWATER},
