@@ -59,10 +59,12 @@ ArchanTunnel_TangrowthTabletRoom_EventScript_TabletDiscoveryScene:
 	playse SE_KAIDAN
 	waitse
 	removeobject LOCALID_COULTER
+	setflag FLAG_HIDE_COULTERS_HOUSE_COULTER
 	applymovement LOCALID_REDWOOD, Common_Movement_WalkInPlaceFastestUp
 	waitmovement 0
 	fadedefaultbgm
 	setobjectxyperm LOCALID_REDWOOD, 6, 4
+	setflag FLAG_HIDE_SEROS_POKEMON_CENTER_REDWOOD
 	setflag FLAG_HIDE_SEROS_VILLAGE_CUT_TREE_LEFT
 	setflag FLAG_HIDE_SEROS_VILLAGE_CUT_TREE_RIGHT
 	setflag FLAG_HIDE_AEROUS_ROAD_PAINTER

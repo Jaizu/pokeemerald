@@ -100,6 +100,21 @@ EventScript_ItemEviolite::
 	finditem ITEM_EVIOLITE
 	end
 
+EventScript_ItemTM12::
+	finditem ITEM_TM12
+	end
+
+EventScript_ItemTM20::
+	finditem ITEM_TM20
+	end
+
+MtPyre_3F_EventScript_ItemSuperRepel::
+Route119_EventScript_ItemSuperRepel::
+Route113_EventScript_ItemSuperRepel::
+EventScript_ItemSuperRepel::
+	finditem ITEM_SUPER_REPEL
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
@@ -146,11 +161,6 @@ Route111_EventScript_ItemStardust:: @ 8290DA8
 
 Route111_EventScript_ItemHPUp:: @ 8290DB5
 	finditem ITEM_HP_UP
-	end
-
-
-Route113_EventScript_ItemSuperRepel:: @ 8290DE9
-	finditem ITEM_SUPER_REPEL
 	end
 
 Route113_EventScript_ItemHyperPotion:: @ 8290DF6
@@ -207,10 +217,6 @@ Route117_EventScript_ItemGreatBall:: @ 8290EB9
 
 Route118_EventScript_ItemHyperPotion:: @ 8290ED3
 	finditem ITEM_HYPER_POTION
-	end
-
-Route119_EventScript_ItemSuperRepel:: @ 8290EE0
-	finditem ITEM_SUPER_REPEL
 	end
 
 Route119_EventScript_ItemZinc:: @ 8290EED
@@ -467,10 +473,6 @@ SafariZone_Southeast_EventScript_ItemBigPearl:: @ 82912F0
 
 MtPyre_2F_EventScript_ItemUltraBall:: @ 82912FD
 	finditem ITEM_ULTRA_BALL
-	end
-
-MtPyre_3F_EventScript_ItemSuperRepel:: @ 829130A
-	finditem ITEM_SUPER_REPEL
 	end
 
 MtPyre_4F_EventScript_ItemSeaIncense:: @ 8291317
