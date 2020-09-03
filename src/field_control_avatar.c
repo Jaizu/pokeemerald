@@ -440,6 +440,8 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
         return EventScript_Questionnaire;
     if (MetatileBehavior_IsTrainerHillTimer(metatileBehavior) == TRUE)
         return EventScript_TrainerHillTimer;
+    if (MetatileBehavior_IsHiddenGrottoTree(metatileBehavior) == TRUE)
+        return EventScript_HiddenGrottoTree;
 
     height = position->height;
     if (height == MapGridGetZCoordAt(position->x, position->y))
@@ -1050,5 +1052,17 @@ int SetCableClubWarp(void)
     GetPlayerPosition(&position);
     MapGridGetMetatileBehaviorAt(position.x, position.y);  //unnecessary
     SetupWarp(&gMapHeader, GetWarpEventAtMapPosition(&gMapHeader, &position), &position);
+    return 0;
+}
+
+int DoWarpAtPlayerPos(void)
+{
+    struct MapPosition position;
+
+    GetPlayerMovementDirection();  //unnecessary
+    GetPlayerPosition(&position);
+    MapGridGetMetatileBehaviorAt(position.x, position.y);  //unnecessary
+    SetupWarp(&gMapHeader, GetWarpEventAtMapPosition(&gMapHeader, &position), &position);
+    DoWarp();
     return 0;
 }
