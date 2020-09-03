@@ -399,18 +399,18 @@ const u8 gInitialMovementTypeFacingDirections[] = {
     [MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_RIGHT] = DIR_EAST,
 };
 
-#define OBJ_EVENT_PAL_TAG_0  0x1100
-#define OBJ_EVENT_PAL_TAG_1  0x1101
-#define OBJ_EVENT_PAL_TAG_2  0x1102
-#define OBJ_EVENT_PAL_TAG_3  0x1103
-#define OBJ_EVENT_PAL_TAG_4  0x1104
-#define OBJ_EVENT_PAL_TAG_5  0x1105
-#define OBJ_EVENT_PAL_TAG_6  0x1106
-#define OBJ_EVENT_PAL_TAG_7  0x1107
-#define OBJ_EVENT_PAL_TAG_8  0x1108
-#define OBJ_EVENT_PAL_TAG_9  0x1109
-#define OBJ_EVENT_PAL_TAG_10 0x110A
-#define OBJ_EVENT_PAL_TAG_11 0x110B
+#define OBJ_EVENT_PAL_TAG_0 0x1100
+#define OBJ_EVENT_PAL_TAG_1 0x1101
+#define OBJ_EVENT_PAL_TAG_2 0x1102
+#define OBJ_EVENT_PAL_TAG_3 0x1103
+#define OBJ_EVENT_PAL_TAG_4 0x1104
+#define OBJ_EVENT_PAL_TAG_5 0x1105
+#define OBJ_EVENT_PAL_TAG_6 0x1106
+#define OBJ_EVENT_PAL_TAG_7 0x1107
+#define OBJ_EVENT_PAL_TAG_8 0x1108
+#define OBJ_EVENT_PAL_TAG_9 0x1109
+#define OBJ_EVENT_PAL_TAG_GENTLEMAN 0x110A
+#define OBJ_EVENT_PAL_TAG_UNDERWATER 0x110B
 #define OBJ_EVENT_PAL_TAG_FERNANDO 0x110C
 #define OBJ_EVENT_PAL_TAG_NURSE 0x110D
 #define OBJ_EVENT_PAL_TAG_ACE_TRAINER 0x110E
@@ -448,18 +448,18 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #include "data/object_events/object_event_graphics_info_pointers.h"
 
 const struct SpritePalette sObjectEventSpritePalettes[] = {
-    {gObjectEventPalette0,  OBJ_EVENT_PAL_TAG_0},
-    {gObjectEventPalette1,  OBJ_EVENT_PAL_TAG_1},
-    {gObjectEventPalette2,  OBJ_EVENT_PAL_TAG_2},
-    {gObjectEventPalette3,  OBJ_EVENT_PAL_TAG_3},
-    {gObjectEventPalette4,  OBJ_EVENT_PAL_TAG_4},
-    {gObjectEventPalette5,  OBJ_EVENT_PAL_TAG_5},
-    {gObjectEventPalette6,  OBJ_EVENT_PAL_TAG_6},
-    {gObjectEventPalette7,  OBJ_EVENT_PAL_TAG_7},
-    {gObjectEventPalette8,  OBJ_EVENT_PAL_TAG_8},
-    {gObjectEventPalette9,  OBJ_EVENT_PAL_TAG_9},
-    {gObjectEventPalette10, OBJ_EVENT_PAL_TAG_10},
-    {gObjectEventPalette11, OBJ_EVENT_PAL_TAG_11},
+    {gObjectEventPalette0, OBJ_EVENT_PAL_TAG_0},
+    {gObjectEventPalette1, OBJ_EVENT_PAL_TAG_1},
+    {gObjectEventPalette2, OBJ_EVENT_PAL_TAG_2},
+    {gObjectEventPalette3, OBJ_EVENT_PAL_TAG_3},
+    {gObjectEventPalette4, OBJ_EVENT_PAL_TAG_4},
+    {gObjectEventPalette5, OBJ_EVENT_PAL_TAG_5},
+    {gObjectEventPalette6, OBJ_EVENT_PAL_TAG_6},
+    {gObjectEventPalette7, OBJ_EVENT_PAL_TAG_7},
+    {gObjectEventPalette8, OBJ_EVENT_PAL_TAG_8},
+    {gObjectEventPalette9, OBJ_EVENT_PAL_TAG_9},
+    {gObjectEventPaletteGentleman, OBJ_EVENT_PAL_TAG_GENTLEMAN},
+    {gObjectEventPaletteUnderwater, OBJ_EVENT_PAL_TAG_UNDERWATER},
     {gObjectEventPaletteFernando, OBJ_EVENT_PAL_TAG_FERNANDO},
     {gObjectEventPaletteNurse, OBJ_EVENT_PAL_TAG_NURSE},
     {gObjectEventPaletteAceTrainer, OBJ_EVENT_PAL_TAG_ACE_TRAINER},

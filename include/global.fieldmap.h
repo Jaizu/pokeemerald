@@ -221,7 +221,7 @@ struct ObjectEventGraphicsInfo
 {
     /*0x00*/ u16 tileTag;
     /*0x02*/ u16 paletteTag1;
-    /*0x04*/ u16 paletteTag2;
+    // /*0x04*/ u16 paletteTag2;
     /*0x06*/ u16 size;
     /*0x08*/ s16 width;
     /*0x0A*/ s16 height;
