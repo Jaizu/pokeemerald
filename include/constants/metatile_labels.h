@@ -133,8 +133,7 @@
 #define METATILE_Contest_WallShadow          0x221
 
 // gTileset_Dewford
-#define METATILE_Dewford_Door              0x225
-#define METATILE_Dewford_Door_BattleTower  0x25D
+#define METATILE_Dewford_Door_Tan  0x25C
 
 // gTileset_EliteFour
 #define METATILE_EliteFour_EntryDoor_ClosedBottom    0x20E

@@ -20,7 +20,7 @@
     },
     {
       "direction": "up",
-      "offset": -2,
+      "offset": 0,
       "map": "MAP_ARCHAN_HILLS"
     }
   ],

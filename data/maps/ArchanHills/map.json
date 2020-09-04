@@ -20,7 +20,7 @@
     },
     {
       "direction": "down",
-      "offset": 2,
+      "offset": 0,
       "map": "MAP_AEROUS_CITY"
     }
   ],
