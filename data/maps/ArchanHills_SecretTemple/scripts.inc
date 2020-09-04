@@ -1,0 +1,64 @@
+ArchanHills_SecretTemple_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, ArchanHills_SecretTemple_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, ArchanHills_SecretTemple_OnTransition
+	.byte 0
+
+ArchanHills_SecretTemple_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, ArchanHills_SecretTemple_TryRemoveKecleon
+	end
+
+ArchanHills_SecretTemple_TryRemoveKecleon:
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_ne Common_EventScript_NopReturn
+	removeobject VAR_LAST_TALKED
+	return
+
+ArchanHills_SecretTemple_OnTransition:
+	call_if_unset FLAG_DEFEATED_ARCHAN_HILLS_SECRET_TEMPLE_KECLEON, ArchanHills_SecretTemple_EventScript_TryShowKecleon
+	end
+
+ArchanHills_SecretTemple_EventScript_TryShowKecleon:
+	goto_if_unset FLAG_CAUGHT_ARCHAN_HILLS_SECRET_TEMPLE_KECLEON, ArchanHills_SecretTemple_EventScript_ShowKecleon
+	return
+ 
+ArchanHills_SecretTemple_EventScript_ShowKecleon:
+	clearflag FLAG_HIDE_ARCHAN_HILLS_SECRET_TEMPLE_KECLEON
+	return
+
+ArchanHills_SecretTemple_EventScript_Kecleon::
+	lock
+	faceplayer
+	setwildbattle SPECIES_KECLEON, 25, ITEM_NONE
+	waitse
+	playmoncry SPECIES_KECLEON, 2
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	setvar VAR_0x8000, MOVE_SHADOW_SNEAK
+	setvar VAR_0x8001, MOVE_SUCKER_PUNCH
+	setvar VAR_0x8002, MOVE_SLASH
+	setvar VAR_0x8003, MOVE_ROCK_SLIDE
+	special StartCustomMovesBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq ArchanHills_SecretTemple_EventScript_DefeatedKecleon
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq ArchanHills_SecretTemple_EventScript_RanFromKecleon
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq ArchanHills_SecretTemple_EventScript_RanFromKecleon
+	setflag FLAG_CAUGHT_ARCHAN_HILLS_SECRET_TEMPLE_KECLEON
+	release
+	end
+
+ArchanHills_SecretTemple_EventScript_DefeatedKecleon::
+	setflag FLAG_DEFEATED_ARCHAN_HILLS_SECRET_TEMPLE_KECLEON
+	goto Common_EventScript_RemoveStaticPokemon
+	end
+
+ArchanHills_SecretTemple_EventScript_RanFromKecleon::
+	setvar VAR_0x8004, SPECIES_KECLEON
+	goto Common_EventScript_PokemonFled
+	end

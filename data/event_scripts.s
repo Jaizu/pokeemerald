@@ -1158,3 +1158,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/CelantoPath_HiddenGrotto/scripts.inc"
 
 	.include "data/maps/AerousCity/scripts.inc"
+
+	.include "data/maps/ArchanHills_SecretTemple/scripts.inc"

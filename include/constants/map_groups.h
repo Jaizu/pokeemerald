@@ -34,6 +34,7 @@
 #define MAP_ARCHAN_TOWN_HIDDEN_GROTTO   (1 | (2 << 8))
 #define MAP_ARCHAN_TUNNEL_SECRET_TEMPLE (2 | (2 << 8))
 #define MAP_AEROUS_ROAD_HIDDEN_GROTTO   (3 | (2 << 8))
+#define MAP_ARCHAN_HILLS_SECRET_TEMPLE  (4 | (2 << 8))
 
 // Map Group 3
 #define MAP_CELANTO_TOWN_PLAYERS_HOUSE_1F (0 | (3 << 8))
