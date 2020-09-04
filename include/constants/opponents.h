@@ -45,16 +45,17 @@
 #define TRAINER_GRUNT_MUSEUM_1               20
 #define TRAINER_CADENCE                      20 // TRAINER_GRUNT_MUSEUM_1 in Emerald
 #define TRAINER_GRUNT_MUSEUM_2               21
-#define TRAINER_MICHAEL_1                    21 // TRAINER_GRUNT_MUSEUM_2
+#define TRAINER_MICHAEL_1                    21 // TRAINER_GRUNT_MUSEUM_2 in Emerald
 #define TRAINER_GRUNT_SPACE_CENTER_1         22
-#define TRAINER_LISA_AND_LOIS_1              22 // TRAINER_GRUNT_SPACE_CENTER_1
+#define TRAINER_LISA_AND_LOIS_1              22 // TRAINER_GRUNT_SPACE_CENTER_1 in Emerald
 #define TRAINER_GRUNT_MT_PYRE_1              23
-#define TRAINER_SPENCER_1                    23 // TRAINER_GRUNT_MT_PYRE_1
+#define TRAINER_SPENCER_1                    23 // TRAINER_GRUNT_MT_PYRE_1 in Emerald
 #define TRAINER_GRUNT_MT_PYRE_2              24
-#define TRAINER_JON_1                        24 // TRAINER_GRUNT_MT_PYRE_2
+#define TRAINER_JON_1                        24 // TRAINER_GRUNT_MT_PYRE_2 in Emerald
 #define TRAINER_GRUNT_MT_PYRE_3              25
-#define TRAINER_ARTHUR_1                     25 // TRAINER_GRUNT_MT_PYRE_3
+#define TRAINER_ARTHUR_1                     25 // TRAINER_GRUNT_MT_PYRE_3 in Emerald
 #define TRAINER_GRUNT_WEATHER_INST_4         26
+#define TRAINER_BECCA_1                      26 // TRAINER_GRUNT_WEATHER_INST_4 in Emerald
 #define TRAINER_GRUNT_AQUA_HIDEOUT_5         27
 #define TRAINER_GRUNT_AQUA_HIDEOUT_6         28
 #define TRAINER_FREDRICK                     29

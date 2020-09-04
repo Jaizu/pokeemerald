@@ -301,11 +301,18 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Arthur1[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst4[] = {
+static const struct TrainerMonItemDefaultMoves sParty_Becca1[] = {
     {
     .iv = 0,
-    .lvl = 28,
-    .species = SPECIES_CARVANHA,
+    .lvl = 13,
+    .species = SPECIES_SNUBBULL,
+    .heldItem = ITEM_NUGGET
+    },
+    {
+    .iv = 0,
+    .lvl = 13,
+    .species = SPECIES_FLABEBE,
+    .heldItem = ITEM_NUGGET
     }
 };
 

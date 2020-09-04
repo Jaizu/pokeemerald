@@ -115,6 +115,10 @@ EventScript_ItemSuperRepel::
 	finditem ITEM_SUPER_REPEL
 	end
 
+EventScript_ItemHarborMail::
+	finditem ITEM_HARBOR_MAIL
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
