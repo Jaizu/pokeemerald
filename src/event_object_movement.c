@@ -437,6 +437,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_HIKER 0x1123
 #define OBJ_EVENT_PAL_TAG_REDWOOD 0x1124
 #define OBJ_EVENT_PAL_TAG_COULTER 0x1125
+#define OBJ_EVENT_PAL_TAG_LADY 0x1126
 #define OBJ_EVENT_PAL_TAG_NONE 0x11FF
 
 #include "data/field_effects/field_effect_object_template_pointers.h"
@@ -486,7 +487,8 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPaletteHiker, OBJ_EVENT_PAL_TAG_HIKER},
     {gObjectEventPaletteRedwood, OBJ_EVENT_PAL_TAG_REDWOOD},
     {gObjectEventPaletteCoulter, OBJ_EVENT_PAL_TAG_COULTER},
-    {NULL,                  0x0000},
+    {gObjectEventPaletteLady, OBJ_EVENT_PAL_TAG_LADY},
+    {NULL, 0x0000},
 };
 
 #include "data/object_events/berry_tree_graphics_tables.h"

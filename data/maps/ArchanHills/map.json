@@ -26,7 +26,7 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_KIRLIA",
+      "graphics_id": "OBJ_EVENT_GFX_PSYDUCK",
       "x": 10,
       "y": 28,
       "elevation": 3,
@@ -39,7 +39,7 @@
       "flag": "FLAG_HIDE_ARCHAN_HILLS_PSYDUCK"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_KIRLIA",
+      "graphics_id": "OBJ_EVENT_GFX_PSYDUCK",
       "x": 12,
       "y": 29,
       "elevation": 3,
@@ -52,7 +52,7 @@
       "flag": "FLAG_HIDE_ARCHAN_HILLS_PSYDUCK"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_KIRLIA",
+      "graphics_id": "OBJ_EVENT_GFX_PSYDUCK",
       "x": 10,
       "y": 30,
       "elevation": 3,
@@ -65,7 +65,7 @@
       "flag": "FLAG_HIDE_ARCHAN_HILLS_PSYDUCK"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_KIRLIA",
+      "graphics_id": "OBJ_EVENT_GFX_PSYDUCK",
       "x": 12,
       "y": 30,
       "elevation": 3,
@@ -78,7 +78,7 @@
       "flag": "FLAG_HIDE_ARCHAN_HILLS_PSYDUCK"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_KIRLIA",
+      "graphics_id": "OBJ_EVENT_GFX_PSYDUCK",
       "x": 13,
       "y": 30,
       "elevation": 3,
@@ -91,7 +91,7 @@
       "flag": "FLAG_HIDE_ARCHAN_HILLS_PSYDUCK"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_KIRLIA",
+      "graphics_id": "OBJ_EVENT_GFX_PSYDUCK",
       "x": 11,
       "y": 31,
       "elevation": 3,
@@ -104,7 +104,7 @@
       "flag": "FLAG_HIDE_ARCHAN_HILLS_PSYDUCK"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_KIRLIA",
+      "graphics_id": "OBJ_EVENT_GFX_PSYDUCK",
       "x": 13,
       "y": 31,
       "elevation": 3,
@@ -130,7 +130,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ACE_TRAINER_F",
+      "graphics_id": "OBJ_EVENT_GFX_LADY",
       "x": 19,
       "y": 40,
       "elevation": 3,

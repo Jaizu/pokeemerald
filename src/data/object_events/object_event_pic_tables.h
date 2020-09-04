@@ -238,16 +238,16 @@ const struct SpriteFrameImage gObjectEventPicTable_RichBoy[] = {
     overworld_frame(gObjectEventPic_RichBoy, 2, 4, 8),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_Woman1[] = {
-    overworld_frame(gObjectEventPic_Woman1, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Woman1, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Woman1, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Woman1, 2, 4, 3),
-    overworld_frame(gObjectEventPic_Woman1, 2, 4, 4),
-    overworld_frame(gObjectEventPic_Woman1, 2, 4, 5),
-    overworld_frame(gObjectEventPic_Woman1, 2, 4, 6),
-    overworld_frame(gObjectEventPic_Woman1, 2, 4, 7),
-    overworld_frame(gObjectEventPic_Woman1, 2, 4, 8),
+const struct SpriteFrameImage gObjectEventPicTable_Lady[] = {
+    overworld_frame(gObjectEventPic_Lady, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Lady, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Lady, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Lady, 2, 4, 3),
+    overworld_frame(gObjectEventPic_Lady, 2, 4, 4),
+    overworld_frame(gObjectEventPic_Lady, 2, 4, 5),
+    overworld_frame(gObjectEventPic_Lady, 2, 4, 6),
+    overworld_frame(gObjectEventPic_Lady, 2, 4, 7),
+    overworld_frame(gObjectEventPic_Lady, 2, 4, 8),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_FatMan[] = {
@@ -1776,16 +1776,16 @@ const struct SpriteFrameImage gObjectEventPicTable_Regi[] = {
     obj_frame_tiles(gObjectEventPic_Regi),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_Skitty[] = {
-    overworld_frame(gObjectEventPic_Skitty, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Skitty, 2, 2, 1),
-    overworld_frame(gObjectEventPic_Skitty, 2, 2, 2),
-    overworld_frame(gObjectEventPic_Skitty, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Skitty, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Skitty, 2, 2, 1),
-    overworld_frame(gObjectEventPic_Skitty, 2, 2, 1),
-    overworld_frame(gObjectEventPic_Skitty, 2, 2, 2),
-    overworld_frame(gObjectEventPic_Skitty, 2, 2, 2),
+const struct SpriteFrameImage gObjectEventPicTable_Psyduck[] = {
+    overworld_frame(gObjectEventPic_Psyduck, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Psyduck, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Psyduck, 2, 2, 2),
+    overworld_frame(gObjectEventPic_Psyduck, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Psyduck, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Psyduck, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Psyduck, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Psyduck, 2, 2, 2),
+    overworld_frame(gObjectEventPic_Psyduck, 2, 2, 2),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Kecleon[] = {

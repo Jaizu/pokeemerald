@@ -20,7 +20,8 @@
 #define OBJ_EVENT_GFX_BATTLE_GIRL                 14
 #define OBJ_EVENT_GFX_GIRL_3                      OBJ_EVENT_GFX_BATTLE_GIRL
 #define OBJ_EVENT_GFX_RICH_BOY                    15
-#define OBJ_EVENT_GFX_WOMAN_1                     16
+#define OBJ_EVENT_GFX_LADY                        16
+#define OBJ_EVENT_GFX_WOMAN_1                     OBJ_EVENT_GFX_LADY
 #define OBJ_EVENT_GFX_FAT_MAN                     17
 #define OBJ_EVENT_GFX_POKEFAN_F                   18
 #define OBJ_EVENT_GFX_MAN_1                       19
@@ -217,7 +218,8 @@
 #define OBJ_EVENT_GFX_REGIROCK                   200
 #define OBJ_EVENT_GFX_REGICE                     201
 #define OBJ_EVENT_GFX_REGISTEEL                  202
-#define OBJ_EVENT_GFX_SKITTY                     203
+#define OBJ_EVENT_GFX_PSYDUCK                    203
+#define OBJ_EVENT_GFX_SKITTY                     OBJ_EVENT_GFX_PSYDUCK
 #define OBJ_EVENT_GFX_KECLEON_1                  204
 #define OBJ_EVENT_GFX_KYOGRE_2                   205
 #define OBJ_EVENT_GFX_GROUDON_2                  206
