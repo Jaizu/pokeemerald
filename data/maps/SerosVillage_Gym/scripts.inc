@@ -161,7 +161,7 @@ SerosVillage_Gym_Text_FernandoIntro:
 	.string "I'm sort of new at this…\p"
 	.string "Go easy on me, okay?\n"
 	.string "Alright…\p"
-	.string "Bring it on!$"
+	.string "Bring it on!{PLAY_BGM}{MUS_RG_EXEYE}$"
 
 SerosVillage_Gym_Text_FernandoDefeat:
 	.string "Waaah!\n"

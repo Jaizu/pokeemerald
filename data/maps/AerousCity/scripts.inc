@@ -1,3 +1,5 @@
+.equ LOCALID_MUSEUM_CLERK, 3
+
 AerousCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, AerousCity_OnTransition
 	.byte 0
@@ -49,3 +51,34 @@ AerousCity_EventScript_NameRaterSign::
 
 AerousCity_Text_NameRaterSign:
 	.string "The Name Rater's house$"
+
+AerousCity_EventScript_MuseumClerk::
+	lock
+	faceplayer
+	msgbox AerousCity_Text_TheAerousMuseumIsHavingAnExhibit, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_MUSEUM_CLERK, AerousCity_Text_MuseumClerkDefeat
+	msgbox AerousCity_Text_IGottaTellTheBoss, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_MUSEUM_CLERK, Common_Movement_WalkUp
+	waitmovement 0
+	playse SE_KAIDAN
+	waitse
+	removeobject LOCALID_MUSEUM_CLERK
+	release
+	end
+
+AerousCity_Text_TheAerousMuseumIsHavingAnExhibit:
+	.string "{COLOR DARK_GREY}???: {COLOR BLUE}The Aerous Museum is… er…\p"
+	.string "Having an exhibit!\n"
+	.string "Yeah…\p"
+	.string "…You don't believe me?\n"
+	.string "Argh, you're a belligerent child!\p"
+	.string "I'll make you pay!{PLAY_BGM}{MUS_MGM0}$"
+
+AerousCity_Text_MuseumClerkDefeat:
+	.string "Oh man…\n"
+	.string "This isn't good!$"
+
+AerousCity_Text_IGottaTellTheBoss:
+	.string "{COLOR DARK_GREY}???: {COLOR BLUE}This is bad…\n"
+	.string "I gotta tell the boss!$"

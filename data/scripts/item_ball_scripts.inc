@@ -119,6 +119,17 @@ EventScript_ItemHarborMail::
 	finditem ITEM_HARBOR_MAIL
 	end
 
+EventScript_ItemPokeBall::
+GraniteCave_B1F_EventScript_ItemPokeBall::
+RusturfTunnel_EventScript_ItemPokeBall::
+Route104_EventScript_ItemPokeBall::
+	finditem ITEM_POKE_BALL
+	end
+
+EventScript_ItemSharpedonite::
+	finditem ITEM_SHARPEDONITE
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
@@ -129,10 +140,6 @@ Route103_EventScript_ItemPPUp:: @ 8290CF2
 
 Route104_EventScript_ItemPPUp:: @ 8290CFF
 	finditem ITEM_PP_UP
-	end
-
-Route104_EventScript_ItemPokeBall:: @ 8290D0C
-	finditem ITEM_POKE_BALL
 	end
 
 Route104_EventScript_ItemXAccuracy:: @ 8290D19
@@ -365,14 +372,6 @@ PetalburgWoods_EventScript_ItemEther:: @ 829111C
 
 PetalburgWoods_EventScript_ItemParalyzeHeal:: @ 8291129
 	finditem ITEM_PARALYZE_HEAL
-	end
-
-RusturfTunnel_EventScript_ItemPokeBall:: @ 8291136
-	finditem ITEM_POKE_BALL
-	end
-
-GraniteCave_B1F_EventScript_ItemPokeBall:: @ 829115D
-	finditem ITEM_POKE_BALL
 	end
 
 GraniteCave_B2F_EventScript_ItemRepel:: @ 829116A

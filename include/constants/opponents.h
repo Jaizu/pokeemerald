@@ -57,6 +57,7 @@
 #define TRAINER_GRUNT_WEATHER_INST_4         26
 #define TRAINER_BECCA_1                      26 // TRAINER_GRUNT_WEATHER_INST_4 in Emerald
 #define TRAINER_GRUNT_AQUA_HIDEOUT_5         27
+#define TRAINER_MUSEUM_CLERK                 27 // TRAINER_GRUNT_AQUA_HIDEOUT_5 in Emerald
 #define TRAINER_GRUNT_AQUA_HIDEOUT_6         28
 #define TRAINER_FREDRICK                     29
 #define TRAINER_MATT                         30

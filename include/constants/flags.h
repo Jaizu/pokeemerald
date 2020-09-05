@@ -853,8 +853,9 @@
 #define FLAG_HIDE_ARCHAN_HILLS_PSYDUCK                              0x2E3 // FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY in Emerald
 #define FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN                            0x2E4
 #define FLAG_HIDE_ARCHAN_HILLS_SECRET_TEMPLE_KECLEON                0x2E4 // FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN in Emerald
-
 #define FLAG_HIDE_ROUTE_109_MR_BRINEY                               0x2E5
+#define FLAG_HIDE_AEROUS_CITY_MUSEUM_CLERK                          0x2E5 // FLAG_HIDE_ROUTE_109_MR_BRINEY in Emerald
+
 #define FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT                          0x2E6
 #define FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN                       0x2E7
 #define FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT                          0x2E8
@@ -1160,7 +1161,9 @@
 #define FLAG_ITEM_ROUTE_116_HP_UP                                   0x3FD
 #define FLAG_ITEM_ARCHAN_HILLS_HARBOR_MAIL                          0x3FD // FLAG_ITEM_ROUTE_116_HP_UP in Emerald
 #define FLAG_ITEM_ROUTE_117_GREAT_BALL                              0x3FE
+#define FLAG_ITEM_AEROUS_CITY_POKE_BALL                             0x3FE // FLAG_ITEM_ROUTE_117_GREAT_BALL in Emerald
 #define FLAG_ITEM_ROUTE_117_REVIVE                                  0x3FF
+#define FLAG_ITEM_AEROUS_CITY_SHARPEDONITE                          0x3FF // FLAG_ITEM_ROUTE_117_REVIVE in Emerald
 #define FLAG_ITEM_ROUTE_119_SUPER_REPEL                             0x400
 #define FLAG_ITEM_ROUTE_119_ZINC                                    0x401
 #define FLAG_ITEM_ROUTE_119_ELIXIR_1                                0x402
