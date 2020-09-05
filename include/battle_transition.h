@@ -42,7 +42,8 @@ enum // TRANSITION_MUGSHOT
 #define B_TRANSITION_DRAKE                                     15
 #define B_TRANSITION_CHAMPION                                  16
 // added in Emerald
-#define B_TRANSITION_AQUA                                      17
+#define B_TRANSITION_NEW_ELDERS                                17
+#define B_TRANSITION_AQUA                                      B_TRANSITION_NEW_ELDERS
 #define B_TRANSITION_MAGMA                                     18
 #define B_TRANSITION_REGICE                                    19
 #define B_TRANSITION_REGISTEEL                                 20

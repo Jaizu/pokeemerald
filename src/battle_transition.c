@@ -81,7 +81,7 @@ static void Phase2Task_Phoebe(u8 taskId);
 static void Phase2Task_Glacia(u8 taskId);
 static void Phase2Task_Drake(u8 taskId);
 static void Phase2Task_Champion(u8 taskId);
-static void Phase2Task_Aqua(u8 taskId);
+static void Phase2Task_NewElders(u8 taskId);
 static void Phase2Task_Magma(u8 taskId);
 static void Phase2Task_Regice(u8 taskId);
 static void Phase2Task_Registeel(u8 taskId);
@@ -125,8 +125,8 @@ static bool8 Phase2_Swirl_Func1(struct Task *task);
 static bool8 Phase2_Swirl_Func2(struct Task *task);
 static bool8 Phase2_Shuffle_Func1(struct Task *task);
 static bool8 Phase2_Shuffle_Func2(struct Task *task);
-static bool8 Phase2_Aqua_Func1(struct Task *task);
-static bool8 Phase2_Aqua_Func2(struct Task *task);
+static bool8 Phase2_NewElders_Func1(struct Task *task);
+static bool8 Phase2_NewElders_Func2(struct Task *task);
 static bool8 Phase2_Magma_Func1(struct Task *task);
 static bool8 Phase2_Magma_Func2(struct Task *task);
 static bool8 Phase2_FramesCountdown(struct Task *task);
@@ -278,9 +278,10 @@ static const u32 sEliteFour_Tileset[] = INCBIN_U32("graphics/battle_transitions/
 static const u8 sUnusedBrendan_Gfx[] = INCBIN_U8("graphics/battle_transitions/unused_brendan.4bpp");
 static const u8 sUnusedLass_Gfx[] = INCBIN_U8("graphics/battle_transitions/unused_lass.4bpp");
 static const u32 sShrinkingBoxTileset[] = INCBIN_U32("graphics/battle_transitions/shrinking_box.4bpp");
+static const u16 sNewElders_Palette[] = INCBIN_U16("graphics/battle_transitions/new_elders.gbapal");
+static const u32 sNewElders_Tileset[] = INCBIN_U32("graphics/battle_transitions/new_elders.4bpp.lz");
+static const u32 sNewElders_Tilemap[] = INCBIN_U32("graphics/battle_transitions/new_elders.bin.lz");
 static const u16 sEvilTeam_Palette[] = INCBIN_U16("graphics/battle_transitions/evil_team.gbapal");
-static const u32 sTeamAqua_Tileset[] = INCBIN_U32("graphics/battle_transitions/team_aqua.4bpp.lz");
-static const u32 sTeamAqua_Tilemap[] = INCBIN_U32("graphics/battle_transitions/team_aqua.bin.lz");
 static const u32 sTeamMagma_Tileset[] = INCBIN_U32("graphics/battle_transitions/team_magma.4bpp.lz");
 static const u32 sTeamMagma_Tilemap[] = INCBIN_U32("graphics/battle_transitions/team_magma.bin.lz");
 static const u32 sRegis_Tileset[] = INCBIN_U32("graphics/battle_transitions/regis.4bpp");
@@ -336,7 +337,7 @@ static const TaskFunc sPhase2_Tasks[B_TRANSITION_COUNT] =
     [B_TRANSITION_GLACIA] = Phase2Task_Glacia,
     [B_TRANSITION_DRAKE] = Phase2Task_Drake,
     [B_TRANSITION_CHAMPION] = Phase2Task_Champion,
-    [B_TRANSITION_AQUA] = Phase2Task_Aqua,
+    [B_TRANSITION_NEW_ELDERS] = Phase2Task_NewElders,
     [B_TRANSITION_MAGMA] = Phase2Task_Magma,
     [B_TRANSITION_REGICE] = Phase2Task_Regice,
     [B_TRANSITION_REGISTEEL] = Phase2Task_Registeel,
@@ -390,10 +391,10 @@ static const TransitionStateFunc sPhase2_Shuffle_Funcs[] =
     Phase2_Shuffle_Func2,
 };
 
-static const TransitionStateFunc sPhase2_Aqua_Funcs[] =
+static const TransitionStateFunc sPhase2_NewElders_Funcs[] =
 {
-    Phase2_Aqua_Func1,
-    Phase2_Aqua_Func2,
+    Phase2_NewElders_Func1,
+    Phase2_NewElders_Func2,
     Phase2_BigPokeball_Func3,
     Phase2_BigPokeball_Func4,
     Phase2_BigPokeball_Func5,
@@ -1209,9 +1210,9 @@ static void Phase2Task_BigPokeball(u8 taskId)
     while (sPhase2_BigPokeball_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
 }
 
-static void Phase2Task_Aqua(u8 taskId)
+static void Phase2Task_NewElders(u8 taskId)
 {
-    while (sPhase2_Aqua_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
+    while (sPhase2_NewElders_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
 }
 
 static void Phase2Task_Magma(u8 taskId)
@@ -1265,7 +1266,7 @@ static void sub_814669C(struct Task *task)
     SetVBlankCallback(VBlankCB0_Phase2_BigPokeball);
 }
 
-static bool8 Phase2_Aqua_Func1(struct Task *task)
+static bool8 Phase2_NewElders_Func1(struct Task *task)
 {
     u16 *tilemap, *tileset;
 
@@ -1273,8 +1274,8 @@ static bool8 Phase2_Aqua_Func1(struct Task *task)
     sub_814669C(task);
     GetBg0TilesDst(&tilemap, &tileset);
     CpuFill16(0, tilemap, 0x800);
-    LZ77UnCompVram(sTeamAqua_Tileset, tileset);
-    LoadPalette(sEvilTeam_Palette, 0xF0, 0x20);
+    LZ77UnCompVram(sNewElders_Tileset, tileset);
+    LoadPalette(sNewElders_Palette, 0xF0, 0x20);
 
     task->tState++;
     return FALSE;
@@ -1344,12 +1345,12 @@ static bool8 Phase2_BigPokeball_Func2(struct Task *task)
     return TRUE;
 }
 
-static bool8 Phase2_Aqua_Func2(struct Task *task)
+static bool8 Phase2_NewElders_Func2(struct Task *task)
 {
     u16 *tilemap, *tileset;
 
     GetBg0TilesDst(&tilemap, &tileset);
-    LZ77UnCompVram(sTeamAqua_Tilemap, tilemap);
+    LZ77UnCompVram(sNewElders_Tilemap, tilemap);
     sub_8149F98(gScanlineEffectRegBuffers[0], 0, task->tData4, 132, task->tData5, 160);
 
     task->tState++;
