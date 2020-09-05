@@ -303,6 +303,9 @@ $(MID_SUBDIR)/mus_mishiro.s: %.s: %.mid
 $(MID_SUBDIR)/mus_naminori.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G017 -V080
 
+$(MID_SUBDIR)/mus_new_elders_grunt.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G186 -V080 -P1
+
 $(MID_SUBDIR)/mus_nextroad.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G047 -V097
 
@@ -521,9 +524,6 @@ $(MID_SUBDIR)/mus_rg_title.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_rg_titlerog.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G181 -V075
-
-$(MID_SUBDIR)/mus_rg_tvnoize.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G186 -V059
 
 $(MID_SUBDIR)/mus_rg_union.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G132 -V090

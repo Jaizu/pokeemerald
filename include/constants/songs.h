@@ -483,7 +483,7 @@
 #define MUS_RG_DEOEYE 555       // Encounter! Deoxys
 #define MUS_RG_T_TOWER 556      // Trainer Tower (Gym)
 #define MUS_RG_SLOWMASARA 557   // Pallet Town (Hall of Fame remix)
-#define MUS_RG_TVNOIZE 558      // Teachy TV
+#define MUS_NEW_ELDERS_GRUNT 558 // Battle! New Elders Grunt
 #define PH_TRAP_BLEND 559
 #define PH_TRAP_HELD 560
 #define PH_TRAP_SOLO 561

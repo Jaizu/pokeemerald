@@ -72,8 +72,8 @@ AerousCity_Text_TheAerousMuseumIsHavingAnExhibit:
 	.string "Having an exhibit!\n"
 	.string "Yeah…\p"
 	.string "…You don't believe me?\n"
-	.string "Argh, you're a belligerent child!\p"
-	.string "I'll make you pay!{PLAY_BGM}{MUS_MGM0}$"
+	.string "Argh, you're a belligerent child!{PLAY_BGM}{MUS_MGM0}\p"
+	.string "I'll make you pay!$"
 
 AerousCity_Text_MuseumClerkDefeat:
 	.string "Oh man…\n"
