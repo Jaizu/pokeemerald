@@ -131,8 +131,10 @@
 #define OBJ_EVENT_GFX_DEVON_EMPLOYEE             OBJ_EVENT_GFX_WORKER
 #define OBJ_EVENT_GFX_AQUA_MEMBER_M              117
 #define OBJ_EVENT_GFX_AQUA_MEMBER_F              118
-#define OBJ_EVENT_GFX_MAGMA_MEMBER_M             119
-#define OBJ_EVENT_GFX_MAGMA_MEMBER_F             120
+#define OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_M         119
+#define OBJ_EVENT_GFX_MAGMA_MEMBER_M             OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_M
+#define OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_F         120
+#define OBJ_EVENT_GFX_MAGMA_MEMBER_F             OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_F
 #define OBJ_EVENT_GFX_SIDNEY                     121
 #define OBJ_EVENT_GFX_PHOEBE                     122
 #define OBJ_EVENT_GFX_GLACIA                     123

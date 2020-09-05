@@ -1158,28 +1158,28 @@ const struct SpriteFrameImage gObjectEventPicTable_AquaMemberF[] = {
     overworld_frame(gObjectEventPic_AquaMemberF, 2, 4, 8),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_MagmaMemberM[] = {
-    overworld_frame(gObjectEventPic_MagmaMemberM, 2, 4, 0),
-    overworld_frame(gObjectEventPic_MagmaMemberM, 2, 4, 1),
-    overworld_frame(gObjectEventPic_MagmaMemberM, 2, 4, 2),
-    overworld_frame(gObjectEventPic_MagmaMemberM, 2, 4, 3),
-    overworld_frame(gObjectEventPic_MagmaMemberM, 2, 4, 4),
-    overworld_frame(gObjectEventPic_MagmaMemberM, 2, 4, 5),
-    overworld_frame(gObjectEventPic_MagmaMemberM, 2, 4, 6),
-    overworld_frame(gObjectEventPic_MagmaMemberM, 2, 4, 7),
-    overworld_frame(gObjectEventPic_MagmaMemberM, 2, 4, 8),
+const struct SpriteFrameImage gObjectEventPicTable_NewEldersGruntM[] = {
+    overworld_frame(gObjectEventPic_NewEldersGruntM, 2, 4, 0),
+    overworld_frame(gObjectEventPic_NewEldersGruntM, 2, 4, 1),
+    overworld_frame(gObjectEventPic_NewEldersGruntM, 2, 4, 2),
+    overworld_frame(gObjectEventPic_NewEldersGruntM, 2, 4, 3),
+    overworld_frame(gObjectEventPic_NewEldersGruntM, 2, 4, 4),
+    overworld_frame(gObjectEventPic_NewEldersGruntM, 2, 4, 5),
+    overworld_frame(gObjectEventPic_NewEldersGruntM, 2, 4, 6),
+    overworld_frame(gObjectEventPic_NewEldersGruntM, 2, 4, 7),
+    overworld_frame(gObjectEventPic_NewEldersGruntM, 2, 4, 8),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_MagmaMemberF[] = {
-    overworld_frame(gObjectEventPic_MagmaMemberF, 2, 4, 0),
-    overworld_frame(gObjectEventPic_MagmaMemberF, 2, 4, 1),
-    overworld_frame(gObjectEventPic_MagmaMemberF, 2, 4, 2),
-    overworld_frame(gObjectEventPic_MagmaMemberF, 2, 4, 3),
-    overworld_frame(gObjectEventPic_MagmaMemberF, 2, 4, 4),
-    overworld_frame(gObjectEventPic_MagmaMemberF, 2, 4, 5),
-    overworld_frame(gObjectEventPic_MagmaMemberF, 2, 4, 6),
-    overworld_frame(gObjectEventPic_MagmaMemberF, 2, 4, 7),
-    overworld_frame(gObjectEventPic_MagmaMemberF, 2, 4, 8),
+const struct SpriteFrameImage gObjectEventPicTable_NewEldersGruntF[] = {
+    overworld_frame(gObjectEventPic_NewEldersGruntF, 2, 4, 0),
+    overworld_frame(gObjectEventPic_NewEldersGruntF, 2, 4, 1),
+    overworld_frame(gObjectEventPic_NewEldersGruntF, 2, 4, 2),
+    overworld_frame(gObjectEventPic_NewEldersGruntF, 2, 4, 3),
+    overworld_frame(gObjectEventPic_NewEldersGruntF, 2, 4, 4),
+    overworld_frame(gObjectEventPic_NewEldersGruntF, 2, 4, 5),
+    overworld_frame(gObjectEventPic_NewEldersGruntF, 2, 4, 6),
+    overworld_frame(gObjectEventPic_NewEldersGruntF, 2, 4, 7),
+    overworld_frame(gObjectEventPic_NewEldersGruntF, 2, 4, 8),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Sidney[] = {
