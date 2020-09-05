@@ -15,3 +15,44 @@ AerousCity_PokemonCenter_EventScript_Nurse::
 	waitbuttonpress
 	release
 	end
+
+AerousCity_PokemonCenter_EventScript_Youngster::
+	lock
+	faceplayer
+	msgbox AerousCity_PokemonCenter_Text_WillTheyHaveToRedrawMaps, MSGBOX_DEFAULT
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
+AerousCity_PokemonCenter_Text_WillTheyHaveToRedrawMaps:
+	.string "I wonder if they will have to\n"
+	.string "redraw these maps if the tremors\l"
+	.string "do enough damage to the region…$"
+
+AerousCity_PokemonCenter_EventScript_GameboyKid1::
+	lock
+	faceplayer
+	msgbox AerousCity_PokemonCenter_Text_ImTradingWithMyFriend, MSGBOX_DEFAULT
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
+AerousCity_PokemonCenter_Text_ImTradingWithMyFriend:
+	.string "I'm trading with my friend.$"
+
+AerousCity_PokemonCenter_EventScript_GameboyKid2::
+	lock
+	faceplayer
+	msgbox AerousCity_PokemonCenter_Text_MyFriendIsTradingMeHisBoldore, MSGBOX_DEFAULT
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
+AerousCity_PokemonCenter_Text_MyFriendIsTradingMeHisBoldore:
+	.string "My friend is trading me his\n"
+	.string "Boldore, so it will evolve.\p"
+	.string "Boldore also evolve when you train\n"
+	.string "them enough, but I'm too lazy.$"

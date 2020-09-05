@@ -123,7 +123,7 @@
       "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "AerousCity_EventScript_CitySign"
     },
     {
       "type": "sign",
@@ -131,7 +131,7 @@
       "y": 23,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "AerousCity_EventScript_MuseumSign"
     },
     {
       "type": "sign",
@@ -139,7 +139,7 @@
       "y": 24,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "AerousCity_EventScript_ArtClubSign"
     },
     {
       "type": "sign",
@@ -147,7 +147,7 @@
       "y": 31,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "AerousCity_EventScript_PortSign"
     },
     {
       "type": "sign",
@@ -155,7 +155,7 @@
       "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "AerousCity_EventScript_BikeShopSign"
     },
     {
       "type": "sign",
@@ -163,7 +163,7 @@
       "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "AerousCity_EventScript_NameRaterSign"
     }
   ]
 }
