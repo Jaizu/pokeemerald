@@ -1456,12 +1456,13 @@
 
 // Towns and Cities
 #define FLAG_VISITED_LITTLEROOT_TOWN                (SYSTEM_FLAGS + 0xF)
-#define FLAG_VISITED_CELANTO_TOWN                   (SYSTEM_FLAGS + 0xF) // FLAG_VISITED_LITTLEROOT_TOWN in Emerald
+#define FLAG_VISITED_CELANTO_TOWN                   (SYSTEM_FLAGS + 0xF)  // FLAG_VISITED_LITTLEROOT_TOWN in Emerald
 #define FLAG_VISITED_OLDALE_TOWN                    (SYSTEM_FLAGS + 0x10)
 #define FLAG_VISITED_ARCHAN_TOWN                    (SYSTEM_FLAGS + 0x10) // FLAG_VISITED_OLDALE_TOWN in Emerald
 #define FLAG_VISITED_DEWFORD_TOWN                   (SYSTEM_FLAGS + 0x11)
 #define FLAG_VISITED_SEROS_VILLAGE                  (SYSTEM_FLAGS + 0x11) // FLAG_VISITED_DEWFORD_TOWN in Emerald
 #define FLAG_VISITED_LAVARIDGE_TOWN                 (SYSTEM_FLAGS + 0x12)
+#define FLAG_VISITED_AEROUS_CITY                    (SYSTEM_FLAGS + 0x12) // FLAG_VISITED_LAVARIDGE_TOWN in Emerald
 #define FLAG_VISITED_FALLARBOR_TOWN                 (SYSTEM_FLAGS + 0x13)
 #define FLAG_VISITED_VERDANTURF_TOWN                (SYSTEM_FLAGS + 0x14)
 #define FLAG_VISITED_PACIFIDLOG_TOWN                (SYSTEM_FLAGS + 0x15)

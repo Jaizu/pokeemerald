@@ -1160,3 +1160,7 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/AerousCity/scripts.inc"
 
 	.include "data/maps/ArchanHills_SecretTemple/scripts.inc"
+
+	.include "data/maps/AerousCity_PokemonCenter/scripts.inc"
+
+	.include "data/maps/AerousCity_Mart/scripts.inc"

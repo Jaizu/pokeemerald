@@ -7,6 +7,7 @@
     "gMapGroup_CelantoTown",
     "gMapGroup_ArchanTown",
     "gMapGroup_SerosVillage",
+    "gMapGroup_AerousCity",
     "gMapGroup0",
     "gMapGroup1",
     "gMapGroup2",
@@ -70,8 +71,8 @@
     "CelantoPath_HiddenGrotto",
     "ArchanTown_HiddenGrotto",
     "ArchanTunnel_SecretTemple",
-    "AerousRoad_HiddenGrotto",
-    "ArchanHills_SecretTemple"
+    "ArchanHills_SecretTemple",
+    "AerousRoad_HiddenGrotto"
   ],
   "gMapGroup_CelantoTown": [
     "CelantoTown_PlayersHouse_1F",
@@ -101,6 +102,10 @@
     "SerosVillage_CoultersHouse_1F",
     "SerosVillage_CoultersHouse_2F",
     "SerosVillage_House"
+  ],
+  "gMapGroup_AerousCity": [
+    "AerousCity_PokemonCenter",
+    "AerousCity_Mart"
   ],
   "gMapGroup0": [
     "PetalburgCity",
