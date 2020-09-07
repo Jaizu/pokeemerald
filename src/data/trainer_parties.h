@@ -329,11 +329,11 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MuseumClerk[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout6[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_MuseumGrunt1[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_ZUBAT,
+    .lvl = 15,
+    .species = SPECIES_HOOTHOOT,
     }
 };
 

@@ -853,8 +853,7 @@ u8 GetTrainerBattleTransition(void)
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_CHAMPION)
         return B_TRANSITION_CHAMPION;
 
-    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_NEW_ELDERS
-        || gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_MUSEUM)
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_NEW_ELDERS)
         return B_TRANSITION_NEW_ELDERS;
 
     if (gTrainers[gTrainerBattleOpponent_A].doubleBattle == TRUE)

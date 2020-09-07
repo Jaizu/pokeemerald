@@ -1,7 +1,7 @@
 CelantoTown_Condominiums_2F_MapScripts::
 	.byte 0
 
-CelantoTown_Condominiums_2F_EventScript_Beauty::
+CelantoTown_Condominiums_2F_EventScript_PremierBallSwapper::
 	lock
 	faceplayer
 	msgbox CelantoTown_Condominiums_2F_Text_ImObsessedWithPremierBalls, MSGBOX_DEFAULT
@@ -69,7 +69,7 @@ CelantoTown_Condominiums_2F_Text_AhMuchBetter:
 	.string "Ahh… Much better!\n"
 	.string "Doesn't that feel better?$"
 
-CelantoTown_Condominiums_2F_EventScript_Fisherman::
+CelantoTown_Condominiums_2F_EventScript_OldRodFisherman::
 	lock
 	faceplayer
 	goto_if_set FLAG_RECEIVED_OLD_ROD, CelantoTown_Condominiums_2F_EventScript_ExplainOldRod
@@ -113,7 +113,7 @@ CelantoTown_Condominiums_2F_Text_GreatYouveGotAFullTeam:
 	.string "That's impressive, for a newbie.\n"
 	.string "Talent needs rewarding. Take this!$"
 
-CelantoTown_Condominiums_2F_EventScript_Maniac::
+CelantoTown_Condominiums_2F_EventScript_ShuppetManiac::
 	lock
 	faceplayer
 	goto_if_set FLAG_RECEIVED_CELANTO_DUSK_STONE, CelantoTown_Condominiums_2F_EventScript_ExplainDuskStone
