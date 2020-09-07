@@ -61,7 +61,9 @@
 #define TRAINER_GRUNT_AQUA_HIDEOUT_6         28
 #define TRAINER_MUSEUM_GRUNT_1               28 // TRAINER_GRUNT_AQUA_HIDEOUT_6 in Emerald
 #define TRAINER_FREDRICK                     29
+#define TRAINER_MUSEUM_GRUNT_2               29 // TRAINER_FREDRICK in Emerald
 #define TRAINER_MATT                         30
+#define TRAINER_MUSEUM_GRUNT_3               30 // TRAINER_MATT in Emerald
 #define TRAINER_ZANDER                       31
 #define TRAINER_SHELLY_WEATHER_INSTITUTE     32
 #define TRAINER_SHELLY_SEAFLOOR_CAVERN       33

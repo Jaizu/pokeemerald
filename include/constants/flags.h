@@ -118,8 +118,9 @@
 #define FLAG_CAUGHT_ARCHAN_HILLS_SECRET_TEMPLE_KECLEON     0x5F // FLAG_RECEIVED_POKEBLOCK_CASE in Emerald
 #define FLAG_RECEIVED_SECRET_POWER                         0x60
 #define FLAG_DEFEATED_ARCHAN_HILLS_SECRET_TEMPLE_KECLEON   0x60 // FLAG_RECEIVED_SECRET_POWER in Emerald
-
 #define FLAG_MET_TEAM_AQUA_HARBOR            0x61
+#define FLAG_DEFEATED_NEW_ELDERS             0x61 // FLAG_MET_TEAM_AQUA_HARBOR in Emerald
+
 #define FLAG_TV_EXPLAINED                    0x62
 #define FLAG_MAUVILLE_GYM_BARRIERS_STATE     0x63
 #define FLAG_MOSSDEEP_GYM_SWITCH_1           0x64 // Leftover from the RS version of Mossdeep Gym, functionally unused
@@ -855,10 +856,13 @@
 #define FLAG_HIDE_ARCHAN_HILLS_SECRET_TEMPLE_KECLEON                0x2E4 // FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN in Emerald
 #define FLAG_HIDE_ROUTE_109_MR_BRINEY                               0x2E5
 #define FLAG_HIDE_AEROUS_CITY_MUSEUM_CLERK                          0x2E5 // FLAG_HIDE_ROUTE_109_MR_BRINEY in Emerald
-
 #define FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT                          0x2E6
+#define FLAG_HIDE_AEROUS_MUSEUM_NEW_ELDERS                          0x2E6 // FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT in Emerald
 #define FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN                       0x2E7
+#define FLAG_HIDE_AEROUS_MUSEUM_HERSCHEL                            0x2E7 // FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN in Emerald
 #define FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT                          0x2E8
+#define FLAG_HIDE_AEROUS_CITY_HERSCHEL                              0x2E8 // FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT in Emerald
+
 #define FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_BRENDAN            0x2E9
 #define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MAY                    0x2EA
 #define FLAG_HIDE_SAFARI_ZONE_SOUTH_EAST_EXPANSION                  0x2EB

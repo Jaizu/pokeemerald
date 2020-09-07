@@ -92,5 +92,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_HOUSE_STINGA
 	setflag FLAG_HIDE_DAY_CARE_CENTER_DAY_CARE_MAN
 	setflag FLAG_HIDE_DAY_CARE_CENTER_FERNANDO
+	setflag FLAG_HIDE_AEROUS_CITY_HERSCHEL
 	call EventScript_ResetAllBerries
 	end

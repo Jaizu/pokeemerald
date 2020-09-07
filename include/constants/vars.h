@@ -106,6 +106,7 @@
 #define VAR_ARCHAN_TOWN_STATE                0x4051 // VAR_OLDALE_TOWN_STATE in Emerald
 #define VAR_SEROS_VILLAGE_STATE              0x4052 // VAR_DEWFORD_TOWN_STATE in Emerald
 #define VAR_LAVARIDGE_TOWN_STATE             0x4053
+#define VAR_AEROUS_CITY_STATE                0x4053 // VAR_LAVARIDGE_TOWN_STATE in Emerald
 #define VAR_CURRENT_SECRET_BASE              0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
 #define VAR_VERDANTURF_TOWN_STATE            0x4055 // Unused Var
 #define VAR_PACIFIDLOG_TOWN_STATE            0x4056 // Unused Var
@@ -166,6 +167,7 @@
 #define VAR_CABLE_CLUB_STATE                 0x4087
 #define VAR_DAY_CARE_CENTER_STATE            0x4087 // VAR_CABLE_CLUB_STATE in Emerald
 #define VAR_CONTEST_TYPE                     0x4088
+#define VAR_AEROUS_MUSEUM_STATE              0x4088 // VAR_CONTEST_TYPE in Emerald
 #define VAR_SECRET_BASE_INITIALIZED          0x4089
 #define VAR_CONTEST_PRIZE_PICKUP             0x408A
 #define VAR_UNUSED_0x408B                    0x408B // Unused Var

@@ -332,34 +332,24 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MuseumClerk[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_MuseumGrunt1[] = {
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 14,
     .species = SPECIES_HOOTHOOT,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Fredrick[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_MuseumGrunt2[] = {
     {
-    .iv = 100,
-    .lvl = 30,
-    .species = SPECIES_MAKUHITA,
-    },
-    {
-    .iv = 100,
-    .lvl = 30,
-    .species = SPECIES_MACHOKE,
+    .iv = 0,
+    .lvl = 14,
+    .species = SPECIES_ROGGENROLA,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Matt[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_MuseumGrunt3[] = {
     {
-    .iv = 50,
-    .lvl = 34,
-    .species = SPECIES_MIGHTYENA,
-    },
-    {
-    .iv = 50,
-    .lvl = 34,
-    .species = SPECIES_GOLBAT,
+    .iv = 0,
+    .lvl = 14,
+    .species = SPECIES_OMANYTE,
     }
 };
 

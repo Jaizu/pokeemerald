@@ -63,6 +63,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "AerousCity_EventScript_MuseumClerk",
       "flag": "FLAG_HIDE_AEROUS_CITY_MUSEUM_CLERK"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WALLACE",
+      "x": 3,
+      "y": 26,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_AEROUS_CITY_HERSCHEL"
     }
   ],
   "warp_events": [
@@ -152,7 +165,24 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_AEROUS_CITY_STATE",
+      "var_value": "1",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_AEROUS_CITY_STATE",
+      "var_value": "1",
+      "script": "NULL"
+    }
   ],
   "bg_events": [
     {

@@ -1,13 +1,26 @@
-// TODO: Define these
-.equ FLAG_DEFEATED_NEW_ELDERS, 0
+// TODO: Create the Relic Ball item
 .equ ITEM_RELIC_BALL, ITEM_POKE_BALL
 
 AerousCity_Museum_1F_MapScripts::
 	.byte 0
 
 AerousCity_Museum_1F_EventScript_Teala::
-	msgbox AerousCity_Museum_1F_Text_WelcomeUpstairsRentedToSomeOrganization, MSGBOX_NPC
+	lock
+	faceplayer
+	compare VAR_AEROUS_MUSEUM_STATE, 1
+	goto_if_lt AerousCity_Museum_1F_EventScript_TealaExplainNewEldersPresence
+	msgbox AerousCity_Museum_1F_Text_EnjoyPerusingOurSubjects, MSGBOX_DEFAULT
+	release
 	end
+
+AerousCity_Museum_1F_EventScript_TealaExplainNewEldersPresence:
+	msgbox AerousCity_Museum_1F_Text_WelcomeUpstairsRentedToSomeOrganization, MSGBOX_DEFAULT
+	release
+	end
+
+AerousCity_Museum_1F_Text_EnjoyPerusingOurSubjects:
+	.string "Hello!\n"
+	.string "Enjoy perusing our subjects!$"
 
 AerousCity_Museum_1F_Text_WelcomeUpstairsRentedToSomeOrganization:
 	.string "Hello, welcome to the\n"
@@ -37,6 +50,7 @@ AerousCity_Museum_1F_EventScript_RelicBallSwapper::
 	faceplayer
 	msgbox AerousCity_Museum_1F_Text_RelicBallsAreIncrediblyRare, MSGBOX_DEFAULT
 	goto_if_set FLAG_DEFEATED_NEW_ELDERS, AerousCity_Museum_1F_EventScript_CheckForRelicBall
+	msgbox AerousCity_Museum_1F_Text_ImWorkingOnFindingASource, MSGBOX_DEFAULT
 	release
 	end
 
@@ -72,6 +86,12 @@ AerousCity_Museum_1F_EventScript_SwapBallForRelic:
 
 AerousCity_Museum_1F_Text_RelicBallsAreIncrediblyRare:
 	.string "Relic Balls are incredibly rare.$"
+
+AerousCity_Museum_1F_Text_ImWorkingOnFindingASource:
+	.string "I'm working on finding a source\n"
+	.string "who says he can get me some…\p"
+	.string "Come back to me in a while, yeah?\p"
+	.string "I might be able to hook you up…$"
 
 AerousCity_Museum_1F_Text_WhoaWhereDidYouFindOne:
 	.string "Whoa! Where did you find\n"

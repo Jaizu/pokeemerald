@@ -405,32 +405,32 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_MuseumGrunt1},
     },
 
-    [TRAINER_FREDRICK] =
+    [TRAINER_MUSEUM_GRUNT_2] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_EXPERT,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
-        .trainerPic = TRAINER_PIC_EXPERT_M,
-        .trainerName = _("FREDRICK"),
+        .trainerClass = TRAINER_CLASS_MUSEUM,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_NEW_ELDERS_GRUNT_M,
+        .trainerName = _("Grunt"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Fredrick),
-        .party = {.NoItemDefaultMoves = sParty_Fredrick},
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_MuseumGrunt2),
+        .party = {.NoItemDefaultMoves = sParty_MuseumGrunt2},
     },
 
-    [TRAINER_MATT] =
+    [TRAINER_MUSEUM_GRUNT_3] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_AQUA_ADMIN,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_ADMIN_M,
-        .trainerName = _("MATT"),
-        .items = {ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE},
+        .trainerClass = TRAINER_CLASS_NEW_ELDERS,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_NEW_ELDERS_GRUNT_M,
+        .trainerName = _("Grunt"),
+        .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Matt),
-        .party = {.NoItemDefaultMoves = sParty_Matt},
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_MuseumGrunt3),
+        .party = {.NoItemDefaultMoves = sParty_MuseumGrunt3},
     },
 
     [TRAINER_ZANDER] =

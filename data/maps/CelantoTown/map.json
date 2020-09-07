@@ -44,7 +44,7 @@
       "flag": "FLAG_HIDE_CELANTO_TOWN_MOM"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
+      "graphics_id": "OBJ_EVENT_GFX_REDWOOD",
       "x": 46,
       "y": 14,
       "elevation": 3,
