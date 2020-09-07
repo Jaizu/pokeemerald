@@ -22,8 +22,8 @@ const u32 gTrainerPalette_FairyTaleGirl[] = INCBIN_U32("graphics/trainers/palett
 const u32 gTrainerFrontPic_SwimmerM[] = INCBIN_U32("graphics/trainers/front_pics/swimmer_m_front_pic.4bpp.lz");
 const u32 gTrainerPalette_SwimmerM[] = INCBIN_U32("graphics/trainers/palettes/swimmer_m.gbapal.lz");
 
-const u32 gTrainerFrontPic_MagmaGruntM[] = INCBIN_U32("graphics/trainers/front_pics/magma_grunt_m_front_pic.4bpp.lz");
-const u32 gTrainerPalette_MagmaGruntM[] = INCBIN_U32("graphics/trainers/palettes/magma_grunt_m.gbapal.lz");
+const u32 gTrainerFrontPic_NewEldersGruntM[] = INCBIN_U32("graphics/trainers/front_pics/new_elders_grunt_m_front_pic.4bpp.lz");
+const u32 gTrainerPalette_NewEldersGruntM[] = INCBIN_U32("graphics/trainers/palettes/new_elders_grunt_m.gbapal.lz");
 
 const u32 gTrainerFrontPic_ExpertM[] = INCBIN_U32("graphics/trainers/front_pics/expert_m_front_pic.4bpp.lz");
 const u32 gTrainerPalette_ExpertM[] = INCBIN_U32("graphics/trainers/palettes/expert_m.gbapal.lz");

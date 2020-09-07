@@ -4682,7 +4682,7 @@ static void HandleEndTurn_BattleWon(void)
         case TRAINER_CLASS_CHAMPION:
             PlayBGM(MUS_KACHI5);
             break;
-        case TRAINER_CLASS_TEAM_AQUA:
+        case TRAINER_CLASS_MUSEUM:
         case TRAINER_CLASS_NEW_ELDERS:
         case TRAINER_CLASS_AQUA_ADMIN:
         case TRAINER_CLASS_AQUA_LEADER:

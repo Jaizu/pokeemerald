@@ -30,7 +30,7 @@ static const union AnimCmd *const sAnims_SwimmerM[] ={
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_MagmaGruntM[] ={
+static const union AnimCmd *const sAnims_NewEldersGruntM[] ={
     sAnim_GeneralFrame0,
 };
 
@@ -380,7 +380,7 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_COLLECTOR] = sAnims_Collector,
     [TRAINER_PIC_FAIRY_TALE_GIRL] = sAnims_FairyTaleGirl,
     [TRAINER_PIC_SWIMMER_M] = sAnims_SwimmerM,
-    [TRAINER_PIC_MAGMA_GRUNT_M] = sAnims_MagmaGruntM,
+    [TRAINER_PIC_NEW_ELDERS_GRUNT_M] = sAnims_NewEldersGruntM,
     [TRAINER_PIC_EXPERT_M] = sAnims_ExpertM,
     [TRAINER_PIC_AQUA_ADMIN_M] = sAnims_AquaAdminM,
     [TRAINER_PIC_BLACK_BELT] = sAnims_BlackBelt,
