@@ -33,7 +33,7 @@ AerousCity_Museum_1F_Text_WelcomeUpstairsRentedToSomeOrganization:
 AerousCity_Museum_1F_EventScript_SouvenirShopClerk::
 	lock
 	faceplayer
-	message gText_HowMayIServeYou
+	message AerousCity_Museum_1F_Text_WouldYouLikeToBuySouvenir
 	waitmessage
 	pokemart AerousCity_Museum_1F_Pokemart_SouvenirShop
 	goto EventScript_MartClerkPleaseComeAgain
@@ -44,6 +44,10 @@ AerousCity_Museum_1F_Pokemart_SouvenirShop:
 	.2byte ITEM_NONE
 	release
 	end
+
+AerousCity_Museum_1F_Text_WouldYouLikeToBuySouvenir:
+	.string "Hi, there!\n"
+	.string "Would you like to buy a souvenir?$"
 
 AerousCity_Museum_1F_EventScript_RelicBallSwapper::
 	lock

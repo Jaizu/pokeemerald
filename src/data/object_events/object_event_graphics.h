@@ -42,6 +42,7 @@ const u32 gObjectEventPic_Coulter[] = INCBIN_U32("graphics/object_events/pics/pe
 const u16 gObjectEventPaletteCoulter[] = INCBIN_U16("graphics/object_events/palettes/coulter.gbapal");
 const u16 gObjectEventPaletteLady[] = INCBIN_U16("graphics/object_events/palettes/lady.gbapal");
 const u16 gObjectEventPaletteNewEldersGrunt[] = INCBIN_U16("graphics/object_events/palettes/new_elders_grunt.gbapal");
+const u16 gObjectEventPaletteEunice[] = INCBIN_U16("graphics/object_events/palettes/eunice.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
@@ -142,7 +143,7 @@ const u32 gObjectEventPic_Cameraman[] = INCBIN_U32("graphics/object_events/pics/
 const u32 gObjectEventPic_Scientist2[] = INCBIN_U32("graphics/object_events/pics/people/scientist_2.4bpp");
 const u32 gObjectEventPic_Worker[] = INCBIN_U32("graphics/object_events/pics/people/worker.4bpp");
 const u32 gObjectEventPic_AquaMemberM[] = INCBIN_U32("graphics/object_events/pics/people/team_aqua/aqua_member_m.4bpp");
-const u32 gObjectEventPic_AquaMemberF[] = INCBIN_U32("graphics/object_events/pics/people/team_aqua/aqua_member_f.4bpp");
+const u32 gObjectEventPic_Eunice[] = INCBIN_U32("graphics/object_events/pics/people/eunice.4bpp");
 const u32 gObjectEventPic_NewEldersGruntM[] = INCBIN_U32("graphics/object_events/pics/people/new_elders_grunt_m.4bpp");
 const u32 gObjectEventPic_NewEldersGruntF[] = INCBIN_U32("graphics/object_events/pics/people/new_elders_grunt_f.4bpp");
 const u32 gObjectEventPic_Sidney[] = INCBIN_U32("graphics/object_events/pics/people/elite_four/sidney.4bpp");

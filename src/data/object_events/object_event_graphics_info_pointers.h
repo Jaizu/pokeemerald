@@ -118,7 +118,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SCIENTIST_2] =              &gObjectEventGraphicsInfo_Scientist2,
     [OBJ_EVENT_GFX_WORKER] =                   &gObjectEventGraphicsInfo_Worker,
     [OBJ_EVENT_GFX_AQUA_MEMBER_M] =            &gObjectEventGraphicsInfo_AquaMemberM,
-    [OBJ_EVENT_GFX_AQUA_MEMBER_F] =            &gObjectEventGraphicsInfo_AquaMemberF,
+    [OBJ_EVENT_GFX_EUNICE] =                   &gObjectEventGraphicsInfo_Eunice,
     [OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_M] =       &gObjectEventGraphicsInfo_NewEldersGruntM,
     [OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_F] =       &gObjectEventGraphicsInfo_NewEldersGruntF,
     [OBJ_EVENT_GFX_SIDNEY] =                   &gObjectEventGraphicsInfo_Sidney,
