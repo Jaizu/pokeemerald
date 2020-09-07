@@ -149,7 +149,8 @@
 #define OBJ_EVENT_GFX_WINONA                     130
 #define OBJ_EVENT_GFX_LIZA                       131
 #define OBJ_EVENT_GFX_TATE                       132
-#define OBJ_EVENT_GFX_WALLACE                    133
+#define OBJ_EVENT_GFX_HERSCHEL                   133
+#define OBJ_EVENT_GFX_WALLACE                    OBJ_EVENT_GFX_HERSCHEL
 #define OBJ_EVENT_GFX_STEVEN                     134
 #define OBJ_EVENT_GFX_COULTER                    135
 #define OBJ_EVENT_GFX_WALLY                      OBJ_EVENT_GFX_COULTER

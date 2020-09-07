@@ -1326,16 +1326,16 @@ const struct SpriteFrameImage gObjectEventPicTable_Tate[] = {
     overworld_frame(gObjectEventPic_Tate, 2, 4, 2),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_Wallace[] = {
-    overworld_frame(gObjectEventPic_Wallace, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Wallace, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Wallace, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Wallace, 2, 4, 3),
-    overworld_frame(gObjectEventPic_Wallace, 2, 4, 4),
-    overworld_frame(gObjectEventPic_Wallace, 2, 4, 5),
-    overworld_frame(gObjectEventPic_Wallace, 2, 4, 6),
-    overworld_frame(gObjectEventPic_Wallace, 2, 4, 7),
-    overworld_frame(gObjectEventPic_Wallace, 2, 4, 8),
+const struct SpriteFrameImage gObjectEventPicTable_Herschel[] = {
+    overworld_frame(gObjectEventPic_Herschel, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Herschel, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Herschel, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Herschel, 2, 4, 3),
+    overworld_frame(gObjectEventPic_Herschel, 2, 4, 4),
+    overworld_frame(gObjectEventPic_Herschel, 2, 4, 5),
+    overworld_frame(gObjectEventPic_Herschel, 2, 4, 6),
+    overworld_frame(gObjectEventPic_Herschel, 2, 4, 7),
+    overworld_frame(gObjectEventPic_Herschel, 2, 4, 8),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Steven[] = {

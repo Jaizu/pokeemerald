@@ -133,7 +133,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_WINONA] =                   &gObjectEventGraphicsInfo_Winona,
     [OBJ_EVENT_GFX_LIZA] =                     &gObjectEventGraphicsInfo_Liza,
     [OBJ_EVENT_GFX_TATE] =                     &gObjectEventGraphicsInfo_Tate,
-    [OBJ_EVENT_GFX_WALLACE] =                  &gObjectEventGraphicsInfo_Wallace,
+    [OBJ_EVENT_GFX_HERSCHEL] =                 &gObjectEventGraphicsInfo_Herschel,
     [OBJ_EVENT_GFX_STEVEN] =                   &gObjectEventGraphicsInfo_Steven,
     [OBJ_EVENT_GFX_COULTER] =                  &gObjectEventGraphicsInfo_Coulter,
     [OBJ_EVENT_GFX_LITTLE_BOY_3] =             &gObjectEventGraphicsInfo_RubySapphireLittleBoy,
