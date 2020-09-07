@@ -1164,3 +1164,7 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/AerousCity_PokemonCenter/scripts.inc"
 
 	.include "data/maps/AerousCity_Mart/scripts.inc"
+
+	.include "data/maps/AerousCity_Museum_1F/scripts.inc"
+
+	.include "data/maps/AerousCity_Museum_2F/scripts.inc"

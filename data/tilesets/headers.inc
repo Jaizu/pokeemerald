@@ -874,3 +874,14 @@ gTileset_WispForest::
 	.4byte gMetatiles_WispForest
 	.4byte gMetatileAttributes_WispForest
 	.4byte NULL
+
+	.align 2
+gTileset_AerousMuseum::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_AerousMuseum
+	.4byte gTilesetPalettes_AerousMuseum
+	.4byte gMetatiles_AerousMuseum
+	.4byte gMetatileAttributes_AerousMuseum
+	.4byte NULL

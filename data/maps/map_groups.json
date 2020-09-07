@@ -105,7 +105,9 @@
   ],
   "gMapGroup_AerousCity": [
     "AerousCity_PokemonCenter",
-    "AerousCity_Mart"
+    "AerousCity_Mart",
+    "AerousCity_Museum_1F",
+    "AerousCity_Museum_2F"
   ],
   "gMapGroup0": [
     "PetalburgCity",

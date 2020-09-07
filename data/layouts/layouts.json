@@ -4800,6 +4800,26 @@
       "secondary_tileset": "gTileset_Dewford",
       "border_filepath": "data/layouts/AerousCity/border.bin",
       "blockdata_filepath": "data/layouts/AerousCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_AEROUS_CITY_MUSEUM_1F",
+      "name": "AerousCity_Museum_1F_Layout",
+      "width": 23,
+      "height": 13,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_AerousMuseum",
+      "border_filepath": "data/layouts/AerousCity_Museum_1F/border.bin",
+      "blockdata_filepath": "data/layouts/AerousCity_Museum_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_AEROUS_CITY_MUSEUM_2F",
+      "name": "AerousCity_Museum_2F_Layout",
+      "width": 24,
+      "height": 10,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_AerousMuseum",
+      "border_filepath": "data/layouts/AerousCity_Museum_2F/border.bin",
+      "blockdata_filepath": "data/layouts/AerousCity_Museum_2F/map.bin"
     }
   ]
 }

@@ -1809,3 +1809,23 @@ gTilesetPalettes_WispForest::
 	.align 2
 gTilesetTiles_WispForest::
 	.incbin "data/tilesets/secondary/wispforest/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_AerousMuseum::
+	.incbin "data/tilesets/secondary/aerousmuseum/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/aerousmuseum/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/aerousmuseum/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/aerousmuseum/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/aerousmuseum/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/aerousmuseum/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/aerousmuseum/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/aerousmuseum/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/aerousmuseum/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/aerousmuseum/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/aerousmuseum/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/aerousmuseum/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/aerousmuseum/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_AerousMuseum::
+	.incbin "data/tilesets/secondary/aerousmuseum/tiles.4bpp.lz"

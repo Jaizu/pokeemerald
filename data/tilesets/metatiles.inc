@@ -588,3 +588,11 @@ gMetatiles_WispForest::
 	.align 1
 gMetatileAttributes_WispForest::
 	.incbin "data/tilesets/secondary/wispforest/metatile_attributes.bin"
+
+	.align 1
+gMetatiles_AerousMuseum::
+	.incbin "data/tilesets/secondary/aerousmuseum/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_AerousMuseum::
+	.incbin "data/tilesets/secondary/aerousmuseum/metatile_attributes.bin"

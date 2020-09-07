@@ -1,6 +1,10 @@
 #ifndef GUARD_METATILE_LABELS_H
 #define GUARD_METATILE_LABELS_H
 
+// gTileset_AerousMuseum
+#define METATILE_AerousMuseum_Cushion       0x213
+#define METATILE_AerousMuseum_Cushion_Warp  0x250
+
 // gTileset_BattleArena
 #define METATILE_BattleArena_Door  0x21B
 

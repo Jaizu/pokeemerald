@@ -68,6 +68,8 @@
 // Map Group 6
 #define MAP_AEROUS_CITY_POKEMON_CENTER (0 | (6 << 8))
 #define MAP_AEROUS_CITY_MART           (1 | (6 << 8))
+#define MAP_AEROUS_CITY_MUSEUM_1F      (2 | (6 << 8))
+#define MAP_AEROUS_CITY_MUSEUM_2F      (3 | (6 << 8))
 
 // Map Group 7
 #define MAP_PETALBURG_CITY   (0 | (7 << 8))
