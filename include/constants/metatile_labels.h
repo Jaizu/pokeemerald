@@ -394,6 +394,7 @@
 // gTileset_Petalburg
 #define METATILE_Petalburg_BlueFlower_Encounters              0x290
 #define METATILE_Petalburg_Door_Blue                          0x27A
+#define METATILE_Petalburg_Door_Gym                           0x2DB
 #define METATILE_Petalburg_Door_Littleroot                    0x248
 #define METATILE_Petalburg_Door_Tan                           0x21D
 #define METATILE_Petalburg_LeftTreeTopBlueFlower_Encounters   0x2CC

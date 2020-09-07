@@ -190,7 +190,7 @@ static const struct DoorAnimFrame sBigDoorCloseAnimFrames[] =
 static const u8 sDoorAnimPalettes_CelantoTan[] = {6, 6, 6, 6};
 static const u8 sDoorAnimPalettes_CelantoBlue[] = {8, 8, 8, 8};
 static const u8 sDoorAnimPalettes_PokeCenter[] = {0, 0, 0, 0};
-static const u8 sDoorAnimPalettes_Gym[] = {5, 5, 5, 5, 5, 5, 5, 5};
+static const u8 sDoorAnimPalettes_Gym[] = {0, 0, 0, 0};
 static const u8 sDoorAnimPalettes_Littleroot[] = {10, 10, 6, 6, 6, 6, 6, 6};
 static const u8 sDoorAnimPalettes_BirchsLab[] = {8, 8, 8, 8, 8, 8, 8, 8};
 static const u8 sDoorAnimPalettes_RustboroGray[] = {10, 10, 10, 10};
@@ -240,7 +240,7 @@ static const u8 sDoorAnimPalettes_TrainerHillRoofElevator[] = {9, 9, 7, 7, 7, 7,
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 {
     {METATILE_General_Door_PokeCenter,                      DOOR_SOUND_SLIDING, 0, sDoorAnimTiles_PokeCenter, sDoorAnimPalettes_PokeCenter},
-    {METATILE_General_Door_Gym,                             DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_Gym, sDoorAnimPalettes_Gym},
+    {METATILE_Petalburg_Door_Gym,                           DOOR_SOUND_SLIDING, 0, sDoorAnimTiles_Gym, sDoorAnimPalettes_Gym},
     {METATILE_Petalburg_Door_Tan,                           DOOR_SOUND_NORMAL,  0, sDoorAnimTiles_CelantoTan, sDoorAnimPalettes_CelantoTan},
     {METATILE_Petalburg_Door_Blue,                          DOOR_SOUND_NORMAL,  0, sDoorAnimTiles_CelantoBlue, sDoorAnimPalettes_CelantoBlue},
     {METATILE_Rustboro_Door_Tan,                            DOOR_SOUND_NORMAL,  0, sDoorAnimTiles_CelantoTan, sDoorAnimPalettes_CelantoTan},
