@@ -46,6 +46,7 @@ const u16 gObjectEventPaletteEunice[] = INCBIN_U16("graphics/object_events/palet
 const u16 gObjectEventPaletteHerschel[] = INCBIN_U16("graphics/object_events/palettes/herschel.gbapal");
 const u16 gObjectEventPaletteBlackBelt[] = INCBIN_U16("graphics/object_events/palettes/black_belt.gbapal");
 const u16 gObjectEventPaletteJimGai[] = INCBIN_U16("graphics/object_events/palettes/jim_gai.gbapal");
+const u16 gObjectEventPaletteFairyTaleGirl[] = INCBIN_U16("graphics/object_events/palettes/fairy_tale_girl.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
@@ -163,7 +164,7 @@ const u32 gObjectEventPic_Liza[] = INCBIN_U32("graphics/object_events/pics/peopl
 const u32 gObjectEventPic_Tate[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/tate.4bpp");
 const u32 gObjectEventPic_Herschel[] = INCBIN_U32("graphics/object_events/pics/people/herschel.4bpp");
 const u32 gObjectEventPic_Steven[] = INCBIN_U32("graphics/object_events/pics/people/steven.4bpp");
-const u32 gObjectEventPic_RubySapphireLittleBoy[] = INCBIN_U32("graphics/object_events/pics/people/rs_little_boy.4bpp");
+const u32 gObjectEventPic_FairyTaleGirl[] = INCBIN_U32("graphics/object_events/pics/people/fairy_tale_girl.4bpp");
 const u32 gObjectEventPic_HotSpringsOldWoman[] = INCBIN_U32("graphics/object_events/pics/people/hot_springs_old_woman.4bpp");
 const u32 gObjectEventPic_LatiasLatios[] = INCBIN_U32("graphics/object_events/pics/pokemon/latias_latios.4bpp");
 const u32 gObjectEventPic_GameboyKid[] = INCBIN_U32("graphics/object_events/pics/people/gameboy_kid.4bpp");

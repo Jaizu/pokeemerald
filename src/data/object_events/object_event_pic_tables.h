@@ -1362,16 +1362,16 @@ const struct SpriteFrameImage gObjectEventPicTable_Coulter[] = {
     overworld_frame(gObjectEventPic_Coulter, 2, 4, 8),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_RubySapphireLittleBoy[] = {
-    overworld_frame(gObjectEventPic_RubySapphireLittleBoy, 2, 2, 0),
-    overworld_frame(gObjectEventPic_RubySapphireLittleBoy, 2, 2, 1),
-    overworld_frame(gObjectEventPic_RubySapphireLittleBoy, 2, 2, 2),
-    overworld_frame(gObjectEventPic_RubySapphireLittleBoy, 2, 2, 3),
-    overworld_frame(gObjectEventPic_RubySapphireLittleBoy, 2, 2, 4),
-    overworld_frame(gObjectEventPic_RubySapphireLittleBoy, 2, 2, 5),
-    overworld_frame(gObjectEventPic_RubySapphireLittleBoy, 2, 2, 6),
-    overworld_frame(gObjectEventPic_RubySapphireLittleBoy, 2, 2, 7),
-    overworld_frame(gObjectEventPic_RubySapphireLittleBoy, 2, 2, 8),
+const struct SpriteFrameImage gObjectEventPicTable_FairyTaleGirl[] = {
+    overworld_frame(gObjectEventPic_FairyTaleGirl, 2, 2, 0),
+    overworld_frame(gObjectEventPic_FairyTaleGirl, 2, 2, 1),
+    overworld_frame(gObjectEventPic_FairyTaleGirl, 2, 2, 2),
+    overworld_frame(gObjectEventPic_FairyTaleGirl, 2, 2, 3),
+    overworld_frame(gObjectEventPic_FairyTaleGirl, 2, 2, 4),
+    overworld_frame(gObjectEventPic_FairyTaleGirl, 2, 2, 5),
+    overworld_frame(gObjectEventPic_FairyTaleGirl, 2, 2, 6),
+    overworld_frame(gObjectEventPic_FairyTaleGirl, 2, 2, 7),
+    overworld_frame(gObjectEventPic_FairyTaleGirl, 2, 2, 8),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_BrendanFishing[] = {
