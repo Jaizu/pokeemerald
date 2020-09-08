@@ -122,9 +122,11 @@
 #define FLAG_DEFEATED_NEW_ELDERS                0x61 // FLAG_MET_TEAM_AQUA_HARBOR in Emerald
 #define FLAG_TV_EXPLAINED                       0x62
 #define FLAG_RECEIVED_AEROUS_CITY_REVIVAL_HERB  0x62 // FLAG_TV_EXPLAINED in Emerald
+#define FLAG_MAUVILLE_GYM_BARRIERS_STATE        0x63
+#define FLAG_DEFEATED_VINCENT                   0x63 // FLAG_MAUVILLE_GYM_BARRIERS_STATE in Emerald
+#define FLAG_MOSSDEEP_GYM_SWITCH_1              0x64 // Leftover from the RS version of Mossdeep Gym, functionally unused
+#define FLAG_RECEIVED_EGG_FROM_VINCENT          0x64 // FLAG_MOSSDEEP_GYM_SWITCH_1 in Emerald
 
-#define FLAG_MAUVILLE_GYM_BARRIERS_STATE     0x63
-#define FLAG_MOSSDEEP_GYM_SWITCH_1           0x64 // Leftover from the RS version of Mossdeep Gym, functionally unused
 #define FLAG_MOSSDEEP_GYM_SWITCH_2           0x65 //
 #define FLAG_MOSSDEEP_GYM_SWITCH_3           0x66 //
 #define FLAG_MOSSDEEP_GYM_SWITCH_4           0x67 //

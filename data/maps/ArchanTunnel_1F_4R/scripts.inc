@@ -17,7 +17,7 @@ ArchanTunnel_1F_4R_Text_ByronDefeated:
 ArchanTunnel_1F_4R_Text_ByronPostBattle:
 	.string "This cave is far out of the way…\n"
 	.string "Ideal for training, right?$"
-	
+
 ArchanTunnel_1F_4R_EventScript_Haskel::
 	trainerbattle_single TRAINER_HASKEL, ArchanTunnel_1F_4R_Text_HaskelIntro, ArchanTunnel_1F_4R_Text_HaskelDefeated
 	msgbox ArchanTunnel_1F_4R_Text_HaskelPostBattle, MSGBOX_AUTOCLOSE

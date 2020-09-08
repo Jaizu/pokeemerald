@@ -57,23 +57,28 @@
 #define TRAINER_GRUNT_WEATHER_INST_4         26
 #define TRAINER_BECCA_1                      26 // TRAINER_GRUNT_WEATHER_INST_4 in Emerald
 #define TRAINER_GRUNT_AQUA_HIDEOUT_5         27
-#define TRAINER_MUSEUM_CLERK                 27 // TRAINER_GRUNT_AQUA_HIDEOUT_5 in Emerald
+#define TRAINER_MELISSA                      27 // TRAINER_GRUNT_AQUA_HIDEOUT_5 in Emerald
 #define TRAINER_GRUNT_AQUA_HIDEOUT_6         28
-#define TRAINER_MUSEUM_GRUNT_1               28 // TRAINER_GRUNT_AQUA_HIDEOUT_6 in Emerald
+#define TRAINER_CANDICE                      28 // TRAINER_GRUNT_AQUA_HIDEOUT_6 in Emerald
 #define TRAINER_FREDRICK                     29
-#define TRAINER_MUSEUM_GRUNT_2               29 // TRAINER_FREDRICK in Emerald
+#define TRAINER_BEVERLEY                     29 // TRAINER_FREDRICK in Emerald
 #define TRAINER_MATT                         30
-#define TRAINER_MUSEUM_GRUNT_3               30 // TRAINER_MATT in Emerald
+#define TRAINER_MADELAINE                    30 // TRAINER_MATT in Emerald
 #define TRAINER_ZANDER                       31
-#define TRAINER_BYRON                        31 // TRAINER_ZANDER in Emerald
+#define TRAINER_VINCENT                      31 // TRAINER_ZANDER in Emerald
 #define TRAINER_SHELLY_WEATHER_INSTITUTE     32
-#define TRAINER_HASKEL                       32 // TRAINER_SHELLY_WEATHER_INSTITUTE in Emerald
-
+#define TRAINER_MUSEUM_CLERK                 32 // TRAINER_SHELLY_WEATHER_INSTITUTE in Emerald
 #define TRAINER_SHELLY_SEAFLOOR_CAVERN       33
+#define TRAINER_MUSEUM_GRUNT_1               33 // TRAINER_SHELLY_SEAFLOOR_CAVERN in Emerald
 #define TRAINER_ARCHIE                       34
+#define TRAINER_MUSEUM_GRUNT_2               34 // TRAINER_ARCHIE in Emerald
 #define TRAINER_LEAH                         35
+#define TRAINER_MUSEUM_GRUNT_3               35 // TRAINER_LEAH in Emerald
 #define TRAINER_DAISY                        36
+#define TRAINER_BYRON                        36 // TRAINER_DAISY in Emerald
 #define TRAINER_ROSE_1                       37
+#define TRAINER_HASKEL                       37 // TRAINER_ROSE_1 in Emerald
+
 #define TRAINER_FELIX                        38
 #define TRAINER_VIOLET                       39
 #define TRAINER_ROSE_2                       40
@@ -112,7 +117,7 @@
 #define TRAINER_GEORGE                       73
 #define TRAINER_BERKE                        74
 #define TRAINER_BRAXTON                      75
-#define TRAINER_VINCENT                      76
+#define TRAINER_VINCENT_OLD                  76 // TRAINER_VINCENT in Emerald
 #define TRAINER_LEROY                        77
 #define TRAINER_WILTON_1                     78
 #define TRAINER_EDGAR                        79
@@ -160,7 +165,7 @@
 #define TRAINER_CINDY_4                     121
 #define TRAINER_CINDY_5                     122
 #define TRAINER_CINDY_6                     123
-#define TRAINER_MELISSA                     124
+#define TRAINER_MELISSA_OLD                 124 // TRAINER_MELISSA in Emerald
 #define TRAINER_SHEILA                      125
 #define TRAINER_SHIRLEY                     126
 #define TRAINER_JESSICA_1                   127
