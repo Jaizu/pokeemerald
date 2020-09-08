@@ -70,7 +70,8 @@
 #define TRAINER_PIC_SCHOOL_KID_M          48
 #define TRAINER_PIC_SCHOOL_KID_F          49
 #define TRAINER_PIC_SR_AND_JR             50
-#define TRAINER_PIC_POKEFAN_M             51
+#define TRAINER_PIC_ARTIST                51
+#define TRAINER_PIC_POKEFAN_M             TRAINER_PIC_ARTIST
 #define TRAINER_PIC_POKEFAN_F             52
 #define TRAINER_PIC_YOUNGSTER             53
 #define TRAINER_PIC_CHAMPION_WALLACE      54
@@ -329,6 +330,7 @@
 #define TRAINER_CLASS_SR_AND_JR      0x22
 #define TRAINER_CLASS_WINSTRATE      0x23
 #define TRAINER_CLASS_POKEFAN        0x24
+#define TRAINER_CLASS_ARTIST         TRAINER_CLASS_POKEFAN
 #define TRAINER_CLASS_YOUNGSTER      0x25
 #define TRAINER_CLASS_CHAMPION       0x26
 #define TRAINER_CLASS_FISHERMAN      0x27

@@ -436,9 +436,9 @@ const struct Trainer gTrainers[] = {
     [TRAINER_VINCENT] =
     {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_POKEFAN,
+        .trainerClass = TRAINER_CLASS_ARTIST,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
-        .trainerPic = TRAINER_PIC_POKEFAN_M,
+        .trainerPic = TRAINER_PIC_ARTIST,
         .trainerName = _("Vincent"),
         .items = {},
         .doubleBattle = FALSE,
