@@ -23,7 +23,8 @@
 #define OBJ_EVENT_GFX_LADY                        16
 #define OBJ_EVENT_GFX_WOMAN_1                     OBJ_EVENT_GFX_LADY
 #define OBJ_EVENT_GFX_FAT_MAN                     17
-#define OBJ_EVENT_GFX_POKEFAN_F                   18
+#define OBJ_EVENT_GFX_PAINTER                     18
+#define OBJ_EVENT_GFX_POKEFAN_F                   OBJ_EVENT_GFX_PAINTER
 #define OBJ_EVENT_GFX_MAN_1                       19
 #define OBJ_EVENT_GFX_AROMA_LADY                  20
 #define OBJ_EVENT_GFX_WOMAN_2                     OBJ_EVENT_GFX_AROMA_LADY

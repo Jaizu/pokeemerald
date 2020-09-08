@@ -48,6 +48,7 @@ const u16 gObjectEventPaletteBlackBelt[] = INCBIN_U16("graphics/object_events/pa
 const u16 gObjectEventPaletteJimGai[] = INCBIN_U16("graphics/object_events/palettes/jim_gai.gbapal");
 const u16 gObjectEventPaletteFairyTaleGirl[] = INCBIN_U16("graphics/object_events/palettes/fairy_tale_girl.gbapal");
 const u16 gObjectEventPaletteArtist[] = INCBIN_U16("graphics/object_events/palettes/artist.gbapal");
+const u16 gObjectEventPalettePainter[] = INCBIN_U16("graphics/object_events/palettes/painter.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
@@ -92,7 +93,7 @@ const u32 gObjectEventPic_BattleGirl[] = INCBIN_U32("graphics/object_events/pics
 const u32 gObjectEventPic_RichBoy[] = INCBIN_U32("graphics/object_events/pics/people/rich_boy.4bpp");
 const u32 gObjectEventPic_Lady[] = INCBIN_U32("graphics/object_events/pics/people/lady.4bpp");
 const u32 gObjectEventPic_FatMan[] = INCBIN_U32("graphics/object_events/pics/people/fat_man.4bpp");
-const u32 gObjectEventPic_PokefanF[] = INCBIN_U32("graphics/object_events/pics/people/pokefan_f.4bpp");
+const u32 gObjectEventPic_Painter[] = INCBIN_U32("graphics/object_events/pics/people/painter.4bpp");
 const u32 gObjectEventPic_Man1[] = INCBIN_U32("graphics/object_events/pics/people/man_1.4bpp");
 const u32 gObjectEventPic_AromaLady[] = INCBIN_U32("graphics/object_events/pics/people/aroma_lady.4bpp");
 const u32 gObjectEventPic_ExpertM[] = INCBIN_U32("graphics/object_events/pics/people/expert_m.4bpp");
