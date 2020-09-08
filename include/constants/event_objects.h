@@ -246,7 +246,8 @@
 #define OBJ_EVENT_GFX_POOCHYENA                  220
 #define OBJ_EVENT_GFX_KYOGRE_3                   221
 #define OBJ_EVENT_GFX_GROUDON_3                  222
-#define OBJ_EVENT_GFX_MYSTERY_GIFT_MAN           223
+#define OBJ_EVENT_GFX_GUARD                      223
+#define OBJ_EVENT_GFX_MYSTERY_GIFT_MAN           OBJ_EVENT_GFX_GUARD
 #define OBJ_EVENT_GFX_TRICK_HOUSE_STATUE         224
 #define OBJ_EVENT_GFX_KIRLIA                     225
 #define OBJ_EVENT_GFX_DUSCLOPS                   226
