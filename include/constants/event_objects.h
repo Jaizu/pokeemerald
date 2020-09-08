@@ -29,7 +29,8 @@
 #define OBJ_EVENT_GFX_WOMAN_2                     OBJ_EVENT_GFX_AROMA_LADY
 #define OBJ_EVENT_GFX_EXPERT_M                    21
 #define OBJ_EVENT_GFX_EXPERT_F                    22
-#define OBJ_EVENT_GFX_MAN_2                       23
+#define OBJ_EVENT_GFX_JIM_GAI                     23
+#define OBJ_EVENT_GFX_MAN_2                       OBJ_EVENT_GFX_JIM_GAI
 #define OBJ_EVENT_GFX_ACE_TRAINER_F               24
 #define OBJ_EVENT_GFX_WOMAN_3                     OBJ_EVENT_GFX_ACE_TRAINER_F
 #define OBJ_EVENT_GFX_RUIN_MANIAC                 25

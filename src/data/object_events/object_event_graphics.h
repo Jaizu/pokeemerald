@@ -45,6 +45,7 @@ const u16 gObjectEventPaletteNewEldersGrunt[] = INCBIN_U16("graphics/object_even
 const u16 gObjectEventPaletteEunice[] = INCBIN_U16("graphics/object_events/palettes/eunice.gbapal");
 const u16 gObjectEventPaletteHerschel[] = INCBIN_U16("graphics/object_events/palettes/herschel.gbapal");
 const u16 gObjectEventPaletteBlackBelt[] = INCBIN_U16("graphics/object_events/palettes/black_belt.gbapal");
+const u16 gObjectEventPaletteJimGai[] = INCBIN_U16("graphics/object_events/palettes/jim_gai.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
@@ -94,7 +95,7 @@ const u32 gObjectEventPic_Man1[] = INCBIN_U32("graphics/object_events/pics/peopl
 const u32 gObjectEventPic_AromaLady[] = INCBIN_U32("graphics/object_events/pics/people/aroma_lady.4bpp");
 const u32 gObjectEventPic_ExpertM[] = INCBIN_U32("graphics/object_events/pics/people/expert_m.4bpp");
 const u32 gObjectEventPic_ExpertF[] = INCBIN_U32("graphics/object_events/pics/people/expert_f.4bpp");
-const u32 gObjectEventPic_Man2[] = INCBIN_U32("graphics/object_events/pics/people/man_2.4bpp");
+const u32 gObjectEventPic_JimGai[] = INCBIN_U32("graphics/object_events/pics/people/jim_gai.4bpp");
 const u32 gObjectEventPic_AceTrainerF[] = INCBIN_U32("graphics/object_events/pics/people/ace_trainer_f.4bpp");
 const u32 gObjectEventPic_Woman4[] = INCBIN_U32("graphics/object_events/pics/people/woman_4.4bpp");
 const u32 gObjectEventPic_Cook[] = INCBIN_U32("graphics/object_events/pics/people/cook.4bpp");

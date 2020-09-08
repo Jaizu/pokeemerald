@@ -244,7 +244,7 @@ $(OBJEVENTGFXDIR)/people/little_girl.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/man_1.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
-$(OBJEVENTGFXDIR)/people/man_2.4bpp: %.4bpp: %.png
+$(OBJEVENTGFXDIR)/people/jim_gai.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 $(OBJEVENTGFXDIR)/people/ruin_maniac.4bpp: %.4bpp: %.png
