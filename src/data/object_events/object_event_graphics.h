@@ -44,6 +44,7 @@ const u16 gObjectEventPaletteLady[] = INCBIN_U16("graphics/object_events/palette
 const u16 gObjectEventPaletteNewEldersGrunt[] = INCBIN_U16("graphics/object_events/palettes/new_elders_grunt.gbapal");
 const u16 gObjectEventPaletteEunice[] = INCBIN_U16("graphics/object_events/palettes/eunice.gbapal");
 const u16 gObjectEventPaletteHerschel[] = INCBIN_U16("graphics/object_events/palettes/herschel.gbapal");
+const u16 gObjectEventPaletteBlackBelt[] = INCBIN_U16("graphics/object_events/palettes/black_belt.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
