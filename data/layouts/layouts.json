@@ -4820,6 +4820,16 @@
       "secondary_tileset": "gTileset_AerousMuseum",
       "border_filepath": "data/layouts/AerousCity_Museum_2F/border.bin",
       "blockdata_filepath": "data/layouts/AerousCity_Museum_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARCHAN_TUNNEL_1F_4R",
+      "name": "ArchanTunnel_1F_4R_Layout",
+      "width": 38,
+      "height": 26,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_ArchanTunnel",
+      "border_filepath": "data/layouts/ArchanTunnel_1F_4R/border.bin",
+      "blockdata_filepath": "data/layouts/ArchanTunnel_1F_4R/map.bin"
     }
   ]
 }

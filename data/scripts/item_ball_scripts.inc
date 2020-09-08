@@ -130,6 +130,10 @@ EventScript_ItemSharpedonite::
 	finditem ITEM_SHARPEDONITE
 	end
 
+EventScript_ItemTM21::
+	finditem ITEM_TM21
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end

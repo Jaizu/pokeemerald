@@ -65,7 +65,10 @@
 #define TRAINER_MATT                         30
 #define TRAINER_MUSEUM_GRUNT_3               30 // TRAINER_MATT in Emerald
 #define TRAINER_ZANDER                       31
+#define TRAINER_BYRON                        31 // TRAINER_ZANDER in Emerald
 #define TRAINER_SHELLY_WEATHER_INSTITUTE     32
+#define TRAINER_HASKEL                       32 // TRAINER_SHELLY_WEATHER_INSTITUTE in Emerald
+
 #define TRAINER_SHELLY_SEAFLOOR_CAVERN       33
 #define TRAINER_ARCHIE                       34
 #define TRAINER_LEAH                         35

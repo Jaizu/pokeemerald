@@ -210,6 +210,7 @@ AerousCity_EventScript_Herschel::
 AerousCity_EventScript_LeaveForArchanTunnel:
 	msgbox AerousCity_Text_LetsGo, MSGBOX_DEFAULT
 	clearflag FLAG_HIDE_TANGROWTH_TABLET_ROOM_HERSCHEL
+	setflag FLAG_HIDE_AEROUS_CITY_HERSCHEL
 	setvar VAR_ARCHAN_TUNNEL_STATE, 4
 	warp MAP_ARCHAN_TUNNEL_TANGROWTH_TABLET_ROOM, -1, 6, 5
 	waitstate

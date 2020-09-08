@@ -353,24 +353,29 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MuseumGrunt3[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Zander[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Byron[] = {
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_HARIYAMA,
+    .lvl = 12,
+    .species = SPECIES_GEODUDE,
+    },
+    {
+    .iv = 0,
+    .lvl = 13,
+    .species = SPECIES_GEODUDE,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_ShellyWeatherInstitute[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Haskel[] = {
     {
-    .iv = 50,
-    .lvl = 28,
-    .species = SPECIES_CARVANHA,
+    .iv = 0,
+    .lvl = 12,
+    .species = SPECIES_MIENFOO,
     },
     {
-    .iv = 50,
-    .lvl = 28,
-    .species = SPECIES_MIGHTYENA,
+    .iv = 0,
+    .lvl = 12,
+    .species = SPECIES_SCRAGGY,
     }
 };
 
