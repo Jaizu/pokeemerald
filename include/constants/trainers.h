@@ -84,7 +84,8 @@
 #define TRAINER_PIC_DRAGON_TAMER          62
 #define TRAINER_PIC_NINJA_BOY             63
 #define TRAINER_PIC_BATTLE_GIRL           64
-#define TRAINER_PIC_PARASOL_LADY          65
+#define TRAINER_PIC_PAINTER               65
+#define TRAINER_PIC_PARASOL_LADY          TRAINER_PIC_PAINTER
 #define TRAINER_PIC_SWIMMER_F             66
 #define TRAINER_PIC_TWINS                 67
 #define TRAINER_PIC_SAILOR                68
@@ -335,7 +336,8 @@
 #define TRAINER_CLASS_DRAGON_TAMER   0x29
 #define TRAINER_CLASS_NINJA_BOY      0x2a
 #define TRAINER_CLASS_BATTLE_GIRL    0x2b
-#define TRAINER_CLASS_PARASOL_LADY   0x2c
+#define TRAINER_CLASS_PAINTER        0x2c
+#define TRAINER_CLASS_PARASOL_LADY   TRAINER_CLASS_PAINTER
 #define TRAINER_CLASS_SWIMMER_F      0x2d
 #define TRAINER_CLASS_TWINS          0x2e
 #define TRAINER_CLASS_SAILOR         0x2f

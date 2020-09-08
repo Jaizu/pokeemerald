@@ -258,7 +258,7 @@ static const union AnimCmd *const sAnims_BattleGirl[] ={
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_ParasolLady[] ={
+static const union AnimCmd *const sAnims_Painter[] ={
     sAnim_GeneralFrame0,
 };
 
@@ -437,7 +437,7 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_DRAGON_TAMER] = sAnims_DragonTamer,
     [TRAINER_PIC_NINJA_BOY] = sAnims_NinjaBoy,
     [TRAINER_PIC_BATTLE_GIRL] = sAnims_BattleGirl,
-    [TRAINER_PIC_PARASOL_LADY] = sAnims_ParasolLady,
+    [TRAINER_PIC_PAINTER] = sAnims_Painter,
     [TRAINER_PIC_SWIMMER_F] = sAnims_SwimmerF,
     [TRAINER_PIC_TWINS] = sAnims_Twins,
     [TRAINER_PIC_SAILOR] = sAnims_Sailor,
