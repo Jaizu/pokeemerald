@@ -82,3 +82,146 @@ AerousCity_Text_MuseumClerkDefeat:
 AerousCity_Text_IGottaTellTheBoss:
 	.string "{COLOR DARK_GREY}???: {COLOR BLUE}This is bad…\n"
 	.string "I gotta tell the boss!$"
+
+AerousCity_EventScript_OldWoman::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_AEROUS_CITY_REVIVAL_HERB, AerousCity_EventScript_ReceivedRevivalHerb
+	msgbox AerousCity_Text_IThoughtThisHerbWouldBePerfect, MSGBOX_DEFAULT
+	giveitem ITEM_REVIVAL_HERB
+	compare VAR_RESULT, FALSE
+	goto_if_eq Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_AEROUS_CITY_REVIVAL_HERB
+	goto AerousCity_EventScript_ReceivedRevivalHerb
+	end
+
+AerousCity_EventScript_ReceivedRevivalHerb:
+	msgbox AerousCity_Text_IdBeCautiousAboutFeedingThat, MSGBOX_DEFAULT
+	release
+	end
+
+AerousCity_Text_IThoughtThisHerbWouldBePerfect:
+	.string "When I found this herb, I thought\n"
+	.string "it would be perfect for my stew.\p"
+	.string "Turns out it tastes horribly\n"
+	.string "bitter. Not very nice indeed!\p"
+	.string "You can take it, if you'd like.$"
+
+AerousCity_Text_IdBeCautiousAboutFeedingThat:
+	.string "I'd be cautious about feeding that\n"
+	.string "herb to a Pokémon.\p"
+	.string "They might resent you feeding them\n"
+	.string "something so bitter!$"
+
+AerousCity_EventScript_Man::
+	msgbox AerousCity_Text_IFoughtThatOpposGuy, MSGBOX_NPC
+	end
+
+AerousCity_Text_IFoughtThatOpposGuy:
+	.string "I fought that Oppos guy, but my\n"
+	.string "moves didn't work normally!$"
+
+AerousCity_EventScript_Lass::
+	msgbox AerousCity_Text_DidYouHearTheRumors, MSGBOX_NPC
+	end
+
+AerousCity_Text_DidYouHearTheRumors:
+	.string "Did you hear the rumors about\n"
+	.string "Telmurk City?\p"
+	.string "Apparently, a gang has taken it\n"
+	.string "over!\p"
+	.string "That's so scary.\n"
+	.string "I'm glad I live in a safe city.$"
+
+AerousCity_EventScript_Sailor1::
+	msgbox AerousCity_Text_ICanSeeSabuloFromHere, MSGBOX_NPC
+	end
+
+AerousCity_Text_ICanSeeSabuloFromHere:
+	.string "Hey, I can see Sabulo Island from\n"
+	.string "here!\p"
+	.string "You can get there by Surfing east\n"
+	.string "from here, or taking the S.S. Wake.$"
+
+AerousCity_EventScript_Sailor2::
+	lock
+	faceplayer
+	msgbox AerousCity_Text_DoYouSeeThatLighthouse, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_ne AerousCity_EventScript_ShowLighthouse
+	msgbox AerousCity_Text_ItLooksAbandoned, MSGBOX_DEFAULT
+	release
+	end
+
+AerousCity_EventScript_ShowLighthouse:
+	msgbox AerousCity_Text_LookCloselyOverThere, MSGBOX_DEFAULT
+	closemessage
+	getplayerxy VAR_0x8000, VAR_0x8001
+	compare VAR_0x8001, 14
+	call_if_eq AerousCity_EventScript_PlayerFaceEast
+	fadescreen FADE_TO_BLACK
+	// TODO: Implement
+	// setvar VAR_0x8004, 67
+	// setvar VAR_0x8005, 8
+	// special TeleportCamera
+	fadescreen FADE_FROM_BLACK
+	waitbuttonpress
+	fadescreen FADE_TO_BLACK
+	// TODO: Implement
+	// special ReturnCameraToPlayer
+	fadescreen FADE_FROM_BLACK
+	compare VAR_0x8001, 14
+	call_if_eq AerousCity_EventScript_PlayerFaceNorth
+	return
+
+AerousCity_EventScript_PlayerFaceEast:
+	delay 10
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	delay 10
+	return
+
+AerousCity_EventScript_PlayerFaceNorth:
+	delay 10
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	delay 10
+	return
+
+AerousCity_Text_DoYouSeeThatLighthouse:
+	.string "Do you see that lighthouse?$"
+
+AerousCity_Text_LookCloselyOverThere:
+	.string "Look closely, over there!$"
+
+AerousCity_Text_ItLooksAbandoned:
+	.string "It looks abandoned, doesn't it?\p"
+	.string "I've never figured out how to get\n"
+	.string "to it, either…$"
+
+AerousCity_EventScript_Herschel::
+	lock
+	faceplayer
+	msgbox AerousCity_Text_AreYouReady, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq AerousCity_EventScript_LeaveForArchanTunnel
+	msgbox AerousCity_Text_HmphComeBack, MSGBOX_DEFAULT
+	release
+	end
+
+AerousCity_EventScript_LeaveForArchanTunnel:
+	msgbox AerousCity_Text_LetsGo, MSGBOX_DEFAULT
+	clearflag FLAG_HIDE_TANGROWTH_TABLET_ROOM_HERSCHEL
+	setvar VAR_ARCHAN_TUNNEL_STATE, 4
+	warp MAP_ARCHAN_TUNNEL_TANGROWTH_TABLET_ROOM, -1, 6, 5
+	waitstate
+	release
+	end
+
+AerousCity_Text_AreYouReady:
+	.string "{COLOR DARK_GREY}Herschel: {COLOR BLUE}Are you ready?$"
+
+AerousCity_Text_HmphComeBack:
+	.string "{COLOR DARK_GREY}Herschel: {COLOR BLUE}Hmph…\n"
+	.string "Come back when you are ready.$"
+
+AerousCity_Text_LetsGo:
+	.string "{COLOR DARK_GREY}Herschel: {COLOR BLUE}Let's go!$"

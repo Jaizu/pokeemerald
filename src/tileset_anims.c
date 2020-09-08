@@ -691,7 +691,7 @@ void InitTilesetAnim_Dewford(void)
 {
     sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
-    sSecondaryTilesetAnimCallback = TilesetAnim_Dewford;
+    sSecondaryTilesetAnimCallback = NULL;
 }
 
 void InitTilesetAnim_Slateport(void)

@@ -129,7 +129,6 @@ AerousCity_Museum_2F_EventScript_EuniceHerschelScene::
 	call_if_eq AerousCity_Museum_2F_EventScript_ExitHerschel2
 	removeobject LOCALID_HERSCHEL
 	clearflag FLAG_HIDE_AEROUS_CITY_HERSCHEL
-	setvar VAR_AEROUS_CITY_STATE, 1
 	setvar VAR_AEROUS_MUSEUM_STATE, 1
 	releaseall
 	end

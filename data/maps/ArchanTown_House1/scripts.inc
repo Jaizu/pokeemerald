@@ -1,6 +1,6 @@
 ArchanTown_House1_MapScripts::
 	.byte 0
-	
+
 ArchanTown_House1_EventScript_Man::
 	lock
 	faceplayer
