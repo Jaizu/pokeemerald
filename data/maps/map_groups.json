@@ -76,7 +76,8 @@
     "ArchanTown_HiddenGrotto",
     "ArchanTunnel_SecretTemple",
     "ArchanHills_SecretTemple",
-    "AerousRoad_HiddenGrotto"
+    "AerousRoad_HiddenGrotto",
+    "NestpineClimb_HiddenGrotto"
   ],
   "gMapGroup_CelantoTown": [
     "CelantoTown_PlayersHouse_1F",

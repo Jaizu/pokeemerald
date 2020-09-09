@@ -135,9 +135,11 @@
 #define FLAG_RECEIVED_TM34                   0x68 // FLAG_UNUSED_0x068 in Emerald
 #define FLAG_OCEANIC_MUSEUM_MET_REPORTER            0x69
 #define FLAG_RECEIVED_NESTPINE_CLIMB_PERSIM_BERRIES 0x69 // FLAG_OCEANIC_MUSEUM_MET_REPORTER in Emerald
+#define FLAG_RECEIVED_HM04                                  0x6A
+#define FLAG_DEFEATED_NESTPINE_CLIMB_HIDDEN_GROTTO_MARACTUS 0x6A // FLAG_RECEIVED_HM04 in Emerald
+#define FLAG_RECEIVED_HM06                                  0x6B
+#define FLAG_CAUGHT_NESTPINE_CLIMB_HIDDEN_GROTTO_MARACTUS   0x6B // FLAG_RECEIVED_HM06 in Emerald
 
-#define FLAG_RECEIVED_HM04                   0x6A
-#define FLAG_RECEIVED_HM06                   0x6B
 #define FLAG_WHITEOUT_TO_LAVARIDGE           0x6C // Set after defeating Flannery, so the player cant white out from poison before receiving Go Goggles
 #define FLAG_RECEIVED_HM05                   0x6D
 #define FLAG_RECEIVED_HM02                   0x6E
@@ -882,8 +884,9 @@
 #define FLAG_HIDE_CELANTO_PATH_BREAKABLE_ROCK_LEFT                  0x2EB // FLAG_HIDE_SAFARI_ZONE_SOUTH_EAST_EXPANSION in Emerald
 #define FLAG_HIDE_LILYCOVE_HARBOR_EVENT_TICKET_TAKER                0x2EC
 #define FLAG_HIDE_CELANTO_PATH_BREAKABLE_ROCK_RIGHT                 0x2EC // FLAG_HIDE_LILYCOVE_HARBOR_EVENT_TICKET_TAKER in Emerald
-
 #define FLAG_HIDE_SLATEPORT_CITY_SCOTT                              0x2ED
+#define FLAG_HIDE_NESTPINE_CLIMB_HIDDEN_GROTTO_MARACTUS             0x2ED // FLAG_HIDE_SLATEPORT_CITY_SCOTT in Emerald
+
 #define FLAG_HIDE_ROUTE_101_ZIGZAGOON                               0x2EE
 #define FLAG_HIDE_VICTORY_ROAD_EXIT_WALLY                           0x2EF
 #define FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE                       0x2F0

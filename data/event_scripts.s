@@ -1193,3 +1193,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/ArchanTunnel_3F_1R/scripts.inc"
 
 	.include "data/maps/NestpineClimb/scripts.inc"
+
+	.include "data/maps/NestpineClimb_HiddenGrotto/scripts.inc"

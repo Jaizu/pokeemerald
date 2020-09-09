@@ -1,0 +1,64 @@
+NestpineClimb_HiddenGrotto_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, NestpineClimb_HiddenGrotto_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, NestpineClimb_HiddenGrotto_OnTransition
+	.byte 0
+
+NestpineClimb_HiddenGrotto_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, NestpineClimb_HiddenGrotto_TryRemoveMaractus
+	end
+
+NestpineClimb_HiddenGrotto_TryRemoveMaractus:
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_ne Common_EventScript_NopReturn
+	removeobject VAR_LAST_TALKED
+	return
+
+NestpineClimb_HiddenGrotto_OnTransition:
+	call_if_unset FLAG_DEFEATED_NESTPINE_CLIMB_HIDDEN_GROTTO_MARACTUS, NestpineClimb_HiddenGrotto_EventScript_TryShowMaractus
+	end
+
+NestpineClimb_HiddenGrotto_EventScript_TryShowMaractus:
+	goto_if_unset FLAG_CAUGHT_NESTPINE_CLIMB_HIDDEN_GROTTO_MARACTUS, NestpineClimb_HiddenGrotto_EventScript_ShowMaractus
+	return
+ 
+NestpineClimb_HiddenGrotto_EventScript_ShowMaractus:
+	clearflag FLAG_HIDE_NESTPINE_CLIMB_HIDDEN_GROTTO_MARACTUS
+	return
+
+NestpineClimb_HiddenGrotto_EventScript_Maractus::
+	lock
+	faceplayer
+	setwildbattle SPECIES_MARACTUS, 16, ITEM_NONE
+	waitse
+	playmoncry SPECIES_MARACTUS, 2
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	setvar VAR_0x8000, MOVE_ACUPRESSURE
+	setvar VAR_0x8001, MOVE_GIGA_DRAIN
+	setvar VAR_0x8002, MOVE_SYNTHESIS
+	setvar VAR_0x8003, MOVE_PIN_MISSILE
+	special StartCustomMovesBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq NestpineClimb_HiddenGrotto_EventScript_DefeatedMaractus
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq NestpineClimb_HiddenGrotto_EventScript_RanFromMaractus
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq NestpineClimb_HiddenGrotto_EventScript_RanFromMaractus
+	setflag FLAG_CAUGHT_NESTPINE_CLIMB_HIDDEN_GROTTO_MARACTUS
+	release
+	end
+
+NestpineClimb_HiddenGrotto_EventScript_DefeatedMaractus::
+	setflag FLAG_DEFEATED_NESTPINE_CLIMB_HIDDEN_GROTTO_MARACTUS
+	goto Common_EventScript_RemoveStaticPokemon
+	end
+
+NestpineClimb_HiddenGrotto_EventScript_RanFromMaractus::
+	setvar VAR_0x8004, SPECIES_MARACTUS
+	goto Common_EventScript_PokemonFled
+	end
