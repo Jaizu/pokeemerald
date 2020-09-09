@@ -1173,3 +1173,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/ArchanTunnel_1F_4R/scripts.inc"
 
 	.include "data/maps/AerousCity_ArtClub_1F/scripts.inc"
+
+	.include "data/maps/AerousCity_ArtClub_2F/scripts.inc"

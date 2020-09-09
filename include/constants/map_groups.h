@@ -72,6 +72,7 @@
 #define MAP_AEROUS_CITY_MUSEUM_1F      (2 | (6 << 8))
 #define MAP_AEROUS_CITY_MUSEUM_2F      (3 | (6 << 8))
 #define MAP_AEROUS_CITY_ART_CLUB_1F    (4 | (6 << 8))
+#define MAP_AEROUS_CITY_ART_CLUB_2F    (5 | (6 << 8))
 
 // Map Group 7
 #define MAP_PETALBURG_CITY   (0 | (7 << 8))

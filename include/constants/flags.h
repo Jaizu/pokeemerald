@@ -126,10 +126,12 @@
 #define FLAG_DEFEATED_VINCENT                   0x63 // FLAG_MAUVILLE_GYM_BARRIERS_STATE in Emerald
 #define FLAG_MOSSDEEP_GYM_SWITCH_1              0x64 // Leftover from the RS version of Mossdeep Gym, functionally unused
 #define FLAG_RECEIVED_EGG_FROM_VINCENT          0x64 // FLAG_MOSSDEEP_GYM_SWITCH_1 in Emerald
+#define FLAG_MOSSDEEP_GYM_SWITCH_2              0x65 // Leftover from the RS version of Mossdeep Gym, functionally unused
+#define FLAG_RECEIVED_AEROUS_CITY_NUGGET        0x65 // FLAG_MOSSDEEP_GYM_SWITCH_2 in Emerald
+#define FLAG_MOSSDEEP_GYM_SWITCH_3              0x66 // Leftover from the RS version of Mossdeep Gym, functionally unused
+#define FLAG_DEFEATED_ESSA                      0x66 // FLAG_MOSSDEEP_GYM_SWITCH_3 in Emerald
 
-#define FLAG_MOSSDEEP_GYM_SWITCH_2           0x65 //
-#define FLAG_MOSSDEEP_GYM_SWITCH_3           0x66 //
-#define FLAG_MOSSDEEP_GYM_SWITCH_4           0x67 //
+#define FLAG_MOSSDEEP_GYM_SWITCH_4           0x67 // Leftover from the RS version of Mossdeep Gym, functionally unused
 
 #define FLAG_UNUSED_0x068                    0x68  // Unused Flag
 

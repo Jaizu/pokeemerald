@@ -4840,6 +4840,16 @@
       "secondary_tileset": "gTileset_AerousMuseum",
       "border_filepath": "data/layouts/AerousCity_ArtClub_1F/border.bin",
       "blockdata_filepath": "data/layouts/AerousCity_ArtClub_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_AEROUS_CITY_ART_CLUB_2F",
+      "name": "AerousCity_ArtClub_2F_Layout",
+      "width": 16,
+      "height": 11,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_AerousMuseum",
+      "border_filepath": "data/layouts/AerousCity_ArtClub_2F/border.bin",
+      "blockdata_filepath": "data/layouts/AerousCity_ArtClub_2F/map.bin"
     }
   ]
 }
