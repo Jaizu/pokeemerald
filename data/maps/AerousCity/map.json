@@ -197,14 +197,14 @@
       "x": 40,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_AEROUS_CITY",
+      "dest_map": "MAP_AEROUS_CITY_BIKE_SHOP",
       "dest_warp_id": 0
     },
     {
       "x": 11,
       "y": 12,
       "elevation": 0,
-      "dest_map": "MAP_AEROUS_CITY",
+      "dest_map": "MAP_AEROUS_CITY_NAME_RATERS_HOUSE",
       "dest_warp_id": 0
     },
     {

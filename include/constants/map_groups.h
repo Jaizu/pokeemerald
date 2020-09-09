@@ -67,13 +67,15 @@
 #define MAP_SEROS_VILLAGE_HOUSE             (6 | (5 << 8))
 
 // Map Group 6
-#define MAP_AEROUS_CITY_POKEMON_CENTER (0 | (6 << 8))
-#define MAP_AEROUS_CITY_MART           (1 | (6 << 8))
-#define MAP_AEROUS_CITY_MUSEUM_1F      (2 | (6 << 8))
-#define MAP_AEROUS_CITY_MUSEUM_2F      (3 | (6 << 8))
-#define MAP_AEROUS_CITY_ART_CLUB_1F    (4 | (6 << 8))
-#define MAP_AEROUS_CITY_ART_CLUB_2F    (5 | (6 << 8))
-#define MAP_AEROUS_CITY_PORT           (6 | (6 << 8))
+#define MAP_AEROUS_CITY_POKEMON_CENTER    (0 | (6 << 8))
+#define MAP_AEROUS_CITY_MART              (1 | (6 << 8))
+#define MAP_AEROUS_CITY_MUSEUM_1F         (2 | (6 << 8))
+#define MAP_AEROUS_CITY_MUSEUM_2F         (3 | (6 << 8))
+#define MAP_AEROUS_CITY_ART_CLUB_1F       (4 | (6 << 8))
+#define MAP_AEROUS_CITY_ART_CLUB_2F       (5 | (6 << 8))
+#define MAP_AEROUS_CITY_PORT              (6 | (6 << 8))
+#define MAP_AEROUS_CITY_BIKE_SHOP         (7 | (6 << 8))
+#define MAP_AEROUS_CITY_NAME_RATERS_HOUSE (8 | (6 << 8))
 
 // Map Group 7
 #define MAP_PETALBURG_CITY   (0 | (7 << 8))

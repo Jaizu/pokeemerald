@@ -1177,3 +1177,7 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/AerousCity_ArtClub_2F/scripts.inc"
 
 	.include "data/maps/AerousCity_Port/scripts.inc"
+
+	.include "data/maps/AerousCity_BikeShop/scripts.inc"
+
+	.include "data/maps/AerousCity_NameRatersHouse/scripts.inc"
