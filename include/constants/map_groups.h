@@ -76,6 +76,9 @@
 #define MAP_AEROUS_CITY_PORT              (6 | (6 << 8))
 #define MAP_AEROUS_CITY_BIKE_SHOP         (7 | (6 << 8))
 #define MAP_AEROUS_CITY_NAME_RATERS_HOUSE (8 | (6 << 8))
+#define MAP_AEROUS_CITY_HOUSE1            (9 | (6 << 8))
+#define MAP_AEROUS_CITY_HOUSE2            (10 | (6 << 8))
+#define MAP_AEROUS_CITY_HOUSE3            (11 | (6 << 8))
 
 // Map Group 7
 #define MAP_PETALBURG_CITY   (0 | (7 << 8))

@@ -92,12 +92,12 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_4",
-      "x": 11,
-      "y": 16,
+      "x": 16,
+      "y": 6,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
-      "movement_range_x": 3,
-      "movement_range_y": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "AerousCity_EventScript_Man",
@@ -140,6 +140,32 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "AerousCity_EventScript_Sailor2",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WORKER",
+      "x": 19,
+      "y": 35,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 3,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "AerousCity_EventScript_Worker",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ACE_TRAINER_M",
+      "x": 12,
+      "y": 16,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "AerousCity_EventScript_AceTrainerM",
       "flag": "0"
     }
   ],
@@ -211,21 +237,21 @@
       "x": 22,
       "y": 4,
       "elevation": 0,
-      "dest_map": "MAP_AEROUS_CITY",
+      "dest_map": "MAP_AEROUS_CITY_HOUSE1",
       "dest_warp_id": 0
     },
     {
       "x": 49,
       "y": 12,
       "elevation": 0,
-      "dest_map": "MAP_AEROUS_CITY",
+      "dest_map": "MAP_AEROUS_CITY_HOUSE2",
       "dest_warp_id": 0
     },
     {
       "x": 11,
       "y": 24,
       "elevation": 0,
-      "dest_map": "MAP_AEROUS_CITY",
+      "dest_map": "MAP_AEROUS_CITY_HOUSE3",
       "dest_warp_id": 0
     }
   ],

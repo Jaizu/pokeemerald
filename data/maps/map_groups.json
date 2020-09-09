@@ -113,7 +113,10 @@
     "AerousCity_ArtClub_2F",
     "AerousCity_Port",
     "AerousCity_BikeShop",
-    "AerousCity_NameRatersHouse"
+    "AerousCity_NameRatersHouse",
+    "AerousCity_House1",
+    "AerousCity_House2",
+    "AerousCity_House3"
   ],
   "gMapGroup0": [
     "PetalburgCity",

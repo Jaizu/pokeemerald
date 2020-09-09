@@ -134,14 +134,12 @@ AerousCity_Text_DidYouHearTheRumors:
 	.string "I'm glad I live in a safe city.$"
 
 AerousCity_EventScript_Sailor1::
-	msgbox AerousCity_Text_ICanSeeSabuloFromHere, MSGBOX_NPC
+	msgbox AerousCity_Text_CivilianLifeJustIsntForMe, MSGBOX_NPC
 	end
 
-AerousCity_Text_ICanSeeSabuloFromHere:
-	.string "Hey, I can see Sabulo Island from\n"
-	.string "here!\p"
-	.string "You can get there by Surfing east\n"
-	.string "from here, or taking the S.S. Wake.$"
+AerousCity_Text_CivilianLifeJustIsntForMe:
+	.string "Civilian life just isn't for me…\n"
+	.string "The vast sea's where I belong!$"
 
 AerousCity_EventScript_Sailor2::
 	lock
@@ -226,3 +224,20 @@ AerousCity_Text_HmphComeBack:
 
 AerousCity_Text_LetsGo:
 	.string "{COLOR DARK_GREY}Herschel: {COLOR BLUE}Let's go!$"
+
+AerousCity_EventScript_Worker::
+	msgbox AerousCity_Text_HeadedToSabulo, MSGBOX_NPC
+	end
+
+AerousCity_Text_HeadedToSabulo:
+	.string "Headed to Sabulo Island? You'll\n"
+	.string "need a ticket for the S.S. Wake.$"
+
+AerousCity_EventScript_AceTrainerM::
+	msgbox AerousCity_Text_ThatsTheNameRatersHouse, MSGBOX_NPC
+	end
+
+AerousCity_Text_ThatsTheNameRatersHouse:
+	.string "That's the Name Rater's house.\p"
+	.string "His opinions on nicknames are\n"
+	.string "unrivalled!$"

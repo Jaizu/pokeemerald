@@ -130,10 +130,9 @@
 #define FLAG_RECEIVED_AEROUS_CITY_NUGGET        0x65 // FLAG_MOSSDEEP_GYM_SWITCH_2 in Emerald
 #define FLAG_MOSSDEEP_GYM_SWITCH_3              0x66 // Leftover from the RS version of Mossdeep Gym, functionally unused
 #define FLAG_DEFEATED_ESSA                      0x66 // FLAG_MOSSDEEP_GYM_SWITCH_3 in Emerald
-
-#define FLAG_MOSSDEEP_GYM_SWITCH_4           0x67 // Leftover from the RS version of Mossdeep Gym, functionally unused
-
-#define FLAG_UNUSED_0x068                    0x68  // Unused Flag
+#define FLAG_MOSSDEEP_GYM_SWITCH_4              0x67 // Leftover from the RS version of Mossdeep Gym, functionally unused
+#define FLAG_RECEIVED_AMULET_COIN               0x67 // FLAG_MOSSDEEP_GYM_SWITCH_4 in Emerald
+#define FLAG_RECEIVED_TM34                      0x68 // FLAG_UNUSED_0x068 in Emerald
 
 #define FLAG_OCEANIC_MUSEUM_MET_REPORTER     0x69
 #define FLAG_RECEIVED_HM04                   0x6A
@@ -165,7 +164,7 @@
 #define FLAG_DEFEATED_RIVAL_ROUTE103         0x82
 #define FLAG_RECEIVED_DOLL_LANETTE           0x83
 #define FLAG_RECEIVED_POTION_OLDALE          0x84
-#define FLAG_RECEIVED_AMULET_COIN            0x85
+#define FLAG_RECEIVED_AMULET_COIN_OLD        0x85 // FLAG_RECEIVED_AMULET_COIN in Emerald
 #define FLAG_PENDING_DAYCARE_EGG             0x86
 #define FLAG_THANKED_FOR_PLAYING_WITH_WALLY  0x87
 #define FLAG_ENABLE_FIRST_WALLY_POKENAV_CALL 0x88 // Set after defeating Wally outside Mauville Gym. Will activate a call later to register Wally.
@@ -199,7 +198,7 @@
 #define FLAG_TOUGH_PAINTING_MADE             0xA4
 #define FLAG_RECEIVED_TM39                   0xA5
 #define FLAG_RECEIVED_TM08                   0xA6
-#define FLAG_RECEIVED_TM34                   0xA7
+#define FLAG_RECEIVED_TM34_OLD               0xA7 // FLAG_RECEIVED_TM34 in Emerald
 #define FLAG_RECEIVED_TM50                   0xA8
 #define FLAG_RECEIVED_TM42                   0xA9
 #define FLAG_RECEIVED_TM40                   0xAA
