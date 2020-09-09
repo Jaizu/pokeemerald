@@ -82,14 +82,21 @@
 #define TRAINER_BYRON                        38 // TRAINER_FELIX in Emerald
 #define TRAINER_VIOLET                       39
 #define TRAINER_MAKO                         39 // TRAINER_VIOLET in Emerald
-
 #define TRAINER_ROSE_2                       40
+#define TRAINER_MARTHA_1                     40 // TRAINER_ROSE_2 in Emerald
 #define TRAINER_ROSE_3                       41
+#define TRAINER_LUCY_1                       41 // TRAINER_ROSE_3 in Emerald
 #define TRAINER_ROSE_4                       42
+#define TRAINER_YOSHIRO                      42 // TRAINER_ROSE_4 in Emerald
 #define TRAINER_ROSE_5                       43
+#define TRAINER_RALPH_1                      43 // TRAINER_ROSE_5 in Emerald
 #define TRAINER_DUSTY_1                      44
+#define TRAINER_BRETT_1                      44 // TRAINER_DUSTY_1 in Emerald
 #define TRAINER_CHIP                         45
+#define TRAINER_JULY_1                       45 // TRAINER_CHIP in Emerald
 #define TRAINER_FOSTER                       46
+#define TRAINER_LUDWIG                       46 // TRAINER_FOSTER in Emerald
+
 #define TRAINER_DUSTY_2                      47
 #define TRAINER_DUSTY_3                      48
 #define TRAINER_DUSTY_4                      49
