@@ -8,6 +8,7 @@
     "gMapGroup_ArchanTown",
     "gMapGroup_SerosVillage",
     "gMapGroup_AerousCity",
+    "gMapGroup_NestpineClimb",
     "gMapGroup0",
     "gMapGroup1",
     "gMapGroup2",
@@ -121,6 +122,9 @@
     "AerousCity_House1",
     "AerousCity_House2",
     "AerousCity_House3"
+  ],
+  "gMapGroup_NestpineClimb": [
+    "NestpineClimb_NetasHouse"
   ],
   "gMapGroup0": [
     "PetalburgCity",

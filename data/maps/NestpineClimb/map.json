@@ -113,7 +113,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LADY",
-      "x": 31,
+      "x": 32,
       "y": 61,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
@@ -228,7 +228,7 @@
       "x": 37,
       "y": 61,
       "elevation": 0,
-      "dest_map": "MAP_NESTPINE_CLIMB",
+      "dest_map": "MAP_NESTPINE_CLIMB_NETAS_HOUSE",
       "dest_warp_id": 0
     },
     {
@@ -284,8 +284,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 18,
-      "y": 40,
+      "x": 29,
+      "y": 51,
       "elevation": 3,
       "item": "ITEM_YELLOW_SHARD",
       "flag": "FLAG_HIDDEN_ITEM_NESTPINE_CLIMB_YELLOW_SHARD"

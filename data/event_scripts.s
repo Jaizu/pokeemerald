@@ -1195,3 +1195,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/NestpineClimb/scripts.inc"
 
 	.include "data/maps/NestpineClimb_HiddenGrotto/scripts.inc"
+
+	.include "data/maps/NestpineClimb_NetasHouse/scripts.inc"
