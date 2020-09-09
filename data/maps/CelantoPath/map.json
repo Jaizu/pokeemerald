@@ -22,6 +22,11 @@
       "direction": "left",
       "offset": 12,
       "map": "MAP_ARCHAN_TOWN"
+    },
+    {
+      "direction": "up",
+      "offset": 12,
+      "map": "MAP_NESTPINE_CLIMB"
     }
   ],
   "object_events": [

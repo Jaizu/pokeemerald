@@ -4900,6 +4900,16 @@
       "secondary_tileset": "gTileset_ArchanTunnel",
       "border_filepath": "data/layouts/ArchanTunnel_3F_1R/border.bin",
       "blockdata_filepath": "data/layouts/ArchanTunnel_3F_1R/map.bin"
+    },
+    {
+      "id": "LAYOUT_NESTPINE_CLIMB",
+      "name": "NestpineClimb_Layout",
+      "width": 62,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/NestpineClimb/border.bin",
+      "blockdata_filepath": "data/layouts/NestpineClimb/map.bin"
     }
   ]
 }

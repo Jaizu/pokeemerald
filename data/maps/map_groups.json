@@ -53,7 +53,8 @@
     "CelantoPath",
     "ArchanHills",
     "SerosPath",
-    "AerousRoad"
+    "AerousRoad",
+    "NestpineClimb"
   ],
   "gMapGroup_Dungeons": [
     "ArchanTunnel_1F_1R",
