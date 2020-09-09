@@ -467,6 +467,8 @@ SerosVillage_EventScript_SecondTunnelDiscoveryScene::
 	applymovement LOCALID_REDWOOD, Common_Movement_Delay48
 	waitmovement 0
 	msgbox SerosVillage_Text_OhYouFoundTheSecondEntrance, MSGBOX_DEFAULT
+	setflag FLAG_HIDE_SEROS_VILLAGE_CUT_TREE_LEFT
+	setflag FLAG_HIDE_SEROS_VILLAGE_CUT_TREE_RIGHT
 	setvar VAR_SEROS_VILLAGE_STATE, 4
 	warp MAP_ARCHAN_TUNNEL_TANGROWTH_TABLET_ROOM, 0, 0, 0
 	waitstate

@@ -79,8 +79,6 @@ ArchanTunnel_TangrowthTabletRoom_EventScript_TabletDiscoveryScene:
 	fadedefaultbgm
 	setobjectxyperm LOCALID_REDWOOD, 6, 4
 	setflag FLAG_HIDE_SEROS_POKEMON_CENTER_REDWOOD
-	setflag FLAG_HIDE_SEROS_VILLAGE_CUT_TREE_LEFT
-	setflag FLAG_HIDE_SEROS_VILLAGE_CUT_TREE_RIGHT
 	setflag FLAG_HIDE_AEROUS_ROAD_PAINTER
 	setvar VAR_AEROUS_ROAD_STATE, 1
 	setvar VAR_ARCHAN_TUNNEL_STATE, 3
@@ -241,6 +239,8 @@ ArchanTunnel_TangrowthTabletRoom_EventScript_HerschelTranslationScene::
 	playse SE_KAIDAN
 	waitse
 	removeobject LOCALID_REDWOOD
+	setflag FLAG_HIDE_CELANTO_PATH_BREAKABLE_ROCK_LEFT
+	setflag FLAG_HIDE_CELANTO_PATH_BREAKABLE_ROCK_RIGHT
 	setvar VAR_ARCHAN_TUNNEL_STATE, 5
 	releaseall
 	end

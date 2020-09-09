@@ -29,12 +29,48 @@
       "elevation": 0,
       "dest_map": "MAP_ARCHAN_TUNNEL_3F_1R",
       "dest_warp_id": 1
+    },
+    {
+      "x": 37,
+      "y": 61,
+      "elevation": 0,
+      "dest_map": "MAP_NESTPINE_CLIMB",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 10,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_NESTPINE_CLIMB",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 12,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_NESTPINE_CLIMB",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 11,
+      "y": 63,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NestpineClimb_EventScript_RouteSign"
+    },
+    {
+      "type": "sign",
+      "x": 40,
+      "y": 61,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NestpineClimb_EventScript_NetasHouseSign"
+    }
   ]
 }

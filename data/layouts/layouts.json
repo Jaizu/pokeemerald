@@ -4907,7 +4907,7 @@
       "width": 62,
       "height": 80,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
+      "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/NestpineClimb/border.bin",
       "blockdata_filepath": "data/layouts/NestpineClimb/map.bin"
     }
