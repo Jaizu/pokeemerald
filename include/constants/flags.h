@@ -122,19 +122,20 @@
 #define FLAG_DEFEATED_NEW_ELDERS                0x61 // FLAG_MET_TEAM_AQUA_HARBOR in Emerald
 #define FLAG_TV_EXPLAINED                       0x62
 #define FLAG_RECEIVED_AEROUS_CITY_REVIVAL_HERB  0x62 // FLAG_TV_EXPLAINED in Emerald
-#define FLAG_MAUVILLE_GYM_BARRIERS_STATE        0x63
-#define FLAG_DEFEATED_VINCENT                   0x63 // FLAG_MAUVILLE_GYM_BARRIERS_STATE in Emerald
-#define FLAG_MOSSDEEP_GYM_SWITCH_1              0x64 // Leftover from the RS version of Mossdeep Gym, functionally unused
-#define FLAG_RECEIVED_EGG_FROM_VINCENT          0x64 // FLAG_MOSSDEEP_GYM_SWITCH_1 in Emerald
-#define FLAG_MOSSDEEP_GYM_SWITCH_2              0x65 // Leftover from the RS version of Mossdeep Gym, functionally unused
-#define FLAG_RECEIVED_AEROUS_CITY_NUGGET        0x65 // FLAG_MOSSDEEP_GYM_SWITCH_2 in Emerald
-#define FLAG_MOSSDEEP_GYM_SWITCH_3              0x66 // Leftover from the RS version of Mossdeep Gym, functionally unused
-#define FLAG_DEFEATED_ESSA                      0x66 // FLAG_MOSSDEEP_GYM_SWITCH_3 in Emerald
-#define FLAG_MOSSDEEP_GYM_SWITCH_4              0x67 // Leftover from the RS version of Mossdeep Gym, functionally unused
-#define FLAG_RECEIVED_AMULET_COIN               0x67 // FLAG_MOSSDEEP_GYM_SWITCH_4 in Emerald
-#define FLAG_RECEIVED_TM34                      0x68 // FLAG_UNUSED_0x068 in Emerald
+#define FLAG_MAUVILLE_GYM_BARRIERS_STATE     0x63
+#define FLAG_DEFEATED_VINCENT                0x63 // FLAG_MAUVILLE_GYM_BARRIERS_STATE in Emerald
+#define FLAG_MOSSDEEP_GYM_SWITCH_1           0x64 // Leftover from the RS version of Mossdeep Gym, functionally unused
+#define FLAG_RECEIVED_EGG_FROM_VINCENT       0x64 // FLAG_MOSSDEEP_GYM_SWITCH_1 in Emerald
+#define FLAG_MOSSDEEP_GYM_SWITCH_2           0x65 // Leftover from the RS version of Mossdeep Gym, functionally unused
+#define FLAG_RECEIVED_AEROUS_CITY_NUGGET     0x65 // FLAG_MOSSDEEP_GYM_SWITCH_2 in Emerald
+#define FLAG_MOSSDEEP_GYM_SWITCH_3           0x66 // Leftover from the RS version of Mossdeep Gym, functionally unused
+#define FLAG_DEFEATED_ESSA                   0x66 // FLAG_MOSSDEEP_GYM_SWITCH_3 in Emerald
+#define FLAG_MOSSDEEP_GYM_SWITCH_4           0x67 // Leftover from the RS version of Mossdeep Gym, functionally unused
+#define FLAG_RECEIVED_AMULET_COIN            0x67 // FLAG_MOSSDEEP_GYM_SWITCH_4 in Emerald
+#define FLAG_RECEIVED_TM34                   0x68 // FLAG_UNUSED_0x068 in Emerald
+#define FLAG_OCEANIC_MUSEUM_MET_REPORTER            0x69
+#define FLAG_RECEIVED_NESTPINE_CLIMB_PERSIM_BERRIES 0x69 // FLAG_OCEANIC_MUSEUM_MET_REPORTER in Emerald
 
-#define FLAG_OCEANIC_MUSEUM_MET_REPORTER     0x69
 #define FLAG_RECEIVED_HM04                   0x6A
 #define FLAG_RECEIVED_HM06                   0x6B
 #define FLAG_WHITEOUT_TO_LAVARIDGE           0x6C // Set after defeating Flannery, so the player cant white out from poison before receiving Go Goggles
@@ -603,10 +604,13 @@
 #define FLAG_HIDDEN_ITEM_ARCHAN_TUNNEL_STARDUST              (FLAG_HIDDEN_ITEMS_START + 0x18) // FLAG_HIDDEN_ITEM_UNDERWATER_3_RED_SHARD in Emerald
 #define FLAG_HIDDEN_ITEM_UNDERWATER_4_PROTEIN                (FLAG_HIDDEN_ITEMS_START + 0x19)
 #define FLAG_HIDDEN_ITEM_ARCHAN_TUNNEL_HARD_STONE            (FLAG_HIDDEN_ITEMS_START + 0x19) // FLAG_HIDDEN_ITEM_UNDERWATER_4_PROTEIN in Emerald
-
 #define FLAG_HIDDEN_ITEM_UNDERWATER_4_PEARL                  (FLAG_HIDDEN_ITEMS_START + 0x1A)
+#define FLAG_HIDDEN_ITEM_NESTPINE_CLIMB_ELIXIR               (FLAG_HIDDEN_ITEMS_START + 0x1A) // FLAG_HIDDEN_ITEM_UNDERWATER_4_PEARL in Emerald
 #define FLAG_HIDDEN_ITEM_LILYCOVE_CITY_HEART_SCALE           (FLAG_HIDDEN_ITEMS_START + 0x1B)
+#define FLAG_HIDDEN_ITEM_NESTPINE_CLIMB_CHARCOAL             (FLAG_HIDDEN_ITEMS_START + 0x1B) // FLAG_HIDDEN_ITEM_LILYCOVE_CITY_HEART_SCALE in Emerald
 #define FLAG_HIDDEN_ITEM_FALLARBOR_TOWN_NUGGET               (FLAG_HIDDEN_ITEMS_START + 0x1C)
+#define FLAG_HIDDEN_ITEM_NESTPINE_CLIMB_YELLOW_SHARD         (FLAG_HIDDEN_ITEMS_START + 0x1C) // FLAG_HIDDEN_ITEM_FALLARBOR_TOWN_NUGGET in Emerald
+
 #define FLAG_HIDDEN_ITEM_MT_PYRE_EXTERIOR_ULTRA_BALL         (FLAG_HIDDEN_ITEMS_START + 0x1D)
 #define FLAG_HIDDEN_ITEM_ROUTE_113_TM_32                     (FLAG_HIDDEN_ITEMS_START + 0x1E)
 #define FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_1_KEY             (FLAG_HIDDEN_ITEMS_START + 0x1F)
@@ -1184,12 +1188,17 @@
 #define FLAG_ITEM_ARCHAN_TUNNEL_TM21                                0x400 // FLAG_ITEM_ROUTE_119_SUPER_REPEL in Emerald
 #define FLAG_ITEM_ROUTE_119_ZINC                                    0x401
 #define FLAG_ITEM_ARCHAN_TUNNEL_JAW_FOSSIL                          0x401 // FLAG_ITEM_ROUTE_119_ZINC in Emerald
-
 #define FLAG_ITEM_ROUTE_119_ELIXIR_1                                0x402
+#define FLAG_ITEM_NESTPINE_CLIMB_FIRE_STONE                         0x402 // FLAG_ITEM_ROUTE_119_ELIXIR_1 in Emerald
 #define FLAG_ITEM_ROUTE_119_LEAF_STONE                              0x403
+#define FLAG_ITEM_NESTPINE_CLIMB_TM06                               0x403 // FLAG_ITEM_ROUTE_119_LEAF_STONE in Emerald
 #define FLAG_ITEM_ROUTE_119_RARE_CANDY                              0x404
+#define FLAG_ITEM_NESTPINE_CLIMB_SILK_SCARF                         0x404 // FLAG_ITEM_ROUTE_119_RARE_CANDY in Emerald
 #define FLAG_ITEM_ROUTE_119_HYPER_POTION_1                          0x405
+#define FLAG_ITEM_NESTPINE_CLIMB_NUGGET                             0x405 // FLAG_ITEM_ROUTE_119_HYPER_POTION_1 in Emerald
 #define FLAG_ITEM_ROUTE_120_NUGGET                                  0x406
+#define FLAG_ITEM_NESTPINE_CLIMB_REGAL_STONE                        0x406 // FLAG_ITEM_ROUTE_120_NUGGET in Emerald
+
 #define FLAG_ITEM_ROUTE_120_FULL_HEAL                               0x407
 #define FLAG_ITEM_ROUTE_123_CALCIUM                                 0x408
 #define FLAG_ITEM_ROUTE_123_RARE_CANDY                              0x409 // Unused Flag, leftover from R/S. In Emerald this is a hidden item and uses a different flag

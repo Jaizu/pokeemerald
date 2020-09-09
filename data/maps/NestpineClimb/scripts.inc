@@ -256,3 +256,51 @@ NestpineClimb_Text_LudwigDefeat:
 
 NestpineClimb_Text_DontEvenTalkToMe:
 	.string "Don't even try to talk to me.$"
+
+NestpineClimb_EventScript_Lady::
+	msgbox NestpineClimb_Text_ThatsNetasHouse, MSGBOX_NPC
+	end
+
+NestpineClimb_Text_ThatsNetasHouse:
+	.string "That's Neta's house.\n"
+	.string "She maintains the Storage System!$"
+
+NestpineClimb_EventScript_Hiker::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_NESTPINE_CLIMB_PERSIM_BERRIES, NestpineClimb_EventScript_ReceivedRevivalHerb
+	msgbox NestpineClimb_Text_YoWearyTraveler, MSGBOX_DEFAULT
+	giveitem ITEM_PERSIM_BERRY, 3
+	compare VAR_RESULT, FALSE
+	goto_if_eq Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_NESTPINE_CLIMB_PERSIM_BERRIES
+	goto NestpineClimb_EventScript_ReceivedRevivalHerb
+	end
+
+NestpineClimb_EventScript_ReceivedRevivalHerb:
+	msgbox NestpineClimb_Text_ExplainPersimBerry, MSGBOX_DEFAULT
+	release
+	end
+
+NestpineClimb_Text_YoWearyTraveler:
+	.string "Yo, weary traveler!\n"
+	.string "Your Pokémon look hungry!\p"
+	.string "They've got to eat yummy Berries,\n"
+	.string "right?\p"
+	.string "Well, I've got tons in my knapsack.\n"
+	.string "Here, you can take a few!$"
+
+NestpineClimb_Text_ExplainPersimBerry:
+	.string "Feed a Persim Berry to a confused\n"
+    .string "Pokémon and it'll come to!$"
+
+NestpineClimb_EventScript_BlackBelt::
+	msgbox NestpineClimb_Text_ImALumberjack, MSGBOX_NPC
+	end
+
+NestpineClimb_Text_ImALumberjack:
+	.string "I'm a lumberjack.\p"
+	.string "After I've finished working for\n"
+	.string "today, I'm gonna hike up to\l"
+	.string "Windmist City, and relax at the\l"
+	.string "Windmist Timber Guild!$"

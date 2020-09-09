@@ -1,4 +1,5 @@
 // TODO: Remove duplicate definition labels
+// TODO: Add Regal Stone item
 
 EventScript_ItemPotion::
 Route102_EventScript_ItemPotion::
@@ -136,6 +137,24 @@ EventScript_ItemTM21::
 
 EventScript_ItemJawFossil::
 	finditem ITEM_JAW_FOSSIL
+	end
+
+EventScript_ItemFireStone::
+FieryPath_EventScript_ItemFireStone::
+	finditem ITEM_FIRE_STONE
+	end
+
+EventScript_ItemTM06::
+FieryPath_EventScript_ItemTM06::
+	finditem ITEM_TM06
+	end
+
+EventScript_ItemSilkScarf::
+	finditem ITEM_SILK_SCARF
+	end
+
+EventScript_ItemRegalStone::
+	finditem ITEM_SUN_STONE
 	end
 
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
@@ -388,14 +407,6 @@ GraniteCave_B2F_EventScript_ItemRepel:: @ 829116A
 
 JaggedPass_EventScript_ItemBurnHeal:: @ 8291184
 	finditem ITEM_BURN_HEAL
-	end
-
-FieryPath_EventScript_ItemFireStone:: @ 8291191
-	finditem ITEM_FIRE_STONE
-	end
-
-FieryPath_EventScript_ItemTM06:: @ 829119E
-	finditem ITEM_TM06
 	end
 
 MeteorFalls_1F_1R_EventScript_ItemTM23:: @ 82911AB

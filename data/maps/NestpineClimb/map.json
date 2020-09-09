@@ -110,6 +110,110 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NestpineClimb_EventScript_Ludwig",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LADY",
+      "x": 31,
+      "y": 61,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 2,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NestpineClimb_EventScript_Lady",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 50,
+      "y": 70,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 2,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NestpineClimb_EventScript_Hiker",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+      "x": 33,
+      "y": 27,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NestpineClimb_EventScript_BlackBelt",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 51,
+      "y": 33,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_ItemFireStone",
+      "flag": "FLAG_ITEM_NESTPINE_CLIMB_FIRE_STONE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TM_BALL",
+      "x": 46,
+      "y": 41,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_ItemTM06",
+      "flag": "FLAG_ITEM_NESTPINE_CLIMB_TM06"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 54,
+      "y": 54,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_ItemSilkScarf",
+      "flag": "FLAG_ITEM_NESTPINE_CLIMB_SILK_SCARF"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 26,
+      "y": 50,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_ItemNugget",
+      "flag": "FLAG_ITEM_NESTPINE_CLIMB_NUGGET"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 9,
+      "y": 73,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_ItemRegalStone",
+      "flag": "FLAG_ITEM_NESTPINE_CLIMB_REGAL_STONE"
     }
   ],
   "warp_events": [
@@ -161,6 +265,30 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NestpineClimb_EventScript_NetasHouseSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 34,
+      "y": 14,
+      "elevation": 3,
+      "item": "ITEM_ELIXIR",
+      "flag": "FLAG_HIDDEN_ITEM_NESTPINE_CLIMB_ELIXIR"
+    },
+    {
+      "type": "hidden_item",
+      "x": 32,
+      "y": 27,
+      "elevation": 3,
+      "item": "ITEM_CHARCOAL",
+      "flag": "FLAG_HIDDEN_ITEM_NESTPINE_CLIMB_CHARCOAL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 18,
+      "y": 40,
+      "elevation": 3,
+      "item": "ITEM_YELLOW_SHARD",
+      "flag": "FLAG_HIDDEN_ITEM_NESTPINE_CLIMB_YELLOW_SHARD"
     }
   ]
 }
