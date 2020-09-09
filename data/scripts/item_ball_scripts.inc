@@ -134,6 +134,10 @@ EventScript_ItemTM21::
 	finditem ITEM_TM21
 	end
 
+EventScript_ItemJawFossil::
+	finditem ITEM_JAW_FOSSIL
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end

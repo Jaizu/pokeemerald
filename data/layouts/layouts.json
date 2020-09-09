@@ -4880,6 +4880,26 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/AerousCity_House/border.bin",
       "blockdata_filepath": "data/layouts/AerousCity_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARCHAN_TUNNEL_2F_1R",
+      "name": "ArchanTunnel_2F_1R_Layout",
+      "width": 48,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_ArchanTunnel",
+      "border_filepath": "data/layouts/ArchanTunnel_2F_1R/border.bin",
+      "blockdata_filepath": "data/layouts/ArchanTunnel_2F_1R/map.bin"
+    },
+    {
+      "id": "LAYOUT_ARCHAN_TUNNEL_3F_1R",
+      "name": "ArchanTunnel_3F_1R_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_ArchanTunnel",
+      "border_filepath": "data/layouts/ArchanTunnel_3F_1R/border.bin",
+      "blockdata_filepath": "data/layouts/ArchanTunnel_3F_1R/map.bin"
     }
   ]
 }

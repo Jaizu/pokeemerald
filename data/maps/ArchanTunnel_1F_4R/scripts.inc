@@ -1,23 +1,6 @@
 ArchanTunnel_1F_4R_MapScripts::
 	.byte 0
 
-ArchanTunnel_1F_4R_EventScript_Byron::
-	trainerbattle_single TRAINER_BYRON, ArchanTunnel_1F_4R_Text_ByronIntro, ArchanTunnel_1F_4R_Text_ByronDefeated
-	msgbox ArchanTunnel_1F_4R_Text_ByronPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-ArchanTunnel_1F_4R_Text_ByronIntro:
-	.string "I thought I had found somewhere to\n"
-	.string "train in peace… Obviously not!$"
-
-ArchanTunnel_1F_4R_Text_ByronDefeated:
-	.string "I just want somewhere to train\n"
-	.string "in peace!$"
-
-ArchanTunnel_1F_4R_Text_ByronPostBattle:
-	.string "This cave is far out of the way…\n"
-	.string "Ideal for training, right?$"
-
 ArchanTunnel_1F_4R_EventScript_Haskel::
 	trainerbattle_single TRAINER_HASKEL, ArchanTunnel_1F_4R_Text_HaskelIntro, ArchanTunnel_1F_4R_Text_HaskelDefeated
 	msgbox ArchanTunnel_1F_4R_Text_HaskelPostBattle, MSGBOX_AUTOCLOSE

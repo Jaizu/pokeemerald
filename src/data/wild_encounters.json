@@ -12835,6 +12835,144 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_ARCHAN_TUNNEL_2F_1R",
+          "base_label": "gArchanTunnel_2F_1R0",
+          "land_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_PARAS"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_WOOBAT"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_WOOBAT"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_PARAS"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_DWEBBLE"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_LARVITAR"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_DWEBBLE"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_LARVITAR"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ARCHAN_TUNNEL_3F_1R",
+          "base_label": "gArchanTunnel_3F_1R0",
+          "land_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_PARAS"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_PARAS"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_LARVITAR"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_DWEBBLE"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_LARVITAR"
+              },
+              {
+                "min_level": 9,
+                "max_level": 11,
+                "species": "SPECIES_DWEBBLE"
+              }
+            ]
+          }
         }
       ]
     },

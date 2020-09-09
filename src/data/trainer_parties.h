@@ -446,19 +446,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MuseumGrunt3[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Byron[] = {
-    {
-    .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_GEODUDE,
-    },
-    {
-    .iv = 0,
-    .lvl = 13,
-    .species = SPECIES_GEODUDE,
-    }
-};
-
 static const struct TrainerMonNoItemDefaultMoves sParty_Haskel[] = {
     {
     .iv = 0,
@@ -472,16 +459,29 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Haskel[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Violet[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Byron[] = {
     {
     .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_ROSELIA,
+    .lvl = 12,
+    .species = SPECIES_GEODUDE,
     },
     {
     .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_GLOOM,
+    .lvl = 13,
+    .species = SPECIES_GEODUDE,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Mako[] = {
+    {
+    .iv = 0,
+    .lvl = 13,
+    .species = SPECIES_ARON,
+    },
+    {
+    .iv = 0,
+    .lvl = 13,
+    .species = SPECIES_DWEBBLE,
     }
 };
 

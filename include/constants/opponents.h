@@ -77,11 +77,12 @@
 #define TRAINER_DAISY                        36
 #define TRAINER_MUSEUM_GRUNT_3               36 // TRAINER_DAISY in Emerald
 #define TRAINER_ROSE_1                       37
-#define TRAINER_BYRON                        37 // TRAINER_ROSE_1 in Emerald
+#define TRAINER_HASKEL                       37 // TRAINER_ROSE_1 in Emerald
 #define TRAINER_FELIX                        38
-#define TRAINER_HASKEL                       38 // TRAINER_FELIX in Emerald
-
+#define TRAINER_BYRON                        38 // TRAINER_FELIX in Emerald
 #define TRAINER_VIOLET                       39
+#define TRAINER_MAKO                         39 // TRAINER_VIOLET in Emerald
+
 #define TRAINER_ROSE_2                       40
 #define TRAINER_ROSE_3                       41
 #define TRAINER_ROSE_4                       42

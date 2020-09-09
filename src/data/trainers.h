@@ -517,20 +517,6 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_MuseumGrunt3},
     },
 
-    [TRAINER_BYRON] =
-    {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_HIKER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-        .trainerPic = TRAINER_PIC_HIKER,
-        .trainerName = _("Byron"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Byron),
-        .party = {.NoItemDefaultMoves = sParty_Byron},
-    },
-
     [TRAINER_HASKEL] =
     {
         .partyFlags = 0,
@@ -545,18 +531,32 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_Haskel},
     },
 
-    [TRAINER_VIOLET] =
+    [TRAINER_BYRON] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_AROMA_LADY,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_AROMA_LADY,
-        .trainerName = _("VIOLET"),
+        .trainerClass = TRAINER_CLASS_HIKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_HIKER,
+        .trainerName = _("Byron"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Violet),
-        .party = {.NoItemDefaultMoves = sParty_Violet},
+        .partySize = ARRAY_COUNT(sParty_Byron),
+        .party = {.NoItemDefaultMoves = sParty_Byron},
+    },
+
+    [TRAINER_MAKO] =
+    {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_RUIN_MANIAC,
+        .trainerName = _("Mako"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_Mako),
+        .party = {.NoItemDefaultMoves = sParty_Mako},
     },
 
     [TRAINER_ROSE_2] =
