@@ -206,8 +206,7 @@
 #define METATILE_General_CalmWater             0x170
 #define METATILE_General_CaveEntrance_Bottom   0x0A7
 #define METATILE_General_CaveEntrance_Top      0x09F
-#define METATILE_General_Door_Contest          0x1DB
-#define METATILE_General_Door_Gym              0x1CD
+#define METATILE_General_Door_Gym              0x1B9
 #define METATILE_General_Door_PokeCenter       0x02A
 #define METATILE_General_Grass                 0x001
 #define METATILE_General_Grass_TreeLeft        0x1CE
@@ -398,7 +397,6 @@
 // gTileset_Petalburg
 #define METATILE_Petalburg_BlueFlower_Encounters              0x290
 #define METATILE_Petalburg_Door_Blue                          0x27A
-#define METATILE_Petalburg_Door_Gym                           0x2DB
 #define METATILE_Petalburg_Door_Littleroot                    0x248
 #define METATILE_Petalburg_Door_Tan                           0x21D
 #define METATILE_Petalburg_LeftTreeTopBlueFlower_Encounters   0x2CC
