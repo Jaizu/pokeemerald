@@ -60,9 +60,8 @@ AerousCity_Museum_1F_EventScript_RelicBallSwapper::
 
 AerousCity_Museum_1F_EventScript_CheckForRelicBall:
 	bufferleadmonspeciesname 0
-	setvar VAR_0x8004 0 // Party slot
-	specialvar VAR_0x8005 GetPartyPokemonBall
-	compare VAR_0x8005, ITEM_RELIC_BALL
+	specialvar VAR_RESULT GetLeadMonBall
+	compare VAR_RESULT, ITEM_RELIC_BALL
 	goto_if_ne AerousCity_Museum_1F_EventScript_OfferToSwap
 	msgbox AerousCity_Museum_1F_Text_WhoaWhereDidYouFindOne, MSGBOX_DEFAULT
 	release
@@ -80,9 +79,8 @@ AerousCity_Museum_1F_EventScript_SwapBallForRelic:
 	msgbox AerousCity_Museum_1F_Text_GoodChoiceKid, MSGBOX_DEFAULT
 	closemessage
 	fadescreen FADE_TO_BLACK
-	setvar VAR_0x8004 0 // Party slot
-	setvar VAR_0x8005 ITEM_RELIC_BALL // Ball to change to
-	special SetPartyPokemonBall
+	setvar VAR_0x8004 ITEM_RELIC_BALL
+	special SetLeadMonBall
 	fadescreen FADE_FROM_BLACK
 	msgbox AerousCity_Museum_1F_Text_SpreadTheWord, MSGBOX_DEFAULT
 	release

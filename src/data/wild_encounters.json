@@ -13127,6 +13127,95 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_NESTPINE_TOWN",
+          "base_label": "gNestpineTown0",
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 3,
+                "max_level": 16,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 3,
+                "max_level": 16,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_QUAGSIRE"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_QUAGSIRE"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 5,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 15,
+                "max_level": 25,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 15,
+                "max_level": 25,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 25,
+                "max_level": 30,
+                "species": "SPECIES_WOOPER"
+              }
+            ]
+          }
         }
       ]
     },

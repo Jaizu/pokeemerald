@@ -421,7 +421,7 @@ bool8 HasTwoFramesAnimation(u16 species);
 struct Unknown_806F160_Struct *sub_806F2AC(u8 id, u8 arg1);
 void sub_806F47C(u8 id);
 u8 *sub_806F4F8(u8 id, u8 arg1);
-u8 GetPartyPokemonBall(void);
-void SetPartyPokemonBall(void);
+u8 GetLeadMonBall(void);
+void SetLeadMonBall(void);
 
 #endif // GUARD_POKEMON_H

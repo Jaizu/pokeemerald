@@ -23,12 +23,98 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 4,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_NESTPINE_TOWN_POKEMON_CENTER",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 18,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_NESTPINE_TOWN_MART",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 24,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_NESTPINE_TOWN",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 35,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_NESTPINE_TOWN",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 13,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_NESTPINE_TOWN",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 3,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_NESTPINE_TOWN",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 10,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_NESTPINE_TOWN",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 23,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_NESTPINE_TOWN",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 1,
+      "y": 18,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NestpineTown_EventScript_TownSign"
+    },
+    {
+      "type": "sign",
+      "x": 22,
+      "y": 11,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NestpineTown_EventScript_GymSign"
+    },
+    {
+      "type": "sign",
+      "x": 33,
+      "y": 25,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NestpineTown_EventScript_FrostbiteCaveSign"
+    },
+    {
+      "type": "sign",
+      "x": 15,
+      "y": 11,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NestpineTown_EventScript_MoveDeletersHouseSign"
+    }
   ]
 }

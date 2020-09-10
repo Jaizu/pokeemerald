@@ -11,9 +11,8 @@ CelantoTown_Condominiums_2F_EventScript_PremierBallSwapper::
 
 CelantoTown_Condominiums_2F_EventScript_CheckForPremierBall:
 	bufferleadmonspeciesname 0
-	setvar VAR_0x8004 0 // Party slot
-	specialvar VAR_0x8005 GetPartyPokemonBall
-	compare VAR_0x8005, ITEM_PREMIER_BALL
+	specialvar VAR_RESULT GetLeadMonBall
+	compare VAR_RESULT, ITEM_PREMIER_BALL
 	goto_if_ne CelantoTown_Condominiums_2F_EventScript_OfferToSwap
 	msgbox CelantoTown_Condominiums_2F_Text_OhGoodTaste, MSGBOX_DEFAULT
 	release
@@ -36,9 +35,8 @@ CelantoTown_Condominiums_2F_EventScript_SwapBallForPremier:
 	msgbox CelantoTown_Condominiums_2F_Text_ThankGoodness, MSGBOX_DEFAULT
 	closemessage
 	fadescreen FADE_TO_BLACK
-	setvar VAR_0x8004 0 // Party slot
-	setvar VAR_0x8005 ITEM_PREMIER_BALL // Ball to change to
-	special SetPartyPokemonBall
+	setvar VAR_0x8004 ITEM_PREMIER_BALL
+	special SetLeadMonBall
 	fadescreen FADE_FROM_BLACK
 	msgbox CelantoTown_Condominiums_2F_Text_AhMuchBetter, MSGBOX_DEFAULT
 	release

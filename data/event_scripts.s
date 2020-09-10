@@ -1199,3 +1199,7 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/NestpineClimb_NetasHouse/scripts.inc"
 
 	.include "data/maps/NestpineTown/scripts.inc"
+
+	.include "data/maps/NestpineTown_PokemonCenter/scripts.inc"
+
+	.include "data/maps/NestpineTown_Mart/scripts.inc"

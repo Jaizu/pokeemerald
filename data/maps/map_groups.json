@@ -8,6 +8,7 @@
     "gMapGroup_ArchanTown",
     "gMapGroup_SerosVillage",
     "gMapGroup_AerousCity",
+    "gMapGroup_NestpineTown",
     "gMapGroup_NestpineClimb",
     "gMapGroup0",
     "gMapGroup1",
@@ -123,6 +124,10 @@
     "AerousCity_House1",
     "AerousCity_House2",
     "AerousCity_House3"
+  ],
+  "gMapGroup_NestpineTown": [
+    "NestpineTown_PokemonCenter",
+    "NestpineTown_Mart"
   ],
   "gMapGroup_NestpineClimb": [
     "NestpineClimb_NetasHouse"

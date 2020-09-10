@@ -536,8 +536,8 @@ gSpecials:: @ 81DBA64
 	def_special CloseDeptStoreElevatorWindow
 	def_special TrySetBattleTowerLinkType
 	def_special DoRivalNamingScreen
-	def_special GetPartyPokemonBall
-	def_special SetPartyPokemonBall
+	def_special GetLeadMonBall
+	def_special SetLeadMonBall
 	def_special StartCustomMovesBattle
 	def_special DoWarpAtPlayerPos
 	def_special CheckPartyForMon
