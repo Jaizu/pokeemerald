@@ -133,14 +133,15 @@
 #define FLAG_MOSSDEEP_GYM_SWITCH_4           0x67 // Leftover from the RS version of Mossdeep Gym, functionally unused
 #define FLAG_RECEIVED_AMULET_COIN            0x67 // FLAG_MOSSDEEP_GYM_SWITCH_4 in Emerald
 #define FLAG_RECEIVED_TM34                   0x68 // FLAG_UNUSED_0x068 in Emerald
-#define FLAG_OCEANIC_MUSEUM_MET_REPORTER            0x69
-#define FLAG_RECEIVED_NESTPINE_CLIMB_PERSIM_BERRIES 0x69 // FLAG_OCEANIC_MUSEUM_MET_REPORTER in Emerald
+#define FLAG_OCEANIC_MUSEUM_MET_REPORTER                    0x69
+#define FLAG_RECEIVED_NESTPINE_CLIMB_PERSIM_BERRIES         0x69 // FLAG_OCEANIC_MUSEUM_MET_REPORTER in Emerald
 #define FLAG_RECEIVED_HM04                                  0x6A
 #define FLAG_DEFEATED_NESTPINE_CLIMB_HIDDEN_GROTTO_MARACTUS 0x6A // FLAG_RECEIVED_HM04 in Emerald
 #define FLAG_RECEIVED_HM06                                  0x6B
 #define FLAG_CAUGHT_NESTPINE_CLIMB_HIDDEN_GROTTO_MARACTUS   0x6B // FLAG_RECEIVED_HM06 in Emerald
-
 #define FLAG_WHITEOUT_TO_LAVARIDGE           0x6C // Set after defeating Flannery, so the player cant white out from poison before receiving Go Goggles
+#define FLAG_RECEIVED_NETAS_METAL_COAT       0x6C // FLAG_WHITEOUT_TO_LAVARIDGE in Emerald
+
 #define FLAG_RECEIVED_HM05                   0x6D
 #define FLAG_RECEIVED_HM02                   0x6E
 #define FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT  0x6F
@@ -1562,6 +1563,7 @@
 #define FLAG_LANDMARK_FIERY_PATH                    (SYSTEM_FLAGS + 0x4A)
 
 #define FLAG_SYS_PC_LANETTE                         (SYSTEM_FLAGS + 0x4B)
+#define FLAG_SYS_PC_NETA                            (SYSTEM_FLAGS + 0x4B) // FLAG_SYS_PC_LANETTE in Emerald
 #define FLAG_SYS_MYSTERY_EVENT_ENABLE               (SYSTEM_FLAGS + 0x4C)
 #define FLAG_SYS_ENC_UP_ITEM                        (SYSTEM_FLAGS + 0x4D)
 #define FLAG_SYS_ENC_DOWN_ITEM                      (SYSTEM_FLAGS + 0x4E)
