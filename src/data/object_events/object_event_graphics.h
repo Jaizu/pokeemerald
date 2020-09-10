@@ -49,6 +49,7 @@ const u16 gObjectEventPaletteJimGai[] = INCBIN_U16("graphics/object_events/palet
 const u16 gObjectEventPaletteFairyTaleGirl[] = INCBIN_U16("graphics/object_events/palettes/fairy_tale_girl.gbapal");
 const u16 gObjectEventPaletteArtist[] = INCBIN_U16("graphics/object_events/palettes/artist.gbapal");
 const u16 gObjectEventPalettePainter[] = INCBIN_U16("graphics/object_events/palettes/painter.gbapal");
+const u16 gObjectEventPaletteExpert[] = INCBIN_U16("graphics/object_events/palettes/expert.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
