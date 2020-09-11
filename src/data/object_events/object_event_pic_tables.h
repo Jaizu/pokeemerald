@@ -586,16 +586,16 @@ const struct SpriteFrameImage gObjectEventPicTable_Beauty[] = {
     overworld_frame(gObjectEventPic_Beauty, 2, 4, 8),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_Scientist1[] = {
-    overworld_frame(gObjectEventPic_Scientist1, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Scientist1, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Scientist1, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Scientist1, 2, 4, 3),
-    overworld_frame(gObjectEventPic_Scientist1, 2, 4, 4),
-    overworld_frame(gObjectEventPic_Scientist1, 2, 4, 5),
-    overworld_frame(gObjectEventPic_Scientist1, 2, 4, 6),
-    overworld_frame(gObjectEventPic_Scientist1, 2, 4, 7),
-    overworld_frame(gObjectEventPic_Scientist1, 2, 4, 8),
+const struct SpriteFrameImage gObjectEventPicTable_Scientist[] = {
+    overworld_frame(gObjectEventPic_Scientist, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Scientist, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Scientist, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Scientist, 2, 4, 3),
+    overworld_frame(gObjectEventPic_Scientist, 2, 4, 4),
+    overworld_frame(gObjectEventPic_Scientist, 2, 4, 5),
+    overworld_frame(gObjectEventPic_Scientist, 2, 4, 6),
+    overworld_frame(gObjectEventPic_Scientist, 2, 4, 7),
+    overworld_frame(gObjectEventPic_Scientist, 2, 4, 8),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Lass[] = {
@@ -1110,16 +1110,16 @@ const struct SpriteFrameImage gObjectEventPicTable_CableCar[] = {
     obj_frame_tiles(gObjectEventPic_CableCar),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_Scientist2[] = {
-    overworld_frame(gObjectEventPic_Scientist2, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Scientist2, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Scientist2, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Scientist2, 2, 4, 3),
-    overworld_frame(gObjectEventPic_Scientist2, 2, 4, 4),
-    overworld_frame(gObjectEventPic_Scientist2, 2, 4, 5),
-    overworld_frame(gObjectEventPic_Scientist2, 2, 4, 6),
-    overworld_frame(gObjectEventPic_Scientist2, 2, 4, 7),
-    overworld_frame(gObjectEventPic_Scientist2, 2, 4, 8),
+const struct SpriteFrameImage gObjectEventPicTable_BirdKeeper[] = {
+    overworld_frame(gObjectEventPic_BirdKeeper, 2, 4, 0),
+    overworld_frame(gObjectEventPic_BirdKeeper, 2, 4, 1),
+    overworld_frame(gObjectEventPic_BirdKeeper, 2, 4, 2),
+    overworld_frame(gObjectEventPic_BirdKeeper, 2, 4, 3),
+    overworld_frame(gObjectEventPic_BirdKeeper, 2, 4, 4),
+    overworld_frame(gObjectEventPic_BirdKeeper, 2, 4, 5),
+    overworld_frame(gObjectEventPic_BirdKeeper, 2, 4, 6),
+    overworld_frame(gObjectEventPic_BirdKeeper, 2, 4, 7),
+    overworld_frame(gObjectEventPic_BirdKeeper, 2, 4, 8),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Worker[] = {

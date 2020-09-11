@@ -1,8 +1,6 @@
 #ifndef GUARD_CONSTANTS_EVENT_OBJECTS_H
 #define GUARD_CONSTANTS_EVENT_OBJECTS_H
 
-// TODO: Remove legacy names
-
 #define OBJ_EVENT_GFX_BRENDAN_NORMAL               0
 #define OBJ_EVENT_GFX_BRENDAN_MACH_BIKE            1
 #define OBJ_EVENT_GFX_BRENDAN_SURFING              2
@@ -18,24 +16,17 @@
 #define OBJ_EVENT_GFX_LITTLE_GIRL                 12
 #define OBJ_EVENT_GFX_BOY_3                       13
 #define OBJ_EVENT_GFX_BATTLE_GIRL                 14
-#define OBJ_EVENT_GFX_GIRL_3                      OBJ_EVENT_GFX_BATTLE_GIRL
 #define OBJ_EVENT_GFX_RICH_BOY                    15
 #define OBJ_EVENT_GFX_LADY                        16
-#define OBJ_EVENT_GFX_WOMAN_1                     OBJ_EVENT_GFX_LADY
 #define OBJ_EVENT_GFX_FAT_MAN                     17
 #define OBJ_EVENT_GFX_PAINTER                     18
-#define OBJ_EVENT_GFX_POKEFAN_F                   OBJ_EVENT_GFX_PAINTER
 #define OBJ_EVENT_GFX_MAN_1                       19
 #define OBJ_EVENT_GFX_AROMA_LADY                  20
-#define OBJ_EVENT_GFX_WOMAN_2                     OBJ_EVENT_GFX_AROMA_LADY
 #define OBJ_EVENT_GFX_EXPERT_M                    21
 #define OBJ_EVENT_GFX_EXPERT_F                    22
 #define OBJ_EVENT_GFX_JIM_GAI                     23
-#define OBJ_EVENT_GFX_MAN_2                       OBJ_EVENT_GFX_JIM_GAI
 #define OBJ_EVENT_GFX_ACE_TRAINER_F               24
-#define OBJ_EVENT_GFX_WOMAN_3                     OBJ_EVENT_GFX_ACE_TRAINER_F
 #define OBJ_EVENT_GFX_RUIN_MANIAC                 25
-#define OBJ_EVENT_GFX_POKEFAN_M                   OBJ_EVENT_GFX_RUIN_MANIAC
 #define OBJ_EVENT_GFX_WOMAN_4                     26
 #define OBJ_EVENT_GFX_COOK                        27
 #define OBJ_EVENT_GFX_LINK_RECEPTIONIST           28
@@ -44,7 +35,6 @@
 #define OBJ_EVENT_GFX_CAMPER                      31
 #define OBJ_EVENT_GFX_PICNICKER                   32
 #define OBJ_EVENT_GFX_ACE_TRAINER_M               33
-#define OBJ_EVENT_GFX_MAN_3                       OBJ_EVENT_GFX_ACE_TRAINER_M
 #define OBJ_EVENT_GFX_WOMAN_5                     34
 #define OBJ_EVENT_GFX_YOUNGSTER                   35
 #define OBJ_EVENT_GFX_BUG_CATCHER                 36
@@ -57,7 +47,7 @@
 #define OBJ_EVENT_GFX_SWIMMER_F                   43
 #define OBJ_EVENT_GFX_BLACK_BELT                  44
 #define OBJ_EVENT_GFX_BEAUTY                      45
-#define OBJ_EVENT_GFX_SCIENTIST_1                 46
+#define OBJ_EVENT_GFX_SCIENTIST                   46
 #define OBJ_EVENT_GFX_LASS                        47
 #define OBJ_EVENT_GFX_GENTLEMAN                   48
 #define OBJ_EVENT_GFX_SAILOR                      49
@@ -76,10 +66,8 @@
 #define OBJ_EVENT_GFX_BERRY_TREE_LATE_STAGES      62
 #define OBJ_EVENT_GFX_BRENDAN_ACRO_BIKE           63
 #define OBJ_EVENT_GFX_REDWOOD                     64
-#define OBJ_EVENT_GFX_PROF_BIRCH                  OBJ_EVENT_GFX_REDWOOD
 #define OBJ_EVENT_GFX_MAN_4                       65
 #define OBJ_EVENT_GFX_ROCKER                      66
-#define OBJ_EVENT_GFX_MAN_5                       OBJ_EVENT_GFX_ROCKER
 #define OBJ_EVENT_GFX_REPORTER_M                  67
 #define OBJ_EVENT_GFX_REPORTER_F                  68
 #define OBJ_EVENT_GFX_BARD                        69
@@ -128,22 +116,17 @@
 #define OBJ_EVENT_GFX_MAY_UNDERWATER             112
 #define OBJ_EVENT_GFX_MOVING_BOX                 113
 #define OBJ_EVENT_GFX_CABLE_CAR                  114
-#define OBJ_EVENT_GFX_SCIENTIST_2                115
+#define OBJ_EVENT_GFX_BIRD_KEEPER                115
 #define OBJ_EVENT_GFX_WORKER                     116
-#define OBJ_EVENT_GFX_DEVON_EMPLOYEE             OBJ_EVENT_GFX_WORKER
 #define OBJ_EVENT_GFX_AQUA_MEMBER_M              117
 #define OBJ_EVENT_GFX_EUNICE                     118
-#define OBJ_EVENT_GFX_AQUA_MEMBER_F              OBJ_EVENT_GFX_EUNICE
 #define OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_M         119
-#define OBJ_EVENT_GFX_MAGMA_MEMBER_M             OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_M
 #define OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_F         120
-#define OBJ_EVENT_GFX_MAGMA_MEMBER_F             OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_F
 #define OBJ_EVENT_GFX_SIDNEY                     121
 #define OBJ_EVENT_GFX_PHOEBE                     122
 #define OBJ_EVENT_GFX_GLACIA                     123
 #define OBJ_EVENT_GFX_DRAKE                      124
 #define OBJ_EVENT_GFX_FERNANDO                   125
-#define OBJ_EVENT_GFX_ROXANNE                    OBJ_EVENT_GFX_FERNANDO
 #define OBJ_EVENT_GFX_BRAWLY                     126
 #define OBJ_EVENT_GFX_WATTSON                    127
 #define OBJ_EVENT_GFX_FLANNERY                   128
@@ -152,12 +135,9 @@
 #define OBJ_EVENT_GFX_LIZA                       131
 #define OBJ_EVENT_GFX_TATE                       132
 #define OBJ_EVENT_GFX_HERSCHEL                   133
-#define OBJ_EVENT_GFX_WALLACE                    OBJ_EVENT_GFX_HERSCHEL
 #define OBJ_EVENT_GFX_STEVEN                     134
 #define OBJ_EVENT_GFX_COULTER                    135
-#define OBJ_EVENT_GFX_WALLY                      OBJ_EVENT_GFX_COULTER
 #define OBJ_EVENT_GFX_FAIRY_TALE_GIRL            136
-#define OBJ_EVENT_GFX_LITTLE_BOY_3               OBJ_EVENT_GFX_FAIRY_TALE_GIRL
 #define OBJ_EVENT_GFX_BRENDAN_FISHING            137
 #define OBJ_EVENT_GFX_MAY_FISHING                138
 #define OBJ_EVENT_GFX_HOT_SPRINGS_OLD_WOMAN      139
@@ -218,7 +198,6 @@
 #define OBJ_EVENT_GFX_MAY_DECORATING             194
 #define OBJ_EVENT_GFX_ARCHIE                     195
 #define OBJ_EVENT_GFX_MORGANA                    196
-#define OBJ_EVENT_GFX_MAXIE                      OBJ_EVENT_GFX_MORGANA
 #define OBJ_EVENT_GFX_KYOGRE_1                   197
 #define OBJ_EVENT_GFX_GROUDON_1                  198
 #define OBJ_EVENT_GFX_FOSSIL                     199
@@ -226,7 +205,6 @@
 #define OBJ_EVENT_GFX_REGICE                     201
 #define OBJ_EVENT_GFX_REGISTEEL                  202
 #define OBJ_EVENT_GFX_PSYDUCK                    203
-#define OBJ_EVENT_GFX_SKITTY                     OBJ_EVENT_GFX_PSYDUCK
 #define OBJ_EVENT_GFX_KECLEON_1                  204
 #define OBJ_EVENT_GFX_KYOGRE_2                   205
 #define OBJ_EVENT_GFX_GROUDON_2                  206
@@ -247,7 +225,6 @@
 #define OBJ_EVENT_GFX_KYOGRE_3                   221
 #define OBJ_EVENT_GFX_GROUDON_3                  222
 #define OBJ_EVENT_GFX_GUARD                      223
-#define OBJ_EVENT_GFX_MYSTERY_GIFT_MAN           OBJ_EVENT_GFX_GUARD
 #define OBJ_EVENT_GFX_TRICK_HOUSE_STATUE         224
 #define OBJ_EVENT_GFX_KIRLIA                     225
 #define OBJ_EVENT_GFX_DUSCLOPS                   226
@@ -267,6 +244,31 @@
 
 #define NUM_OBJ_EVENT_GFX                        240
 
+// TODO: Remove legacy names
+
+#define OBJ_EVENT_GFX_GIRL_3                     OBJ_EVENT_GFX_BATTLE_GIRL
+#define OBJ_EVENT_GFX_WOMAN_1                    OBJ_EVENT_GFX_LADY
+#define OBJ_EVENT_GFX_POKEFAN_F                  OBJ_EVENT_GFX_PAINTER
+#define OBJ_EVENT_GFX_WOMAN_2                    OBJ_EVENT_GFX_AROMA_LADY
+#define OBJ_EVENT_GFX_MAN_2                      OBJ_EVENT_GFX_JIM_GAI
+#define OBJ_EVENT_GFX_WOMAN_3                    OBJ_EVENT_GFX_ACE_TRAINER_F
+#define OBJ_EVENT_GFX_POKEFAN_M                  OBJ_EVENT_GFX_RUIN_MANIAC
+#define OBJ_EVENT_GFX_MAN_3                      OBJ_EVENT_GFX_ACE_TRAINER_M
+#define OBJ_EVENT_GFX_PROF_BIRCH                 OBJ_EVENT_GFX_REDWOOD
+#define OBJ_EVENT_GFX_MAN_5                      OBJ_EVENT_GFX_ROCKER
+#define OBJ_EVENT_GFX_DEVON_EMPLOYEE             OBJ_EVENT_GFX_WORKER
+#define OBJ_EVENT_GFX_AQUA_MEMBER_F              OBJ_EVENT_GFX_EUNICE
+#define OBJ_EVENT_GFX_MAGMA_MEMBER_M             OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_M
+#define OBJ_EVENT_GFX_MAGMA_MEMBER_F             OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_F
+#define OBJ_EVENT_GFX_ROXANNE                    OBJ_EVENT_GFX_FERNANDO
+#define OBJ_EVENT_GFX_WALLACE                    OBJ_EVENT_GFX_HERSCHEL
+#define OBJ_EVENT_GFX_WALLY                      OBJ_EVENT_GFX_COULTER
+#define OBJ_EVENT_GFX_LITTLE_BOY_3               OBJ_EVENT_GFX_FAIRY_TALE_GIRL
+#define OBJ_EVENT_GFX_MAXIE                      OBJ_EVENT_GFX_MORGANA
+#define OBJ_EVENT_GFX_SKITTY                     OBJ_EVENT_GFX_PSYDUCK
+#define OBJ_EVENT_GFX_MYSTERY_GIFT_MAN           OBJ_EVENT_GFX_GUARD
+#define OBJ_EVENT_GFX_SCIENTIST_1                OBJ_EVENT_GFX_SCIENTIST
+#define OBJ_EVENT_GFX_SCIENTIST_2                OBJ_EVENT_GFX_BIRD_KEEPER
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.
