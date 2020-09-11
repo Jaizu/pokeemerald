@@ -141,8 +141,9 @@
 #define FLAG_CAUGHT_NESTPINE_CLIMB_HIDDEN_GROTTO_MARACTUS   0x6B // FLAG_RECEIVED_HM06 in Emerald
 #define FLAG_WHITEOUT_TO_LAVARIDGE           0x6C // Set after defeating Flannery, so the player cant white out from poison before receiving Go Goggles
 #define FLAG_RECEIVED_NETAS_METAL_COAT       0x6C // FLAG_WHITEOUT_TO_LAVARIDGE in Emerald
-
 #define FLAG_RECEIVED_HM05                   0x6D
+#define FLAG_RECEIVED_UP_GRADE               0x6D // FLAG_RECEIVED_HM05 in Emerald
+
 #define FLAG_RECEIVED_HM02                   0x6E
 #define FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT  0x6F
 #define FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE  0x70
@@ -1202,8 +1203,9 @@
 #define FLAG_ITEM_NESTPINE_CLIMB_NUGGET                             0x405 // FLAG_ITEM_ROUTE_119_HYPER_POTION_1 in Emerald
 #define FLAG_ITEM_ROUTE_120_NUGGET                                  0x406
 #define FLAG_ITEM_NESTPINE_CLIMB_REGAL_STONE                        0x406 // FLAG_ITEM_ROUTE_120_NUGGET in Emerald
-
 #define FLAG_ITEM_ROUTE_120_FULL_HEAL                               0x407
+#define FLAG_ITEM_NESTPINE_TOWN_REVIVE                              0x407 // FLAG_ITEM_ROUTE_120_FULL_HEAL in Emerald
+
 #define FLAG_ITEM_ROUTE_123_CALCIUM                                 0x408
 #define FLAG_ITEM_ROUTE_123_RARE_CANDY                              0x409 // Unused Flag, leftover from R/S. In Emerald this is a hidden item and uses a different flag
 #define FLAG_ITEM_ROUTE_127_ZINC                                    0x40A
