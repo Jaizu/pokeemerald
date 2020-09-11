@@ -102,12 +102,17 @@
 #define TRAINER_COULTER_NESTPINE_TOWN_PRINPLUP  48 // TRAINER_DUSTY_3 in Emerald
 #define TRAINER_DUSTY_4                         49
 #define TRAINER_COULTER_NESTPINE_TOWN_GROTLE    49 // TRAINER_DUSTY_4 in Emerald
-
 #define TRAINER_DUSTY_5                      50
+#define TRAINER_WILHELM                      50 // TRAINER_DUSTY_5 in Emerald
 #define TRAINER_GABBY_AND_TY_1               51
+#define TRAINER_GORDON                       51 // TRAINER_GABBY_AND_TY_1 in Emerald
 #define TRAINER_GABBY_AND_TY_2               52
+#define TRAINER_PETER                        52 // TRAINER_GABBY_AND_TY_2 in Emerald
 #define TRAINER_GABBY_AND_TY_3               53
+#define TRAINER_JANE                         53 // TRAINER_GABBY_AND_TY_3 in Emerald
 #define TRAINER_GABBY_AND_TY_4               54
+#define TRAINER_CEDRIC                       54 // TRAINER_GABBY_AND_TY_4 in Emerald
+
 #define TRAINER_GABBY_AND_TY_5               55
 #define TRAINER_GABBY_AND_TY_6               56
 #define TRAINER_LOLA_1                       57
@@ -321,6 +326,7 @@
 #define TRAINER_ROXANNE_1                   265
 #define TRAINER_LEADER_FERNANDO_1           265 // TRAINER_ROXANNE_1 in Emerald
 #define TRAINER_BRAWLY_1                    266
+#define TRAINER_LEADER_ARIA_1               266 // TRAINER_BRAWLY_1 in Emerald
 #define TRAINER_WATTSON_1                   267
 #define TRAINER_FLANNERY_1                  268
 #define TRAINER_NORMAN_1                    269
@@ -529,7 +535,7 @@
 #define TRAINER_NANCY                       472
 #define TRAINER_MARTHA                      473
 #define TRAINER_DIANA_1                     474
-#define TRAINER_CEDRIC                      475
+#define TRAINER_CEDRIC_OLD                  475 // TRAINER_CEDRIC in Emerald
 #define TRAINER_IRENE                       476
 #define TRAINER_DIANA_2                     477
 #define TRAINER_DIANA_3                     478

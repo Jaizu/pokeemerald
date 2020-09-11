@@ -116,13 +116,15 @@ SerosVillage_Gym_Text_HanaPostBattle:
 	.string "affects their ability to battle!$"
 
 SerosVillage_Gym_EventScript_Fernando::
-	trainerbattle_single TRAINER_LEADER_FERNANDO_1, SerosVillage_Gym_Text_FernandoIntro, SerosVillage_Gym_Text_FernandoDefeat, SerosVillage_Gym_EventScript_FernandoFlees, NO_MUSIC
+	trainerbattle_single TRAINER_LEADER_FERNANDO_1, SerosVillage_Gym_Text_FernandoIntro, SerosVillage_Gym_Text_FernandoDefeat, SerosVillage_Gym_EventScript_FernandoDefeated, NO_MUSIC
 	goto_if_unset FLAG_RECEIVED_TM03, SerosVillage_Gym_EventScript_GiveDisarmingVoice
 	msgbox SerosVillage_Gym_Text_FernandoPostBattle, MSGBOX_DEFAULT
 	release
 	end
 
-SerosVillage_Gym_EventScript_FernandoFlees:
+SerosVillage_Gym_EventScript_FernandoDefeated:
+	setvar VAR_0x8008, 1
+	call Common_EventScript_SetGymTrainers
 	msgbox SerosVillage_Gym_Text_FernandoRefuses, MSGBOX_DEFAULT
 	closemessage
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
@@ -146,6 +148,8 @@ SerosVillage_Gym_EventScript_FernandoWalkRight:
 SerosVillage_Gym_EventScript_GiveDisarmingVoice:
 	msgbox SerosVillage_Gym_Text_ThankYouAgain, MSGBOX_DEFAULT
 	giveitem ITEM_TM03
+	compare VAR_RESULT, FALSE
+	goto_if_eq Common_EventScript_BagIsFull
 	setflag FLAG_RECEIVED_TM03
 	msgbox SerosVillage_Gym_Text_ThatsDisarmingVoice, MSGBOX_DEFAULT
 	release

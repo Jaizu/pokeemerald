@@ -147,8 +147,9 @@
 #define FLAG_DIDNT_RECEIVE_EXP_SHARE         0x6E // FLAG_RECEIVED_HM02 in Emerald
 #define FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT  0x6F
 #define FLAG_RECEIVED_EXP_SHARE              0x6F // FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT in Emerald
-
 #define FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE  0x70
+#define FLAG_CLEAR_ROCKS_FROSTBITE_CAVE_1F   0x70 // FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE in Emerald
+
 #define FLAG_UNUSED_RS_LEGENDARY_BATTLE_DONE 0x71 // Unused Flag. Used in R/S to indicate whether player defeated or caught Groudon/Kyogre in Cave of Origin.
 #define FLAG_SCOTT_CALL_BATTLE_FRONTIER      0x72 // Used in order to activate a phone call from Scott, inviting the player to the SS Tidal.
 #define FLAG_RECEIVED_METEORITE              0x73
@@ -892,8 +893,9 @@
 #define FLAG_HIDE_NESTPINE_CLIMB_HIDDEN_GROTTO_MARACTUS             0x2ED // FLAG_HIDE_SLATEPORT_CITY_SCOTT in Emerald
 #define FLAG_HIDE_ROUTE_101_ZIGZAGOON                               0x2EE
 #define FLAG_HIDE_NESTPINE_TOWN_COULTER                             0x2EE // FLAG_HIDE_ROUTE_101_ZIGZAGOON in Emerald
-
 #define FLAG_HIDE_VICTORY_ROAD_EXIT_WALLY                           0x2EF
+#define FLAG_HIDE_NEW_ELDERS_GRUNT_FROSTBITE_CAVE_1F                0x2EF // FLAG_HIDE_VICTORY_ROAD_EXIT_WALLY in Emerald
+
 #define FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE                       0x2F0
 #define FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_STEVEN              0x2F1
 #define FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_1          0x2F2
@@ -1444,8 +1446,9 @@
 #define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
-#define FLAG_DEFEATED_SEROS_GYM                                     0x4F0
+#define FLAG_DEFEATED_SEROS_GYM                                     0x4F0 // FLAG_DEFEATED_RUSTBORO_GYM in Emerald
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
+#define FLAG_DEFEATED_NESTPINE_GYM                                  0x4F1 // FLAG_DEFEATED_DEWFORD_GYM in Emerald
 #define FLAG_DEFEATED_MAUVILLE_GYM                                  0x4F2
 #define FLAG_DEFEATED_LAVARIDGE_GYM                                 0x4F3
 #define FLAG_DEFEATED_PETALBURG_GYM                                 0x4F4
