@@ -1203,3 +1203,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/NestpineTown_PokemonCenter/scripts.inc"
 
 	.include "data/maps/NestpineTown_Mart/scripts.inc"
+
+	.include "data/maps/NestpineTown_Gym/scripts.inc"

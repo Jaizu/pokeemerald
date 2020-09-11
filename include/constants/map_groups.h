@@ -88,6 +88,7 @@
 // Map Group 7
 #define MAP_NESTPINE_TOWN_POKEMON_CENTER (0 | (7 << 8))
 #define MAP_NESTPINE_TOWN_MART           (1 | (7 << 8))
+#define MAP_NESTPINE_TOWN_GYM            (2 | (7 << 8))
 
 // Map Group 8
 #define MAP_NESTPINE_CLIMB_NETAS_HOUSE (0 | (8 << 8))

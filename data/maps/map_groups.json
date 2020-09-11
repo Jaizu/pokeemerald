@@ -127,7 +127,8 @@
   ],
   "gMapGroup_NestpineTown": [
     "NestpineTown_PokemonCenter",
-    "NestpineTown_Mart"
+    "NestpineTown_Mart",
+    "NestpineTown_Gym"
   ],
   "gMapGroup_NestpineClimb": [
     "NestpineClimb_NetasHouse"

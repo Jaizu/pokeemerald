@@ -4930,6 +4930,16 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/NestpineTown/border.bin",
       "blockdata_filepath": "data/layouts/NestpineTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_NESTPINE_TOWN_GYM",
+      "name": "NestpineTown_Gym_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_RustboroGym",
+      "border_filepath": "data/layouts/NestpineTown_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/NestpineTown_Gym/map.bin"
     }
   ]
 }
