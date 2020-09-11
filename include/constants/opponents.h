@@ -96,10 +96,13 @@
 #define TRAINER_JULY_1                       45 // TRAINER_CHIP in Emerald
 #define TRAINER_FOSTER                       46
 #define TRAINER_LUDWIG                       46 // TRAINER_FOSTER in Emerald
+#define TRAINER_DUSTY_2                         47
+#define TRAINER_COULTER_NESTPINE_TOWN_MONFERNO  47 // TRAINER_DUSTY_2 in Emerald
+#define TRAINER_DUSTY_3                         48
+#define TRAINER_COULTER_NESTPINE_TOWN_PRINPLUP  48 // TRAINER_DUSTY_3 in Emerald
+#define TRAINER_DUSTY_4                         49
+#define TRAINER_COULTER_NESTPINE_TOWN_GROTLE    49 // TRAINER_DUSTY_4 in Emerald
 
-#define TRAINER_DUSTY_2                      47
-#define TRAINER_DUSTY_3                      48
-#define TRAINER_DUSTY_4                      49
 #define TRAINER_DUSTY_5                      50
 #define TRAINER_GABBY_AND_TY_1               51
 #define TRAINER_GABBY_AND_TY_2               52

@@ -576,31 +576,84 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Ludwig[] = {
     .species = SPECIES_BEEDRILL,
     }
 };
-
-static const struct TrainerMonNoItemCustomMoves sParty_Dusty2[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_CoulterNestpineTownMonferno[] = {
+    {
+    .iv = 30,
+    .lvl = 20,
+    .species = SPECIES_MAKUHITA,
+    .moves = {MOVE_FAKE_OUT, MOVE_FORCE_PALM, MOVE_SAND_ATTACK, MOVE_FOCUS_ENERGY}
+    },
+    {
+    .iv = 30,
+    .lvl = 20,
+    .species = SPECIES_ROGGENROLA,
+    .moves = {MOVE_HEADBUTT, MOVE_ROCK_BLAST, MOVE_IRON_DEFENSE, MOVE_NONE}
+    },
+    {
+    .iv = 30,
+    .lvl = 20,
+    .species = SPECIES_SWABLU,
+    .moves = {MOVE_FURY_ATTACK, MOVE_DISARMING_VOICE, MOVE_ASTONISH, MOVE_PECK}
+    },
     {
     .iv = 60,
-    .lvl = 27,
-    .species = SPECIES_SANDSLASH,
-    .moves = {MOVE_DIG, MOVE_SLASH, MOVE_SAND_ATTACK, MOVE_POISON_STING}
+    .lvl = 22,
+    .species = SPECIES_MONFERNO,
+    .moves = {MOVE_MACH_PUNCH, MOVE_FURY_SWIPES, MOVE_FLAME_WHEEL, MOVE_LEER}
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Dusty3[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_CoulterNestpineTownPrinplup[] = {
     {
-    .iv = 70,
-    .lvl = 30,
-    .species = SPECIES_SANDSLASH,
-    .moves = {MOVE_DIG, MOVE_SLASH, MOVE_SAND_ATTACK, MOVE_POISON_STING}
+    .iv = 30,
+    .lvl = 20,
+    .species = SPECIES_MAKUHITA,
+    .moves = {MOVE_FAKE_OUT, MOVE_FORCE_PALM, MOVE_SAND_ATTACK, MOVE_FOCUS_ENERGY}
+    },
+    {
+    .iv = 30,
+    .lvl = 20,
+    .species = SPECIES_ROGGENROLA,
+    .moves = {MOVE_HEADBUTT, MOVE_ROCK_BLAST, MOVE_IRON_DEFENSE, MOVE_NONE}
+    },
+    {
+    .iv = 30,
+    .lvl = 20,
+    .species = SPECIES_SWABLU,
+    .moves = {MOVE_FURY_ATTACK, MOVE_DISARMING_VOICE, MOVE_ASTONISH, MOVE_PECK}
+    },
+    {
+    .iv = 60,
+    .lvl = 22,
+    .species = SPECIES_PRINPLUP,
+    .moves = {MOVE_METAL_CLAW, MOVE_PECK, MOVE_BUBBLE_BEAM, MOVE_GROWL}
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Dusty4[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_CoulterNestpineTownGrotle[] = {
     {
-    .iv = 80,
-    .lvl = 33,
-    .species = SPECIES_SANDSLASH,
-    .moves = {MOVE_DIG, MOVE_SLASH, MOVE_SAND_ATTACK, MOVE_POISON_STING}
+    .iv = 30,
+    .lvl = 20,
+    .species = SPECIES_MAKUHITA,
+    .moves = {MOVE_FAKE_OUT, MOVE_FORCE_PALM, MOVE_SAND_ATTACK, MOVE_FOCUS_ENERGY}
+    },
+    {
+    .iv = 30,
+    .lvl = 20,
+    .species = SPECIES_ROGGENROLA,
+    .moves = {MOVE_HEADBUTT, MOVE_ROCK_BLAST, MOVE_IRON_DEFENSE, MOVE_NONE}
+    },
+    {
+    .iv = 30,
+    .lvl = 20,
+    .species = SPECIES_SWABLU,
+    .moves = {MOVE_FURY_ATTACK, MOVE_DISARMING_VOICE, MOVE_ASTONISH, MOVE_PECK}
+    },
+    {
+    .iv = 60,
+    .lvl = 22,
+    .species = SPECIES_GROTLE,
+    .moves = {MOVE_RAZOR_LEAF, MOVE_CURSE, MOVE_BITE, MOVE_TACKLE}
     }
 };
 

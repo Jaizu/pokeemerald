@@ -143,9 +143,11 @@
 #define FLAG_RECEIVED_NETAS_METAL_COAT       0x6C // FLAG_WHITEOUT_TO_LAVARIDGE in Emerald
 #define FLAG_RECEIVED_HM05                   0x6D
 #define FLAG_RECEIVED_UP_GRADE               0x6D // FLAG_RECEIVED_HM05 in Emerald
-
 #define FLAG_RECEIVED_HM02                   0x6E
+#define FLAG_DIDNT_RECEIVE_EXP_SHARE         0x6E // FLAG_RECEIVED_HM02 in Emerald
 #define FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT  0x6F
+#define FLAG_RECEIVED_EXP_SHARE              0x6F // FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT in Emerald
+
 #define FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE  0x70
 #define FLAG_UNUSED_RS_LEGENDARY_BATTLE_DONE 0x71 // Unused Flag. Used in R/S to indicate whether player defeated or caught Groudon/Kyogre in Cave of Origin.
 #define FLAG_SCOTT_CALL_BATTLE_FRONTIER      0x72 // Used in order to activate a phone call from Scott, inviting the player to the SS Tidal.
@@ -312,7 +314,7 @@
 #define FLAG_RECEIVED_TM46                   0x10D
 #define FLAG_CONTEST_SKETCH_CREATED          0x10E  // Set but never read
 #define FLAG_EVIL_TEAM_ESCAPED_STERN_SPOKE   0x10F
-#define FLAG_RECEIVED_EXP_SHARE              0x110
+#define FLAG_RECEIVED_EXP_SHARE_OLD          0x110 // FLAG_RECEIVED_EXP_SHARE in Emerald
 #define FLAG_POKERUS_EXPLAINED               0x111
 #define FLAG_RECEIVED_RUNNING_SHOES          0x112
 #define FLAG_RECEIVED_QUICK_CLAW             0x113
@@ -888,8 +890,9 @@
 #define FLAG_HIDE_CELANTO_PATH_BREAKABLE_ROCK_RIGHT                 0x2EC // FLAG_HIDE_LILYCOVE_HARBOR_EVENT_TICKET_TAKER in Emerald
 #define FLAG_HIDE_SLATEPORT_CITY_SCOTT                              0x2ED
 #define FLAG_HIDE_NESTPINE_CLIMB_HIDDEN_GROTTO_MARACTUS             0x2ED // FLAG_HIDE_SLATEPORT_CITY_SCOTT in Emerald
-
 #define FLAG_HIDE_ROUTE_101_ZIGZAGOON                               0x2EE
+#define FLAG_HIDE_NESTPINE_TOWN_COULTER                             0x2EE // FLAG_HIDE_ROUTE_101_ZIGZAGOON in Emerald
+
 #define FLAG_HIDE_VICTORY_ROAD_EXIT_WALLY                           0x2EF
 #define FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE                       0x2F0
 #define FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_STEVEN              0x2F1

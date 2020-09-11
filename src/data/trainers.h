@@ -657,46 +657,46 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_Ludwig},
     },
 
-    [TRAINER_DUSTY_2] =
+    [TRAINER_COULTER_NESTPINE_TOWN_MONFERNO] =
     {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-        .trainerPic = TRAINER_PIC_RUIN_MANIAC,
-        .trainerName = _("DUSTY"),
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_COULTER,
+        .trainerName = _("Coulter"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Dusty2),
-        .party = {.NoItemCustomMoves = sParty_Dusty2},
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_CoulterNestpineTownMonferno),
+        .party = {.NoItemCustomMoves = sParty_CoulterNestpineTownMonferno},
     },
 
-    [TRAINER_DUSTY_3] =
+    [TRAINER_COULTER_NESTPINE_TOWN_PRINPLUP] =
     {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-        .trainerPic = TRAINER_PIC_RUIN_MANIAC,
-        .trainerName = _("DUSTY"),
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_COULTER,
+        .trainerName = _("Coulter"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Dusty3),
-        .party = {.NoItemCustomMoves = sParty_Dusty3},
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_CoulterNestpineTownPrinplup),
+        .party = {.NoItemCustomMoves = sParty_CoulterNestpineTownPrinplup},
     },
 
-    [TRAINER_DUSTY_4] =
+    [TRAINER_COULTER_NESTPINE_TOWN_GROTLE] =
     {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-        .trainerPic = TRAINER_PIC_RUIN_MANIAC,
-        .trainerName = _("DUSTY"),
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_COULTER,
+        .trainerName = _("Coulter"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Dusty4),
-        .party = {.NoItemCustomMoves = sParty_Dusty4},
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_CoulterNestpineTownGrotle),
+        .party = {.NoItemCustomMoves = sParty_CoulterNestpineTownGrotle},
     },
 
     [TRAINER_DUSTY_5] =
