@@ -85,6 +85,8 @@ static void RegisterTrainerInMatchCall(void);
 static void HandleRematchVarsOnBattleEnd(void);
 static const u8 *GetIntroSpeechOfApproachingTrainer(void);
 static const u8 *GetTrainerCantBattleSpeech(void);
+extern const u8 ChainNumber[];
+extern const u8 AddChain[];
 
 // ewram vars
 EWRAM_DATA static u16 sTrainerBattleMode = 0;
@@ -598,15 +600,47 @@ void StartRegiBattle(void)
 
 static void CB2_EndWildBattle(void)
 {
+    u16 species;
+    u16 ptr;
+    u8 nickname[POKEMON_NAME_LENGTH + 1];
+    u16 lastPokemonFound;
+    species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
     CpuFill16(0, (void*)(BG_PLTT), BG_PLTT_SIZE);
     ResetOamRange(0, 128);
-
     if (IsPlayerDefeated(gBattleOutcome) == TRUE && !InBattlePyramid() && !InBattlePike())
     {
         SetMainCallback2(CB2_WhiteOut);
     }
     else
     {
+        if (gBattleOutcome != (B_OUTCOME_WON || B_OUTCOME_CAUGHT))
+        {
+            if (species == VarGet(VAR_SPECIESCHAINED) && VarGet(VAR_CHAIN) >= 1)
+            {
+                VarSet(VAR_CHAIN,0);
+                VarSet(VAR_SPECIESCHAINED,0);
+            }
+            else if ((species != VarGet(VAR_SPECIESCHAINED)) && (VarGet(VAR_CHAIN) >= 1))
+                species = VarGet(VAR_SPECIESCHAINED);
+        }
+        else if (gBattleOutcome == (B_OUTCOME_WON || B_OUTCOME_CAUGHT))
+        {
+            if (VarGet(VAR_CHAIN) == 0)
+            {
+                VarSet(VAR_SPECIESCHAINED,species);
+                ScriptContext1_SetupScript(AddChain);
+            }
+            else if ((species == VarGet(VAR_SPECIESCHAINED)) && VarGet(VAR_CHAIN) >=3)
+            {
+                                GetSpeciesName(gStringVar2 ,VarGet(VAR_SPECIESCHAINED));
+                ScriptContext1_SetupScript(ChainNumber);
+            }
+            else if ((species == VarGet(VAR_SPECIESCHAINED)) && (VarGet(VAR_CHAIN) ==2 || VarGet(VAR_CHAIN) ==1))
+                ScriptContext1_SetupScript(AddChain);
+            else if ((species != VarGet(VAR_SPECIESCHAINED)) && (VarGet(VAR_CHAIN) != 0))
+                VarSet(VAR_CHAIN,0);
+                VarSet(VAR_SPECIESCHAINED,species);
+        }
         SetMainCallback2(CB2_ReturnToField);
         gFieldCallback = sub_80AF6F0;
     }
