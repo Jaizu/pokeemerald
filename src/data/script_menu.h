@@ -54,6 +54,12 @@ static const struct MenuAction MultichoiceList_RegisterMenu[] =
     {gText_Cancel2},
 };
 
+static const struct MenuAction MultichoiceList_BikeShop[] =
+{
+    {gText_Bicycle_1000000},
+    {gText_NoThanks},
+};
+
 static const struct MenuAction MultichoiceList_Bike[] =
 {
     {gText_Mach},
@@ -793,7 +799,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_BASE_PC_WITH_REGISTRY]      = MULTICHOICE(MultichoiceList_BasePCWithRegistry),
     [MULTI_REGISTER_MENU]              = MULTICHOICE(MultichoiceList_RegisterMenu),
     [MULTI_SSTIDAL_LILYCOVE]           = MULTICHOICE(MultichoiceList_Exit),
-    [MULTI_UNUSED_9]                   = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_BIKE_SHOP]                  = MULTICHOICE(MultichoiceList_BikeShop),
     [MULTI_UNUSED_10]                  = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_FRONTIER_PASS_INFO]         = MULTICHOICE(MultichoiceList_FrontierPassInfo),
     [MULTI_BIKE]                       = MULTICHOICE(MultichoiceList_Bike),

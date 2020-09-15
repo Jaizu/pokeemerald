@@ -104,7 +104,7 @@
 #define FLAG_RECEIVED_STINGA_BERRIES         0x58 // FLAG_BIRCH_AIDE_MET in Emerald
 #define FLAG_DECLINED_BIKE                   0x59
 #define FLAG_FERNANDO_STORMED_OFF            0x59 // FLAG_DECLINED_BIKE in Emerald
-#define FLAG_RECEIVED_BIKE                   0x5A
+#define FLAG_RECEIVED_BIKE_OLD               0x5A // FLAG_RECEIVED_BIKE in Emerald
 #define FLAG_FERNANDO_RESCUED                0x5A // FLAG_RECEIVED_BIKE in Emerald
 #define FLAG_WATTSON_REMATCH_AVAILABLE                     0x5B
 #define FLAG_CAUGHT_ARCHAN_TUNNEL_SECRET_TEMPLE_CLEFAIRY   0x5B // FLAG_WATTSON_REMATCH_AVAILABLE in Emerald
@@ -156,6 +156,7 @@
 #define FLAG_ADVENTURE_STARTED               0x74 // FLAG_ADVENTURE_STARTED in Emerald as well
 #define FLAG_DEFEATED_MAGMA_SPACE_CENTER     0x75 // Set when Team Magma is defeated at Mossdeep's Space Center.
 #define FLAG_MET_HIDDEN_POWER_GIVER          0x76
+#define FLAG_RECEIVED_BIKE                   0x76 // FLAG_MET_HIDDEN_POWER_GIVER in Emerald
 
 #define FLAG_CANCEL_BATTLE_ROOM_CHALLENGE    0x77
 
@@ -895,8 +896,9 @@
 #define FLAG_HIDE_NESTPINE_TOWN_COULTER                             0x2EE // FLAG_HIDE_ROUTE_101_ZIGZAGOON in Emerald
 #define FLAG_HIDE_VICTORY_ROAD_EXIT_WALLY                           0x2EF
 #define FLAG_HIDE_NEW_ELDERS_GRUNT_FROSTBITE_CAVE_1F                0x2EF // FLAG_HIDE_VICTORY_ROAD_EXIT_WALLY in Emerald
-
 #define FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE                       0x2F0
+#define FLAG_HIDE_AEROUS_CITY_PORT_SS_WAKE                          0x2F0 // FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE in Emerald
+
 #define FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_STEVEN              0x2F1
 #define FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_1          0x2F2
 #define FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_2          0x2F3

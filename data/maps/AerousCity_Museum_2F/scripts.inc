@@ -399,3 +399,11 @@ AerousCity_Museum_2F_Movement_ExitHerschel2:
 	walk_left
 	walk_left
 	step_end
+
+AerousCity_Museum_2F_EventScript_Fossil::
+	msgbox AerousCity_Museum_2F_Text_Fossil, MSGBOX_SIGN
+	end
+
+AerousCity_Museum_2F_Text_Fossil:
+	.string "It is a Fossil of some sort.\n"
+	.string "Prof. Redwood would love this!$"

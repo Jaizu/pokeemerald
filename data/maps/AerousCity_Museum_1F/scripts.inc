@@ -139,3 +139,18 @@ AerousCity_Museum_1F_Text_GruntDefeated:
 AerousCity_Museum_1F_Text_GruntPostBattle:
 	.string "You can go upstairs, but you won't\n"
 	.string "be welcomed!$"
+
+AerousCity_Museum_1F_EventScript_Fossil::
+	msgbox AerousCity_Museum_1F_Text_Fossil, MSGBOX_SIGN
+	end
+
+AerousCity_Museum_1F_Text_Fossil:
+	.string "It is a Fossil of some sort.\n"
+	.string "Prof. Redwood would love this!$"
+
+AerousCity_Museum_1F_EventScript_RelicBall::
+	msgbox AerousCity_Museum_1F_Text_RelicBall, MSGBOX_SIGN
+	end
+
+AerousCity_Museum_1F_Text_RelicBall:
+	.string "It's a rare Relic Ball!$"

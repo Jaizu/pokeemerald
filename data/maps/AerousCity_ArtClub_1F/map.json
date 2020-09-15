@@ -145,6 +145,101 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AerousCity_ArtClub_1F_EventScript_PaintingSign0"
+    },
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AerousCity_ArtClub_1F_EventScript_PaintingSign0"
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AerousCity_ArtClub_1F_EventScript_PaintingSign1"
+    },
+    {
+      "type": "sign",
+      "x": 19,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AerousCity_ArtClub_1F_EventScript_PaintingSign1"
+    },
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AerousCity_ArtClub_1F_EventScript_PaintingSign2"
+    },
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AerousCity_ArtClub_1F_EventScript_PaintingSign2"
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AerousCity_ArtClub_1F_EventScript_PaintingSign3"
+    },
+    {
+      "type": "sign",
+      "x": 19,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AerousCity_ArtClub_1F_EventScript_PaintingSign3"
+    },
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AerousCity_ArtClub_1F_EventScript_PaintingSign4"
+    },
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AerousCity_ArtClub_1F_EventScript_PaintingSign4"
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AerousCity_ArtClub_1F_EventScript_PaintingSign5"
+    },
+    {
+      "type": "sign",
+      "x": 19,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AerousCity_ArtClub_1F_EventScript_PaintingSign5"
+    }
   ]
 }

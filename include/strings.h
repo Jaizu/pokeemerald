@@ -1019,6 +1019,8 @@ extern const u8 gText_Decoration2[];
 extern const u8 gText_PackUp[];
 extern const u8 gText_Registry[];
 extern const u8 gText_Information[];
+extern const u8 gText_Bicycle_1000000[];
+extern const u8 gText_NoThanks[];
 extern const u8 gText_Mach[];
 extern const u8 gText_Acro[];
 extern const u8 gText_Psn[];

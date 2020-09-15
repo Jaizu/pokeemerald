@@ -138,3 +138,11 @@ AerousCity_ArtClub_2F_Text_ThisPaintingWasByVincent:
 	.string "This painting was actually made by\n"
 	.string "Vincent!\p"
 	.string "You can challenge him downstairs.$"
+
+AerousCity_ArtClub_2F_EventScript_PaintingSign::
+	msgbox AerousCity_ArtClub_2F_Text_PaintingOfThePokemonLeague, MSGBOX_SIGN
+	end
+
+AerousCity_ArtClub_2F_Text_PaintingOfThePokemonLeague:
+	.string "It is a painting of the\n"
+	.string "Pokémon League.$"

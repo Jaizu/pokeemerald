@@ -94,5 +94,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_DAY_CARE_CENTER_FERNANDO
 	setflag FLAG_HIDE_AEROUS_CITY_HERSCHEL
 	setflag FLAG_HIDE_TANGROWTH_TABLET_ROOM_HERSCHEL
+	setflag FLAG_HIDE_AEROUS_CITY_PORT_SS_WAKE
 	call EventScript_ResetAllBerries
 	end

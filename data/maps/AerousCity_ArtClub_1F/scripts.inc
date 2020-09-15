@@ -219,3 +219,49 @@ AerousCity_ArtClub_1F_EventScript_Lass::
 AerousCity_ArtClub_1F_Text_ThisIsHisMasterpiece:
 	.string "…This is his masterpiece?\n"
 	.string "I don't see the appeal.$"
+
+AerousCity_ArtClub_1F_EventScript_PaintingSign0::
+	msgbox AerousCity_ArtClub_1F_Text_PaintingOfManPaintingAPainting, MSGBOX_SIGN
+	end
+
+AerousCity_ArtClub_1F_Text_PaintingOfManPaintingAPainting:
+	.string "It is a painting of a man painting\n"
+	.string "a painting.$"
+
+AerousCity_ArtClub_1F_EventScript_PaintingSign1::
+	msgbox AerousCity_ArtClub_1F_Text_PaintingOfSmeargle, MSGBOX_SIGN
+	end
+
+AerousCity_ArtClub_1F_Text_PaintingOfSmeargle:
+	.string "It is a painting of a Smeargle.$"
+
+AerousCity_ArtClub_1F_EventScript_PaintingSign2::
+	msgbox AerousCity_ArtClub_1F_Text_PaintingOfShaymin, MSGBOX_SIGN
+	end
+
+AerousCity_ArtClub_1F_Text_PaintingOfShaymin:
+	.string "It is a painting of the legendary\n"
+	.string "Pokémon, Shaymin.$"
+
+AerousCity_ArtClub_1F_EventScript_PaintingSign3::
+	msgbox AerousCity_ArtClub_1F_Text_PaintingOfWeedle, MSGBOX_SIGN
+	end
+
+AerousCity_ArtClub_1F_Text_PaintingOfWeedle:
+	.string "It is a painting of a Weedle\n"
+	.string "wearing peculiar glasses.$"
+
+AerousCity_ArtClub_1F_EventScript_PaintingSign4::
+	msgbox AerousCity_ArtClub_1F_Text_PaintingOfPrismTower, MSGBOX_SIGN
+	end
+
+AerousCity_ArtClub_1F_Text_PaintingOfPrismTower:
+	.string "It is a painting of the Kalos\n"
+	.string "region's Prism Tower.$"
+
+AerousCity_ArtClub_1F_EventScript_PaintingSign5::
+	msgbox AerousCity_ArtClub_1F_Text_PaintingOfClaydol, MSGBOX_SIGN
+	end
+
+AerousCity_ArtClub_1F_Text_PaintingOfClaydol:
+	.string "It is a painting of a Claydol.$"
