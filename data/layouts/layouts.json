@@ -4867,7 +4867,7 @@
       "width": 11,
       "height": 10,
       "primary_tileset": "gTileset_Indoors",
-      "secondary_tileset": "gTileset_BikeShop",
+      "secondary_tileset": "gTileset_AerousMuseum",
       "border_filepath": "data/layouts/AerousCity_BikeShop/border.bin",
       "blockdata_filepath": "data/layouts/AerousCity_BikeShop/map.bin"
     },
