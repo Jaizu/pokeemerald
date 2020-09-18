@@ -127,7 +127,7 @@
 #define OBJ_EVENT_GFX_GLACIA                     123
 #define OBJ_EVENT_GFX_DRAKE                      124
 #define OBJ_EVENT_GFX_FERNANDO                   125
-#define OBJ_EVENT_GFX_BRAWLY                     126
+#define OBJ_EVENT_GFX_ARIA                       126
 #define OBJ_EVENT_GFX_WATTSON                    127
 #define OBJ_EVENT_GFX_FLANNERY                   128
 #define OBJ_EVENT_GFX_NORMAN                     129
@@ -269,6 +269,7 @@
 #define OBJ_EVENT_GFX_MYSTERY_GIFT_MAN           OBJ_EVENT_GFX_GUARD
 #define OBJ_EVENT_GFX_SCIENTIST_1                OBJ_EVENT_GFX_SCIENTIST
 #define OBJ_EVENT_GFX_SCIENTIST_2                OBJ_EVENT_GFX_BIRD_KEEPER
+#define OBJ_EVENT_GFX_BRAWLY                     OBJ_EVENT_GFX_ARIA
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.

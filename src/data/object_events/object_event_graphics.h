@@ -52,6 +52,7 @@ const u16 gObjectEventPalettePainter[] = INCBIN_U16("graphics/object_events/pale
 const u16 gObjectEventPaletteExpert[] = INCBIN_U16("graphics/object_events/palettes/expert.gbapal");
 const u16 gObjectEventPaletteScientist[] = INCBIN_U16("graphics/object_events/palettes/scientist.gbapal");
 const u16 gObjectEventPaletteBirdKeeper[] = INCBIN_U16("graphics/object_events/palettes/bird_keeper.gbapal");
+const u16 gObjectEventPaletteAria[] = INCBIN_U16("graphics/object_events/palettes/aria.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
@@ -160,7 +161,7 @@ const u32 gObjectEventPic_Phoebe[] = INCBIN_U32("graphics/object_events/pics/peo
 const u32 gObjectEventPic_Glacia[] = INCBIN_U32("graphics/object_events/pics/people/elite_four/glacia.4bpp");
 const u32 gObjectEventPic_Drake[] = INCBIN_U32("graphics/object_events/pics/people/elite_four/drake.4bpp");
 const u32 gObjectEventPic_Fernando[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/fernando.4bpp");
-const u32 gObjectEventPic_Brawly[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/brawly.4bpp");
+const u32 gObjectEventPic_Aria[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/aria.4bpp");
 const u32 gObjectEventPic_Wattson[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/wattson.4bpp");
 const u32 gObjectEventPic_Flannery[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/flannery.4bpp");
 const u32 gObjectEventPic_Norman[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/norman.4bpp");

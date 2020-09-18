@@ -1242,16 +1242,16 @@ const struct SpriteFrameImage gObjectEventPicTable_Fernando[] = {
     overworld_frame(gObjectEventPic_Fernando, 2, 4, 8),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_Brawly[] = {
-    overworld_frame(gObjectEventPic_Brawly, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Brawly, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Brawly, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Brawly, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Brawly, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Brawly, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Brawly, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Brawly, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Brawly, 2, 4, 2),
+const struct SpriteFrameImage gObjectEventPicTable_Aria[] = {
+    overworld_frame(gObjectEventPic_Aria, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Aria, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Aria, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Aria, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Aria, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Aria, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Aria, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Aria, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Aria, 2, 4, 2),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Wattson[] = {
