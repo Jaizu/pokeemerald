@@ -29,6 +29,21 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 4,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ArchanTown_RedwoodResidenceUpstairs_EventScript_FossilRevivalMachine"
+    },
+    {
+      "type": "sign",
+      "x": 2,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ArchanTown_RedwoodResidenceUpstairs_EventScript_RedwoodsJournal"
+    }
   ]
 }

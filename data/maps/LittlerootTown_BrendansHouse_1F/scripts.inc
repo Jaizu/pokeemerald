@@ -15,8 +15,8 @@ LittlerootTown_BrendansHouse_1F_OnLoad: @ 81F7765
 	end
 
 LittlerootTown_BrendansHouse_1F_EventScript_SetMovingBoxes:: @ 81F777A
-	setmetatile 5, 4, METATILE_BrendansMaysHouse_MovingBox_Open, 1
-	setmetatile 5, 2, METATILE_BrendansMaysHouse_MovingBox_Closed, 1
+	// setmetatile 5, 4, METATILE_BrendansMaysHouse_MovingBox_Open, 1
+	// setmetatile 5, 2, METATILE_BrendansMaysHouse_MovingBox_Closed, 1
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_CheckShowShoesManual:: @ 81F778D
@@ -26,7 +26,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_CheckShowShoesManual:: @ 81F778D
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_ShowRunningShoesManual:: @ 81F779A
-	setmetatile 3, 7, METATILE_BrendansMaysHouse_BookOnTable, 1
+	// setmetatile 3, 7, METATILE_BrendansMaysHouse_BookOnTable, 1
 	return
 
 LittlerootTown_BrendansHouse_1F_OnTransition: @ 81F77A4

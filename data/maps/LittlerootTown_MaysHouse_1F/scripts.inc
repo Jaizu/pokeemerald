@@ -15,8 +15,8 @@ LittlerootTown_MaysHouse_1F_OnLoad: @ 81F88B5
 	end
 
 LittlerootTown_MaysHouse_1F_EventScript_SetMovingBoxes:: @ 81F88CA
-	setmetatile 5, 4, METATILE_BrendansMaysHouse_MovingBox_Open, 1
-	setmetatile 5, 2, METATILE_BrendansMaysHouse_MovingBox_Closed, 1
+	// setmetatile 5, 4, METATILE_BrendansMaysHouse_MovingBox_Open, 1
+	// setmetatile 5, 2, METATILE_BrendansMaysHouse_MovingBox_Closed, 1
 	return
 
 LittlerootTown_MaysHouse_1F_EventScript_CheckShowShoesManual:: @ 81F88DD
@@ -26,7 +26,7 @@ LittlerootTown_MaysHouse_1F_EventScript_CheckShowShoesManual:: @ 81F88DD
 	return
 
 LittlerootTown_MaysHouse_1F_EventScript_ShowRunningShoesManual:: @ 81F88EA
-	setmetatile 6, 7, METATILE_BrendansMaysHouse_BookOnTable, 1
+	// setmetatile 6, 7, METATILE_BrendansMaysHouse_BookOnTable, 1
 	return
 
 LittlerootTown_MaysHouse_1F_OnTransition: @ 81F88F4

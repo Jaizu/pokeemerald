@@ -157,6 +157,10 @@ EventScript_ItemRegalStone::
 	finditem ITEM_SUN_STONE
 	end
 
+EventScript_ItemRootFossil::
+	finditem ITEM_ROOT_FOSSIL
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end

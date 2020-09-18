@@ -1212,8 +1212,9 @@
 #define FLAG_ITEM_NESTPINE_CLIMB_REGAL_STONE                        0x406 // FLAG_ITEM_ROUTE_120_NUGGET in Emerald
 #define FLAG_ITEM_ROUTE_120_FULL_HEAL                               0x407
 #define FLAG_ITEM_NESTPINE_TOWN_REVIVE                              0x407 // FLAG_ITEM_ROUTE_120_FULL_HEAL in Emerald
-
 #define FLAG_ITEM_ROUTE_123_CALCIUM                                 0x408
+#define FLAG_ITEM_ARCHAN_TOWN_ROOT_FOSSIL                           0x408 // FLAG_ITEM_ROUTE_123_CALCIUM in Emerald
+
 #define FLAG_ITEM_ROUTE_123_RARE_CANDY                              0x409 // Unused Flag, leftover from R/S. In Emerald this is a hidden item and uses a different flag
 #define FLAG_ITEM_ROUTE_127_ZINC                                    0x40A
 #define FLAG_ITEM_ROUTE_127_CARBOS                                  0x40B
