@@ -406,6 +406,16 @@
 #define METATILE_RS_MossdeepGym_Switch_Down     0x239
 #define METATILE_RS_MossdeepGym_Switch_Up       0x238
 
+// gTileset_RustboroGym
+#define METATILE_RustboroGym_ChatotTile_Blue           0x248
+#define METATILE_RustboroGym_ChatotTile_BlueSinging    0x250
+#define METATILE_RustboroGym_ChatotTile_Red            0x249
+#define METATILE_RustboroGym_ChatotTile_RedSinging     0x251
+#define METATILE_RustboroGym_ChatotTile_Yellow         0x24A
+#define METATILE_RustboroGym_ChatotTile_YellowSinging  0x252
+#define METATILE_RustboroGym_GymFloor                  0x246
+#define METATILE_RustboroGym_GymFloor_Shadow           0x245
+
 // gTileset_Rustboro
 #define METATILE_Rustboro_Door_Gray  0x258
 #define METATILE_Rustboro_Door_Tan   0x25E
