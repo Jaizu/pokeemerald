@@ -413,7 +413,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_UNDERWATER 0x110B
 #define OBJ_EVENT_PAL_TAG_FERNANDO 0x110C
 #define OBJ_EVENT_PAL_TAG_NURSE 0x110D
-#define OBJ_EVENT_PAL_TAG_ACE_TRAINER 0x110E
+#define OBJ_EVENT_PAL_TAG_ACE_TRAINER_M 0x110E
 #define OBJ_EVENT_PAL_TAG_PICNICKER 0x110F
 #define OBJ_EVENT_PAL_TAG_WORKER 0x1110
 #define OBJ_EVENT_PAL_TAG_RUIN_MANIAC 0x1111
@@ -450,6 +450,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_SCIENTIST 0x1130
 #define OBJ_EVENT_PAL_TAG_BIRD_KEEPER 0x1131
 #define OBJ_EVENT_PAL_TAG_ARIA 0x1132
+#define OBJ_EVENT_PAL_TAG_ACE_TRAINER_F 0x1133
 #define OBJ_EVENT_PAL_TAG_NONE 0x11FF
 
 #include "data/field_effects/field_effect_object_template_pointers.h"
@@ -475,7 +476,7 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPaletteUnderwater, OBJ_EVENT_PAL_TAG_UNDERWATER},
     {gObjectEventPaletteFernando, OBJ_EVENT_PAL_TAG_FERNANDO},
     {gObjectEventPaletteNurse, OBJ_EVENT_PAL_TAG_NURSE},
-    {gObjectEventPaletteAceTrainer, OBJ_EVENT_PAL_TAG_ACE_TRAINER},
+    {gObjectEventPaletteAceTrainerM, OBJ_EVENT_PAL_TAG_ACE_TRAINER_M},
     {gObjectEventPalettePicnicker, OBJ_EVENT_PAL_TAG_PICNICKER},
     {gObjectEventPaletteWorker, OBJ_EVENT_PAL_TAG_WORKER},
     {gObjectEventPaletteRuinManiac, OBJ_EVENT_PAL_TAG_RUIN_MANIAC},
@@ -512,6 +513,7 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPaletteScientist, OBJ_EVENT_PAL_TAG_SCIENTIST},
     {gObjectEventPaletteBirdKeeper, OBJ_EVENT_PAL_TAG_BIRD_KEEPER},
     {gObjectEventPaletteAria, OBJ_EVENT_PAL_TAG_ARIA},
+    {gObjectEventPaletteAceTrainerF, OBJ_EVENT_PAL_TAG_ACE_TRAINER_F},
     {NULL, 0x0000},
 };
 
