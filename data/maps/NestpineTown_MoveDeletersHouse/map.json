@@ -1,9 +1,9 @@
 {
-  "id": "MAP_LILYCOVE_CITY_MOVE_DELETERS_HOUSE",
-  "name": "LilycoveCity_MoveDeletersHouse",
-  "layout": "LAYOUT_HOUSE2",
-  "music": "MUS_MINAMO",
-  "region_map_section": "MAPSEC_LILYCOVE_CITY",
+  "id": "MAP_NESTPINE_TOWN_MOVE_DELETERS_HOUSE",
+  "name": "NestpineTown_MoveDeletersHouse",
+  "layout": "LAYOUT_NESTPINE_TOWN_HOUSE",
+  "music": "MUS_MACHI_S4",
+  "region_map_section": "MAPSEC_FALLARBOR_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -24,24 +24,17 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LilycoveCity_MoveDeletersHouse_EventScript_MoveDeleter",
+      "script": "NestpineTown_MoveDeletersHouse_EventScript_MoveDeleter",
       "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 3,
-      "y": 7,
-      "elevation": 0,
-      "dest_map": "MAP_LILYCOVE_CITY",
-      "dest_warp_id": 7
-    },
-    {
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_LILYCOVE_CITY",
-      "dest_warp_id": 7
+      "dest_map": "MAP_NESTPINE_TOWN",
+      "dest_warp_id": 4
     }
   ],
   "coord_events": [

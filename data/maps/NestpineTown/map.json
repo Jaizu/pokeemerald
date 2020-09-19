@@ -119,28 +119,28 @@
       "x": 13,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_NESTPINE_TOWN",
+      "dest_map": "MAP_NESTPINE_TOWN_MOVE_DELETERS_HOUSE",
       "dest_warp_id": 0
     },
     {
       "x": 3,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_NESTPINE_TOWN",
+      "dest_map": "MAP_NESTPINE_TOWN_HOUSE1",
       "dest_warp_id": 0
     },
     {
       "x": 10,
       "y": 18,
       "elevation": 0,
-      "dest_map": "MAP_NESTPINE_TOWN",
+      "dest_map": "MAP_NESTPINE_TOWN_HOUSE2",
       "dest_warp_id": 0
     },
     {
       "x": 23,
       "y": 18,
       "elevation": 0,
-      "dest_map": "MAP_NESTPINE_TOWN",
+      "dest_map": "MAP_NESTPINE_TOWN_HOUSE3",
       "dest_warp_id": 0
     }
   ],

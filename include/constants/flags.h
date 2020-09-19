@@ -157,8 +157,8 @@
 #define FLAG_DEFEATED_MAGMA_SPACE_CENTER     0x75 // Set when Team Magma is defeated at Mossdeep's Space Center.
 #define FLAG_MET_HIDDEN_POWER_GIVER          0x76
 #define FLAG_RECEIVED_BIKE                   0x76 // FLAG_MET_HIDDEN_POWER_GIVER in Emerald
-
 #define FLAG_CANCEL_BATTLE_ROOM_CHALLENGE    0x77
+#define FLAG_NESTPINE_NPC_TRADE_COMPLETED    0x77 // FLAG_CANCEL_BATTLE_ROOM_CHALLENGE in Emerald
 
 #define FLAG_LANDMARK_MIRAGE_TOWER           0x78
 #define FLAG_RECEIVED_TM31                   0x79

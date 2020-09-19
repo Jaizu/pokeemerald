@@ -86,9 +86,13 @@
 #define MAP_AEROUS_CITY_HOUSE3            (11 | (6 << 8))
 
 // Map Group 7
-#define MAP_NESTPINE_TOWN_POKEMON_CENTER (0 | (7 << 8))
-#define MAP_NESTPINE_TOWN_MART           (1 | (7 << 8))
-#define MAP_NESTPINE_TOWN_GYM            (2 | (7 << 8))
+#define MAP_NESTPINE_TOWN_POKEMON_CENTER      (0 | (7 << 8))
+#define MAP_NESTPINE_TOWN_MART                (1 | (7 << 8))
+#define MAP_NESTPINE_TOWN_GYM                 (2 | (7 << 8))
+#define MAP_NESTPINE_TOWN_MOVE_DELETERS_HOUSE (3 | (7 << 8))
+#define MAP_NESTPINE_TOWN_HOUSE1              (4 | (7 << 8))
+#define MAP_NESTPINE_TOWN_HOUSE2              (5 | (7 << 8))
+#define MAP_NESTPINE_TOWN_HOUSE3              (6 | (7 << 8))
 
 // Map Group 8
 #define MAP_NESTPINE_CLIMB_NETAS_HOUSE (0 | (8 << 8))
