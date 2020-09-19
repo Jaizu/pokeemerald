@@ -1829,3 +1829,23 @@ gTilesetPalettes_AerousMuseum::
 	.align 2
 gTilesetTiles_AerousMuseum::
 	.incbin "data/tilesets/secondary/aerousmuseum/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_FrostbiteCave::
+	.incbin "data/tilesets/secondary/frostbitecave/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/frostbitecave/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/frostbitecave/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/frostbitecave/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/frostbitecave/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/frostbitecave/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/frostbitecave/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/frostbitecave/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/frostbitecave/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/frostbitecave/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/frostbitecave/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/frostbitecave/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/frostbitecave/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_FrostbiteCave::
+	.incbin "data/tilesets/secondary/frostbitecave/tiles.4bpp.lz"

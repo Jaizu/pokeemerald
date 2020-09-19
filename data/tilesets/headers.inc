@@ -885,3 +885,14 @@ gTileset_AerousMuseum::
 	.4byte gMetatiles_AerousMuseum
 	.4byte gMetatileAttributes_AerousMuseum
 	.4byte NULL
+
+	.align 2
+gTileset_FrostbiteCave::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_FrostbiteCave
+	.4byte gTilesetPalettes_FrostbiteCave
+	.4byte gMetatiles_FrostbiteCave
+	.4byte gMetatileAttributes_FrostbiteCave
+	.4byte NULL

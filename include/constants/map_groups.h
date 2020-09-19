@@ -33,6 +33,7 @@
 #define MAP_ARCHAN_TUNNEL_2F_1R                 (10 | (1 << 8))
 #define MAP_ARCHAN_TUNNEL_3F_1R                 (11 | (1 << 8))
 #define MAP_WISP_FOREST                         (12 | (1 << 8))
+#define MAP_FROSTBITE_CAVE_1F_1R                (13 | (1 << 8))
 
 // Map Group 2
 #define MAP_CELANTO_PATH_HIDDEN_GROTTO   (0 | (2 << 8))

@@ -596,3 +596,10 @@ gMetatiles_AerousMuseum::
 	.align 1
 gMetatileAttributes_AerousMuseum::
 	.incbin "data/tilesets/secondary/aerousmuseum/metatile_attributes.bin"
+	.align 1
+gMetatiles_FrostbiteCave::
+	.incbin "data/tilesets/secondary/frostbitecave/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_FrostbiteCave::
+	.incbin "data/tilesets/secondary/frostbitecave/metatile_attributes.bin"

@@ -1213,3 +1213,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/NestpineTown_House2/scripts.inc"
 
 	.include "data/maps/NestpineTown_House3/scripts.inc"
+
+	.include "data/maps/FrostbiteCave_1F_1R/scripts.inc"
