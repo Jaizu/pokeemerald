@@ -1,5 +1,16 @@
 FrostbiteCave_1F_1R_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, FrostbiteCave_1F_1R_OnLoad
 	.byte 0
+
+FrostbiteCave_1F_1R_OnLoad:
+	call_if_set FLAG_CLEAR_ROCKS_FROSTBITE_CAVE_1F, FrostbiteCave_1F_1R_EventScript_LockDoor
+	end
+
+FrostbiteCave_1F_1R_EventScript_LockDoor::
+	setmetatile 34, 12, METATILE_FrostbiteCave_CaveGround, 0
+	setmetatile 34, 13, METATILE_FrostbiteCave_CaveGround, 0
+	setmetatile 34, 14, METATILE_FrostbiteCave_CaveGround, 0
+	return
 
 FrostbiteCave_1F_1R_EventScript_Morton::
 	trainerbattle_single TRAINER_MORTON, FrostbiteCave_1F_1R_Text_MortonIntro, FrostbiteCave_1F_1R_Text_MortonDefeated
