@@ -54,6 +54,7 @@ const u16 gObjectEventPaletteExpert[] = INCBIN_U16("graphics/object_events/palet
 const u16 gObjectEventPaletteScientist[] = INCBIN_U16("graphics/object_events/palettes/scientist.gbapal");
 const u16 gObjectEventPaletteBirdKeeper[] = INCBIN_U16("graphics/object_events/palettes/bird_keeper.gbapal");
 const u16 gObjectEventPaletteAria[] = INCBIN_U16("graphics/object_events/palettes/aria.gbapal");
+const u16 gObjectEventPalettePsychic[] = INCBIN_U16("graphics/object_events/palettes/psychic.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
