@@ -628,8 +628,9 @@
 #define FLAG_HIDDEN_ITEM_FROSTBITE_CAVE_HYPER_POTION         (FLAG_HIDDEN_ITEMS_START + 0x20) // FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_2_KEY in Emerald
 #define FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_4_KEY             (FLAG_HIDDEN_ITEMS_START + 0x21)
 #define FLAG_HIDDEN_ITEM_FROSTBITE_CAVE_RELIC_COPPER         (FLAG_HIDDEN_ITEMS_START + 0x21) // FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_4_KEY in Emerald
-
 #define FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_6_KEY             (FLAG_HIDDEN_ITEMS_START + 0x22)
+#define FLAG_HIDDEN_ITEM_FROSTBITE_CAVE_BLUE_SHARD           (FLAG_HIDDEN_ITEMS_START + 0x22) // FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_6_KEY in Emerald
+
 #define FLAG_HIDDEN_ITEM_SS_TIDAL_LOWER_DECK_LEFTOVERS       (FLAG_HIDDEN_ITEMS_START + 0x23)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_1_CALCIUM                (FLAG_HIDDEN_ITEMS_START + 0x24)
 #define FLAG_HIDDEN_ITEM_ROUTE_104_POTION                    (FLAG_HIDDEN_ITEMS_START + 0x25)
@@ -1219,9 +1220,10 @@
 #define FLAG_ITEM_NESTPINE_TOWN_REVIVE                              0x407 // FLAG_ITEM_ROUTE_120_FULL_HEAL in Emerald
 #define FLAG_ITEM_ROUTE_123_CALCIUM                                 0x408
 #define FLAG_ITEM_ARCHAN_TOWN_ROOT_FOSSIL                           0x408 // FLAG_ITEM_ROUTE_123_CALCIUM in Emerald
-
-#define FLAG_ITEM_ROUTE_123_RARE_CANDY                              0x409 // Unused Flag, leftover from R/S. In Emerald this is a hidden item and uses a different flag
+#define FLAG_ITEM_FROSTBITE_CAVE_FULL_HEAL                          0x409 // FLAG_ITEM_ROUTE_123_RARE_CANDY in Emerald
 #define FLAG_ITEM_ROUTE_127_ZINC                                    0x40A
+#define FLAG_ITEM_FROSTBITE_CAVE_TM33                               0x40A // FLAG_ITEM_ROUTE_127_ZINC in Emerald
+
 #define FLAG_ITEM_ROUTE_127_CARBOS                                  0x40B
 #define FLAG_ITEM_ROUTE_132_RARE_CANDY                              0x40C
 #define FLAG_ITEM_ROUTE_133_BIG_PEARL                               0x40D

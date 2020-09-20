@@ -7,9 +7,9 @@ FrostbiteCave_1F_1R_OnLoad:
 	end
 
 FrostbiteCave_1F_1R_EventScript_LockDoor::
-	setmetatile 34, 12, METATILE_FrostbiteCave_CaveGround, 0
-	setmetatile 34, 13, METATILE_FrostbiteCave_CaveGround, 0
-	setmetatile 34, 14, METATILE_FrostbiteCave_CaveGround, 0
+	setmetatile 28, 14, METATILE_FrostbiteCave_CaveGround, 0
+	setmetatile 28, 15, METATILE_FrostbiteCave_CaveGround, 0
+	setmetatile 28, 16, METATILE_FrostbiteCave_CaveGround, 0
 	return
 
 FrostbiteCave_1F_1R_EventScript_Morton::
@@ -61,3 +61,37 @@ FrostbiteCave_1F_1R_Text_ScramKid:
 	.string "Scram kid!\p"
 	.string "I've got to clear these rocks\n"
 	.string "before my boss gets here.$"
+
+FrostbiteCave_1F_1R_EventScript_GruntF::
+	trainerbattle_single TRAINER_FROSTBITE_CAVE_GRUNT_1, FrostbiteCave_1F_1R_Text_GruntFIntro, FrostbiteCave_1F_1R_Text_GruntFDefeated
+	msgbox FrostbiteCave_1F_1R_Text_GruntFPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FrostbiteCave_1F_1R_Text_GruntFIntro:
+	.string "What are we looking for?\n"
+	.string "None of your business!$"
+
+FrostbiteCave_1F_1R_Text_GruntFDefeated:
+	.string "I've said too much…$"
+
+FrostbiteCave_1F_1R_Text_GruntFPostBattle:
+	.string "That Herschel guy didn't help us…\p"
+	.string "So we have to take matters into our\n"
+	.string "own hands!$"
+
+FrostbiteCave_1F_1R_EventScript_GruntM::
+	trainerbattle_single TRAINER_FROSTBITE_CAVE_GRUNT_2, FrostbiteCave_1F_1R_Text_GruntMIntro, FrostbiteCave_1F_1R_Text_GruntMDefeated
+	msgbox FrostbiteCave_1F_1R_Text_GruntMPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FrostbiteCave_1F_1R_Text_GruntMIntro:
+	.string "You again?\n"
+	.string "I lost to you at the Museum!$"
+
+FrostbiteCave_1F_1R_Text_GruntMDefeated:
+	.string "You have bested my Pokémon and I…$"
+
+FrostbiteCave_1F_1R_Text_GruntMPostBattle:
+	.string "Modern people destroy nature.\p"
+	.string "We're in the business of\n"
+	.string "preservation, kid!$"

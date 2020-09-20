@@ -796,33 +796,33 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_Finley),
         .party = {.NoItemDefaultMoves = sParty_Finley},
     },
-   
-    [TRAINER_LOLA_1] =
+
+    [TRAINER_FROSTBITE_CAVE_GRUNT_1] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TUBER_F,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_TUBER_F,
-        .trainerName = _("LOLA"),
+        .trainerClass = TRAINER_CLASS_NEW_ELDERS,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_NEW_ELDERS_GRUNT_F,
+        .trainerName = _("Grunt"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Lola1),
-        .party = {.NoItemDefaultMoves = sParty_Lola1},
+        .partySize = ARRAY_COUNT(sParty_GruntFrostbiteCave1),
+        .party = {.NoItemDefaultMoves = sParty_GruntFrostbiteCave1},
     },
 
-    [TRAINER_AUSTINA] =
+    [TRAINER_FROSTBITE_CAVE_GRUNT_2] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TUBER_F,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_TUBER_F,
-        .trainerName = _("AUSTINA"),
+        .trainerClass = TRAINER_CLASS_NEW_ELDERS,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_NEW_ELDERS_GRUNT_M,
+        .trainerName = _("Grunt"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Austina),
-        .party = {.NoItemDefaultMoves = sParty_Austina},
+        .partySize = ARRAY_COUNT(sParty_GruntFrostbiteCave2),
+        .party = {.NoItemDefaultMoves = sParty_GruntFrostbiteCave2},
     },
 
     [TRAINER_GWEN] =

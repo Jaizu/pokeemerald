@@ -45,7 +45,8 @@
 #define TRAINER_PIC_RICH_BOY              23
 #define TRAINER_PIC_EXPERT_F              24
 #define TRAINER_PIC_POKEMANIAC            25
-#define TRAINER_PIC_MAGMA_GRUNT_F         26
+#define TRAINER_PIC_NEW_ELDERS_GRUNT_F    26
+#define TRAINER_PIC_MAGMA_GRUNT_F         TRAINER_PIC_NEW_ELDERS_GRUNT_F
 #define TRAINER_PIC_GUITARIST             27
 #define TRAINER_PIC_KINDLER               28
 #define TRAINER_PIC_CAMPER                29

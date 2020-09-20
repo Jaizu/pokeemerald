@@ -16,8 +16,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
-      "x": 9,
-      "y": 12,
+      "x": 12,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -29,8 +29,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
-      "x": 24,
-      "y": 6,
+      "x": 21,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -42,8 +42,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_M",
-      "x": 34,
-      "y": 11,
+      "x": 28,
+      "y": 13,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -55,8 +55,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "x": 36,
-      "y": 10,
+      "x": 30,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -68,8 +68,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "x": 33,
-      "y": 14,
+      "x": 27,
+      "y": 16,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -78,26 +78,91 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
       "flag": "FLAG_TEMP_12"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
+      "x": 54,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_13"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_F",
+      "x": 47,
+      "y": 18,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "FrostbiteCave_1F_1R_EventScript_GruntF",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_M",
+      "x": 63,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "FrostbiteCave_1F_1R_EventScript_GruntM",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 50,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_ItemFullHeal",
+      "flag": "FLAG_ITEM_FROSTBITE_CAVE_FULL_HEAL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TM_BALL",
+      "x": 74,
+      "y": 22,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_ItemTM33",
+      "flag": "FLAG_ITEM_FROSTBITE_CAVE_TM33"
     }
   ],
   "warp_events": [
     {
-      "x": 3,
-      "y": 21,
+      "x": 6,
+      "y": 23,
       "elevation": 0,
       "dest_map": "MAP_NESTPINE_TOWN",
       "dest_warp_id": 3
     },
     {
-      "x": 38,
-      "y": 18,
+      "x": 73,
+      "y": 9,
       "elevation": 0,
       "dest_map": "MAP_FROSTBITE_CAVE_1F_1R",
       "dest_warp_id": 0
     },
     {
-      "x": 46,
-      "y": 4,
+      "x": 41,
+      "y": 6,
       "elevation": 0,
       "dest_map": "MAP_FROSTBITE_CAVE_1F_1R",
       "dest_warp_id": 0
@@ -109,43 +174,51 @@
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 2,
-      "y": 15,
+      "x": 30,
+      "y": 5,
       "elevation": 3,
       "item": "ITEM_ANTIDOTE",
       "flag": "FLAG_HIDDEN_ITEM_FROSTBITE_CAVE_ANTIDOTE"
     },
     {
       "type": "hidden_item",
-      "x": 9,
-      "y": 11,
+      "x": 63,
+      "y": 21,
       "elevation": 3,
       "item": "ITEM_ETHER",
       "flag": "FLAG_HIDDEN_ITEM_FROSTBITE_CAVE_ETHER"
     },
     {
       "type": "hidden_item",
-      "x": 17,
-      "y": 2,
+      "x": 5,
+      "y": 17,
       "elevation": 3,
       "item": "ITEM_STAR_PIECE",
       "flag": "FLAG_HIDDEN_ITEM_FROSTBITE_CAVE_STAR_PIECE"
     },
     {
       "type": "hidden_item",
-      "x": 35,
-      "y": 21,
+      "x": 53,
+      "y": 27,
       "elevation": 3,
       "item": "ITEM_HYPER_POTION",
       "flag": "FLAG_HIDDEN_ITEM_FROSTBITE_CAVE_HYPER_POTION"
     },
     {
       "type": "hidden_item",
-      "x": 48,
-      "y": 5,
+      "x": 43,
+      "y": 7,
       "elevation": 3,
       "item": "ITEM_NONE",
       "flag": "FLAG_HIDDEN_ITEM_FROSTBITE_CAVE_RELIC_COPPER"
+    },
+    {
+      "type": "hidden_item",
+      "x": 62,
+      "y": 10,
+      "elevation": 3,
+      "item": "ITEM_BLUE_SHARD",
+      "flag": "FLAG_HIDDEN_ITEM_FROSTBITE_CAVE_BLUE_SHARD"
     }
   ]
 }

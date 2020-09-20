@@ -161,6 +161,18 @@ EventScript_ItemRootFossil::
 	finditem ITEM_ROOT_FOSSIL
 	end
 
+EventScript_ItemFullHeal::
+VictoryRoad_B2F_EventScript_ItemFullHeal::
+NewMauville_Inside_EventScript_ItemFullHeal::
+MeteorFalls_1F_1R_EventScript_ItemFullHeal::
+Route120_EventScript_ItemFullHeal::
+	finditem ITEM_FULL_HEAL
+	end
+
+EventScript_ItemTM33::
+	finditem ITEM_TM33
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
@@ -275,10 +287,6 @@ Route119_EventScript_ItemHyperPotion:: @ 8290F21
 
 Route119_EventScript_ItemHyperPotion2:: @ 8290F2E
 	finditem ITEM_HYPER_POTION
-	end
-
-Route120_EventScript_ItemFullHeal:: @ 8290F55
-	finditem ITEM_FULL_HEAL
 	end
 
 Route120_EventScript_ItemHyperPotion:: @ 8290F62
@@ -417,10 +425,6 @@ MeteorFalls_1F_1R_EventScript_ItemTM23:: @ 82911AB
 	finditem ITEM_TM23
 	end
 
-MeteorFalls_1F_1R_EventScript_ItemFullHeal:: @ 82911B8
-	finditem ITEM_FULL_HEAL
-	end
-
 MeteorFalls_1F_1R_EventScript_ItemPPUP:: @ 82911D2
 	finditem ITEM_PP_UP
 	end
@@ -435,10 +439,6 @@ NewMauville_Inside_EventScript_ItemUltraRope:: @ 82911EC
 
 NewMauville_Inside_EventScript_ItemThunderStone:: @ 8291206
 	finditem ITEM_THUNDER_STONE
-	end
-
-NewMauville_Inside_EventScript_ItemFullHeal:: @ 8291213
-	finditem ITEM_FULL_HEAL
 	end
 
 NewMauville_Inside_EventScript_ItemParalyzeHeal:: @ 8291220
@@ -615,10 +615,6 @@ VictoryRoad_B1F_EventScript_ItemTM29:: @ 829149D
 
 VictoryRoad_B1F_EventScript_ItemFullRestore:: @ 82914AA
 	finditem ITEM_FULL_RESTORE
-	end
-
-VictoryRoad_B2F_EventScript_ItemFullHeal:: @ 82914B7
-	finditem ITEM_FULL_HEAL
 	end
 
 ArtisanCave_B1F_EventScript_ItemHPUp:: @ 82914C4

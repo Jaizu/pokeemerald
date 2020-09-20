@@ -116,9 +116,11 @@
 #define TRAINER_MORTON                       55 // TRAINER_GABBY_AND_TY_5 in Emerald
 #define TRAINER_GABBY_AND_TY_6               56
 #define TRAINER_FINLEY                       56 // TRAINER_GABBY_AND_TY_6 in Emerald
-
 #define TRAINER_LOLA_1                       57
+#define TRAINER_FROSTBITE_CAVE_GRUNT_1       57 // TRAINER_LOLA_1 in Emerald
 #define TRAINER_AUSTINA                      58
+#define TRAINER_FROSTBITE_CAVE_GRUNT_2       58 // TRAINER_AUSTINA in Emerald
+
 #define TRAINER_GWEN                         59
 #define TRAINER_LOLA_2                       60
 #define TRAINER_LOLA_3                       61

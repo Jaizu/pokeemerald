@@ -76,8 +76,8 @@ const u32 gTrainerPalette_ExpertF[] = INCBIN_U32("graphics/trainers/palettes/exp
 const u32 gTrainerFrontPic_Pokemaniac[] = INCBIN_U32("graphics/trainers/front_pics/pokemaniac_front_pic.4bpp.lz");
 const u32 gTrainerPalette_Pokemaniac[] = INCBIN_U32("graphics/trainers/palettes/pokemaniac.gbapal.lz");
 
-const u32 gTrainerFrontPic_MagmaGruntF[] = INCBIN_U32("graphics/trainers/front_pics/magma_grunt_f_front_pic.4bpp.lz");
-const u32 gTrainerPalette_MagmaGruntF[] = INCBIN_U32("graphics/trainers/palettes/magma_grunt_f.gbapal.lz");
+const u32 gTrainerFrontPic_NewEldersGruntF[] = INCBIN_U32("graphics/trainers/front_pics/new_elders_grunt_f_front_pic.4bpp.lz");
+const u32 gTrainerPalette_NewEldersGruntF[] = INCBIN_U32("graphics/trainers/palettes/new_elders_grunt_f.gbapal.lz");
 
 const u32 gTrainerFrontPic_Guitarist[] = INCBIN_U32("graphics/trainers/front_pics/guitarist_front_pic.4bpp.lz");
 const u32 gTrainerPalette_Guitarist[] = INCBIN_U32("graphics/trainers/palettes/guitarist.gbapal.lz");

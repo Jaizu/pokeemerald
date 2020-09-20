@@ -102,7 +102,7 @@ static const union AnimCmd *const sAnims_Pokemaniac[] ={
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_MagmaGruntF[] ={
+static const union AnimCmd *const sAnims_NewEldersGruntF[] ={
     sAnim_GeneralFrame0,
 };
 
@@ -398,7 +398,7 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_RICH_BOY] = sAnims_RichBoy,
     [TRAINER_PIC_EXPERT_F] = sAnims_ExpertF,
     [TRAINER_PIC_POKEMANIAC] = sAnims_Pokemaniac,
-    [TRAINER_PIC_MAGMA_GRUNT_F] = sAnims_MagmaGruntF,
+    [TRAINER_PIC_NEW_ELDERS_GRUNT_F] = sAnims_NewEldersGruntF,
     [TRAINER_PIC_GUITARIST] = sAnims_Guitarist,
     [TRAINER_PIC_KINDLER] = sAnims_Kindler,
     [TRAINER_PIC_CAMPER] = sAnims_Camper,

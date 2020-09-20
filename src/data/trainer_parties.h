@@ -733,24 +733,29 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Finley[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Lola1[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_GruntFrostbiteCave1[] = {
     {
-    .iv = 10,
-    .lvl = 12,
-    .species = SPECIES_AZURILL,
+    .iv = 0,
+    .lvl = 20,
+    .species = SPECIES_BALTOY,
     },
     {
-    .iv = 10,
-    .lvl = 12,
-    .species = SPECIES_AZURILL,
+    .iv = 0,
+    .lvl = 21,
+    .species = SPECIES_BINACLE,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Austina[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_GruntFrostbiteCave2[] = {
     {
     .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_MARILL,
+    .lvl = 20,
+    .species = SPECIES_DIGGERSBY,
+    },
+    {
+    .iv = 0,
+    .lvl = 20,
+    .species = SPECIES_NOCTOWL,
     }
 };
 
