@@ -112,9 +112,11 @@
 #define TRAINER_JANE                         53 // TRAINER_GABBY_AND_TY_3 in Emerald
 #define TRAINER_GABBY_AND_TY_4               54
 #define TRAINER_CEDRIC                       54 // TRAINER_GABBY_AND_TY_4 in Emerald
-
 #define TRAINER_GABBY_AND_TY_5               55
+#define TRAINER_MORTON                       55 // TRAINER_GABBY_AND_TY_5 in Emerald
 #define TRAINER_GABBY_AND_TY_6               56
+#define TRAINER_FINLEY                       56 // TRAINER_GABBY_AND_TY_6 in Emerald
+
 #define TRAINER_LOLA_1                       57
 #define TRAINER_AUSTINA                      58
 #define TRAINER_GWEN                         59
