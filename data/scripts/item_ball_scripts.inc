@@ -173,6 +173,12 @@ EventScript_ItemTM33::
 	finditem ITEM_TM33
 	end
 
+EventScript_ItemIron::
+Route115_EventScript_ItemIron::
+Route105_EventScript_ItemIron::
+	finditem ITEM_IRON
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
@@ -187,10 +193,6 @@ Route104_EventScript_ItemPPUp:: @ 8290CFF
 
 Route104_EventScript_ItemXAccuracy:: @ 8290D19
 	finditem ITEM_X_ACCURACY
-	end
-
-Route105_EventScript_ItemIron:: @ 8290D33
-	finditem ITEM_IRON
 	end
 
 Route106_EventScript_ItemProtein:: @ 8290D40
@@ -231,10 +233,6 @@ Route114_EventScript_ItemEnergyPowder:: @ 8290E1D
 
 Route115_EventScript_ItemTM01:: @ 8290E37
 	finditem ITEM_TM01
-	end
-
-Route115_EventScript_ItemIron:: @ 8290E44
-	finditem ITEM_IRON
 	end
 
 Route115_EventScript_ItemGreatBall:: @ 8290E51

@@ -1,0 +1,139 @@
+{
+  "id": "MAP_FROSTBITE_CAVE_2F_1R",
+  "name": "FrostbiteCave_2F_1R",
+  "layout": "LAYOUT_FROSTBITE_CAVE_2F_1R",
+  "music": "MUS_MABOROSI",
+  "region_map_section": "MAPSEC_RUSTURF_TUNNEL",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 13,
+      "y": 25,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_ItemIron",
+      "flag": "FLAG_ITEM_FROSTBITE_CAVE_IRON"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_M",
+      "x": 11,
+      "y": 17,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "FrostbiteCave_2F_1R_EventScript_GruntM",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EUNICE",
+      "x": 8,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_FROSTBITE_CAVE_2F_1R_EUNICE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_M",
+      "x": 9,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_FROSTBITE_CAVE_2F_1R_GRUNT"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 38,
+      "elevation": 0,
+      "dest_map": "MAP_FROSTBITE_CAVE_1F_1R",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_FROSTBITE_CAVE_2F_1R",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_FROSTBITE_CAVE_STATE",
+      "var_value": "0",
+      "script": "FrostbiteCave_2F_1R_EventScript_EuniceGruntScene"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 11,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "FrostbiteCave_2F_1R_EventScript_IcyRock"
+    },
+    {
+      "type": "sign",
+      "x": 19,
+      "y": 11,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "FrostbiteCave_2F_1R_EventScript_IcyRock"
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "FrostbiteCave_2F_1R_EventScript_IcyRock"
+    },
+    {
+      "type": "sign",
+      "x": 19,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "FrostbiteCave_2F_1R_EventScript_IcyRock"
+    },
+    {
+      "type": "hidden_item",
+      "x": 21,
+      "y": 9,
+      "elevation": 3,
+      "item": "ITEM_NONE",
+      "flag": "FLAG_HIDDEN_ITEM_FROSTBITE_CAVE_RELIC_SILVER"
+    }
+  ]
+}

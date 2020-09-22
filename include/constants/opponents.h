@@ -120,8 +120,9 @@
 #define TRAINER_FROSTBITE_CAVE_GRUNT_1       57 // TRAINER_LOLA_1 in Emerald
 #define TRAINER_AUSTINA                      58
 #define TRAINER_FROSTBITE_CAVE_GRUNT_2       58 // TRAINER_AUSTINA in Emerald
-
 #define TRAINER_GWEN                         59
+#define TRAINER_FROSTBITE_CAVE_GRUNT_3       59 // TRAINER_GWEN in Emerald
+
 #define TRAINER_LOLA_2                       60
 #define TRAINER_LOLA_3                       61
 #define TRAINER_LOLA_4                       62

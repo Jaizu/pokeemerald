@@ -169,6 +169,7 @@
 #define VAR_CONTEST_TYPE                     0x4088
 #define VAR_AEROUS_MUSEUM_STATE              0x4088 // VAR_CONTEST_TYPE in Emerald
 #define VAR_SECRET_BASE_INITIALIZED          0x4089
+#define VAR_FROSTBITE_CAVE_STATE             0x4089 // VAR_SECRET_BASE_INITIALIZED in Emerald
 #define VAR_CONTEST_PRIZE_PICKUP             0x408A
 #define VAR_UNUSED_0x408B                    0x408B // Unused Var
 #define VAR_LITTLEROOT_HOUSES_STATE_BRENDAN  0x408C

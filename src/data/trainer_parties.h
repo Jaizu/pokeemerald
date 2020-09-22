@@ -759,11 +759,16 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntFrostbiteCave2[] = 
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Gwen[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_GruntFrostbiteCave3[] = {
     {
     .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_MARILL,
+    .lvl = 20,
+    .species = SPECIES_TANGELA,
+    },
+    {
+    .iv = 0,
+    .lvl = 21,
+    .species = SPECIES_TANGELA,
     }
 };
 

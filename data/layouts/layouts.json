@@ -4960,6 +4960,16 @@
       "secondary_tileset": "gTileset_FrostbiteCave",
       "border_filepath": "data/layouts/FrostbiteCave_1F_1R/border.bin",
       "blockdata_filepath": "data/layouts/FrostbiteCave_1F_1R/map.bin"
+    },
+    {
+      "id": "LAYOUT_FROSTBITE_CAVE_2F_1R",
+      "name": "FrostbiteCave_2F_1R_Layout",
+      "width": 24,
+      "height": 42,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_FrostbiteCave",
+      "border_filepath": "data/layouts/FrostbiteCave_2F_1R/border.bin",
+      "blockdata_filepath": "data/layouts/FrostbiteCave_2F_1R/map.bin"
     }
   ]
 }
