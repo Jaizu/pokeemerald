@@ -4964,8 +4964,8 @@
     {
       "id": "LAYOUT_FROSTBITE_CAVE_2F_1R",
       "name": "FrostbiteCave_2F_1R_Layout",
-      "width": 24,
-      "height": 42,
+      "width": 26,
+      "height": 36,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_FrostbiteCave",
       "border_filepath": "data/layouts/FrostbiteCave_2F_1R/border.bin",

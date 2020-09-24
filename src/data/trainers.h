@@ -807,8 +807,8 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_GruntFrostbiteCave1),
-        .party = {.NoItemDefaultMoves = sParty_GruntFrostbiteCave1},
+        .partySize = ARRAY_COUNT(sParty_FrostbiteCaveGrunt1),
+        .party = {.NoItemDefaultMoves = sParty_FrostbiteCaveGrunt1},
     },
 
     [TRAINER_FROSTBITE_CAVE_GRUNT_2] =
@@ -821,8 +821,8 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_GruntFrostbiteCave2),
-        .party = {.NoItemDefaultMoves = sParty_GruntFrostbiteCave2},
+        .partySize = ARRAY_COUNT(sParty_FrostbiteCaveGrunt2),
+        .party = {.NoItemDefaultMoves = sParty_FrostbiteCaveGrunt2},
     },
 
     [TRAINER_FROSTBITE_CAVE_GRUNT_3] =
@@ -835,22 +835,22 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_GruntFrostbiteCave3),
-        .party = {.NoItemDefaultMoves = sParty_GruntFrostbiteCave3},
+        .partySize = ARRAY_COUNT(sParty_FrostbiteCaveGrunt3),
+        .party = {.NoItemDefaultMoves = sParty_FrostbiteCaveGrunt3},
     },
 
-    [TRAINER_LOLA_2] =
+    [TRAINER_FROSTBITE_CAVE_GRUNT_4] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TUBER_F,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_TUBER_F,
-        .trainerName = _("LOLA"),
+        .trainerClass = TRAINER_CLASS_NEW_ELDERS,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_NEW_ELDERS_GRUNT_F,
+        .trainerName = _("Grunt"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Lola2),
-        .party = {.NoItemDefaultMoves = sParty_Lola2},
+        .partySize = ARRAY_COUNT(sParty_FrostbiteCaveGrunt4),
+        .party = {.NoItemDefaultMoves = sParty_FrostbiteCaveGrunt4},
     },
 
     [TRAINER_LOLA_3] =

@@ -179,6 +179,20 @@ Route105_EventScript_ItemIron::
 	finditem ITEM_IRON
 	end
 
+EventScript_ItemNeverMeltIce:: 
+ShoalCave_LowTideIceRoom_EventScript_ItemNeverMeltIce::
+	finditem ITEM_NEVER_MELT_ICE
+	end
+
+EventScript_ItemTM07::
+ShoalCave_LowTideIceRoom_EventScript_ItemTM07::
+	finditem ITEM_TM07
+	end
+
+EventScript_ItemItemfinder::
+	finditem ITEM_ITEMFINDER
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
@@ -549,14 +563,6 @@ ShoalCave_LowTideEntranceRoom_EventScript_ItemBigPearl:: @ 82913C0
 
 ShoalCave_LowTideStairsRoom_EventScript_ItemIceHeal:: @ 82913DA
 	finditem ITEM_ICE_HEAL
-	end
-
-ShoalCave_LowTideIceRoom_EventScript_ItemTM07:: @ 82913E7
-	finditem ITEM_TM07
-	end
-
-ShoalCave_LowTideIceRoom_EventScript_ItemNeverMeltIce:: @ 82913F4
-	finditem ITEM_NEVER_MELT_ICE
 	end
 
 SeafloorCavern_Room9_EventScript_ItemTM26:: @ 8291401

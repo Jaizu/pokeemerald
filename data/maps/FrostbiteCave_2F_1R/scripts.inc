@@ -1,25 +1,8 @@
-.equ LOCALID_EUNICE, 3
-.equ LOCALID_GRUNT, 4
+.equ LOCALID_EUNICE, 2
+.equ LOCALID_GRUNT, 3
 
 FrostbiteCave_2F_1R_MapScripts::
 	.byte 0
-
-FrostbiteCave_2F_1R_EventScript_GruntM::
-	trainerbattle_single TRAINER_FROSTBITE_CAVE_GRUNT_3, FrostbiteCave_2F_1R_Text_GruntMIntro, FrostbiteCave_2F_1R_Text_GruntMDefeated
-	msgbox FrostbiteCave_2F_1R_Text_GruntMPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-FrostbiteCave_2F_1R_Text_GruntMIntro:
-	.string "Kids like you have no respect for\n"
-	.string "our traditions. We'll teach you!$"
-
-FrostbiteCave_2F_1R_Text_GruntMDefeated:
-	.string "Whoa, you held your own!\n"
-	.string "Maybe you should join us…$"
-
-FrostbiteCave_2F_1R_Text_GruntMPostBattle:
-	.string "I'm warning you, kid, you'll\n"
-	.string "regret sticking around.$"
 
 FrostbiteCave_2F_1R_EventScript_IcyRock::
 	msgbox FrostbiteCave_2F_1R_Text_IcyRock, MSGBOX_SIGN
@@ -50,7 +33,7 @@ FrostbiteCave_2F_1R_EventScript_EuniceGruntScene::
 	delay 24
 	fadescreen FADE_TO_BLACK
 	setvar VAR_0x8004, 9  @ x
-	setvar VAR_0x8005, 3  @ y
+	setvar VAR_0x8005, 10 @ y
 	special TeleportCamera
 	fadescreen FADE_FROM_BLACK
 	playbgm MUS_M_DUNGON, 0

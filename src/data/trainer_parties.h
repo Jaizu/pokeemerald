@@ -733,7 +733,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Finley[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntFrostbiteCave1[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_FrostbiteCaveGrunt1[] = {
     {
     .iv = 0,
     .lvl = 20,
@@ -746,7 +746,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntFrostbiteCave1[] = 
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntFrostbiteCave2[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_FrostbiteCaveGrunt2[] = {
     {
     .iv = 0,
     .lvl = 20,
@@ -759,7 +759,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntFrostbiteCave2[] = 
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntFrostbiteCave3[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_FrostbiteCaveGrunt3[] = {
     {
     .iv = 0,
     .lvl = 20,
@@ -772,16 +772,16 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntFrostbiteCave3[] = 
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Lola2[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_FrostbiteCaveGrunt4[] = {
     {
-    .iv = 10,
-    .lvl = 26,
-    .species = SPECIES_MARILL,
+    .iv = 0,
+    .lvl = 20,
+    .species = SPECIES_YANMA,
     },
     {
-    .iv = 10,
-    .lvl = 26,
-    .species = SPECIES_MARILL,
+    .iv = 0,
+    .lvl = 21,
+    .species = SPECIES_RELICANTH,
     }
 };
 
