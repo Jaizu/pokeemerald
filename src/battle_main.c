@@ -344,7 +344,7 @@ const u8 gTypeNames[NUMBER_OF_MON_TYPES][TYPE_NAME_LENGTH + 1] =
 const struct TrainerMoney gTrainerMoneyTable[] =
 {
     {TRAINER_CLASS_MUSEUM, 5},
-    {TRAINER_CLASS_AQUA_ADMIN, 10},
+    {TRAINER_CLASS_ELDER_KNIGHT, 10},
     {TRAINER_CLASS_AQUA_LEADER, 20},
     {TRAINER_CLASS_AROMA_LADY, 10},
     {TRAINER_CLASS_RUIN_MANIAC, 15},
@@ -4684,7 +4684,7 @@ static void HandleEndTurn_BattleWon(void)
             break;
         case TRAINER_CLASS_MUSEUM:
         case TRAINER_CLASS_NEW_ELDERS:
-        case TRAINER_CLASS_AQUA_ADMIN:
+        case TRAINER_CLASS_ELDER_KNIGHT:
         case TRAINER_CLASS_AQUA_LEADER:
         case TRAINER_CLASS_MAGMA_ADMIN:
         case TRAINER_CLASS_MAGMA_LEADER:

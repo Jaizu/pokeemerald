@@ -28,8 +28,8 @@ const u32 gTrainerPalette_NewEldersGruntM[] = INCBIN_U32("graphics/trainers/pale
 const u32 gTrainerFrontPic_ExpertM[] = INCBIN_U32("graphics/trainers/front_pics/expert_m_front_pic.4bpp.lz");
 const u32 gTrainerPalette_ExpertM[] = INCBIN_U32("graphics/trainers/palettes/expert_m.gbapal.lz");
 
-const u32 gTrainerFrontPic_AquaAdminM[] = INCBIN_U32("graphics/trainers/front_pics/aqua_admin_m_front_pic.4bpp.lz");
-const u32 gTrainerPalette_AquaAdminM[] = INCBIN_U32("graphics/trainers/palettes/aqua_admin_m.gbapal.lz");
+const u32 gTrainerFrontPic_Eunice[] = INCBIN_U32("graphics/trainers/front_pics/eunice_front_pic.4bpp.lz");
+const u32 gTrainerPalette_Eunice[] = INCBIN_U32("graphics/trainers/palettes/eunice.gbapal.lz");
 
 const u32 gTrainerFrontPic_BlackBelt[] = INCBIN_U32("graphics/trainers/front_pics/black_belt_front_pic.4bpp.lz");
 const u32 gTrainerPalette_BlackBelt[] = INCBIN_U32("graphics/trainers/palettes/black_belt.gbapal.lz");

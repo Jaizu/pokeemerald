@@ -870,9 +870,9 @@ const struct Trainer gTrainers[] = {
     [TRAINER_FROSTBITE_CAVE_EUNICE] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_NEW_ELDERS,
+        .trainerClass = TRAINER_CLASS_ELDER_KNIGHT,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_MAGMA,
-        .trainerPic = TRAINER_PIC_NEW_ELDERS_GRUNT_F,
+        .trainerPic = TRAINER_PIC_EUNICE,
         .trainerName = _("Eunice"),
         .items = {},
         .doubleBattle = FALSE,

@@ -6398,6 +6398,9 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_MUSEUM:
         case TRAINER_CLASS_NEW_ELDERS:
             return MUS_NEW_ELDERS_GRUNT;
+        case TRAINER_CLASS_ELDER_KNIGHT:
+            // return MUS_ELDER_KNIGHT;
+            return MUS_NEW_ELDERS_GRUNT;
         case TRAINER_CLASS_LEADER:
             return MUS_BATTLE32;
         case TRAINER_CLASS_CHAMPION:
