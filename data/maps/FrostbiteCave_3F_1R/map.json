@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "FrostbiteCave_3F_1R_EventScript_GruntM",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ALL_FROSTBITE_CAVE_NEW_ELDERS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_F",
@@ -38,7 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "FrostbiteCave_3F_1R_EventScript_GruntF",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ALL_FROSTBITE_CAVE_NEW_ELDERS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
@@ -115,25 +115,25 @@
       "dest_warp_id": 1
     },
     {
-      "x": 17,
+      "x": 16,
       "y": 19,
       "elevation": 0,
-      "dest_map": "MAP_FROSTBITE_CAVE_3F_1R",
+      "dest_map": "MAP_FROSTBITE_CAVE_4F_1R",
       "dest_warp_id": 0
     },
     {
       "x": 11,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_FROSTBITE_CAVE_3F_1R",
-      "dest_warp_id": 0
+      "dest_map": "MAP_FROSTBITE_CAVE_4F_1R",
+      "dest_warp_id": 1
     },
     {
       "x": 26,
       "y": 3,
       "elevation": 0,
-      "dest_map": "MAP_FROSTBITE_CAVE_3F_1R",
-      "dest_warp_id": 0
+      "dest_map": "MAP_FROSTBITE_CAVE_4F_1R",
+      "dest_warp_id": 2
     }
   ],
   "coord_events": [

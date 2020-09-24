@@ -1219,3 +1219,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/FrostbiteCave_2F_1R/scripts.inc"
 
 	.include "data/maps/FrostbiteCave_3F_1R/scripts.inc"
+
+	.include "data/maps/FrostbiteCave_4F_1R/scripts.inc"

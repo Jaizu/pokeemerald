@@ -32,6 +32,7 @@
 #define MAP_FROSTBITE_CAVE_1F_1R                (13 | (1 << 8))
 #define MAP_FROSTBITE_CAVE_2F_1R                (14 | (1 << 8))
 #define MAP_FROSTBITE_CAVE_3F_1R                (15 | (1 << 8))
+#define MAP_FROSTBITE_CAVE_4F_1R                (16 | (1 << 8))
 
 // Map Group 2
 #define MAP_CELANTO_PATH_HIDDEN_GROTTO   (0 | (2 << 8))

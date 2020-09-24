@@ -785,29 +785,44 @@ static const struct TrainerMonNoItemDefaultMoves sParty_FrostbiteCaveGrunt4[] = 
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Lola3[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_FrostbiteCaveGrunt5[] = {
     {
     .iv = 20,
-    .lvl = 29,
-    .species = SPECIES_MARILL,
+    .lvl = 20,
+    .species = SPECIES_BALTOY,
     },
     {
     .iv = 20,
-    .lvl = 29,
-    .species = SPECIES_MARILL,
+    .lvl = 20,
+    .species = SPECIES_BINACLE,
+    },
+    {
+    .iv = 40,
+    .lvl = 21,
+    .species = SPECIES_DIGGERSBY,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Lola4[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_FrostbiteCaveEunice[] = {
     {
     .iv = 30,
-    .lvl = 32,
-    .species = SPECIES_MARILL,
+    .lvl = 24,
+    .species = SPECIES_SNOVER,
     },
     {
     .iv = 30,
-    .lvl = 32,
-    .species = SPECIES_MARILL,
+    .lvl = 24,
+    .species = SPECIES_NOCTOWL,
+    },
+    {
+    .iv = 30,
+    .lvl = 24,
+    .species = SPECIES_FROSLASS,
+    },
+    {
+    .iv = 50,
+    .lvl = 26,
+    .species = SPECIES_AMAURA,
     }
 };
 

@@ -124,9 +124,11 @@
 #define TRAINER_FROSTBITE_CAVE_GRUNT_3       59 // TRAINER_GWEN in Emerald
 #define TRAINER_LOLA_2                       60
 #define TRAINER_FROSTBITE_CAVE_GRUNT_4       60 // TRAINER_LOLA_2 in Emerald
-
 #define TRAINER_LOLA_3                       61
+#define TRAINER_FROSTBITE_CAVE_GRUNT_5       61 // TRAINER_LOLA_3 in Emerald
 #define TRAINER_LOLA_4                       62
+#define TRAINER_FROSTBITE_CAVE_EUNICE        62 // TRAINER_LOLA_4 in Emerald
+
 #define TRAINER_LOLA_5                       63
 #define TRAINER_RICKY_1                      64
 #define TRAINER_SIMON                        65

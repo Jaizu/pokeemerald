@@ -193,16 +193,19 @@ EventScript_ItemItemfinder::
 	finditem ITEM_ITEMFINDER
 	end
 
+EventScript_ItemPPUp::
+VictoryRoad_1F_EventScript_ItemPPUp::
+MeteorFalls_1F_1R_EventScript_ItemPPUP::
+Route123_EventScript_ItemPPUp::
+Route115_EventScript_ItemPPUp::
+Route109_EventScript_ItemPPUp::
+Route104_EventScript_ItemPPUp::
+Route103_EventScript_ItemPPUp::
+	finditem ITEM_PP_UP
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
-	end
-
-Route103_EventScript_ItemPPUp:: @ 8290CF2
-	finditem ITEM_PP_UP
-	end
-
-Route104_EventScript_ItemPPUp:: @ 8290CFF
-	finditem ITEM_PP_UP
 	end
 
 Route104_EventScript_ItemXAccuracy:: @ 8290D19
@@ -215,10 +218,6 @@ Route106_EventScript_ItemProtein:: @ 8290D40
 
 Route108_EventScript_ItemStarPiece:: @ 8290D4D
 	finditem ITEM_STAR_PIECE
-	end
-
-Route109_EventScript_ItemPPUp:: @ 8290D5A
-	finditem ITEM_PP_UP
 	end
 
 Route110_EventScript_ItemDireHit:: @ 8290D81
@@ -255,10 +254,6 @@ Route115_EventScript_ItemGreatBall:: @ 8290E51
 
 Route115_EventScript_ItemHealPowder:: @ 8290E5E
 	finditem ITEM_HEAL_POWDER
-	end
-
-Route115_EventScript_ItemPPUp:: @ 8290E6B
-	finditem ITEM_PP_UP
 	end
 
 Route116_EventScript_ItemXSpecial:: @ 8290E78
@@ -323,10 +318,6 @@ Route123_EventScript_ItemCalcium:: @ 8290FB0
 
 Route123_EventScript_ItemUltraBall:: @ 8290FBD
 	finditem ITEM_ULTRA_BALL
-	end
-
-Route123_EventScript_ItemPPUp:: @ 8290FD7
-	finditem ITEM_PP_UP
 	end
 
 Route123_EventScript_ItemRevivalHerb:: @ 8290FE4
@@ -435,10 +426,6 @@ JaggedPass_EventScript_ItemBurnHeal:: @ 8291184
 
 MeteorFalls_1F_1R_EventScript_ItemTM23:: @ 82911AB
 	finditem ITEM_TM23
-	end
-
-MeteorFalls_1F_1R_EventScript_ItemPPUP:: @ 82911D2
-	finditem ITEM_PP_UP
 	end
 
 MeteorFalls_B1F_2R_EventScript_ItemTM02:: @ 82911DF
@@ -607,10 +594,6 @@ Route110_TrickHousePuzzle8_EventScript_ItemBeadMail:: @ 8291476
 
 VictoryRoad_1F_EventScript_ItemMaxElixir:: @ 8291483
 	finditem ITEM_MAX_ELIXIR
-	end
-
-VictoryRoad_1F_EventScript_ItemPPUp:: @ 8291490
-	finditem ITEM_PP_UP
 	end
 
 VictoryRoad_B1F_EventScript_ItemTM29:: @ 829149D
