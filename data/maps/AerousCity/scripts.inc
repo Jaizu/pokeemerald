@@ -158,18 +158,18 @@ AerousCity_EventScript_ShowLighthouse:
 	compare VAR_0x8001, 14
 	call_if_eq AerousCity_EventScript_PlayerFaceEast
 	fadescreen FADE_TO_BLACK
-	// TODO: Implement
-	// setvar VAR_0x8004, 67
-	// setvar VAR_0x8005, 8
-	// special TeleportCamera
+	setvar VAR_0x8004, 67  @ x
+	setvar VAR_0x8005, 8   @ y
+	special TeleportCamera
 	fadescreen FADE_FROM_BLACK
 	waitbuttonpress
 	fadescreen FADE_TO_BLACK
-	// TODO: Implement
-	// special ReturnCameraToPlayer
+	special ReturnCameraToPlayer
 	fadescreen FADE_FROM_BLACK
 	compare VAR_0x8001, 14
 	call_if_eq AerousCity_EventScript_PlayerFaceNorth
+	applymovement VAR_LAST_TALKED, Common_Movement_FacePlayer
+	waitmovement 0
 	return
 
 AerousCity_EventScript_PlayerFaceEast:

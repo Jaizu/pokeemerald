@@ -49,10 +49,9 @@ FrostbiteCave_2F_1R_EventScript_EuniceGruntScene::
 	waitstate
 	delay 24
 	fadescreen FADE_TO_BLACK
-	// TODO: Implement
-	// setvar VAR_0x8004, 9
-	// setvar VAR_0x8005, 3
-	// special TeleportCamera
+	setvar VAR_0x8004, 9  @ x
+	setvar VAR_0x8005, 3  @ y
+	special TeleportCamera
 	fadescreen FADE_FROM_BLACK
 	playbgm MUS_M_DUNGON, 0
 	msgbox FrostbiteCave_2F_1R_Text_TheseTremorsAreScary, MSGBOX_DEFAULT
@@ -60,14 +59,17 @@ FrostbiteCave_2F_1R_EventScript_EuniceGruntScene::
 	applymovement LOCALID_GRUNT, Common_Movement_WalkUp
 	waitmovement 0
 	removeobject LOCALID_GRUNT
+	playse SE_KAIDAN
+	waitse
 	applymovement LOCALID_EUNICE, FrostbiteCave_2F_1R_Movement_ExitEunice
 	waitmovement 0
 	removeobject LOCALID_EUNICE
+	playse SE_KAIDAN
+	waitse
 	fadedefaultbgm
 	delay 24
 	fadescreen FADE_TO_BLACK
-	// TODO: Implement
-	// special ReturnCameraToPlayer
+	special ReturnCameraToPlayer
 	fadescreen FADE_FROM_BLACK
 	setvar VAR_FROSTBITE_CAVE_STATE, 1
 	release

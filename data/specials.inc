@@ -541,3 +541,5 @@ gSpecials:: @ 81DBA64
 	def_special StartCustomMovesBattle
 	def_special DoWarpAtPlayerPos
 	def_special CheckPartyForMon
+	def_special TeleportCamera
+	def_special ReturnCameraToPlayer
