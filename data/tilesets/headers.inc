@@ -896,3 +896,14 @@ gTileset_FrostbiteCave::
 	.4byte gMetatiles_FrostbiteCave
 	.4byte gMetatileAttributes_FrostbiteCave
 	.4byte NULL
+
+	.align 2
+gTileset_Winter::
+	.byte TRUE @ is compressed
+	.byte FALSE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_Winter
+	.4byte gTilesetPalettes_Winter
+	.4byte gMetatiles_Winter
+	.4byte gMetatileAttributes_Winter
+	.4byte NULL

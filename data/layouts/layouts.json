@@ -4990,6 +4990,16 @@
       "secondary_tileset": "gTileset_FrostbiteCave",
       "border_filepath": "data/layouts/FrostbiteCave_4F_1R/border.bin",
       "blockdata_filepath": "data/layouts/FrostbiteCave_4F_1R/map.bin"
+    },
+    {
+      "id": "LAYOUT_WINDMIST_CITY",
+      "name": "WindmistCity_Layout",
+      "width": 48,
+      "height": 48,
+      "primary_tileset": "gTileset_Winter",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/WindmistCity/border.bin",
+      "blockdata_filepath": "data/layouts/WindmistCity/map.bin"
     }
   ]
 }

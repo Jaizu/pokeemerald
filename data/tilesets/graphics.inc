@@ -1849,3 +1849,23 @@ gTilesetPalettes_FrostbiteCave::
 	.align 2
 gTilesetTiles_FrostbiteCave::
 	.incbin "data/tilesets/secondary/frostbitecave/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_Winter::
+	.incbin "data/tilesets/primary/winter/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/winter/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/winter/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/winter/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/winter/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/winter/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/winter/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/winter/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/winter/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/winter/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/winter/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/winter/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/winter/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_Winter::
+	.incbin "data/tilesets/primary/winter/tiles.4bpp.lz"

@@ -603,3 +603,10 @@ gMetatiles_FrostbiteCave::
 	.align 1
 gMetatileAttributes_FrostbiteCave::
 	.incbin "data/tilesets/secondary/frostbitecave/metatile_attributes.bin"
+	.align 1
+gMetatiles_Winter::
+	.incbin "data/tilesets/primary/winter/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_Winter::
+	.incbin "data/tilesets/primary/winter/metatile_attributes.bin"

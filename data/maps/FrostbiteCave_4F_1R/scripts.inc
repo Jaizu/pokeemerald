@@ -237,6 +237,7 @@ FrostbiteCave_4F_1R_EventScript_EuniceBattleScene::
 	call_if_eq FrostbiteCave_4F_1R_EventScript_WalkGruntToPlayer1
 	playbgm MUS_MGM0, 0
 	msgbox FrostbiteCave_4F_1R_Text_GruntMIntro, MSGBOX_DEFAULT
+	cleartrainerflag TRAINER_FROSTBITE_CAVE_GRUNT_5
 	trainerbattle_no_intro TRAINER_FROSTBITE_CAVE_GRUNT_5, FrostbiteCave_4F_1R_Text_GruntMDefeated
 	compare VAR_0x8008, 0
 	call_if_eq FrostbiteCave_4F_1R_EventScript_EuniceFaceGrunt0
@@ -256,6 +257,7 @@ FrostbiteCave_4F_1R_EventScript_EuniceBattleScene::
 	compare VAR_0x8008, 1
 	call_if_eq FrostbiteCave_4F_1R_EventScript_TurnPlayerToEunice1
 	msgbox FrostbiteCave_4F_1R_Text_EuniceIntro, MSGBOX_DEFAULT
+	cleartrainerflag TRAINER_FROSTBITE_CAVE_EUNICE
 	trainerbattle_no_intro TRAINER_FROSTBITE_CAVE_EUNICE, FrostbiteCave_4F_1R_Text_EuniceDefeated
 	msgbox FrostbiteCave_4F_1R_Text_HmmFineIConcede, MSGBOX_DEFAULT
 	closemessage

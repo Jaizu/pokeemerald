@@ -132,7 +132,7 @@
       "x": 27,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_FROSTBITE_CAVE_4F_1R",
+      "dest_map": "MAP_WINDMIST_CITY",
       "dest_warp_id": 0
     },
     {
@@ -184,8 +184,8 @@
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 15,
-      "y": 13,
+      "x": 7,
+      "y": 26,
       "elevation": 3,
       "item": "ITEM_RARE_CANDY",
       "flag": "FLAG_HIDDEN_ITEM_FROSTBITE_CAVE_RARE_CANDY"
