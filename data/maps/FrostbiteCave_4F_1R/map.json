@@ -17,7 +17,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
       "x": 6,
-      "y": 4,
+      "y": 3,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -68,7 +68,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EUNICE",
-      "x": 24,
+      "x": 28,
       "y": 4,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -81,7 +81,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_M",
-      "x": 25,
+      "x": 29,
       "y": 4,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -94,7 +94,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_M",
-      "x": 24,
+      "x": 28,
       "y": 5,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -129,7 +129,7 @@
       "dest_warp_id": 3
     },
     {
-      "x": 27,
+      "x": 31,
       "y": 5,
       "elevation": 0,
       "dest_map": "MAP_WINDMIST_CITY",
@@ -146,7 +146,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 21,
+      "x": 25,
       "y": 3,
       "elevation": 0,
       "var": "VAR_FROSTBITE_CAVE_STATE",
@@ -155,7 +155,7 @@
     },
     {
       "type": "trigger",
-      "x": 21,
+      "x": 25,
       "y": 4,
       "elevation": 0,
       "var": "VAR_FROSTBITE_CAVE_STATE",
@@ -164,7 +164,7 @@
     },
     {
       "type": "trigger",
-      "x": 21,
+      "x": 25,
       "y": 5,
       "elevation": 0,
       "var": "VAR_FROSTBITE_CAVE_STATE",
@@ -173,7 +173,7 @@
     },
     {
       "type": "trigger",
-      "x": 24,
+      "x": 28,
       "y": 3,
       "elevation": 0,
       "var": "VAR_FROSTBITE_CAVE_STATE",
@@ -184,8 +184,8 @@
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 7,
-      "y": 26,
+      "x": 19,
+      "y": 31,
       "elevation": 3,
       "item": "ITEM_RARE_CANDY",
       "flag": "FLAG_HIDDEN_ITEM_FROSTBITE_CAVE_RARE_CANDY"
