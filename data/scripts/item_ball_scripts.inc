@@ -204,6 +204,15 @@ Route103_EventScript_ItemPPUp::
 	finditem ITEM_PP_UP
 	end
 
+EventScript_ItemXSpAtk::
+Route116_EventScript_ItemXSpecial::
+	finditem ITEM_X_SP_ATK
+	end
+
+EventScript_ItemKingsRock::
+	finditem ITEM_KINGS_ROCK
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
@@ -254,10 +263,6 @@ Route115_EventScript_ItemGreatBall:: @ 8290E51
 
 Route115_EventScript_ItemHealPowder:: @ 8290E5E
 	finditem ITEM_HEAL_POWDER
-	end
-
-Route116_EventScript_ItemXSpecial:: @ 8290E78
-	finditem ITEM_X_SP_ATK
 	end
 
 Route116_EventScript_ItemEther:: @ 8290E85
