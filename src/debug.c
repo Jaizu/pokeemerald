@@ -1,37 +1,47 @@
 #if DEBUG
 
 #include "global.h"
+#include "debug.h"
+#include "field_screen_effect.h"
 #include "list_menu.h"
 #include "main.h"
 #include "map_name_popup.h"
 #include "menu.h"
+#include "overworld.h"
 #include "script.h"
 #include "sound.h"
 #include "strings.h"
 #include "task.h"
+#include "constants/maps.h"
 #include "constants/songs.h"
 
 #define DEBUG_MAIN_MENU_HEIGHT 7
 #define DEBUG_MAIN_MENU_WIDTH 11
 
-void Debug_ShowMainMenu(void);
 static void Debug_DestroyMainMenu(u8);
+static void DebugAction_FastForward(u8);
 static void DebugAction_Cancel(u8);
 static void DebugTask_HandleMainMenuInput(u8);
 
+extern const u8 Debug_EventScript_SetUpFastForward[];
+
 enum {
+    DEBUG_MENU_ITEM_FAST_FORWARD,
     DEBUG_MENU_ITEM_CANCEL,
 };
 
+static const u8 gDebugText_FastForward[] = _("Fast Forward");
 static const u8 gDebugText_Cancel[] = _("Cancel");
 
 static const struct ListMenuItem sDebugMenuItems[] =
 {
+    [DEBUG_MENU_ITEM_FAST_FORWARD] = {gDebugText_FastForward, DEBUG_MENU_ITEM_FAST_FORWARD},
     [DEBUG_MENU_ITEM_CANCEL] = {gDebugText_Cancel, DEBUG_MENU_ITEM_CANCEL}
 };
 
 static void (*const sDebugMenuActions[])(u8) =
 {
+    [DEBUG_MENU_ITEM_FAST_FORWARD] = DebugAction_FastForward,
     [DEBUG_MENU_ITEM_CANCEL] = DebugAction_Cancel
 };
 
@@ -118,6 +128,14 @@ static void DebugTask_HandleMainMenuInput(u8 taskId)
         PlaySE(SE_SELECT);
         Debug_DestroyMainMenu(taskId);
     }
+}
+
+static void DebugAction_FastForward(u8 taskId)
+{
+    Debug_DestroyMainMenu(taskId);
+    ScriptContext2_RunNewScript(Debug_EventScript_SetUpFastForward);
+    SetWarpDestination(MAP_GROUP(WINDMIST_CITY), MAP_NUM(WINDMIST_CITY), 0, 0, 0);
+    DoWarp();
 }
 
 static void DebugAction_Cancel(u8 taskId)
