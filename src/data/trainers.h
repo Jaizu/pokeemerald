@@ -881,18 +881,18 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_FrostbiteCaveEunice},
     },
 
-    [TRAINER_LOLA_5] =
+    [TRAINER_ABBIE] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TUBER_F,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_TUBER_F,
-        .trainerName = _("LOLA"),
+        .trainerClass = TRAINER_CLASS_HIKER, // TODO: Add Explorer Trainer class
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_HIKER, // TODO: Add Explorer Trainer pic
+        .trainerName = _("Abbie"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Lola5),
-        .party = {.NoItemDefaultMoves = sParty_Lola5},
+        .partySize = ARRAY_COUNT(sParty_Abbie),
+        .party = {.NoItemDefaultMoves = sParty_Abbie},
     },
 
     [TRAINER_RICKY_1] =

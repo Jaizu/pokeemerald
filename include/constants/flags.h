@@ -149,12 +149,16 @@
 #define FLAG_RECEIVED_EXP_SHARE              0x6F // FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT in Emerald
 #define FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE  0x70
 #define FLAG_CLEAR_ROCKS_FROSTBITE_CAVE_1F   0x70 // FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE in Emerald
-
 #define FLAG_UNUSED_RS_LEGENDARY_BATTLE_DONE 0x71 // Unused Flag. Used in R/S to indicate whether player defeated or caught Groudon/Kyogre in Cave of Origin.
+#define FLAG_RECEIVED_TM13                   0x71 // FLAG_UNUSED_RS_LEGENDARY_BATTLE_DONE in Emerald
+
 #define FLAG_SCOTT_CALL_BATTLE_FRONTIER      0x72 // Used in order to activate a phone call from Scott, inviting the player to the SS Tidal.
 #define FLAG_RECEIVED_METEORITE              0x73
+
 #define FLAG_ADVENTURE_STARTED               0x74 // FLAG_ADVENTURE_STARTED in Emerald as well
+
 #define FLAG_DEFEATED_MAGMA_SPACE_CENTER     0x75 // Set when Team Magma is defeated at Mossdeep's Space Center.
+
 #define FLAG_MET_HIDDEN_POWER_GIVER          0x76
 #define FLAG_RECEIVED_BIKE                   0x76 // FLAG_MET_HIDDEN_POWER_GIVER in Emerald
 #define FLAG_CANCEL_BATTLE_ROOM_CHALLENGE    0x77
