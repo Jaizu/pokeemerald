@@ -85,7 +85,7 @@
 #define OBJ_EVENT_GFX_UNUSED_PORYGON2_DOLL        81
 #define OBJ_EVENT_GFX_CUTTABLE_TREE               82
 #define OBJ_EVENT_GFX_MART_EMPLOYEE               83
-#define OBJ_EVENT_GFX_ROOFTOP_SALE_WOMAN          84
+#define OBJ_EVENT_GFX_EXPLORER                    84
 #define OBJ_EVENT_GFX_TEALA                       85
 #define OBJ_EVENT_GFX_BREAKABLE_ROCK              86
 #define OBJ_EVENT_GFX_PUSHABLE_BOULDER            87
@@ -270,6 +270,7 @@
 #define OBJ_EVENT_GFX_SCIENTIST_1                OBJ_EVENT_GFX_SCIENTIST
 #define OBJ_EVENT_GFX_SCIENTIST_2                OBJ_EVENT_GFX_BIRD_KEEPER
 #define OBJ_EVENT_GFX_BRAWLY                     OBJ_EVENT_GFX_ARIA
+#define OBJ_EVENT_GFX_ROOFTOP_SALE_WOMAN          OBJ_EVENT_GFX_EXPLORER
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.

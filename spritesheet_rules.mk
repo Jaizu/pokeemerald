@@ -313,7 +313,7 @@ $(OBJEVENTGFXDIR)/people/reporter_f.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/reporter_m.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
-$(OBJEVENTGFXDIR)/people/rooftop_sale_woman.4bpp: %.4bpp: %.png
+$(OBJEVENTGFXDIR)/people/explorer.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 $(OBJEVENTGFXDIR)/people/fairy_tale_girl.4bpp: %.4bpp: %.png

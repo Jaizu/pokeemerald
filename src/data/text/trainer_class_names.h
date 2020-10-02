@@ -1,6 +1,6 @@
 const u8 gTrainerClassNames[][13] = {
     [TRAINER_CLASS_FAIRY_TALE_GIRL] = _("Fairy Tale ♀"),
-    [TRAINER_CLASS_PKMN_TRAINER_2] = _("{PKMN} Trainer"),
+    [TRAINER_CLASS_EXPLORER] = _("Explorer"),
     [TRAINER_CLASS_HIKER] = _("Hiker"),
     [TRAINER_CLASS_MUSEUM] = _("Museum"),
     [TRAINER_CLASS_PKMN_BREEDER] = _("{PKMN} Breeder"),

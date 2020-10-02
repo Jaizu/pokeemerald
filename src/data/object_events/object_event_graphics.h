@@ -55,6 +55,7 @@ const u16 gObjectEventPaletteScientist[] = INCBIN_U16("graphics/object_events/pa
 const u16 gObjectEventPaletteBirdKeeper[] = INCBIN_U16("graphics/object_events/palettes/bird_keeper.gbapal");
 const u16 gObjectEventPaletteAria[] = INCBIN_U16("graphics/object_events/palettes/aria.gbapal");
 const u16 gObjectEventPalettePsychic[] = INCBIN_U16("graphics/object_events/palettes/psychic.gbapal");
+const u16 gObjectEventPaletteExplorer[] = INCBIN_U16("graphics/object_events/palettes/explorer.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
@@ -148,7 +149,7 @@ const u32 gObjectEventPic_ReporterF[] = INCBIN_U32("graphics/object_events/pics/
 const u32 gObjectEventPic_MauvilleOldMan1[] = INCBIN_U32("graphics/object_events/pics/people/mauville_old_man_1.4bpp");
 const u32 gObjectEventPic_MauvilleOldMan2[] = INCBIN_U32("graphics/object_events/pics/people/mauville_old_man_2.4bpp");
 const u32 gObjectEventPic_MartEmployee[] = INCBIN_U32("graphics/object_events/pics/people/mart_employee.4bpp");
-const u32 gObjectEventPic_RooftopSaleWoman[] = INCBIN_U32("graphics/object_events/pics/people/rooftop_sale_woman.4bpp");
+const u32 gObjectEventPic_Explorer[] = INCBIN_U32("graphics/object_events/pics/people/explorer.4bpp");
 const u32 gObjectEventPic_Teala[] = INCBIN_U32("graphics/object_events/pics/people/teala.4bpp");
 const u32 gObjectEventPic_Artist[] = INCBIN_U32("graphics/object_events/pics/people/artist.4bpp");
 const u32 gObjectEventPic_Cameraman[] = INCBIN_U32("graphics/object_events/pics/people/cameraman.4bpp");

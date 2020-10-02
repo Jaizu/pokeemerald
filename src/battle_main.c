@@ -399,6 +399,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {TRAINER_CLASS_YOUNG_COUPLE, 8},
     {TRAINER_CLASS_WINSTRATE, 10},
     {TRAINER_CLASS_FAIRY_TALE_GIRL, 6},
+    {TRAINER_CLASS_EXPLORER, 10},
     {0xFF, 5},
 };
 

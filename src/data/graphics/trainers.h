@@ -1,8 +1,8 @@
 const u32 gTrainerFrontPic_Hiker[] = INCBIN_U32("graphics/trainers/front_pics/hiker_front_pic.4bpp.lz");
 const u32 gTrainerPalette_Hiker[] = INCBIN_U32("graphics/trainers/palettes/hiker.gbapal.lz");
 
-const u32 gTrainerFrontPic_AquaGruntM[] = INCBIN_U32("graphics/trainers/front_pics/aqua_grunt_m_front_pic.4bpp.lz");
-const u32 gTrainerPalette_AquaGruntM[] = INCBIN_U32("graphics/trainers/palettes/aqua_grunt_m.gbapal.lz");
+const u32 gTrainerFrontPic_Explorer[] = INCBIN_U32("graphics/trainers/front_pics/explorer_front_pic.4bpp.lz");
+const u32 gTrainerPalette_Explorer[] = INCBIN_U32("graphics/trainers/palettes/explorer.gbapal.lz");
 
 const u32 gTrainerFrontPic_PokemonBreederF[] = INCBIN_U32("graphics/trainers/front_pics/pokemon_breeder_f_front_pic.4bpp.lz");
 const u32 gTrainerPalette_PokemonBreederF[] = INCBIN_U32("graphics/trainers/palettes/pokemon_breeder_f.gbapal.lz");
