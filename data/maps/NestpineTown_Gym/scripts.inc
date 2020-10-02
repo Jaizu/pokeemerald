@@ -129,6 +129,7 @@ NestpineTown_Gym_EventScript_Aria::
 	end
 
 NestpineTown_Gym_EventScript_AriaDefeated:
+	setflag FLAG_BADGE02_GET
 	call NestpineTown_Gym_EventScript_GiveRoost
 	setvar VAR_0x8008, 1
 	call Common_EventScript_SetGymTrainers

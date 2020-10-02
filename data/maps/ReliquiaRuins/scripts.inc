@@ -73,7 +73,6 @@ ReliquiaRuins_EventScript_MorganaTrigger::
 	applymovement LOCALID_MORGANA, ReliquiaRuins_Movement_MorganaExit
 	waitmovement 0
 	removeobject LOCALID_MORGANA
-	setflag FLAG_HIDE_RELIQUIA_RUINS_MORGANA
 	setflag FLAG_HIDE_MAP_NAME_POPUP
 	setvar VAR_CELANTO_TOWN_STATE, 1
 	setvar VAR_RELIQUIA_RUINS_STATE, 1

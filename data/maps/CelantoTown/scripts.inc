@@ -16,11 +16,12 @@ CelantoTown_EventScript_OldMan::
 	goto_if_set FLAG_RECEIVED_GRACIDEA, CelantoTown_EventScript_OldManDiscussGracidea
 	msgbox CelantoTown_Text_ThisFlowerIsStriking
 	setvar VAR_0x8004, SPECIES_SHAYMIN
-	specialvar VAR_RESULT, IsPokemonJumpSpeciesInParty // TODO: Port DoesPlayerPartyContainSpecies
+	specialvar VAR_RESULT, CheckPartyForMon
 	compare VAR_RESULT, TRUE
 	goto_if_eq CelantoTown_EventScript_OldManTryGiveGracidea
 	msgbox CelantoTown_Text_LongAdmiredInterestingFlowers
 	goto CelantoTown_EventScript_OldManFaceFlower
+	end
 
 CelantoTown_EventScript_OldManTryGiveGracidea::
 	playse SE_PIN
@@ -33,10 +34,12 @@ CelantoTown_EventScript_OldManTryGiveGracidea::
 	setflag FLAG_RECEIVED_GRACIDEA
 	additem ITEM_GRACIDEA
 	goto CelantoTown_EventScript_OldManDiscussGracidea
+	end
 
 CelantoTown_EventScript_OldManDiscussGracidea::
 	msgbox CelantoTown_Text_ThatGracideaYourPokemonWillLoveIt
 	goto CelantoTown_EventScript_OldManFaceFlower
+	end
 
 CelantoTown_EventScript_OldManFaceFlower::
 	applymovement LOCALID_OLD_MAN, Common_Movement_FaceOriginalDirection

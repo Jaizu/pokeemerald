@@ -54,7 +54,7 @@ ArchanTown_RedwoodResidence_EventScript_CarePackageScene:
 	msgbox ArchanTown_RedwoodResidence_Text_PlayerPutPokedexInBag, MSGBOX_DEFAULT
 	playfanfare MUS_FANFA4
 	message ArchanTown_RedwoodResidence_Text_ObtainedTheRedwoodCardAndMap
-	// TODO: Add Reddwood Card item
+	// TODO: Add Redwood Card item
 	// additem ITEM_REDWOOD_CARD
 	additem ITEM_TOWN_MAP
 	waitfanfare
