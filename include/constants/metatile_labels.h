@@ -768,6 +768,10 @@
 #define METATILE_Underwater_FloorShadow  0x228
 #define METATILE_Underwater_RockWall     0x21E
 
+// gTileset_Winter
+#define METATILE_Winter_Door_Gym        0x1B9
+#define METATILE_Winter_Door_GymLocked  0x1E3
+
 // gTileset_WispForest
 #define METATILE_WispForest_Grass_WispTreeBottomLeft              0x218
 #define METATILE_WispForest_Grass_WispTreeBottomRight             0x21B

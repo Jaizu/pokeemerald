@@ -151,8 +151,9 @@
 #define FLAG_CLEAR_ROCKS_FROSTBITE_CAVE_1F   0x70 // FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE in Emerald
 #define FLAG_UNUSED_RS_LEGENDARY_BATTLE_DONE 0x71 // Unused Flag. Used in R/S to indicate whether player defeated or caught Groudon/Kyogre in Cave of Origin.
 #define FLAG_RECEIVED_TM13                   0x71 // FLAG_UNUSED_RS_LEGENDARY_BATTLE_DONE in Emerald
-
 #define FLAG_SCOTT_CALL_BATTLE_FRONTIER      0x72 // Used in order to activate a phone call from Scott, inviting the player to the SS Tidal.
+#define FLAG_UNLOCK_WINDMIST_GYM_DOOR        0x72 // FLAG_SCOTT_CALL_BATTLE_FRONTIER in Emerald
+
 #define FLAG_RECEIVED_METEORITE              0x73
 
 #define FLAG_ADVENTURE_STARTED               0x74 // FLAG_ADVENTURE_STARTED in Emerald as well

@@ -1,6 +1,15 @@
 WindmistCity_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, WindmistCity_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, WindmistCity_OnTransition
 	.byte 0
+
+WindmistCity_OnLoad::
+	call_if_unset FLAG_UNLOCK_WINDMIST_GYM_DOOR, WindmistCity_EventScript_LockGymDoor
+	end
+
+WindmistCity_EventScript_LockGymDoor:
+	setmetatile 31, 13, METATILE_Winter_Door_GymLocked, 1
+	return
 
 WindmistCity_OnTransition::
 	setflag FLAG_VISITED_WINDMIST_CITY
@@ -195,3 +204,13 @@ WindmistCity_EventScript_Hiker::
 WindmistCity_Text_ICanSeeSoFar:
 	.string "Whoa! I can see so far up here!\n"
 	.string "It's kind of dizzying!$"
+
+WindmistCity_EventScript_LockedDoor::
+	lock
+	faceplayer
+	msgbox WindmistCity_Text_TheDoorIsLocked, MSGBOX_DEFAULT
+	release
+	end
+
+WindmistCity_Text_TheDoorIsLocked:
+	.string "{COLOR DARK_GREY}The door is locked…$"
