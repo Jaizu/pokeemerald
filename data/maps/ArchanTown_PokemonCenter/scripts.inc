@@ -1,19 +1,9 @@
-.equ LOCALID_NURSE, 1
-
 ArchanTown_PokemonCenter_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, ArchanTown_PokemonCenter_OnTransition
 	.byte 0
 
 ArchanTown_PokemonCenter_OnTransition:
 	setrespawn HEAL_LOCATION_ARCHAN_TOWN
-	end
-
-ArchanTown_PokemonCenter_EventScript_Nurse::
-	setvar VAR_0x800B, LOCALID_NURSE
-	call Common_EventScript_PkmnCenterNurse
-	waitmessage
-	waitbuttonpress
-	release
 	end
 
 ArchanTown_PokemonCenter_EventScript_Camper::

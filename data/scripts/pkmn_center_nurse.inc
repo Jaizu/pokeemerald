@@ -4,7 +4,6 @@ Common_EventScript_PkmnCenterNurse::
     msgbox gText_WouldYouLikeToRestYourPkmn, MSGBOX_YESNO
     compare VAR_RESULT, YES
     goto_if_eq EventScript_PkmnCenterNurse_HealPkmn
-    compare VAR_RESULT, NO
     msgbox gText_WeHopeToSeeYouAgain, MSGBOX_DEFAULT
 	release
     end
@@ -32,21 +31,21 @@ EventScript_PkmnCenterNurse_ExplainPokerus::
     return
 
 EventScript_PkmnCenterNurse_TakeAndHealPkmn::
-    applymovement VAR_0x800B, Common_Movement_WalkInPlaceFastestLeft
+    applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFastestLeft
     waitmovement 0
     dofieldeffect FLDEFF_POKECENTER_HEAL
     waitfieldeffect FLDEFF_POKECENTER_HEAL
-    applymovement VAR_0x800B, Common_Movement_WalkInPlaceFastestDown
+    applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFastestDown
     waitmovement 0
     special HealPlayerParty
     return
 
 EventScript_PkmnCenterNurse_ReturnPkmn::
-    message gText_RestoredPkmnToFullHealth
-    applymovement VAR_0x800B, EventScript_PkmnCenterNurse_Bow
+    applymovement VAR_LAST_TALKED, EventScript_PkmnCenterNurse_Bow
+    msgbox gText_RestoredPkmnToFullHealth, MSGBOX_DEFAULT
     waitmovement 0
-    waitmessage
-    return
+    release
+	end
 
 EventScript_PkmnCenterNurse_Bow:
     nurse_joy_bow

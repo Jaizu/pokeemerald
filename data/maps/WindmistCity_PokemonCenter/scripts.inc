@@ -1,0 +1,7 @@
+WindmistCity_PokemonCenter_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, WindmistCity_PokemonCenter_OnTransition
+	.byte 0
+
+WindmistCity_PokemonCenter_OnTransition:
+	setrespawn HEAL_LOCATION_WINDMIST_CITY
+	end

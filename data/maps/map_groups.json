@@ -9,6 +9,7 @@
     "gMapGroup_SerosVillage",
     "gMapGroup_AerousCity",
     "gMapGroup_NestpineTown",
+    "gMapGroup_WindmistCity",
     "gMapGroup_NestpineClimb",
     "gMapGroup0",
     "gMapGroup1",
@@ -138,6 +139,9 @@
     "NestpineTown_House1",
     "NestpineTown_House2",
     "NestpineTown_House3"
+  ],
+  "gMapGroup_WindmistCity": [
+    "WindmistCity_PokemonCenter"
   ],
   "gMapGroup_NestpineClimb": [
     "NestpineClimb_NetasHouse"

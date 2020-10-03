@@ -1,19 +1,9 @@
-.equ LOCALID_NURSE, 1
-
 SerosVillage_PokemonCenter_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, SerosVillage_PokemonCenter_OnTransition
 	.byte 0
 
 SerosVillage_PokemonCenter_OnTransition:
 	setrespawn HEAL_LOCATION_SEROS_VILLAGE
-	end
-
-SerosVillage_PokemonCenter_EventScript_Nurse::
-	setvar VAR_0x800B, LOCALID_NURSE
-	call Common_EventScript_PkmnCenterNurse
-	waitmessage
-	waitbuttonpress
-	release
 	end
 
 SerosVillage_PokemonCenter_EventScript_Redwood::

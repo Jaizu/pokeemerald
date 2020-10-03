@@ -1224,3 +1224,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/FrostbiteCave_4F_1R/scripts.inc"
 
 	.include "data/maps/WindmistCity/scripts.inc"
+
+	.include "data/maps/WindmistCity_PokemonCenter/scripts.inc"
