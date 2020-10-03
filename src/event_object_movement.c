@@ -399,62 +399,6 @@ const u8 gInitialMovementTypeFacingDirections[] = {
     [MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_RIGHT] = DIR_EAST,
 };
 
-#define OBJ_EVENT_PAL_TAG_0 0x1100
-#define OBJ_EVENT_PAL_TAG_1 0x1101
-#define OBJ_EVENT_PAL_TAG_2 0x1102
-#define OBJ_EVENT_PAL_TAG_3 0x1103
-#define OBJ_EVENT_PAL_TAG_4 0x1104
-#define OBJ_EVENT_PAL_TAG_5 0x1105
-#define OBJ_EVENT_PAL_TAG_6 0x1106
-#define OBJ_EVENT_PAL_TAG_TM_BALL 0x1107
-#define OBJ_EVENT_PAL_TAG_FIELD_EFFECTS 0x1108
-#define OBJ_EVENT_PAL_TAG_BUG_CATCHER 0x1109
-#define OBJ_EVENT_PAL_TAG_GENTLEMAN 0x110A
-#define OBJ_EVENT_PAL_TAG_UNDERWATER 0x110B
-#define OBJ_EVENT_PAL_TAG_FERNANDO 0x110C
-#define OBJ_EVENT_PAL_TAG_NURSE 0x110D
-#define OBJ_EVENT_PAL_TAG_ACE_TRAINER_M 0x110E
-#define OBJ_EVENT_PAL_TAG_PICNICKER 0x110F
-#define OBJ_EVENT_PAL_TAG_WORKER 0x1110
-#define OBJ_EVENT_PAL_TAG_RUIN_MANIAC 0x1111
-#define OBJ_EVENT_PAL_TAG_TEALA 0x1112
-#define OBJ_EVENT_PAL_TAG_BATTLE_GIRL 0x1113
-#define OBJ_EVENT_PAL_TAG_CABLE_CAR 0x1114
-#define OBJ_EVENT_PAL_TAG_FISHERMAN 0x1115
-#define OBJ_EVENT_PAL_TAG_FAT_MAN 0x1116
-#define OBJ_EVENT_PAL_TAG_BEAUTY 0x1117
-#define OBJ_EVENT_PAL_TAG_RICH_BOY 0x1118
-#define OBJ_EVENT_PAL_TAG_LASS 0x1119
-#define OBJ_EVENT_PAL_TAG_MORGANA 0x111A
-#define OBJ_EVENT_PAL_TAG_HEX_MANIAC 0x111B
-#define OBJ_EVENT_PAL_TAG_YOUNGSTER 0x111C
-#define OBJ_EVENT_PAL_TAG_DEOXYS 0x111D
-#define OBJ_EVENT_PAL_TAG_BIRTH_ISLAND_STONE 0x111E
-#define OBJ_EVENT_PAL_TAG_HOOH 0x111F
-#define OBJ_EVENT_PAL_TAG_LUGIA 0x1120
-#define OBJ_EVENT_PAL_TAG_PLAYER 0x1121
-#define OBJ_EVENT_PAL_TAG_MOM 0x1122
-#define OBJ_EVENT_PAL_TAG_HIKER 0x1123
-#define OBJ_EVENT_PAL_TAG_REDWOOD 0x1124
-#define OBJ_EVENT_PAL_TAG_COULTER 0x1125
-#define OBJ_EVENT_PAL_TAG_LADY 0x1126
-#define OBJ_EVENT_PAL_TAG_NEW_ELDERS_GRUNT 0x1127
-#define OBJ_EVENT_PAL_TAG_EUNICE 0x1128
-#define OBJ_EVENT_PAL_TAG_HERSCHEL 0x1129
-#define OBJ_EVENT_PAL_TAG_BLACK_BELT 0x112A
-#define OBJ_EVENT_PAL_TAG_JIM_GAI 0x112B
-#define OBJ_EVENT_PAL_TAG_FAIRY_TALE_GIRL 0x112C
-#define OBJ_EVENT_PAL_TAG_ARTIST 0x112D
-#define OBJ_EVENT_PAL_TAG_PAINTER 0x112E
-#define OBJ_EVENT_PAL_TAG_EXPERT 0x112F
-#define OBJ_EVENT_PAL_TAG_SCIENTIST 0x1130
-#define OBJ_EVENT_PAL_TAG_BIRD_KEEPER 0x1131
-#define OBJ_EVENT_PAL_TAG_ARIA 0x1132
-#define OBJ_EVENT_PAL_TAG_ACE_TRAINER_F 0x1133
-#define OBJ_EVENT_PAL_TAG_PSYCHIC 0x1134
-#define OBJ_EVENT_PAL_TAG_EXPLORER 0x1135
-#define OBJ_EVENT_PAL_TAG_NONE 0x11FF
-
 #include "data/field_effects/field_effect_object_template_pointers.h"
 #include "data/object_events/object_event_pic_tables.h"
 #include "data/object_events/object_event_anims.h"
@@ -462,65 +406,6 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #include "data/object_events/object_event_subsprites.h"
 #include "data/object_events/object_event_graphics_info.h"
 #include "data/object_events/object_event_graphics_info_pointers.h"
-
-const struct SpritePalette sObjectEventSpritePalettes[] = {
-    {gObjectEventPalette0, OBJ_EVENT_PAL_TAG_0},
-    {gObjectEventPalette1, OBJ_EVENT_PAL_TAG_1},
-    {gObjectEventPalette2, OBJ_EVENT_PAL_TAG_2},
-    {gObjectEventPalette3, OBJ_EVENT_PAL_TAG_3},
-    {gObjectEventPalette4, OBJ_EVENT_PAL_TAG_4},
-    {gObjectEventPalette5, OBJ_EVENT_PAL_TAG_5},
-    {gObjectEventPalette6, OBJ_EVENT_PAL_TAG_6},
-    {gObjectEventPaletteTMBall, OBJ_EVENT_PAL_TAG_TM_BALL},
-    {gObjectEventPaletteFieldEffects, OBJ_EVENT_PAL_TAG_FIELD_EFFECTS},
-    {gObjectEventPaletteBugCatcher, OBJ_EVENT_PAL_TAG_BUG_CATCHER},
-    {gObjectEventPaletteGentleman, OBJ_EVENT_PAL_TAG_GENTLEMAN},
-    {gObjectEventPaletteUnderwater, OBJ_EVENT_PAL_TAG_UNDERWATER},
-    {gObjectEventPaletteFernando, OBJ_EVENT_PAL_TAG_FERNANDO},
-    {gObjectEventPaletteNurse, OBJ_EVENT_PAL_TAG_NURSE},
-    {gObjectEventPaletteAceTrainerM, OBJ_EVENT_PAL_TAG_ACE_TRAINER_M},
-    {gObjectEventPalettePicnicker, OBJ_EVENT_PAL_TAG_PICNICKER},
-    {gObjectEventPaletteWorker, OBJ_EVENT_PAL_TAG_WORKER},
-    {gObjectEventPaletteRuinManiac, OBJ_EVENT_PAL_TAG_RUIN_MANIAC},
-    {gObjectEventPaletteTeala, OBJ_EVENT_PAL_TAG_TEALA},
-    {gObjectEventPaletteBattleGirl, OBJ_EVENT_PAL_TAG_BATTLE_GIRL},
-    {gObjectEventPaletteCableCar, OBJ_EVENT_PAL_TAG_CABLE_CAR},
-    {gObjectEventPaletteFisherman, OBJ_EVENT_PAL_TAG_FISHERMAN},
-    {gObjectEventPaletteFatMan, OBJ_EVENT_PAL_TAG_FAT_MAN},
-    {gObjectEventPaletteBeauty, OBJ_EVENT_PAL_TAG_BEAUTY},
-    {gObjectEventPaletteRichBoy, OBJ_EVENT_PAL_TAG_RICH_BOY},
-    {gObjectEventPaletteLass, OBJ_EVENT_PAL_TAG_LASS},
-    {gObjectEventPaletteMorgana, OBJ_EVENT_PAL_TAG_MORGANA},
-    {gObjectEventPaletteHexManiac, OBJ_EVENT_PAL_TAG_HEX_MANIAC},
-    {gObjectEventPaletteYoungster, OBJ_EVENT_PAL_TAG_YOUNGSTER},
-    {gObjectEventPaletteDeoxys, OBJ_EVENT_PAL_TAG_DEOXYS},
-    {gObjectEventPaletteBirthIslandStone, OBJ_EVENT_PAL_TAG_BIRTH_ISLAND_STONE},
-    {gObjectEventPaletteHoOh, OBJ_EVENT_PAL_TAG_HOOH},
-    {gObjectEventPaletteLugia, OBJ_EVENT_PAL_TAG_LUGIA},
-    {gObjectEventPalettePlayer, OBJ_EVENT_PAL_TAG_PLAYER},
-    {gObjectEventPaletteMom, OBJ_EVENT_PAL_TAG_MOM},
-    {gObjectEventPaletteHiker, OBJ_EVENT_PAL_TAG_HIKER},
-    {gObjectEventPaletteRedwood, OBJ_EVENT_PAL_TAG_REDWOOD},
-    {gObjectEventPaletteCoulter, OBJ_EVENT_PAL_TAG_COULTER},
-    {gObjectEventPaletteLady, OBJ_EVENT_PAL_TAG_LADY},
-    {gObjectEventPaletteNewEldersGrunt, OBJ_EVENT_PAL_TAG_NEW_ELDERS_GRUNT},
-    {gObjectEventPaletteEunice, OBJ_EVENT_PAL_TAG_EUNICE},
-    {gObjectEventPaletteHerschel, OBJ_EVENT_PAL_TAG_HERSCHEL},
-    {gObjectEventPaletteBlackBelt, OBJ_EVENT_PAL_TAG_BLACK_BELT},
-    {gObjectEventPaletteJimGai, OBJ_EVENT_PAL_TAG_JIM_GAI},
-    {gObjectEventPaletteFairyTaleGirl, OBJ_EVENT_PAL_TAG_FAIRY_TALE_GIRL},
-    {gObjectEventPaletteArtist, OBJ_EVENT_PAL_TAG_ARTIST},
-    {gObjectEventPalettePainter, OBJ_EVENT_PAL_TAG_PAINTER},
-    {gObjectEventPaletteExpert, OBJ_EVENT_PAL_TAG_EXPERT},
-    {gObjectEventPaletteScientist, OBJ_EVENT_PAL_TAG_SCIENTIST},
-    {gObjectEventPaletteBirdKeeper, OBJ_EVENT_PAL_TAG_BIRD_KEEPER},
-    {gObjectEventPaletteAria, OBJ_EVENT_PAL_TAG_ARIA},
-    {gObjectEventPaletteAceTrainerF, OBJ_EVENT_PAL_TAG_ACE_TRAINER_F},
-    {gObjectEventPalettePsychic, OBJ_EVENT_PAL_TAG_PSYCHIC},
-    {gObjectEventPaletteExplorer, OBJ_EVENT_PAL_TAG_EXPLORER},
-    {NULL, 0x0000},
-};
-
 #include "data/object_events/berry_tree_graphics_tables.h"
 #include "data/field_effects/field_effect_objects.h"
 
