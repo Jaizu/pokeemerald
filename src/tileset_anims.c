@@ -24,6 +24,7 @@ static void (*sSecondaryTilesetAnimCallback)(u16);
 static void _InitPrimaryTilesetAnimation(void);
 static void _InitSecondaryTilesetAnimation(void);
 static void TilesetAnim_General(u16);
+static void TilesetAnim_Winter(u16);
 static void TilesetAnim_Building(u16);
 static void TilesetAnim_Rustboro(u16);
 static void TilesetAnim_Dewford(u16);
@@ -48,6 +49,11 @@ static void QueueAnimTiles_General_Water(u16);
 static void QueueAnimTiles_General_SandWaterEdge(u16);
 static void QueueAnimTiles_General_Waterfall(u16);
 static void QueueAnimTiles_General_LandWaterEdge(u16);
+static void QueueAnimTiles_Winter_Flower(u16);
+static void QueueAnimTiles_Winter_Water(u16);
+static void QueueAnimTiles_Winter_SandWaterEdge(u16);
+static void QueueAnimTiles_Winter_Waterfall(u16);
+static void QueueAnimTiles_Winter_LandWaterEdge(u16);
 static void QueueAnimTiles_Building_TVTurnedOn(u16);
 static void QueueAnimTiles_Rustboro_WindyWater(u16, u8);
 static void QueueAnimTiles_Rustboro_Fountain(u16);
@@ -147,6 +153,80 @@ const u16 *const gTilesetAnims_General_LandWaterEdge[] = {
     gTilesetAnims_General_LandWaterEdge_Frame1,
     gTilesetAnims_General_LandWaterEdge_Frame2,
     gTilesetAnims_General_LandWaterEdge_Frame3
+};
+
+const u16 gTilesetAnims_Winter_Flower_Frame1[] = INCBIN_U16("data/tilesets/primary/winter/anim/flower/1.4bpp");
+const u16 gTilesetAnims_Winter_Flower_Frame0[] = INCBIN_U16("data/tilesets/primary/winter/anim/flower/0.4bpp");
+const u16 gTilesetAnims_Winter_Flower_Frame2[] = INCBIN_U16("data/tilesets/primary/winter/anim/flower/2.4bpp");
+
+const u16 *const gTilesetAnims_Winter_Flower[] = {
+    gTilesetAnims_Winter_Flower_Frame0,
+    gTilesetAnims_Winter_Flower_Frame1,
+    gTilesetAnims_Winter_Flower_Frame0,
+    gTilesetAnims_Winter_Flower_Frame2
+};
+
+const u16 gTilesetAnims_Winter_Water_Frame0[] = INCBIN_U16("data/tilesets/primary/winter/anim/water/0.4bpp");
+const u16 gTilesetAnims_Winter_Water_Frame1[] = INCBIN_U16("data/tilesets/primary/winter/anim/water/1.4bpp");
+const u16 gTilesetAnims_Winter_Water_Frame2[] = INCBIN_U16("data/tilesets/primary/winter/anim/water/2.4bpp");
+const u16 gTilesetAnims_Winter_Water_Frame3[] = INCBIN_U16("data/tilesets/primary/winter/anim/water/3.4bpp");
+const u16 gTilesetAnims_Winter_Water_Frame4[] = INCBIN_U16("data/tilesets/primary/winter/anim/water/4.4bpp");
+const u16 gTilesetAnims_Winter_Water_Frame5[] = INCBIN_U16("data/tilesets/primary/winter/anim/water/5.4bpp");
+const u16 gTilesetAnims_Winter_Water_Frame6[] = INCBIN_U16("data/tilesets/primary/winter/anim/water/6.4bpp");
+const u16 gTilesetAnims_Winter_Water_Frame7[] = INCBIN_U16("data/tilesets/primary/winter/anim/water/7.4bpp");
+
+const u16 *const gTilesetAnims_Winter_Water[] = {
+    gTilesetAnims_Winter_Water_Frame0,
+    gTilesetAnims_Winter_Water_Frame1,
+    gTilesetAnims_Winter_Water_Frame2,
+    gTilesetAnims_Winter_Water_Frame3,
+    gTilesetAnims_Winter_Water_Frame4,
+    gTilesetAnims_Winter_Water_Frame5,
+    gTilesetAnims_Winter_Water_Frame6,
+    gTilesetAnims_Winter_Water_Frame7
+};
+
+const u16 gTilesetAnims_Winter_SandWaterEdge_Frame0[] = INCBIN_U16("data/tilesets/primary/winter/anim/sand_water_edge/0.4bpp");
+const u16 gTilesetAnims_Winter_SandWaterEdge_Frame1[] = INCBIN_U16("data/tilesets/primary/winter/anim/sand_water_edge/1.4bpp");
+const u16 gTilesetAnims_Winter_SandWaterEdge_Frame2[] = INCBIN_U16("data/tilesets/primary/winter/anim/sand_water_edge/2.4bpp");
+const u16 gTilesetAnims_Winter_SandWaterEdge_Frame3[] = INCBIN_U16("data/tilesets/primary/winter/anim/sand_water_edge/3.4bpp");
+const u16 gTilesetAnims_Winter_SandWaterEdge_Frame4[] = INCBIN_U16("data/tilesets/primary/winter/anim/sand_water_edge/4.4bpp");
+const u16 gTilesetAnims_Winter_SandWaterEdge_Frame5[] = INCBIN_U16("data/tilesets/primary/winter/anim/sand_water_edge/5.4bpp");
+const u16 gTilesetAnims_Winter_SandWaterEdge_Frame6[] = INCBIN_U16("data/tilesets/primary/winter/anim/sand_water_edge/6.4bpp");
+
+const u16 *const gTilesetAnims_Winter_SandWaterEdge[] = {
+    gTilesetAnims_Winter_SandWaterEdge_Frame0,
+    gTilesetAnims_Winter_SandWaterEdge_Frame1,
+    gTilesetAnims_Winter_SandWaterEdge_Frame2,
+    gTilesetAnims_Winter_SandWaterEdge_Frame3,
+    gTilesetAnims_Winter_SandWaterEdge_Frame4,
+    gTilesetAnims_Winter_SandWaterEdge_Frame5,
+    gTilesetAnims_Winter_SandWaterEdge_Frame6,
+    gTilesetAnims_Winter_SandWaterEdge_Frame0
+};
+
+const u16 gTilesetAnims_Winter_Waterfall_Frame0[] = INCBIN_U16("data/tilesets/primary/winter/anim/waterfall/0.4bpp");
+const u16 gTilesetAnims_Winter_Waterfall_Frame1[] = INCBIN_U16("data/tilesets/primary/winter/anim/waterfall/1.4bpp");
+const u16 gTilesetAnims_Winter_Waterfall_Frame2[] = INCBIN_U16("data/tilesets/primary/winter/anim/waterfall/2.4bpp");
+const u16 gTilesetAnims_Winter_Waterfall_Frame3[] = INCBIN_U16("data/tilesets/primary/winter/anim/waterfall/3.4bpp");
+
+const u16 *const gTilesetAnims_Winter_Waterfall[] = {
+    gTilesetAnims_Winter_Waterfall_Frame0,
+    gTilesetAnims_Winter_Waterfall_Frame1,
+    gTilesetAnims_Winter_Waterfall_Frame2,
+    gTilesetAnims_Winter_Waterfall_Frame3
+};
+
+const u16 gTilesetAnims_Winter_LandWaterEdge_Frame0[] = INCBIN_U16("data/tilesets/primary/winter/anim/land_water_edge/0.4bpp");
+const u16 gTilesetAnims_Winter_LandWaterEdge_Frame1[] = INCBIN_U16("data/tilesets/primary/winter/anim/land_water_edge/1.4bpp");
+const u16 gTilesetAnims_Winter_LandWaterEdge_Frame2[] = INCBIN_U16("data/tilesets/primary/winter/anim/land_water_edge/2.4bpp");
+const u16 gTilesetAnims_Winter_LandWaterEdge_Frame3[] = INCBIN_U16("data/tilesets/primary/winter/anim/land_water_edge/3.4bpp");
+
+const u16 *const gTilesetAnims_Winter_LandWaterEdge[] = {
+    gTilesetAnims_Winter_LandWaterEdge_Frame0,
+    gTilesetAnims_Winter_LandWaterEdge_Frame1,
+    gTilesetAnims_Winter_LandWaterEdge_Frame2,
+    gTilesetAnims_Winter_LandWaterEdge_Frame3
 };
 
 const u16 gTilesetAnims_Lavaridge_Steam_Frame0[] = INCBIN_U16("data/tilesets/secondary/lavaridge/anim/steam/0.4bpp");
@@ -622,6 +702,13 @@ void InitTilesetAnim_General(void)
     sPrimaryTilesetAnimCallback = TilesetAnim_General;
 }
 
+void InitTilesetAnim_Winter(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_Winter;
+}
+
 void InitTilesetAnim_Building(void)
 {
     sPrimaryTilesetAnimCounter = 0;
@@ -641,6 +728,20 @@ static void TilesetAnim_General(u16 timer)
         QueueAnimTiles_General_Waterfall(timer >> 4);
     if (timer % 16 == 4)
         QueueAnimTiles_General_LandWaterEdge(timer >> 4);
+}
+
+static void TilesetAnim_Winter(u16 timer)
+{
+    if (timer % 16 == 0)
+        QueueAnimTiles_Winter_Flower(timer >> 4);
+    if (timer % 16 == 1)
+        QueueAnimTiles_Winter_Water(timer >> 4);
+    if (timer % 16 == 2)
+        QueueAnimTiles_Winter_SandWaterEdge(timer >> 4);
+    if (timer % 16 == 3)
+        QueueAnimTiles_Winter_Waterfall(timer >> 4);
+    if (timer % 16 == 4)
+        QueueAnimTiles_Winter_LandWaterEdge(timer >> 4);
 }
 
 static void TilesetAnim_Building(u16 timer)
@@ -671,6 +772,42 @@ static void QueueAnimTiles_General_Waterfall(u16 timer)
 {
     u16 i = timer % 4;
     AppendTilesetAnimToBuffer(gTilesetAnims_General_Waterfall[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(496)), 0xc0);
+}
+
+static void QueueAnimTiles_General_LandWaterEdge(u16 timer)
+{
+    u16 i = timer % 4;
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_LandWaterEdge[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(480)), 0x140);
+}
+
+static void QueueAnimTiles_Winter_Flower(u16 timer)
+{
+    u16 i = timer % 4;
+    AppendTilesetAnimToBuffer(gTilesetAnims_Winter_Flower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(508)), 0x80);
+}
+
+static void QueueAnimTiles_Winter_Water(u16 timer)
+{
+    u8 i = timer % 8;
+    AppendTilesetAnimToBuffer(gTilesetAnims_Winter_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(432)), 0x3C0);
+}
+
+static void QueueAnimTiles_Winter_SandWaterEdge(u16 timer)
+{
+    u16 i = timer % 8;
+    AppendTilesetAnimToBuffer(gTilesetAnims_Winter_SandWaterEdge[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(464)), 0x140);
+}
+
+static void QueueAnimTiles_Winter_Waterfall(u16 timer)
+{
+    u16 i = timer % 4;
+    AppendTilesetAnimToBuffer(gTilesetAnims_Winter_Waterfall[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(496)), 0xc0);
+}
+
+static void QueueAnimTiles_Winter_LandWaterEdge(u16 timer)
+{
+    u16 i = timer % 4;
+    AppendTilesetAnimToBuffer(gTilesetAnims_Winter_LandWaterEdge[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(480)), 0x140);
 }
 
 void InitTilesetAnim_Petalburg(void)
@@ -953,12 +1090,6 @@ static void TilesetAnim_BattleFrontierOutsideEast(u16 timer)
 {
     if (timer % 8 == 0)
         QueueAnimTiles_BattleFrontierOutsideEast_Flag(timer >> 3);
-}
-
-static void QueueAnimTiles_General_LandWaterEdge(u16 timer)
-{
-    u16 i = timer % 4;
-    AppendTilesetAnimToBuffer(gTilesetAnims_General_LandWaterEdge[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(480)), 0x140);
 }
 
 static void QueueAnimTiles_Lavaridge_Steam(u8 timer)

@@ -906,4 +906,4 @@ gTileset_Winter::
 	.4byte gTilesetPalettes_Winter
 	.4byte gMetatiles_Winter
 	.4byte gMetatileAttributes_Winter
-	.4byte NULL
+	.4byte InitTilesetAnim_Winter
