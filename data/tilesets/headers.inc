@@ -862,7 +862,7 @@ gTileset_HiddenGrottoSecretTemple::
 	.4byte gTilesetPalettes_HiddenGrottoSecretTemple
 	.4byte gMetatiles_HiddenGrottoSecretTemple
 	.4byte gMetatileAttributes_HiddenGrottoSecretTemple
-	.4byte NULL
+	.4byte InitTilesetAnim_HiddenGrottoSecretTemple
 
 	.align 2
 gTileset_WispForest::

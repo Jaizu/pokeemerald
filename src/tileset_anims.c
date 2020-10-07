@@ -44,6 +44,7 @@ static void TilesetAnim_MauvilleGym(u16);
 static void TilesetAnim_BikeShop(u16);
 static void TilesetAnim_BattlePyramid(u16);
 static void TilesetAnim_BattleDome(u16);
+static void TilesetAnim_HiddenGrottoSecretTemple(u16);
 static void QueueAnimTiles_General_Flower(u16);
 static void QueueAnimTiles_General_Water(u16);
 static void QueueAnimTiles_General_SandWaterEdge(u16);
@@ -79,6 +80,7 @@ static void QueueAnimTiles_MauvilleGym_ElectricGates(u16);
 static void QueueAnimTiles_SootopolisGym_Waterfalls(u16);
 static void QueueAnimTiles_EliteFour_GroundLights(u16);
 static void QueueAnimTiles_EliteFour_WallLights(u16);
+static void QueueAnimTiles_HiddenGrottoSecretTemple_Torch(u16);
 
 const u16 gTilesetAnims_General_Flower_Frame1[] = INCBIN_U16("data/tilesets/primary/general/anim/flower/1.4bpp");
 const u16 gTilesetAnims_General_Flower_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/flower/0.4bpp");
@@ -971,6 +973,13 @@ void InitTilesetAnim_BattleDome(void)
     sSecondaryTilesetAnimCallback = TilesetAnim_BattleDome;
 }
 
+void InitTilesetAnim_HiddenGrottoSecretTemple(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = TilesetAnim_HiddenGrottoSecretTemple;
+}
+
 static void TilesetAnim_Rustboro(u16 timer)
 {
     if (timer % 8 == 0)
@@ -1316,4 +1325,28 @@ static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16 timer)
         if (!--sSecondaryTilesetAnimCounterMax)
             sSecondaryTilesetAnimCallback = NULL;
     }
+}
+
+const u16 gTilesetAnims_HiddenGrottoSecretTemple_Torch_Frame0[] = INCBIN_U16("data/tilesets/secondary/hiddengrottosecrettemple/anim/torch/0.4bpp");
+const u16 gTilesetAnims_HiddenGrottoSecretTemple_Torch_Frame1[] = INCBIN_U16("data/tilesets/secondary/hiddengrottosecrettemple/anim/torch/1.4bpp");
+const u16 gTilesetAnims_HiddenGrottoSecretTemple_Torch_Frame2[] = INCBIN_U16("data/tilesets/secondary/hiddengrottosecrettemple/anim/torch/2.4bpp");
+
+const u16 *const gTilesetAnims_HiddenGrottoSecretTemple_Torch[] = {
+    gTilesetAnims_HiddenGrottoSecretTemple_Torch_Frame0,
+    gTilesetAnims_HiddenGrottoSecretTemple_Torch_Frame1,
+    gTilesetAnims_HiddenGrottoSecretTemple_Torch_Frame2
+};
+
+static void TilesetAnim_HiddenGrottoSecretTemple(u16 timer)
+{
+    if (timer % 3 == 0)
+    {
+        QueueAnimTiles_HiddenGrottoSecretTemple_Torch(timer >> 3);
+    }
+}
+
+static void QueueAnimTiles_HiddenGrottoSecretTemple_Torch(u16 timer)
+{
+    u16 i = timer % 3;
+    AppendTilesetAnimToBuffer(gTilesetAnims_HiddenGrottoSecretTemple_Torch[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 216)), 0x100);
 }
