@@ -6,6 +6,7 @@ const struct SpriteFrameImage gObjectEventPicTable_BrendanNormal[] = {
     overworld_frame(gObjectEventPic_BrendanNormal, 2, 4, 4),
     overworld_frame(gObjectEventPic_BrendanNormal, 2, 4, 5),
     overworld_frame(gObjectEventPic_BrendanNormal, 2, 4, 6),
+    overworld_frame(gObjectEventPic_BrendanNormal, 2, 4, 6),
     overworld_frame(gObjectEventPic_BrendanNormal, 2, 4, 7),
     overworld_frame(gObjectEventPic_BrendanNormal, 2, 4, 8),
     overworld_frame(gObjectEventPic_BrendanRunning, 2, 4, 0),
@@ -928,16 +929,16 @@ const struct SpriteFrameImage gObjectEventPicTable_Truck[] = {
     obj_frame_tiles(gObjectEventPic_Truck),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_VigorothCarryingBox[] = {
-    overworld_frame(gObjectEventPic_Vigoroth, 4, 4, 0),
-    overworld_frame(gObjectEventPic_Vigoroth, 4, 4, 0),
-    overworld_frame(gObjectEventPic_Vigoroth, 4, 4, 0),
-    overworld_frame(gObjectEventPic_Vigoroth, 4, 4, 1),
-    overworld_frame(gObjectEventPic_Vigoroth, 4, 4, 2),
-    overworld_frame(gObjectEventPic_Vigoroth, 4, 4, 1),
-    overworld_frame(gObjectEventPic_Vigoroth, 4, 4, 2),
-    overworld_frame(gObjectEventPic_Vigoroth, 4, 4, 1),
-    overworld_frame(gObjectEventPic_Vigoroth, 4, 4, 2),
+const struct SpriteFrameImage gObjectEventPicTable_Machop[] = {
+    overworld_frame(gObjectEventPic_Machop, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Machop, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Machop, 2, 2, 2),
+    overworld_frame(gObjectEventPic_Machop, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Machop, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Machop, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Machop, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Machop, 2, 2, 2),
+    overworld_frame(gObjectEventPic_Machop, 2, 2, 2),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_VigorothFacingAway[] = {
