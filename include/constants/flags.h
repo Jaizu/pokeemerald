@@ -153,9 +153,8 @@
 #define FLAG_RECEIVED_TM13                   0x71 // FLAG_UNUSED_RS_LEGENDARY_BATTLE_DONE in Emerald
 #define FLAG_SCOTT_CALL_BATTLE_FRONTIER      0x72 // Used in order to activate a phone call from Scott, inviting the player to the SS Tidal.
 #define FLAG_UNLOCK_WINDMIST_GYM_DOOR        0x72 // FLAG_SCOTT_CALL_BATTLE_FRONTIER in Emerald
-
-#define FLAG_RECEIVED_METEORITE              0x73
-
+#define FLAG_RECEIVED_METEORITE                  0x73
+#define FLAG_RECEIVED_WINDMIST_CITY_CHOICE_SCARF 0x73 // FLAG_RECEIVED_METEORITE in Emerald
 #define FLAG_ADVENTURE_STARTED               0x74 // FLAG_ADVENTURE_STARTED in Emerald as well
 
 #define FLAG_DEFEATED_MAGMA_SPACE_CENTER     0x75 // Set when Team Magma is defeated at Mossdeep's Space Center.
