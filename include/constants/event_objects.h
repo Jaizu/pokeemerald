@@ -165,7 +165,7 @@
 #define OBJ_EVENT_GFX_AZURILL_DOLL               161
 #define OBJ_EVENT_GFX_SKITTY_DOLL                162
 #define OBJ_EVENT_GFX_SWABLU_DOLL                163
-#define OBJ_EVENT_GFX_GULPIN_DOLL                164
+#define OBJ_EVENT_GFX_VENONAT                    164
 #define OBJ_EVENT_GFX_LOTAD_DOLL                 165
 #define OBJ_EVENT_GFX_SEEDOT_DOLL                166
 #define OBJ_EVENT_GFX_PIKA_CUSHION               167
@@ -276,6 +276,7 @@
 #define OBJ_EVENT_GFX_DUSCLOPS                   OBJ_EVENT_GFX_WEEDLE
 #define OBJ_EVENT_GFX_UNUSED_PORYGON2_DOLL       OBJ_EVENT_GFX_MARACTUS
 #define OBJ_EVENT_GFX_CLEFAIRY_DOLL              OBJ_EVENT_GFX_CLEFAIRY
+#define OBJ_EVENT_GFX_GULPIN_DOLL                OBJ_EVENT_GFX_VENONAT
 
 #define OBJ_EVENT_PAL_TAG_0 0x1100
 #define OBJ_EVENT_PAL_TAG_1 0x1101
@@ -335,6 +336,7 @@
 #define OBJ_EVENT_PAL_TAG_WEEDLE 0x1137
 #define OBJ_EVENT_PAL_TAG_MARACTUS 0x1138
 #define OBJ_EVENT_PAL_TAG_CLEFAIRY 0x1139
+#define OBJ_EVENT_PAL_TAG_VENONAT 0x113A
 #define OBJ_EVENT_PAL_TAG_NONE 0x11FF
 
 // These are dynamic object gfx ids.

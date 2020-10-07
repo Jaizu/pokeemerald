@@ -60,6 +60,7 @@ const u16 gObjectEventPaletteKindler[] = INCBIN_U16("graphics/object_events/pale
 const u16 gObjectEventPaletteWeedle[] = INCBIN_U16("graphics/object_events/palettes/weedle.gbapal");
 const u16 gObjectEventPaletteMaractus[] = INCBIN_U16("graphics/object_events/palettes/maractus.gbapal");
 const u16 gObjectEventPaletteClefairy[] = INCBIN_U16("graphics/object_events/palettes/clefairy.gbapal");
+const u16 gObjectEventPaletteVenonat[] = INCBIN_U16("graphics/object_events/palettes/venonat.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
@@ -226,7 +227,7 @@ const u32 gObjectEventPic_KecleonDoll[] = INCBIN_U32("graphics/object_events/pic
 const u32 gObjectEventPic_AzurillDoll[] = INCBIN_U32("graphics/object_events/pics/dolls/azurill_doll.4bpp");
 const u32 gObjectEventPic_SkittyDoll[] = INCBIN_U32("graphics/object_events/pics/dolls/skitty_doll.4bpp");
 const u32 gObjectEventPic_SwabluDoll[] = INCBIN_U32("graphics/object_events/pics/dolls/swablu_doll.4bpp");
-const u32 gObjectEventPic_GulpinDoll[] = INCBIN_U32("graphics/object_events/pics/dolls/gulpin_doll.4bpp");
+const u32 gObjectEventPic_Venonat[] = INCBIN_U32("graphics/object_events/pics/pokemon/venonat.4bpp");
 const u32 gObjectEventPic_LotadDoll[] = INCBIN_U32("graphics/object_events/pics/dolls/lotad_doll.4bpp");
 const u32 gObjectEventPic_SeedotDoll[] = INCBIN_U32("graphics/object_events/pics/dolls/seedot_doll.4bpp");
 const u32 gObjectEventPic_PikaCushion[] = INCBIN_U32("graphics/object_events/pics/cushions/pika_cushion.4bpp");

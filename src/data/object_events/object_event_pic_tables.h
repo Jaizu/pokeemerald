@@ -1532,8 +1532,10 @@ const struct SpriteFrameImage gObjectEventPicTable_SwabluDoll[] = {
     obj_frame_tiles(gObjectEventPic_SwabluDoll),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_GulpinDoll[] = {
-    obj_frame_tiles(gObjectEventPic_GulpinDoll),
+const struct SpriteFrameImage gObjectEventPicTable_Venonat[] = {
+    overworld_frame(gObjectEventPic_Venonat, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Venonat, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Venonat, 4, 4, 2),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_LotadDoll[] = {
