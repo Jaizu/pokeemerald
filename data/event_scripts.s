@@ -1230,3 +1230,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/CelantoGrove_CableCarStation/scripts.inc"
 
 	.include "data/maps/WindmistCity_CableCarStation/scripts.inc"
+
+	.include "data/maps/WindmistCity_Mart/scripts.inc"
