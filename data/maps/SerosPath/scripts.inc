@@ -105,14 +105,14 @@ SerosPath_Text_PikachuUseThunderWave:
 	.string "{COLOR BLUE}Pikachu!\n"
 	.string "Use Thunder Wave!$"
 
-SerosPath_EventScript_LassMarill::
+SerosPath_EventScript_LassAzurill::
 	lock
-	msgbox SerosPath_Text_MarillHitThemWithWaterGun, MSGBOX_DEFAULT
+	msgbox SerosPath_Text_AzurillHitThemWithWaterGun, MSGBOX_DEFAULT
 	closemessage
 	waitse
-	playmoncry SPECIES_MARILL, 0
+	playmoncry SPECIES_AZURILL, 0
 	release
 	end
 
-SerosPath_Text_MarillHitThemWithWaterGun:
-	.string "{COLOR RED}Marill, hit them with Water Gun!$"
+SerosPath_Text_AzurillHitThemWithWaterGun:
+	.string "{COLOR RED}Azurill, hit them with Water Gun!$"

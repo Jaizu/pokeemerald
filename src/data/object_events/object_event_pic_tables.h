@@ -854,8 +854,10 @@ const struct SpriteFrameImage gObjectEventPicTable_UnusedPikachuDoll[] = {
     obj_frame_tiles(gObjectEventPic_UnusedPikachuDoll),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_UnusedPorygon2Doll[] = {
-    obj_frame_tiles(gObjectEventPic_UnusedPorygon2Doll),
+const struct SpriteFrameImage gObjectEventPicTable_Maractus[] = {
+    overworld_frame(gObjectEventPic_Maractus, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Maractus, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Maractus, 4, 4, 2),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_CuttableTree[] = {
@@ -1476,8 +1478,10 @@ const struct SpriteFrameImage gObjectEventPicTable_MeowthDoll[] = {
     obj_frame_tiles(gObjectEventPic_MeowthDoll),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_ClefairyDoll[] = {
-    obj_frame_tiles(gObjectEventPic_ClefairyDoll),
+const struct SpriteFrameImage gObjectEventPicTable_Clefairy[] = {
+    overworld_frame(gObjectEventPic_Clefairy, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Clefairy, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Clefairy, 4, 4, 2),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_DittoDoll[] = {
@@ -1944,16 +1948,16 @@ const struct SpriteFrameImage gObjectEventPicTable_Statue[] = {
     obj_frame_tiles(gObjectEventPic_Statue),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_Dusclops[] = {
-    overworld_frame(gObjectEventPic_Dusclops, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Dusclops, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Dusclops, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Dusclops, 2, 4, 3),
-    overworld_frame(gObjectEventPic_Dusclops, 2, 4, 4),
-    overworld_frame(gObjectEventPic_Dusclops, 2, 4, 5),
-    overworld_frame(gObjectEventPic_Dusclops, 2, 4, 6),
-    overworld_frame(gObjectEventPic_Dusclops, 2, 4, 7),
-    overworld_frame(gObjectEventPic_Dusclops, 2, 4, 8),
+const struct SpriteFrameImage gObjectEventPicTable_Weedle[] = {
+    overworld_frame(gObjectEventPic_Weedle, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Weedle, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Weedle, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Weedle, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Weedle, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Weedle, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Weedle, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Weedle, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Weedle, 4, 4, 5),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Kirlia[] = {

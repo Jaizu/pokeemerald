@@ -82,7 +82,7 @@
 #define OBJ_EVENT_GFX_UNUSED_SQUIRTLE_DOLL        78
 #define OBJ_EVENT_GFX_UNUSED_WOOPER_DOLL          79
 #define OBJ_EVENT_GFX_UNUSED_PIKACHU_DOLL         80
-#define OBJ_EVENT_GFX_UNUSED_PORYGON2_DOLL        81
+#define OBJ_EVENT_GFX_MARACTUS                    81
 #define OBJ_EVENT_GFX_CUTTABLE_TREE               82
 #define OBJ_EVENT_GFX_MART_EMPLOYEE               83
 #define OBJ_EVENT_GFX_EXPLORER                    84
@@ -152,7 +152,7 @@
 #define OBJ_EVENT_GFX_TOTODILE_DOLL              148
 #define OBJ_EVENT_GFX_JIGGLYPUFF_DOLL            149
 #define OBJ_EVENT_GFX_MEOWTH_DOLL                150
-#define OBJ_EVENT_GFX_CLEFAIRY_DOLL              151
+#define OBJ_EVENT_GFX_CLEFAIRY                   151
 #define OBJ_EVENT_GFX_DITTO_DOLL                 152
 #define OBJ_EVENT_GFX_SMOOCHUM_DOLL              153
 #define OBJ_EVENT_GFX_TREECKO_DOLL               154
@@ -227,7 +227,7 @@
 #define OBJ_EVENT_GFX_GUARD                      223
 #define OBJ_EVENT_GFX_TRICK_HOUSE_STATUE         224
 #define OBJ_EVENT_GFX_KIRLIA                     225
-#define OBJ_EVENT_GFX_DUSCLOPS                   226
+#define OBJ_EVENT_GFX_WEEDLE                     226
 #define OBJ_EVENT_GFX_UNION_ROOM_NURSE           227
 #define OBJ_EVENT_GFX_SUDOWOODO                  228
 #define OBJ_EVENT_GFX_MEW                        229
@@ -273,6 +273,9 @@
 #define OBJ_EVENT_GFX_ROOFTOP_SALE_WOMAN         OBJ_EVENT_GFX_EXPLORER
 #define OBJ_EVENT_GFX_LINK_RECEPTIONIST          OBJ_EVENT_GFX_KINDLER
 #define OBJ_EVENT_GFX_VIGOROTH_CARRYING_BOX      OBJ_EVENT_GFX_MACHOP
+#define OBJ_EVENT_GFX_DUSCLOPS                   OBJ_EVENT_GFX_WEEDLE
+#define OBJ_EVENT_GFX_UNUSED_PORYGON2_DOLL       OBJ_EVENT_GFX_MARACTUS
+#define OBJ_EVENT_GFX_CLEFAIRY_DOLL              OBJ_EVENT_GFX_CLEFAIRY
 
 #define OBJ_EVENT_PAL_TAG_0 0x1100
 #define OBJ_EVENT_PAL_TAG_1 0x1101
@@ -329,6 +332,9 @@
 #define OBJ_EVENT_PAL_TAG_PSYCHIC 0x1134
 #define OBJ_EVENT_PAL_TAG_EXPLORER 0x1135
 #define OBJ_EVENT_PAL_TAG_KINDLER 0x1136
+#define OBJ_EVENT_PAL_TAG_WEEDLE 0x1137
+#define OBJ_EVENT_PAL_TAG_MARACTUS 0x1138
+#define OBJ_EVENT_PAL_TAG_CLEFAIRY 0x1139
 #define OBJ_EVENT_PAL_TAG_NONE 0x11FF
 
 // These are dynamic object gfx ids.
