@@ -1,9 +1,9 @@
 {
-  "id": "MAP_MT_CHIMNEY_CABLE_CAR_STATION",
-  "name": "MtChimney_CableCarStation",
+  "id": "MAP_CELANTO_GROVE_CABLE_CAR_STATION",
+  "name": "CelantoGrove_CableCarStation",
   "layout": "LAYOUT_CABLE_CAR_STATION",
   "music": "MUS_DOORO_X1",
-  "region_map_section": "MAPSEC_MT_CHIMNEY",
+  "region_map_section": "MAPSEC_ROUTE_102",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -15,7 +15,7 @@
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+      "graphics_id": "OBJ_EVENT_GFX_TEALA",
       "x": 6,
       "y": 6,
       "elevation": 3,
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MtChimney_CableCarStation_EventScript_Attendant",
+      "script": "CelantoGrove_CableCarStation_EventScript_Attendant",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x0",
+      "script": "NULL",
       "flag": "0"
     }
   ],
@@ -46,15 +46,8 @@
       "x": 6,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_MT_CHIMNEY",
+      "dest_map": "MAP_CELANTO_GROVE",
       "dest_warp_id": 0
-    },
-    {
-      "x": 7,
-      "y": 11,
-      "elevation": 0,
-      "dest_map": "MAP_MT_CHIMNEY",
-      "dest_warp_id": 1
     }
   ],
   "coord_events": [

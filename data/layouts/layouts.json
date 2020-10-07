@@ -1175,8 +1175,8 @@
       "id": "LAYOUT_CABLE_CAR_STATION",
       "name": "CableCarStation_Layout",
       "width": 13,
-      "height": 12,
-      "primary_tileset": "gTileset_General",
+      "height": 13,
+      "primary_tileset": "gTileset_Indoors",
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/CableCarStation/border.bin",
       "blockdata_filepath": "data/layouts/CableCarStation/map.bin"

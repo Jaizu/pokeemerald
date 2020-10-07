@@ -10,6 +10,7 @@
     "gMapGroup_AerousCity",
     "gMapGroup_NestpineTown",
     "gMapGroup_WindmistCity",
+    "gMapGroup_CelantoGrove",
     "gMapGroup_NestpineClimb",
     "gMapGroup0",
     "gMapGroup1",
@@ -141,7 +142,11 @@
     "NestpineTown_House3"
   ],
   "gMapGroup_WindmistCity": [
-    "WindmistCity_PokemonCenter"
+    "WindmistCity_PokemonCenter",
+    "WindmistCity_CableCarStation"
+  ],
+  "gMapGroup_CelantoGrove": [
+    "CelantoGrove_CableCarStation"
   ],
   "gMapGroup_NestpineClimb": [
     "NestpineClimb_NetasHouse"

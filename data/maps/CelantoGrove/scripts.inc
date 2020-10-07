@@ -10,7 +10,7 @@ CelantoGrove_OnTransition::
 	end
 	
 CelantoGrove_EventScript_SetWorkerPos:
-	setobjectxyperm LOCALID_WORKER, 10, 1
+	setobjectxyperm LOCALID_WORKER, 17, 16
 	setobjectmovementtype LOCALID_WORKER, MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT
 	return
 
