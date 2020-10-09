@@ -295,12 +295,9 @@ NestpineClimb_Text_ExplainPersimBerry:
     .string "Pokémon and it'll come to!$"
 
 NestpineClimb_EventScript_BlackBelt::
-	msgbox NestpineClimb_Text_ImALumberjack, MSGBOX_NPC
+	msgbox NestpineClimb_Text_AfterWorkImHeadedToTheRestStop, MSGBOX_NPC
 	end
 
-NestpineClimb_Text_ImALumberjack:
-	.string "I'm a lumberjack.\p"
-	.string "After I've finished working for\n"
-	.string "today, I'm gonna hike up to\l"
-	.string "Windmist City, and relax at the\l"
-	.string "Windmist Timber Guild!$"
+NestpineClimb_Text_AfterWorkImHeadedToTheRestStop:
+	.string "After work, I'm headed to the\n"
+	.string "Lumberjack Rest Stop in Windmist!$"

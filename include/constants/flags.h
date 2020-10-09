@@ -162,8 +162,9 @@
 #define FLAG_RECEIVED_BIKE                       0x76 // FLAG_MET_HIDDEN_POWER_GIVER in Emerald
 #define FLAG_CANCEL_BATTLE_ROOM_CHALLENGE        0x77
 #define FLAG_NESTPINE_NPC_TRADE_COMPLETED        0x77 // FLAG_CANCEL_BATTLE_ROOM_CHALLENGE in Emerald
+#define FLAG_LANDMARK_MIRAGE_TOWER               0x78
+#define FLAG_RECEIVED_EXPERT_BELT                0x78 // FLAG_LANDMARK_MIRAGE_TOWER in Emerald
 
-#define FLAG_LANDMARK_MIRAGE_TOWER           0x78
 #define FLAG_RECEIVED_TM31                   0x79
 #define FLAG_RECEIVED_HM03                   0x7A
 #define FLAG_RECEIVED_HM08                   0x7B

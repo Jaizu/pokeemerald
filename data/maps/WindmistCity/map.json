@@ -199,7 +199,7 @@
       "x": 37,
       "y": 21,
       "elevation": 0,
-      "dest_map": "MAP_WINDMIST_CITY",
+      "dest_map": "MAP_WINDMIST_CITY_LUMBERJACK_REST_STOP",
       "dest_warp_id": 0
     },
     {
@@ -282,7 +282,7 @@
       "y": 21,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "WindmistCity_EventScript_TimberGuildSign"
+      "script": "WindmistCity_EventScript_LumberjackRestStopSign"
     },
     {
       "type": "hidden_item",

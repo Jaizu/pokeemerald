@@ -5004,12 +5004,22 @@
     {
       "id": "LAYOUT_WINDMIST_CITY_KNICK_KNACK_STORE",
       "name": "WindmistCity_KnickKnackStore_Layout",
-      "width": 20,
-      "height": 11,
+      "width": 19,
+      "height": 9,
       "primary_tileset": "gTileset_Indoors",
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/WindmistCity_KnickKnackStore/border.bin",
       "blockdata_filepath": "data/layouts/WindmistCity_KnickKnackStore/map.bin"
+    },
+    {
+      "id": "LAYOUT_WINDMIST_CITY_LUMBERJACK_REST_STOP",
+      "name": "WindmistCity_LumberjackRestStop_Layout",
+      "width": 19,
+      "height": 9,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/WindmistCity_LumberjackRestStop/border.bin",
+      "blockdata_filepath": "data/layouts/WindmistCity_LumberjackRestStop/map.bin"
     }
   ]
 }

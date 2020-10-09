@@ -28,32 +28,6 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_KINDLER",
-      "x": 6,
-      "y": 4,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "WindmistCity_PokemonCenter_EventScript_Kindler",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_MACHOP",
-      "x": 5,
-      "y": 4,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "WindmistCity_PokemonCenter_EventScript_Machop",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
       "x": 12,
       "y": 5,
@@ -64,6 +38,19 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "WindmistCity_PokemonCenter_EventScript_Picnicker",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPLORER",
+      "x": 1,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WindmistCity_PokemonCenter_EventScript_Explorer",
       "flag": "0"
     }
   ],

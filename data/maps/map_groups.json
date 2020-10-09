@@ -145,7 +145,8 @@
     "WindmistCity_PokemonCenter",
     "WindmistCity_Mart",
     "WindmistCity_CableCarStation",
-    "WindmistCity_KnickKnackStore"
+    "WindmistCity_KnickKnackStore",
+    "WindmistCity_LumberjackRestStop"
   ],
   "gMapGroup_CelantoGrove": [
     "CelantoGrove_CableCarStation"

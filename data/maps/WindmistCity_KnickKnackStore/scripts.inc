@@ -46,8 +46,13 @@ WindmistCity_KnickKnackStore_Text_WelcomeTraveler:
 	.string "Welcome, traveler!\n"
 	.string "How can I help you?$"
 
-WindmistCity_KnickKnackStore_EventScript_ChanseyExplorer::
-	msgbox WindmistCity_KnickKnackStore_Text_YouNeverKnowWhatDangersAreOutThere, MSGBOX_NPC
+WindmistCity_KnickKnackStore_EventScript_Explorer::
+	lock
+	faceplayer
+	msgbox WindmistCity_KnickKnackStore_Text_YouNeverKnowWhatDangersAreOutThere, MSGBOX_DEFAULT
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
 	end
 
 WindmistCity_KnickKnackStore_Text_YouNeverKnowWhatDangersAreOutThere:
@@ -62,7 +67,8 @@ WindmistCity_KnickKnackStore_EventScript_Chansey::
 	waitse
 	playmoncry SPECIES_CHANSEY, 0
 	msgbox WindmistCity_KnickKnackStore_Text_Chansey, MSGBOX_DEFAULT
-	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
 	release
 	end
 
@@ -115,15 +121,6 @@ WindmistCity_KnickKnackStore_Text_ThatSlowpokeIsGreat:
 WindmistCity_KnickKnackStore_Text_SlowbroCanMegaEvolve:
 	.string "Slowbro can Mega Evolve with that\n"
 	.string "Mega Stone!$"
-
-WindmistCity_KnickKnackStore_EventScript_Explorer::
-	msgbox WindmistCity_KnickKnackStore_Text_ExplainSnowWarning, MSGBOX_NPC
-	end
-
-WindmistCity_KnickKnackStore_Text_ExplainSnowWarning:
-	.string "When my Snover is sent out in\n"
-	.string "battle it summons a hailstorm!\p"
-	.string "Impressive, right?$"
 
 WindmistCity_KnickKnackStore_EventScript_Rancher::
 	msgbox WindmistCity_KnickKnackStore_Text_TheMooMooMilkTheyServeHere, MSGBOX_NPC

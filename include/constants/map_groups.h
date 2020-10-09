@@ -100,10 +100,11 @@
 #define MAP_NESTPINE_TOWN_HOUSE3              (6 | (7 << 8))
 
 // Map Group 8
-#define MAP_WINDMIST_CITY_POKEMON_CENTER    (0 | (8 << 8))
-#define MAP_WINDMIST_CITY_MART              (1 | (8 << 8))
-#define MAP_WINDMIST_CITY_CABLE_CAR_STATION (2 | (8 << 8))
-#define MAP_WINDMIST_CITY_KNICK_KNACK_STORE (3 | (8 << 8))
+#define MAP_WINDMIST_CITY_POKEMON_CENTER       (0 | (8 << 8))
+#define MAP_WINDMIST_CITY_MART                 (1 | (8 << 8))
+#define MAP_WINDMIST_CITY_CABLE_CAR_STATION    (2 | (8 << 8))
+#define MAP_WINDMIST_CITY_KNICK_KNACK_STORE    (3 | (8 << 8))
+#define MAP_WINDMIST_CITY_LUMBERJACK_REST_STOP (4 | (8 << 8))
 
 // Map Group 9
 #define MAP_CELANTO_GROVE_CABLE_CAR_STATION (0 | (9 << 8))

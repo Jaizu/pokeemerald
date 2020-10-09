@@ -62,12 +62,12 @@ WindmistCity_Text_KnickKnackStoreSign:
 	.string "Windmist City Knick-knack Store\n"
 	.string "Come here for all your… needs!$"
 
-WindmistCity_EventScript_TimberGuildSign::
-	msgbox WindmistCity_Text_TimberGuildSign, MSGBOX_SIGN
+WindmistCity_EventScript_LumberjackRestStopSign::
+	msgbox WindmistCity_Text_LumberjackRestStopSign, MSGBOX_SIGN
 	end
 
-WindmistCity_Text_TimberGuildSign:
-	.string "Windmist Timber Guild$"
+WindmistCity_Text_LumberjackRestStopSign:
+	.string "Lumberjack Rest Stop$"
 
 WindmistCity_EventScript_Explorer::
 	msgbox WindmistCity_Text_OhIveNeverSeenYouBefore, MSGBOX_NPC
