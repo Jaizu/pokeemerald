@@ -1,0 +1,137 @@
+{
+  "id": "MAP_WINDMIST_CITY_KNICK_KNACK_STORE",
+  "name": "WindmistCity_KnickKnackStore",
+  "layout": "LAYOUT_WINDMIST_CITY_KNICK_KNACK_STORE",
+  "music": "MUS_GOTOWN",
+  "region_map_section": "MAPSEC_VERDANTURF_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 1,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WindmistCity_KnickKnackStore_EventScript_ClerkLeft",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BATTLE_GIRL",
+      "x": 3,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WindmistCity_KnickKnackStore_EventScript_ClerkRight",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPLORER",
+      "x": 14,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WindmistCity_KnickKnackStore_EventScript_ChanseyExplorer",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CHANSEY",
+      "x": 13,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WindmistCity_KnickKnackStore_EventScript_Chansey",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+      "x": 18,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WindmistCity_KnickKnackStore_EventScript_SlowbroniteFisherman",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPLORER",
+      "x": 3,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WindmistCity_KnickKnackStore_EventScript_Explorer",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_RANCHER",
+      "x": 5,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WindmistCity_KnickKnackStore_EventScript_Rancher",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 17,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WindmistCity_KnickKnackStore_EventScript_Hiker",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 9,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_WINDMIST_CITY",
+      "dest_warp_id": 6
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

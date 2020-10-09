@@ -5000,6 +5000,16 @@
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/WindmistCity/border.bin",
       "blockdata_filepath": "data/layouts/WindmistCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_WINDMIST_CITY_KNICK_KNACK_STORE",
+      "name": "WindmistCity_KnickKnackStore_Layout",
+      "width": 20,
+      "height": 11,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/WindmistCity_KnickKnackStore/border.bin",
+      "blockdata_filepath": "data/layouts/WindmistCity_KnickKnackStore/map.bin"
     }
   ]
 }

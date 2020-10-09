@@ -1092,16 +1092,16 @@ const struct SpriteFrameImage gObjectEventPicTable_MayFieldMove[] = {
     overworld_frame(gObjectEventPic_MayFieldMove, 2, 4, 4),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_Cameraman[] = {
-    overworld_frame(gObjectEventPic_Cameraman, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Cameraman, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Cameraman, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Cameraman, 2, 4, 3),
-    overworld_frame(gObjectEventPic_Cameraman, 2, 4, 4),
-    overworld_frame(gObjectEventPic_Cameraman, 2, 4, 5),
-    overworld_frame(gObjectEventPic_Cameraman, 2, 4, 6),
-    overworld_frame(gObjectEventPic_Cameraman, 2, 4, 7),
-    overworld_frame(gObjectEventPic_Cameraman, 2, 4, 8),
+const struct SpriteFrameImage gObjectEventPicTable_Rancher[] = {
+    overworld_frame(gObjectEventPic_Rancher, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Rancher, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Rancher, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Rancher, 2, 4, 3),
+    overworld_frame(gObjectEventPic_Rancher, 2, 4, 4),
+    overworld_frame(gObjectEventPic_Rancher, 2, 4, 5),
+    overworld_frame(gObjectEventPic_Rancher, 2, 4, 6),
+    overworld_frame(gObjectEventPic_Rancher, 2, 4, 7),
+    overworld_frame(gObjectEventPic_Rancher, 2, 4, 8),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_MovingBox[] = {
@@ -1442,8 +1442,10 @@ const struct SpriteFrameImage gObjectEventPicTable_SubmarineShadow[] = {
     obj_frame_tiles(gObjectEventPic_SubmarineShadow),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_PichuDoll[] = {
-    obj_frame_tiles(gObjectEventPic_PichuDoll),
+const struct SpriteFrameImage gObjectEventPicTable_Chansey[] = {
+    overworld_frame(gObjectEventPic_Chansey, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Chansey, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Chansey, 4, 4, 2),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_PikachuDoll[] = {
