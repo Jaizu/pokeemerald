@@ -5020,6 +5020,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/WindmistCity_LumberjackRestStop/border.bin",
       "blockdata_filepath": "data/layouts/WindmistCity_LumberjackRestStop/map.bin"
+    },
+    {
+      "id": "LAYOUT_WINDMIST_CITY_HOUSE",
+      "name": "WindmistCity_House_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/WindmistCity_House/border.bin",
+      "blockdata_filepath": "data/layouts/WindmistCity_House/map.bin"
     }
   ]
 }

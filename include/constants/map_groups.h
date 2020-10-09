@@ -1,6 +1,10 @@
 #ifndef GUARD_CONSTANTS_MAP_GROUPS_H
 #define GUARD_CONSTANTS_MAP_GROUPS_H
 
+//
+// DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/map_groups.json
+//
+
 // Map Group 0
 #define MAP_CELANTO_TOWN   (0 | (0 << 8))
 #define MAP_ARCHAN_TOWN    (1 | (0 << 8))
@@ -101,6 +105,9 @@
 #define MAP_WINDMIST_CITY_CABLE_CAR_STATION    (2 | (8 << 8))
 #define MAP_WINDMIST_CITY_KNICK_KNACK_STORE    (3 | (8 << 8))
 #define MAP_WINDMIST_CITY_LUMBERJACK_REST_STOP (4 | (8 << 8))
+#define MAP_WINDMIST_CITY_HOUSE1               (5 | (8 << 8))
+#define MAP_WINDMIST_CITY_HOUSE2               (6 | (8 << 8))
+#define MAP_WINDMIST_CITY_HOUSE3               (7 | (8 << 8))
 
 // Map Group 9
 #define MAP_CELANTO_GROVE_CABLE_CAR_STATION (0 | (9 << 8))

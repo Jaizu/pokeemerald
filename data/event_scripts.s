@@ -1236,3 +1236,9 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/WindmistCity_KnickKnackStore/scripts.inc"
 
 	.include "data/maps/WindmistCity_LumberjackRestStop/scripts.inc"
+
+	.include "data/maps/WindmistCity_House1/scripts.inc"
+
+	.include "data/maps/WindmistCity_House2/scripts.inc"
+
+	.include "data/maps/WindmistCity_House3/scripts.inc"

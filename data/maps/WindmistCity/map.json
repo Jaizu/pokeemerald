@@ -206,21 +206,21 @@
       "x": 10,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_WINDMIST_CITY",
+      "dest_map": "MAP_WINDMIST_CITY_HOUSE1",
       "dest_warp_id": 0
     },
     {
       "x": 37,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_WINDMIST_CITY",
+      "dest_map": "MAP_WINDMIST_CITY_HOUSE2",
       "dest_warp_id": 0
     },
     {
       "x": 32,
       "y": 21,
       "elevation": 0,
-      "dest_map": "MAP_WINDMIST_CITY",
+      "dest_map": "MAP_WINDMIST_CITY_HOUSE3",
       "dest_warp_id": 0
     }
   ],
