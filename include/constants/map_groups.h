@@ -6,19 +6,20 @@
 //
 
 // Map Group 0
-#define MAP_CELANTO_TOWN   (0 | (0 << 8))
-#define MAP_ARCHAN_TOWN    (1 | (0 << 8))
-#define MAP_SEROS_VILLAGE  (2 | (0 << 8))
-#define MAP_AEROUS_CITY    (3 | (0 << 8))
-#define MAP_NESTPINE_TOWN  (4 | (0 << 8))
-#define MAP_WINDMIST_CITY  (5 | (0 << 8))
-#define MAP_RELIQUIA_RUINS (6 | (0 << 8))
-#define MAP_CELANTO_GROVE  (7 | (0 << 8))
-#define MAP_CELANTO_PATH   (8 | (0 << 8))
-#define MAP_ARCHAN_HILLS   (9 | (0 << 8))
-#define MAP_SEROS_PATH     (10 | (0 << 8))
-#define MAP_AEROUS_ROAD    (11 | (0 << 8))
-#define MAP_NESTPINE_CLIMB (12 | (0 << 8))
+#define MAP_CELANTO_TOWN    (0 | (0 << 8))
+#define MAP_ARCHAN_TOWN     (1 | (0 << 8))
+#define MAP_SEROS_VILLAGE   (2 | (0 << 8))
+#define MAP_AEROUS_CITY     (3 | (0 << 8))
+#define MAP_NESTPINE_TOWN   (4 | (0 << 8))
+#define MAP_WINDMIST_CITY   (5 | (0 << 8))
+#define MAP_RELIQUIA_RUINS  (6 | (0 << 8))
+#define MAP_CELANTO_GROVE   (7 | (0 << 8))
+#define MAP_CELANTO_PATH    (8 | (0 << 8))
+#define MAP_ARCHAN_HILLS    (9 | (0 << 8))
+#define MAP_SEROS_PATH      (10 | (0 << 8))
+#define MAP_AEROUS_ROAD     (11 | (0 << 8))
+#define MAP_NESTPINE_CLIMB  (12 | (0 << 8))
+#define MAP_WINDMIST_SUMMIT (13 | (0 << 8))
 
 // Map Group 1
 #define MAP_ARCHAN_TUNNEL_1F_1R                 (0 | (1 << 8))

@@ -5030,6 +5030,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/WindmistCity_House/border.bin",
       "blockdata_filepath": "data/layouts/WindmistCity_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_WINDMIST_SUMMIT",
+      "name": "WindmistSummit_Layout",
+      "width": 60,
+      "height": 98,
+      "primary_tileset": "gTileset_Winter",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/WindmistSummit/border.bin",
+      "blockdata_filepath": "data/layouts/WindmistSummit/map.bin"
     }
   ]
 }
