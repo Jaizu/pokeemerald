@@ -1,7 +1,7 @@
 NestpineTown_House1_MapScripts::
 	.byte 0
 
-NestpineTown_House1_EventScript_AromaLady::
+NestpineTown_House1_EventScript_Lass::
 	lock
 	faceplayer
 	msgbox NestpineTown_House1_Text_AtNightYouCanSeeTheStars, MSGBOX_DEFAULT

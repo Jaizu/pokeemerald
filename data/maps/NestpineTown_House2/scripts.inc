@@ -1,3 +1,6 @@
+// TODO: Create SecretPotion item
+.set ITEM_SECRET_POTION, 0
+
 NestpineTown_House2_MapScripts::
 	.byte 0
 
@@ -69,10 +72,27 @@ NestpineTown_House2_Text_AwSeeYouAround:
 NestpineTown_House2_Text_HowIsMyDrowzeeDoing:
 	.string "How is my {STR_VAR_2} doing?$"
 
-NestpineTown_House2_EventScript_AceTrainerM::
-	msgbox NestpineTown_House2_Text_MyGirlfriendHasWeirdestFashionSense, MSGBOX_NPC
+NestpineTown_House2_EventScript_AromaLady::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_SECRET_POTION, NestpineTown_House2_EventScript_ReceivedSecretPotion
+	msgbox NestpineTown_House2_Text_MeAndMySisterBrewSpecialPotions, MSGBOX_DEFAULT
+	giveitem ITEM_SECRET_POTION
+	setflag FLAG_RECEIVED_SECRET_POTION
+	goto NestpineTown_House2_EventScript_ReceivedSecretPotion
 	end
 
-NestpineTown_House2_Text_MyGirlfriendHasWeirdestFashionSense:
-	.string "My girlfriend has the weirdest\n"
-	.string "fashion sense…$"
+NestpineTown_House2_EventScript_ReceivedSecretPotion:
+	msgbox NestpineTown_House2_Text_ThatSecretPotionReallyPacksAPunch, MSGBOX_DEFAULT
+	release
+	end
+
+NestpineTown_House2_Text_MeAndMySisterBrewSpecialPotions:
+	.string "Me and my sister brew special\n"
+	.string "Potions! Here, take one!$"
+
+NestpineTown_House2_Text_ThatSecretPotionReallyPacksAPunch:
+	.string "That SecretPotion really packs\n"
+	.string "a punch!\p"
+	.string "It will heal a chronically ill\n"
+	.string "Pokémon right away!$"

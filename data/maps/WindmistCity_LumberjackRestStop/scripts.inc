@@ -12,6 +12,7 @@ WindmistCity_LumberjackRestStop_EventScript_Clerk::
 	end
 
 WindmistCity_LumberjackRestStop_Pokemart_TMs:
+	.2byte ITEM_MOOMOO_MILK
 	.2byte ITEM_NONE
 	release
 	end

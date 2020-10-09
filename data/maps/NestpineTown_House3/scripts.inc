@@ -1,7 +1,7 @@
 NestpineTown_House3_MapScripts::
 	.byte 0
 
-NestpineTown_House3_EventScript_Lass::
+NestpineTown_House3_EventScript_AceTrainerF::
 	msgbox NestpineTown_House3_Text_MyBoyfriendLivesInAerousCity, MSGBOX_NPC
 	end
 

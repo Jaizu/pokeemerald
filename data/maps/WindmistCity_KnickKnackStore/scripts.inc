@@ -1,7 +1,7 @@
 WindmistCity_KnickKnackStore_MapScripts::
 	.byte 0
 
-WindmistCity_KnickKnackStore_EventScript_ClerkLeft::
+WindmistCity_KnickKnackStore_EventScript_Clerk::
 	lock
 	faceplayer
 	message WindmistCity_KnickKnackStore_Text_KnickKnackStoreYouBuy
@@ -12,7 +12,7 @@ WindmistCity_KnickKnackStore_EventScript_ClerkLeft::
 	end
 
 WindmistCity_KnickKnackStore_Pokemart_Stock:
-	.2byte ITEM_FRESH_WATER
+	.2byte ITEM_MOOMOO_MILK
 	.2byte ITEM_LAVA_COOKIE
 	.2byte ITEM_ESCAPE_ROPE
 	.2byte ITEM_NONE
@@ -25,26 +25,6 @@ WindmistCity_KnickKnackStore_Text_KnickKnackStoreYouBuy:
 
 WindmistCity_KnickKnackStore_Text_PleaseReturn:
 	.string "Please return, yes!$"
-
-WindmistCity_KnickKnackStore_EventScript_ClerkRight::
-	lock
-	faceplayer
-	message WindmistCity_KnickKnackStore_Text_WelcomeTraveler
-	waitmessage
-	pokemart WindmistCity_KnickKnackStore_Pokemart_MooMooMilk
-	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
-	release
-	end
-
-WindmistCity_KnickKnackStore_Pokemart_MooMooMilk:
-	.2byte ITEM_MOOMOO_MILK
-	.2byte ITEM_NONE
-	release
-	end
-
-WindmistCity_KnickKnackStore_Text_WelcomeTraveler:
-	.string "Welcome, traveler!\n"
-	.string "How can I help you?$"
 
 WindmistCity_KnickKnackStore_EventScript_Explorer::
 	lock
@@ -131,11 +111,16 @@ WindmistCity_KnickKnackStore_Text_TheMooMooMilkTheyServeHere:
 	.string "nutritious and delicious!$"
 
 WindmistCity_KnickKnackStore_EventScript_Hiker::
-	msgbox WindmistCity_KnickKnackStore_Text_WowTheSecretPotion, MSGBOX_NPC
+	lock
+	faceplayer
+	msgbox WindmistCity_KnickKnackStore_Text_AllOfTheseBooksAreWrittenIn, MSGBOX_DEFAULT
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
 	end
 
-WindmistCity_KnickKnackStore_Text_WowTheSecretPotion:
-	.string "Wow, the SecretPotion they sell\n"
-	.string "here really packs a punch!\p"
-	.string "It healed my chronically ill\n"
-	.string "Pokémon right away!$"
+WindmistCity_KnickKnackStore_Text_AllOfTheseBooksAreWrittenIn:
+	.string "All of these books are written in a\n"
+	.string "language I can't read!\p"
+	.string "I wonder what Pokémon live in the\n"
+	.string "country the shopkeeper is from?$"
