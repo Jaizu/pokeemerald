@@ -770,7 +770,7 @@
 
 // gTileset_Winter
 #define METATILE_Winter_Door_Gym        0x1B9
-#define METATILE_Winter_Door_GymLocked  0x1E3
+#define METATILE_Winter_Door_GymLocked  0x1DA
 
 // gTileset_WispForest
 #define METATILE_WispForest_Grass_WispTreeBottomLeft              0x218
