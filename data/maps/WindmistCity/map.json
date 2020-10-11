@@ -15,14 +15,14 @@
   "connections": [
     {
       "direction": "up",
-      "offset": -12,
+      "offset": -20,
       "map": "MAP_WINDMIST_SUMMIT"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "x": 17,
+      "x": 13,
       "y": 31,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -35,7 +35,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "x": 31,
+      "x": 27,
       "y": 40,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -48,7 +48,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 15,
+      "x": 11,
       "y": 29,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -61,7 +61,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 21,
+      "x": 17,
       "y": 41,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -74,8 +74,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPLORER",
-      "x": 13,
-      "y": 8,
+      "x": 11,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 3,
@@ -87,8 +87,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_KINDLER",
-      "x": 36,
-      "y": 8,
+      "x": 38,
+      "y": 25,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 2,
@@ -100,8 +100,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 32,
-      "y": 17,
+      "x": 33,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 2,
@@ -113,8 +113,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPLORER",
-      "x": 27,
-      "y": 28,
+      "x": 20,
+      "y": 19,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 0,
@@ -126,7 +126,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 17,
+      "x": 13,
       "y": 36,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -139,8 +139,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 31,
-      "y": 13,
+      "x": 30,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_INVISIBLE",
       "movement_range_x": 0,
@@ -153,56 +153,56 @@
   ],
   "warp_events": [
     {
-      "x": 19,
+      "x": 15,
       "y": 21,
       "elevation": 0,
       "dest_map": "MAP_FROSTBITE_CAVE_4F_1R",
       "dest_warp_id": 3
     },
     {
-      "x": 13,
+      "x": 9,
       "y": 17,
       "elevation": 0,
       "dest_map": "MAP_WINDMIST_CITY",
       "dest_warp_id": 0
     },
     {
-      "x": 17,
+      "x": 15,
       "y": 5,
       "elevation": 0,
       "dest_map": "MAP_WINDMIST_CITY_POKEMON_CENTER",
       "dest_warp_id": 0
     },
     {
-      "x": 29,
+      "x": 25,
       "y": 21,
       "elevation": 0,
       "dest_map": "MAP_WINDMIST_CITY_MART",
       "dest_warp_id": 0
     },
     {
-      "x": 31,
-      "y": 13,
+      "x": 30,
+      "y": 12,
       "elevation": 0,
       "dest_map": "MAP_WINDMIST_CITY",
       "dest_warp_id": 0
     },
     {
-      "x": 29,
+      "x": 25,
       "y": 36,
       "elevation": 0,
       "dest_map": "MAP_WINDMIST_CITY_CABLE_CAR_STATION",
       "dest_warp_id": 0
     },
     {
-      "x": 25,
+      "x": 29,
       "y": 5,
       "elevation": 0,
       "dest_map": "MAP_WINDMIST_CITY_KNICK_KNACK_STORE",
       "dest_warp_id": 0
     },
     {
-      "x": 37,
+      "x": 34,
       "y": 21,
       "elevation": 0,
       "dest_map": "MAP_WINDMIST_CITY_LUMBERJACK_REST_STOP",
@@ -216,17 +216,38 @@
       "dest_warp_id": 0
     },
     {
-      "x": 37,
+      "x": 35,
       "y": 5,
       "elevation": 0,
       "dest_map": "MAP_WINDMIST_CITY_HOUSE2",
       "dest_warp_id": 0
     },
     {
-      "x": 32,
+      "x": 28,
       "y": 21,
       "elevation": 0,
       "dest_map": "MAP_WINDMIST_CITY_HOUSE3",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 42,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_WINDMIST_CITY",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 42,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_WINDMIST_CITY",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 42,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_WINDMIST_CITY",
       "dest_warp_id": 0
     }
   ],
@@ -236,7 +257,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 14,
+      "x": 18,
       "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -244,7 +265,7 @@
     },
     {
       "type": "sign",
-      "x": 22,
+      "x": 18,
       "y": 21,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -252,15 +273,15 @@
     },
     {
       "type": "sign",
-      "x": 35,
-      "y": 13,
+      "x": 34,
+      "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "WindmistCity_EventScript_GymSign"
     },
     {
       "type": "sign",
-      "x": 31,
+      "x": 27,
       "y": 36,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -268,7 +289,7 @@
     },
     {
       "type": "sign",
-      "x": 32,
+      "x": 28,
       "y": 36,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -276,7 +297,7 @@
     },
     {
       "type": "sign",
-      "x": 22,
+      "x": 26,
       "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -284,7 +305,7 @@
     },
     {
       "type": "sign",
-      "x": 40,
+      "x": 37,
       "y": 21,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -292,7 +313,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 33,
+      "x": 29,
       "y": 32,
       "elevation": 3,
       "item": "ITEM_MOON_STONE",
@@ -300,7 +321,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 15,
+      "x": 11,
       "y": 18,
       "elevation": 3,
       "item": "ITEM_RARE_CANDY",

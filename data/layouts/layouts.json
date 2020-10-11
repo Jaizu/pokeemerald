@@ -4994,7 +4994,7 @@
     {
       "id": "LAYOUT_WINDMIST_CITY",
       "name": "WindmistCity_Layout",
-      "width": 48,
+      "width": 44,
       "height": 48,
       "primary_tileset": "gTileset_Winter",
       "secondary_tileset": "gTileset_Slateport",
@@ -5034,8 +5034,8 @@
     {
       "id": "LAYOUT_WINDMIST_SUMMIT",
       "name": "WindmistSummit_Layout",
-      "width": 60,
-      "height": 98,
+      "width": 58,
+      "height": 68,
       "primary_tileset": "gTileset_Winter",
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/WindmistSummit/border.bin",

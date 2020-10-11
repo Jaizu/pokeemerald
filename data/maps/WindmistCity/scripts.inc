@@ -8,7 +8,7 @@ WindmistCity_OnLoad::
 	end
 
 WindmistCity_EventScript_LockGymDoor:
-	setmetatile 31, 13, METATILE_Winter_Door_GymLocked, 1
+	setmetatile 30, 12, METATILE_Winter_Door_GymLocked, 1
 	return
 
 WindmistCity_OnTransition::
