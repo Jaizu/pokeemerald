@@ -127,8 +127,8 @@
 #define VAR_ARCHAN_HILLS_STATE               0x4063
 #define VAR_SEROS_PATH_STATE                 0x4064 // VAR_ROUTE105_STATE in Emerald
 #define VAR_AEROUS_ROAD_STATE                0x4065 // VAR_ROUTE106_STATE in Emerald
-#define VAR_ROUTE107_STATE                   0x4066 // Unused Var
-#define VAR_ROUTE108_STATE                   0x4067 // Unused Var
+#define VAR_NESTPINE_CLIMB_STATE             0x4066 // VAR_ROUTE107_STATE in Emerald
+#define VAR_WINDMIST_SUMMIT_STATE            0x4067 // VAR_ROUTE108_STATE in Emerald
 #define VAR_ROUTE109_STATE                   0x4068 // Unused Var
 #define VAR_ROUTE110_STATE                   0x4069
 #define VAR_ROUTE111_STATE                   0x406A // Unused Var

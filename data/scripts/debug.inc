@@ -250,6 +250,17 @@
 		// New Elders leave
 		setflag FLAG_HIDE_ALL_FROSTBITE_CAVE_NEW_ELDERS
 		setvar VAR_FROSTBITE_CAVE_STATE, 3
+		// WINDMIST CITY
+		// Set visited flag
+		setflag FLAG_VISITED_WINDMIST_CITY
+		// WINDMIST SUMMIT
+		// Fight Trainers
+		settrainerflag TRAINER_BRODY_1
+		settrainerflag TRAINER_MARCAS_1
+		settrainerflag TRAINER_HARLEIGH_1
+		settrainerflag TRAINER_DAVINA_1
+		settrainerflag TRAINER_BRANDON_1
+		settrainerflag TRAINER_OLYMPIA_1
 		end
 	
 	Debug_EventScript_GetParty::

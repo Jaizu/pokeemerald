@@ -4376,7 +4376,6 @@ static void CB2_HandleGivenRivalName(void)
 
 void DoRivalNamingScreen(void)
 {
-    StringCopy(gSaveBlock2Ptr->rivalName, gText_DefaultNameCoulter);
     DoNamingScreen(NAMING_SCREEN_RIVAL, gSaveBlock2Ptr->rivalName, 0, 0, 0, CB2_HandleGivenRivalName);
 }
 

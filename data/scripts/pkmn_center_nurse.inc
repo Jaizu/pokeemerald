@@ -51,3 +51,12 @@ EventScript_PkmnCenterNurse_Bow:
     nurse_joy_bow
     delay_4
     step_end
+
+Common_EventScript_FieldHeal::
+	fadescreen FADE_TO_BLACK
+	closemessage
+	playse SE_KAIFUKU
+	special HealPlayerParty
+	waitse
+	fadescreen FADE_FROM_BLACK
+	return

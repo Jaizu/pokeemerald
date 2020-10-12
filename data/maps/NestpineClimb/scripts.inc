@@ -88,12 +88,7 @@ NestpineClimb_EventScript_YoshiroPostBattle:
 	msgbox NestpineClimb_Text_WouldYouLikeMeToHeal, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_ne NestpineClimb_EventScript_DeclineYoshiro
-	fadescreen FADE_TO_BLACK
-	closemessage
-	playse SE_KAIFUKU
-	special HealPlayerParty
-	waitse
-	fadescreen FADE_FROM_BLACK
+	call Common_EventScript_FieldHeal
 	msgbox NestpineClimb_Text_ThereYouGo, MSGBOX_DEFAULT
 	release
 	end

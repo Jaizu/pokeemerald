@@ -45,6 +45,8 @@
 #include "berry_powder.h"
 #include "mevent.h"
 #include "union_room_chat.h"
+#include "string_util.h"
+#include "strings.h"
 
 extern const u8 EventScript_ResetAllMapFlags[];
 
@@ -187,6 +189,7 @@ void NewGameInitData(void)
     gSaveBlock1Ptr->registeredItem = 0;
     ClearBag();
     NewGameInitPCItems();
+    StringCopy(gSaveBlock2Ptr->rivalName, gText_DefaultNameCoulter);
     ClearPokeblocks();
     ClearDecorationInventories();
     InitEasyChatPhrases();

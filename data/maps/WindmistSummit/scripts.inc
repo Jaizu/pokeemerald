@@ -1,3 +1,5 @@
+.set LOCALID_COULTER, 17
+
 WindmistSummit_MapScripts::
 	.byte 0
 
@@ -222,3 +224,145 @@ WindmistSummit_EventScript_Hiker::
 WindmistSummit_Text_ISawSomePeople:
 	.string "I saw some people dressed up all\n"
 	.string "strange head up to the Temple.$"
+
+WindmistSummit_EventScript_CoulterMeeting_Trigger0::
+	lockall
+	setvar VAR_0x8008, 0
+	goto WindmistSummit_EventScript_CoulterMeetingScene
+	end
+
+WindmistSummit_EventScript_CoulterMeeting_Trigger1::
+	lockall
+	setvar VAR_0x8008, 1
+	goto WindmistSummit_EventScript_CoulterMeetingScene
+	end
+
+WindmistSummit_EventScript_CoulterMeeting_Trigger2::
+	lockall
+	setvar VAR_0x8008, 2
+	goto WindmistSummit_EventScript_CoulterMeetingScene
+	end
+
+WindmistSummit_EventScript_CoulterMeetingScene:
+	msgbox WindmistSummit_Text_Player, MSGBOX_DEFAULT
+	closemessage
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	playbgm MUS_RG_RIVAL1, 0
+	addobject LOCALID_COULTER
+	compare VAR_0x8008, 0
+	call_if_eq WindmistSummit_EventScript_AlignCoulterWithPlayer0
+	compare VAR_0x8008, 1
+	call_if_eq WindmistSummit_EventScript_AlignCoulterWithPlayer1
+	compare VAR_0x8008, 2
+	call_if_eq WindmistSummit_EventScript_AlignCoulterWithPlayer2
+	applymovement LOCALID_COULTER, WindmistSummit_Movement_CoulterWalkToPlayer
+	waitmovement 0
+	msgbox WindmistSummit_Text_SoHereWeAre, MSGBOX_DEFAULT
+	closemessage
+	call Common_EventScript_FieldHeal
+	msgbox WindmistSummit_Text_LetsGo, MSGBOX_DEFAULT
+	closemessage
+	compare VAR_0x8008, 0
+	call_if_eq WindmistSummit_EventScript_ExitCoulter0
+	compare VAR_0x8008, 1
+	call_if_eq WindmistSummit_EventScript_ExitCoulter1
+	compare VAR_0x8008, 2
+	call_if_eq WindmistSummit_EventScript_ExitCoulter2
+	removeobject LOCALID_COULTER
+	fadedefaultbgm
+	delay 10
+	setvar VAR_WINDMIST_SUMMIT_STATE, 1
+	releaseall
+	end
+
+WindmistSummit_EventScript_AlignCoulterWithPlayer0:
+	setobjectxy LOCALID_COULTER, 40, 15
+	return
+
+WindmistSummit_EventScript_AlignCoulterWithPlayer1:
+	setobjectxy LOCALID_COULTER, 41, 15
+	return
+
+WindmistSummit_EventScript_AlignCoulterWithPlayer2:
+	setobjectxy LOCALID_COULTER, 42, 15
+	return
+
+WindmistSummit_EventScript_ExitCoulter0:
+	applymovement LOCALID_COULTER, WindmistSummit_Movement_ExitCoulter0
+	waitmovement 0
+	return
+
+WindmistSummit_EventScript_ExitCoulter1:
+	applymovement LOCALID_COULTER, WindmistSummit_Movement_ExitCoulter1
+	waitmovement 0
+	return
+
+WindmistSummit_EventScript_ExitCoulter2:
+	applymovement LOCALID_COULTER, WindmistSummit_Movement_ExitCoulter2
+	waitmovement 0
+	return
+
+WindmistSummit_Text_Player:
+	.string "{COLOR BLUE}{PLAYER}!$"
+
+WindmistSummit_Text_SoHereWeAre:
+	.string "{RIVAL}: {COLOR BLUE}So, here we are!\n"
+	.string "Mt. Ignis…\p"
+	.string "You look beat.\n"
+	.string "Let me heal your Pokémon.$"
+
+WindmistSummit_Text_LetsGo:
+	.string "{RIVAL}: {COLOR BLUE}Let's go, the Temple should\n"
+	.string "be at the top!\p"
+	.string "Hopefully, so are the answers we're\n"
+	.string "looking for.\p"
+	.string "I'll race you there!$"
+
+WindmistSummit_Movement_CoulterWalkToPlayer:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+WindmistSummit_Movement_ExitCoulter0:
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+WindmistSummit_Movement_ExitCoulter1:
+	walk_right
+	walk_up
+	walk_up
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+WindmistSummit_Movement_ExitCoulter2:
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
