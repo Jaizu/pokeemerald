@@ -14,6 +14,15 @@ Route115_EventScript_ItemSuperPotion::
 	finditem ITEM_SUPER_POTION
 	end
 
+EventScript_ItemHyperPotion::
+Route120_EventScript_ItemHyperPotion::
+Route119_EventScript_ItemHyperPotion2::
+Route119_EventScript_ItemHyperPotion::
+Route118_EventScript_ItemHyperPotion::
+Route113_EventScript_ItemHyperPotion::
+	finditem ITEM_HYPER_POTION
+	end
+
 EventScript_ItemRevive::
 Route117_EventScript_ItemRevive::
 Route120_EventScript_ItemRevive::
@@ -213,6 +222,19 @@ EventScript_ItemKingsRock::
 	finditem ITEM_KINGS_ROCK
 	end
 
+EventScript_ItemMiracleSeed::
+	finditem ITEM_MIRACLE_SEED
+	end
+
+EventScript_ItemDawnStone::
+	finditem ITEM_DAWN_STONE
+	end
+
+EventScript_ItemTM18::
+AbandonedShip_HiddenFloorRooms_EventScript_ItemTM18::
+	finditem ITEM_TM18
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
@@ -239,10 +261,6 @@ Route111_EventScript_ItemStardust:: @ 8290DA8
 
 Route111_EventScript_ItemHPUp:: @ 8290DB5
 	finditem ITEM_HP_UP
-	end
-
-Route113_EventScript_ItemHyperPotion:: @ 8290DF6
-	finditem ITEM_HYPER_POTION
 	end
 
 Route114_EventScript_ItemProtein:: @ 8290E10
@@ -281,28 +299,12 @@ Route117_EventScript_ItemGreatBall:: @ 8290EB9
 	finditem ITEM_GREAT_BALL
 	end
 
-Route118_EventScript_ItemHyperPotion:: @ 8290ED3
-	finditem ITEM_HYPER_POTION
-	end
-
 Route119_EventScript_ItemZinc:: @ 8290EED
 	finditem ITEM_ZINC
 	end
 
 Route119_EventScript_ItemLeafStone:: @ 8290F07
 	finditem ITEM_LEAF_STONE
-	end
-
-Route119_EventScript_ItemHyperPotion:: @ 8290F21
-	finditem ITEM_HYPER_POTION
-	end
-
-Route119_EventScript_ItemHyperPotion2:: @ 8290F2E
-	finditem ITEM_HYPER_POTION
-	end
-
-Route120_EventScript_ItemHyperPotion:: @ 8290F62
-	finditem ITEM_HYPER_POTION
 	end
 
 Route120_EventScript_ItemNestBall:: @ 8290F6F
@@ -475,10 +477,6 @@ AbandonedShip_HiddenFloorRooms_EventScript_ItemScanner:: @ 8291288
 
 AbandonedShip_HiddenFloorRooms_EventScript_ItemWaterStone:: @ 8291295
 	finditem ITEM_WATER_STONE
-	end
-
-AbandonedShip_HiddenFloorRooms_EventScript_ItemTM18:: @ 82912A2
-	finditem ITEM_TM18
 	end
 
 ScorchedSlab_EventScript_ItemTM11:: @ 82912AF

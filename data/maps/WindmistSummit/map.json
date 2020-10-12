@@ -56,8 +56,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "EventScript_ItemMiracleSeed",
+      "flag": "FLAG_ITEM_WINDMIST_SUMMIT_MIRACLE_SEED"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -69,8 +69,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "EventScript_ItemDawnStone",
+      "flag": "FLAG_ITEM_WINDMIST_SUMMIT_DAWN_STONE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TM_BALL",
@@ -82,8 +82,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "EventScript_ItemTM18",
+      "flag": "FLAG_ITEM_WINDMIST_SUMMIT_TM18"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_KINDLER",
@@ -93,9 +93,9 @@
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "NULL",
+      "script": "WindmistSummit_EventScript_Brody",
       "flag": "0"
     },
     {
@@ -106,9 +106,9 @@
       "movement_type": "MOVEMENT_TYPE_TREE_DISGUISE",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "NULL",
+      "script": "WindmistSummit_EventScript_Marcas",
       "flag": "0"
     },
     {
@@ -119,9 +119,9 @@
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "NULL",
+      "script": "WindmistSummit_EventScript_Harleigh",
       "flag": "0"
     },
     {
@@ -132,9 +132,9 @@
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "NULL",
+      "script": "WindmistSummit_EventScript_Davina",
       "flag": "0"
     },
     {
@@ -145,9 +145,9 @@
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "NULL",
+      "script": "WindmistSummit_EventScript_Brandon",
       "flag": "0"
     },
     {
@@ -158,9 +158,9 @@
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "NULL",
+      "script": "WindmistSummit_EventScript_Olympia",
       "flag": "0"
     },
     {
@@ -173,8 +173,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "WindmistSummit_EventScript_RimewoodForestGuardLeft",
+      "flag": "FLAG_HIDE_WINDMIST_SUMMIT_RIMEWOOD_FOREST_GUARDS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
@@ -186,8 +186,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "WindmistSummit_EventScript_RimewoodForestGuardRight",
+      "flag": "FLAG_HIDE_WINDMIST_SUMMIT_RIMEWOOD_FOREST_GUARDS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ACE_TRAINER_F",
@@ -199,7 +199,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "WindmistSummit_EventScript_AceTrainerF",
       "flag": "0"
     },
     {
@@ -212,7 +212,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "WindmistSummit_EventScript_BlackBelt",
       "flag": "0"
     },
     {
@@ -225,7 +225,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "WindmistSummit_EventScript_Hiker",
       "flag": "0"
     }
   ],
@@ -304,7 +304,7 @@
       "y": 14,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "WindmistSummit_EventScript_RouteSign"
     },
     {
       "type": "sign",
@@ -312,39 +312,39 @@
       "y": 24,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "WindmistSummit_EventScript_RimewoodForestSign"
     },
     {
       "type": "hidden_item",
       "x": 41,
       "y": 40,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_TEMP_1"
+      "item": "ITEM_HP_UP",
+      "flag": "FLAG_HIDDEN_ITEM_WINDMIST_SUMMIT_HP_UP"
     },
     {
       "type": "hidden_item",
       "x": 4,
       "y": 39,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_TEMP_1"
+      "item": "ITEM_ELIXIR",
+      "flag": "FLAG_HIDDEN_ITEM_WINDMIST_SUMMIT_ELIXIR"
     },
     {
       "type": "hidden_item",
       "x": 43,
       "y": 52,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_TEMP_1"
+      "item": "ITEM_HYPER_POTION",
+      "flag": "FLAG_HIDDEN_ITEM_WINDMIST_SUMMIT_HYPER_POTION"
     },
     {
       "type": "hidden_item",
       "x": 26,
       "y": 59,
       "elevation": 3,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_TEMP_1"
+      "item": "ITEM_REVIVE",
+      "flag": "FLAG_HIDDEN_ITEM_WINDMIST_SUMMIT_REVIVE"
     }
   ]
 }

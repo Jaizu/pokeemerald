@@ -839,60 +839,81 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Abbie[] = {
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Ricky1[] = {
-    {
-    .iv = 10,
-    .lvl = 13,
-    .species = SPECIES_ZIGZAGOON,
-    .moves = {MOVE_SAND_ATTACK, MOVE_HEADBUTT, MOVE_TAIL_WHIP, MOVE_SURF}
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_Simon[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Brody1[] = {
     {
     .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_AZURILL,
+    .lvl = 22,
+    .species = SPECIES_PONYTA,
     },
     {
     .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_MARILL,
+    .lvl = 22,
+    .species = SPECIES_PONYTA,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Charlie[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Marcas1[] = {
     {
     .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_MARILL,
+    .lvl = 23,
+    .species = SPECIES_STUNKY,
+    },
+    {
+    .iv = 0,
+    .lvl = 23,
+    .species = SPECIES_BELLSPROUT,
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Ricky2[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Harleigh1[] = {
     {
-    .iv = 10,
-    .lvl = 27,
-    .species = SPECIES_LINOONE,
-    .moves = {MOVE_SAND_ATTACK, MOVE_PIN_MISSILE, MOVE_TAIL_WHIP, MOVE_SURF}
+    .iv = 0,
+    .lvl = 23,
+    .species = SPECIES_NIDORINA,
+    },
+    {
+    .iv = 0,
+    .lvl = 23,
+    .species = SPECIES_NIDORINO,
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Ricky3[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Davina1[] = {
     {
-    .iv = 20,
-    .lvl = 30,
-    .species = SPECIES_LINOONE,
-    .moves = {MOVE_SAND_ATTACK, MOVE_PIN_MISSILE, MOVE_TAIL_WHIP, MOVE_SURF}
+    .iv = 0,
+    .lvl = 22,
+    .species = SPECIES_HAWLUCHA,
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Ricky4[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Brandon1[] = {
     {
-    .iv = 30,
-    .lvl = 33,
-    .species = SPECIES_LINOONE,
-    .moves = {MOVE_SAND_ATTACK, MOVE_PIN_MISSILE, MOVE_TAIL_WHIP, MOVE_SURF}
+    .iv = 0,
+    .lvl = 23,
+    .species = SPECIES_PANSEAR,
+    },
+    {
+    .iv = 0,
+    .lvl = 23,
+    .species = SPECIES_CHARMELEON,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Olympia1[] = {
+    {
+    .iv = 0,
+    .lvl = 23,
+    .species = SPECIES_STARAVIA,
+    },
+    {
+    .iv = 0,
+    .lvl = 23,
+    .species = SPECIES_SWELLOW,
+    },
+    {
+    .iv = 0,
+    .lvl = 23,
+    .species = SPECIES_PIDGEOTTO,
     }
 };
 

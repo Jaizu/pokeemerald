@@ -130,13 +130,19 @@
 #define TRAINER_FROSTBITE_CAVE_EUNICE        62 // TRAINER_LOLA_4 in Emerald
 #define TRAINER_LOLA_5                       63
 #define TRAINER_ABBIE                        63 // TRAINER_LOLA_5 in Emerald
-
 #define TRAINER_RICKY_1                      64
+#define TRAINER_BRODY_1                      64 // TRAINER_RICKY_1 in Emerald
 #define TRAINER_SIMON                        65
+#define TRAINER_MARCAS_1                     65 // TRAINER_SIMON in Emerald
 #define TRAINER_CHARLIE                      66
+#define TRAINER_HARLEIGH_1                   66 // TRAINER_CHARLIE in Emerald
 #define TRAINER_RICKY_2                      67
+#define TRAINER_DAVINA_1                     67 // TRAINER_RICKY_2 in Emerald
 #define TRAINER_RICKY_3                      68
+#define TRAINER_BRANDON_1                    68 // TRAINER_RICKY_3 in Emerald
 #define TRAINER_RICKY_4                      69
+#define TRAINER_OLYMPIA_1                    69 // TRAINER_RICKY_4 in Emerald
+
 #define TRAINER_RICKY_5                      70
 #define TRAINER_RANDALL                      71
 #define TRAINER_PARKER                       72
