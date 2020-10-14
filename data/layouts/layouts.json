@@ -5050,6 +5050,16 @@
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/EdamistHeights/border.bin",
       "blockdata_filepath": "data/layouts/EdamistHeights/map.bin"
+    },
+    {
+      "id": "LAYOUT_FROSTBITE_CAVE_2F_2R",
+      "name": "FrostbiteCave_2F_2R_Layout",
+      "width": 48,
+      "height": 48,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_FrostbiteCave",
+      "border_filepath": "data/layouts/FrostbiteCave_2F_2R/border.bin",
+      "blockdata_filepath": "data/layouts/FrostbiteCave_2F_2R/map.bin"
     }
   ]
 }
