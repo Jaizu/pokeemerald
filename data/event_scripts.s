@@ -1244,3 +1244,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/WindmistCity_House3/scripts.inc"
 
 	.include "data/maps/WindmistSummit/scripts.inc"
+
+	.include "data/maps/EdamistHeights/scripts.inc"

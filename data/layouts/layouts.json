@@ -5040,6 +5040,16 @@
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/WindmistSummit/border.bin",
       "blockdata_filepath": "data/layouts/WindmistSummit/map.bin"
+    },
+    {
+      "id": "LAYOUT_EDAMIST_HEIGHTS",
+      "name": "EdamistHeights_Layout",
+      "width": 96,
+      "height": 48,
+      "primary_tileset": "gTileset_Winter",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/EdamistHeights/border.bin",
+      "blockdata_filepath": "data/layouts/EdamistHeights/map.bin"
     }
   ]
 }

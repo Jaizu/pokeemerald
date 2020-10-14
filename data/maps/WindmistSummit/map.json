@@ -259,48 +259,48 @@
     },
     {
       "x": 40,
-      "y": 5,
+      "y": 6,
       "elevation": 0,
       "dest_map": "MAP_WINDMIST_SUMMIT",
       "dest_warp_id": 0
     },
     {
       "x": 41,
-      "y": 5,
+      "y": 6,
       "elevation": 0,
       "dest_map": "MAP_WINDMIST_SUMMIT",
       "dest_warp_id": 0
     },
     {
       "x": 42,
-      "y": 5,
+      "y": 6,
       "elevation": 0,
       "dest_map": "MAP_WINDMIST_SUMMIT",
       "dest_warp_id": 0
     },
     {
-      "x": 50,
+      "x": 49,
       "y": 15,
       "elevation": 0,
       "dest_map": "MAP_WINDMIST_SUMMIT",
       "dest_warp_id": 0
     },
     {
-      "x": 50,
+      "x": 49,
       "y": 16,
       "elevation": 0,
       "dest_map": "MAP_WINDMIST_SUMMIT",
       "dest_warp_id": 0
     },
     {
-      "x": 50,
+      "x": 49,
       "y": 17,
       "elevation": 0,
       "dest_map": "MAP_WINDMIST_SUMMIT",
       "dest_warp_id": 0
     },
     {
-      "x": 50,
+      "x": 49,
       "y": 18,
       "elevation": 0,
       "dest_map": "MAP_WINDMIST_SUMMIT",

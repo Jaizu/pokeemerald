@@ -61,7 +61,8 @@
     "SerosPath",
     "AerousRoad",
     "NestpineClimb",
-    "WindmistSummit"
+    "WindmistSummit",
+    "EdamistHeights"
   ],
   "gMapGroup_Dungeons": [
     "ArchanTunnel_1F_1R",

@@ -235,6 +235,14 @@ AbandonedShip_HiddenFloorRooms_EventScript_ItemTM18::
 	finditem ITEM_TM18
 	end
 
+EventScript_ItemTM16::
+	finditem ITEM_TM16
+	end
+
+EventScript_ItemSunStone::
+	finditem ITEM_SUN_STONE
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end

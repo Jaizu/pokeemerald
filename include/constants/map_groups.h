@@ -20,6 +20,7 @@
 #define MAP_AEROUS_ROAD     (11 | (0 << 8))
 #define MAP_NESTPINE_CLIMB  (12 | (0 << 8))
 #define MAP_WINDMIST_SUMMIT (13 | (0 << 8))
+#define MAP_EDAMIST_HEIGHTS (14 | (0 << 8))
 
 // Map Group 1
 #define MAP_ARCHAN_TUNNEL_1F_1R                 (0 | (1 << 8))

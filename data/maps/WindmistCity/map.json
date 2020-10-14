@@ -17,6 +17,11 @@
       "direction": "up",
       "offset": -20,
       "map": "MAP_WINDMIST_SUMMIT"
+    },
+    {
+      "direction": "right",
+      "offset": 16,
+      "map": "MAP_EDAMIST_HEIGHTS"
     }
   ],
   "object_events": [
@@ -230,25 +235,25 @@
       "dest_warp_id": 0
     },
     {
-      "x": 42,
+      "x": 41,
       "y": 22,
       "elevation": 0,
-      "dest_map": "MAP_WINDMIST_CITY",
+      "dest_map": "MAP_EDAMIST_HEIGHTS",
       "dest_warp_id": 0
     },
     {
-      "x": 42,
+      "x": 41,
       "y": 23,
       "elevation": 0,
-      "dest_map": "MAP_WINDMIST_CITY",
-      "dest_warp_id": 0
+      "dest_map": "MAP_EDAMIST_HEIGHTS",
+      "dest_warp_id": 1
     },
     {
-      "x": 42,
+      "x": 41,
       "y": 24,
       "elevation": 0,
-      "dest_map": "MAP_WINDMIST_CITY",
-      "dest_warp_id": 0
+      "dest_map": "MAP_EDAMIST_HEIGHTS",
+      "dest_warp_id": 2
     }
   ],
   "coord_events": [
