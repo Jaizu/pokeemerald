@@ -142,8 +142,9 @@
 #define TRAINER_BRANDON_1                    68 // TRAINER_RICKY_3 in Emerald
 #define TRAINER_RICKY_4                      69
 #define TRAINER_OLYMPIA_1                    69 // TRAINER_RICKY_4 in Emerald
-
 #define TRAINER_RICKY_5                      70
+#define TRAINER_NATE                         70 // TRAINER_RICKY_5 in Emerald
+
 #define TRAINER_RANDALL                      71
 #define TRAINER_PARKER                       72
 #define TRAINER_GEORGE                       73
@@ -657,7 +658,7 @@
 #define TRAINER_GRUNT_MT_CHIMNEY_2          579
 #define TRAINER_CLARENCE                    580
 #define TRAINER_TERRY                       581
-#define TRAINER_NATE                        582
+#define TRAINER_NATE_OLD                    582 // TRAINER_NATE in Emerald
 #define TRAINER_KATHLEEN                    583
 #define TRAINER_CLIFFORD                    584
 #define TRAINER_NICHOLAS                    585

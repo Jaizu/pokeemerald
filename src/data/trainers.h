@@ -979,18 +979,18 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_Olympia1},
     },
 
-    [TRAINER_RICKY_5] =
+    [TRAINER_NATE] =
     {
-        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_TUBER_M,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_TUBER_M,
-        .trainerName = _("RICKY"),
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_RUIN_MANIAC,
+        .trainerName = _("Nate"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Ricky5),
-        .party = {.NoItemCustomMoves = sParty_Ricky5},
+        .partySize = ARRAY_COUNT(sParty_Nate),
+        .party = {.NoItemDefaultMoves = sParty_Nate},
     },
 
     [TRAINER_RANDALL] =
@@ -8105,7 +8105,7 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_Terry},
     },
 
-    [TRAINER_NATE] =
+    [TRAINER_NATE_OLD] =
     {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_GENTLEMAN,

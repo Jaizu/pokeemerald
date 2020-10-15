@@ -66,6 +66,13 @@ Route113_EventScript_ItemMaxEther::
 	finditem ITEM_MAX_ETHER
 	end
 
+EventScript_ItemEther::
+PetalburgWoods_EventScript_ItemEther::
+PetalburgCity_EventScript_ItemEther::
+Route116_EventScript_ItemEther::
+	finditem ITEM_ETHER
+	end
+
 EventScript_ItemElixir::
 Route123_EventScript_ItemElixir::
 Route119_EventScript_ItemElixir2::
@@ -243,6 +250,14 @@ EventScript_ItemSunStone::
 	finditem ITEM_SUN_STONE
 	end
 
+EventScript_ItemGlalitite::
+	finditem ITEM_GLALITITE
+	end
+
+EventScript_ItemSailFossil::
+	finditem ITEM_SAIL_FOSSIL
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
@@ -289,10 +304,6 @@ Route115_EventScript_ItemGreatBall:: @ 8290E51
 
 Route115_EventScript_ItemHealPowder:: @ 8290E5E
 	finditem ITEM_HEAL_POWDER
-	end
-
-Route116_EventScript_ItemEther:: @ 8290E85
-	finditem ITEM_ETHER
 	end
 
 Route116_EventScript_ItemRepel:: @ 8290E92
@@ -395,10 +406,6 @@ PetalburgCity_EventScript_ItemMaxRevive:: @ 82910B4
 	finditem ITEM_MAX_REVIVE
 	end
 
-PetalburgCity_EventScript_ItemEther:: @ 82910C1
-	finditem ITEM_ETHER
-	end
-
 MauvilleCity_EventScript_ItemXSpeed:: @ 82910CE
 	finditem ITEM_X_SPEED
 	end
@@ -421,10 +428,6 @@ PetalburgWoods_EventScript_ItemXAttack:: @ 8291102
 
 PetalburgWoods_EventScript_ItemGreatBall:: @ 829110F
 	finditem ITEM_GREAT_BALL
-	end
-
-PetalburgWoods_EventScript_ItemEther:: @ 829111C
-	finditem ITEM_ETHER
 	end
 
 PetalburgWoods_EventScript_ItemParalyzeHeal:: @ 8291129

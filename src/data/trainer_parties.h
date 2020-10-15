@@ -917,12 +917,16 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Olympia1[] = {
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Ricky5[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Nate[] = {
     {
-    .iv = 40,
-    .lvl = 36,
-    .species = SPECIES_LINOONE,
-    .moves = {MOVE_SAND_ATTACK, MOVE_PIN_MISSILE, MOVE_TAIL_WHIP, MOVE_SURF}
+    .iv = 30,
+    .lvl = 23,
+    .species = SPECIES_OMANYTE,
+    },
+    {
+    .iv = 30,
+    .lvl = 23,
+    .species = SPECIES_KABUTO,
     }
 };
 
@@ -7828,14 +7832,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Terry[] = {
     .iv = 0,
     .lvl = 37,
     .species = SPECIES_GIRAFARIG,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_Nate[] = {
-    {
-    .iv = 100,
-    .lvl = 36,
-    .species = SPECIES_SPOINK,
     }
 };
 
