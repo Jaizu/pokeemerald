@@ -29,7 +29,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 3,
+      "x": 10,
       "y": 41,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -42,7 +42,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
-      "x": 25,
+      "x": 32,
       "y": 19,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -55,7 +55,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_RUIN_MANIAC",
-      "x": 26,
+      "x": 32,
       "y": 24,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -68,7 +68,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 24,
+      "x": 31,
       "y": 37,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_UP_AND_DOWN",
@@ -82,7 +82,7 @@
   ],
   "warp_events": [
     {
-      "x": 5,
+      "x": 3,
       "y": 9,
       "elevation": 0,
       "dest_map": "MAP_EDAMIST_HEIGHTS",
@@ -96,7 +96,7 @@
     {
       "type": "hidden_item",
       "x": 45,
-      "y": 26,
+      "y": 34,
       "elevation": 3,
       "item": "ITEM_NONE",
       "flag": "FLAG_HIDDEN_ITEM_FROSTBITE_CAVE_RELIC_BAND"

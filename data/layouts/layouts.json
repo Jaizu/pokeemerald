@@ -5055,11 +5055,21 @@
       "id": "LAYOUT_FROSTBITE_CAVE_2F_2R",
       "name": "FrostbiteCave_2F_2R_Layout",
       "width": 48,
-      "height": 48,
+      "height": 46,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_FrostbiteCave",
       "border_filepath": "data/layouts/FrostbiteCave_2F_2R/border.bin",
       "blockdata_filepath": "data/layouts/FrostbiteCave_2F_2R/map.bin"
+    },
+    {
+      "id": "LAYOUT_IGNIS_ROOST",
+      "name": "IgnisRoost_Layout",
+      "width": 31,
+      "height": 38,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_IgnisRoost",
+      "border_filepath": "data/layouts/IgnisRoost/border.bin",
+      "blockdata_filepath": "data/layouts/IgnisRoost/map.bin"
     }
   ]
 }

@@ -930,33 +930,42 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Nate[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Randall[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_IgnisRoostGrunt1[] = {
     {
-    .iv = 255,
-    .lvl = 26,
-    .species = SPECIES_SWELLOW,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_QUICK_ATTACK, MOVE_AGILITY, MOVE_WING_ATTACK, MOVE_NONE}
+    .iv = 30,
+    .lvl = 23,
+    .species = SPECIES_NOSEPASS,
+    },
+    {
+    .iv = 30,
+    .lvl = 23,
+    .species = SPECIES_BRONZOR,
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Parker[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_IgnisRoostGrunt2[] = {
     {
-    .iv = 255,
-    .lvl = 26,
-    .species = SPECIES_SPINDA,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_TEETER_DANCE, MOVE_DIZZY_PUNCH, MOVE_FOCUS_PUNCH, MOVE_NONE}
+    .iv = 30,
+    .lvl = 23,
+    .species = SPECIES_YANMA,
+    },
+    {
+    .iv = 30,
+    .lvl = 23,
+    .species = SPECIES_YANMA,
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_George[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_IgnisRoostGrunt3[] = {
     {
-    .iv = 255,
-    .lvl = 26,
-    .species = SPECIES_SLAKOTH,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_SLACK_OFF, MOVE_COUNTER, MOVE_SHADOW_BALL, MOVE_NONE}
+    .iv = 30,
+    .lvl = 23,
+    .species = SPECIES_GRAVELER,
+    },
+    {
+    .iv = 30,
+    .lvl = 23,
+    .species = SPECIES_RELICANTH,
     }
 };
 

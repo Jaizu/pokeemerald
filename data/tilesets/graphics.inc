@@ -1869,3 +1869,23 @@ gTilesetPalettes_Winter::
 	.align 2
 gTilesetTiles_Winter::
 	.incbin "data/tilesets/primary/winter/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_IgnisRoost::
+	.incbin "data/tilesets/secondary/ignisroost/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/ignisroost/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/ignisroost/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/ignisroost/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/ignisroost/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/ignisroost/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/ignisroost/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/ignisroost/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/ignisroost/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/ignisroost/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/ignisroost/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/ignisroost/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/ignisroost/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_IgnisRoost::
+	.incbin "data/tilesets/secondary/ignisroost/tiles.4bpp.lz"

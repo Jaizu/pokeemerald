@@ -1248,3 +1248,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/EdamistHeights/scripts.inc"
 
 	.include "data/maps/FrostbiteCave_2F_2R/scripts.inc"
+
+	.include "data/maps/IgnisRoost/scripts.inc"

@@ -258,6 +258,10 @@ EventScript_ItemSailFossil::
 	finditem ITEM_SAIL_FOSSIL
 	end
 
+EventScript_ItemTM50::
+	finditem ITEM_TM50
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end

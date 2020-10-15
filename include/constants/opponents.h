@@ -144,10 +144,13 @@
 #define TRAINER_OLYMPIA_1                    69 // TRAINER_RICKY_4 in Emerald
 #define TRAINER_RICKY_5                      70
 #define TRAINER_NATE                         70 // TRAINER_RICKY_5 in Emerald
-
 #define TRAINER_RANDALL                      71
+#define TRAINER_IGNIS_ROOST_GRUNT_1          71 // TRAINER_RANDALL in Emerald
 #define TRAINER_PARKER                       72
+#define TRAINER_IGNIS_ROOST_GRUNT_2          72 // TRAINER_PARKER in Emerald
 #define TRAINER_GEORGE                       73
+#define TRAINER_IGNIS_ROOST_GRUNT_3          73 // TRAINER_GEORGE in Emerald
+
 #define TRAINER_BERKE                        74
 #define TRAINER_BRAXTON                      75
 #define TRAINER_VINCENT_OLD                  76 // TRAINER_VINCENT in Emerald

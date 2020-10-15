@@ -907,3 +907,14 @@ gTileset_Winter::
 	.4byte gMetatiles_Winter
 	.4byte gMetatileAttributes_Winter
 	.4byte InitTilesetAnim_Winter
+
+	.align 2
+gTileset_IgnisRoost::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_IgnisRoost
+	.4byte gTilesetPalettes_IgnisRoost
+	.4byte gMetatiles_IgnisRoost
+	.4byte gMetatileAttributes_IgnisRoost
+	.4byte NULL

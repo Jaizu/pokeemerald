@@ -17,6 +17,11 @@
       "direction": "down",
       "offset": 20,
       "map": "MAP_WINDMIST_CITY"
+    },
+    {
+      "direction": "up",
+      "offset": 25,
+      "map": "MAP_IGNIS_ROOST"
     }
   ],
   "object_events": [
@@ -261,22 +266,22 @@
       "x": 40,
       "y": 6,
       "elevation": 0,
-      "dest_map": "MAP_WINDMIST_SUMMIT",
+      "dest_map": "MAP_IGNIS_ROOST",
       "dest_warp_id": 0
     },
     {
       "x": 41,
       "y": 6,
       "elevation": 0,
-      "dest_map": "MAP_WINDMIST_SUMMIT",
-      "dest_warp_id": 0
+      "dest_map": "MAP_IGNIS_ROOST",
+      "dest_warp_id": 1
     },
     {
       "x": 42,
       "y": 6,
       "elevation": 0,
-      "dest_map": "MAP_WINDMIST_SUMMIT",
-      "dest_warp_id": 0
+      "dest_map": "MAP_IGNIS_ROOST",
+      "dest_warp_id": 2
     },
     {
       "x": 49,

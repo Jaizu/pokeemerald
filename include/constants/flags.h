@@ -1272,14 +1272,16 @@
 #define FLAG_ITEM_METEOR_FALLS_1F_1R_MOON_STONE                     0x416
 #define FLAG_ITEM_EDAMIST_HEIGHT_SUPER_POTION                       0x416 // FLAG_ITEM_METEOR_FALLS_1F_1R_MOON_STONE in Emerald
 #define FLAG_ITEM_METEOR_FALLS_1F_1R_PP_UP                          0x417
-#define FLAG_ITEM_FROSTBITE_CAVE_ETHER                              0x417
+#define FLAG_ITEM_FROSTBITE_CAVE_ETHER                              0x417 // FLAG_ITEM_METEOR_FALLS_1F_1R_PP_UP in Emerald
 #define FLAG_ITEM_RUSTURF_TUNNEL_POKE_BALL                          0x418
-#define FLAG_ITEM_FROSTBITE_CAVE_GLALITITE                          0x418
+#define FLAG_ITEM_FROSTBITE_CAVE_GLALITITE                          0x418 // FLAG_ITEM_RUSTURF_TUNNEL_POKE_BALL in Emerald
 #define FLAG_ITEM_RUSTURF_TUNNEL_MAX_ETHER                          0x419
-#define FLAG_ITEM_FROSTBITE_CAVE_SAIL_FOSSIL                        0x419
-
+#define FLAG_ITEM_FROSTBITE_CAVE_SAIL_FOSSIL                        0x419 // FLAG_ITEM_RUSTURF_TUNNEL_MAX_ETHER in Emerald
 #define FLAG_ITEM_GRANITE_CAVE_1F_ESCAPE_ROPE                       0x41A
+#define FLAG_ITEM_IGNIS_ROOST_HYPER_POTION                          0x41A // FLAG_ITEM_GRANITE_CAVE_1F_ESCAPE_ROPE in Emerald
 #define FLAG_ITEM_GRANITE_CAVE_B1F_POKE_BALL                        0x41B
+#define FLAG_ITEM_IGNIS_ROOST_TM50                                  0x41B // FLAG_ITEM_GRANITE_CAVE_B1F_POKE_BALL in Emerald
+
 #define FLAG_ITEM_MT_PYRE_5F_LAX_INCENSE                            0x41C
 #define FLAG_ITEM_GRANITE_CAVE_B2F_REPEL                            0x41D
 #define FLAG_ITEM_GRANITE_CAVE_B2F_RARE_CANDY                       0x41E

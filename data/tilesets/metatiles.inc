@@ -610,3 +610,10 @@ gMetatiles_Winter::
 	.align 1
 gMetatileAttributes_Winter::
 	.incbin "data/tilesets/primary/winter/metatile_attributes.bin"
+	.align 1
+gMetatiles_IgnisRoost::
+	.incbin "data/tilesets/secondary/ignisroost/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_IgnisRoost::
+	.incbin "data/tilesets/secondary/ignisroost/metatile_attributes.bin"
