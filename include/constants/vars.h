@@ -129,8 +129,9 @@
 #define VAR_AEROUS_ROAD_STATE                0x4065 // VAR_ROUTE106_STATE in Emerald
 #define VAR_NESTPINE_CLIMB_STATE             0x4066 // VAR_ROUTE107_STATE in Emerald
 #define VAR_WINDMIST_SUMMIT_STATE            0x4067 // VAR_ROUTE108_STATE in Emerald
-#define VAR_ROUTE109_STATE                   0x4068 // Unused Var
+#define VAR_EDAMIST_HEIGHTS_STATE            0x4068 // VAR_ROUTE109_STATE in Emerald
 #define VAR_ROUTE110_STATE                   0x4069
+#define VAR_IGNIS_ROOST_STATE                0x4069 // VAR_ROUTE110_STATE in Emerald
 #define VAR_ROUTE111_STATE                   0x406A // Unused Var
 #define VAR_ROUTE112_STATE                   0x406B // Unused Var
 #define VAR_ROUTE113_STATE                   0x406C // Unused Var
