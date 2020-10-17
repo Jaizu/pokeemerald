@@ -14,7 +14,110 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_M",
+      "x": 9,
+      "y": 18,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ApexTemple_MainChamber_EventScript_GruntM1",
+      "flag": "FLAG_HIDE_APEX_TEMPLE_ENOCH_AND_GRUNTS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_M",
+      "x": 9,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "ApexTemple_MainChamber_EventScript_GruntM2",
+      "flag": "FLAG_HIDE_APEX_TEMPLE_ENOCH_AND_GRUNTS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_M",
+      "x": 14,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "ApexTemple_MainChamber_EventScript_DoubleBattleGruntM",
+      "flag": "FLAG_HIDE_APEX_TEMPLE_ENOCH_AND_GRUNTS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_F",
+      "x": 15,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "ApexTemple_MainChamber_EventScript_DoubleBattleGruntF",
+      "flag": "FLAG_HIDE_APEX_TEMPLE_ENOCH_AND_GRUNTS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 11,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_APEX_TEMPLE_BOOK"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_APEX_TEMPLE_ENOCH_AND_GRUNTS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_COULTER",
+      "x": 7,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_APEX_TEMPLE_COULTER"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 20,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_ItemRockyHelmet",
+      "flag": "FLAG_ITEM_APEX_TEMPLE_ROCKY_HELMET"
+    }
   ],
   "warp_events": [
     {
@@ -33,9 +136,73 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_APEX_TEMPLE_STATE",
+      "var_value": "0",
+      "script": "ApexTemple_MainChamber_EventScript_EnochMeeting_Trigger0"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_APEX_TEMPLE_STATE",
+      "var_value": "0",
+      "script": "ApexTemple_MainChamber_EventScript_EnochMeeting_Trigger1"
+    }
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ApexTemple_MainChamber_EventScript_DomeFossilPainting"
+    },
+    {
+      "type": "sign",
+      "x": 10,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ApexTemple_MainChamber_EventScript_DomeFossilPainting"
+    },
+    {
+      "type": "sign",
+      "x": 11,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ApexTemple_MainChamber_EventScript_DomeFossilPainting"
+    },
+    {
+      "type": "sign",
+      "x": 11,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ApexTemple_MainChamber_EventScript_HelixFossilPainting"
+    },
+    {
+      "type": "sign",
+      "x": 12,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ApexTemple_MainChamber_EventScript_HelixFossilPainting"
+    },
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ApexTemple_MainChamber_EventScript_HelixFossilPainting"
+    }
   ]
 }

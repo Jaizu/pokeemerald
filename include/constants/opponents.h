@@ -150,10 +150,12 @@
 #define TRAINER_IGNIS_ROOST_GRUNT_2          72 // TRAINER_PARKER in Emerald
 #define TRAINER_GEORGE                       73
 #define TRAINER_IGNIS_ROOST_GRUNT_3          73 // TRAINER_GEORGE in Emerald
-
 #define TRAINER_BERKE                        74
+#define TRAINER_APEX_TEMPLE_GRUNT_1          74 // TRAINER_BERKE in Emerald
 #define TRAINER_BRAXTON                      75
-#define TRAINER_VINCENT_OLD                  76 // TRAINER_VINCENT in Emerald
+#define TRAINER_APEX_TEMPLE_GRUNT_2          75 // TRAINER_BRAXTON in Emerald
+#define TRAINER_APEX_TEMPLE_GRUNTS           76 // TRAINER_VINCENT in Emerald
+
 #define TRAINER_LEROY                        77
 #define TRAINER_WILTON_1                     78
 #define TRAINER_EDGAR                        79

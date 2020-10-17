@@ -969,46 +969,37 @@ static const struct TrainerMonNoItemDefaultMoves sParty_IgnisRoostGrunt3[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Berke[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_ApexTempleGrunt1[] = {
     {
-    .iv = 255,
-    .lvl = 26,
-    .species = SPECIES_VIGOROTH,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_FOCUS_ENERGY, MOVE_SLASH, MOVE_NONE, MOVE_NONE}
+    .iv = 30,
+    .lvl = 24,
+    .species = SPECIES_KABUTO,
+    },
+    {
+    .iv = 30,
+    .lvl = 24,
+    .species = SPECIES_CRANIDOS,
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Braxton[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_ApexTempleGrunt2[] = {
     {
-    .iv = 100,
-    .lvl = 28,
-    .species = SPECIES_SWELLOW,
-    .moves = {MOVE_FOCUS_ENERGY, MOVE_QUICK_ATTACK, MOVE_WING_ATTACK, MOVE_ENDEAVOR}
+    .iv = 30,
+    .lvl = 25,
+    .species = SPECIES_NOCTOWL,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ApexTempleGrunts[] = {
+    {
+    .iv = 30,
+    .lvl = 22,
+    .species = SPECIES_ANORITH,
     },
     {
-    .iv = 100,
-    .lvl = 28,
-    .species = SPECIES_TRAPINCH,
-    .moves = {MOVE_BITE, MOVE_DIG, MOVE_FAINT_ATTACK, MOVE_SAND_TOMB}
-    },
-    {
-    .iv = 100,
-    .lvl = 28,
-    .species = SPECIES_WAILMER,
-    .moves = {MOVE_ROLLOUT, MOVE_WHIRLPOOL, MOVE_ASTONISH, MOVE_WATER_PULSE}
-    },
-    {
-    .iv = 100,
-    .lvl = 28,
-    .species = SPECIES_MAGNETON,
-    .moves = {MOVE_THUNDERBOLT, MOVE_SUPERSONIC, MOVE_THUNDER_WAVE, MOVE_SONIC_BOOM}
-    },
-    {
-    .iv = 100,
-    .lvl = 28,
-    .species = SPECIES_SHIFTRY,
-    .moves = {MOVE_GIGA_DRAIN, MOVE_FAINT_ATTACK, MOVE_DOUBLE_TEAM, MOVE_SWAGGER}
+    .iv = 30,
+    .lvl = 22,
+    .species = SPECIES_LILEEP,
     }
 };
 

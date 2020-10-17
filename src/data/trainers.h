@@ -1035,32 +1035,46 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_IgnisRoostGrunt3},
     },
 
-    [TRAINER_BERKE] =
+    [TRAINER_APEX_TEMPLE_GRUNT_1] =
     {
-        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_COOLTRAINER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
-        .trainerName = _("BERKE"),
-        .items = {ITEM_HYPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE},
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_NEW_ELDERS,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_NEW_ELDERS_GRUNT_M,
+        .trainerName = _("Grunt"),
+        .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Berke),
-        .party = {.ItemCustomMoves = sParty_Berke},
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_ApexTempleGrunt1),
+        .party = {.NoItemDefaultMoves = sParty_ApexTempleGrunt1},
     },
 
-    [TRAINER_BRAXTON] =
+    [TRAINER_APEX_TEMPLE_GRUNT_2] =
     {
-        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_COOLTRAINER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
-        .trainerName = _("BRAXTON"),
-        .items = {ITEM_HYPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE},
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_NEW_ELDERS,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_NEW_ELDERS_GRUNT_M,
+        .trainerName = _("Grunt"),
+        .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Braxton),
-        .party = {.NoItemCustomMoves = sParty_Braxton},
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_ApexTempleGrunt2),
+        .party = {.NoItemDefaultMoves = sParty_ApexTempleGrunt2},
+    },
+
+    [TRAINER_APEX_TEMPLE_GRUNTS] =
+    {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_NEW_ELDERS,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_NEW_ELDERS_GRUNT_M,
+        .trainerName = _("Grunts"),
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_ApexTempleGrunts),
+        .party = {.NoItemDefaultMoves = sParty_ApexTempleGrunts},
     },
 
     [TRAINER_LEROY] =

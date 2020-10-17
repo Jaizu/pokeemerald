@@ -261,6 +261,20 @@
 		settrainerflag TRAINER_DAVINA_1
 		settrainerflag TRAINER_BRANDON_1
 		settrainerflag TRAINER_OLYMPIA_1
+		// Meet with Coulter
+		setvar VAR_WINDMIST_SUMMIT_STATE, 1
+		// IGNIS ROOST
+		// Fight Trainers
+		settrainerflag TRAINER_IGNIS_ROOST_GRUNT_1
+		settrainerflag TRAINER_IGNIS_ROOST_GRUNT_2
+		settrainerflag TRAINER_IGNIS_ROOST_GRUNT_3
+		// Meet with Coulter
+		setvar VAR_IGNIS_ROOST_STATE, 1
+		// APEX TEMPLE
+		// Fight Trainers
+		settrainerflag TRAINER_APEX_TEMPLE_GRUNT_1
+		settrainerflag TRAINER_APEX_TEMPLE_GRUNT_2
+		settrainerflag TRAINER_APEX_TEMPLE_GRUNTS
 		end
 	
 	Debug_EventScript_GetParty::

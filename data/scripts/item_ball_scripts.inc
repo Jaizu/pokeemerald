@@ -262,6 +262,10 @@ EventScript_ItemTM50::
 	finditem ITEM_TM50
 	end
 
+EventScript_ItemRockyHelmet::
+	finditem ITEM_ROCKY_HELMET
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
