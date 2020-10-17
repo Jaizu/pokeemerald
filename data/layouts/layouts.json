@@ -5090,6 +5090,16 @@
       "secondary_tileset": "gTileset_ApexTemple",
       "border_filepath": "data/layouts/ApexTemple_HiddenRoom/border.bin",
       "blockdata_filepath": "data/layouts/ApexTemple_HiddenRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_WINDMIST_CITY_GYM",
+      "name": "WindmistCity_Gym_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_DewfordGym",
+      "border_filepath": "data/layouts/WindmistCity_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/WindmistCity_Gym/map.bin"
     }
   ]
 }
