@@ -63,6 +63,7 @@ const u16 gObjectEventPaletteClefairy[] = INCBIN_U16("graphics/object_events/pal
 const u16 gObjectEventPaletteVenonat[] = INCBIN_U16("graphics/object_events/palettes/venonat.gbapal");
 const u16 gObjectEventPaletteChansey[] = INCBIN_U16("graphics/object_events/palettes/chansey.gbapal");
 const u16 gObjectEventPaletteRancher[] = INCBIN_U16("graphics/object_events/palettes/rancher.gbapal");
+const u16 gObjectEventPaletteEnoch[] = INCBIN_U16("graphics/object_events/palettes/enoch.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
@@ -162,7 +163,7 @@ const u32 gObjectEventPic_Artist[] = INCBIN_U32("graphics/object_events/pics/peo
 const u32 gObjectEventPic_Rancher[] = INCBIN_U32("graphics/object_events/pics/people/rancher.4bpp");
 const u32 gObjectEventPic_BirdKeeper[] = INCBIN_U32("graphics/object_events/pics/people/bird_keeper.4bpp");
 const u32 gObjectEventPic_Worker[] = INCBIN_U32("graphics/object_events/pics/people/worker.4bpp");
-const u32 gObjectEventPic_AquaMemberM[] = INCBIN_U32("graphics/object_events/pics/people/team_aqua/aqua_member_m.4bpp");
+const u32 gObjectEventPic_Enoch[] = INCBIN_U32("graphics/object_events/pics/people/enoch.4bpp");
 const u32 gObjectEventPic_Eunice[] = INCBIN_U32("graphics/object_events/pics/people/eunice.4bpp");
 const u32 gObjectEventPic_NewEldersGruntM[] = INCBIN_U32("graphics/object_events/pics/people/new_elders_grunt_m.4bpp");
 const u32 gObjectEventPic_NewEldersGruntF[] = INCBIN_U32("graphics/object_events/pics/people/new_elders_grunt_f.4bpp");

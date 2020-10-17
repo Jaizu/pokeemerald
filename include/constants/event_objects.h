@@ -118,7 +118,7 @@
 #define OBJ_EVENT_GFX_CABLE_CAR                  114
 #define OBJ_EVENT_GFX_BIRD_KEEPER                115
 #define OBJ_EVENT_GFX_WORKER                     116
-#define OBJ_EVENT_GFX_AQUA_MEMBER_M              117
+#define OBJ_EVENT_GFX_ENOCH                      117
 #define OBJ_EVENT_GFX_EUNICE                     118
 #define OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_M         119
 #define OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_F         120
@@ -279,6 +279,7 @@
 #define OBJ_EVENT_GFX_GULPIN_DOLL                OBJ_EVENT_GFX_VENONAT
 #define OBJ_EVENT_GFX_PICHU_DOLL                 OBJ_EVENT_GFX_CHANSEY
 #define OBJ_EVENT_GFX_CAMERAMAN                  OBJ_EVENT_GFX_RANCHER
+#define OBJ_EVENT_GFX_AQUA_MEMBER_M              OBJ_EVENT_GFX_ENOCH
 
 #define OBJ_EVENT_PAL_TAG_0 0x1100
 #define OBJ_EVENT_PAL_TAG_1 0x1101
@@ -341,6 +342,7 @@
 #define OBJ_EVENT_PAL_TAG_VENONAT 0x113A
 #define OBJ_EVENT_PAL_TAG_CHANSEY 0x113B
 #define OBJ_EVENT_PAL_TAG_RANCHER 0x113C
+#define OBJ_EVENT_PAL_TAG_ENOCH 0x113D
 #define OBJ_EVENT_PAL_TAG_NONE 0x11FF
 
 // These are dynamic object gfx ids.

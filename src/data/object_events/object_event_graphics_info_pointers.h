@@ -117,7 +117,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_CABLE_CAR] =                &gObjectEventGraphicsInfo_CableCar,
     [OBJ_EVENT_GFX_BIRD_KEEPER] =              &gObjectEventGraphicsInfo_BirdKeeper,
     [OBJ_EVENT_GFX_WORKER] =                   &gObjectEventGraphicsInfo_Worker,
-    [OBJ_EVENT_GFX_AQUA_MEMBER_M] =            &gObjectEventGraphicsInfo_AquaMemberM,
+    [OBJ_EVENT_GFX_ENOCH] =                    &gObjectEventGraphicsInfo_Enoch,
     [OBJ_EVENT_GFX_EUNICE] =                   &gObjectEventGraphicsInfo_Eunice,
     [OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_M] =       &gObjectEventGraphicsInfo_NewEldersGruntM,
     [OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_F] =       &gObjectEventGraphicsInfo_NewEldersGruntF,
@@ -313,5 +313,6 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPaletteVenonat, OBJ_EVENT_PAL_TAG_VENONAT},
     {gObjectEventPaletteChansey, OBJ_EVENT_PAL_TAG_CHANSEY},
     {gObjectEventPaletteRancher, OBJ_EVENT_PAL_TAG_RANCHER},
+    {gObjectEventPaletteEnoch, OBJ_EVENT_PAL_TAG_ENOCH},
     {NULL, 0x0000},
 };
