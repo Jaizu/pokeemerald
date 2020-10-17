@@ -918,3 +918,14 @@ gTileset_IgnisRoost::
 	.4byte gMetatiles_IgnisRoost
 	.4byte gMetatileAttributes_IgnisRoost
 	.4byte NULL
+
+	.align 2
+gTileset_ApexTemple::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_ApexTemple
+	.4byte gTilesetPalettes_ApexTemple
+	.4byte gMetatiles_ApexTemple
+	.4byte gMetatileAttributes_ApexTemple
+	.4byte NULL

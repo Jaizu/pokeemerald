@@ -1,0 +1,41 @@
+{
+  "id": "MAP_APEX_TEMPLE_MAIN_CHAMBER",
+  "name": "ApexTemple_MainChamber",
+  "layout": "LAYOUT_APEX_TEMPLE_MAIN_CHAMBER",
+  "music": "MUS_M_DUNGON",
+  "region_map_section": "MAPSEC_MT_CHIMNEY",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 11,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_IGNIS_ROOST",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 11,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_APEX_TEMPLE_HIDDEN_ROOM",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

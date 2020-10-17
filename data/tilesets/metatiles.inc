@@ -617,3 +617,10 @@ gMetatiles_IgnisRoost::
 	.align 1
 gMetatileAttributes_IgnisRoost::
 	.incbin "data/tilesets/secondary/ignisroost/metatile_attributes.bin"
+	.align 1
+gMetatiles_ApexTemple::
+	.incbin "data/tilesets/secondary/apextemple/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_ApexTemple::
+	.incbin "data/tilesets/secondary/apextemple/metatile_attributes.bin"

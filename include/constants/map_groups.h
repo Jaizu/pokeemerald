@@ -42,6 +42,8 @@
 #define MAP_FROSTBITE_CAVE_2F_2R                (15 | (1 << 8))
 #define MAP_FROSTBITE_CAVE_3F_1R                (16 | (1 << 8))
 #define MAP_FROSTBITE_CAVE_4F_1R                (17 | (1 << 8))
+#define MAP_APEX_TEMPLE_MAIN_CHAMBER            (18 | (1 << 8))
+#define MAP_APEX_TEMPLE_HIDDEN_ROOM             (19 | (1 << 8))
 
 // Map Group 2
 #define MAP_CELANTO_PATH_HIDDEN_GROTTO   (0 | (2 << 8))

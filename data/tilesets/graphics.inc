@@ -1889,3 +1889,23 @@ gTilesetPalettes_IgnisRoost::
 	.align 2
 gTilesetTiles_IgnisRoost::
 	.incbin "data/tilesets/secondary/ignisroost/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_ApexTemple::
+	.incbin "data/tilesets/secondary/apextemple/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/apextemple/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/apextemple/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/apextemple/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/apextemple/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/apextemple/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/apextemple/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/apextemple/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/apextemple/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/apextemple/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/apextemple/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/apextemple/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/apextemple/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_ApexTemple::
+	.incbin "data/tilesets/secondary/apextemple/tiles.4bpp.lz"
