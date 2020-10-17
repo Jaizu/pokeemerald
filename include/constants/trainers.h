@@ -29,7 +29,7 @@
 #define TRAINER_PIC_EXPERT_M               9
 #define TRAINER_PIC_EUNICE                10
 #define TRAINER_PIC_BLACK_BELT            11
-#define TRAINER_PIC_AQUA_ADMIN_F          12
+#define TRAINER_PIC_NEW_ELDERS_GRUNTS     12
 #define TRAINER_PIC_AQUA_LEADER_ARCHIE    13
 #define TRAINER_PIC_HEX_MANIAC            14
 #define TRAINER_PIC_AROMA_LADY            15
@@ -122,6 +122,7 @@
 #define TRAINER_PIC_POKEFAN_M             TRAINER_PIC_ARTIST
 #define TRAINER_PIC_PARASOL_LADY          TRAINER_PIC_PAINTER
 #define TRAINER_PIC_WALLY                 TRAINER_PIC_COULTER
+#define TRAINER_PIC_AQUA_ADMIN_F          TRAINER_PIC_NEW_ELDERS_GRUNTS
 
 #define TRAINER_BACK_PIC_BRENDAN                0
 #define TRAINER_BACK_PIC_MAY                    1

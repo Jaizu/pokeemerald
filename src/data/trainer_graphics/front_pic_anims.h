@@ -46,7 +46,7 @@ static const union AnimCmd *const sAnims_BlackBelt[] ={
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_AquaAdminF[] ={
+static const union AnimCmd *const sAnims_NewEldersGrunts[] ={
     sAnim_GeneralFrame0,
 };
 
@@ -384,7 +384,7 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_EXPERT_M] = sAnims_ExpertM,
     [TRAINER_PIC_AQUA_ADMIN_M] = sAnims_Eunice,
     [TRAINER_PIC_BLACK_BELT] = sAnims_BlackBelt,
-    [TRAINER_PIC_AQUA_ADMIN_F] = sAnims_AquaAdminF,
+    [TRAINER_PIC_NEW_ELDERS_GRUNTS] = sAnims_NewEldersGrunts,
     [TRAINER_PIC_AQUA_LEADER_ARCHIE] = sAnims_AquaLeaderArchie,
     [TRAINER_PIC_HEX_MANIAC] = sAnims_HexManiac,
     [TRAINER_PIC_AROMA_LADY] = sAnims_AromaLady,

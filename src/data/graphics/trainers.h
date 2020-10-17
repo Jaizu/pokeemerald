@@ -34,8 +34,8 @@ const u32 gTrainerPalette_Eunice[] = INCBIN_U32("graphics/trainers/palettes/euni
 const u32 gTrainerFrontPic_BlackBelt[] = INCBIN_U32("graphics/trainers/front_pics/black_belt_front_pic.4bpp.lz");
 const u32 gTrainerPalette_BlackBelt[] = INCBIN_U32("graphics/trainers/palettes/black_belt.gbapal.lz");
 
-const u32 gTrainerFrontPic_AquaAdminF[] = INCBIN_U32("graphics/trainers/front_pics/aqua_admin_f_front_pic.4bpp.lz");
-const u32 gTrainerPalette_AquaAdminF[] = INCBIN_U32("graphics/trainers/palettes/aqua_admin_f.gbapal.lz");
+const u32 gTrainerFrontPic_NewEldersGrunts[] = INCBIN_U32("graphics/trainers/front_pics/new_elders_grunts_front_pic.4bpp.lz");
+const u32 gTrainerPalette_NewEldersGrunts[] = INCBIN_U32("graphics/trainers/palettes/new_elders_grunts.gbapal.lz");
 
 const u32 gTrainerFrontPic_AquaLeaderArchie[] = INCBIN_U32("graphics/trainers/front_pics/aqua_leader_archie_front_pic.4bpp.lz");
 const u32 gTrainerPalette_AquaLeaderArchie[] = INCBIN_U32("graphics/trainers/palettes/aqua_leader_archie.gbapal.lz");
