@@ -124,3 +124,22 @@ WindmistCity_KnickKnackStore_Text_AllOfTheseBooksAreWrittenIn:
 	.string "language I can't read!\p"
 	.string "I wonder what Pokémon live in the\n"
 	.string "country the shopkeeper is from?$"
+
+WindmistCity_KnickKnackStore_EventScript_Redwood::
+	msgbox WindmistCity_KnickKnackStore_Text_HiPlayer, MSGBOX_NPC
+	end
+
+WindmistCity_KnickKnackStore_Text_HiPlayer:
+	.string "{COLOR DARK_GREY}Redwood: {COLOR BLUE}Hi, {PLAYER}!\n"
+	.string "Have you faced Nina yet?\p"
+	.string "I'm here waiting on a delivery.\p"
+	.string "This is the only place in Orbtus\n"
+	.string "that sells a special component.\p"
+	.string "Once I have it, I'll finally be\n"
+	.string "able to fix my Fossil machine!\p"
+	.string "I'll let you know when I've got it\n"
+	.string "working.\p"
+	.string "Then, I'll be able to revive\n"
+	.string "Fossil Pokémon again!\p"
+	.string "Of course, you and {RIVAL}\n"
+	.string "will be welcome to, as well.$"

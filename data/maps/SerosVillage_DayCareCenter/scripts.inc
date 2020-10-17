@@ -9,19 +9,19 @@ SerosVillage_DayCareCenter_MapScripts::
 
 SerosVillage_DayCareCenter_OnTransition:
 	compare VAR_DAY_CARE_CENTER_STATE, 1
-	call_if_eq SerosVillage_DayCareCenter_MoveDayCareWoman
+	call_if_eq SerosVillage_DayCareCenter_EventScript_MoveDayCareWoman
 	end
 
-SerosVillage_DayCareCenter_MoveDayCareWoman:
+SerosVillage_DayCareCenter_EventScript_MoveDayCareWoman:
 	setobjectxyperm LOCALID_DAYCARE_WOMAN, 8, 3
 	setobjectmovementtype LOCALID_DAYCARE_WOMAN, MOVEMENT_TYPE_FACE_LEFT
 	return
 
 SerosVillage_DayCareCenter_OnFrame:
-	map_script_2 VAR_DAY_CARE_CENTER_STATE, 1, SerosVillage_DayCareCenter_GiveHM01Scene
+	map_script_2 VAR_DAY_CARE_CENTER_STATE, 1, SerosVillage_DayCareCenter_EventScript_GiveHM01Scene
 	.2byte 0
 
-SerosVillage_DayCareCenter_GiveHM01Scene:
+SerosVillage_DayCareCenter_EventScript_GiveHM01Scene:
 	lockall
 	setflag FLAG_FERNANDO_RESCUED
 	msgbox SerosVillage_DayCareCenter_Text_ThankYou, MSGBOX_DEFAULT
@@ -127,7 +127,7 @@ SerosVillage_DayCareCenter_Movement_ExitDayCareMan:
 	set_invisible
 	step_end
 
-SerosVillage_DayCareCenter_EventScript_DaycareWoman:: @ 8291D11
+SerosVillage_DayCareCenter_EventScript_DaycareWoman::
 	lock
 	faceplayer
 	goto_if_unset FLAG_FERNANDO_STORMED_OFF, SerosVillage_DayCareCenter_EventScript_FullCapacityRightNow
@@ -156,7 +156,7 @@ SerosVillage_DayCareCenter_EventScript_PleaseHelpFernando:
 	release
 	end
 
-SerosVillage_DayCareCenter_EventScript_GiveMonToRaise:: @ 8291D56
+SerosVillage_DayCareCenter_EventScript_GiveMonToRaise::
 	specialvar VAR_RESULT, CountPartyNonEggMons
 	compare VAR_RESULT, 1
 	goto_if_eq SerosVillage_DayCareCenter_EventScript_OnlyOneMon
@@ -185,49 +185,49 @@ SerosVillage_DayCareCenter_EventScript_GiveMonToRaise:: @ 8291D56
 	release
 	end
 
-SerosVillage_DayCareCenter_EventScript_ComeAgain:: @ 8291DCA
+SerosVillage_DayCareCenter_EventScript_ComeAgain::
 	msgbox SerosVillage_DayCareCenter_Text_ComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
-SerosVillage_DayCareCenter_EventScript_CanRaiseOneMore:: @ 8291DD4
+SerosVillage_DayCareCenter_EventScript_CanRaiseOneMore::
 	msgbox SerosVillage_DayCareCenter_Text_WeCanRaiseOneMore, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq SerosVillage_DayCareCenter_EventScript_GiveMonToRaise
 	goto SerosVillage_DayCareCenter_EventScript_ComeAgain
 	end
 
-SerosVillage_DayCareCenter_EventScript_OnlyOneMon:: @ 8291DED
+SerosVillage_DayCareCenter_EventScript_OnlyOneMon::
 	msgbox SerosVillage_DayCareCenter_Text_YouHaveJustOneMon, MSGBOX_DEFAULT
 	release
 	end
 
-SerosVillage_DayCareCenter_EventScript_OnlyOneAliveMon:: @ 8291DF7
+SerosVillage_DayCareCenter_EventScript_OnlyOneAliveMon::
 	msgbox SerosVillage_DayCareCenter_Text_WhatWillYouBattleWith, MSGBOX_DEFAULT
 	release
 	end
 
-SerosVillage_DayCareCenter_EventScript_OnlyTwoAliveMons:: @ 8291E01
+SerosVillage_DayCareCenter_EventScript_OnlyTwoAliveMons::
 	msgbox SerosVillage_DayCareCenter_Text_YoullBeLeftWithJustOne, MSGBOX_DEFAULT
 	release
 	end
 
-SerosVillage_DayCareCenter_EventScript_EggWaiting:: @ 8291E0B
+SerosVillage_DayCareCenter_EventScript_EggWaiting::
 	msgbox SerosVillage_DayCareCenter_Text_HusbandWasLookingForYou, MSGBOX_DEFAULT
 	release
 	end
 
-SerosVillage_DayCareCenter_EventScript_YourMonHasGrownXLevels:: @ 8291E15
+SerosVillage_DayCareCenter_EventScript_YourMonHasGrownXLevels::
 	msgbox SerosVillage_DayCareCenter_Text_YourMonHasGrownXLevels, MSGBOX_DEFAULT
 	return
 
-SerosVillage_DayCareCenter_EventScript_DisplayLevelsGained:: @ 8291E1E
+SerosVillage_DayCareCenter_EventScript_DisplayLevelsGained::
 	specialvar VAR_RESULT, GetNumLevelsGainedFromDaycare
 	compare VAR_RESULT, 0
 	call_if_ne SerosVillage_DayCareCenter_EventScript_YourMonHasGrownXLevels
 	return
 
-SerosVillage_DayCareCenter_EventScript_OneMonInDaycare:: @ 8291E2F
+SerosVillage_DayCareCenter_EventScript_OneMonInDaycare::
 	msgbox SerosVillage_DayCareCenter_Text_GoodToSeeYou, MSGBOX_DEFAULT
 	setvar VAR_0x8004, 0
 	call SerosVillage_DayCareCenter_EventScript_DisplayLevelsGained
@@ -240,7 +240,7 @@ SerosVillage_DayCareCenter_EventScript_OneMonInDaycare:: @ 8291E2F
 	goto SerosVillage_DayCareCenter_EventScript_ComeAgain
 	end
 
-SerosVillage_DayCareCenter_EventScript_TryRetrieveMon:: @ 8291E6D
+SerosVillage_DayCareCenter_EventScript_TryRetrieveMon::
 	specialvar VAR_RESULT, CalculatePlayerPartyCount
 	compare VAR_RESULT, PARTY_SIZE
 	goto_if_eq SerosVillage_DayCareCenter_EventScript_NoRoom
@@ -256,7 +256,7 @@ SerosVillage_DayCareCenter_EventScript_TryRetrieveMon:: @ 8291E6D
 	goto SerosVillage_DayCareCenter_EventScript_CostPrompt
 	end
 
-SerosVillage_DayCareCenter_EventScript_CostPrompt:: @ 8291EAC
+SerosVillage_DayCareCenter_EventScript_CostPrompt::
 	special GetDaycareCost
 	msgbox SerosVillage_DayCareCenter_Text_ItWillCostX, MSGBOX_YESNO
 	compare VAR_RESULT, YES
@@ -264,7 +264,7 @@ SerosVillage_DayCareCenter_EventScript_CostPrompt:: @ 8291EAC
 	goto SerosVillage_DayCareCenter_EventScript_ComeAgain
 	end
 
-SerosVillage_DayCareCenter_EventScript_CheckEnoughMoney:: @ 8291EC8
+SerosVillage_DayCareCenter_EventScript_CheckEnoughMoney::
 	specialvar VAR_RESULT, IsEnoughForCostInVar0x8005
 	compare VAR_RESULT, 1
 	goto_if_eq SerosVillage_DayCareCenter_EventScript_RetrieveMon
@@ -272,7 +272,7 @@ SerosVillage_DayCareCenter_EventScript_CheckEnoughMoney:: @ 8291EC8
 	release
 	end
 
-SerosVillage_DayCareCenter_EventScript_RetrieveMon:: @ 8291EE2
+SerosVillage_DayCareCenter_EventScript_RetrieveMon::
 	applymovement LOCALID_DAYCARE_WOMAN, SerosVillage_DayCareCenter_Movement_RetrieveDaycareMon
 	waitmovement 0
 	specialvar VAR_RESULT, TakePokemonFromDaycare
@@ -289,19 +289,19 @@ SerosVillage_DayCareCenter_EventScript_RetrieveMon:: @ 8291EE2
 	goto SerosVillage_DayCareCenter_EventScript_ComeAgain
 	end
 
-SerosVillage_DayCareCenter_EventScript_AskRetrieveOtherMon:: @ 8291F24
+SerosVillage_DayCareCenter_EventScript_AskRetrieveOtherMon::
 	msgbox SerosVillage_DayCareCenter_Text_TakeOtherOneBackToo, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq SerosVillage_DayCareCenter_EventScript_TryRetrieveMon
 	goto SerosVillage_DayCareCenter_EventScript_ComeAgain
 	end
 
-SerosVillage_DayCareCenter_EventScript_NoRoom:: @ 8291F3D
+SerosVillage_DayCareCenter_EventScript_NoRoom::
 	msgbox SerosVillage_DayCareCenter_Text_YourTeamIsFull, MSGBOX_DEFAULT
 	release
 	end
 
-SerosVillage_DayCareCenter_Movement_RetrieveDaycareMon: @ 8291F47
+SerosVillage_DayCareCenter_Movement_RetrieveDaycareMon:
 	delay_16
 	delay_16
 	face_left
@@ -323,7 +323,7 @@ SerosVillage_DayCareCenter_Movement_RetrieveDaycareMon: @ 8291F47
 	walk_slow_down
 	step_end
 
-SerosVillage_DayCareCenter_EventScript_TwoMonsInDaycare:: @ 8291F5C
+SerosVillage_DayCareCenter_EventScript_TwoMonsInDaycare::
 	msgbox SerosVillage_DayCareCenter_Text_GoodToSeeYou, MSGBOX_DEFAULT
 	setvar VAR_0x8004, 0
 	call SerosVillage_DayCareCenter_EventScript_DisplayLevelsGained
@@ -346,81 +346,81 @@ SerosVillage_DayCareCenter_Text_PleaseHelpFernando:
 	.string "Oh my, is my dear Fernando safe?\p"
 	.string "Please, you must help him!$"
 
-SerosVillage_DayCareCenter_Text_WouldYouLikeUsToRaiseAMon: @ 82922F4
+SerosVillage_DayCareCenter_Text_WouldYouLikeUsToRaiseAMon:
 	.string "Oh, {PLAYER}!\n"
 	.string "How are you?\p"
 	.string "We can raise Pokémon for you.\p"
 	.string "Would you like us to raise one?$"
 
-SerosVillage_DayCareCenter_Text_WhichMonShouldWeRaise: @ 8292349
+SerosVillage_DayCareCenter_Text_WhichMonShouldWeRaise:
 	.string "Which Pokémon should we raise for\n"
 	.string "you?$"
 
-SerosVillage_DayCareCenter_Text_WellRaiseYourMon: @ 8292370
+SerosVillage_DayCareCenter_Text_WellRaiseYourMon:
 	.string "Fine, we'll raise your {STR_VAR_1}\n"
 	.string "for a while.\p"
 	.string "Come back for it later.$"
 
-SerosVillage_DayCareCenter_Text_WeCanRaiseOneMore: @ 82923AF
+SerosVillage_DayCareCenter_Text_WeCanRaiseOneMore:
 	.string "We can raise two of your Pokémon.\n"
 	.string "Would you like us to raise one more?$"
 
-SerosVillage_DayCareCenter_Text_HusbandWasLookingForYou: @ 82923F6
+SerosVillage_DayCareCenter_Text_HusbandWasLookingForYou:
 	.string "My husband was looking for you.$"
 
-SerosVillage_DayCareCenter_Text_FineThenComeAgain: @ 8292416
+SerosVillage_DayCareCenter_Text_FineThenComeAgain:
 	.string "Oh, fine, then.\n"
 	.string "Come again.$"
 
-SerosVillage_DayCareCenter_Text_NotEnoughMoney: @ 8292432
+SerosVillage_DayCareCenter_Text_NotEnoughMoney:
 	.string "You don't have enough money…$"
 
-SerosVillage_DayCareCenter_Text_TakeOtherOneBackToo: @ 829244F
+SerosVillage_DayCareCenter_Text_TakeOtherOneBackToo:
 	.string "Will you take back the other one,\n"
 	.string "too?$"
 
-SerosVillage_DayCareCenter_Text_ComeAgain: @ 8292476
+SerosVillage_DayCareCenter_Text_ComeAgain:
 	.string "Fine.\n"
 	.string "Come again.$"
 
-SerosVillage_DayCareCenter_Text_GoodToSeeYou: @ 8292488
+SerosVillage_DayCareCenter_Text_GoodToSeeYou:
 	.string "Ah, {PLAYER}!\n"
 	.string "Your Pokémon can only be doing good!$"
 
-SerosVillage_DayCareCenter_Text_YourMonHasGrownXLevels: @ 82924CC
+SerosVillage_DayCareCenter_Text_YourMonHasGrownXLevels:
 	.string "By level, your {STR_VAR_1} has\n"
 	.string "grown by {STR_VAR_2}.$"
 
-SerosVillage_DayCareCenter_Text_YourTeamIsFull: @ 82924EF
+SerosVillage_DayCareCenter_Text_YourTeamIsFull:
 	.string "Your Pokémon team is full.\n"
 	.string "Make room, then come see me.$"
 
-SerosVillage_DayCareCenter_Text_ItWillCostX: @ 8292549
+SerosVillage_DayCareCenter_Text_ItWillCostX:
 	.string "If you want your {STR_VAR_1} back,\n"
 	.string "it will cost ¥{STR_VAR_2}.$"
 
-SerosVillage_DayCareCenter_Text_HeresYourMon: @ 8292575
+SerosVillage_DayCareCenter_Text_HeresYourMon:
 	.string "Perfect!\n"
 	.string "Here's your Pokémon.$"
 
-SerosVillage_DayCareCenter_Text_TookBackMon: @ 8292593
+SerosVillage_DayCareCenter_Text_TookBackMon:
 	.string "{PLAYER} took back {STR_VAR_1} from\n"
 	.string "the Day-Care Lady.$"
 
-SerosVillage_DayCareCenter_Text_YouHaveJustOneMon: @ 82925BB
+SerosVillage_DayCareCenter_Text_YouHaveJustOneMon:
 	.string "Oh? But you have just one\n"
 	.string "Pokémon.\p"
 	.string "Come back another time.$"
 
-SerosVillage_DayCareCenter_Text_TakeYourMonBack: @ 82925F6
+SerosVillage_DayCareCenter_Text_TakeYourMonBack:
 	.string "Will you take your Pokémon back?$"
 
-SerosVillage_DayCareCenter_Text_WhatWillYouBattleWith: @ 8292617
+SerosVillage_DayCareCenter_Text_WhatWillYouBattleWith:
 	.string "If you leave me that Pokémon,\n"
 	.string "what will you battle with?\p"
 	.string "Come back another time.$"
 
-SerosVillage_DayCareCenter_Text_YoullBeLeftWithJustOne: @ 829266D
+SerosVillage_DayCareCenter_Text_YoullBeLeftWithJustOne:
 	.string "Huh?\n"
 	.string "Now, now.\p"
 	.string "If you leave that Pokémon with\n"
