@@ -1104,8 +1104,8 @@ const struct SpriteFrameImage gObjectEventPicTable_Rancher[] = {
     overworld_frame(gObjectEventPic_Rancher, 2, 4, 8),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_MovingBox[] = {
-    obj_frame_tiles(gObjectEventPic_MovingBox),
+const struct SpriteFrameImage gObjectEventPicTable_Book[] = {
+    obj_frame_tiles(gObjectEventPic_Book),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_CableCar[] = {

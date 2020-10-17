@@ -114,7 +114,7 @@
 #define OBJ_EVENT_GFX_RANCHER                    110
 #define OBJ_EVENT_GFX_BRENDAN_UNDERWATER         111
 #define OBJ_EVENT_GFX_MAY_UNDERWATER             112
-#define OBJ_EVENT_GFX_MOVING_BOX                 113
+#define OBJ_EVENT_GFX_BOOK                       113
 #define OBJ_EVENT_GFX_CABLE_CAR                  114
 #define OBJ_EVENT_GFX_BIRD_KEEPER                115
 #define OBJ_EVENT_GFX_WORKER                     116
@@ -280,6 +280,7 @@
 #define OBJ_EVENT_GFX_PICHU_DOLL                 OBJ_EVENT_GFX_CHANSEY
 #define OBJ_EVENT_GFX_CAMERAMAN                  OBJ_EVENT_GFX_RANCHER
 #define OBJ_EVENT_GFX_AQUA_MEMBER_M              OBJ_EVENT_GFX_ENOCH
+#define OBJ_EVENT_GFX_MOVING_BOX                 OBJ_EVENT_GFX_BOOK
 
 #define OBJ_EVENT_PAL_TAG_0 0x1100
 #define OBJ_EVENT_PAL_TAG_1 0x1101
