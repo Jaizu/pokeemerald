@@ -1,7 +1,8 @@
 Common_EventScript_SetGymTrainers::
 	switch VAR_0x8008
-	case 1, SerosVillage_Gym_SetGymTrainers
-	case 2, NestpineTown_Gym_SetGymTrainers
+	case 0, SerosVillage_Gym_SetGymTrainers
+	case 1, NestpineTown_Gym_SetGymTrainers
+	case 2, WindmistCity_Gym_SetGymTrainers
 	end
 
 SerosVillage_Gym_SetGymTrainers::
@@ -17,4 +18,10 @@ NestpineTown_Gym_SetGymTrainers:
 	settrainerflag TRAINER_PETER
 	settrainerflag TRAINER_JANE
 	settrainerflag TRAINER_CEDRIC
+	return
+
+WindmistCity_Gym_SetGymTrainers:
+	settrainerflag TRAINER_HECTOR
+	settrainerflag TRAINER_ANGELICA
+	settrainerflag TRAINER_JUNIOR
 	return

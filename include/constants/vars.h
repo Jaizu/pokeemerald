@@ -108,7 +108,8 @@
 #define VAR_LAVARIDGE_TOWN_STATE             0x4053
 #define VAR_AEROUS_CITY_STATE                0x4053 // VAR_LAVARIDGE_TOWN_STATE in Emerald
 #define VAR_CURRENT_SECRET_BASE              0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
-#define VAR_VERDANTURF_TOWN_STATE            0x4055 // Unused Var
+#define VAR_NESTPINE_TOWN_STATE              0x4054 // VAR_CURRENT_SECRET_BASE in Emerald
+#define VAR_WINDMIST_CITY_STATE              0x4055 // VAR_VERDANTURF_TOWN_STATE in Emerald
 #define VAR_PACIFIDLOG_TOWN_STATE            0x4056 // Unused Var
 #define VAR_PETALBURG_CITY_STATE             0x4057
 #define VAR_SLATEPORT_CITY_STATE             0x4058
@@ -175,6 +176,7 @@
 #define VAR_APEX_TEMPLE_STATE                0x408A // VAR_CONTEST_PRIZE_PICKUP in Emerald
 #define VAR_WINDMIST_CITY_POKEMON_CENTER_STATE 0x408B // VAR_UNUSED_0x408B in Emerald
 #define VAR_LITTLEROOT_HOUSES_STATE_BRENDAN  0x408C
+#define VAR_WINDMIST_GYM_STATE               0x408C // VAR_LITTLEROOT_HOUSES_STATE_BRENDAN in Emerald
 #define VAR_LITTLEROOT_RIVAL_STATE           0x408D
 #define VAR_BOARD_BRINEY_BOAT_STATE          0x408E
 #define VAR_DEVON_CORP_3F_STATE              0x408F

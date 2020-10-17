@@ -155,10 +155,13 @@
 #define TRAINER_BRAXTON                      75
 #define TRAINER_APEX_TEMPLE_GRUNT_2          75 // TRAINER_BRAXTON in Emerald
 #define TRAINER_APEX_TEMPLE_GRUNTS           76 // TRAINER_VINCENT in Emerald
-
 #define TRAINER_LEROY                        77
+#define TRAINER_HECTOR                       77 // TRAINER_LEROY in Emerald
 #define TRAINER_WILTON_1                     78
+#define TRAINER_ANGELICA                     78 // TRAINER_WILTON_1 in Emerald
 #define TRAINER_EDGAR                        79
+#define TRAINER_JUNIOR                       79 // TRAINER_EDGAR in Emerald
+
 #define TRAINER_ALBERT                       80
 #define TRAINER_SAMUEL                       81
 #define TRAINER_VITO                         82
@@ -349,6 +352,7 @@
 #define TRAINER_BRAWLY_1                    266
 #define TRAINER_LEADER_ARIA_1               266 // TRAINER_BRAWLY_1 in Emerald
 #define TRAINER_WATTSON_1                   267
+#define TRAINER_LEADER_NINA_1               267 // TRAINER_WATTSON_1 in Emerald
 #define TRAINER_FLANNERY_1                  268
 #define TRAINER_NORMAN_1                    269
 #define TRAINER_WINONA_1                    270
@@ -517,7 +521,7 @@
 #define TRAINER_CYNDY_5                     433
 #define TRAINER_MADELINE_1                  434
 #define TRAINER_CLARISSA                    435
-#define TRAINER_ANGELICA                    436
+#define TRAINER_ANGELICA_OLD                436 // TRAINER_ANGELICA in Emerald
 #define TRAINER_MADELINE_2                  437
 #define TRAINER_MADELINE_3                  438
 #define TRAINER_MADELINE_4                  439
@@ -594,7 +598,7 @@
 #define TRAINER_HUDSON                      510
 #define TRAINER_CONOR                       511
 #define TRAINER_EDWIN_1                     512
-#define TRAINER_HECTOR                      513
+#define TRAINER_HECTOR_OLD                  513 // TRAINER_HECTOR in Emerald
 #define TRAINER_TABITHA_MOSSDEEP            514
 #define TRAINER_EDWIN_2                     515
 #define TRAINER_EDWIN_3                     516

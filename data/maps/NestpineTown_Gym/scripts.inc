@@ -13,17 +13,17 @@ NestpineTown_Gym_Text_GymSign:
 NestpineTown_Gym_EventScript_JimGai::
 	lock
 	faceplayer
-	goto_if_set FLAG_BADGE02_GET, NestpineTown_EventScript_CongratulatePlayer
-	msgbox NestpineTown_Text_WelcomeChamp, MSGBOX_DEFAULT
+	goto_if_set FLAG_BADGE02_GET, NestpineTown_Gym_EventScript_CongratulatePlayer
+	msgbox NestpineTown_Gym_Text_WelcomeChamp, MSGBOX_DEFAULT
 	release
 	end
 
-NestpineTown_EventScript_CongratulatePlayer:
-	msgbox NestpineTown_Text_NiceGoingChamp, MSGBOX_DEFAULT
+NestpineTown_Gym_EventScript_CongratulatePlayer:
+	msgbox NestpineTown_Gym_Text_NiceGoingChamp, MSGBOX_DEFAULT
 	release
 	end
 
-NestpineTown_Text_WelcomeChamp:
+NestpineTown_Gym_Text_WelcomeChamp:
 	.string "Welcome, champ!\n"
 	.string "This Gym is musical!\p"
 	.string "That's right, you've gotta listen\n"
@@ -34,7 +34,7 @@ NestpineTown_Text_WelcomeChamp:
 	.string "Oh, and this is a Flying-type Gym.\n"
 	.string "Good luck out there, champ!$"
 
-NestpineTown_Text_NiceGoingChamp:
+NestpineTown_Gym_Text_NiceGoingChamp:
 	.string "Nice going, champ!\p"
 	.string "That Plume Badge…\n"
 	.string "It looks real good on you, kid!$"

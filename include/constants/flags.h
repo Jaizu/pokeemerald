@@ -168,8 +168,9 @@
 #define FLAG_RECEIVED_SECRET_POTION              0x79 // FLAG_RECEIVED_TM31 in Emerald
 #define FLAG_RECEIVED_HM03                       0x7A
 #define FLAG_RECEIVED_WINDMIST_CITY_ABILITY_PILL 0x7A // FLAG_RECEIVED_HM03 in Emerald
-
 #define FLAG_RECEIVED_HM08                   0x7B
+#define FLAG_RECEIVED_TM43                   0x7B // FLAG_RECEIVED_HM08 in Emerald
+
 #define FLAG_REGISTER_RIVAL_POKENAV          0x7C
 #define FLAG_DEFEATED_RIVAL_ROUTE_104        0x7D
 #define FLAG_DEFEATED_WALLY_VICTORY_ROAD     0x7E
@@ -949,8 +950,9 @@
 #define FLAG_HIDE_WINDMIST_CITY_POKEMON_CENTER_REDWOOD              0x2FC // FLAG_HIDE_BIRTH_ISLAND_DEOXYS_TRIANGLE in Emerald
 #define FLAG_HIDE_MAUVILLE_CITY_SCOTT                               0x2FD
 #define FLAG_HIDE_KNICK_KNACK_STORE_REDWOOD                         0x2FD // FLAG_HIDE_MAUVILLE_CITY_SCOTT in Emerald
-
 #define FLAG_HIDE_VERDANTURF_TOWN_SCOTT                             0x2FE
+#define FLAG_HIDE_WINDMIST_CITY_REDWOOD                             0x2FE // FLAG_HIDE_VERDANTURF_TOWN_SCOTT in Emerald
+
 #define FLAG_HIDE_FALLARBOR_TOWN_BATTLE_TENT_SCOTT                  0x2FF
 #define FLAG_HIDE_ROUTE_111_VICTOR_WINSTRATE                        0x300
 #define FLAG_HIDE_ROUTE_111_VICTORIA_WINSTRATE                      0x301
@@ -1510,6 +1512,7 @@
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
 #define FLAG_DEFEATED_NESTPINE_GYM                                  0x4F1 // FLAG_DEFEATED_DEWFORD_GYM in Emerald
 #define FLAG_DEFEATED_MAUVILLE_GYM                                  0x4F2
+#define FLAG_DEFEATED_WINDMIST_GYM                                  0x4F2 // FLAG_DEFEATED_MAUVILLE_GYM in Emerald
 #define FLAG_DEFEATED_LAVARIDGE_GYM                                 0x4F3
 #define FLAG_DEFEATED_PETALBURG_GYM                                 0x4F4
 #define FLAG_DEFEATED_FORTREE_GYM                                   0x4F5

@@ -131,6 +131,13 @@
 #define METATILE_Contest_FloorShadow         0x261
 #define METATILE_Contest_WallShadow          0x221
 
+// gTileset_DewfordGym
+#define METATILE_DewfordGym_GymFloor                    0x202
+#define METATILE_DewfordGym_GymFloorSouthBorder         0x203
+#define METATILE_DewfordGym_GymFloorSouthBorder_Shadow  0x204
+#define METATILE_DewfordGym_GymFloor_Shadow             0x201
+#define METATILE_DewfordGym_MeltedPillar                0x217
+
 // gTileset_Dewford
 #define METATILE_Dewford_Door_Tan  0x25C
 
