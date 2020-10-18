@@ -65,6 +65,7 @@ const u16 gObjectEventPaletteChansey[] = INCBIN_U16("graphics/object_events/pale
 const u16 gObjectEventPaletteRancher[] = INCBIN_U16("graphics/object_events/palettes/rancher.gbapal");
 const u16 gObjectEventPaletteEnoch[] = INCBIN_U16("graphics/object_events/palettes/enoch.gbapal");
 const u16 gObjectEventPaletteNina[] = INCBIN_U16("graphics/object_events/palettes/nina.gbapal");
+const u16 gObjectEventPaletteSSWake[] = INCBIN_U16("graphics/object_events/palettes/ss_wake.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
@@ -266,7 +267,7 @@ const u32 gObjectEventPic_BirchsBag[] = INCBIN_U32("graphics/object_events/pics/
 const u32 gObjectEventPic_EnemyZigzagoon[] = INCBIN_U32("graphics/object_events/pics/pokemon/enemy_zigzagoon.4bpp");
 const u32 gObjectEventPic_Poochyena[] = INCBIN_U32("graphics/object_events/pics/pokemon/poochyena.4bpp");
 const u32 gObjectEventPic_CableCar[] = INCBIN_U32("graphics/object_events/pics/misc/cable_car.4bpp");
-const u32 gObjectEventPic_SSTidal[] = INCBIN_U32("graphics/object_events/pics/misc/ss_tidal.4bpp");
+const u32 gObjectEventPic_SSWake[] = INCBIN_U32("graphics/object_events/pics/misc/ss_wake.4bpp");
 const u32 gFieldEffectObjectPic_Sparkle[] = INCBIN_U32("graphics/field_effects/pics/sparkle.4bpp");
 const u32 gObjectEventPic_BerryTreeDirtPile[] = INCBIN_U32("graphics/object_events/pics/berry_trees/dirt_pile.4bpp");
 const u32 gObjectEventPic_BerryTreeSprout[] = INCBIN_U32("graphics/object_events/pics/berry_trees/sprout.4bpp");

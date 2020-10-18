@@ -1418,16 +1418,16 @@ const struct SpriteFrameImage gObjectEventPicTable_HotSpringsOldWoman[] = {
     overworld_frame(gObjectEventPic_HotSpringsOldWoman, 2, 4, 8),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_SSTidal[] = {
-    obj_frame_tiles(gObjectEventPic_SSTidal),
-    obj_frame_tiles(gObjectEventPic_SSTidal),
-    obj_frame_tiles(gObjectEventPic_SSTidal),
-    obj_frame_tiles(gObjectEventPic_SSTidal),
-    obj_frame_tiles(gObjectEventPic_SSTidal),
-    obj_frame_tiles(gObjectEventPic_SSTidal),
-    obj_frame_tiles(gObjectEventPic_SSTidal),
-    obj_frame_tiles(gObjectEventPic_SSTidal),
-    obj_frame_tiles(gObjectEventPic_SSTidal),
+const struct SpriteFrameImage gObjectEventPicTable_SSWake[] = {
+    obj_frame_tiles(gObjectEventPic_SSWake),
+    obj_frame_tiles(gObjectEventPic_SSWake),
+    obj_frame_tiles(gObjectEventPic_SSWake),
+    obj_frame_tiles(gObjectEventPic_SSWake),
+    obj_frame_tiles(gObjectEventPic_SSWake),
+    obj_frame_tiles(gObjectEventPic_SSWake),
+    obj_frame_tiles(gObjectEventPic_SSWake),
+    obj_frame_tiles(gObjectEventPic_SSWake),
+    obj_frame_tiles(gObjectEventPic_SSWake),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_SubmarineShadow[] = {

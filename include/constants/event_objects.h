@@ -141,7 +141,7 @@
 #define OBJ_EVENT_GFX_BRENDAN_FISHING            137
 #define OBJ_EVENT_GFX_MAY_FISHING                138
 #define OBJ_EVENT_GFX_HOT_SPRINGS_OLD_WOMAN      139
-#define OBJ_EVENT_GFX_SS_TIDAL                   140
+#define OBJ_EVENT_GFX_SS_WAKE                    140
 #define OBJ_EVENT_GFX_SUBMARINE_SHADOW           141
 #define OBJ_EVENT_GFX_CHANSEY                    142
 #define OBJ_EVENT_GFX_PIKACHU_DOLL               143
@@ -282,6 +282,7 @@
 #define OBJ_EVENT_GFX_AQUA_MEMBER_M              OBJ_EVENT_GFX_ENOCH
 #define OBJ_EVENT_GFX_MOVING_BOX                 OBJ_EVENT_GFX_BOOK
 #define OBJ_EVENT_GFX_WATTSON                    OBJ_EVENT_GFX_NINA
+#define OBJ_EVENT_GFX_SS_TIDAL                   OBJ_EVENT_GFX_SS_WAKE
 
 #define OBJ_EVENT_PAL_TAG_0 0x1100
 #define OBJ_EVENT_PAL_TAG_1 0x1101
@@ -346,6 +347,7 @@
 #define OBJ_EVENT_PAL_TAG_RANCHER 0x113C
 #define OBJ_EVENT_PAL_TAG_ENOCH 0x113D
 #define OBJ_EVENT_PAL_TAG_NINA 0x113E
+#define OBJ_EVENT_PAL_TAG_SS_WAKE 0x113F
 #define OBJ_EVENT_PAL_TAG_NONE 0x11FF
 
 // These are dynamic object gfx ids.

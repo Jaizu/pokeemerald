@@ -140,7 +140,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BRENDAN_FISHING] =          &gObjectEventGraphicsInfo_BrendanFishing,
     [OBJ_EVENT_GFX_MAY_FISHING] =              &gObjectEventGraphicsInfo_MayFishing,
     [OBJ_EVENT_GFX_HOT_SPRINGS_OLD_WOMAN] =    &gObjectEventGraphicsInfo_HotSpringsOldWoman,
-    [OBJ_EVENT_GFX_SS_TIDAL] =                 &gObjectEventGraphicsInfo_SSTidal,
+    [OBJ_EVENT_GFX_SS_WAKE] =                  &gObjectEventGraphicsInfo_SSWake,
     [OBJ_EVENT_GFX_SUBMARINE_SHADOW] =         &gObjectEventGraphicsInfo_SubmarineShadow,
     [OBJ_EVENT_GFX_CHANSEY] =                  &gObjectEventGraphicsInfo_Chansey,
     [OBJ_EVENT_GFX_PIKACHU_DOLL] =             &gObjectEventGraphicsInfo_PikachuDoll,
@@ -315,5 +315,6 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPaletteRancher, OBJ_EVENT_PAL_TAG_RANCHER},
     {gObjectEventPaletteEnoch, OBJ_EVENT_PAL_TAG_ENOCH},
     {gObjectEventPaletteNina, OBJ_EVENT_PAL_TAG_NINA},
+    {gObjectEventPaletteSSWake, OBJ_EVENT_PAL_TAG_SS_WAKE},
     {NULL, 0x0000},
 };
