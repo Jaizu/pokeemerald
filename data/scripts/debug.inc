@@ -189,6 +189,10 @@
 		// ARCHAN TUNNEL 3F 1R
 		// Fight Byron
 		settrainerflag TRAINER_MAKO
+		// CELANTO PATH
+		// Clear the Rock Smash rocks
+		setflag FLAG_HIDE_CELANTO_PATH_BREAKABLE_ROCK_LEFT
+		setflag FLAG_HIDE_CELANTO_PATH_BREAKABLE_ROCK_RIGHT
 		// NESTPINE CLIMB
 		// Fight Trainers
 		settrainerflag TRAINER_MARTHA_1
@@ -282,14 +286,18 @@
 		settrainerflag TRAINER_APEX_TEMPLE_GRUNT_1
 		settrainerflag TRAINER_APEX_TEMPLE_GRUNT_2
 		settrainerflag TRAINER_APEX_TEMPLE_GRUNTS
-		// Listen to Enoch's speech
+		// The New Elders leave
 		setflag FLAG_HIDE_APEX_TEMPLE_ENOCH_AND_GRUNTS
+		setflag FLAG_HIDE_IGNIS_ROOST_GRUNTS
 		// Leave with Coulter & the book
+		setflag FLAG_HIDE_IGNIS_ROOST_COULTER
+		setflag FLAG_HIDE_APEX_TEMPLE_COULTER
 		setflag FLAG_HIDE_APEX_TEMPLE_BOOK
 		setvar VAR_APEX_TEMPLE_STATE, 1
 		// WINDMIST CITY POKEMON CENTER
 		// Meet with Coulter & Redwood
 		setvar VAR_WINDMIST_CITY_POKEMON_CENTER_STATE, 2
+		// Unlock the Windmist Gym
 		setflag FLAG_UNLOCK_WINDMIST_GYM_DOOR
 		// WINDMIST GYM
 		// Fight Trainers
