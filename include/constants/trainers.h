@@ -59,7 +59,7 @@
 #define TRAINER_PIC_ELITE_FOUR_DRAKE      39
 #define TRAINER_PIC_FERNANDO              40
 #define TRAINER_PIC_ARIA                  41
-#define TRAINER_PIC_LEADER_WATTSON        42
+#define TRAINER_PIC_NINA                  42
 #define TRAINER_PIC_LEADER_FLANNERY       43
 #define TRAINER_PIC_LEADER_NORMAN         44
 #define TRAINER_PIC_LEADER_WINONA         45
@@ -123,6 +123,7 @@
 #define TRAINER_PIC_PARASOL_LADY          TRAINER_PIC_PAINTER
 #define TRAINER_PIC_WALLY                 TRAINER_PIC_COULTER
 #define TRAINER_PIC_AQUA_ADMIN_F          TRAINER_PIC_NEW_ELDERS_GRUNTS
+#define TRAINER_PIC_LEADER_WATTSON        TRAINER_PIC_NINA
 
 #define TRAINER_BACK_PIC_BRENDAN                0
 #define TRAINER_BACK_PIC_MAY                    1
