@@ -13,8 +13,8 @@ const u32 gTrainerPalette_CoolTrainerM[] = INCBIN_U32("graphics/trainers/palette
 const u32 gTrainerFrontPic_BirdKeeper[] = INCBIN_U32("graphics/trainers/front_pics/bird_keeper_front_pic.4bpp.lz");
 const u32 gTrainerPalette_BirdKeeper[] = INCBIN_U32("graphics/trainers/palettes/bird_keeper.gbapal.lz");
 
-const u32 gTrainerFrontPic_Collector[] = INCBIN_U32("graphics/trainers/front_pics/collector_front_pic.4bpp.lz");
-const u32 gTrainerPalette_Collector[] = INCBIN_U32("graphics/trainers/palettes/collector.gbapal.lz");
+const u32 gTrainerFrontPic_Welder[] = INCBIN_U32("graphics/trainers/front_pics/welder_front_pic.4bpp.lz");
+const u32 gTrainerPalette_Welder[] = INCBIN_U32("graphics/trainers/palettes/welder.gbapal.lz");
 
 const u32 gTrainerFrontPic_FairyTaleGirl[] = INCBIN_U32("graphics/trainers/front_pics/fairy_tale_girl_front_pic.4bpp.lz");
 const u32 gTrainerPalette_FairyTaleGirl[] = INCBIN_U32("graphics/trainers/palettes/fairy_tale_girl.gbapal.lz");
