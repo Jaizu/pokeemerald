@@ -146,7 +146,7 @@ static void DebugAction_FastForward(u8 taskId)
 {
     Debug_DestroyMainMenu(taskId);
     ScriptContext2_RunNewScript(Debug_EventScript_SetUpFastForward);
-    SetWarpDestination(MAP_GROUP(WINDMIST_CITY), MAP_NUM(WINDMIST_CITY), 4, 0, 0);
+    SetWarpDestination(MAP_GROUP(AEROUS_CITY), MAP_NUM(AEROUS_CITY), 5, 0, 0);
     DoWarp();
 }
 

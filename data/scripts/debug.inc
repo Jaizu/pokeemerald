@@ -293,29 +293,29 @@
 		setflag FLAG_UNLOCK_WINDMIST_GYM_DOOR
 		// WINDMIST GYM
 		// Fight Trainers
-		// settrainerflag TRAINER_HECTOR
-		// settrainerflag TRAINER_ANGELICA
-		// settrainerflag TRAINER_JUNIOR
+		settrainerflag TRAINER_HECTOR
+		settrainerflag TRAINER_ANGELICA
+		settrainerflag TRAINER_JUNIOR
 		// Complete the puzzle
-		// setvar VAR_WINDMIST_GYM_STATE, 3
+		setvar VAR_WINDMIST_GYM_STATE, 3
 		// Fight Nina
-		// settrainerflag TRAINER_LEADER_NINA_1
-		// setflag FLAG_BADGE03_GET
-		// setflag FLAG_DEFEATED_WINDMIST_GYM
+		settrainerflag TRAINER_LEADER_NINA_1
+		setflag FLAG_BADGE03_GET
+		setflag FLAG_DEFEATED_WINDMIST_GYM
 		// WINDMIST CITY
 		// Obtain the Bike Voucher from Redwood
-		// setvar VAR_WINDMIST_CITY_STATE, 2
+		setvar VAR_WINDMIST_CITY_STATE, 2
 		// AEROUS CITY
 		// Say goodbye to Redwood
-		// setvar VAR_AEROUS_CITY_STATE, 2
+		setvar VAR_AEROUS_CITY_STATE, 2
 		// Exchange Bike Voucher for Bicycle
-		// setflag FLAG_RECEIVED_BIKE
-		// additem ITEM_BICYCLE
+		setflag FLAG_RECEIVED_BIKE
+		additem ITEM_BICYCLE
 		// AEROUS PORT
 		// Fight Braveton
-		// settrainerflag TRAINER_BRAVETON
+		settrainerflag TRAINER_BRAVETON
 		// The SS Wake arrives
-		// clearflag FLAG_HIDE_AEROUS_CITY_PORT_SS_WAKE
+		clearflag FLAG_HIDE_AEROUS_CITY_PORT_SS_WAKE
 		end
 	
 	Debug_EventScript_GetParty::
