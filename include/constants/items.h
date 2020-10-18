@@ -489,7 +489,8 @@
 #define ITEM_DUSTY_TOME 464
 #define ITEM_DEVON_GOODS ITEM_DUSTY_TOME // TODO: Remove references to this
 #define ITEM_SOOT_SACK 465
-#define ITEM_BASEMENT_KEY 466
+#define ITEM_SECRET_POTION 466
+#define ITEM_BASEMENT_KEY ITEM_SECRET_POTION // TODO: Remove references to this
 #define ITEM_ACRO_BIKE 467
 #define ITEM_POKEBLOCK_CASE 468
 #define ITEM_LETTER 469

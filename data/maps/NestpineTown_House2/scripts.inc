@@ -1,6 +1,4 @@
 // TODO: Create SecretPotion item
-.set ITEM_SECRET_POTION, 0
-
 NestpineTown_House2_MapScripts::
 	.byte 0
 
