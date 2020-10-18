@@ -2,7 +2,7 @@ AerousCity_Port_MapScripts::
 	.byte 0
 
 AerousCity_Port_EventScript_Braveton::
-	msgbox AerousCity_Port_Text_TheSSWakeIsntBackYet, MSGBOX_DEFAULT
+	msgbox AerousCity_Port_Text_TheSSWakeIsntBackYet, MSGBOX_NPC
 	end
 
 AerousCity_Port_Text_TheSSWakeIsntBackYet:

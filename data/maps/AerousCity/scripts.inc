@@ -1,12 +1,49 @@
-.equ LOCALID_MUSEUM_CLERK, 3
+.set LOCALID_MUSEUM_CLERK, 3
+.set LOCALID_REDWOOD, 12
 
 AerousCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, AerousCity_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, AerousCity_OnFrame
 	.byte 0
 
 AerousCity_OnTransition::
 	setflag FLAG_VISITED_AEROUS_CITY
 	end
+
+AerousCity_OnFrame:
+	map_script_2 VAR_AEROUS_CITY_STATE, 1, AerousCity_EventScript_RedwoodGoodbye
+	.2byte 0
+
+AerousCity_EventScript_RedwoodGoodbye:
+	lockall
+	msgbox AerousCity_Text_WellThatsFineToo, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_REDWOOD, AerousCity_Movement_ExitRedwood
+	waitmovement 0
+	removeobject LOCALID_REDWOOD
+	setvar VAR_AEROUS_CITY_STATE, 2
+	releaseall
+	end
+
+AerousCity_Text_WellThatsFineToo:
+	.string "Redwood: {COLOR BLUE}Well, here we are!\p"
+	.string "Now, I'm going to head home and\n"
+	.string "study that book you found.\p"
+	.string "Perhaps it will have some answers!\n"
+	.string "Stay safe, {PLAYER}!$"
+
+AerousCity_Movement_ExitRedwood:
+	walk_left
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
 
 AerousCity_EventScript_CitySign::
 	msgbox AerousCity_Text_CitySign, MSGBOX_SIGN
