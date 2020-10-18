@@ -170,8 +170,9 @@
 #define FLAG_RECEIVED_WINDMIST_CITY_ABILITY_PILL 0x7A // FLAG_RECEIVED_HM03 in Emerald
 #define FLAG_RECEIVED_HM08                   0x7B
 #define FLAG_RECEIVED_TM43                   0x7B // FLAG_RECEIVED_HM08 in Emerald
-
 #define FLAG_REGISTER_RIVAL_POKENAV          0x7C
+#define FLAG_WHITEOUT_TO_WINDMIST            0x7C // FLAG_REGISTER_RIVAL_POKENAV in Emerald; Set after defeating Nina, so the player cant white out from poison before meeting Redwood
+
 #define FLAG_DEFEATED_RIVAL_ROUTE_104        0x7D
 #define FLAG_DEFEATED_WALLY_VICTORY_ROAD     0x7E
 #define FLAG_MET_PRETTY_PETAL_SHOP_OWNER     0x7F
@@ -952,8 +953,9 @@
 #define FLAG_HIDE_KNICK_KNACK_STORE_REDWOOD                         0x2FD // FLAG_HIDE_MAUVILLE_CITY_SCOTT in Emerald
 #define FLAG_HIDE_VERDANTURF_TOWN_SCOTT                             0x2FE
 #define FLAG_HIDE_WINDMIST_CITY_REDWOOD                             0x2FE // FLAG_HIDE_VERDANTURF_TOWN_SCOTT in Emerald
-
 #define FLAG_HIDE_FALLARBOR_TOWN_BATTLE_TENT_SCOTT                  0x2FF
+#define FLAG_HIDE_AEROUS_CITY_REDWOOD                               0x2FF // FLAG_HIDE_FALLARBOR_TOWN_BATTLE_TENT_SCOTT in Emerald
+
 #define FLAG_HIDE_ROUTE_111_VICTOR_WINSTRATE                        0x300
 #define FLAG_HIDE_ROUTE_111_VICTORIA_WINSTRATE                      0x301
 #define FLAG_HIDE_ROUTE_111_VIVI_WINSTRATE                          0x302

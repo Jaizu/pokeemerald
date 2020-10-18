@@ -224,6 +224,7 @@ WindmistCity_Gym_EventScript_Nina::
 
 WindmistCity_Gym_EventScript_NinaDefeated:
 	setflag FLAG_BADGE03_GET
+	setflag FLAG_WHITEOUT_TO_WINDMIST
 	call WindmistCity_Gym_EventScript_GiveFlameCharge
 	setvar VAR_0x8008, 2
 	call Common_EventScript_SetGymTrainers

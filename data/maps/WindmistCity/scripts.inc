@@ -1,6 +1,9 @@
+.set LOCALID_REDWOOD, 11
+
 WindmistCity_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, WindmistCity_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, WindmistCity_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, WindmistCity_OnFrame
 	.byte 0
 
 WindmistCity_OnLoad::
@@ -15,11 +18,197 @@ WindmistCity_OnTransition::
 	setflag FLAG_VISITED_WINDMIST_CITY
 	compare VAR_CELANTO_GROVE_STATE, 0
 	call_if_eq WindmistCity_EventScript_ClearCelantoGroveRoadblock
+	call_if_set FLAG_WHITEOUT_TO_WINDMIST, WindmistCity_EventScript_ClearWindmistWhiteOut
+	compare VAR_WINDMIST_CITY_STATE, 1
+	call_if_eq WindmistCity_EventScript_CheckSetRedwoodPos
+	compare VAR_WINDMIST_CITY_STATE, 1
+	call_if_eq WindmistCity_EventScript_HideMapNamePopup
 	end
 
 WindmistCity_EventScript_ClearCelantoGroveRoadblock:
 	setvar VAR_CELANTO_GROVE_STATE, 1
 	return
+
+WindmistCity_EventScript_ClearWindmistWhiteOut:
+	clearflag FLAG_WHITEOUT_TO_WINDMIST
+	return
+
+WindmistCity_EventScript_CheckSetRedwoodPos:
+	getplayerxy VAR_0x8004, VAR_0x8005
+	compare VAR_0x8004, 15
+	goto_if_eq WindmistCity_EventScript_SetRedwoodPos
+	return
+
+WindmistCity_EventScript_SetRedwoodPos:
+	setobjectxyperm LOCALID_REDWOOD, 23, 6
+	return
+
+WindmistCity_EventScript_HideMapNamePopup:
+	setflag FLAG_HIDE_MAP_NAME_POPUP
+	return
+
+WindmistCity_OnFrame:
+	map_script_2 VAR_WINDMIST_CITY_STATE, 1, WindmistCity_EventScript_RedwoodMeeting
+	.2byte 0
+
+WindmistCity_EventScript_RedwoodMeeting::
+	lockall
+	getplayerxy VAR_0x8008, VAR_0x8009
+	compare VAR_0x8008, 15
+	call_if_eq WindmistCity_EventScript_RedwoodWalkFromKnickKnackStore
+	compare VAR_0x8008, 15
+	call_if_ne WindmistCity_EventScript_RedwoodNoticePlayer
+	delay 20
+	msgbox WindmistCity_Text_ISeeYouveAlsoWonNinasBadge, MSGBOX_DEFAULT
+	fadedefaultbgm
+	giveitem ITEM_BIKE_VOUCHER
+	msgbox WindmistCity_Text_DoYouWantToComeWithMe, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq WindmistCity_EventScript_WarpToAerousPort
+	msgbox WindmistCity_Text_WellThatsFineToo, MSGBOX_DEFAULT
+	closemessage
+	getplayerxy VAR_0x8008, VAR_0x8009
+	compare VAR_0x8008, 15
+	call_if_eq WindmistCity_EventScript_ExitRedwoodFromPokemonCenter
+	compare VAR_0x8008, 15
+	call_if_ne WindmistCity_EventScript_ExitRedwoodFromGym
+	removeobject LOCALID_REDWOOD
+	setvar VAR_AEROUS_CITY_STATE, 2
+	setvar VAR_WINDMIST_CITY_STATE, 2
+	releaseall
+	end
+
+WindmistCity_EventScript_WarpToAerousPort:
+	msgbox WindmistCity_Text_GreatLetsLeave, MSGBOX_DEFAULT
+	closemessage
+	clearflag FLAG_HIDE_AEROUS_CITY_REDWOOD
+	setvar VAR_AEROUS_CITY_STATE, 1
+	setflag FLAG_HIDE_WINDMIST_CITY_REDWOOD
+	setvar VAR_WINDMIST_CITY_STATE, 2
+	warp MAP_AEROUS_CITY, -1, 28, 33
+	waitstate
+	releaseall
+	end
+
+WindmistCity_EventScript_RedwoodWalkFromKnickKnackStore:
+	msgbox WindmistCity_Text_Player, MSGBOX_DEFAULT
+	closemessage
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestRight
+	waitmovement 0
+	playbgm MUS_RG_OHKIDO, 0
+	applymovement LOCALID_REDWOOD, WindmistCity_Movement_RedwoodWalkToPlayerFromKnickKnackStore
+	waitmovement 0
+	return
+
+WindmistCity_EventScript_RedwoodNoticePlayer:
+	applymovement LOCALID_REDWOOD, Common_Movement_WalkInPlaceFastestRight
+	waitmovement 0
+	playse SE_PIN
+	applymovement LOCALID_REDWOOD, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_REDWOOD, Common_Movement_Delay48
+	waitmovement 0
+	msgbox WindmistCity_Text_Player, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestLeft
+	waitmovement 0
+	playbgm MUS_RG_OHKIDO, 0
+	applymovement LOCALID_REDWOOD, WindmistCity_Movement_RedwoodWalkToPlayerFromGym
+	waitmovement 0
+	return
+
+WindmistCity_EventScript_ExitRedwoodFromPokemonCenter:
+	applymovement LOCALID_REDWOOD, WindmistCity_Movement_ExitRedwoodFromPokemonCenter
+	waitmovement 0
+	return
+
+WindmistCity_EventScript_ExitRedwoodFromGym:
+	applymovement LOCALID_REDWOOD, WindmistCity_Movement_ExitRedwoodFromGym
+	waitmovement 0
+	return
+
+WindmistCity_Text_Player:
+	.string "Redwood: {COLOR BLUE}{PLAYER}!$"
+
+WindmistCity_Text_ISeeYouveAlsoWonNinasBadge:
+	.string "Redwood: {COLOR BLUE}I see you've also\n"
+	.string "won Nina's Badge.\p"
+	.string "{RIVAL} won his, and now he's\n"
+	.string "headed to {COLOR GREEN}Sabulo Island{COLOR BLUE}.\p"
+	.string "I finally got the machine part I\n"
+	.string "needed.\p"
+	.string "That means I'll be able to revive\n"
+	.string "{COLOR GREEN}Fossil Pokémon{COLOR BLUE} using the machine at\l"
+	.string "my home again!\p"
+	.string "You and {RIVAL} are free to\n"
+	.string "use it, too, of course.\p"
+	.string "Speaking of {RIVAL}, I gave him\n"
+	.string "one of these. Here's yours!$"
+
+WindmistCity_Text_DoYouWantToComeWithMe:
+	.string "Redwood: {COLOR BLUE}You can redeem that for a\n"
+	.string "Bicycle in Aerous City.\p"
+	.string "I'm headed back there now, myself.\n"
+	.string "Do you want to come with me?$"
+
+WindmistCity_Text_GreatLetsLeave:
+	.string "Redwood: {COLOR BLUE}Great, let's leave!$"
+
+WindmistCity_Text_WellThatsFineToo:
+	.string "Redwood: {COLOR BLUE}Well, that's fine too.\p"
+	.string "After all, you've got your\n"
+	.string "Town Map if you get lost.\p"
+	.string "Now, I'm going to head home and\n"
+	.string "study that book you found.\p"
+	.string "Perhaps it will have some answers!\n"
+	.string "See you around, {PLAYER}!$"
+
+WindmistCity_Movement_RedwoodWalkToPlayerFromKnickKnackStore:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+WindmistCity_Movement_RedwoodWalkToPlayerFromGym:
+	walk_right
+	walk_right
+	step_end
+
+WindmistCity_Movement_ExitRedwoodFromPokemonCenter:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+WindmistCity_Movement_ExitRedwoodFromGym:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_diag_southwest
+	walk_left
+	step_end
 
 WindmistCity_EventScript_CitySign::
 	msgbox WindmistCity_Text_CitySign, MSGBOX_SIGN
