@@ -211,6 +211,13 @@
 		setflag FLAG_RECEIVED_EXP_SHARE
 		// Coulter leaves
 		setflag FLAG_HIDE_NESTPINE_TOWN_COULTER
+		// Obtain SecretPotion
+		setflag FLAG_RECEIVED_SECRET_POTION
+		// ARCHAN HILLS
+		// Clear the ill Psyduck
+		setflag FLAG_HIDE_ARCHAN_HILLS_PSYDUCK
+		// Fight Becca
+		settrainerflag TRAINER_BECCA_1
 		// NESTPINE GYM
 		// Fight Trainers
 		settrainerflag TRAINER_WILHELM
@@ -275,6 +282,40 @@
 		settrainerflag TRAINER_APEX_TEMPLE_GRUNT_1
 		settrainerflag TRAINER_APEX_TEMPLE_GRUNT_2
 		settrainerflag TRAINER_APEX_TEMPLE_GRUNTS
+		// Listen to Enoch's speech
+		setflag FLAG_HIDE_APEX_TEMPLE_ENOCH_AND_GRUNTS
+		// Leave with Coulter & the book
+		setflag FLAG_HIDE_APEX_TEMPLE_BOOK
+		setvar VAR_APEX_TEMPLE_STATE, 1
+		// WINDMIST CITY POKEMON CENTER
+		// Meet with Coulter & Redwood
+		setvar VAR_WINDMIST_CITY_POKEMON_CENTER_STATE, 2
+		setflag FLAG_UNLOCK_WINDMIST_GYM_DOOR
+		// WINDMIST GYM
+		// Fight Trainers
+		// settrainerflag TRAINER_HECTOR
+		// settrainerflag TRAINER_ANGELICA
+		// settrainerflag TRAINER_JUNIOR
+		// Complete the puzzle
+		// setvar VAR_WINDMIST_GYM_STATE, 3
+		// Fight Nina
+		// settrainerflag TRAINER_LEADER_NINA_1
+		// setflag FLAG_BADGE03_GET
+		// setflag FLAG_DEFEATED_WINDMIST_GYM
+		// WINDMIST CITY
+		// Obtain the Bike Voucher from Redwood
+		// setvar VAR_WINDMIST_CITY_STATE, 2
+		// AEROUS CITY
+		// Say goodbye to Redwood
+		// setvar VAR_AEROUS_CITY_STATE, 2
+		// Exchange Bike Voucher for Bicycle
+		// setflag FLAG_RECEIVED_BIKE
+		// additem ITEM_BICYCLE
+		// AEROUS PORT
+		// Fight Braveton
+		// settrainerflag TRAINER_BRAVETON
+		// The SS Wake arrives
+		// clearflag FLAG_HIDE_AEROUS_CITY_PORT_SS_WAKE
 		end
 	
 	Debug_EventScript_GetParty::

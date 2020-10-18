@@ -106,6 +106,7 @@ WindmistCity_EventScript_RedwoodWalkFromKnickKnackStore:
 	return
 
 WindmistCity_EventScript_RedwoodNoticePlayer:
+	delay 10
 	applymovement LOCALID_REDWOOD, Common_Movement_WalkInPlaceFastestRight
 	waitmovement 0
 	playse SE_PIN
@@ -206,7 +207,7 @@ WindmistCity_Movement_ExitRedwoodFromGym:
 	walk_left
 	walk_left
 	walk_left
-	walk_diag_southwest
+	walk_slow_diag_southwest
 	walk_left
 	step_end
 
