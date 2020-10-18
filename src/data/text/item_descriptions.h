@@ -1420,10 +1420,10 @@ static const u8 sSootSackDesc[] = _(
     "gather and hold\n"
     "volcanic ash.");
 
-static const u8 sBasementKeyDesc[] = _(
-    "The key for NEW\n"
-    "MAUVILLE beneath\n"
-    "MAUVILLE CITY.");
+static const u8 sSecretPotionDesc[] = _(
+    "Medicine for ill\n"
+    "Pokémon. It can\n"
+    "heal many at once.");
 
 static const u8 sAcroBikeDesc[] = _(
     "A folding bicycle\n"

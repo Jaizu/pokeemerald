@@ -3824,12 +3824,12 @@ const struct Item gItems[] =
         .secondaryId = 0,
     },
 
-    [ITEM_BASEMENT_KEY] =
+    [ITEM_SECRET_POTION] =
     {
-        .name = _("Basement Key"),
-        .itemId = ITEM_BASEMENT_KEY,
+        .name = _("SecretPotion"),
+        .itemId = ITEM_SECRET_POTION,
         .price = 0,
-        .description = sBasementKeyDesc,
+        .description = sSecretPotionDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,

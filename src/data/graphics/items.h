@@ -616,8 +616,8 @@ const u32 gItemIconPalette_DustyTome[] = INCBIN_U32("graphics/items/icon_palette
 const u32 gItemIcon_SootSack[] = INCBIN_U32("graphics/items/icons/soot_sack.4bpp.lz");
 const u32 gItemIconPalette_SootSack[] = INCBIN_U32("graphics/items/icon_palettes/soot_sack.gbapal.lz");
 
-const u32 gItemIcon_BasementKey[] = INCBIN_U32("graphics/items/icons/basement_key.4bpp.lz");
-const u32 gItemIconPalette_OldKey[] = INCBIN_U32("graphics/items/icon_palettes/old_key.gbapal.lz");
+const u32 gItemIcon_SecretPotion[] = INCBIN_U32("graphics/items/icons/secret_potion.4bpp.lz");
+const u32 gItemIconPalette_SecretPotion[] = INCBIN_U32("graphics/items/icon_palettes/secret_potion.gbapal.lz");
 
 const u32 gItemIcon_AcroBike[] = INCBIN_U32("graphics/items/icons/acro_bike.4bpp.lz");
 const u32 gItemIconPalette_AcroBike[] = INCBIN_U32("graphics/items/icon_palettes/acro_bike.gbapal.lz");
@@ -652,6 +652,7 @@ const u32 gItemIcon_Room4Key[] = INCBIN_U32("graphics/items/icons/room4_key.4bpp
 const u32 gItemIcon_Room6Key[] = INCBIN_U32("graphics/items/icons/room6_key.4bpp.lz");
 
 const u32 gItemIcon_StorageKey[] = INCBIN_U32("graphics/items/icons/storage_key.4bpp.lz");
+const u32 gItemIconPalette_StorageKey[] = INCBIN_U32("graphics/items/icon_palettes/storage_key.gbapal.lz");
 
 const u32 gItemIcon_RootFossil[] = INCBIN_U32("graphics/items/icons/root_fossil.4bpp.lz");
 const u32 gItemIconPalette_HoennFossil[] = INCBIN_U32("graphics/items/icon_palettes/hoenn_fossil.gbapal.lz");

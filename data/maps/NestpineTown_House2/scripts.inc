@@ -1,4 +1,3 @@
-// TODO: Create SecretPotion item
 NestpineTown_House2_MapScripts::
 	.byte 0
 
