@@ -161,8 +161,9 @@
 #define TRAINER_ANGELICA                     78 // TRAINER_WILTON_1 in Emerald
 #define TRAINER_EDGAR                        79
 #define TRAINER_JUNIOR                       79 // TRAINER_EDGAR in Emerald
-
 #define TRAINER_ALBERT                       80
+#define TRAINER_BRAVETON                     80 // TRAINER_ALBERT in Emerald
+
 #define TRAINER_SAMUEL                       81
 #define TRAINER_VITO                         82
 #define TRAINER_OWEN                         83

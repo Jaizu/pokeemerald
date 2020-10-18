@@ -1119,18 +1119,18 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_Junior},
     },
 
-    [TRAINER_ALBERT] =
+    [TRAINER_BRAVETON] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_COOLTRAINER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
-        .trainerName = _("ALBERT"),
-        .items = {ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
+        .trainerClass = TRAINER_CLASS_SAILOR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_SAILOR,
+        .trainerName = _("Braveton"),
+        .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Albert),
-        .party = {.NoItemDefaultMoves = sParty_Albert},
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_Braveton),
+        .party = {.NoItemDefaultMoves = sParty_Braveton},
     },
 
     [TRAINER_SAMUEL] =
