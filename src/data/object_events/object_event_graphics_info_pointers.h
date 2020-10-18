@@ -127,7 +127,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_DRAKE] =                    &gObjectEventGraphicsInfo_Drake,
     [OBJ_EVENT_GFX_FERNANDO] =                 &gObjectEventGraphicsInfo_Fernando,
     [OBJ_EVENT_GFX_ARIA] =                     &gObjectEventGraphicsInfo_Aria,
-    [OBJ_EVENT_GFX_WATTSON] =                  &gObjectEventGraphicsInfo_Wattson,
+    [OBJ_EVENT_GFX_NINA] =                     &gObjectEventGraphicsInfo_Nina,
     [OBJ_EVENT_GFX_FLANNERY] =                 &gObjectEventGraphicsInfo_Flannery,
     [OBJ_EVENT_GFX_NORMAN] =                   &gObjectEventGraphicsInfo_Norman,
     [OBJ_EVENT_GFX_WINONA] =                   &gObjectEventGraphicsInfo_Winona,
@@ -314,5 +314,6 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPaletteChansey, OBJ_EVENT_PAL_TAG_CHANSEY},
     {gObjectEventPaletteRancher, OBJ_EVENT_PAL_TAG_RANCHER},
     {gObjectEventPaletteEnoch, OBJ_EVENT_PAL_TAG_ENOCH},
+    {gObjectEventPaletteNina, OBJ_EVENT_PAL_TAG_NINA},
     {NULL, 0x0000},
 };
