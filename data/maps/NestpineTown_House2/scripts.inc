@@ -5,11 +5,11 @@ NestpineTown_House2_MapScripts::
 NestpineTown_House2_EventScript_HexManiac::
 	lock
 	faceplayer
-	goto_if_set FLAG_NESTPINE_NPC_TRADE_COMPLETED, NestpineTown_House2_EventScript_TradeCompleted
 	setvar VAR_0x8008, INGAME_TRADE_DROWZEE
 	copyvar VAR_0x8004, VAR_0x8008
 	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
 	copyvar VAR_0x8009, VAR_RESULT
+	goto_if_set FLAG_NESTPINE_NPC_TRADE_COMPLETED, NestpineTown_House2_EventScript_TradeCompleted
 	msgbox NestpineTown_House2_Text_IveBeenTryingToFindAnAbra, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq NestpineTown_House2_EventScript_DeclineTrade
