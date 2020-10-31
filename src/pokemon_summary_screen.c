@@ -234,7 +234,6 @@ static void Task_PrintBattleMoves(u8 taskId);
 static void PrintMoveNameAndPP(u8 a);
 static void PrintMoveDetails(u16 a);
 static void PrintNewMoveDetailsOrCancelText(void);
-static void AddAndFillMoveNamesWindow(void);
 static void SwapMovesNamesPP(u8 moveIndex1, u8 moveIndex2);
 static void PrintHMMovesCantBeForgotten(void);
 static void ResetSpriteIds(void);
@@ -2963,22 +2962,12 @@ static void PrintNewMoveDetailsOrCancelText(void)
     }
 }
 
-static void AddAndFillMoveNamesWindow(void)
-{
-    u8 windowId = AddWindowFromTemplateList(sPageMovesTemplate, PSS_WINDOW_MOVE_NAMES);
-    FillWindowPixelRect(windowId, PIXEL_FILL(0), 0, 66, 72, 16);
-    CopyWindowToVram(windowId, 2);
-}
-
 static void SwapMovesNamesPP(u8 moveIndex1, u8 moveIndex2)
 {
     u8 windowId = AddWindowFromTemplateList(sPageMovesTemplate, PSS_WINDOW_MOVE_NAMES);
 
-    FillWindowPixelRect(windowId, PIXEL_FILL(0), 0, moveIndex1 * 16, 72, 16);
-    FillWindowPixelRect(windowId, PIXEL_FILL(0), 0, moveIndex2 * 16, 72, 16);
-
-    FillWindowPixelRect(windowId, PIXEL_FILL(0), 0, moveIndex1 * 16, 48, 16);
-    FillWindowPixelRect(windowId, PIXEL_FILL(0), 0, moveIndex2 * 16, 48, 16);
+    FillWindowPixelRect(windowId, PIXEL_FILL(0), 0, moveIndex1 * 28 + 4, 120, 32);
+    FillWindowPixelRect(windowId, PIXEL_FILL(0), 0, moveIndex2 * 28 + 4, 120, 32);
 
     PrintMoveNameAndPP(moveIndex1);
     PrintMoveNameAndPP(moveIndex2);
