@@ -50,8 +50,7 @@
 #include "constants/species.h"
 
 #define PSS_TITLE_WINDOW_POKEMON_LVL_NAME_GENDER 0
-#define PSS_LABEL_WINDOW_MOVES_POWER_ACC 1 // Also contains the power and accuracy values
-#define PSS_LABEL_WINDOW_END 2
+#define PSS_LABEL_WINDOW_END 1
 
 // Dynamic fields for the Pokemon Info page
 #define PSS_WINDOW_INFO_LEFT_COLUMN 0
@@ -67,7 +66,7 @@
 #define PSS_WINDOW_MOVE_NAMES 0
 #define PSS_WINDOW_MOVE_DESCRIPTION 1
 
-#define MOVE_SELECTOR_SPRITES_COUNT 10
+#define MOVE_SELECTOR_SPRITES_COUNT 2
 // for the spriteIds field in PokemonSummaryScreenData
 enum
 {
@@ -76,7 +75,7 @@ enum
     SPRITE_ARR_ID_STATUS,
     SPRITE_ARR_ID_MON_ICON,
     SPRITE_ARR_ID_TYPE, // 2 for mon types, 5 for move types(4 moves and 1 to learn), used interchangeably, because mon types and move types aren't shown on the same screen
-    SPRITE_ARR_ID_MOVE_SELECTOR1 = SPRITE_ARR_ID_TYPE + 5, // 10 sprites that make up the selector
+    SPRITE_ARR_ID_MOVE_SELECTOR1 = SPRITE_ARR_ID_TYPE + 5, // 2 sprites that make up the selector
     SPRITE_ARR_ID_MOVE_SELECTOR2 = SPRITE_ARR_ID_MOVE_SELECTOR1 + MOVE_SELECTOR_SPRITES_COUNT,
     SPRITE_ARR_ID_COUNT = SPRITE_ARR_ID_MOVE_SELECTOR2 + MOVE_SELECTOR_SPRITES_COUNT
 };
@@ -186,7 +185,7 @@ static bool8 CanReplaceMove(void);
 static void ShowCantForgetHMsWindow(u8 taskId);
 static void Task_HandleInputCantForgetHMsMoves(u8 taskId);
 static void DrawPagination(void);
-static void HandlePowerAccTilemap(u16 a, s16 b);
+static void TilemapPowerAccDisplay(bool8 remove);
 static void Task_ShowPowerAccWindow(u8 taskId);
 static void TilemapFiveMovesDisplay(u16 *dst, u16 palette, bool8 remove);
 static void DrawPokerusCuredSymbol(struct Pokemon* mon);
@@ -348,15 +347,6 @@ static const struct WindowTemplate sSummaryTemplate[] =
         .paletteNum = 6,
         .baseBlock = 1,
     },
-    [PSS_LABEL_WINDOW_MOVES_POWER_ACC] = {
-        .bg = 0,
-        .tilemapLeft = 0,
-        .tilemapTop = 0,
-        .width = 0,
-        .height = 0,
-        .paletteNum = 6,
-        .baseBlock = 49,
-    },
     [PSS_LABEL_WINDOW_END] = DUMMY_WIN_TEMPLATE
 };
 static const struct WindowTemplate sPageInfoTemplate[] =
@@ -368,7 +358,7 @@ static const struct WindowTemplate sPageInfoTemplate[] =
         .width = 12,
         .height = 12,
         .paletteNum = 6,
-        .baseBlock = 105,
+        .baseBlock = 49,
     },
     [PSS_WINDOW_INFO_HELD_ITEM] = {
         .bg = 0,
@@ -377,7 +367,7 @@ static const struct WindowTemplate sPageInfoTemplate[] =
         .width = 10,
         .height = 3,
         .paletteNum = 6,
-        .baseBlock = 249,
+        .baseBlock = 193,
     },
     [PSS_WINDOW_INFO_MEMO] = {
         .bg = 0,
@@ -386,7 +376,7 @@ static const struct WindowTemplate sPageInfoTemplate[] =
         .width = 18,
         .height = 4,
         .paletteNum = 6,
-        .baseBlock = 279,
+        .baseBlock = 223,
     },
 };
 static const struct WindowTemplate sPageSkillsTemplate[] =
@@ -398,7 +388,7 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
         .width = 9,
         .height = 16,
         .paletteNum = 6,
-        .baseBlock = 351,
+        .baseBlock = 295,
     },
     [PSS_WINDOW_SKILLS_HP_AND_EXP_TITLES] = {
         .bg = 0,
@@ -407,7 +397,7 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
         .width = 8,
         .height = 8,
         .paletteNum = 6,
-        .baseBlock = 495,
+        .baseBlock = 439,
     },
     [PSS_WINDOW_SKILLS_ABILITY] = {
         .bg = 0,
@@ -416,7 +406,7 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
         .width = 18,
         .height = 4,
         .paletteNum = 6,
-        .baseBlock = 559,
+        .baseBlock = 503,
     },
 };
 static const struct WindowTemplate sPageMovesTemplate[] =
@@ -428,16 +418,16 @@ static const struct WindowTemplate sPageMovesTemplate[] =
         .width = 10,
         .height = 18,
         .paletteNum = 6,
-        .baseBlock = 631,
+        .baseBlock = 575,
     },
     [PSS_WINDOW_MOVE_DESCRIPTION] = {
         .bg = 0,
         .tilemapLeft = 15,
-        .tilemapTop = 11,
+        .tilemapTop = 10,
         .width = 14,
-        .height = 9,
+        .height = 10,
         .paletteNum = 6,
-        .baseBlock = 811,
+        .baseBlock = 755,
     },
 };
 static const u8 sTextColors[][3] =
@@ -456,9 +446,6 @@ static const u8 sTextColors[][3] =
     {0, 5, 6},
     {0, 7, 8}
 };
-
-static const u8 sSummaryAButtonBitmap[] = INCBIN_U8("graphics/interface/summary_a_button.4bpp");
-static const u8 sSummaryBButtonBitmap[] = INCBIN_U8("graphics/interface/summary_b_button.4bpp");
 
 static void (*const sTextPrinterFunctions[])(void) =
 {
@@ -491,15 +478,15 @@ static const u32 sSplitIcons_Gfx[] = INCBIN_U32("graphics/interface/split_icons.
 
 static const struct OamData sOamData_SplitIcons =
 {
-    .size = SPRITE_SIZE(16x16),
-    .shape = SPRITE_SHAPE(16x16),
+    .size = SPRITE_SIZE(32x16),
+    .shape = SPRITE_SHAPE(32x16),
     .priority = 0,
 };
 
 static const struct CompressedSpriteSheet sSpriteSheet_SplitIcons =
 {
     .data = sSplitIcons_Gfx,
-    .size = 16*16*3/2,
+    .size = 32*16*3/2,
     .tag = TAG_SPLIT_ICONS,
 };
 
@@ -517,13 +504,13 @@ static const union AnimCmd sSpriteAnim_SplitIcon0[] =
 
 static const union AnimCmd sSpriteAnim_SplitIcon1[] =
 {
-    ANIMCMD_FRAME(4, 0),
+    ANIMCMD_FRAME(8, 0),
     ANIMCMD_END
 };
 
 static const union AnimCmd sSpriteAnim_SplitIcon2[] =
 {
-    ANIMCMD_FRAME(8, 0),
+    ANIMCMD_FRAME(16, 0),
     ANIMCMD_END
 };
 
@@ -705,72 +692,42 @@ static const struct OamData sOamData_MoveSelector =
     .objMode = ST_OAM_OBJ_NORMAL,
     .mosaic = 0,
     .bpp = ST_OAM_4BPP,
-    .shape = SPRITE_SHAPE(16x16),
+    .shape = SPRITE_SHAPE(64x32),
     .x = 0,
     .matrixNum = 0,
-    .size = SPRITE_SIZE(16x16),
+    .size = SPRITE_SIZE(64x32),
     .tileNum = 0,
     .priority = 1,
     .paletteNum = 0,
     .affineParam = 0,
 };
-static const union AnimCmd sSpriteAnim_MoveSelector0[] = {
-    ANIMCMD_FRAME(0, 0, FALSE, FALSE),
+static const union AnimCmd sSpriteAnim_MoveSelectorLeftRed[] = {
+    ANIMCMD_FRAME(0),
     ANIMCMD_END
 };
-static const union AnimCmd sSpriteAnim_MoveSelector1[] = {
-    ANIMCMD_FRAME(4, 0, FALSE, FALSE),
+static const union AnimCmd sSpriteAnim_MoveSelectorRightRed[] = {
+    ANIMCMD_FRAME(64),
     ANIMCMD_END
 };
-static const union AnimCmd sSpriteAnim_MoveSelector2[] = {
-    ANIMCMD_FRAME(8, 0, FALSE, FALSE),
+static const union AnimCmd sSpriteAnim_MoveSelectorLeftBlue[] = {
+    ANIMCMD_FRAME(32),
     ANIMCMD_END
 };
-static const union AnimCmd sSpriteAnim_MoveSelector3[] = {
-    ANIMCMD_FRAME(12, 0, FALSE, FALSE),
-    ANIMCMD_END
-};
-static const union AnimCmd sSpriteAnim_MoveSelectorLeft[] = {
-    ANIMCMD_FRAME(16, 0, FALSE, FALSE),
-    ANIMCMD_END
-};
-static const union AnimCmd sSpriteAnim_MoveSelectorRight[] = {
-    ANIMCMD_FRAME(16, 0, TRUE, FALSE),
-    ANIMCMD_END
-};
-static const union AnimCmd sSpriteAnim_MoveSelectorMiddle[] = {
-    ANIMCMD_FRAME(20, 0, FALSE, FALSE),
-    ANIMCMD_END
-};
-static const union AnimCmd sSpriteAnim_MoveSelector7[] = {
-    ANIMCMD_FRAME(24, 0, FALSE, FALSE),
-    ANIMCMD_END
-};
-static const union AnimCmd sSpriteAnim_MoveSelector8[] = {
-    ANIMCMD_FRAME(24, 0, TRUE, FALSE),
-    ANIMCMD_END
-};
-static const union AnimCmd sSpriteAnim_MoveSelector9[] = {
-    ANIMCMD_FRAME(28, 0, FALSE, FALSE),
+static const union AnimCmd sSpriteAnim_MoveSelectorRightBlue[] = {
+    ANIMCMD_FRAME(96),
     ANIMCMD_END
 };
 // All except left, middle and right are unused
 static const union AnimCmd *const sSpriteAnimTable_MoveSelector[] = {
-    sSpriteAnim_MoveSelector0,
-    sSpriteAnim_MoveSelector1,
-    sSpriteAnim_MoveSelector2,
-    sSpriteAnim_MoveSelector3,
-    sSpriteAnim_MoveSelectorLeft,
-    sSpriteAnim_MoveSelectorRight,
-    sSpriteAnim_MoveSelectorMiddle,
-    sSpriteAnim_MoveSelector7,
-    sSpriteAnim_MoveSelector8,
-    sSpriteAnim_MoveSelector9,
+    sSpriteAnim_MoveSelectorLeftRed,
+    sSpriteAnim_MoveSelectorRightRed,
+    sSpriteAnim_MoveSelectorLeftBlue,
+    sSpriteAnim_MoveSelectorRightBlue
 };
 static const struct CompressedSpriteSheet sMoveSelectorSpriteSheet =
 {
     .data = gSummaryMoveSelect_Gfx,
-    .size = 0x400,
+    .size = 0x1000,
     .tag = TAG_MOVE_SELECTOR
 };
 static const struct CompressedSpritePalette sMoveSelectorSpritePal =
@@ -868,7 +825,7 @@ static const u16 sSummaryMarkingsPalette[] = INCBIN_U16("graphics/interface/summ
 static u8 ShowSplitIcon(u32 split)
 {
     if (sMonSummaryScreen->splitIconSpriteId == 0xFF)
-        sMonSummaryScreen->splitIconSpriteId = CreateSprite(&sSpriteTemplate_SplitIcons, 48, 129, 0);
+        sMonSummaryScreen->splitIconSpriteId = CreateSprite(&sSpriteTemplate_SplitIcons, 214, 90, 0);
 
     gSprites[sMonSummaryScreen->splitIconSpriteId].invisible = FALSE;
     StartSpriteAnim(&gSprites[sMonSummaryScreen->splitIconSpriteId], split);
@@ -1134,34 +1091,31 @@ static bool8 DecompressGraphics(void)
         sMonSummaryScreen->switchCounter++;
         break;
     case 5:
-        sMonSummaryScreen->switchCounter++;
-        break;
-    case 6:
         LoadCompressedPalette(gStatusScreenPalette, 0, 0x100);
         LoadPalette(&gUnknown_08D85620, 0x81, 0x1E);
         sMonSummaryScreen->switchCounter++;
         break;
-    case 7:
+    case 6:
         LoadCompressedSpriteSheet(&sSpriteSheet_MoveTypes);
         sMonSummaryScreen->switchCounter++;
         break;
-    case 8:
+    case 7:
         LoadCompressedSpriteSheet(&sMoveSelectorSpriteSheet);
         sMonSummaryScreen->switchCounter++;
         break;
-    case 9:
+    case 8:
         LoadCompressedSpriteSheet(&sStatusIconsSpriteSheet);
         sMonSummaryScreen->switchCounter++;
         break;
-    case 10:
+    case 9:
         LoadCompressedSpritePalette(&sStatusIconsSpritePalette);
         sMonSummaryScreen->switchCounter++;
         break;
-    case 11:
+    case 10:
         LoadCompressedSpritePalette(&sMoveSelectorSpritePal);
         sMonSummaryScreen->switchCounter++;
         break;
-    case 12:
+    case 11:
         LoadCompressedPalette(gMoveTypes_Pal, 0x1D0, 0x60);
         LoadCompressedSpriteSheet(&sSpriteSheet_SplitIcons);
         LoadSpritePalette(&sSpritePal_SplitIcons);
@@ -1266,10 +1220,6 @@ static void SetDefaultTilemaps(void)
         TilemapFiveMovesDisplay(sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_BATTLE_MOVES][0], 3, FALSE);
         SetBgTilemapBuffer(2, sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_BATTLE_MOVES][0]);
         ChangeBgX(2, 0x10000, 1);
-    }
-    else
-    {
-        HandlePowerAccTilemap(0, 0xFF);
     }
 
     LimitEggSummaryPageDisplay();
@@ -1753,23 +1703,17 @@ static void ChangeSelectedMove(s16 *taskData, s8 direction, u8 *moveIndexPtr)
         if (move != 0)
             break;
     }
+    ScheduleBgCopyTilemapToVram(0);
     ScheduleBgCopyTilemapToVram(1);
     ScheduleBgCopyTilemapToVram(2);
     PrintMoveDetails(move);
-    if ((*moveIndexPtr == MAX_MON_MOVES && sMonSummaryScreen->newMove == MOVE_NONE)
-        || taskData[1] == 1)
-    {
-        ScheduleBgCopyTilemapToVram(0);
-        HandlePowerAccTilemap(9, -3);
-    }
+
     if (*moveIndexPtr != MAX_MON_MOVES
         && newMoveIndex == MAX_MON_MOVES
         && sMonSummaryScreen->newMove == MOVE_NONE)
     {
-        ClearWindowTilemap(PSS_LABEL_WINDOW_MOVES_POWER_ACC);
         DestroySplitIcon();
-        ScheduleBgCopyTilemapToVram(0);
-        HandlePowerAccTilemap(0, 3);
+        TilemapPowerAccDisplay(TRUE);
     }
 
     *moveIndexPtr = newMoveIndex;
@@ -1788,9 +1732,8 @@ static void CloseMoveSelectMode(u8 taskId)
     TilemapFiveMovesDisplay(sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_BATTLE_MOVES][0], 3, TRUE);
     if (sMonSummaryScreen->firstMoveIndex != MAX_MON_MOVES)
     {
-        ClearWindowTilemap(PSS_LABEL_WINDOW_MOVES_POWER_ACC);
         DestroySplitIcon();
-        HandlePowerAccTilemap(0, 3);
+        TilemapPowerAccDisplay(TRUE);
     }
     ScheduleBgCopyTilemapToVram(0);
     ScheduleBgCopyTilemapToVram(1);
@@ -2012,10 +1955,8 @@ static bool8 CanReplaceMove(void)
 
 static void ShowCantForgetHMsWindow(u8 taskId)
 {
-    ClearWindowTilemap(PSS_LABEL_WINDOW_MOVES_POWER_ACC);
     gSprites[sMonSummaryScreen->splitIconSpriteId].invisible = TRUE;
     ScheduleBgCopyTilemapToVram(0);
-    HandlePowerAccTilemap(0, 3);
     PrintHMMovesCantBeForgotten();
     gTasks[taskId].func = Task_HandleInputCantForgetHMsMoves;
 }
@@ -2048,14 +1989,12 @@ static void Task_HandleInputCantForgetHMsMoves(u8 taskId)
             move = sMonSummaryScreen->summary.moves[sMonSummaryScreen->firstMoveIndex];
             gTasks[taskId].func = Task_HandleReplaceMoveInput;
             ChangePage(taskId, 1);
-            HandlePowerAccTilemap(9, -2);
         }
         else if (gMain.newKeys & (A_BUTTON | B_BUTTON))
         {
             move = sMonSummaryScreen->summary.moves[sMonSummaryScreen->firstMoveIndex];
             PrintMoveDetails(move);
             ScheduleBgCopyTilemapToVram(0);
-            HandlePowerAccTilemap(9, -3);
             gTasks[taskId].func = Task_HandleReplaceMoveInput;
         }
     }
@@ -2137,21 +2076,15 @@ static void ChangeTilemap(const struct TilemapCtrl *tilemap, u16 *dest, u8 c, bo
     Free(alloced);
 }
 
-static void HandlePowerAccTilemap(u16 a, s16 b)
+static void TilemapPowerAccDisplay(bool8 remove)
 {
-    if (b > sBattleMoveTilemapCtrl.width)
-        b = sBattleMoveTilemapCtrl.width;
-    if (b == 0 || b == sBattleMoveTilemapCtrl.width)
+    if (remove)
     {
-        ChangeTilemap(&sBattleMoveTilemapCtrl, sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_BATTLE_MOVES][0], b, TRUE);
+        ChangeTilemap(&sBattleMoveTilemapCtrl, sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_BATTLE_MOVES][1], sBattleMoveTilemapCtrl.width, remove);
     }
     else
     {
-        u8 taskId = FindTaskIdByFunc(Task_ShowPowerAccWindow);
-        if (taskId == 0xFF)
-            taskId = CreateTask(Task_ShowPowerAccWindow, 8);
-        gTasks[taskId].data[0] = b;
-        gTasks[taskId].data[1] = a;
+        ChangeTilemap(&sBattleMoveTilemapCtrl, sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_BATTLE_MOVES][1], 0, remove);
     }
 }
 
@@ -2159,24 +2092,16 @@ static void Task_ShowPowerAccWindow(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
     data[1] += data[0];
+    
     if (data[1] < 0)
-    {
         data[1] = 0;
-    }
     else if (data[1] > sBattleMoveTilemapCtrl.width)
-    {
         data[1] = sBattleMoveTilemapCtrl.width;
-    }
-    ChangeTilemap(&sBattleMoveTilemapCtrl, sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_BATTLE_MOVES][0], data[1], TRUE);
+    
+    ChangeTilemap(&sBattleMoveTilemapCtrl, sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_BATTLE_MOVES][1], data[1], TRUE);
+    
     if (data[1] <= 0 || data[1] >= sBattleMoveTilemapCtrl.width)
-    {
-        if (data[0] < 0)
-            PutWindowTilemap(PSS_LABEL_WINDOW_MOVES_POWER_ACC);
-        ScheduleBgCopyTilemapToVram(0);
         DestroyTask(taskId);
-    }
-    ScheduleBgCopyTilemapToVram(1);
-    ScheduleBgCopyTilemapToVram(2);
 }
 
 static void TilemapFiveMovesDisplay(u16 *dst, u16 palette, bool8 remove)
@@ -2353,22 +2278,6 @@ static void PutPageWindowTilemaps(u8 page)
     ClearWindowTilemap(PSS_TITLE_WINDOW_POKEMON_LVL_NAME_GENDER);
     PutWindowTilemap(PSS_TITLE_WINDOW_POKEMON_LVL_NAME_GENDER);
 
-    switch (page)
-    {
-    case PSS_PAGE_INFO:
-        PutWindowTilemap(PSS_WINDOW_INFO_HELD_ITEM);
-        break;
-    case PSS_PAGE_SKILLS:
-        break;
-    case PSS_PAGE_BATTLE_MOVES:
-        if (sMonSummaryScreen->mode == PSS_MODE_SELECT_MOVE)
-        {
-            if (sMonSummaryScreen->newMove != MOVE_NONE || sMonSummaryScreen->firstMoveIndex != MAX_MON_MOVES)
-                PutWindowTilemap(PSS_LABEL_WINDOW_MOVES_POWER_ACC);
-        }
-        break;
-    }
-
     for (i = 0; i < ARRAY_COUNT(sMonSummaryScreen->windowIds); i++)
         PutWindowTilemap(sMonSummaryScreen->windowIds[i]);
 
@@ -2389,7 +2298,6 @@ static void ClearPageWindowTilemaps(u8 page)
         {
             if (sMonSummaryScreen->newMove != MOVE_NONE || sMonSummaryScreen->firstMoveIndex != MAX_MON_MOVES)
             {
-                ClearWindowTilemap(PSS_LABEL_WINDOW_MOVES_POWER_ACC);
                 gSprites[sMonSummaryScreen->splitIconSpriteId].invisible = TRUE;
             }
         }
@@ -2984,40 +2892,33 @@ static void PrintMoveNameAndPP(u8 moveIndex)
     PrintTextOnWindow(windowId, text, x, moveIndex * 28 + 15, 0, ppState);
 }
 
-static void PrintMovePowerAndAccuracy(u16 moveIndex)
+static void PrintMovePowerAndAccuracy(u8 windowId, u16 moveIndex)
 {
     const u8 *text;
-    if (moveIndex != 0)
+
+    if (gBattleMoves[moveIndex].power < 2)
     {
-        FillWindowPixelRect(PSS_LABEL_WINDOW_MOVES_POWER_ACC, PIXEL_FILL(0), 53, 0, 19, 32);
-
-        PrintTextOnWindow(PSS_LABEL_WINDOW_MOVES_POWER_ACC, gText_Power, 0, 1, 0, 1);
-        PrintTextOnWindow(PSS_LABEL_WINDOW_MOVES_POWER_ACC, gText_Accuracy2, 0, 17, 0, 1);
-        
-        if (gBattleMoves[moveIndex].power < 2)
-        {
-            text = gText_ThreeDashes;
-        }
-        else
-        {
-            ConvertIntToDecimalStringN(gStringVar1, gBattleMoves[moveIndex].power, STR_CONV_MODE_RIGHT_ALIGN, 3);
-            text = gStringVar1;
-        }
-
-        PrintTextOnWindow(PSS_LABEL_WINDOW_MOVES_POWER_ACC, text, 53, 1, 0, 0);
-
-        if (gBattleMoves[moveIndex].accuracy == 0)
-        {
-            text = gText_ThreeDashes;
-        }
-        else
-        {
-            ConvertIntToDecimalStringN(gStringVar1, gBattleMoves[moveIndex].accuracy, STR_CONV_MODE_RIGHT_ALIGN, 3);
-            text = gStringVar1;
-        }
-
-        PrintTextOnWindow(PSS_LABEL_WINDOW_MOVES_POWER_ACC, text, 53, 17, 0, 0);
+        text = gText_ThreeDashes;
     }
+    else
+    {
+        ConvertIntToDecimalStringN(gStringVar1, gBattleMoves[moveIndex].power, STR_CONV_MODE_RIGHT_ALIGN, 3);
+        text = gStringVar1;
+    }
+
+    PrintTextOnWindow(windowId, text, 13, 0, 0, 0);
+
+    if (gBattleMoves[moveIndex].accuracy == 0)
+    {
+        text = gText_ThreeDashes;
+    }
+    else
+    {
+        ConvertIntToDecimalStringN(gStringVar1, gBattleMoves[moveIndex].accuracy, STR_CONV_MODE_RIGHT_ALIGN, 3);
+        text = gStringVar1;
+    }
+
+    PrintTextOnWindow(windowId, text, 49, 0, 0, 0);
 }
 
 static void PrintMoveDetails(u16 move)
@@ -3027,8 +2928,9 @@ static void PrintMoveDetails(u16 move)
     if (move != MOVE_NONE)
     {
         ShowSplitIcon(gBattleMoves[move].split);
-        PrintMovePowerAndAccuracy(move);
-        PrintTextOnWindow(windowId, gMoveDescriptionPointers[move - 1], 6, 1, 0, 0);
+        TilemapPowerAccDisplay(FALSE);
+        PrintMovePowerAndAccuracy(windowId, move);
+        PrintTextOnWindow(windowId, gMoveDescriptionPointers[move - 1], 6, 18, 0, 0);
         PutWindowTilemap(windowId);
     }
     else
@@ -3453,13 +3355,11 @@ static void CreateMoveSelectorSprites(u8 idArrayStart)
 
         for (i = 0; i < MOVE_SELECTOR_SPRITES_COUNT; i++)
         {
-            spriteIds[i] = CreateSprite(&sMoveSelectorSpriteTemplate, i * 16 + 89, 40, subpriority);
+            spriteIds[i] = CreateSprite(&sMoveSelectorSpriteTemplate, i * 64 + 32, 18 + 16, subpriority);
             if (i == 0)
-                StartSpriteAnim(&gSprites[spriteIds[i]], 4); // left
-            else if (i == 9)
-                StartSpriteAnim(&gSprites[spriteIds[i]], 5); // right, actually the same as left, but flipped
+                StartSpriteAnim(&gSprites[spriteIds[i]], 0); // left
             else
-                StartSpriteAnim(&gSprites[spriteIds[i]], 6); // middle
+                StartSpriteAnim(&gSprites[spriteIds[i]], 1); // right
 
             gSprites[spriteIds[i]].callback = SpriteCb_MoveSelector;
             gSprites[spriteIds[i]].data[0] = idArrayStart;
@@ -3470,24 +3370,20 @@ static void CreateMoveSelectorSprites(u8 idArrayStart)
 
 static void SpriteCb_MoveSelector(struct Sprite *sprite)
 {
-    if (sprite->animNum > 3 && sprite->animNum < 7)
+    if (sprite->data[0] == SPRITE_ARR_ID_MOVE_SELECTOR1)
     {
+        sprite->pos2.y = sMonSummaryScreen->firstMoveIndex * 28;
+    }
+    else
+    {
+        sprite->pos2.y = sMonSummaryScreen->secondMoveIndex * 28;
+        
         sprite->data[1] = (sprite->data[1] + 1) & 0x1F;
         if (sprite->data[1] > 24)
             sprite->invisible = TRUE;
         else
             sprite->invisible = FALSE;
     }
-    else
-    {
-        sprite->data[1] = 0;
-        sprite->invisible = FALSE;
-    }
-
-    if (sprite->data[0] == SPRITE_ARR_ID_MOVE_SELECTOR1)
-        sprite->pos2.y = sMonSummaryScreen->firstMoveIndex * 16;
-    else
-        sprite->pos2.y = sMonSummaryScreen->secondMoveIndex * 16;
 }
 
 static void DestroyMoveSelectorSprites(u8 firstArrayId)
@@ -3502,15 +3398,9 @@ static void SetMainMoveSelectorColor(u8 which)
     u8 i;
     u8 *spriteIds = &sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_MOVE_SELECTOR1];
 
-    which *= 3;
     for (i = 0; i < MOVE_SELECTOR_SPRITES_COUNT; i++)
     {
-        if (i == 0)
-            StartSpriteAnim(&gSprites[spriteIds[i]], which + 4);
-        else if (i == 9)
-            StartSpriteAnim(&gSprites[spriteIds[i]], which + 5);
-        else
-            StartSpriteAnim(&gSprites[spriteIds[i]], which + 6);
+        StartSpriteAnim(&gSprites[spriteIds[i]], which*2 + i);
     }
 }
 
