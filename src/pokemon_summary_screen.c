@@ -988,7 +988,7 @@ static bool8 LoadGraphics(void)
     case 21:
         LoadMonIconPalettes();
         CreateMonIconSprite();
-        gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_MON_ICON]].invisible = sMonSummaryScreen->currPageIndex != PSS_PAGE_BATTLE_MOVES;
+        SetSpritesForMoveSelection(sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES);
         gMain.state++;
         break;
     case 22:
