@@ -1351,6 +1351,8 @@ static void Task_ChangeSummaryMon(u8 taskId)
         CreateCaughtBallSprite(&sMonSummaryScreen->currentMon);
         break;
     case 7:
+        if (sMonSummaryScreen->summary.ailment != AILMENT_NONE)
+            CreateSetStatusSprite();
         DrawPokerusCuredSymbol(&sMonSummaryScreen->currentMon);
         data[1] = 0;
         break;
@@ -1367,7 +1369,7 @@ static void Task_ChangeSummaryMon(u8 taskId)
         SetTypeIcons();
         break;
     case 10:
-        DestroySpriteAndFreeResources(&gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_MON_ICON]]);
+        FreeAndDestroyMonIconSprite(&gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_MON_ICON]]);
         CreateMonIconSprite();
         SetSpritesForMoveSelection(sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES);
         break;
