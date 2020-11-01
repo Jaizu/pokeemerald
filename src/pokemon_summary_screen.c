@@ -1310,9 +1310,6 @@ static void ChangeSummaryPokemon(u8 taskId, s8 delta)
         if (monId != -1)
         {
             PlaySE(SE_SELECT);
-            if (sMonSummaryScreen->summary.ailment != AILMENT_NONE)
-                SetSpriteInvisibility(SPRITE_ARR_ID_STATUS, TRUE);
-            
             sMonSummaryScreen->curMonIndex = monId;
             gTasks[taskId].data[0] = 0;
             gTasks[taskId].func = Task_ChangeSummaryMon;
@@ -1353,6 +1350,8 @@ static void Task_ChangeSummaryMon(u8 taskId)
     case 7:
         if (sMonSummaryScreen->summary.ailment != AILMENT_NONE)
             CreateSetStatusSprite();
+        else
+            SetSpriteInvisibility(SPRITE_ARR_ID_STATUS, TRUE);
         DrawPokerusCuredSymbol(&sMonSummaryScreen->currentMon);
         data[1] = 0;
         break;
