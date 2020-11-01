@@ -6807,20 +6807,16 @@ extern const u16 gUnknown_08DDE010[];
 extern const u32 gUnknown_08DDE030[];
 extern const u32 gUnknown_08DDE12C[];
 
-extern const u32 gPageInfoTilemap[];
-extern const u32 gUnknown_08D98CC8[];
-extern const u32 gPageSkillsTilemap[];
-extern const u32 gPageBattleMovesTilemap[];
-extern const u32 gPageContestMovesTilemap[];
-extern const u32 gStatusScreenPalette[];
-extern const u16 gUnknown_08D85620[];
-extern const u16 gSummaryScreenWindow_Tilemap[];
-extern const u32 gMoveTypes_Pal[];
 extern const u32 gStatusScreenBitmap[];
-
-extern const u16 gSummaryScreenPowAcc_Tilemap[];
-extern const u16 gSummaryScreenAppealJam_Tilemap[];
-
+extern const u32 gStatusScreenPalette[];
+extern const u16 gSummaryScreenMovesTextPalette[];
+extern const u32 gPageInfoTilemap[];
+extern const u32 gPageEggTilemap[];
+extern const u32 gPageSkillsTilemap[];
+extern const u32 gPageMovesTilemap[];
+extern const u16 gPageMovesTilemap_FiveMoves[];
+extern const u16 gPPTextPalette[];
+extern const u32 gMoveTypes_Pal[];
 extern const u32 gMoveTypes_Gfx[];
 extern const u32 gSummaryMoveSelect_Gfx[];
 extern const u32 gSummaryMoveSelect_Pal[];
