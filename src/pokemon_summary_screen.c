@@ -73,6 +73,8 @@ enum
     SPRITE_ARR_ID_MON,
     SPRITE_ARR_ID_BALL,
     SPRITE_ARR_ID_STATUS,
+    SPRITE_ARR_ID_POKERUS_CURED_SYMBOL,
+    SPRITE_ARR_ID_SHINY_STAR,
     SPRITE_ARR_ID_MON_ICON,
     SPRITE_ARR_ID_TYPE, // 2 for mon types, 5 for move types(4 moves and 1 to learn), used interchangeably, because mon types and move types aren't shown on the same screen
     SPRITE_ARR_ID_MOVE_SELECTOR1 = SPRITE_ARR_ID_TYPE + 5, // 2 sprites that make up the selector
@@ -186,7 +188,8 @@ static void ShowCantForgetHMsWindow(u8 taskId);
 static void Task_HandleInputCantForgetHMsMoves(u8 taskId);
 static void DrawPagination(void);
 static void TilemapFiveMovesDisplay(void);
-static void DrawPokerusCuredSymbol(struct Pokemon* mon);
+static void CreateSetPokerusCuredSymbol(struct Pokemon* mon);
+static void CreateSetShinyStar(struct Pokemon *mon);
 static void DrawExperienceProgressBar(struct Pokemon* mon);
 static void LimitEggSummaryPageDisplay(void);
 static void ResetWindows(void);
@@ -218,7 +221,7 @@ static void PrintEggName(void);
 static void PrintEggState(void);
 static void PrintEggMemo(void);
 static void PrintHeldItemName(void);
-static void PrintEmptyHeldItem(void);
+static void ClearHeldItemText(void);
 static void Task_PrintSkillsPage(u8 taskId);
 static void PrintSkillsPageText(void);
 static void BufferLeftColumnStats(void);
@@ -460,6 +463,8 @@ static const u8 sMovesPPLayout[] = _("{PP}{DYNAMIC 0}/{DYNAMIC 1}");
 #define TAG_MOVE_TYPES 30002
 #define TAG_MON_MARKINGS 30003
 #define TAG_SPLIT_ICONS 30004
+#define TAG_POKERUS_CURED_SYMBOL 30005
+#define TAG_SHINY_STAR 30006
 
 static const u16 sSplitIcons_Pal[] = INCBIN_U16("graphics/interface/split_icons.gbapal");
 static const u32 sSplitIcons_Gfx[] = INCBIN_U32("graphics/interface/split_icons.4bpp.lz");
@@ -515,6 +520,80 @@ static const struct SpriteTemplate sSpriteTemplate_SplitIcons =
     .paletteTag = TAG_SPLIT_ICONS,
     .oam = &sOamData_SplitIcons,
     .anims = sSpriteAnimTable_SplitIcons,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCallbackDummy
+};
+
+static const u32 sPokerusCuredSymbol_Gfx[] = INCBIN_U32("graphics/interface/pokerus_cured_symbol.4bpp.lz");
+
+static const struct OamData sOamData_PokerusCuredSymbol =
+{
+    .size = SPRITE_SIZE(8x8),
+    .shape = SPRITE_SHAPE(8x8),
+    .priority = 0,
+};
+
+static const struct CompressedSpriteSheet sSpriteSheet_PokerusCuredSymbol =
+{
+    .data = sPokerusCuredSymbol_Gfx,
+    .size = 8*8*3/2,
+    .tag = TAG_POKERUS_CURED_SYMBOL,
+};
+static const union AnimCmd sSpriteAnim_PokerusCuredSymbol[] =
+{
+    ANIMCMD_FRAME(0, 0),
+    ANIMCMD_END
+};
+
+static const union AnimCmd *const sSpriteAnimTable_PokerusCuredSymbol[] =
+{
+    sSpriteAnim_PokerusCuredSymbol,
+};
+
+static const struct SpriteTemplate sSpriteTemplate_PokerusCuredSymbol =
+{
+    .tileTag = TAG_POKERUS_CURED_SYMBOL,
+    .paletteTag = TAG_MOVE_SELECTOR,
+    .oam = &sOamData_PokerusCuredSymbol,
+    .anims = sSpriteAnimTable_PokerusCuredSymbol,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCallbackDummy
+};
+
+static const u32 sShinyStar_Gfx[] = INCBIN_U32("graphics/interface/shiny.4bpp.lz");
+
+static const struct OamData sOamData_ShinyStar =
+{
+    .size = SPRITE_SIZE(8x8),
+    .shape = SPRITE_SHAPE(8x8),
+    .priority = 0,
+};
+
+static const struct CompressedSpriteSheet sSpriteSheet_ShinyStar =
+{
+    .data = sShinyStar_Gfx,
+    .size = 8*8*3/2,
+    .tag = TAG_SHINY_STAR,
+};
+static const union AnimCmd sSpriteAnim_ShinyStar[] =
+{
+    ANIMCMD_FRAME(0, 0),
+    ANIMCMD_END
+};
+
+static const union AnimCmd *const sSpriteAnimTable_ShinyStar[] =
+{
+    sSpriteAnim_ShinyStar,
+};
+
+static const struct SpriteTemplate sSpriteTemplate_ShinyStar =
+{
+    .tileTag = TAG_SHINY_STAR,
+    .paletteTag = TAG_MOVE_SELECTOR,
+    .oam = &sOamData_ShinyStar,
+    .anims = sSpriteAnimTable_ShinyStar,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy
@@ -1000,27 +1079,35 @@ static bool8 LoadGraphics(void)
         gMain.state++;
         break;
     case 20:
-        SetTypeIcons();
+        CreateSetPokerusCuredSymbol(&sMonSummaryScreen->currentMon);
         gMain.state++;
         break;
     case 21:
+        CreateSetShinyStar(&sMonSummaryScreen->currentMon);
+        gMain.state++;
+        break;
+    case 22:
+        SetTypeIcons();
+        gMain.state++;
+        break;
+    case 23:
         LoadMonIconPalettes();
         CreateMonIconSprite();
         TryHideSpritesForMovePage();
         gMain.state++;
         break;
-    case 22:
+    case 24:
         if (sMonSummaryScreen->mode != PSS_MODE_SELECT_MOVE)
             CreateTask(Task_HandleInput, 0);
         else
             CreateTask(Task_SetHandleReplaceMoveInput, 0);
         gMain.state++;
         break;
-    case 23:
+    case 25:
         BlendPalettes(0xFFFFFFFF, 16, 0);
         gMain.state++;
         break;
-    case 24:
+    case 26:
         BeginNormalPaletteFade(0xFFFFFFFF, 0, 16, 0, RGB_BLACK);
         gPaletteFade.bufferTransferDisabled = 0;
         gMain.state++;
@@ -1091,6 +1178,8 @@ static bool8 DecompressGraphics(void)
         break;
     case 7:
         LoadCompressedSpriteSheet(&sMoveSelectorSpriteSheet);
+        LoadCompressedSpriteSheet(&sSpriteSheet_PokerusCuredSymbol);
+        LoadCompressedSpriteSheet(&sSpriteSheet_ShinyStar);
         sMonSummaryScreen->switchCounter++;
         break;
     case 8:
@@ -1213,7 +1302,6 @@ static void SetDefaultTilemaps(void)
     }
 
     LimitEggSummaryPageDisplay();
-    DrawPokerusCuredSymbol(&sMonSummaryScreen->currentMon);
 }
 
 static void FreeSummaryScreen(void)
@@ -1370,10 +1458,14 @@ static void Task_ChangeSummaryMon(u8 taskId)
             CreateSetStatusSprite();
         else
             SetSpriteInvisibility(SPRITE_ARR_ID_STATUS, TRUE);
-        DrawPokerusCuredSymbol(&sMonSummaryScreen->currentMon);
-        data[1] = 0;
         break;
     case 8:
+        CreateSetPokerusCuredSymbol(&sMonSummaryScreen->currentMon);
+        break;
+    case 9:
+        CreateSetShinyStar(&sMonSummaryScreen->currentMon);
+        break;
+    case 10:
         sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_MON] = LoadMonGfxAndSprite(&sMonSummaryScreen->currentMon, &data[1]);
         if (sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_MON] == 0xFF)
             return;
@@ -1382,22 +1474,22 @@ static void Task_ChangeSummaryMon(u8 taskId)
         TryDrawExperienceProgressBar();
         data[1] = 0;
         break;
-    case 9:
+    case 11:
         SetTypeIcons();
         break;
-    case 10:
+    case 12:
         FreeAndDestroyMonIconSprite(&gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_MON_ICON]]);
         CreateMonIconSprite();
         TryHideSpritesForMovePage();
         break;
-    case 11:
+    case 13:
         PrintMonTitleBar();
         break;
-    case 12:
+    case 14:
         PrintPageSpecificText(sMonSummaryScreen->currPageIndex);
         LimitEggSummaryPageDisplay();
         break;
-    case 13:
+    case 15:
         gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_MON]].data[2] = 0;
         break;
     default:
@@ -1713,7 +1805,7 @@ static void ChangeSelectedMove(s16 *taskData, s8 direction, u8 *moveIndexPtr)
         KeepMoveSelectorVisible(SPRITE_ARR_ID_MOVE_SELECTOR2);
 }
 
-static void AddAndFillMoveNamesWindow(void)
+static void ClearCancelText(void)
 {
     u8 windowId = AddWindowFromTemplateList(sPageMovesTemplate, PSS_WINDOW_MOVE_NAMES);
     FillWindowPixelRect(windowId, PIXEL_FILL(0), 0, 116, 120, 24);
@@ -1724,7 +1816,7 @@ static void CloseMoveSelectMode(u8 taskId)
 {
     DestroyMoveSelectorSprites(SPRITE_ARR_ID_MOVE_SELECTOR1);
     PrintMoveDetails(0);
-    AddAndFillMoveNamesWindow();
+    ClearCancelText();
     if (sMonSummaryScreen->firstMoveIndex != MAX_MON_MOVES)
         DestroySplitIcon();
     
@@ -2057,19 +2149,29 @@ static void TilemapFiveMovesDisplay(void)
     }
 }
 
-static void DrawPokerusCuredSymbol(struct Pokemon *mon) // This checks if the mon has been cured of pokerus
+static void CreateSetPokerusCuredSymbol(struct Pokemon *mon)
 {
-    // if (!CheckPartyPokerus(mon, 0) && CheckPartyHasHadPokerus(mon, 0)) // If yes it draws the cured symbol
-    // {
-        // sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_INFO][0][0x223] = 0x2C;
-        // sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_INFO][1][0x223] = 0x2C;
-    // }
-    // else
-    // {
-        // sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_INFO][0][0x223] = 0x81A;
-        // sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_INFO][1][0x223] = 0x81A;
-    // }
-    // ScheduleBgCopyTilemapToVram(3);
+    u8 *spriteId = &sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_POKERUS_CURED_SYMBOL];
+    bool8 isCured;
+
+    if (*spriteId == 0xFF)
+        *spriteId = CreateSprite(&sSpriteTemplate_PokerusCuredSymbol, 120, 8, 0);
+
+    isCured = (!CheckPartyPokerus(mon, 0) && CheckPartyHasHadPokerus(mon, 0));
+    SetSpriteInvisibility(SPRITE_ARR_ID_POKERUS_CURED_SYMBOL, !isCured);
+}
+
+static void CreateSetShinyStar(struct Pokemon *mon)
+{
+    u8 *spriteId = &sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_SHINY_STAR];
+    bool8 isShiny;
+
+    if (*spriteId == 0xFF)
+        *spriteId = CreateSprite(&sSpriteTemplate_ShinyStar, 234, 22, 0);
+    
+    isShiny = IsMonShiny(mon);
+    SetSpriteInvisibility(SPRITE_ARR_ID_SHINY_STAR, !isShiny);
+    
 }
 
 static void SetDexNumberColor(bool8 isMonShiny)
@@ -2156,6 +2258,7 @@ static void PrintTextOnWindowSmall(u8 windowId, const u8 *string, u8 x, u8 y, u8
 static void PrintMonTitleBar(void)
 {
     struct PokeSummary *summary = &sMonSummaryScreen->summary;
+    
     FillWindowPixelBuffer(PSS_TITLE_WINDOW_POKEMON_LVL_NAME_GENDER, PIXEL_FILL(0));
     if (!sMonSummaryScreen->summary.isEgg)
     {
@@ -2163,7 +2266,8 @@ static void PrintMonTitleBar(void)
         PrintMonNickname();
         PrintGenderSymbol(&sMonSummaryScreen->currentMon, summary->species2);
     }
-    ScheduleBgCopyTilemapToVram(0);
+    CopyWindowToVram(PSS_TITLE_WINDOW_POKEMON_LVL_NAME_GENDER, 2);
+    ScheduleBgCopyTilemapToVram(2);
 }
 
 static void PrintMonLevel(void)
@@ -2281,7 +2385,7 @@ static void PrintInfoPageText(void)
     {
         PrintEggName();
         PrintEggState();
-        PrintEmptyHeldItem();
+        ClearHeldItemText();
         PrintEggMemo();
     }
     else
@@ -2401,9 +2505,11 @@ static void PrintHeldItemName(void)
     PrintTextOnWindow(AddWindowFromTemplateList(sPageInfoTemplate, PSS_WINDOW_INFO_HELD_ITEM), text, 0, 5, 0, PSS_COLOR_BLACK_DARK_ORANGE_SHADOW);
 }
 
-static void PrintEmptyHeldItem(void)
+static void ClearHeldItemText(void)
 {
-    PrintTextOnWindow(AddWindowFromTemplateList(sPageInfoTemplate, PSS_WINDOW_INFO_HELD_ITEM), gText_Space, 0, 5, 0, PSS_COLOR_BLACK_DARK_ORANGE_SHADOW);
+    u8 windowId = AddWindowFromTemplateList(sPageInfoTemplate, PSS_WINDOW_INFO_HELD_ITEM);
+    FillWindowPixelRect(windowId, PIXEL_FILL(0), 0, 0, 80, 24);
+    CopyWindowToVram(windowId, 2);
 }
 
 static void BufferMonTrainerMemo(void)
@@ -3245,7 +3351,7 @@ static void CreateSetStatusSprite(void)
     u8 statusAnim;
 
     if (*spriteId == 0xFF)
-        *spriteId = CreateSprite(&sSpriteTemplate_StatusCondition, 132, 8, 0);
+        *spriteId = CreateSprite(&sSpriteTemplate_StatusCondition, 141, 8, 0);
 
     statusAnim = GetMonAilment(&sMonSummaryScreen->currentMon);
     if (statusAnim != 0)
