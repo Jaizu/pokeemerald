@@ -1653,7 +1653,7 @@ const u32 gSummaryMoveSelect_Pal[] = INCBIN_U32("graphics/interface/summary_fram
 
 const u32 gStatusScreenBitmap[] = INCBIN_U32("graphics/interface/status_screen.4bpp.lz");
 const u32 gStatusScreenPalette[] = INCBIN_U32("graphics/interface/status_screen.gbapal.lz");
-const u16 gSummaryScreenMovesTextPalette[] = INCBIN_U16("graphics/interface/summary_screen_moves_palette.gbapal");
+const u16 gSummaryScreenTextPalette[] = INCBIN_U16("graphics/interface/summary_screen_text.gbapal");
 const u32 gPageInfoTilemap[] = INCBIN_U32("graphics/interface/summary_screen_info.bin.lz");
 const u32 gPageEggTilemap[] = INCBIN_U32("graphics/interface/summary_screen_egg.bin.lz");
 const u32 gPageSkillsTilemap[] = INCBIN_U32("graphics/interface/summary_screen_skills.bin.lz");

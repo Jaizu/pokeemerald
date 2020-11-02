@@ -6809,7 +6809,7 @@ extern const u32 gUnknown_08DDE12C[];
 
 extern const u32 gStatusScreenBitmap[];
 extern const u32 gStatusScreenPalette[];
-extern const u16 gSummaryScreenMovesTextPalette[];
+extern const u16 gSummaryScreenTextPalette[];
 extern const u32 gPageInfoTilemap[];
 extern const u32 gPageEggTilemap[];
 extern const u32 gPageSkillsTilemap[];
