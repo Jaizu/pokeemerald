@@ -449,10 +449,8 @@ static void (*const sTextPrinterTasks[])(u8 taskId) =
     [PSS_PAGE_MOVES]  = Task_PrintBattleMoves
 };
 
-static const u8 sMemoNatureTextColor[] = _("{COLOR LIGHT_RED}{SHADOW GREEN}");
-static const u8 sMemoMiscTextColor[] = _("{COLOR WHITE}{SHADOW DARK_GREY}"); // This is also affected by palettes, apparently
 static const u8 sStatsLeftColumnLayout[] = _("{DYNAMIC 0}\n{DYNAMIC 1}\n{DYNAMIC 2}\n{DYNAMIC 3}\n{DYNAMIC 4}");
-static const u8 sStatsRightColumnLayout[] = _("{DYNAMIC 0} / {DYNAMIC 1}");
+static const u8 sHPLayout[] = _("{DYNAMIC 0} / {DYNAMIC 1}");
 static const u8 sMovesPPLayout[] = _("{PP}{DYNAMIC 0}/{DYNAMIC 1}");
 
 #define TAG_MOVE_SELECTOR 30000
@@ -2412,8 +2410,6 @@ static void BufferMonTrainerMemo(void)
     const u8 *text;
 
     DynamicPlaceholderTextUtil_Reset();
-    //DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, sMemoNatureTextColor);
-    //DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, sMemoMiscTextColor);
     BufferNatureString();
 
     if (InBattleFactory() == TRUE || InSlateportBattleTent() == TRUE || IsInGamePartnerMon() == TRUE)
@@ -2666,7 +2662,7 @@ static void PrintHP(void)
     DynamicPlaceholderTextUtil_Reset();
     DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, currentHPString);
     DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, maxHPString);
-    DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar1, sStatsRightColumnLayout);
+    DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar1, sHPLayout);
     Free(currentHPString);
     Free(maxHPString);
     
