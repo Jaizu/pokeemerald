@@ -407,11 +407,12 @@ enum
     PSS_COLOR_BLACK_DARK_ORANGE_SHADOW,
     PSS_COLOR_BLACK_LIGHT_BLUE_SHADOW,
     PSS_COLOR_BLACK_DARK_BLUE_SHADOW,
-    PSS_COLOR_BLACK_LIGHT_PURPLE_SHADOW,
     PSS_COLOR_WHITE_BLACK_SHADOW,
     PSS_COLOR_WHITE_DARK_PURPLE_SHADOW,
     PSS_COLOR_YELLOW_DARK_YELLOW_SHADOW,
+    PSS_COLOR_YELLOW_ORANGE_SHADOW,
     PSS_COLOR_RED_ORANGE_SHADOW,
+    PSS_COLOR_BLACK_LIGHT_PURPLE_SHADOW,
     PSS_COLOR_ORANGE_RED_SHADOW,
     PSS_COLOR_LIGHT_BLUE_BLUE_SHADOW,
     PSS_COLOR_WHITE_GREY_SHADOW,
@@ -424,11 +425,12 @@ static const u8 sTextColors[][3] =
     [PSS_COLOR_BLACK_DARK_ORANGE_SHADOW]    = { 0,  7, 10},
     [PSS_COLOR_BLACK_LIGHT_BLUE_SHADOW]     = { 0,  7, 11},
     [PSS_COLOR_BLACK_DARK_BLUE_SHADOW]      = { 0,  7, 12},
-    [PSS_COLOR_BLACK_LIGHT_PURPLE_SHADOW]   = { 0,  7,  8},
     [PSS_COLOR_WHITE_BLACK_SHADOW]          = { 0, 13,  7},
     [PSS_COLOR_WHITE_DARK_PURPLE_SHADOW]    = { 0, 13, 14},
-    [PSS_COLOR_YELLOW_DARK_YELLOW_SHADOW]   = { 0,  7,  8},
-    [PSS_COLOR_RED_ORANGE_SHADOW]           = { 0, 15, 14},
+    [PSS_COLOR_YELLOW_DARK_YELLOW_SHADOW]   = { 0,  1,  2},
+    [PSS_COLOR_YELLOW_ORANGE_SHADOW]        = { 0,  3,  4},
+    [PSS_COLOR_RED_ORANGE_SHADOW]           = { 0,  5,  6},
+    [PSS_COLOR_BLACK_LIGHT_PURPLE_SHADOW]   = { 0,  7,  8},
     // palette 6
     [PSS_COLOR_ORANGE_RED_SHADOW]           = { 0,  6,  5},
     [PSS_COLOR_LIGHT_BLUE_BLUE_SHADOW]      = { 0,  7,  8},
@@ -2781,13 +2783,13 @@ static void Task_PrintBattleMoves(u8 taskId)
 static void PrintMoveNameAndPP(u8 moveIndex)
 {
     u8 pp;
-    int ppState, x;
+    int textColor, x;
     const u8 *text;
     struct PokeSummary *summary = &sMonSummaryScreen->summary;
     u8 windowId = AddWindowFromTemplateList(sPageMovesTemplate, PSS_WINDOW_MOVE_NAMES);
     u16 move = summary->moves[moveIndex];
 
-    if (move != 0)
+    if (move != MOVE_NONE)
     {
         pp = CalculatePPWithBonus(move, summary->ppBonuses, moveIndex);
         PrintTextOnWindow(windowId, gMoveNames[move], 0, moveIndex * 28 + 4, 0, PSS_COLOR_BLACK_LIGHT_PURPLE_SHADOW);
@@ -2798,18 +2800,18 @@ static void PrintMoveNameAndPP(u8 moveIndex)
         DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, gStringVar2);
         DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sMovesPPLayout);
         text = gStringVar4;
-        ppState = GetCurrentPpToMaxPpState(summary->pp[moveIndex], pp) + PSS_COLOR_BLACK_LIGHT_PURPLE_SHADOW;
+        textColor = GetCurrentPpToMaxPpState(summary->pp[moveIndex], pp) + PSS_COLOR_YELLOW_DARK_YELLOW_SHADOW;
         x = GetStringRightAlignXOffset(1, text, 76);
     }
     else
     {
         PrintTextOnWindow(windowId, gText_OneDash, 0, moveIndex * 28 + 4, 0, PSS_COLOR_BLACK_LIGHT_PURPLE_SHADOW);
         text = gText_TwoDashes;
-        ppState = PSS_COLOR_BLACK_LIGHT_PURPLE_SHADOW;
+        textColor = PSS_COLOR_BLACK_LIGHT_PURPLE_SHADOW;
         x = GetStringCenterAlignXOffset(1, text, 76);
     }
 
-    PrintTextOnWindow(windowId, text, x, moveIndex * 28 + 15, 0, ppState);
+    PrintTextOnWindow(windowId, text, x, moveIndex * 28 + 15, 0, textColor);
 }
 
 static void PrintMovePowerAndAccuracy(u8 windowId, u16 moveIndex)
