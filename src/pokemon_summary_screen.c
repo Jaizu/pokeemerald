@@ -2,10 +2,10 @@
 #include "main.h"
 #include "battle.h"
 #include "battle_anim.h"
-#include "frontier_util.h"
+#include "battle_factory.h"
+#include "battle_interface.h"
 #include "battle_message.h"
 #include "battle_tent.h"
-#include "battle_factory.h"
 #include "bg.h"
 #include "contest.h"
 #include "contest_effect.h"
@@ -14,6 +14,7 @@
 #include "decompress.h"
 #include "dynamic_placeholder_text_util.h"
 #include "event_data.h"
+#include "frontier_util.h"
 #include "gpu_regs.h"
 #include "graphics.h"
 #include "international_string_util.h"
@@ -23,7 +24,6 @@
 #include "malloc.h"
 #include "menu.h"
 #include "menu_helpers.h"
-#include "mon_markings.h"
 #include "party_menu.h"
 #include "palette.h"
 #include "pokeball.h"
@@ -49,6 +49,15 @@
 #include "constants/songs.h"
 #include "constants/species.h"
 
+#define FREE_AND_SET_NULL_IF_SET(ptr) \
+{                                     \
+    if (ptr != NULL)                  \
+    {                                 \
+        free(ptr);                    \
+        (ptr) = NULL;                 \
+    }                                 \
+}
+
 #define PSS_TITLE_WINDOW_POKEMON_LVL_NAME_GENDER 0
 #define PSS_LABEL_WINDOW_END 1
 
@@ -67,6 +76,9 @@
 #define PSS_WINDOW_MOVE_DESCRIPTION 1
 
 #define MOVE_SELECTOR_SPRITES_COUNT 2
+#define HP_BAR_SPRITES_COUNT 9
+#define EXP_BAR_SPRITES_COUNT 11
+
 // for the spriteIds field in PokemonSummaryScreenData
 enum
 {
@@ -89,7 +101,6 @@ static EWRAM_DATA struct PokemonSummaryScreenData
         struct BoxPokemon *boxMons;
     } monList;
     /*0x04*/ MainCallback callback;
-    /*0x08*/ struct Sprite *markingsSprite;
     /*0x0C*/ struct Pokemon currentMon;
     /*0x70*/ struct PokeSummary
     {
@@ -149,6 +160,21 @@ static EWRAM_DATA struct PokemonSummaryScreenData
 EWRAM_DATA u8 gLastViewedMonIndex = 0;
 static EWRAM_DATA u8 sMoveSlotToReplace = 0;
 ALIGNED(4) static EWRAM_DATA u8 sUnknownTaskId = 0;
+static EWRAM_DATA struct HealthBar
+{
+    struct Sprite * sprites[10];
+    u16 spritePositions[10];
+    u16 tileTag;
+    u16 palTag;
+} *sHealthBar = NULL;
+
+static EWRAM_DATA struct ExpBar
+{
+    struct Sprite * sprites[11];
+    u16 spritePositions[11];
+    u16 tileTag;
+    u16 palTag;
+} *sExpBar = NULL;
 
 // forward declarations
 static bool8 LoadGraphics(void);
@@ -252,8 +278,6 @@ static u8 LoadMonGfxAndSprite(struct Pokemon *a, s16 *b);
 static u8 CreateMonSprite(struct Pokemon *unused);
 static void SpriteCB_Pokemon(struct Sprite *);
 static void StopPokemonAnimations(void);
-static void CreateMonMarkingsSprite(struct Pokemon *mon);
-static void RemoveAndCreateMonMarkingsSprite(struct Pokemon *mon);
 static void CreateCaughtBallSprite(struct Pokemon *mon);
 static void CreateMonIconSprite(void);
 static void CreateSetStatusSprite(void);
@@ -263,6 +287,14 @@ static void DestroyMoveSelectorSprites(u8 firstArrayId);
 static void SetMainMoveSelectorColor(u8 whichColor);
 static void KeepMoveSelectorVisible(u8 firstSpriteId);
 static u8 AddWindowFromTemplateList(const struct WindowTemplate *template, u8 templateId);
+static void CreateHealthBarSprites(u16 tileTag, u16 palTag);
+static void ConfigureHealthBarSprites(void);
+static void DestroyHealthBarSprites(void);
+static void SetHealthBarSprites(u8 invisible);
+static void CreateExpBarSprites(u16 tileTag, u16 palTag);
+static void ConfigureExpBarSprites(void);
+static void DestroyExpBarSprites(void);
+static void SetExpBarSprites(u8 invisible);
 
 // const rom data
 #include "data/text/move_descriptions.h"
@@ -455,18 +487,18 @@ static void (*const sTextPrinterTasks[])(u8 taskId) =
 };
 
 static const u8 sStatsLeftColumnLayout[] = _("{DYNAMIC 0}\n{DYNAMIC 1}\n{DYNAMIC 2}\n{DYNAMIC 3}\n{DYNAMIC 4}");
-static const u8 sHPLayout[] = _("{DYNAMIC 0} / {DYNAMIC 1}");
+static const u8 sHPLayout[] = _("{DYNAMIC 0}/{DYNAMIC 1}");
 static const u8 sMovesPPLayout[] = _("{PP}{DYNAMIC 0}/{DYNAMIC 1}");
 
 #define TAG_MOVE_SELECTOR 30000
 #define TAG_MON_STATUS 30001
 #define TAG_MOVE_TYPES 30002
-#define TAG_MON_MARKINGS 30003
-#define TAG_SPLIT_ICONS 30004
-#define TAG_POKERUS_CURED_SYMBOL 30005
-#define TAG_SHINY_STAR 30006
+#define TAG_SPLIT_ICONS 30003
+#define TAG_POKERUS_CURED_SYMBOL 30004
+#define TAG_SHINY_STAR 30005
+#define TAG_HEALTH_BAR 0x78
+#define TAG_EXP_BAR 0x82
 
-static const u16 sSplitIcons_Pal[] = INCBIN_U16("graphics/interface/split_icons.gbapal");
 static const u32 sSplitIcons_Gfx[] = INCBIN_U32("graphics/interface/split_icons.4bpp.lz");
 
 static const struct OamData sOamData_SplitIcons =
@@ -481,12 +513,6 @@ static const struct CompressedSpriteSheet sSpriteSheet_SplitIcons =
     .data = sSplitIcons_Gfx,
     .size = 32*16*3/2,
     .tag = TAG_SPLIT_ICONS,
-};
-
-static const struct SpritePalette sSpritePal_SplitIcons =
-{
-    .data = sSplitIcons_Pal,
-    .tag = TAG_SPLIT_ICONS
 };
 
 static const union AnimCmd sSpriteAnim_SplitIcon0[] =
@@ -517,7 +543,7 @@ static const union AnimCmd *const sSpriteAnimTable_SplitIcons[] =
 static const struct SpriteTemplate sSpriteTemplate_SplitIcons =
 {
     .tileTag = TAG_SPLIT_ICONS,
-    .paletteTag = TAG_SPLIT_ICONS,
+    .paletteTag = TAG_MOVE_SELECTOR,
     .oam = &sOamData_SplitIcons,
     .anims = sSpriteAnimTable_SplitIcons,
     .images = NULL,
@@ -886,7 +912,119 @@ static const struct SpriteTemplate sSpriteTemplate_StatusCondition =
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy
 };
-static const u16 sSummaryMarkingsPalette[] = INCBIN_U16("graphics/interface/summary_markings.gbapal");
+
+static const struct OamData sOamData_ExpHealthBars = {
+    .y = 0,
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .mosaic = FALSE,
+    .bpp = ST_OAM_4BPP,
+    .shape = SPRITE_SHAPE(8x8),
+    .x = 0,
+    .matrixNum = 0,
+    .size = SPRITE_SIZE(8x8),
+    .tileNum = 0,
+    .priority = 0,
+    .paletteNum = 0
+};
+
+static const union AnimCmd sSpriteAnim_ExpHealthBarDivisionEmpty[] = 
+{
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sSpriteAnim_ExpHealthBarDivision1[] = 
+{
+    ANIMCMD_FRAME(1, 20),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sSpriteAnim_ExpHealthBarDivision2[] = 
+{
+    ANIMCMD_FRAME(2, 20),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sSpriteAnim_ExpHealthBarDivision3[] = 
+{
+    ANIMCMD_FRAME(3, 20),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sSpriteAnim_ExpHealthBarDivision4[] = 
+{
+    ANIMCMD_FRAME(4, 20),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sSpriteAnim_ExpHealthBarDivision5[] = 
+{
+    ANIMCMD_FRAME(5, 20),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sSpriteAnim_ExpHealthBarDivision6[] = 
+{
+    ANIMCMD_FRAME(6, 20),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sSpriteAnim_ExpHealthBarDivision7[] = 
+{
+    ANIMCMD_FRAME(7, 20),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sSpriteAnim_ExpHealthBarDivisionFull[] = 
+{
+    ANIMCMD_FRAME(8, 20),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sSpriteAnim_ExpHealthBarNameLeft[] = 
+{
+    ANIMCMD_FRAME(9, 20),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sSpriteAnim_ExpHealthBarNameRight[] = 
+{
+    ANIMCMD_FRAME(10, 20),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sSpriteAnim_ExpHealthBarEnd[] = 
+{
+    ANIMCMD_FRAME(11, 20),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd * const sSpriteAnimTable_ExpHealthBars[] =
+{
+    sSpriteAnim_ExpHealthBarDivisionEmpty,
+    sSpriteAnim_ExpHealthBarDivision1,
+    sSpriteAnim_ExpHealthBarDivision2,
+    sSpriteAnim_ExpHealthBarDivision3,
+    sSpriteAnim_ExpHealthBarDivision4,
+    sSpriteAnim_ExpHealthBarDivision5,
+    sSpriteAnim_ExpHealthBarDivision6,
+    sSpriteAnim_ExpHealthBarDivision7,
+    sSpriteAnim_ExpHealthBarDivisionFull,
+    sSpriteAnim_ExpHealthBarNameLeft,
+    sSpriteAnim_ExpHealthBarNameRight,
+    sSpriteAnim_ExpHealthBarEnd
+};
+
+static const u16 sHealthBarYellowPal[] = INCBIN_U16("graphics/interface/health_bar_yellow.gbapal");
+static const u16 sHealthBarRedPal[] = INCBIN_U16("graphics/interface/health_bar_red.gbapal");
+
+static const u16 * const sHealthBarPals[] =
+{
+    gExpBarHealthBarGreenPal,
+    sHealthBarYellowPal,
+    sHealthBarRedPal,
+};
 
 // code
 static u8 ShowSplitIcon(u32 split)
@@ -1067,47 +1205,49 @@ static bool8 LoadGraphics(void)
         }
         break;
     case 17:
-        CreateMonMarkingsSprite(&sMonSummaryScreen->currentMon);
-        gMain.state++;
-        break;
-    case 18:
         CreateCaughtBallSprite(&sMonSummaryScreen->currentMon);
         gMain.state++;
         break;
-    case 19:
+    case 18:
         CreateSetStatusSprite();
         gMain.state++;
         break;
-    case 20:
+    case 19:
         CreateSetPokerusCuredSymbol(&sMonSummaryScreen->currentMon);
         gMain.state++;
         break;
-    case 21:
+    case 20:
         CreateSetShinyStar(&sMonSummaryScreen->currentMon);
         gMain.state++;
         break;
-    case 22:
+    case 21:
         SetTypeIcons();
         gMain.state++;
         break;
-    case 23:
+    case 22:
         LoadMonIconPalettes();
         CreateMonIconSprite();
         TryHideSpritesForMovePage();
         gMain.state++;
         break;
+    case 23:
+        CreateHealthBarSprites(TAG_HEALTH_BAR, TAG_HEALTH_BAR);
+        gMain.state++;
     case 24:
+        CreateExpBarSprites(TAG_EXP_BAR, TAG_HEALTH_BAR);
+        gMain.state++;
+    case 25:
         if (sMonSummaryScreen->mode != PSS_MODE_SELECT_MOVE)
             CreateTask(Task_HandleInput, 0);
         else
             CreateTask(Task_SetHandleReplaceMoveInput, 0);
         gMain.state++;
         break;
-    case 25:
+    case 26:
         BlendPalettes(0xFFFFFFFF, 16, 0);
         gMain.state++;
         break;
-    case 26:
+    case 27:
         BeginNormalPaletteFade(0xFFFFFFFF, 0, 16, 0, RGB_BLACK);
         gPaletteFade.bufferTransferDisabled = 0;
         gMain.state++;
@@ -1197,7 +1337,6 @@ static bool8 DecompressGraphics(void)
     case 11:
         LoadCompressedPalette(gMoveTypes_Pal, 0x1D0, 0x60);
         LoadCompressedSpriteSheet(&sSpriteSheet_SplitIcons);
-        LoadSpritePalette(&sSpritePal_SplitIcons);
         sMonSummaryScreen->switchCounter = 0;
         return TRUE;
     }
@@ -1323,6 +1462,8 @@ static void CloseSummaryScreen(u8 taskId)
         SetMainCallback2(sMonSummaryScreen->callback);
         gLastViewedMonIndex = sMonSummaryScreen->curMonIndex;
         SummaryScreen_DestroyUnknownTask();
+        DestroyHealthBarSprites();
+        DestroyExpBarSprites();
         ResetSpriteData();
         FreeAllSpritePalettes();
         StopCryAndClearCrySongs();
@@ -1448,24 +1589,21 @@ static void Task_ChangeSummaryMon(u8 taskId)
             return;
         break;
     case 5:
-        RemoveAndCreateMonMarkingsSprite(&sMonSummaryScreen->currentMon);
-        break;
-    case 6:
         CreateCaughtBallSprite(&sMonSummaryScreen->currentMon);
         break;
-    case 7:
+    case 6:
         if (sMonSummaryScreen->summary.ailment != AILMENT_NONE)
             CreateSetStatusSprite();
         else
             SetSpriteInvisibility(SPRITE_ARR_ID_STATUS, TRUE);
         break;
-    case 8:
+    case 7:
         CreateSetPokerusCuredSymbol(&sMonSummaryScreen->currentMon);
         break;
-    case 9:
+    case 8:
         CreateSetShinyStar(&sMonSummaryScreen->currentMon);
         break;
-    case 10:
+    case 9:
         sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_MON] = LoadMonGfxAndSprite(&sMonSummaryScreen->currentMon, &data[1]);
         if (sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_MON] == 0xFF)
             return;
@@ -1474,22 +1612,28 @@ static void Task_ChangeSummaryMon(u8 taskId)
         TryDrawExperienceProgressBar();
         data[1] = 0;
         break;
-    case 11:
+    case 10:
         SetTypeIcons();
         break;
-    case 12:
+    case 11:
         FreeAndDestroyMonIconSprite(&gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_MON_ICON]]);
         CreateMonIconSprite();
         TryHideSpritesForMovePage();
         break;
+    case 12:
+        ConfigureHealthBarSprites();
+        break;
     case 13:
-        PrintMonTitleBar();
+        ConfigureExpBarSprites();
         break;
     case 14:
+        PrintMonTitleBar();
+        break;
+    case 15:
         PrintPageSpecificText(sMonSummaryScreen->currPageIndex);
         LimitEggSummaryPageDisplay();
         break;
-    case 15:
+    case 16:
         gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_MON]].data[2] = 0;
         break;
     default:
@@ -1592,6 +1736,8 @@ static void ChangePage(u8 taskId, s8 delta)
     HideTypeSprites();
     TryHideSpritesForMovePage();
     HideMoveSelectorSprites();
+    SetHealthBarSprites(sMonSummaryScreen->currPageIndex != PSS_PAGE_SKILLS);
+    SetExpBarSprites(sMonSummaryScreen->currPageIndex != PSS_PAGE_SKILLS);
 }
 
 static void PssScrollRight(u8 taskId) // Scroll right
@@ -2171,7 +2317,6 @@ static void CreateSetShinyStar(struct Pokemon *mon)
     
     isShiny = IsMonShiny(mon);
     SetSpriteInvisibility(SPRITE_ARR_ID_SHINY_STAR, !isShiny);
-    
 }
 
 static void SetDexNumberColor(bool8 isMonShiny)
@@ -2189,12 +2334,12 @@ static void DrawExperienceProgressBar(struct Pokemon *unused)
     struct PokeSummary *summary = &sMonSummaryScreen->summary;
     u16 *dst;
     u8 i;
-
+    
     if (summary->level < MAX_LEVEL)
     {
         u32 expBetweenLevels = gExperienceTables[gBaseStats[summary->species].growthRate][summary->level + 1] - gExperienceTables[gBaseStats[summary->species].growthRate][summary->level];
         u32 expSinceLastLevel = summary->exp - gExperienceTables[gBaseStats[summary->species].growthRate][summary->level];
-
+        
         // Calculate the number of 1-pixel "ticks" to illuminate in the experience progress bar.
         // There are 8 tiles that make up the bar, and each tile has 8 "ticks". Hence, the numerator
         // is multiplied by 64.
@@ -2206,7 +2351,7 @@ static void DrawExperienceProgressBar(struct Pokemon *unused)
     {
         numExpProgressBarTicks = 0;
     }
-
+    
     dst = &sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_SKILLS][1][0x255];
     for (i = 0; i < 8; i++)
     {
@@ -2218,11 +2363,308 @@ static void DrawExperienceProgressBar(struct Pokemon *unused)
         if (numExpProgressBarTicks < 0)
             numExpProgressBarTicks = 0;
     }
-
+    
     if (GetBgTilemapBuffer(1) == sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_SKILLS][0])
         ScheduleBgCopyTilemapToVram(1);
     else
         ScheduleBgCopyTilemapToVram(2);
+}
+
+static void CreateHealthBarSprites(u16 tileTag, u16 palTag)
+{
+    u8 i;
+    u8 spriteId;
+    void * gfxBufferPtr;
+    u32 curHp;
+    u32 maxHp;
+    u8 hpBarPalTagOffset = 0;
+    
+    sHealthBar = AllocZeroed(sizeof(struct HealthBar));
+    gfxBufferPtr = AllocZeroed(0x20 * 12);
+    LZ77UnCompWram(gSummaryHealthBar_Tiles, gfxBufferPtr);
+    
+    curHp = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_HP);
+    maxHp = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_MAX_HP);
+    
+    if (maxHp / 4 > curHp)
+        hpBarPalTagOffset = 2;
+    else if (maxHp / 2 > curHp)
+        hpBarPalTagOffset = 1;
+    
+    if (gfxBufferPtr != NULL)
+    {
+        struct SpriteSheet sheet = {
+            .data = gfxBufferPtr,
+            .size = 0x20 * 12,
+            .tag = tileTag
+        };
+        
+        struct SpritePalette greenPal = {.data = sHealthBarPals[0], .tag = palTag};
+        struct SpritePalette yellowPal = {.data = sHealthBarPals[1], .tag = palTag + 1};
+        struct SpritePalette redPal = {.data = sHealthBarPals[2], .tag = palTag + 2};
+        
+        LoadSpriteSheet(&sheet);
+        LoadSpritePalette(&greenPal);
+        LoadSpritePalette(&yellowPal);
+        LoadSpritePalette(&redPal);
+    }
+    
+    for (i = 0; i < HP_BAR_SPRITES_COUNT; i++)
+    {
+        struct SpriteTemplate template = {
+            .tileTag = tileTag,
+            .paletteTag = palTag + hpBarPalTagOffset,
+            .oam = &sOamData_ExpHealthBars,
+            .anims = sSpriteAnimTable_ExpHealthBars,
+            .images = NULL,
+            .affineAnims = gDummySpriteAffineAnimTable,
+            .callback = SpriteCallbackDummy,
+        };
+        
+        sHealthBar->spritePositions[i] = i * 8 + 126;
+        spriteId = CreateSprite(&template, sHealthBar->spritePositions[i], 89, 0);
+        sHealthBar->sprites[i] = &gSprites[spriteId];
+        sHealthBar->sprites[i]->invisible = FALSE;
+        sHealthBar->sprites[i]->oam.priority = 1;
+        sHealthBar->tileTag = tileTag;
+        sHealthBar->palTag = palTag;
+        StartSpriteAnim(sHealthBar->sprites[i], 8);
+    }
+    
+    ConfigureHealthBarSprites();
+    SetHealthBarSprites(1);
+    
+    FREE_AND_SET_NULL_IF_SET(gfxBufferPtr);
+}
+
+static void ConfigureHealthBarSprites(void)
+{
+    u8 numWholeHpBarTiles = 0;
+    u8 i;
+    u8 animNum;
+    u8 two = 2;
+    u8 hpBarPalOffset = 0;
+    u32 curHp;
+    u32 maxHp;
+    s64 v0;
+    s64 v1;
+    
+    struct PokeSummary *summary = &sMonSummaryScreen->summary;
+    
+    if (summary->isEgg)
+        return;
+    
+    curHp = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_HP);
+    maxHp = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_MAX_HP);
+    
+    if (maxHp / 5 >= curHp)
+        hpBarPalOffset = 2;
+    else if (maxHp / 2 >= curHp)
+        hpBarPalOffset = 1;
+    
+    switch (GetHPBarLevel(curHp, maxHp))
+    {
+    case 3:
+    default:
+        hpBarPalOffset = 0;
+        break;
+    case 2:
+        hpBarPalOffset = 1;
+        break;
+    case 1:
+        hpBarPalOffset = 2;
+        break;
+    }
+    
+    for (i = 0; i < HP_BAR_SPRITES_COUNT; i++)
+        sHealthBar->sprites[i]->oam.paletteNum = IndexOfSpritePaletteTag(TAG_HEALTH_BAR) + hpBarPalOffset;
+    
+    if (curHp == maxHp)
+    {    
+        for (i = two; i < 8; i++)
+            StartSpriteAnim(sHealthBar->sprites[i], 8);
+    }
+    else
+    {
+        v0 = (maxHp << 2) / 6;
+        v1 = (curHp << 2);
+
+        while (TRUE)
+        {
+            if (v1 <= v0)
+                break;
+            v1 -= v0;
+            numWholeHpBarTiles++;
+        }
+        
+        numWholeHpBarTiles += two;
+        
+        for (i = two; i < numWholeHpBarTiles; i++)
+            StartSpriteAnim(sHealthBar->sprites[i], 8);
+        
+        animNum = (v1 * 6) / v0;
+        StartSpriteAnim(sHealthBar->sprites[numWholeHpBarTiles], animNum);
+        
+        for (i = numWholeHpBarTiles + 1; i < 8; i++)
+            StartSpriteAnim(sHealthBar->sprites[i], 0);
+    }
+    
+    StartSpriteAnim(sHealthBar->sprites[0], 9);
+    StartSpriteAnim(sHealthBar->sprites[1], 10);
+    StartSpriteAnim(sHealthBar->sprites[8], 11);
+}
+
+static void DestroyHealthBarSprites(void)
+{
+    u8 i;
+    
+    for (i = 0; i < HP_BAR_SPRITES_COUNT; i++)
+        if (sHealthBar->sprites[i] != NULL)
+            DestroySpriteAndFreeResources(sHealthBar->sprites[i]);
+    
+    FREE_AND_SET_NULL_IF_SET(sHealthBar);
+}
+
+static void SetHealthBarSprites(u8 invisible)
+{
+    u8 i;
+    
+    for (i = 0; i < HP_BAR_SPRITES_COUNT; i++)
+        sHealthBar->sprites[i]->invisible = invisible;
+}
+
+static void CreateExpBarSprites(u16 tileTag, u16 palTag)
+{
+    u8 i;
+    u8 spriteId;
+    void * gfxBufferPtr;
+
+    sExpBar = AllocZeroed(sizeof(struct ExpBar));
+    gfxBufferPtr = AllocZeroed(0x20 * 12);
+
+    LZ77UnCompWram(gSummaryExpBar_Tiles, gfxBufferPtr);
+    if (gfxBufferPtr != NULL)
+    {
+        struct SpriteSheet sheet = {
+            .data = gfxBufferPtr,
+            .size = 0x20 * 12,
+            .tag = tileTag
+        };
+
+        struct SpritePalette palette = {.data = gExpBarHealthBarGreenPal, .tag = palTag};
+        LoadSpriteSheet(&sheet);
+        LoadSpritePalette(&palette);
+    }
+
+    for (i = 0; i < EXP_BAR_SPRITES_COUNT; i++)
+    {
+        struct SpriteTemplate template = {
+            .tileTag = tileTag,
+            .paletteTag = palTag,
+            .oam = &sOamData_ExpHealthBars,
+            .anims = sSpriteAnimTable_ExpHealthBars,
+            .images = NULL,
+            .affineAnims = gDummySpriteAffineAnimTable,
+            .callback = SpriteCallbackDummy,
+        };
+
+        sExpBar->spritePositions[i] = i * 8 + 153;
+        spriteId = CreateSprite(&template, sExpBar->spritePositions[i], 132, 0);
+        sExpBar->sprites[i] = &gSprites[spriteId];
+        sExpBar->sprites[i]->oam.priority = 1;
+        sExpBar->tileTag = tileTag;
+        sExpBar->palTag = palTag;
+    }
+
+    ConfigureExpBarSprites();
+    SetExpBarSprites(1);
+
+    FREE_AND_SET_NULL_IF_SET(gfxBufferPtr);
+}
+
+static void ConfigureExpBarSprites(void)
+{
+    u8 numWholeExpBarTiles = 0;
+    u8 i;
+    u8 level;
+    u32 exp;
+    u32 totalExpToNextLevel;
+    u32 curExpToNextLevel;
+    u16 species;
+    s64 v0;
+    s64 v1;
+    u8 animNum;
+    u8 two = 2;
+    
+    struct PokeSummary *summary = &sMonSummaryScreen->summary;
+    
+    if (summary->isEgg)
+        return;
+    
+    exp = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_EXP);
+    level = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_LEVEL);
+    species = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPECIES);
+
+    if (level < 100)
+    {
+        totalExpToNextLevel = gExperienceTables[gBaseStats[species].growthRate][level + 1] - gExperienceTables[gBaseStats[species].growthRate][level];
+        curExpToNextLevel = exp - gExperienceTables[gBaseStats[species].growthRate][level];
+        v0 = ((totalExpToNextLevel << 2) / 8);
+        v1 = (curExpToNextLevel << 2);
+
+        while (TRUE)
+        {
+            if (v1 <= v0)
+                break;
+            v1 -= v0;
+            numWholeExpBarTiles++;
+        }
+
+        numWholeExpBarTiles += two;
+
+        for (i = two; i < numWholeExpBarTiles; i++)
+            StartSpriteAnim(sExpBar->sprites[i], 8);
+
+        if (numWholeExpBarTiles >= 10)
+        {
+            if (totalExpToNextLevel == curExpToNextLevel)
+                return;
+            else
+                StartSpriteAnim(sExpBar->sprites[9], 7);
+        }
+
+        animNum = (v1 * 8) / v0;
+        StartSpriteAnim(sExpBar->sprites[numWholeExpBarTiles], animNum);
+
+        for (i = numWholeExpBarTiles + 1; i < 10; i++)
+            StartSpriteAnim(sExpBar->sprites[i], 0);
+    }
+    else
+        for (i = two; i < 10; i++)
+            StartSpriteAnim(sExpBar->sprites[i], 0);
+
+    StartSpriteAnim(sExpBar->sprites[0], 9);
+    StartSpriteAnim(sExpBar->sprites[1], 10);
+    StartSpriteAnim(sExpBar->sprites[10], 11);
+}
+
+static void DestroyExpBarSprites(void)
+{
+    u8 i;
+
+    for (i = 0; i < EXP_BAR_SPRITES_COUNT; i++)
+        if (sExpBar->sprites[i] != NULL)
+            DestroySpriteAndFreeResources(sExpBar->sprites[i]);
+
+    FREE_AND_SET_NULL_IF_SET(sExpBar);
+}
+
+static void SetExpBarSprites(u8 invisible)
+{
+    u8 i;
+
+    for (i = 0; i < EXP_BAR_SPRITES_COUNT; i++)
+        sExpBar->sprites[i]->invisible = invisible;
 }
 
 static void LimitEggSummaryPageDisplay(void) // If the pokemon is an egg, limit the number of pages displayed to 1
@@ -2725,26 +3167,36 @@ static void Task_PrintSkillsPage(u8 taskId)
     data[0]++;
 }
 
+static void BufferStat(u8 *dst, u32 stat, s8 natureMod, u32 strId)
+{
+    static const u8 sTextUpArrow[] = _(" {UP_ARROW}");
+    static const u8 sTextDownArrow[] = _(" {DOWN_ARROW}");
+    
+    ConvertIntToDecimalStringN(dst, stat, STR_CONV_MODE_RIGHT_ALIGN, 3);
+    
+    if (natureMod > 0)
+        StringAppend(dst, sTextUpArrow);
+    else if (natureMod < 0)
+        StringAppend(dst, sTextDownArrow);
+    
+    DynamicPlaceholderTextUtil_SetPlaceholderPtr(strId, dst);
+}
+
 static void BufferLeftColumnStats(void)
 {
-    u8 *attackString = Alloc(8);
-    u8 *defenseString = Alloc(8);
-    u8 *specialAttackString = Alloc(8);
-    u8 *specialDefenseString = Alloc(8);
-    u8 *speedString = Alloc(8);
-
-    ConvertIntToDecimalStringN(attackString, sMonSummaryScreen->summary.atk, STR_CONV_MODE_RIGHT_ALIGN, 3);
-    ConvertIntToDecimalStringN(defenseString, sMonSummaryScreen->summary.def, STR_CONV_MODE_RIGHT_ALIGN, 3);
-    ConvertIntToDecimalStringN(specialAttackString, sMonSummaryScreen->summary.spatk, STR_CONV_MODE_RIGHT_ALIGN, 3);
-    ConvertIntToDecimalStringN(specialDefenseString, sMonSummaryScreen->summary.spdef, STR_CONV_MODE_RIGHT_ALIGN, 3);
-    ConvertIntToDecimalStringN(speedString, sMonSummaryScreen->summary.speed, STR_CONV_MODE_RIGHT_ALIGN, 3);
+    u8 *attackString = Alloc(20);
+    u8 *defenseString = Alloc(20);
+    u8 *specialAttackString = Alloc(20);
+    u8 *specialDefenseString = Alloc(20);
+    u8 *speedString = Alloc(20);
+    const s8 *natureMod = gNatureStatTable[sMonSummaryScreen->summary.nature];
 
     DynamicPlaceholderTextUtil_Reset();
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, attackString);
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, defenseString);
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, specialAttackString);
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(3, specialDefenseString);
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(4, speedString);
+    BufferStat(attackString, sMonSummaryScreen->summary.atk, natureMod[STAT_ATK - 1], 0);
+    BufferStat(defenseString, sMonSummaryScreen->summary.def, natureMod[STAT_DEF - 1], 1);
+    BufferStat(specialAttackString, sMonSummaryScreen->summary.spatk, natureMod[STAT_SPATK - 1], 2);
+    BufferStat(specialDefenseString, sMonSummaryScreen->summary.spdef, natureMod[STAT_SPDEF - 1], 3);
+    BufferStat(speedString, sMonSummaryScreen->summary.speed, natureMod[STAT_SPEED - 1], 4);
     DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sStatsLeftColumnLayout);
 
     Free(attackString);
@@ -2756,7 +3208,7 @@ static void BufferLeftColumnStats(void)
 
 static void PrintLeftColumnStats(void)
 {
-    PrintTextOnWindow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_WINDOW_SKILLS_STATS), gStringVar4, 3, 5, 0, PSS_COLOR_BLACK_DARK_BLUE_SHADOW);
+    PrintTextOnWindow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_WINDOW_SKILLS_STATS), gStringVar4, 16, 6, 0, PSS_COLOR_BLACK_DARK_BLUE_SHADOW);
 }
 
 static void PrintHP(void)
@@ -3064,9 +3516,6 @@ static void TryHideSpritesForMovePage(void)
             SetSpriteInvisibility(i, invisible);
     }
     
-    // When invisible == TRUE, hide the markings sprite
-    sMonSummaryScreen->markingsSprite->invisible = invisible;
-    
     // When invisible == TRUE, show the Pokémon icon sprite
     if (sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_MON_ICON] != 0xFF)
         SetSpriteInvisibility(SPRITE_ARR_ID_MON_ICON, !invisible);
@@ -3244,10 +3693,7 @@ static u8 CreateMonSprite(struct Pokemon *unused)
     gSprites[spriteId].callback = SpriteCB_Pokemon;
     gSprites[spriteId].oam.priority = 0;
 
-    if (!IsMonSpriteNotFlipped(summary->species2))
-        gSprites[spriteId].hFlip = TRUE;
-    else
-        gSprites[spriteId].hFlip = FALSE;
+    gSprites[spriteId].hFlip = !IsMonSpriteNotFlipped(summary->species2);
 
     return spriteId;
 }
@@ -3303,28 +3749,6 @@ static void StopPokemonAnimations(void)  // A subtle effect, this function stops
         u16 id = i + paletteIndex;
         gPlttBufferUnfaded[id] = gPlttBufferFaded[id];
     }
-}
-
-static void CreateMonMarkingsSprite(struct Pokemon *mon)
-{
-    struct Sprite *sprite = sub_811FF94(TAG_MON_MARKINGS, TAG_MON_MARKINGS, sSummaryMarkingsPalette);
-
-    sMonSummaryScreen->markingsSprite = sprite;
-    if (sprite != NULL)
-    {
-        StartSpriteAnim(sprite, GetMonData(mon, MON_DATA_MARKINGS));
-        sMonSummaryScreen->markingsSprite->pos1.x = 144;
-        sMonSummaryScreen->markingsSprite->pos1.y = 80;
-        sMonSummaryScreen->markingsSprite->oam.priority = 1;
-        sMonSummaryScreen->markingsSprite->invisible = (sMonSummaryScreen->currPageIndex == PSS_PAGE_MOVES);
-    }
-}
-
-static void RemoveAndCreateMonMarkingsSprite(struct Pokemon *mon)
-{
-    DestroySprite(sMonSummaryScreen->markingsSprite);
-    FreeSpriteTilesByTag(TAG_MON_MARKINGS);
-    CreateMonMarkingsSprite(mon);
 }
 
 static void CreateCaughtBallSprite(struct Pokemon *mon)
