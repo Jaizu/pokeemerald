@@ -2421,7 +2421,7 @@ static void CreateHealthBarSprites(u16 tileTag, u16 palTag)
             .callback = SpriteCallbackDummy,
         };
         
-        sHealthBar->spritePositions[i] = i * 8 + 126;
+        sHealthBar->spritePositions[i] = i * 8 + 128;
         spriteId = CreateSprite(&template, sHealthBar->spritePositions[i], 89, 0);
         sHealthBar->sprites[i] = &gSprites[spriteId];
         sHealthBar->sprites[i]->invisible = FALSE;
