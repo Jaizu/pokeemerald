@@ -143,7 +143,7 @@ Route119_EventScript_DefeatedBrendan:: @ 81F45E4
 
 Route119_EventScript_GiveFlyHM:: @ 81F45FF
 	giveitem ITEM_HM02
-	setflag FLAG_RECEIVED_HM02
+	setflag 0
 	return
 
 Route119_EventScript_RivalExitScottArrive:: @ 81F460F

@@ -319,7 +319,7 @@ MossdeepCity_SpaceCenter_2F_EventScript_DefeatedMaxieTabitha:: @ 8224071
 	msgbox MossdeepCity_SpaceCenter_2F_Text_StevenThankYouComeSeeMeAtHome, MSGBOX_DEFAULT
 	closemessage
 	fadescreen FADE_TO_BLACK
-	setflag FLAG_DEFEATED_MAGMA_SPACE_CENTER
+	setflag 0
 	setflag FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_STEVEN
 	removeobject LOCALID_STEVEN
 	setflag FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_MAGMA_NOTE
@@ -363,7 +363,7 @@ MossdeepCity_SpaceCenter_2F_EventScript_RivalRayquazaCall:: @ 8224175
 	compare VAR_RESULT, FEMALE
 	call_if_eq MossdeepCity_SpaceCenter_2F_EventScript_BrendanRayquazaCall
 	closemessage
-	clearflag FLAG_DEFEATED_MAGMA_SPACE_CENTER
+	clearflag 0
 	releaseall
 	end
 

@@ -8,7 +8,7 @@ LavaridgeTown_MapScripts:: @ 81EA4D3
 
 LavaridgeTown_OnTransition: @ 81EA4DE
 	setflag FLAG_VISITED_LAVARIDGE_TOWN
-	call_if_set FLAG_WHITEOUT_TO_LAVARIDGE, LavaridgeTown_EventScript_ClearLavaridgeWhiteOut
+	call_if_set 0, LavaridgeTown_EventScript_ClearLavaridgeWhiteOut
 	call_if_set FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY, LavaridgeTown_EventScript_ShowMtChimneyTrainers
 	call Common_EventScript_SetupRivalGfxId
 	call Common_EventScript_SetupRivalOnBikeGfxId
@@ -19,7 +19,7 @@ LavaridgeTown_OnTransition: @ 81EA4DE
 	end
 
 LavaridgeTown_EventScript_ClearLavaridgeWhiteOut:: @ 81EA514
-	clearflag FLAG_WHITEOUT_TO_LAVARIDGE
+	clearflag 0
 	return
 
 LavaridgeTown_EventScript_CheckSetRivalPos:: @ 81EA518

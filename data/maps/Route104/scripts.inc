@@ -36,7 +36,7 @@ Route104_EventScript_TrySetRivalPos:: @ 81ECC78
 	compare VAR_BOARD_BRINEY_BOAT_STATE, 1
 	goto_if_ge Route104_EventScript_DontSetRivalPos
 	goto_if_set FLAG_MET_RIVAL_RUSTBORO, Route104_EventScript_DontSetRivalPos
-	goto_if_unset FLAG_REGISTER_RIVAL_POKENAV, Route104_EventScript_DontSetRivalPos
+	goto_if_unset 0, Route104_EventScript_DontSetRivalPos
 	setobjectxyperm LOCALID_RIVAL, 17, 52
 	return
 
@@ -101,8 +101,8 @@ Route104_EventScript_RivalEncounter:: @ 81ECD33
 
 Route104_EventScript_MayEncounter:: @ 81ECD4B
 	goto_if_set FLAG_DEFEATED_RIVAL_ROUTE_104, Route104_EventScript_MayDefeated
-	goto_if_set FLAG_REGISTER_RIVAL_POKENAV, Route104_EventScript_MayAskToBattle
-	setflag FLAG_REGISTER_RIVAL_POKENAV
+	goto_if_set 0, Route104_EventScript_MayAskToBattle
+	setflag 0
 	msgbox Route104_Text_MayWeShouldRegister, MSGBOX_DEFAULT
 	closemessage
 	delay 30
@@ -190,8 +190,8 @@ Route104_EventScript_BattleMayMudkip:: @ 81ECE5C
 
 Route104_EventScript_BrendanEncounter:: @ 81ECE6F
 	goto_if_set FLAG_DEFEATED_RIVAL_ROUTE_104, Route104_EventScript_BrendanDefeated
-	goto_if_set FLAG_REGISTER_RIVAL_POKENAV, Route104_EventScript_BrendanAskToBattle
-	setflag FLAG_REGISTER_RIVAL_POKENAV
+	goto_if_set 0, Route104_EventScript_BrendanAskToBattle
+	setflag 0
 	msgbox Route104_Text_BrendanWeShouldRegister, MSGBOX_DEFAULT
 	closemessage
 	delay 30
