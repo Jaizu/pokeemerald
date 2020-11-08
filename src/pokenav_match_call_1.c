@@ -505,7 +505,7 @@ static bool32 sub_81CB1D0(void)
             if (GetMatchCallMapSec(selection) == gMapHeader.regionMapSectionId
              && FlagGet(FLAG_BADGE05_GET) == TRUE)
             {
-                if (!FlagGet(FLAG_WATTSON_REMATCH_AVAILABLE))
+                if (!FlagGet(0))
                     return TRUE;
             }
         }

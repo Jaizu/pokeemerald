@@ -20,8 +20,8 @@ LilycoveCity_ContestLobby_EventScript_SpeakToContestReceptionist:: @ 8279CC5
 	faceplayer
 	compare VAR_CONTEST_PRIZE_PICKUP, 0
 	goto_if_ne LilycoveCity_ContestLobby_EventScript_PickUpPrize
-	call_if_set FLAG_RECEIVED_POKEBLOCK_CASE, LilycoveCity_ContestLobby_EventScript_ReceptionWelcome
-	call_if_unset FLAG_RECEIVED_POKEBLOCK_CASE, LilycoveCity_ContestLobby_EventScript_GivePokeblockCase
+	call_if_set 0, LilycoveCity_ContestLobby_EventScript_ReceptionWelcome
+	call_if_unset 0, LilycoveCity_ContestLobby_EventScript_GivePokeblockCase
 	goto LilycoveCity_ContestLobby_EventScript_AskEnterContest
 	end
 
@@ -32,7 +32,7 @@ LilycoveCity_ContestLobby_EventScript_ReceptionWelcome:: @ 8279CEA
 LilycoveCity_ContestLobby_EventScript_GivePokeblockCase:: @ 8279CF3
 	msgbox LilycoveCity_ContestLobby_Text_ReceptionDontHavePokeblockCase, MSGBOX_DEFAULT
 	giveitem ITEM_POKEBLOCK_CASE
-	setflag FLAG_RECEIVED_POKEBLOCK_CASE
+	setflag 0
 	msgbox LilycoveCity_ContestLobby_Text_NowThatWeveClearedThatUp, MSGBOX_DEFAULT
 	return
 

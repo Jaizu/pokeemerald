@@ -102,38 +102,22 @@
 #define FLAG_PLEASE_FIND_STINGA              0x56 // FLAG_HIDE_CONTEST_POKE_BALL in Emerald
 #define FLAG_RECEIVED_STINGA_SOOTHE_BELL     0x57 // FLAG_MET_RIVAL_MOM in Emerald
 #define FLAG_RECEIVED_STINGA_BERRIES         0x58 // FLAG_BIRCH_AIDE_MET in Emerald
-#define FLAG_DECLINED_BIKE                   0x59
 #define FLAG_FERNANDO_STORMED_OFF            0x59 // FLAG_DECLINED_BIKE in Emerald
-#define FLAG_RECEIVED_BIKE_OLD               0x5A // FLAG_RECEIVED_BIKE in Emerald
 #define FLAG_FERNANDO_RESCUED                0x5A // FLAG_RECEIVED_BIKE in Emerald
-#define FLAG_WATTSON_REMATCH_AVAILABLE                     0x5B
 #define FLAG_CAUGHT_ARCHAN_TUNNEL_SECRET_TEMPLE_CLEFAIRY   0x5B // FLAG_WATTSON_REMATCH_AVAILABLE in Emerald
-#define FLAG_COLLECTED_ALL_SILVER_SYMBOLS                  0x5C
 #define FLAG_DEFEATED_ARCHAN_TUNNEL_SECRET_TEMPLE_CLEFAIRY 0x5C // FLAG_COLLECTED_ALL_SILVER_SYMBOLS in Emerald
-#define FLAG_GOOD_LUCK_SAFARI_ZONE                         0x5D // Set after talking to NPC blocking Safari Zone entrance/exit once.
 #define FLAG_CAUGHT_AEROUS_ROAD_HIDDEN_GROTTO_VENONAT      0x5D // FLAG_GOOD_LUCK_SAFARI_ZONE in Emerald
-#define FLAG_RECEIVED_WAILMER_PAIL                         0x5E
 #define FLAG_DEFEATED_AEROUS_ROAD_HIDDEN_GROTTO_VENONAT    0x5E // FLAG_RECEIVED_WAILMER_PAIL in Emerald
-#define FLAG_RECEIVED_POKEBLOCK_CASE                       0x5F
 #define FLAG_CAUGHT_ARCHAN_HILLS_SECRET_TEMPLE_KECLEON     0x5F // FLAG_RECEIVED_POKEBLOCK_CASE in Emerald
-#define FLAG_RECEIVED_SECRET_POWER                         0x60
 #define FLAG_DEFEATED_ARCHAN_HILLS_SECRET_TEMPLE_KECLEON   0x60 // FLAG_RECEIVED_SECRET_POWER in Emerald
-#define FLAG_MET_TEAM_AQUA_HARBOR               0x61
 #define FLAG_DEFEATED_NEW_ELDERS                0x61 // FLAG_MET_TEAM_AQUA_HARBOR in Emerald
-#define FLAG_TV_EXPLAINED                       0x62
 #define FLAG_RECEIVED_AEROUS_CITY_REVIVAL_HERB  0x62 // FLAG_TV_EXPLAINED in Emerald
-#define FLAG_MAUVILLE_GYM_BARRIERS_STATE     0x63
 #define FLAG_DEFEATED_VINCENT                0x63 // FLAG_MAUVILLE_GYM_BARRIERS_STATE in Emerald
-#define FLAG_MOSSDEEP_GYM_SWITCH_1           0x64 // Leftover from the RS version of Mossdeep Gym, functionally unused
 #define FLAG_RECEIVED_EGG_FROM_VINCENT       0x64 // FLAG_MOSSDEEP_GYM_SWITCH_1 in Emerald
-#define FLAG_MOSSDEEP_GYM_SWITCH_2           0x65 // Leftover from the RS version of Mossdeep Gym, functionally unused
 #define FLAG_RECEIVED_AEROUS_CITY_NUGGET     0x65 // FLAG_MOSSDEEP_GYM_SWITCH_2 in Emerald
-#define FLAG_MOSSDEEP_GYM_SWITCH_3           0x66 // Leftover from the RS version of Mossdeep Gym, functionally unused
 #define FLAG_DEFEATED_ESSA                   0x66 // FLAG_MOSSDEEP_GYM_SWITCH_3 in Emerald
-#define FLAG_MOSSDEEP_GYM_SWITCH_4           0x67 // Leftover from the RS version of Mossdeep Gym, functionally unused
 #define FLAG_RECEIVED_AMULET_COIN            0x67 // FLAG_MOSSDEEP_GYM_SWITCH_4 in Emerald
 #define FLAG_RECEIVED_TM34                   0x68 // FLAG_UNUSED_0x068 in Emerald
-#define FLAG_OCEANIC_MUSEUM_MET_REPORTER                    0x69
 #define FLAG_RECEIVED_NESTPINE_CLIMB_PERSIM_BERRIES         0x69 // FLAG_OCEANIC_MUSEUM_MET_REPORTER in Emerald
 #define FLAG_RECEIVED_HM04                                  0x6A
 #define FLAG_DEFEATED_NESTPINE_CLIMB_HIDDEN_GROTTO_MARACTUS 0x6A // FLAG_RECEIVED_HM04 in Emerald

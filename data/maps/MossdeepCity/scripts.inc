@@ -10,10 +10,10 @@ MossdeepCity_MapScripts:: @ 81E4A96
 	.byte 0
 
 MossdeepCity_OnTransition: @ 81E4A9C
-	clearflag FLAG_MOSSDEEP_GYM_SWITCH_1
-	clearflag FLAG_MOSSDEEP_GYM_SWITCH_2
-	clearflag FLAG_MOSSDEEP_GYM_SWITCH_3
-	clearflag FLAG_MOSSDEEP_GYM_SWITCH_4
+	clearflag 0
+	clearflag 0
+	clearflag 0
+	clearflag 0
 	call_if_set FLAG_SYS_WEATHER_CTRL, Common_EventScript_SetAbnormalWeather
 	end
 

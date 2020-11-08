@@ -11,7 +11,7 @@ MauvilleCity_OnTransition: @ 81DF38B
 	clearflag FLAG_FORCE_MIRAGE_TOWER_VISIBLE
 	clearflag FLAG_HIDE_SLATEPORT_MUSEUM_POPULATION
 	setflag FLAG_SYS_TV_START
-	clearflag FLAG_MAUVILLE_GYM_BARRIERS_STATE
+	clearflag 0
 	setvar VAR_MAUVILLE_GYM_STATE, 0
 	call_if_set FLAG_GOT_TM24_FROM_WATTSON, MauvilleCity_EventScript_MoveWattsonBackToGym
 	end
@@ -19,7 +19,7 @@ MauvilleCity_OnTransition: @ 81DF38B
 MauvilleCity_EventScript_MoveWattsonBackToGym:: @ 81DF3A9
 	clearflag FLAG_HIDE_MAUVILLE_GYM_WATTSON
 	setflag FLAG_HIDE_MAUVILLE_CITY_WATTSON
-	setflag FLAG_WATTSON_REMATCH_AVAILABLE
+	setflag 0
 	return
 
 MauvilleCity_EventScript_Boy:: @ 81DF3B3
@@ -57,9 +57,9 @@ MauvilleCity_EventScript_GameCornerSign:: @ 81DF3F2
 MauvilleCity_EventScript_SchoolKidM:: @ 81DF3FB
 	lock
 	faceplayer
-	goto_if_set FLAG_TV_EXPLAINED, MauvilleCity_EventScript_TVExplained
+	goto_if_set 0, MauvilleCity_EventScript_TVExplained
 	msgbox MauvilleCity_Text_ExplainTV, MSGBOX_DEFAULT
-	setflag FLAG_TV_EXPLAINED
+	setflag 0
 	release
 	end
 

@@ -170,7 +170,7 @@ SecretBase_EventScript_FirstEntrance:: @ 8275B81
 
 SecretBase_EventScript_SetAsBase:: @ 8275BAB
 	closemessage
-	setflag FLAG_RECEIVED_SECRET_POWER
+	setflag 0
 	special EnterNewlyCreatedSecretBase
 	waitstate
 	end

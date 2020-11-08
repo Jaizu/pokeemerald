@@ -4,8 +4,8 @@ MauvilleCity_BikeShop_MapScripts:: @ 820EBBB
 MauvilleCity_BikeShop_EventScript_Rydel:: @ 820EBBC
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_BIKE, MauvilleCity_BikeShop_EventScript_AskSwitchBikes
-	goto_if_set FLAG_DECLINED_BIKE, MauvilleCity_BikeShop_EventScript_SkipGreeting
+	goto_if_set 0, MauvilleCity_BikeShop_EventScript_AskSwitchBikes
+	goto_if_set 0, MauvilleCity_BikeShop_EventScript_SkipGreeting
 	msgbox MauvilleCity_BikeShop_Text_RydelGreeting, MSGBOX_DEFAULT
 	msgbox MauvilleCity_BikeShop_Text_DidYouComeFromFarAway, MSGBOX_YESNO
 	compare VAR_RESULT, YES
@@ -32,13 +32,13 @@ MauvilleCity_BikeShop_EventScript_ChooseBike:: @ 820EC16
 	end
 
 MauvilleCity_BikeShop_EventScript_NotFar:: @ 820EC3D
-	setflag FLAG_DECLINED_BIKE
+	setflag 0
 	msgbox MauvilleCity_BikeShop_Text_GuessYouDontNeedBike, MSGBOX_DEFAULT
 	release
 	end
 
 MauvilleCity_BikeShop_EventScript_YesFar:: @ 820EC4A
-	setflag FLAG_RECEIVED_BIKE
+	setflag 0
 	goto MauvilleCity_BikeShop_EventScript_ChooseBike
 	end
 

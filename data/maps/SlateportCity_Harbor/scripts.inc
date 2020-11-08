@@ -69,7 +69,7 @@ SlateportCity_Harbor_EventScript_AquaEscapeScene:: @ 820C9F5
 	removeobject LOCALID_ARCHIE
 	removeobject LOCALID_SUBMARINE
 	setvar VAR_SLATEPORT_HARBOR_STATE, 2
-	setflag FLAG_MET_TEAM_AQUA_HARBOR
+	setflag 0
 	setflag FLAG_HIDE_LILCOVE_MOTEL_SCOTT
 	compare VAR_0x8008, 0
 	call_if_eq SlateportCity_Harbor_EventScript_SternApproachPlayer0

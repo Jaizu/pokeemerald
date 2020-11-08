@@ -49,7 +49,7 @@ Route111_EventScript_GiveSecretPower:: @ 827661E
 	goto_if_eq Route111_EventScript_NoRoomForSecretPower
 	msgbox Route111_Text_ExplainSecretPower, MSGBOX_DEFAULT
 	closemessage
-	setflag FLAG_RECEIVED_SECRET_POWER
+	setflag 0
 	clearflag FLAG_HIDE_SLATEPORT_CITY_TM_SALESMAN
 	compare VAR_FACING, DIR_WEST
 	call_if_eq Route111_EventScript_SecretPowerManExit

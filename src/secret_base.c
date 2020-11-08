@@ -1656,59 +1656,56 @@ void ReceiveSecretBasesData(void *secretBases, size_t recordSize, u8 linkIdx)
     struct SecretBaseRecordMixer mixers[3];
     u16 i;
 
-    if (FlagGet(FLAG_RECEIVED_SECRET_POWER))
+    switch (GetLinkPlayerCount())
     {
-        switch (GetLinkPlayerCount())
-        {
-        case 2:
-            memset(secretBases + 2 * recordSize, 0, recordSize);
-            memset(secretBases + 3 * recordSize, 0, recordSize);
-            break;
-        case 3:
-            memset(secretBases + 3 * recordSize, 0, recordSize);
-            break;
-        }
+    case 2:
+        memset(secretBases + 2 * recordSize, 0, recordSize);
+        memset(secretBases + 3 * recordSize, 0, recordSize);
+        break;
+    case 3:
+        memset(secretBases + 3 * recordSize, 0, recordSize);
+        break;
+    }
 
-        switch (linkIdx)
-        {
-        case 0:
-            INIT_SECRET_BASE_RECORD_MIXER(1, 2, 3)
-            break;
-        case 1:
-            INIT_SECRET_BASE_RECORD_MIXER(2, 3, 0)
-            break;
-        case 2:
-            INIT_SECRET_BASE_RECORD_MIXER(3, 0, 1)
-            break;
-        case 3:
-            INIT_SECRET_BASE_RECORD_MIXER(0, 1, 2)
-            break;
-        }
+    switch (linkIdx)
+    {
+    case 0:
+        INIT_SECRET_BASE_RECORD_MIXER(1, 2, 3)
+        break;
+    case 1:
+        INIT_SECRET_BASE_RECORD_MIXER(2, 3, 0)
+        break;
+    case 2:
+        INIT_SECRET_BASE_RECORD_MIXER(3, 0, 1)
+        break;
+    case 3:
+        INIT_SECRET_BASE_RECORD_MIXER(0, 1, 2)
+        break;
+    }
 
-        sub_80EAEF4(mixers);
-        for (i = 1; i < SECRET_BASES_COUNT; i++)
+    sub_80EAEF4(mixers);
+    for (i = 1; i < SECRET_BASES_COUNT; i++)
+    {
+        if (gSaveBlock1Ptr->secretBases[i].sbr_field_1_0 == 1)
         {
-            if (gSaveBlock1Ptr->secretBases[i].sbr_field_1_0 == 1)
-            {
-                gSaveBlock1Ptr->secretBases[i].registryStatus = 1;
-                gSaveBlock1Ptr->secretBases[i].sbr_field_1_0 = 0;
-            }
+            gSaveBlock1Ptr->secretBases[i].registryStatus = 1;
+            gSaveBlock1Ptr->secretBases[i].sbr_field_1_0 = 0;
         }
+    }
 
-        SortSecretBasesByRegistryStatus();
-        for (i = 1; i < SECRET_BASES_COUNT; i++)
+    SortSecretBasesByRegistryStatus();
+    for (i = 1; i < SECRET_BASES_COUNT; i++)
+    {
+        if (gSaveBlock1Ptr->secretBases[i].registryStatus == 2)
         {
-            if (gSaveBlock1Ptr->secretBases[i].registryStatus == 2)
-            {
-                gSaveBlock1Ptr->secretBases[i].registryStatus = 0;
-            }
+            gSaveBlock1Ptr->secretBases[i].registryStatus = 0;
         }
+    }
 
-        if (gSaveBlock1Ptr->secretBases[0].secretBaseId != 0
-         && gSaveBlock1Ptr->secretBases[0].numSecretBasesReceived != 0xFFFF)
-        {
-            gSaveBlock1Ptr->secretBases[0].numSecretBasesReceived++;
-        }
+    if (gSaveBlock1Ptr->secretBases[0].secretBaseId != 0
+     && gSaveBlock1Ptr->secretBases[0].numSecretBasesReceived != 0xFFFF)
+    {
+        gSaveBlock1Ptr->secretBases[0].numSecretBasesReceived++;
     }
 }
 

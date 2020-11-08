@@ -221,7 +221,7 @@ SlateportCity_EventScript_Girl:: @ 81DCE84
 	faceplayer
 	compare VAR_SLATEPORT_CITY_STATE, 1
 	call_if_eq SlateportCity_EventScript_GirlSternInterview
-	goto_if_set FLAG_RECEIVED_SECRET_POWER, SlateportCity_EventScript_GirlSecretBase
+	goto_if_set 0, SlateportCity_EventScript_GirlSecretBase
 	msgbox SlateportCity_Text_SlateportWonderfulPlace, MSGBOX_DEFAULT
 	release
 	end
@@ -535,7 +535,7 @@ SlateportCity_EventScript_ComeBackWithSecretPower:: @ 81DD18E
 SlateportCity_EventScript_DecorClerk:: @ 81DD198
 	lock
 	faceplayer
-	goto_if_unset FLAG_RECEIVED_SECRET_POWER, SlateportCity_EventScript_ComeBackWithSecretPower
+	goto_if_unset 0, SlateportCity_EventScript_ComeBackWithSecretPower
 	message gText_HowMayIServeYou
 	waitmessage
 	pokemartdecoration SlateportCity_PokemartDecor
