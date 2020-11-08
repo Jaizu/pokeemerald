@@ -62,7 +62,7 @@
       "y": 5,
       "elevation": 3,
       "item": "ITEM_NUGGET",
-      "flag": "FLAG_HIDDEN_ITEM_TRICK_HOUSE_NUGGET"
+      "flag": "0"
     }
   ]
 }
