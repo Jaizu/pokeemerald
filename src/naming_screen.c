@@ -199,9 +199,9 @@ static const u16 sUnused_Pal[] = INCBIN_U16("graphics/naming_screen/unused.gbapa
 static const u8 *const sTransferredToPCMessages[] =
 {
     gText_PkmnTransferredSomeonesPC,
-    gText_PkmnTransferredLanettesPC,
+    gText_PkmnTransferredNetasPC,
     gText_PkmnTransferredSomeonesPCBoxFull,
-    gText_PkmnTransferredLanettesPCBoxFull
+    gText_PkmnTransferredNetasPCBoxFull
 };
 
 static const u8 sText_AlphabetUpperLower[] = _("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!");
@@ -727,7 +727,7 @@ static void DisplaySentToPCMessage(void)
         stringToDisplay = 2;
     }
 
-    if (FlagGet(FLAG_SYS_PC_LANETTE))
+    if (FlagGet(FLAG_SYS_PC_NETA))
         stringToDisplay++;
 
     StringExpandPlaceholders(gStringVar4, sTransferredToPCMessages[stringToDisplay]);

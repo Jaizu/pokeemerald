@@ -1637,7 +1637,6 @@
 #define FLAG_LANDMARK_SOUTHERN_ISLAND               (SYSTEM_FLAGS + 0x49)
 #define FLAG_LANDMARK_FIERY_PATH                    (SYSTEM_FLAGS + 0x4A)
 
-#define FLAG_SYS_PC_LANETTE                         (SYSTEM_FLAGS + 0x4B)
 #define FLAG_SYS_PC_NETA                            (SYSTEM_FLAGS + 0x4B) // FLAG_SYS_PC_LANETTE in Emerald
 #define FLAG_SYS_MYSTERY_EVENT_ENABLE               (SYSTEM_FLAGS + 0x4C)
 #define FLAG_SYS_ENC_UP_ITEM                        (SYSTEM_FLAGS + 0x4D)

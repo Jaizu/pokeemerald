@@ -10,7 +10,7 @@ Route114_LanettesHouse_EventScript_Lanette:: @ 822B2D2
 	lock
 	faceplayer
 	goto_if_set FLAG_RECEIVED_DOLL_LANETTE, Route114_LanettesHouse_EventScript_OfferAdvice
-	setflag FLAG_SYS_PC_LANETTE
+	setflag FLAG_SYS_PC_NETA
 	msgbox Route114_LanettesHouse_Text_EverythingClutteredKeepThis, MSGBOX_DEFAULT
 	givedecoration DECOR_LOTAD_DOLL
 	compare VAR_RESULT, FALSE

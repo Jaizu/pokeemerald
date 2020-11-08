@@ -11841,7 +11841,7 @@ static void Cmd_givecaughtmon(void)
             gBattleCommunication[MULTISTRING_CHOOSER] = 2;
         }
 
-        if (FlagGet(FLAG_SYS_PC_LANETTE))
+        if (FlagGet(FLAG_SYS_PC_NETA))
             gBattleCommunication[MULTISTRING_CHOOSER]++;
     }
 

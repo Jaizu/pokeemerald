@@ -471,7 +471,7 @@ static const u8 sText_GotchaPkmnCaught2[] = _("Gotcha!\n{B_DEF_NAME} was caught!
 static const u8 sText_GiveNicknameCaptured[] = _("Give a nickname to the\ncaptured {B_DEF_NAME}?");
 static const u8 sText_PkmnSentToPC[] = _("{B_DEF_NAME} was sent to\n{B_PC_CREATOR_NAME} PC.");
 static const u8 sText_Someones[] = _("someone's");
-static const u8 sText_Lanettes[] = _("LANETTE's");
+static const u8 sText_Netas[] = _("Neta's");
 static const u8 sText_PkmnDataAddedToDex[] = _("{B_DEF_NAME}'s data was\nadded to the POKéDEX.\p");
 static const u8 sText_ItIsRaining[] = _("It is raining.");
 static const u8 sText_SandstormIsRaging[] = _("A sandstorm is raging.");
@@ -1071,9 +1071,9 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_QUESTIONFORFEITMATCH - 12] = sText_QuestionForfeitMatch,
     [STRINGID_FORFEITEDMATCH - 12] = sText_ForfeitedMatch,
     [STRINGID_PKMNTRANSFERREDSOMEONESPC - 12] = gText_PkmnTransferredSomeonesPC,
-    [STRINGID_PKMNTRANSFERREDLANETTESPC - 12] = gText_PkmnTransferredLanettesPC,
+    [STRINGID_PKMNTRANSFERREDNETASPC - 12] = gText_PkmnTransferredNetasPC,
     [STRINGID_PKMNBOXSOMEONESPCFULL - 12] = gText_PkmnTransferredSomeonesPCBoxFull,
-    [STRINGID_PKMNBOXLANETTESPCFULL - 12] = gText_PkmnTransferredLanettesPCBoxFull,
+    [STRINGID_PKMNBOXNETASPCFULL - 12] = gText_PkmnTransferredNetasPCBoxFull,
     [STRINGID_TRAINER1WINTEXT - 12] = sText_Trainer1WinText,
     [STRINGID_TRAINER2WINTEXT - 12] = sText_Trainer2WinText,
     [STRINGID_ENDUREDSTURDY - 12] = sText_EnduredViaSturdy,
@@ -1524,7 +1524,7 @@ const u16 gFlashFireStringIds[] =
 
 const u16 gCaughtMonStringIds[] =
 {
-    STRINGID_PKMNTRANSFERREDSOMEONESPC, STRINGID_PKMNTRANSFERREDLANETTESPC, STRINGID_PKMNBOXSOMEONESPCFULL, STRINGID_PKMNBOXLANETTESPCFULL,
+    STRINGID_PKMNTRANSFERREDSOMEONESPC, STRINGID_PKMNTRANSFERREDNETASPC, STRINGID_PKMNBOXSOMEONESPCFULL, STRINGID_PKMNBOXNETASPCFULL,
 };
 
 const u16 gTrappingMoves[] =
@@ -3106,9 +3106,9 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
                 StringGetEnd10(text);
                 toCpy = text;
                 break;
-            case B_TXT_PC_CREATOR_NAME: // lanette pc
-                if (FlagGet(FLAG_SYS_PC_LANETTE))
-                    toCpy = sText_Lanettes;
+            case B_TXT_PC_CREATOR_NAME: // Neta's PC
+                if (FlagGet(FLAG_SYS_PC_NETA))
+                    toCpy = sText_Netas;
                 else
                     toCpy = sText_Someones;
                 break;

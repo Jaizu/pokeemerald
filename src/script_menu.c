@@ -364,9 +364,9 @@ static void CreatePCMultichoice(void)
         AddTextPrinterParameterized(windowId, 1, gText_LogOff, y, 33, TEXT_SPEED_FF, NULL);
     }
 
-    // Change PC name if player has met Lanette
-    if (FlagGet(FLAG_SYS_PC_LANETTE))
-        AddTextPrinterParameterized(windowId, 1, gText_LanettesPC, y, 1, TEXT_SPEED_FF, NULL);
+    // Change PC name if player has met Neta
+    if (FlagGet(FLAG_SYS_PC_NETA))
+        AddTextPrinterParameterized(windowId, 1, gText_NetasPC, y, 1, TEXT_SPEED_FF, NULL);
     else
         AddTextPrinterParameterized(windowId, 1, gText_SomeonesPC, y, 1, TEXT_SPEED_FF, NULL);
 
