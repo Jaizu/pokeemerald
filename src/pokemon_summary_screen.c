@@ -3409,7 +3409,7 @@ static void PrintMoveDetails(u16 move)
     {
         ShowSplitIcon(gBattleMoves[move].split);
         PrintMovePowerAndAccuracy(windowId, move);
-        PrintTextOnWindow(windowId, gMoveDescriptionPointers[move - 1], 6, 18, 0, PSS_COLOR_BLACK_LIGHT_PURPLE_SHADOW);
+        PrintTextOnWindow(windowId, gMoveDescriptionPointers[move], 6, 18, 0, PSS_COLOR_BLACK_LIGHT_PURPLE_SHADOW);
         PutWindowTilemap(windowId);
     }
     else
