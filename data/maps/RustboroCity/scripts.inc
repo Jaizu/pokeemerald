@@ -309,7 +309,7 @@ RustboroCity_EventScript_StolenGoodsScene:: @ 81E09CD
 	fadedefaultbgm
 	removeobject LOCALID_DEVON_EMPLOYEE
 	setobjectxyperm LOCALID_DEVON_EMPLOYEE, 30, 10
-	clearflag FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1
+	clearflag 0
 	setflag FLAG_DEVON_GOODS_STOLEN
 	setvar VAR_RUSTBORO_CITY_STATE, 2
 	setvar VAR_RUSTURF_TUNNEL_STATE, 2
@@ -317,7 +317,7 @@ RustboroCity_EventScript_StolenGoodsScene:: @ 81E09CD
 	clearflag FLAG_HIDE_ROUTE_116_MR_BRINEY
 	clearflag FLAG_HIDE_RUSTURF_TUNNEL_PEEKO
 	clearflag FLAG_HIDE_RUSTURF_TUNNEL_AQUA_GRUNT
-	setflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
+	setflag 0
 	setflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
 	releaseall
 	end
@@ -618,7 +618,7 @@ RustboroCity_EventScript_ReturnGoods:: @ 81E0C5B
 	msgbox RustboroCity_Text_PleaseComeWithMe, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_RETURNED_DEVON_GOODS
-	setflag FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1
+	setflag 0
 	setvar VAR_RUSTBORO_CITY_STATE, 5
 	delay 30
 	warp MAP_RUSTBORO_CITY_DEVON_CORP_3F, 255, 2, 2

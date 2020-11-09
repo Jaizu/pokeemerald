@@ -591,35 +591,35 @@ EventScript_ResetMrBriney:: @ 8271862
 	end
 
 EventScript_MoveMrBrineyToHouse:: @ 8271884
-	setflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
-	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
-	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY
-	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
-	clearflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
-	clearflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
+	setflag 0
+	setflag 0
+	setflag 0
+	setflag 0
+	clearflag 0
+	clearflag 0
 	clearflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
 	end
 
 EventScript_MoveMrBrineyToDewford:: @ 827189A
-	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY
-	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
-	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY
-	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
-	setflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
+	setflag 0
+	setflag 0
+	setflag 0
+	setflag 0
+	setflag 0
 	setflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
-	clearflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
-	clearflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
+	clearflag 0
+	clearflag 0
 	end
 
 EventScript_MoveMrBrineyToRoute109:: @ 82718B3
-	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY
-	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
-	setflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
+	setflag 0
+	setflag 0
+	setflag 0
 	setflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
-	setflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
-	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
-	clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY
-	clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
+	setflag 0
+	setflag 0
+	clearflag 0
+	clearflag 0
 	end
 
 EverGrandeCity_HallOfFame_EventScript_ResetEliteFour:: @ 82718CC
@@ -633,9 +633,9 @@ EverGrandeCity_HallOfFame_EventScript_ResetEliteFour:: @ 82718CC
 Common_EventScript_UpdateBrineyLocation:: @ 82718DE
 	goto_if_unset FLAG_RECEIVED_POKENAV, Common_EventScript_NopReturn
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, Common_EventScript_NopReturn
-	goto_if_unset FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT, EventScript_SetBrineyLocation_House
-	goto_if_unset FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN, EventScript_SetBrineyLocation_Dewford
-	goto_if_unset FLAG_HIDE_ROUTE_109_MR_BRINEY, EventScript_SetBrineyLocation_Route109
+	goto_if_unset 0, EventScript_SetBrineyLocation_House
+	goto_if_unset 0, EventScript_SetBrineyLocation_Dewford
+	goto_if_unset 0, EventScript_SetBrineyLocation_Route109
 	return
 
 EventScript_SetBrineyLocation_House:: @ 827190C
@@ -765,13 +765,13 @@ Movement_FerryDepart: @ 82721F0
 	step_end
 
 EventScript_HideMrBriney:: @ 82721F8
-	setflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
-	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
-	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY
-	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
-	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY
-	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
-	setflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
+	setflag 0
+	setflag 0
+	setflag 0
+	setflag 0
+	setflag 0
+	setflag 0
+	setflag 0
 	setflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
 	setvar VAR_BRINEY_LOCATION, 0
 	return

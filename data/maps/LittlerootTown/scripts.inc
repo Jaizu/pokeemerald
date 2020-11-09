@@ -100,7 +100,7 @@ LittlerootTown_EventScript_SetTwinGuardingRoutePos:: @ 81E7E86
 	return
 
 LittlerootTown_EventScript_SetMomStandingInFrontOfDoorPos:: @ 81E7E92
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
+	clearflag 0
 	setobjectmovementtype LOCALID_MOM, MOVEMENT_TYPE_FACE_DOWN
 	checkplayergender
 	compare VAR_RESULT, MALE
@@ -128,7 +128,7 @@ LittlerootTown_EventScript_StepOffTruckMale:: @ 81E7EDB
 	setvar VAR_0x8004, 5
 	setvar VAR_0x8005, 8
 	call LittlerootTown_EventScript_GoInsideWithMom
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK
+	setflag 0
 	warpsilent MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F, 255, 8, 8
 	waitstate
 	releaseall
@@ -139,7 +139,7 @@ LittlerootTown_EventScript_StepOffTruckFemale:: @ 81E7EF9
 	setvar VAR_0x8004, 14
 	setvar VAR_0x8005, 8
 	call LittlerootTown_EventScript_GoInsideWithMom
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK
+	setflag 0
 	warpsilent MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F, 255, 2, 8
 	waitstate
 	releaseall
@@ -170,7 +170,7 @@ LittlerootTown_EventScript_GoInsideWithMom:: @ 81E7F17
 	applymovement LOCALID_MOM, LittlerootTown_Movement_MomEnterHouse
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerEnterHouse
 	waitmovement 0
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
+	setflag 0
 	setvar VAR_LITTLEROOT_INTRO_STATE, 3
 	hideobjectat OBJ_EVENT_ID_PLAYER, 0
 	closedoor VAR_0x8004, VAR_0x8005

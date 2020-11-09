@@ -234,9 +234,9 @@ Route101_EventScript_BirchsBag:: @ 81EBE16
 	waitmovement 0
 	msgbox Route101_Text_YouSavedMe, MSGBOX_DEFAULT
 	special HealPlayerParty
-	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
-	setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
+	setflag 0
+	clearflag 0
+	setflag 0
 	setvar VAR_BIRCH_LAB_STATE, 2
 	setvar VAR_ROUTE101_STATE, 3
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
@@ -251,11 +251,11 @@ Route101_EventScript_BirchsBag:: @ 81EBE16
 	end
 
 Route101_EventScript_HideMayInBedroom:: @ 81EBE85
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM
+	setflag 0
 	return
 
 Route101_EventScript_HideBrendanInBedroom:: @ 81EBE89
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
+	setflag 0
 	return
 
 Route101_Movement_BirchApproachPlayer: @ 81EBE8D

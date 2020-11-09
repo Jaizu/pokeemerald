@@ -219,7 +219,7 @@ Apprentice_EventScript_PickWinSpeech: @ 82B6DD4
 	end
 
 Apprentice_EventScript_SetHideFlags: @ 82B6E4D
-	setflag FLAG_HIDE_APPRENTICE
+	setflag 0
 	setflag FLAG_DAILY_APPRENTICE_LEAVES
 	return
 

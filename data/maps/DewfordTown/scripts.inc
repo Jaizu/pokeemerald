@@ -145,10 +145,10 @@ DewfordTown_EventScript_SailToPetalburg:: @ 81E9660
 	applymovement OBJ_EVENT_ID_PLAYER, DewfordTown_Movement_ExitBoatPetalburg
 	waitmovement 0
 	showobjectat OBJ_EVENT_ID_PLAYER, MAP_ROUTE104
-	clearflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
+	clearflag 0
 	clearflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
-	clearflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
-	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
+	clearflag 0
+	setflag 0
 	hideobjectat LOCALID_BOAT_DEWFORD, MAP_DEWFORD_TOWN
 	setvar VAR_BOARD_BRINEY_BOAT_STATE, 2
 	resetobjectpriority OBJ_EVENT_ID_PLAYER, MAP_DEWFORD_TOWN
@@ -181,10 +181,10 @@ DewfordTown_EventScript_SailToSlateport:: @ 81E96E7
 	setobjectpriority LOCALID_BRINEY_R109, MAP_ROUTE109, 0
 	applymovement LOCALID_BRINEY_R109, DewfordTown_Movement_BrineyExitBoat
 	waitmovement 0
-	clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY
+	clearflag 0
 	addobject LOCALID_BOAT_R109
-	clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
-	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
+	clearflag 0
+	setflag 0
 	hideobjectat LOCALID_BOAT_DEWFORD, MAP_DEWFORD_TOWN
 	call_if_unset FLAG_DELIVERED_DEVON_GOODS, DewfordTown_EventScript_LandedSlateportDeliverGoods
 	call_if_set FLAG_DELIVERED_DEVON_GOODS, DewfordTown_EventScript_LandedSlateport

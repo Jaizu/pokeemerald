@@ -738,140 +738,73 @@
 #define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag
 
 // Event Flags
-#define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
 #define FLAG_HIDE_DUSTY_TOME                                        0x2BC // FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG in Emerald
-#define FLAG_HIDE_APPRENTICE                                        0x2BD
 #define FLAG_HIDE_CELANTO_TOWN_MOM                                  0x2BD // FLAG_HIDE_APPRENTICE in Emerald
-#define FLAG_HIDE_POKEMON_CENTER_2F_MYSTERY_GIFT_MAN                0x2BE
 #define FLAG_HIDE_CELANTO_TOWN_REDWOOD                              0x2BE // FLAG_HIDE_POKEMON_CENTER_2F_MYSTERY_GIFT_MAN in Emerald
-#define FLAG_HIDE_UNION_ROOM_PLAYER_1                               0x2BF
 #define FLAG_HIDE_RELIQUIA_RUINS_MORGANA                            0x2BF // FLAG_HIDE_UNION_ROOM_PLAYER_1 in Emerald
-#define FLAG_HIDE_UNION_ROOM_PLAYER_2                               0x2C0
 #define FLAG_HIDE_CELANTO_LIBRARY_COULTER                           0x2C0 // FLAG_HIDE_UNION_ROOM_PLAYER_2 in Emerald
-#define FLAG_HIDE_UNION_ROOM_PLAYER_3                               0x2C1
 #define FLAG_HIDE_CELANTO_LIBRARY_RICHTER                           0x2C1 // FLAG_HIDE_UNION_ROOM_PLAYER_3 in Emerald
-#define FLAG_HIDE_UNION_ROOM_PLAYER_4                               0x2C2
 #define FLAG_HIDE_CELANTO_LIBRARY_REDWOOD                           0x2C2 // FLAG_HIDE_UNION_ROOM_PLAYER_4 in Emerald
-#define FLAG_HIDE_UNION_ROOM_PLAYER_5                               0x2C3
 #define FLAG_HIDE_LIBRARY_BACK_ROOM_OPP_GENDER                      0x2C3 // FLAG_HIDE_UNION_ROOM_PLAYER_5 in Emerald
-#define FLAG_HIDE_UNION_ROOM_PLAYER_6                               0x2C4
 #define FLAG_HIDE_TURTWIG_BALL                                      0x2C4 // FLAG_HIDE_UNION_ROOM_PLAYER_6 in Emerald
-#define FLAG_HIDE_UNION_ROOM_PLAYER_7                               0x2C5
 #define FLAG_HIDE_CHIMCHAR_BALL                                     0x2C5 // FLAG_HIDE_UNION_ROOM_PLAYER_7 in Emerald
-#define FLAG_HIDE_UNION_ROOM_PLAYER_8                               0x2C6
 #define FLAG_HIDE_PIPLUP_BALL                                       0x2C6 // FLAG_HIDE_UNION_ROOM_PLAYER_8 in Emerald
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_1               0x2C7
 #define FLAG_HIDE_LIBRARY_BACK_ROOM_REDWOOD                         0x2C7 // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_1 in Emerald
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_2               0x2C8
 #define FLAG_HIDE_LIBRARY_BACK_ROOM_COULTER                         0x2C8 // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_2 in Emerald
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_3               0x2C9
 #define FLAG_HIDE_CELANTO_PATH_COULTER                              0x2C9 // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_3 in Emerald
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_4               0x2CA
 #define FLAG_HIDE_ARCHAN_TOWN_REDWOOD                               0x2CA // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_4 in Emerald
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_5               0x2CB
 #define FLAG_HIDE_ARCHAN_TOWN_COULTER                               0x2CB // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_5 in Emerald
-#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_6               0x2CC
 #define FLAG_HIDE_REDWOOD_RESIDENCE_REDWOOD                         0x2CC // FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_6 in Emerald
-#define FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS            0x2CD
 #define FLAG_HIDE_REDWOOD_RESIDENCE_COULTER                         0x2CD // FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS in Emerald
-#define FLAG_HIDE_MEW                                               0x2CE
 #define FLAG_HIDE_ARCHAN_TUNNEL_STINGA_BOY                          0x2CE // FLAG_HIDE_MEW in Emerald
-#define FLAG_HIDE_ROUTE_104_RIVAL                                   0x2CF
 #define FLAG_HIDE_ARCHAN_TUNNEL_STINGA                              0x2CF // FLAG_HIDE_ROUTE_104_RIVAL in Emerald
-#define FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE                  0x2D0
 #define FLAG_HIDE_HOUSE_STINGA_BOY                                  0x2D0 // FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE in Emerald
-#define FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH                  0x2D1
 #define FLAG_HIDE_HOUSE_STINGA                                      0x2D1 // FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH in Emerald
-#define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM          0x2D2
 #define FLAG_HIDE_SEROS_VILLAGE_REDWOOD                             0x2D2 // FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM in Emerald
-#define FLAG_HIDE_ROUTE_103_RIVAL                                   0x2D3
 #define FLAG_HIDE_SEROS_VILLAGE_COULTER                             0x2D3 // FLAG_HIDE_ROUTE_103_RIVAL in Emerald
-#define FLAG_HIDE_PETALBURG_WOODS_DEVON_EMPLOYEE                    0x2D4
 #define FLAG_HIDE_SEROS_POKEMON_CENTER_REDWOOD                      0x2D4 // FLAG_HIDE_PETALBURG_WOODS_DEVON_EMPLOYEE in Emerald
-#define FLAG_HIDE_PETALBURG_WOODS_AQUA_GRUNT                        0x2D5
 #define FLAG_HIDE_SEROS_PATH_BATTLING_TRAINERS                      0x2D5 // FLAG_HIDE_PETALBURG_WOODS_AQUA_GRUNT in Emerald
-#define FLAG_HIDE_PETALBURG_CITY_WALLY                              0x2D6
 #define FLAG_HIDE_AEROUS_ROAD_PAINTER                               0x2D6 // FLAG_HIDE_PETALBURG_CITY_WALLY in Emerald
-#define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY   0x2D7
 #define FLAG_HIDE_COULTERS_HOUSE_COULTER                            0x2D7 // FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY in Emerald
-#define FLAG_HIDE_PETALBURG_CITY_WALLYS_AUNT                        0x2D8
 #define FLAG_HIDE_SEROS_GYM_FERNANDO                                0x2D8 // FLAG_HIDE_PETALBURG_CITY_WALLYS_AUNT in Emerald
 #define FLAG_HIDE_WISP_FOREST_FERNANDO                              0x2D9 // FLAG_UNUSED_0x2D9 in Emerald
-#define FLAG_HIDE_LILYCOVE_FAN_CLUB_INTERVIEWER                     0x2DA
 #define FLAG_HIDE_DAY_CARE_CENTER_DAY_CARE_MAN                      0x2DA // FLAG_HIDE_LILYCOVE_FAN_CLUB_INTERVIEWER in Emerald
-#define FLAG_HIDE_RUSTBORO_CITY_AQUA_GRUNT                          0x2DB
 #define FLAG_HIDE_DAY_CARE_CENTER_FERNANDO                          0x2DB // FLAG_HIDE_RUSTBORO_CITY_AQUA_GRUNT in Emerald
-#define FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1                    0x2DC
 #define FLAG_HIDE_SEROS_VILLAGE_CUT_TREE_LEFT                       0x2DC // FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1 in Emerald
-#define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_KYOGRE_2                   0x2DD
 #define FLAG_HIDE_SEROS_VILLAGE_CUT_TREE_RIGHT                      0x2DD // FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_KYOGRE_2 in Emerald
-#define FLAG_HIDE_PLAYERS_HOUSE_DAD                                 0x2DE
 #define FLAG_HIDE_TANGROWTH_TABLET_ROOM_BREAKABLE_ROCK_TOP          0x2DE // FLAG_HIDE_PLAYERS_HOUSE_DAD in Emerald
-#define FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_SIBLING      0x2DF
 #define FLAG_HIDE_TANGROWTH_TABLET_ROOM_BREAKABLE_ROCK_BOTTOM       0x2DF // FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_SIBLING
-#define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_SIBLING          0x2E0
 #define FLAG_HIDE_TANGROWTH_TABLET_ROOM_COULTER                     0x2E0 // FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_SIBLING in Emerald
-#define FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_MAGMA_NOTE             0x2E1
 #define FLAG_HIDE_ARCHAN_TUNNEL_SECRET_TEMPLE_CLEFAIRY              0x2E1 // FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_MAGMA_NOTE
-#define FLAG_HIDE_ROUTE_104_MR_BRINEY                               0x2E2
 #define FLAG_HIDE_AEROUS_ROAD_HIDDEN_GROTTO_VENONAT                 0x2E2 // FLAG_HIDE_ROUTE_104_MR_BRINEY in Emerald
-#define FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY                           0x2E3
 #define FLAG_HIDE_ARCHAN_HILLS_PSYDUCK                              0x2E3 // FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY in Emerald
-#define FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN                            0x2E4
 #define FLAG_HIDE_ARCHAN_HILLS_SECRET_TEMPLE_KECLEON                0x2E4 // FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN in Emerald
-#define FLAG_HIDE_ROUTE_109_MR_BRINEY                               0x2E5
 #define FLAG_HIDE_AEROUS_CITY_MUSEUM_CLERK                          0x2E5 // FLAG_HIDE_ROUTE_109_MR_BRINEY in Emerald
-#define FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT                          0x2E6
 #define FLAG_HIDE_AEROUS_MUSEUM_NEW_ELDERS                          0x2E6 // FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT in Emerald
-#define FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN                       0x2E7
 #define FLAG_HIDE_AEROUS_MUSEUM_HERSCHEL                            0x2E7 // FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN in Emerald
-#define FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT                          0x2E8
 #define FLAG_HIDE_AEROUS_CITY_HERSCHEL                              0x2E8 // FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT in Emerald
-#define FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_BRENDAN            0x2E9
 #define FLAG_HIDE_TANGROWTH_TABLET_ROOM_HERSCHEL                    0x2E9 // FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_BRENDAN in Emerald
-#define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MAY                    0x2EA
 #define FLAG_HIDE_TANGROWTH_TABLET_ROOM_REDWOOD                     0x2EA // FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MAY in Emerald
-#define FLAG_HIDE_SAFARI_ZONE_SOUTH_EAST_EXPANSION                  0x2EB
 #define FLAG_HIDE_CELANTO_PATH_BREAKABLE_ROCK_LEFT                  0x2EB // FLAG_HIDE_SAFARI_ZONE_SOUTH_EAST_EXPANSION in Emerald
-#define FLAG_HIDE_LILYCOVE_HARBOR_EVENT_TICKET_TAKER                0x2EC
 #define FLAG_HIDE_CELANTO_PATH_BREAKABLE_ROCK_RIGHT                 0x2EC // FLAG_HIDE_LILYCOVE_HARBOR_EVENT_TICKET_TAKER in Emerald
-#define FLAG_HIDE_SLATEPORT_CITY_SCOTT                              0x2ED
 #define FLAG_HIDE_NESTPINE_CLIMB_HIDDEN_GROTTO_MARACTUS             0x2ED // FLAG_HIDE_SLATEPORT_CITY_SCOTT in Emerald
-#define FLAG_HIDE_ROUTE_101_ZIGZAGOON                               0x2EE
 #define FLAG_HIDE_NESTPINE_TOWN_COULTER                             0x2EE // FLAG_HIDE_ROUTE_101_ZIGZAGOON in Emerald
-#define FLAG_HIDE_VICTORY_ROAD_EXIT_WALLY                           0x2EF
 #define FLAG_HIDE_NEW_ELDERS_GRUNT_FROSTBITE_CAVE_1F                0x2EF // FLAG_HIDE_VICTORY_ROAD_EXIT_WALLY in Emerald
-#define FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE                       0x2F0
 #define FLAG_HIDE_AEROUS_CITY_PORT_SS_WAKE                          0x2F0 // FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE in Emerald
-#define FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_STEVEN              0x2F1
 #define FLAG_HIDE_FROSTBITE_CAVE_2F_1R_EUNICE                       0x2F1 // FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_STEVEN in Emerald
-#define FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_1          0x2F2
 #define FLAG_HIDE_FROSTBITE_CAVE_2F_1R_GRUNT                        0x2F2 // FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_1 in Emerald
-#define FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_2          0x2F3
 #define FLAG_HIDE_ALL_FROSTBITE_CAVE_NEW_ELDERS                     0x2F3 // FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_2 in Emerald
-#define FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_TEAM_MAGMA          0x2F4
 #define FLAG_HIDE_WINDMIST_SUMMIT_RIMEWOOD_FOREST_GUARDS            0x2F4 // FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_TEAM_MAGMA in Emerald
-#define FLAG_HIDE_LITTLE_ROOT_TOWN_PLAYERS_BEDROOM_MOM              0x2F5
 #define FLAG_HIDE_WINDMIST_SUMMIT_COULTER                           0x2F5 // FLAG_HIDE_LITTLE_ROOT_TOWN_PLAYERS_BEDROOM_MOM in Emerald
-#define FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_MOM                0x2F6
 #define FLAG_HIDE_IGNIS_ROOST_COULTER                               0x2F6 // FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_MOM in Emerald
-#define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MOM                    0x2F7
 #define FLAG_HIDE_IGNIS_ROOST_GRUNTS                                0x2F7 // FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MOM in Emerald
-#define FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM      0x2F8
 #define FLAG_HIDE_APEX_TEMPLE_COULTER                               0x2F8 // FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM in Emerald
-#define FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK              0x2F9
 #define FLAG_HIDE_APEX_TEMPLE_ENOCH_AND_GRUNTS                      0x2F9 // FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK in Emerald
-#define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK                  0x2FA
 #define FLAG_HIDE_APEX_TEMPLE_BOOK                                  0x2FA // FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK in Emerald
-#define FLAG_HIDE_DEOXYS                                            0x2FB
 #define FLAG_HIDE_WINDMIST_CITY_POKEMON_CENTER_COULTER              0x2FB // FLAG_HIDE_DEOXYS in Emerald
-#define FLAG_HIDE_BIRTH_ISLAND_DEOXYS_TRIANGLE                      0x2FC
 #define FLAG_HIDE_WINDMIST_CITY_POKEMON_CENTER_REDWOOD              0x2FC // FLAG_HIDE_BIRTH_ISLAND_DEOXYS_TRIANGLE in Emerald
-#define FLAG_HIDE_MAUVILLE_CITY_SCOTT                               0x2FD
 #define FLAG_HIDE_KNICK_KNACK_STORE_REDWOOD                         0x2FD // FLAG_HIDE_MAUVILLE_CITY_SCOTT in Emerald
-#define FLAG_HIDE_VERDANTURF_TOWN_SCOTT                             0x2FE
 #define FLAG_HIDE_WINDMIST_CITY_REDWOOD                             0x2FE // FLAG_HIDE_VERDANTURF_TOWN_SCOTT in Emerald
-#define FLAG_HIDE_FALLARBOR_TOWN_BATTLE_TENT_SCOTT                  0x2FF
 #define FLAG_HIDE_AEROUS_CITY_REDWOOD                               0x2FF // FLAG_HIDE_FALLARBOR_TOWN_BATTLE_TENT_SCOTT in Emerald
 
 #define FLAG_HIDE_ROUTE_111_VICTOR_WINSTRATE                        0x300
@@ -1360,20 +1293,21 @@
 #define FLAG_UNUSED_0x4DF                                           0x4DF // Unused Flag
 #define FLAG_UNUSED_0x4E0                                           0x4E0 // Unused Flag
 #define FLAG_UNUSED_0x4E1                                           0x4E1 // Unused Flag
-#define FLAG_UNUSED_0x4E2                                           0x4E2 // Unused Flag
-#define FLAG_UNUSED_0x4E3                                           0x4E3 // Unused Flag
-#define FLAG_UNUSED_0x4E4                                           0x4E4 // Unused Flag
-#define FLAG_UNUSED_0x4E5                                           0x4E5 // Unused Flag
-#define FLAG_UNUSED_0x4E6                                           0x4E6 // Unused Flag
-#define FLAG_UNUSED_0x4E7                                           0x4E7 // Unused Flag
-#define FLAG_UNUSED_0x4E8                                           0x4E8 // Unused Flag
-#define FLAG_UNUSED_0x4E9                                           0x4E9 // Unused Flag
-#define FLAG_UNUSED_0x4EA                                           0x4EA // Unused Flag
-#define FLAG_UNUSED_0x4EB                                           0x4EB // Unused Flag
-#define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag
-#define FLAG_UNUSED_0x4ED                                           0x4ED // Unused Flag
-#define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
-#define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag
+
+#define FLAG_HIDE_UNION_ROOM_PLAYER_1                               0x4E2 // FLAG_UNUSED_0x4E2 in Emerald
+#define FLAG_HIDE_UNION_ROOM_PLAYER_2                               0x4E3 // FLAG_UNUSED_0x4E3 in Emerald
+#define FLAG_HIDE_UNION_ROOM_PLAYER_3                               0x4E4 // FLAG_UNUSED_0x4E4 in Emerald
+#define FLAG_HIDE_UNION_ROOM_PLAYER_4                               0x4E5 // FLAG_UNUSED_0x4E5 in Emerald
+#define FLAG_HIDE_UNION_ROOM_PLAYER_5                               0x4E6 // FLAG_UNUSED_0x4E6 in Emerald
+#define FLAG_HIDE_UNION_ROOM_PLAYER_6                               0x4E7 // FLAG_UNUSED_0x4E7 in Emerald
+#define FLAG_HIDE_UNION_ROOM_PLAYER_7                               0x4E8 // FLAG_UNUSED_0x4E8 in Emerald
+#define FLAG_HIDE_UNION_ROOM_PLAYER_8                               0x4E9 // FLAG_UNUSED_0x4E9 in Emerald
+#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_1               0x4EA // FLAG_UNUSED_0x4EA in Emerald
+#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_2               0x4EB // FLAG_UNUSED_0x4EB in Emerald
+#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_3               0x4EC // FLAG_UNUSED_0x4EC in Emerald
+#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_4               0x4ED // FLAG_UNUSED_0x4ED in Emerald
+#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_5               0x4EE // FLAG_UNUSED_0x4EE in Emerald
+#define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_6               0x4EF // FLAG_UNUSED_0x4EF in Emerald
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_SEROS_GYM                                     0x4F0 // FLAG_DEFEATED_RUSTBORO_GYM in Emerald

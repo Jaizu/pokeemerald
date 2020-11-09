@@ -47,7 +47,7 @@ FarawayIsland_Interior_OnTransition: @ 8267D72
 
 FarawayIsland_Interior_EventScript_TryShowMew:: @ 8267D86
 	goto_if_set FLAG_DEFEATED_MEW, Common_EventScript_NopReturn
-	clearflag FLAG_HIDE_MEW
+	clearflag 0
 	setvar VAR_TEMP_1, 0
 	return
 
@@ -193,7 +193,7 @@ FarawayIsland_Interior_EventScript_FoundMewEast:: @ 8267ED0
 FarawayIsland_Interior_EventScript_HideMewWhenGrassCut:: @ 8267EDB
 	lockall
 	fadescreenswapbuffers FADE_TO_BLACK
-	setflag FLAG_HIDE_MEW
+	setflag 0
 	removeobject LOCALID_MEW
 	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox FarawayIsland_Interior_Text_TheFeelingOfBeingWatchedFaded, MSGBOX_DEFAULT

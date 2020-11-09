@@ -336,7 +336,7 @@ LilycoveCity_EventScript_DefeatedMay:: @ 81E2F3E
 	call_if_eq LilycoveCity_EventScript_MayCollectBadges
 	compare VAR_RESULT, TRUE
 	call_if_eq LilycoveCity_EventScript_MayPokemonLeague
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM
+	clearflag 0
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_PICHU_DOLL
 	goto LilycoveCity_EventScript_RivalFlyAway
 	end
@@ -370,7 +370,7 @@ LilycoveCity_EventScript_DefeatedBrendan:: @ 81E2FAA
 	call_if_eq LilycoveCity_EventScript_BrendanCollectBadges
 	compare VAR_RESULT, TRUE
 	call_if_eq LilycoveCity_EventScript_BrendanPokemonLeague
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
+	clearflag 0
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_SWABLU_DOLL
 	goto LilycoveCity_EventScript_RivalFlyAway
 	end

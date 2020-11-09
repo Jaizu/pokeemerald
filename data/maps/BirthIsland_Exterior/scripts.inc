@@ -21,13 +21,13 @@ BirthIsland_Exterior_OnTransition: @ 8267F29
 	end
 
 BirthIsland_Exterior_EventScript_HideDeoxysAndPuzzle:: @ 8267F4E
-	setflag FLAG_HIDE_DEOXYS
-	setflag FLAG_HIDE_BIRTH_ISLAND_DEOXYS_TRIANGLE
+	setflag 0
+	setflag 0
 	return
 
 BirthIsland_Exterior_EventScript_TryShowDeoxysPuzzle:: @ 8267F55
 	goto_if_set FLAG_DEFEATED_DEOXYS, Common_EventScript_NopReturn
-	clearflag FLAG_HIDE_BIRTH_ISLAND_DEOXYS_TRIANGLE
+	clearflag 0
 	clearflag FLAG_DEOXYS_ROCK_COMPLETE
 	return
 
