@@ -140,7 +140,7 @@
       "y": 10,
       "elevation": 3,
       "item": "ITEM_ROOM_1_KEY",
-      "flag": "FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_1_KEY"
+      "flag": "0"
     },
     {
       "type": "hidden_item",
@@ -148,7 +148,7 @@
       "y": 5,
       "elevation": 3,
       "item": "ITEM_ROOM_2_KEY",
-      "flag": "FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_2_KEY"
+      "flag": "0"
     },
     {
       "type": "hidden_item",
@@ -156,7 +156,7 @@
       "y": 12,
       "elevation": 3,
       "item": "ITEM_ROOM_4_KEY",
-      "flag": "FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_4_KEY"
+      "flag": "0"
     },
     {
       "type": "hidden_item",
@@ -164,7 +164,7 @@
       "y": 2,
       "elevation": 0,
       "item": "ITEM_ROOM_6_KEY",
-      "flag": "FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_6_KEY"
+      "flag": "0"
     },
     {
       "type": "sign",
