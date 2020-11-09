@@ -29,6 +29,7 @@
 #include "party_menu.h"
 #include "pokeblock.h"
 #include "pokemon.h"
+#include "pokemon_summary_screen.h"
 #include "pokemon_storage_system.h"
 #include "random.h"
 #include "rayquaza_scene.h"
@@ -1162,22 +1163,6 @@ void EndLotteryCornerComputerEffect(void)
     DrawWholeMapView();
 }
 
-void SetTrickHouseNuggetFlag(void)
-{
-    u16 *specVar = &gSpecialVar_0x8004;
-    u16 flag = 0;
-    *specVar = flag;
-    FlagSet(flag);
-}
-
-void ResetTrickHouseNuggetFlag(void)
-{
-    u16 *specVar = &gSpecialVar_0x8004;
-    u16 flag = 0;
-    *specVar = flag;
-    FlagClear(flag);
-}
-
 bool8 CheckLeadMonCool(void)
 {
     if (GetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_COOL) < 200)
@@ -1289,54 +1274,6 @@ u16 GetSlotMachineId(void)
         return sSlotMachineServiceDayIds[rnd % SLOT_MACHINE_COUNT];
     }
     return sSlotMachineIds[rnd % SLOT_MACHINE_COUNT];
-}
-
-bool8 FoundAbandonedShipRoom1Key(void)
-{
-    u16 *specVar = &gSpecialVar_0x8004;
-    u16 flag = 0;
-    *specVar = flag;
-    if (!FlagGet(flag))
-    {
-        return FALSE;
-    }
-    return TRUE;
-}
-
-bool8 FoundAbandonedShipRoom2Key(void)
-{
-    u16 *specVar = &gSpecialVar_0x8004;
-    u16 flag = 0;
-    *specVar = flag;
-    if (!FlagGet(flag))
-    {
-        return FALSE;
-    }
-    return TRUE;
-}
-
-bool8 FoundAbandonedShipRoom4Key(void)
-{
-    u16 *specVar = &gSpecialVar_0x8004;
-    u16 flag = 0;
-    *specVar = flag;
-    if (!FlagGet(flag))
-    {
-        return FALSE;
-    }
-    return TRUE;
-}
-
-bool8 FoundAbandonedShipRoom6Key(void)
-{
-    u16 *specVar = &gSpecialVar_0x8004;
-    u16 flag = 0;
-    *specVar = flag;
-    if (!FlagGet(flag))
-    {
-        return FALSE;
-    }
-    return TRUE;
 }
 
 bool8 LeadMonHasEffortRibbon(void)
@@ -4333,6 +4270,12 @@ static void CB2_HandleGivenRivalName(void)
 void DoRivalNamingScreen(void)
 {
     DoNamingScreen(NAMING_SCREEN_RIVAL, gSaveBlock2Ptr->rivalName, 0, 0, 0, CB2_HandleGivenRivalName);
+}
+
+void BufferMonNatureName(void)
+{
+    u8 nature = GetNature(&gPlayerParty[gSpecialVar_0x8004]);
+    StringCopy(gStringVar2, gNatureNamePointers[nature]);
 }
 
 bool8 CheckPartyForMon(void)

@@ -3862,9 +3862,3 @@ static void KeepMoveSelectorVisible(u8 firstSpriteId)
         gSprites[spriteIds[i]].invisible = FALSE;
     }
 }
-
-void BufferMonNatureName(void)
-{
-    u8 nature = GetNature(&gPlayerParty[gSpecialVar_0x8004]);
-    StringCopy(gStringVar2, gNatureNamePointers[nature]);
-}
