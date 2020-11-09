@@ -1108,110 +1108,58 @@
 #define FLAG_HIDE_RUSTBORO_CITY_POKEMON_SCHOOL_SCOTT                0x3E7
 
 // Item Ball Flags
-#define FLAG_ITEM_ROUTE_102_POTION                                  0x3E8
 #define FLAG_ITEM_RELIQUIA_RUINS_REVIVE                             0x3E8 // FLAG_ITEM_ROUTE_102_POTION in Emerald
-#define FLAG_ITEM_ROUTE_116_X_SPECIAL                               0x3E9
 #define FLAG_ITEM_RELIQUIA_RUINS_SHINY_STONE                        0x3E9 // FLAG_ITEM_ROUTE_116_X_SPECIAL in Emerald
-#define FLAG_ITEM_ROUTE_104_PP_UP                                   0x3EA
 #define FLAG_ITEM_RELIQUIA_RUINS_TM37                               0x3EA // FLAG_ITEM_ROUTE_104_PP_UP in Emerald
-#define FLAG_ITEM_ROUTE_105_IRON                                    0x3EB
 #define FLAG_ITEM_CELANTO_CONDOMINIUMS_POTION                       0x3EB // FLAG_ITEM_ROUTE_105_IRON in Emerald
-#define FLAG_ITEM_ROUTE_106_PROTEIN                                 0x3EC
 #define FLAG_ITEM_ARCHAN_TOWN_SUPER_POTION                          0x3EC // FLAG_ITEM_ROUTE_106_PROTEIN in Emerald
-#define FLAG_ITEM_ROUTE_109_PP_UP                                   0x3ED
 #define FLAG_ITEM_ARCHAN_TOWN_RARE_CANDY                            0x3ED // FLAG_ITEM_ROUTE_109_PP_UP in Emerald
-#define FLAG_ITEM_ROUTE_109_RARE_CANDY                              0x3EE
 #define FLAG_ITEM_ARCHAN_TUNNEL_ESCAPE_ROPE                         0x3EE // FLAG_ITEM_ROUTE_109_RARE_CANDY in Emerald
-#define FLAG_ITEM_ROUTE_110_DIRE_HIT                                0x3EF
 #define FLAG_ITEM_ARCHAN_TUNNEL_MAX_ETHER                           0x3EF // FLAG_ITEM_ROUTE_110_DIRE_HIT in Emerald
-#define FLAG_ITEM_ROUTE_111_TM_37                                   0x3F0
 #define FLAG_ITEM_ARCHAN_TUNNEL_RARE_CANDY                          0x3F0 // FLAG_ITEM_ROUTE_111_TM_37 in Emerald
-#define FLAG_ITEM_ROUTE_111_STARDUST                                0x3F1
 #define FLAG_ITEM_ARCHAN_TUNNEL_MOON_STONE                          0x3F1 // FLAG_ITEM_ROUTE_111_STARDUST in Emerald
-#define FLAG_ITEM_ROUTE_111_HP_UP                                   0x3F2
 #define FLAG_ITEM_SEROS_VILLAGE_ASSAULT_VEST                        0x3F2 // FLAG_ITEM_ROUTE_111_HP_UP in Emerald
-#define FLAG_ITEM_ROUTE_112_NUGGET                                  0x3F3
 #define FLAG_ITEM_SEROS_PATH_POTION                                 0x3F3 // FLAG_ITEM_ROUTE_112_NUGGET in Emerald
-#define FLAG_ITEM_ROUTE_113_MAX_ETHER                               0x3F4
 #define FLAG_ITEM_AEROUS_ROAD_ELIXIR                                0x3F4 // FLAG_ITEM_ROUTE_113_MAX_ETHER in Emerald
-#define FLAG_ITEM_ROUTE_113_SUPER_REPEL                             0x3F5
 #define FLAG_ITEM_WISP_FOREST_SUPER_POTION                          0x3F5 // FLAG_ITEM_ROUTE_113_SUPER_REPEL in Emerald
-#define FLAG_ITEM_ROUTE_114_RARE_CANDY                              0x3F6
 #define FLAG_ITEM_WISP_FOREST_CLEANSE_TAG                           0x3F6 // FLAG_ITEM_ROUTE_114_RARE_CANDY in Emerald
-#define FLAG_ITEM_ROUTE_114_PROTEIN                                 0x3F7
 #define FLAG_ITEM_WISP_FOREST_TM10                                  0x3F7 // FLAG_ITEM_ROUTE_114_PROTEIN in Emerald
-#define FLAG_ITEM_ROUTE_115_SUPER_POTION                            0x3F8
 #define FLAG_ITEM_ARCHAN_TOWN_HIDDEN_GROTTO_TM39                    0x3F8 // FLAG_ITEM_ROUTE_115_SUPER_POTION in Emerald
-#define FLAG_ITEM_ROUTE_115_TM_01                                   0x3F9
 #define FLAG_ITEM_CELANTO_PATH_HIDDEN_GROTTO_EVIOLITE               0x3F9 // FLAG_ITEM_ROUTE_115_TM_01 in Emerald
-#define FLAG_ITEM_ROUTE_115_IRON                                    0x3FA
 #define FLAG_ITEM_AEROUS_ROAD_TM20                                  0x3FA // FLAG_ITEM_ROUTE_115_IRON in Emerald
-#define FLAG_ITEM_ROUTE_116_ETHER                                   0x3FB
 #define FLAG_ITEM_AEROUS_ROAD_SUPER_REPEL                           0x3FB // FLAG_ITEM_ROUTE_116_ETHER in Emerald
-#define FLAG_ITEM_ROUTE_116_REPEL                                   0x3FC
 #define FLAG_ITEM_AEROUS_ROAD_TM12                                  0x3FC // FLAG_ITEM_ROUTE_116_REPEL in Emerald
-#define FLAG_ITEM_ROUTE_116_HP_UP                                   0x3FD
 #define FLAG_ITEM_ARCHAN_HILLS_HARBOR_MAIL                          0x3FD // FLAG_ITEM_ROUTE_116_HP_UP in Emerald
-#define FLAG_ITEM_ROUTE_117_GREAT_BALL                              0x3FE
 #define FLAG_ITEM_AEROUS_CITY_POKE_BALL                             0x3FE // FLAG_ITEM_ROUTE_117_GREAT_BALL in Emerald
-#define FLAG_ITEM_ROUTE_117_REVIVE                                  0x3FF
 #define FLAG_ITEM_AEROUS_CITY_SHARPEDONITE                          0x3FF // FLAG_ITEM_ROUTE_117_REVIVE in Emerald
-#define FLAG_ITEM_ROUTE_119_SUPER_REPEL                             0x400
 #define FLAG_ITEM_ARCHAN_TUNNEL_TM21                                0x400 // FLAG_ITEM_ROUTE_119_SUPER_REPEL in Emerald
-#define FLAG_ITEM_ROUTE_119_ZINC                                    0x401
 #define FLAG_ITEM_ARCHAN_TUNNEL_JAW_FOSSIL                          0x401 // FLAG_ITEM_ROUTE_119_ZINC in Emerald
-#define FLAG_ITEM_ROUTE_119_ELIXIR_1                                0x402
 #define FLAG_ITEM_NESTPINE_CLIMB_FIRE_STONE                         0x402 // FLAG_ITEM_ROUTE_119_ELIXIR_1 in Emerald
-#define FLAG_ITEM_ROUTE_119_LEAF_STONE                              0x403
 #define FLAG_ITEM_NESTPINE_CLIMB_TM06                               0x403 // FLAG_ITEM_ROUTE_119_LEAF_STONE in Emerald
-#define FLAG_ITEM_ROUTE_119_RARE_CANDY                              0x404
 #define FLAG_ITEM_NESTPINE_CLIMB_SILK_SCARF                         0x404 // FLAG_ITEM_ROUTE_119_RARE_CANDY in Emerald
-#define FLAG_ITEM_ROUTE_119_HYPER_POTION_1                          0x405
 #define FLAG_ITEM_NESTPINE_CLIMB_NUGGET                             0x405 // FLAG_ITEM_ROUTE_119_HYPER_POTION_1 in Emerald
-#define FLAG_ITEM_ROUTE_120_NUGGET                                  0x406
 #define FLAG_ITEM_NESTPINE_CLIMB_REGAL_STONE                        0x406 // FLAG_ITEM_ROUTE_120_NUGGET in Emerald
-#define FLAG_ITEM_ROUTE_120_FULL_HEAL                               0x407
 #define FLAG_ITEM_NESTPINE_TOWN_REVIVE                              0x407 // FLAG_ITEM_ROUTE_120_FULL_HEAL in Emerald
-#define FLAG_ITEM_ROUTE_123_CALCIUM                                 0x408
 #define FLAG_ITEM_ARCHAN_TOWN_ROOT_FOSSIL                           0x408 // FLAG_ITEM_ROUTE_123_CALCIUM in Emerald
 #define FLAG_ITEM_FROSTBITE_CAVE_FULL_HEAL                          0x409 // FLAG_ITEM_ROUTE_123_RARE_CANDY in Emerald
-#define FLAG_ITEM_ROUTE_127_ZINC                                    0x40A
 #define FLAG_ITEM_FROSTBITE_CAVE_TM33                               0x40A // FLAG_ITEM_ROUTE_127_ZINC in Emerald
-#define FLAG_ITEM_ROUTE_127_CARBOS                                  0x40B
 #define FLAG_ITEM_FROSTBITE_CAVE_IRON                               0x40B // FLAG_ITEM_ROUTE_127_CARBOS in Emerald
-#define FLAG_ITEM_ROUTE_132_RARE_CANDY                              0x40C
 #define FLAG_ITEM_FROSTBITE_CAVE_NEVERMELT_ICE                      0x40C // FLAG_ITEM_ROUTE_132_RARE_CANDY in Emerald
-#define FLAG_ITEM_ROUTE_133_BIG_PEARL                               0x40D
 #define FLAG_ITEM_FROSTBITE_CAVE_TM07                               0x40D // FLAG_ITEM_ROUTE_133_BIG_PEARL in Emerald
-#define FLAG_ITEM_ROUTE_133_STAR_PIECE                              0x40E
 #define FLAG_ITEM_FROSTBITE_CAVE_ITEMFINDER                         0x40E // FLAG_ITEM_ROUTE_133_STAR_PIECE in Emerald
-#define FLAG_ITEM_PETALBURG_CITY_MAX_REVIVE                         0x40F
 #define FLAG_ITEM_FROSTBITE_CAVE_PP_UP                              0x40F // FLAG_ITEM_PETALBURG_CITY_MAX_REVIVE in Emerald
-#define FLAG_ITEM_PETALBURG_CITY_ETHER                              0x410
 #define FLAG_ITEM_WINDMIST_CITY_KINGS_ROCK                          0x410 // FLAG_ITEM_PETALBURG_CITY_ETHER in Emerald
-#define FLAG_ITEM_RUSTBORO_CITY_X_DEFEND                            0x411
 #define FLAG_ITEM_WINDMIST_CITY_X_SP_ATK                            0x411 // FLAG_ITEM_RUSTBORO_CITY_X_DEFEND in Emerald
-#define FLAG_ITEM_LILYCOVE_CITY_MAX_REPEL                           0x412
 #define FLAG_ITEM_WINDMIST_SUMMIT_MIRACLE_SEED                      0x412 // FLAG_ITEM_LILYCOVE_CITY_MAX_REPEL in Emerald
-#define FLAG_ITEM_MOSSDEEP_CITY_NET_BALL                            0x413
 #define FLAG_ITEM_WINDMIST_SUMMIT_DAWN_STONE                        0x413 // FLAG_ITEM_MOSSDEEP_CITY_NET_BALL in Emerald
-#define FLAG_ITEM_METEOR_FALLS_1F_1R_TM_23                          0x414
 #define FLAG_ITEM_WINDMIST_SUMMIT_TM18                              0x414 // FLAG_ITEM_METEOR_FALLS_1F_1R_TM_23 in Emerald
-#define FLAG_ITEM_METEOR_FALLS_1F_1R_FULL_HEAL                      0x415
 #define FLAG_ITEM_EDAMIST_HEIGHT_TM16                               0x415 // FLAG_ITEM_METEOR_FALLS_1F_1R_FULL_HEAL in Emerald
-#define FLAG_ITEM_METEOR_FALLS_1F_1R_MOON_STONE                     0x416
 #define FLAG_ITEM_EDAMIST_HEIGHT_SUPER_POTION                       0x416 // FLAG_ITEM_METEOR_FALLS_1F_1R_MOON_STONE in Emerald
-#define FLAG_ITEM_METEOR_FALLS_1F_1R_PP_UP                          0x417
 #define FLAG_ITEM_FROSTBITE_CAVE_ETHER                              0x417 // FLAG_ITEM_METEOR_FALLS_1F_1R_PP_UP in Emerald
-#define FLAG_ITEM_RUSTURF_TUNNEL_POKE_BALL                          0x418
 #define FLAG_ITEM_FROSTBITE_CAVE_GLALITITE                          0x418 // FLAG_ITEM_RUSTURF_TUNNEL_POKE_BALL in Emerald
-#define FLAG_ITEM_RUSTURF_TUNNEL_MAX_ETHER                          0x419
 #define FLAG_ITEM_FROSTBITE_CAVE_SAIL_FOSSIL                        0x419 // FLAG_ITEM_RUSTURF_TUNNEL_MAX_ETHER in Emerald
-#define FLAG_ITEM_GRANITE_CAVE_1F_ESCAPE_ROPE                       0x41A
 #define FLAG_ITEM_IGNIS_ROOST_HYPER_POTION                          0x41A // FLAG_ITEM_GRANITE_CAVE_1F_ESCAPE_ROPE in Emerald
-#define FLAG_ITEM_GRANITE_CAVE_B1F_POKE_BALL                        0x41B
 #define FLAG_ITEM_IGNIS_ROOST_TM50                                  0x41B // FLAG_ITEM_GRANITE_CAVE_B1F_POKE_BALL in Emerald
-#define FLAG_ITEM_MT_PYRE_5F_LAX_INCENSE                            0x41C
 #define FLAG_ITEM_APEX_TEMPLE_ROCKY_HELMET                          0x41C // FLAG_ITEM_MT_PYRE_5F_LAX_INCENSE in Emerald
 
 #define FLAG_ITEM_GRANITE_CAVE_B2F_REPEL                            0x41D

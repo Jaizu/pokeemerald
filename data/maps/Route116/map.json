@@ -114,7 +114,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route116_EventScript_ItemEther",
-      "flag": "FLAG_ITEM_ROUTE_116_ETHER"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -127,7 +127,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route116_EventScript_ItemRepel",
-      "flag": "FLAG_ITEM_ROUTE_116_REPEL"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
@@ -218,7 +218,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route116_EventScript_ItemHPUp",
-      "flag": "FLAG_ITEM_ROUTE_116_HP_UP"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
@@ -283,7 +283,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route116_EventScript_ItemXSpecial",
-      "flag": "FLAG_ITEM_ROUTE_116_X_SPECIAL"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
