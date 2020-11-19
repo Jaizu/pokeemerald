@@ -17,6 +17,11 @@
       "direction": "up",
       "offset": -22,
       "map": "MAP_CELANTO_TOWN"
+    },
+    {
+      "direction": "down",
+      "offset": -22,
+      "map": "MAP_SABULO_CROSS"
     }
   ],
   "object_events": [

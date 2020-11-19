@@ -1258,3 +1258,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/WindmistCity_Gym/scripts.inc"
 
 	.include "data/maps/SabuloIsland/scripts.inc"
+
+	.include "data/maps/SabuloCross/scripts.inc"

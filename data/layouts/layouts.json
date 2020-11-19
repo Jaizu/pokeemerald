@@ -4455,7 +4455,7 @@
       "id": "LAYOUT_RELIQUIA_RUINS",
       "name": "ReliquiaRuins_Layout",
       "width": 42,
-      "height": 52,
+      "height": 54,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/ReliquiaRuins/border.bin",
@@ -5110,6 +5110,16 @@
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/SabuloIsland/border.bin",
       "blockdata_filepath": "data/layouts/SabuloIsland/map.bin"
+    },
+    {
+      "id": "LAYOUT_SABULO_CROSS",
+      "name": "SabuloCross_Layout",
+      "width": 72,
+      "height": 48,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/SabuloCross/border.bin",
+      "blockdata_filepath": "data/layouts/SabuloCross/map.bin"
     }
   ]
 }

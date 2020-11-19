@@ -22,6 +22,11 @@
       "direction": "up",
       "offset": 0,
       "map": "MAP_ARCHAN_HILLS"
+    },
+    {
+      "direction": "right",
+      "offset": -4,
+      "map": "MAP_SABULO_CROSS"
     }
   ],
   "object_events": [
