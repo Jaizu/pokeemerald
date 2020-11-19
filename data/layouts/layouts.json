@@ -4852,14 +4852,14 @@
       "blockdata_filepath": "data/layouts/AerousCity_ArtClub_2F/map.bin"
     },
     {
-      "id": "LAYOUT_AEROUS_CITY_PORT",
-      "name": "AerousCity_Port_Layout",
+      "id": "LAYOUT_PORT",
+      "name": "Port_Layout",
       "width": 17,
       "height": 13,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/AerousCity_Port/border.bin",
-      "blockdata_filepath": "data/layouts/AerousCity_Port/map.bin"
+      "border_filepath": "data/layouts/Port/border.bin",
+      "blockdata_filepath": "data/layouts/Port/map.bin"
     },
     {
       "id": "LAYOUT_AEROUS_CITY_BIKE_SHOP",

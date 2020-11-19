@@ -1,9 +1,9 @@
 {
-  "id": "MAP_AEROUS_CITY_PORT",
-  "name": "AerousCity_Port",
+  "id": "MAP_SABULO_ISLAND_PORT",
+  "name": "SabuloIsland_Port",
   "layout": "LAYOUT_PORT",
-  "music": "MUS_FINECITY",
-  "region_map_section": "MAPSEC_LAVARIDGE_TOWN",
+  "music": "MUS_HIGHTOWN",
+  "region_map_section": "MAPSEC_PACIFIDLOG_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "AerousCity_Port_EventScript_Braveton",
+      "script": "SabuloIsland_Port_EventScript_Sailor",
       "flag": "0"
     },
     {
@@ -32,13 +32,13 @@
       "x": 8,
       "y": 9,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_AEROUS_CITY_PORT_SS_WAKE"
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -46,8 +46,8 @@
       "x": 8,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_AEROUS_CITY",
-      "dest_warp_id": 5
+      "dest_map": "MAP_SABULO_ISLAND",
+      "dest_warp_id": 2
     }
   ],
   "coord_events": [

@@ -1,0 +1,7 @@
+SabuloIsland_PokemonCenter_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SabuloIsland_PokemonCenter_OnTransition
+	.byte 0
+
+SabuloIsland_PokemonCenter_OnTransition:
+	setrespawn HEAL_LOCATION_SABULO_ISLAND
+	end

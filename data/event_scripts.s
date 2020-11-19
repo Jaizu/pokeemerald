@@ -1260,3 +1260,9 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/SabuloIsland/scripts.inc"
 
 	.include "data/maps/SabuloCross/scripts.inc"
+
+	.include "data/maps/SabuloIsland_PokemonCenter/scripts.inc"
+
+	.include "data/maps/SabuloIsland_Mart/scripts.inc"
+
+	.include "data/maps/SabuloIsland_Port/scripts.inc"
