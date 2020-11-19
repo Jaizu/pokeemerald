@@ -329,30 +329,8 @@
 #define METATILE_MauvilleGym_RedBeamV2_On     0x249
 
 // gTileset_Mauville
-#define METATILE_Mauville_DeepSand_BottomMid  0x259
-#define METATILE_Mauville_DeepSand_Center     0x251
-#define METATILE_Mauville_Door                0x2AC
-#define METATILE_Mauville_Door_BattleTent     0x3D4
-#define METATILE_Mauville_Door_CyclingRoad    0x289
-#define METATILE_Mauville_Door_Verdanturf     0x3A1
-#define METATILE_Mauville_MirageTower_Tile0   0x3D8
-#define METATILE_Mauville_MirageTower_Tile1   0x3D9
-#define METATILE_Mauville_MirageTower_Tile10  0x3E4
-#define METATILE_Mauville_MirageTower_Tile11  0x3E5
-#define METATILE_Mauville_MirageTower_Tile2   0x3DA
-#define METATILE_Mauville_MirageTower_Tile3   0x3E0
-#define METATILE_Mauville_MirageTower_Tile4   0x3E1
-#define METATILE_Mauville_MirageTower_Tile5   0x3E2
-#define METATILE_Mauville_MirageTower_Tile6   0x3E8
-#define METATILE_Mauville_MirageTower_Tile7   0x3E9
-#define METATILE_Mauville_MirageTower_Tile8   0x3EA
-#define METATILE_Mauville_MirageTower_Tile9   0x3F0
-#define METATILE_Mauville_MirageTower_TileA   0x3F1
-#define METATILE_Mauville_MirageTower_TileB   0x3F2
-#define METATILE_Mauville_MirageTower_TileC   0x3DB
-#define METATILE_Mauville_MirageTower_TileD   0x3DC
-#define METATILE_Mauville_MirageTower_TileE   0x3DD
-#define METATILE_Mauville_MirageTower_TileF   0x3E3
+#define METATILE_Mauville_Door_Tan         0x251
+#define METATILE_Mauville_Door_Tan_Locked  0x2B5
 
 // gTileset_MeteorFalls
 #define METATILE_MeteorFalls_CaveEntrance_Bottom  0x24E

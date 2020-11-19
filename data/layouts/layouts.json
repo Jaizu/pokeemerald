@@ -5100,6 +5100,16 @@
       "secondary_tileset": "gTileset_DewfordGym",
       "border_filepath": "data/layouts/WindmistCity_Gym/border.bin",
       "blockdata_filepath": "data/layouts/WindmistCity_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_SABULO_ISLAND",
+      "name": "SabuloIsland_Layout",
+      "width": 52,
+      "height": 44,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/SabuloIsland/border.bin",
+      "blockdata_filepath": "data/layouts/SabuloIsland/map.bin"
     }
   ]
 }

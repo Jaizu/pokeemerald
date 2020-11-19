@@ -62,7 +62,7 @@ gTileset_Mauville:: @ 83DF77C
 	.4byte gTilesetPalettes_Mauville
 	.4byte gMetatiles_Mauville
 	.4byte gMetatileAttributes_Mauville
-	.4byte InitTilesetAnim_Mauville
+	.4byte NULL @ animation callback
 
 	.align 2
 gTileset_Lavaridge:: @ 83DF794

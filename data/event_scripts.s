@@ -1256,3 +1256,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/ApexTemple_HiddenRoom/scripts.inc"
 
 	.include "data/maps/WindmistCity_Gym/scripts.inc"
+
+	.include "data/maps/SabuloIsland/scripts.inc"
