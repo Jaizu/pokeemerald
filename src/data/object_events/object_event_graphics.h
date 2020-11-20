@@ -66,6 +66,7 @@ const u16 gObjectEventPaletteRancher[] = INCBIN_U16("graphics/object_events/pale
 const u16 gObjectEventPaletteEnoch[] = INCBIN_U16("graphics/object_events/palettes/enoch.gbapal");
 const u16 gObjectEventPaletteNina[] = INCBIN_U16("graphics/object_events/palettes/nina.gbapal");
 const u16 gObjectEventPaletteSSWake[] = INCBIN_U16("graphics/object_events/palettes/ss_wake.gbapal");
+const u16 gObjectEventPalettePokeManiac[] = INCBIN_U16("graphics/object_events/palettes/pokemaniac.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
@@ -142,7 +143,7 @@ const u32 gObjectEventPic_Lass[] = INCBIN_U32("graphics/object_events/pics/peopl
 const u32 gObjectEventPic_Gentleman[] = INCBIN_U32("graphics/object_events/pics/people/gentleman.4bpp");
 const u32 gObjectEventPic_Sailor[] = INCBIN_U32("graphics/object_events/pics/people/sailor.4bpp");
 const u32 gObjectEventPic_Fisherman[] = INCBIN_U32("graphics/object_events/pics/people/fisherman.4bpp");
-const u32 gObjectEventPic_RunningTriathleteM[] = INCBIN_U32("graphics/object_events/pics/people/running_triathlete_m.4bpp");
+const u32 gObjectEventPic_PokeManiac[] = INCBIN_U32("graphics/object_events/pics/people/pokemaniac.4bpp");
 const u32 gObjectEventPic_RunningTriathleteF[] = INCBIN_U32("graphics/object_events/pics/people/running_triathlete_f.4bpp");
 const u32 gObjectEventPic_TuberF[] = INCBIN_U32("graphics/object_events/pics/people/tuber_f.4bpp");
 const u32 gObjectEventPic_TuberM[] = INCBIN_U32("graphics/object_events/pics/people/tuber_m.4bpp");
