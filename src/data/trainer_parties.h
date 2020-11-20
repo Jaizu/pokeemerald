@@ -1050,21 +1050,16 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Braveton[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Samuel[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Joanna1[] = {
     {
     .iv = 100,
-    .lvl = 42,
-    .species = SPECIES_SWELLOW,
+    .lvl = 25,
+    .species = SPECIES_POLIWHIRL,
     },
     {
-    .iv = 100,
-    .lvl = 42,
-    .species = SPECIES_MAWILE,
-    },
-    {
-    .iv = 100,
-    .lvl = 42,
-    .species = SPECIES_KADABRA,
+    .iv = 60,
+    .lvl = 25,
+    .species = SPECIES_VAPOREON,
     }
 };
 

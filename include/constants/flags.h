@@ -1094,8 +1094,8 @@
 #define FLAG_ITEM_IGNIS_ROOST_HYPER_POTION                          0x41A // FLAG_ITEM_GRANITE_CAVE_1F_ESCAPE_ROPE in Emerald
 #define FLAG_ITEM_IGNIS_ROOST_TM50                                  0x41B // FLAG_ITEM_GRANITE_CAVE_B1F_POKE_BALL in Emerald
 #define FLAG_ITEM_APEX_TEMPLE_ROCKY_HELMET                          0x41C // FLAG_ITEM_MT_PYRE_5F_LAX_INCENSE in Emerald
+#define FLAG_ITEM_SABULO_CROSS_STAR_PIECE                           0x41D // FLAG_ITEM_GRANITE_CAVE_B2F_REPEL in Emerald
 
-#define FLAG_ITEM_GRANITE_CAVE_B2F_REPEL                            0x41D
 #define FLAG_ITEM_GRANITE_CAVE_B2F_RARE_CANDY                       0x41E
 #define FLAG_ITEM_PETALBURG_WOODS_X_ATTACK                          0x41F
 #define FLAG_ITEM_PETALBURG_WOODS_GREAT_BALL                        0x420

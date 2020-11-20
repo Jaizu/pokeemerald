@@ -266,6 +266,13 @@ EventScript_ItemRockyHelmet::
 	finditem ITEM_ROCKY_HELMET
 	end
 
+EventScript_ItemStarPiece::
+Route134_EventScript_ItemStarPiece::
+Route133_EventScript_ItemStarPiece::
+Route108_EventScript_ItemStarPiece::
+	finditem ITEM_STAR_PIECE
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
@@ -276,10 +283,6 @@ Route104_EventScript_ItemXAccuracy:: @ 8290D19
 
 Route106_EventScript_ItemProtein:: @ 8290D40
 	finditem ITEM_PROTEIN
-	end
-
-Route108_EventScript_ItemStarPiece:: @ 8290D4D
-	finditem ITEM_STAR_PIECE
 	end
 
 Route110_EventScript_ItemDireHit:: @ 8290D81
@@ -394,20 +397,12 @@ Route133_EventScript_ItemBigPearl:: @ 8291073
 	finditem ITEM_BIG_PEARL
 	end
 
-Route133_EventScript_ItemStarPiece:: @ 8291080
-	finditem ITEM_STAR_PIECE
-	end
-
 Route133_EventScript_ItemMaxRevive:: @ 829108D
 	finditem ITEM_MAX_REVIVE
 	end
 
 Route134_EventScript_ItemCarbos:: @ 829109A
 	finditem ITEM_CARBOS
-	end
-
-Route134_EventScript_ItemStarPiece:: @ 82910A7
-	finditem ITEM_STAR_PIECE
 	end
 
 PetalburgCity_EventScript_ItemMaxRevive:: @ 82910B4
