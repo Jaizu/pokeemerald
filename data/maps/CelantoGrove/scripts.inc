@@ -71,11 +71,11 @@ CelantoGrove_EventScript_Worker::
 	faceplayer
 	compare VAR_CELANTO_GROVE_STATE, 0
 	goto_if_eq CelantoGrove_EventScript_ExplainCableCarIsDown
-	goto_if_set FLAG_RECEIVED_TM32, CelantoGrove_EventScript_ExplainStealthRocks
+	goto_if_set FLAG_RECEIVED_TM32, CelantoGrove_EventScript_ExplainStealthRock
 	msgbox CelantoGrove_Text_EvenTheSmallestRocksCanBeAThreat, MSGBOX_DEFAULT
 	giveitem ITEM_TM32
 	setflag FLAG_RECEIVED_TM32
-	goto CelantoGrove_EventScript_ExplainStealthRocks
+	goto CelantoGrove_EventScript_ExplainStealthRock
 	end
 
 CelantoGrove_EventScript_ExplainCableCarIsDown:
@@ -83,7 +83,7 @@ CelantoGrove_EventScript_ExplainCableCarIsDown:
 	release
 	end
 
-CelantoGrove_EventScript_ExplainStealthRocks:
+CelantoGrove_EventScript_ExplainStealthRock:
 	msgbox CelantoGrove_Text_StealthRockWorksEvenAgainstFlyingTypes, MSGBOX_DEFAULT
 	release
 	end

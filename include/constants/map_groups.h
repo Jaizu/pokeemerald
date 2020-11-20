@@ -122,6 +122,10 @@
 #define MAP_SABULO_ISLAND_POKEMON_CENTER (0 | (9 << 8))
 #define MAP_SABULO_ISLAND_MART           (1 | (9 << 8))
 #define MAP_SABULO_ISLAND_PORT           (2 | (9 << 8))
+#define MAP_SABULO_ISLAND_HOUSE1         (3 | (9 << 8))
+#define MAP_SABULO_ISLAND_HOUSE2         (4 | (9 << 8))
+#define MAP_SABULO_ISLAND_HOUSE3         (5 | (9 << 8))
+#define MAP_SABULO_ISLAND_HOUSE4         (6 | (9 << 8))
 
 // Map Group 10
 #define MAP_CELANTO_GROVE_CABLE_CAR_STATION (0 | (10 << 8))

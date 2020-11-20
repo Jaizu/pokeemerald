@@ -126,28 +126,28 @@
       "x": 6,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_SABULO_ISLAND",
+      "dest_map": "MAP_SABULO_ISLAND_HOUSE1",
       "dest_warp_id": 0
     },
     {
       "x": 18,
       "y": 16,
       "elevation": 0,
-      "dest_map": "MAP_SABULO_ISLAND",
+      "dest_map": "MAP_SABULO_ISLAND_HOUSE2",
       "dest_warp_id": 0
     },
     {
       "x": 4,
       "y": 21,
       "elevation": 0,
-      "dest_map": "MAP_SABULO_ISLAND",
+      "dest_map": "MAP_SABULO_ISLAND_HOUSE3",
       "dest_warp_id": 0
     },
     {
       "x": 24,
       "y": 27,
       "elevation": 0,
-      "dest_map": "MAP_SABULO_ISLAND",
+      "dest_map": "MAP_SABULO_ISLAND_HOUSE4",
       "dest_warp_id": 0
     }
   ],

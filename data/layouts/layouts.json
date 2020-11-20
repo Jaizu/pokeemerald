@@ -5120,6 +5120,16 @@
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/SabuloCross/border.bin",
       "blockdata_filepath": "data/layouts/SabuloCross/map.bin"
+    },
+    {
+      "id": "LAYOUT_SABULO_ISLAND_HOUSE",
+      "name": "SabuloIsland_House_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/SabuloIsland_House/border.bin",
+      "blockdata_filepath": "data/layouts/SabuloIsland_House/map.bin"
     }
   ]
 }

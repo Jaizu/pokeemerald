@@ -6,7 +6,7 @@ Route104_PrettyPetalFlowerShop_MapScripts:: @ 822A34C
 
 Route104_PrettyPetalFlowerShop_OnTransition: @ 822A352
 	setflag FLAG_LANDMARK_FLOWER_SHOP
-	goto_if_unset FLAG_MET_PRETTY_PETAL_SHOP_OWNER, Route104_PrettyPetalFlowerShop_EventScript_MoveShopOwner
+	goto_if_unset 0, Route104_PrettyPetalFlowerShop_EventScript_MoveShopOwner
 	goto_if_unset FLAG_BADGE03_GET, Route104_PrettyPetalFlowerShop_EventScript_MoveShopOwner
 	setflag FLAG_TEMP_1
 	end
@@ -20,8 +20,8 @@ Route104_PrettyPetalFlowerShop_EventScript_ShopOwner:: @ 822A373
 	faceplayer
 	goto_if_set FLAG_TEMP_1, Route104_PrettyPetalFlowerShop_EventScript_SellDecorations
 	msgbox Route104_PrettyPetalFlowerShop_Text_ThisIsPrettyPetalFlowerShop, MSGBOX_DEFAULT
-	goto_if_set FLAG_MET_PRETTY_PETAL_SHOP_OWNER, Route104_PrettyPetalFlowerShop_EventScript_AlreadyMet
-	setflag FLAG_MET_PRETTY_PETAL_SHOP_OWNER
+	goto_if_set 0, Route104_PrettyPetalFlowerShop_EventScript_AlreadyMet
+	setflag 0
 	msgbox Route104_PrettyPetalFlowerShop_Text_IntroLearnAboutBerries, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	call_if_eq Route104_PrettyPetalFlowerShop_EventScript_ExplainBerries

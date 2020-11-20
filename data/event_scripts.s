@@ -1266,3 +1266,11 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/SabuloIsland_Mart/scripts.inc"
 
 	.include "data/maps/SabuloIsland_Port/scripts.inc"
+
+	.include "data/maps/SabuloIsland_House1/scripts.inc"
+
+	.include "data/maps/SabuloIsland_House2/scripts.inc"
+
+	.include "data/maps/SabuloIsland_House3/scripts.inc"
+
+	.include "data/maps/SabuloIsland_House4/scripts.inc"

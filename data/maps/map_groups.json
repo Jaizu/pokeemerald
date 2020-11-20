@@ -164,7 +164,11 @@
   "gMapGroup_SabuloIsland": [
     "SabuloIsland_PokemonCenter",
     "SabuloIsland_Mart",
-    "SabuloIsland_Port"
+    "SabuloIsland_Port",
+    "SabuloIsland_House1",
+    "SabuloIsland_House2",
+    "SabuloIsland_House3",
+    "SabuloIsland_House4"
   ],
   "gMapGroup_CelantoGrove": [
     "CelantoGrove_CableCarStation"

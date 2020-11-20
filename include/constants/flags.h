@@ -138,10 +138,10 @@
 #define FLAG_RECEIVED_WINDMIST_CITY_ABILITY_PILL            0x7A // FLAG_RECEIVED_HM03 in Emerald
 #define FLAG_RECEIVED_TM43                                  0x7B // FLAG_RECEIVED_HM08 in Emerald
 #define FLAG_WHITEOUT_TO_WINDMIST                           0x7C // FLAG_REGISTER_RIVAL_POKENAV in Emerald; Set after defeating Nina, so the player cant white out from poison before meeting Redwood
+#define FLAG_RECEIVED_TM23                                  0x7D // FLAG_DEFEATED_RIVAL_ROUTE_104 in Emerald
+#define FLAG_RECEIVED_GOOD_ROD                              0x7E // FLAG_DEFEATED_WALLY_VICTORY_ROAD in Emerald
+#define FLAG_RECEIVED_SABULO_ISLAND_TWISTED_SPOON           0x7F // FLAG_MET_PRETTY_PETAL_SHOP_OWNER in Emerald
 
-#define FLAG_DEFEATED_RIVAL_ROUTE_104        0x7D
-#define FLAG_DEFEATED_WALLY_VICTORY_ROAD     0x7E
-#define FLAG_MET_PRETTY_PETAL_SHOP_OWNER     0x7F
 #define FLAG_ENABLE_ROXANNE_FIRST_CALL       0x80 // Set after defeating Brawly. This will activate a call with Roxanne in order to register her.
 #define FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN  0x81
 #define FLAG_DEFEATED_RIVAL_ROUTE103         0x82
@@ -243,7 +243,7 @@
 #define FLAG_WINGULL_DELIVERED_MAIL          0xE0
 #define FLAG_RECEIVED_20_COINS               0xE1
 #define FLAG_RECEIVED_STARTER_DOLL           0xE2
-#define FLAG_RECEIVED_GOOD_ROD               0xE3
+#define FLAG_RECEIVED_GOOD_ROD_OLD           0xE3 // FLAG_RECEIVED_GOOD_ROD in Emerald
 #define FLAG_REGI_DOORS_OPENED               0xE4
 #define FLAG_RECEIVED_TM27                   0xE5
 #define FLAG_RECEIVED_TM36                   0xE6
