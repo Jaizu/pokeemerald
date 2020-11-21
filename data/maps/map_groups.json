@@ -88,7 +88,8 @@
     "FrostbiteCave_3F_1R",
     "FrostbiteCave_4F_1R",
     "ApexTemple_MainChamber",
-    "ApexTemple_HiddenRoom"
+    "ApexTemple_HiddenRoom",
+    "SabuloTower_1F"
   ],
   "gMapGroup_HiddenGrottosSecretTemples": [
     "CelantoPath_HiddenGrotto",

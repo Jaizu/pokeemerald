@@ -624,3 +624,10 @@ gMetatiles_ApexTemple::
 	.align 1
 gMetatileAttributes_ApexTemple::
 	.incbin "data/tilesets/secondary/apextemple/metatile_attributes.bin"
+	.align 1
+gMetatiles_SabuloTower::
+	.incbin "data/tilesets/secondary/sabulotower/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SabuloTower::
+	.incbin "data/tilesets/secondary/sabulotower/metatile_attributes.bin"

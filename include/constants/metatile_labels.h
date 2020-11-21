@@ -408,6 +408,9 @@
 #define METATILE_Rustboro_Door_Gray  0x258
 #define METATILE_Rustboro_Door_Tan   0x25E
 
+// gTileset_SabuloTower
+#define METATILE_SabuloTower_WarpPad_Deactivated  0x213
+
 // gTileset_SecretBase
 #define METATILE_SecretBase_AttractMat_BottomLeft       0x313
 #define METATILE_SecretBase_AttractMat_BottomMid        0x314

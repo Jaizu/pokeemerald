@@ -5130,6 +5130,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/SabuloIsland_House/border.bin",
       "blockdata_filepath": "data/layouts/SabuloIsland_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_SABULO_TOWER_1F",
+      "name": "SabuloTower_1F_Layout",
+      "width": 17,
+      "height": 17,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_SabuloTower",
+      "border_filepath": "data/layouts/SabuloTower_1F/border.bin",
+      "blockdata_filepath": "data/layouts/SabuloTower_1F/map.bin"
     }
   ]
 }

@@ -23,6 +23,12 @@ Route113_EventScript_ItemHyperPotion::
 	finditem ITEM_HYPER_POTION
 	end
 
+EventScript_ItemFullRestore::
+MagmaHideout_2F_2R_EventScript_ItemFullRestore::
+VictoryRoad_B1F_EventScript_ItemFullRestore::
+	finditem ITEM_FULL_RESTORE
+	end
+
 EventScript_ItemRevive::
 Route117_EventScript_ItemRevive::
 Route120_EventScript_ItemRevive::
@@ -617,10 +623,6 @@ VictoryRoad_B1F_EventScript_ItemTM29:: @ 829149D
 	finditem ITEM_TM29
 	end
 
-VictoryRoad_B1F_EventScript_ItemFullRestore:: @ 82914AA
-	finditem ITEM_FULL_RESTORE
-	end
-
 ArtisanCave_B1F_EventScript_ItemHPUp:: @ 82914C4
 	finditem ITEM_HP_UP
 	end
@@ -631,10 +633,6 @@ ArtisanCave_1F_EventScript_ItemCarbos:: @ 82914D1
 
 MagmaHideout_2F_2R_EventScript_MaxElixir:: @ 82914EB
 	finditem ITEM_MAX_ELIXIR
-	end
-
-MagmaHideout_2F_2R_EventScript_ItemFullRestore:: @ 82914F8
-	finditem ITEM_FULL_RESTORE
 	end
 
 MagmaHideout_3F_2R_EventScript_ItemPPMax:: @ 8291512

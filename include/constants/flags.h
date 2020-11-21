@@ -141,8 +141,8 @@
 #define FLAG_RECEIVED_TM23                                  0x7D // FLAG_DEFEATED_RIVAL_ROUTE_104 in Emerald
 #define FLAG_RECEIVED_GOOD_ROD                              0x7E // FLAG_DEFEATED_WALLY_VICTORY_ROAD in Emerald
 #define FLAG_RECEIVED_SABULO_ISLAND_TWISTED_SPOON           0x7F // FLAG_MET_PRETTY_PETAL_SHOP_OWNER in Emerald
+#define FLAG_RECEIVED_MEGA_RING                             0x80 // FLAG_ENABLE_ROXANNE_FIRST_CALL in Emerald
 
-#define FLAG_ENABLE_ROXANNE_FIRST_CALL       0x80 // Set after defeating Brawly. This will activate a call with Roxanne in order to register her.
 #define FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN  0x81
 #define FLAG_DEFEATED_RIVAL_ROUTE103         0x82
 #define FLAG_RECEIVED_DOLL_LANETTE           0x83
@@ -1095,8 +1095,8 @@
 #define FLAG_ITEM_IGNIS_ROOST_TM50                                  0x41B // FLAG_ITEM_GRANITE_CAVE_B1F_POKE_BALL in Emerald
 #define FLAG_ITEM_APEX_TEMPLE_ROCKY_HELMET                          0x41C // FLAG_ITEM_MT_PYRE_5F_LAX_INCENSE in Emerald
 #define FLAG_ITEM_SABULO_CROSS_STAR_PIECE                           0x41D // FLAG_ITEM_GRANITE_CAVE_B2F_REPEL in Emerald
+#define FLAG_ITEM_SABULO_TOWER_FULL_RESTORE                         0x41E // FLAG_ITEM_GRANITE_CAVE_B2F_RARE_CANDY in Emerald
 
-#define FLAG_ITEM_GRANITE_CAVE_B2F_RARE_CANDY                       0x41E
 #define FLAG_ITEM_PETALBURG_WOODS_X_ATTACK                          0x41F
 #define FLAG_ITEM_PETALBURG_WOODS_GREAT_BALL                        0x420
 #define FLAG_ITEM_ROUTE_104_POKE_BALL                               0x421

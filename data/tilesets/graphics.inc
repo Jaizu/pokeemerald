@@ -1909,3 +1909,23 @@ gTilesetPalettes_ApexTemple::
 	.align 2
 gTilesetTiles_ApexTemple::
 	.incbin "data/tilesets/secondary/apextemple/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SabuloTower::
+	.incbin "data/tilesets/secondary/sabulotower/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/sabulotower/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/sabulotower/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/sabulotower/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/sabulotower/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/sabulotower/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/sabulotower/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/sabulotower/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/sabulotower/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/sabulotower/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/sabulotower/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/sabulotower/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/sabulotower/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SabuloTower::
+	.incbin "data/tilesets/secondary/sabulotower/tiles.4bpp.lz"

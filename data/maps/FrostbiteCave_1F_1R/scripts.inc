@@ -3,10 +3,10 @@ FrostbiteCave_1F_1R_MapScripts::
 	.byte 0
 
 FrostbiteCave_1F_1R_OnLoad:
-	call_if_set FLAG_CLEAR_ROCKS_FROSTBITE_CAVE_1F, FrostbiteCave_1F_1R_EventScript_LockDoor
+	call_if_set FLAG_CLEAR_ROCKS_FROSTBITE_CAVE_1F, FrostbiteCave_1F_1R_EventScript_ClearRocks
 	end
 
-FrostbiteCave_1F_1R_EventScript_LockDoor::
+FrostbiteCave_1F_1R_EventScript_ClearRocks::
 	setmetatile 28, 14, METATILE_FrostbiteCave_CaveGround, 0
 	setmetatile 28, 15, METATILE_FrostbiteCave_CaveGround, 0
 	setmetatile 28, 16, METATILE_FrostbiteCave_CaveGround, 0

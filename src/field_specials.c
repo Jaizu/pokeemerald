@@ -429,29 +429,7 @@ bool32 ShouldDoScottBattleFrontierCall(void)
 
 bool32 ShouldDoRoxanneCall(void)
 {
-    if (FlagGet(FLAG_ENABLE_ROXANNE_FIRST_CALL))
-    {
-        switch (gMapHeader.mapType)
-        {
-            case MAP_TYPE_TOWN:
-            case MAP_TYPE_CITY:
-            case MAP_TYPE_ROUTE:
-            case MAP_TYPE_OCEAN_ROUTE:
-                if (++(*GetVarPointer(VAR_ROXANNE_CALL_STEP_COUNTER)) < 250)
-                {
-                    return FALSE;
-                }
-                break;
-            default:
-                return FALSE;
-        }
-    }
-    else
-    {
-        return FALSE;
-    }
-
-    return TRUE;
+    return FALSE;
 }
 
 bool32 ShouldDoRivalRayquazaCall(void)

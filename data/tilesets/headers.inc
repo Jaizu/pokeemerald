@@ -929,3 +929,14 @@ gTileset_ApexTemple::
 	.4byte gMetatiles_ApexTemple
 	.4byte gMetatileAttributes_ApexTemple
 	.4byte NULL
+
+	.align 2
+gTileset_SabuloTower::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_SabuloTower
+	.4byte gTilesetPalettes_SabuloTower
+	.4byte gMetatiles_SabuloTower
+	.4byte gMetatileAttributes_SabuloTower
+	.4byte NULL
