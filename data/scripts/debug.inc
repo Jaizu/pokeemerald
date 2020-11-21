@@ -324,12 +324,35 @@
 		settrainerflag TRAINER_BRAVETON
 		// The SS Wake arrives
 		clearflag FLAG_HIDE_AEROUS_CITY_PORT_SS_WAKE
+		// SABULO ISLAND
+		// Set visited flag
+		setflag FLAG_VISITED_SABULO_ISLAND
+		// SABULO CROSS
+		// Fight Joanna
+		settrainerflag TRAINER_JOANNA_1
+		// SABULO TOWER
+		// Fight Trainers
+		settrainerflag TRAINER_NIKOLAI
+		settrainerflag TRAINER_MAYA
+		settrainerflag TRAINER_JAIME
+		settrainerflag TRAINER_MIKEL
+		settrainerflag TRAINER_AGEM
+		// Fight Belle
+		// settrainerflag TRAINER_BELLE_1
+		// Obtain Mega Ring
+		// TODO: Add Mega Ring item
+		// additem ITEM_MEGA_RING
+		// setflag FLAG_RECEIVED_MEGA_RING
+		// Belle leaves
+		// setflag FLAG_HIDE_SABULO_TOWER_6F_2R_BELLE
+		// setvar VAR_SABULO_TOWER_STATE, 1
+		// setvar VAR_SABULO_ISLAND_STATE, 1
 		end
 	
 	Debug_EventScript_GetParty::
-		givemon SPECIES_JOLTIK, 25, ITEM_NONE
-		givemon SPECIES_DRILBUR, 25, ITEM_NONE
-		givemon SPECIES_MONFERNO, 25, ITEM_NONE
+		givemon SPECIES_JOLTIK, 30, ITEM_NONE
+		givemon SPECIES_EXCADRILL, 31, ITEM_NONE
+		givemon SPECIES_MONFERNO, 31, ITEM_NONE
 		end
 	
 	Debug_EventScript_GetItems::
