@@ -169,11 +169,15 @@
 #define TRAINER_REUBEN                       82 // TRAINER_VITO in Emerald
 #define TRAINER_OWEN                         83
 #define TRAINER_NIKOLAI                      83 // TRAINER_OWEN in Emerald
-
 #define TRAINER_WILTON_2                     84
+#define TRAINER_MAYA                         84 // TRAINER_WILTON_2 in Emerald
 #define TRAINER_WILTON_3                     85
+#define TRAINER_JAIME                        85 // TRAINER_WILTON_3 in Emerald
 #define TRAINER_WILTON_4                     86
+#define TRAINER_MIKEL                        86 // TRAINER_WILTON_4 in Emerald
 #define TRAINER_WILTON_5                     87
+#define TRAINER_AGEM                         87 // TRAINER_WILTON_5 in Emerald
+
 #define TRAINER_WARREN                       88
 #define TRAINER_MARY                         89
 #define TRAINER_ALEXIA                       90

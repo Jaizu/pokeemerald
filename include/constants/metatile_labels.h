@@ -409,6 +409,7 @@
 #define METATILE_Rustboro_Door_Tan   0x25E
 
 // gTileset_SabuloTower
+#define METATILE_SabuloTower_LockedDoor           0x256
 #define METATILE_SabuloTower_WarpPad_Deactivated  0x213
 
 // gTileset_SecretBase
