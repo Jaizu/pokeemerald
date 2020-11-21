@@ -1234,9 +1234,9 @@ const struct Trainer gTrainers[] = {
     [TRAINER_BELLE_1] =
     {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_SALON_MAIDEN,
+        .trainerClass = TRAINER_CLASS_SUCCESSOR,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_SALON_MAIDEN_ANABEL,
+        .trainerPic = TRAINER_PIC_BELLE,
         .trainerName = _("Belle"),
         .items = {},
         .doubleBattle = FALSE,
