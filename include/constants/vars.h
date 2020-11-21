@@ -110,7 +110,7 @@
 #define VAR_CURRENT_SECRET_BASE              0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
 #define VAR_NESTPINE_TOWN_STATE              0x4054 // VAR_CURRENT_SECRET_BASE in Emerald
 #define VAR_WINDMIST_CITY_STATE              0x4055 // VAR_VERDANTURF_TOWN_STATE in Emerald
-#define VAR_PACIFIDLOG_TOWN_STATE            0x4056 // Unused Var
+#define VAR_SABULO_ISLAND_STATE              0x4056 // VAR_PACIFIDLOG_TOWN_STATE in Emerald
 #define VAR_PETALBURG_CITY_STATE             0x4057
 #define VAR_SLATEPORT_CITY_STATE             0x4058
 #define VAR_MAUVILLE_CITY_STATE              0x4059 // Unused Var
@@ -178,6 +178,7 @@
 #define VAR_LITTLEROOT_HOUSES_STATE_BRENDAN  0x408C
 #define VAR_WINDMIST_GYM_STATE               0x408C // VAR_LITTLEROOT_HOUSES_STATE_BRENDAN in Emerald
 #define VAR_LITTLEROOT_RIVAL_STATE           0x408D
+#define VAR_SABULO_TOWER_STATE               0x408D // VAR_LITTLEROOT_RIVAL_STATE in Emerald
 #define VAR_BOARD_BRINEY_BOAT_STATE          0x408E
 #define VAR_DEVON_CORP_3F_STATE              0x408F
 #define VAR_BRINEY_HOUSE_STATE               0x4090

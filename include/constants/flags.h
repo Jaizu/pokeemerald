@@ -806,8 +806,8 @@
 #define FLAG_HIDE_KNICK_KNACK_STORE_REDWOOD                         0x2FD // FLAG_HIDE_MAUVILLE_CITY_SCOTT in Emerald
 #define FLAG_HIDE_WINDMIST_CITY_REDWOOD                             0x2FE // FLAG_HIDE_VERDANTURF_TOWN_SCOTT in Emerald
 #define FLAG_HIDE_AEROUS_CITY_REDWOOD                               0x2FF // FLAG_HIDE_FALLARBOR_TOWN_BATTLE_TENT_SCOTT in Emerald
+#define FLAG_HIDE_SABULO_TOWER_6F_2R_BELLE                          0x300 // FLAG_HIDE_ROUTE_111_VICTOR_WINSTRATE in Emerald
 
-#define FLAG_HIDE_ROUTE_111_VICTOR_WINSTRATE                        0x300
 #define FLAG_HIDE_ROUTE_111_VICTORIA_WINSTRATE                      0x301
 #define FLAG_HIDE_ROUTE_111_VIVI_WINSTRATE                          0x302
 #define FLAG_HIDE_ROUTE_111_VICKY_WINSTRATE                         0x303

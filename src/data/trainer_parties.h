@@ -1196,22 +1196,47 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Agem[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Warren[] = {
+static const struct TrainerMonItemCustomMoves sParty_Belle1[] = {
     {
-    .iv = 100,
-    .lvl = 33,
-    .species = SPECIES_GRAVELER,
+    .iv = 60,
+    .lvl = 29,
+    .species = SPECIES_HERACROSS,
+    .heldItem = ITEM_SILVER_POWDER,
+    .moves = {MOVE_PIN_MISSILE, MOVE_AERIAL_ACE, MOVE_HORN_ATTACK, MOVE_LEER}
     },
     {
-    .iv = 100,
-    .lvl = 33,
-    .species = SPECIES_LUDICOLO,
+    .iv = 60,
+    .lvl = 29,
+    .species = SPECIES_MANECTRIC,
+    .heldItem = ITEM_MAGNET,
+    .moves = {MOVE_THUNDER_FANG, MOVE_BITE, MOVE_THUNDER_WAVE, MOVE_QUICK_ATTACK}
+    },
+    {
+    .iv = 60,
+    .lvl = 29,
+    .species = SPECIES_SABLEYE,
+    .heldItem = ITEM_BLACK_GLASSES,
+    .moves = {MOVE_FAKE_OUT, MOVE_KNOCK_OFF, MOVE_NIGHT_SHADE, MOVE_SHADOW_SNEAK}
+    },
+    {
+    .iv = 60,
+    .lvl = 29,
+    .species = SPECIES_MAWILE,
+    .heldItem = ITEM_BLACK_GLASSES,
+    .moves = {MOVE_FAIRY_WIND, MOVE_CRUNCH, MOVE_SUCKER_PUNCH, MOVE_ASTONISH}
+    },
+    {
+    .iv = 120,
+    .lvl = 31,
+    .species = SPECIES_AUDINO,
+    .heldItem = ITEM_AUDINITE,
+    .moves = {MOVE_DISARMING_VOICE, MOVE_LIGHT_SCREEN, MOVE_ZEN_HEADBUTT, MOVE_REFLECT}
     }
 };
 
 static const struct TrainerMonItemCustomMoves sParty_Mary[] = {
     {
-    .iv = 255,
+    .iv = 60,
     .lvl = 26,
     .species = SPECIES_DELCATTY,
     .heldItem = ITEM_NONE,

@@ -1231,18 +1231,18 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_Agem},
     },
 
-    [TRAINER_WARREN] =
+    [TRAINER_BELLE_1] =
     {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_COOLTRAINER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
-        .trainerName = _("WARREN"),
-        .items = {ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_SALON_MAIDEN,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_SALON_MAIDEN_ANABEL,
+        .trainerName = _("Belle"),
+        .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Warren),
-        .party = {.NoItemDefaultMoves = sParty_Warren},
+        .partySize = ARRAY_COUNT(sParty_Belle1),
+        .party = {.ItemCustomMoves = sParty_Belle1},
     },
 
     [TRAINER_MARY] =

@@ -177,8 +177,9 @@
 #define TRAINER_MIKEL                        86 // TRAINER_WILTON_4 in Emerald
 #define TRAINER_WILTON_5                     87
 #define TRAINER_AGEM                         87 // TRAINER_WILTON_5 in Emerald
-
 #define TRAINER_WARREN                       88
+#define TRAINER_BELLE_1                      88 // TRAINER_WARREN in Emerald
+
 #define TRAINER_MARY                         89
 #define TRAINER_ALEXIA                       90
 #define TRAINER_JODY                         91
