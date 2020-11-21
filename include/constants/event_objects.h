@@ -71,7 +71,7 @@
 #define OBJ_EVENT_GFX_REPORTER_M                  67
 #define OBJ_EVENT_GFX_REPORTER_F                  68
 #define OBJ_EVENT_GFX_BARD                        69
-#define OBJ_EVENT_GFX_ANABEL                      70
+#define OBJ_EVENT_GFX_BELLE                       70
 #define OBJ_EVENT_GFX_TUCKER                      71
 #define OBJ_EVENT_GFX_GRETA                       72
 #define OBJ_EVENT_GFX_SPENSER                     73
@@ -284,6 +284,7 @@
 #define OBJ_EVENT_GFX_WATTSON                    OBJ_EVENT_GFX_NINA
 #define OBJ_EVENT_GFX_SS_TIDAL                   OBJ_EVENT_GFX_SS_WAKE
 #define OBJ_EVENT_GFX_RUNNING_TRIATHLETE_M       OBJ_EVENT_GFX_POKEMANIAC
+#define OBJ_EVENT_GFX_ANABEL                      OBJ_EVENT_GFX_BELLE
 
 #define OBJ_EVENT_PAL_TAG_0 0x1100
 #define OBJ_EVENT_PAL_TAG_1 0x1101
@@ -350,6 +351,7 @@
 #define OBJ_EVENT_PAL_TAG_NINA 0x113E
 #define OBJ_EVENT_PAL_TAG_SS_WAKE 0x113F
 #define OBJ_EVENT_PAL_TAG_POKEMANIAC 0x1140
+#define OBJ_EVENT_PAL_TAG_BELLE 0x1141
 #define OBJ_EVENT_PAL_TAG_NONE 0x11FF
 
 // These are dynamic object gfx ids.

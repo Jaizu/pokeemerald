@@ -67,6 +67,7 @@ const u16 gObjectEventPaletteEnoch[] = INCBIN_U16("graphics/object_events/palett
 const u16 gObjectEventPaletteNina[] = INCBIN_U16("graphics/object_events/palettes/nina.gbapal");
 const u16 gObjectEventPaletteSSWake[] = INCBIN_U16("graphics/object_events/palettes/ss_wake.gbapal");
 const u16 gObjectEventPalettePokeManiac[] = INCBIN_U16("graphics/object_events/palettes/pokemaniac.gbapal");
+const u16 gObjectEventPaletteBelle[] = INCBIN_U16("graphics/object_events/palettes/belle.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
@@ -366,7 +367,7 @@ const u32 gObjectEventPic_Red[] = INCBIN_U32("graphics/object_events/pics/people
 const u32 gObjectEventPic_Leaf[] = INCBIN_U32("graphics/object_events/pics/people/leaf.4bpp");
 const u32 gObjectEventPic_BirthIslandStone[] = INCBIN_U32("graphics/object_events/pics/misc/birth_island_stone.4bpp");
 const u32 gObjectEventPic_Deoxys[] = INCBIN_U32("graphics/object_events/pics/pokemon/deoxys.4bpp");
-const u32 gObjectEventPic_Anabel[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/anabel.4bpp");
+const u32 gObjectEventPic_Belle[] = INCBIN_U32("graphics/object_events/pics/people/belle.4bpp");
 const u32 gObjectEventPic_Tucker[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/tucker.4bpp");
 const u32 gObjectEventPic_Spenser[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/spenser.4bpp");
 const u32 gObjectEventPic_Greta[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/greta.4bpp");

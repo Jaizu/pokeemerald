@@ -70,7 +70,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_REPORTER_M] =               &gObjectEventGraphicsInfo_ReporterM,
     [OBJ_EVENT_GFX_REPORTER_F] =               &gObjectEventGraphicsInfo_ReporterF,
     [OBJ_EVENT_GFX_BARD] =                     &gObjectEventGraphicsInfo_Bard,
-    [OBJ_EVENT_GFX_ANABEL] =                   &gObjectEventGraphicsInfo_Anabel,
+    [OBJ_EVENT_GFX_BELLE] =                    &gObjectEventGraphicsInfo_Belle,
     [OBJ_EVENT_GFX_TUCKER] =                   &gObjectEventGraphicsInfo_Tucker,
     [OBJ_EVENT_GFX_GRETA] =                    &gObjectEventGraphicsInfo_Greta,
     [OBJ_EVENT_GFX_SPENSER] =                  &gObjectEventGraphicsInfo_Spenser,
@@ -317,5 +317,6 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPaletteNina, OBJ_EVENT_PAL_TAG_NINA},
     {gObjectEventPaletteSSWake, OBJ_EVENT_PAL_TAG_SS_WAKE},
     {gObjectEventPalettePokeManiac, OBJ_EVENT_PAL_TAG_POKEMANIAC},
+    {gObjectEventPaletteBelle, OBJ_EVENT_PAL_TAG_BELLE},
     {NULL, 0x0000},
 };

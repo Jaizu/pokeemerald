@@ -2052,16 +2052,16 @@ const struct SpriteFrameImage gObjectEventPicTable_BirthIslandStone[] = {
     obj_frame_tiles(gObjectEventPic_BirthIslandStone),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_Anabel[] = {
-    overworld_frame(gObjectEventPic_Anabel, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Anabel, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Anabel, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Anabel, 2, 4, 3),
-    overworld_frame(gObjectEventPic_Anabel, 2, 4, 4),
-    overworld_frame(gObjectEventPic_Anabel, 2, 4, 5),
-    overworld_frame(gObjectEventPic_Anabel, 2, 4, 6),
-    overworld_frame(gObjectEventPic_Anabel, 2, 4, 7),
-    overworld_frame(gObjectEventPic_Anabel, 2, 4, 8),
+const struct SpriteFrameImage gObjectEventPicTable_Belle[] = {
+    overworld_frame(gObjectEventPic_Belle, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Belle, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Belle, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Belle, 2, 4, 3),
+    overworld_frame(gObjectEventPic_Belle, 2, 4, 4),
+    overworld_frame(gObjectEventPic_Belle, 2, 4, 5),
+    overworld_frame(gObjectEventPic_Belle, 2, 4, 6),
+    overworld_frame(gObjectEventPic_Belle, 2, 4, 7),
+    overworld_frame(gObjectEventPic_Belle, 2, 4, 8),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Tucker[] = {
