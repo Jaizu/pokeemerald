@@ -47,6 +47,14 @@
 #define MAP_APEX_TEMPLE_MAIN_CHAMBER            (18 | (1 << 8))
 #define MAP_APEX_TEMPLE_HIDDEN_ROOM             (19 | (1 << 8))
 #define MAP_SABULO_TOWER_1F                     (20 | (1 << 8))
+#define MAP_SABULO_TOWER_2F                     (21 | (1 << 8))
+#define MAP_SABULO_TOWER_3F                     (22 | (1 << 8))
+#define MAP_SABULO_TOWER_4F                     (23 | (1 << 8))
+#define MAP_SABULO_TOWER_5F_1R                  (24 | (1 << 8))
+#define MAP_SABULO_TOWER_5F_2R                  (25 | (1 << 8))
+#define MAP_SABULO_TOWER_6F_1R                  (26 | (1 << 8))
+#define MAP_SABULO_TOWER_6F_2R                  (27 | (1 << 8))
+#define MAP_SABULO_TOWER_6F_BELLES_STUDY        (28 | (1 << 8))
 
 // Map Group 2
 #define MAP_CELANTO_PATH_HIDDEN_GROTTO   (0 | (2 << 8))

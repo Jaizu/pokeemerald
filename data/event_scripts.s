@@ -1276,3 +1276,19 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/SabuloIsland_House4/scripts.inc"
 
 	.include "data/maps/SabuloTower_1F/scripts.inc"
+
+	.include "data/maps/SabuloTower_2F/scripts.inc"
+
+	.include "data/maps/SabuloTower_3F/scripts.inc"
+
+	.include "data/maps/SabuloTower_4F/scripts.inc"
+
+	.include "data/maps/SabuloTower_5F_1R/scripts.inc"
+
+	.include "data/maps/SabuloTower_5F_2R/scripts.inc"
+
+	.include "data/maps/SabuloTower_6F_1R/scripts.inc"
+
+	.include "data/maps/SabuloTower_6F_2R/scripts.inc"
+
+	.include "data/maps/SabuloTower_6F_BellesStudy/scripts.inc"

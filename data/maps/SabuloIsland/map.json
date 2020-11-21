@@ -170,6 +170,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "SabuloIsland_EventScript_SabuloTowerSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 20,
+      "y": 26,
+      "elevation": 3,
+      "item": "ITEM_STARDUST",
+      "flag": "FLAG_HIDDEN_ITEM_SABULO_ISLAND_STARDUST"
     }
   ]
 }

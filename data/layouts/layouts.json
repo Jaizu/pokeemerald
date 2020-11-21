@@ -5140,6 +5140,76 @@
       "secondary_tileset": "gTileset_SabuloTower",
       "border_filepath": "data/layouts/SabuloTower_1F/border.bin",
       "blockdata_filepath": "data/layouts/SabuloTower_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SABULO_TOWER_2F_4F",
+      "name": "SabuloTower_2F_4F_Layout",
+      "width": 17,
+      "height": 16,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_SabuloTower",
+      "border_filepath": "data/layouts/SabuloTower_2F_4F/border.bin",
+      "blockdata_filepath": "data/layouts/SabuloTower_2F_4F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SABULO_TOWER_3F",
+      "name": "SabuloTower_3F_Layout",
+      "width": 17,
+      "height": 16,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_SabuloTower",
+      "border_filepath": "data/layouts/SabuloTower_3F/border.bin",
+      "blockdata_filepath": "data/layouts/SabuloTower_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SABULO_TOWER_5F_1R",
+      "name": "SabuloTower_5F_1R_Layout",
+      "width": 17,
+      "height": 16,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_SabuloTower",
+      "border_filepath": "data/layouts/SabuloTower_5F_1R/border.bin",
+      "blockdata_filepath": "data/layouts/SabuloTower_5F_1R/map.bin"
+    },
+    {
+      "id": "LAYOUT_SABULO_TOWER_5F_2R",
+      "name": "SabuloTower_5F_2R_Layout",
+      "width": 9,
+      "height": 12,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_SabuloTower",
+      "border_filepath": "data/layouts/SabuloTower_5F_2R/border.bin",
+      "blockdata_filepath": "data/layouts/SabuloTower_5F_2R/map.bin"
+    },
+    {
+      "id": "LAYOUT_SABULO_TOWER_6F_1R",
+      "name": "SabuloTower_6F_1R_Layout",
+      "width": 9,
+      "height": 12,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_SabuloTower",
+      "border_filepath": "data/layouts/SabuloTower_6F_1R/border.bin",
+      "blockdata_filepath": "data/layouts/SabuloTower_6F_1R/map.bin"
+    },
+    {
+      "id": "LAYOUT_SABULO_TOWER_6F_2R",
+      "name": "SabuloTower_6F_2R_Layout",
+      "width": 17,
+      "height": 17,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_SabuloTower",
+      "border_filepath": "data/layouts/SabuloTower_6F_2R/border.bin",
+      "blockdata_filepath": "data/layouts/SabuloTower_6F_2R/map.bin"
+    },
+    {
+      "id": "LAYOUT_SABULO_TOWER_6F_BELLES_STUDY",
+      "name": "SabuloTower_6F_BellesStudy_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_SabuloTower",
+      "border_filepath": "data/layouts/SabuloTower_6F_BellesStudy/border.bin",
+      "blockdata_filepath": "data/layouts/SabuloTower_6F_BellesStudy/map.bin"
     }
   ]
 }
