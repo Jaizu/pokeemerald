@@ -1066,6 +1066,7 @@ Common_EventScript_PokemonFled::
 	.include "data/text/birch_speech.inc"
 	.include "data/scripts/hidden_grotto.inc"
 	.include "data/scripts/debug.inc"
+	.include "data/text/mega_evolution.inc"
 
 	.include "data/maps/CelantoTown/scripts.inc"
 

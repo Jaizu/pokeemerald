@@ -29,7 +29,7 @@ SabuloTower_1F_EventScript_TryExplainMegaRing:
 	end
 
 SabuloTower_1F_EventScript_ExplainMegaRing:
-	msgbox SabuloTower_1F_Text_ExplainMegaRing, MSGBOX_DEFAULT
+	msgbox MegaEvolution_Text_ExplainMegaEvolution, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
@@ -52,18 +52,6 @@ SabuloTower_1F_Text_JustAskIfYouForget:
 	.string "Just ask if you forget.\p"
 	.string "By the way, you can use that\n"
 	.string "teleporter to go to the top floor.$"
-
-SabuloTower_1F_Text_ExplainMegaRing:
-	.string "You have to equip a Pokémon with\n"
-	.string "its Mega Stone first.\p"
-	.string "In battle, when you see the symbol\n"
-	.string "appear, press the Start button.\p"
-	.string "After you select its move, your\n"
-	.string "Pokémon will Mega Evolve!\p"
-	.string "You can Mega Evolve one Pokémon\n"
-	.string "per battle.\p"
-	.string "The Evolution's effects wear off\n"
-	.string "once the battle concludes, too.$"
 
 SabuloTower_1F_EventScript_Nikolai::
 	trainerbattle_single TRAINER_NIKOLAI, SabuloTower_1F_Text_NikolaiIntro, SabuloTower_1F_Text_NikolaiDefeated

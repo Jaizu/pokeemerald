@@ -1,0 +1,11 @@
+MegaEvolution_Text_ExplainMegaEvolution:
+	.string "You have to equip a Pokémon with\n"
+	.string "its Mega Stone first.\p"
+	.string "In battle, when you see the symbol\n"
+	.string "appear, press the Start button.\p"
+	.string "After you select its move, your\n"
+	.string "Pokémon will Mega Evolve!\p"
+	.string "You can Mega Evolve one Pokémon\n"
+	.string "per battle.\p"
+	.string "The Evolution's effects wear off\n"
+	.string "once the battle concludes, too.$"
