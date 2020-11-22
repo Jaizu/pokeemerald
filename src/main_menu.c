@@ -382,7 +382,7 @@ static const struct WindowTemplate gNewGameBirchSpeechTextWindows[] =
         .bg = 0,
         .tilemapLeft = 2,
         .tilemapTop = 15,
-        .width = 27,
+        .width = 26,
         .height = 4,
         .paletteNum = 15,
         .baseBlock = 1
@@ -2163,9 +2163,9 @@ static void ClearMainMenuWindowTilemap(const struct WindowTemplate *template)
     CopyBgTilemapBufferToVram(template->bg);
 }
 
-static void NewGameBirchSpeech_ClearGenderWindowTilemap(u8 a, u8 b, u8 c, u8 d, u8 e, u8 unused)
+static void NewGameBirchSpeech_ClearGenderWindowTilemap(u8 bg, u8 tilemapLeft, u8 tilemapTop, u8 width, u8 height, u8 unused)
 {
-    FillBgTilemapBufferRect(a, 0, b + 0xFF, c + 0xFF, d + 2, e + 2, 2);
+    FillBgTilemapBufferRect(bg, 0, tilemapLeft + 0xFF, tilemapTop + 0xFF, width + 2, height + 2, 2);
 }
 
 static void NewGameBirchSpeech_ClearGenderWindow(u8 windowId, bool8 copyToVram)
@@ -2179,13 +2179,11 @@ static void NewGameBirchSpeech_ClearGenderWindow(u8 windowId, bool8 copyToVram)
 
 static void NewGameBirchSpeech_ClearWindow(u8 windowId)
 {
-    u8 bgColor = GetFontAttribute(1, FONTATTR_COLOR_BACKGROUND);
-    u8 maxCharWidth = GetFontAttribute(1, FONTATTR_MAX_LETTER_WIDTH);
-    u8 maxCharHeight = GetFontAttribute(1, FONTATTR_MAX_LETTER_HEIGHT);
+    u8 bgColor = GetFontAttribute(2, FONTATTR_COLOR_BACKGROUND);
     u8 winWidth = GetWindowAttribute(windowId, WINDOW_WIDTH);
     u8 winHeight = GetWindowAttribute(windowId, WINDOW_HEIGHT);
 
-    FillWindowPixelRect(windowId, bgColor, 0, 0, maxCharWidth * winWidth, maxCharHeight * winHeight);
+    FillWindowPixelRect(windowId, bgColor, 0, 0, winWidth * 8, winHeight * 8);
     CopyWindowToVram(windowId, 2);
 }
 
@@ -2198,12 +2196,12 @@ static void NewGameBirchSpeech_ShowPokeBallPrinterCallback(struct TextPrinterTem
     }
 }
 
-void CreateYesNoMenuParameterized(u8 a, u8 b, u16 c, u16 d, u8 e, u8 f)
+void CreateYesNoMenuParameterized(u8 left, u8 top, u16 borderFirstTileNum, u16 baseBlock, u8 borderPalette, u8 paletteNum)
 {
     struct WindowTemplate sp;
 
-    sp = CreateWindowTemplate(0, a + 1, b + 1, 5, 4, f, d);
-    CreateYesNoMenu(&sp, c, e, 0);
+    sp = CreateWindowTemplate(0, left + 1, top + 1, 5, 4, paletteNum, baseBlock);
+    CreateYesNoMenu(&sp, borderFirstTileNum, borderPalette, 0);
 }
 
 static void NewGameBirchSpeech_ShowDialogueWindow(u8 windowId, u8 copyToVram)
@@ -2215,21 +2213,9 @@ static void NewGameBirchSpeech_ShowDialogueWindow(u8 windowId, u8 copyToVram)
         CopyWindowToVram(windowId, 3);
 }
 
-static void NewGameBirchSpeech_CreateDialogueWindowBorder(u8 a, u8 b, u8 c, u8 d, u8 e, u8 f)
+static void NewGameBirchSpeech_CreateDialogueWindowBorder(u8 bg, u8 tilemapLeft, u8 tilemapTop, u8 width, u8 height, u8 paletteNum)
 {
-    FillBgTilemapBufferRect(a, 0xFD,  b-2,   c-1, 1,   1, f);
-    FillBgTilemapBufferRect(a, 0xFF,  b-1,   c-1, 1,   1, f);
-    FillBgTilemapBufferRect(a, 0x100, b,     c-1, d,   1, f);
-    FillBgTilemapBufferRect(a, 0x101, b+d-1, c-1, 1,   1, f);
-    FillBgTilemapBufferRect(a, 0x102, b+d,   c-1, 1,   1, f);
-    FillBgTilemapBufferRect(a, 0x103, b-2,   c,   1,   5, f);
-    FillBgTilemapBufferRect(a, 0x105, b-1,   c,   d+1, 5, f);
-    FillBgTilemapBufferRect(a, 0x106, b+d,   c,   1,   5, f);
-    FillBgTilemapBufferRect(a, BG_TILE_V_FLIP(0xFD), b-2,   c+e, 1,   1, f);
-    FillBgTilemapBufferRect(a, BG_TILE_V_FLIP(0xFF), b-1,   c+e, 1,   1, f);
-    FillBgTilemapBufferRect(a, BG_TILE_V_FLIP(0x100), b,     c+e, d-1, 1, f);
-    FillBgTilemapBufferRect(a, BG_TILE_V_FLIP(0x101), b+d-1, c+e, 1,   1, f);
-    FillBgTilemapBufferRect(a, BG_TILE_V_FLIP(0x102), b+d,   c+e, 1,   1, f);
+    WindowFunc_DrawDialogueFrameFromBaseTile(bg, tilemapLeft, tilemapTop, width, height, paletteNum, 0xFC);
 }
 
 static void Task_NewGameBirchSpeech_ReturnFromNamingScreenShowTextbox(u8 taskId)
