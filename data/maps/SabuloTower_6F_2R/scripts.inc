@@ -45,7 +45,13 @@ SabuloTower_6F_2R_EventScript_BelleFightScene:
 	trainerbattle_no_intro TRAINER_BELLE_1, SabuloTower_6F_2R_Text_BelleDefeat
 	additem ITEM_MEGA_RING
 	setflag FLAG_RECEIVED_MEGA_RING
-	msgbox SabuloTower_6F_2R_Text_ExplainMegaRing, MSGBOX_DEFAULT
+	msgbox SabuloTower_6F_2R_Text_AreYouFamiliarWithMegaEvolution, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	call_if_eq SabuloTower_6F_2R_EventScript_ExplainMegaEvolution
+	msgbox SabuloTower_6F_2R_Text_IHaveNoDoubt, MSGBOX_DEFAULT
+	closemessage
+	call Common_EventScript_FieldHeal
+	msgbox SabuloTower_6F_2R_Text_Farewell, MSGBOX_DEFAULT
 	closemessage
 	compare VAR_0x8008, 0
 	call_if_eq SabuloTower_6F_2R_EventScript_ExitBelle0
@@ -83,6 +89,10 @@ SabuloTower_6F_2R_EventScript_PanCameraWalkBelleToPlayer2:
 	applymovement LOCALID_BELLE, SabuloTower_6F_2R_Movement_WalkToPlayer2
 	waitmovement 0
 	special RemoveCameraObject
+	return
+
+SabuloTower_6F_2R_EventScript_ExplainMegaEvolution:
+	msgbox MegaEvolution_Text_ExplainMegaEvolution, MSGBOX_DEFAULT
 	return
 
 SabuloTower_6F_2R_EventScript_ExitBelle0:
@@ -136,21 +146,19 @@ SabuloTower_6F_2R_Text_BelleDefeat:
 	.string "You have achieved a great feat,\n"
 	.string "{PLAYER}.$"
 
-SabuloTower_6F_2R_Text_ExplainMegaRing:
+SabuloTower_6F_2R_Text_AreYouFamiliarWithMegaEvolution:
 	.string "{COLOR RED}The Mega Ring lets you harness\n"
 	.string "the power of Mega Evolution.\p"
-	.string "To use it, a Pokémon must be\n"
-	.string "holding its Mega Stone.\p"
-	.string "In battle, when you see the symbol\n"
-	.string "appear, press the Start button.\p"
-	.string "Your Pokémon will then\n"
-	.string "Mega Evolve!\p"
-	.string "Few Trainers have been endowed\n"
-	.string "with the gift of Mega Evolution.\p"
-	.string "I have no doubt you will wield\n"
+	.string "Are you familiar with how to\n"
+	.string "Mega Evolve?$"
+
+SabuloTower_6F_2R_Text_IHaveNoDoubt:
+	.string "{COLOR RED}I have no doubt you will wield\n"
 	.string "this power responsibly.\p"
-	.string "{COLOR DARK_GREY}Belle: {COLOR RED}Good luck, {PLAYER},\n"
-	.string "and farewell.$"
+	.string "Let me heal your Pokémon.$"
+
+SabuloTower_6F_2R_Text_Farewell:
+	.string "Belle: {COLOR RED}Farewell, {PLAYER}.$"
 
 SabuloTower_6F_2R_Movement_PanCameraToPlayer0:
 	walk_up
