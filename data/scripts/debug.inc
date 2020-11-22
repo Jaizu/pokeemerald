@@ -338,21 +338,21 @@
 		settrainerflag TRAINER_MIKEL
 		settrainerflag TRAINER_AGEM
 		// Fight Belle
-		// settrainerflag TRAINER_BELLE_1
+		settrainerflag TRAINER_BELLE_1
 		// Obtain Mega Ring
 		// TODO: Add Mega Ring item
 		// additem ITEM_MEGA_RING
-		// setflag FLAG_RECEIVED_MEGA_RING
+		setflag FLAG_RECEIVED_MEGA_RING
 		// Belle leaves
-		// setflag FLAG_HIDE_SABULO_TOWER_6F_2R_BELLE
-		// setvar VAR_SABULO_TOWER_STATE, 1
-		// setvar VAR_SABULO_ISLAND_STATE, 1
+		setflag FLAG_HIDE_SABULO_TOWER_6F_2R_BELLE
+		setvar VAR_SABULO_TOWER_STATE, 1
+		setvar VAR_SABULO_ISLAND_STATE, 1
 		end
 	
 	Debug_EventScript_GetParty::
-		givemon SPECIES_JOLTIK, 30, ITEM_NONE
-		givemon SPECIES_EXCADRILL, 31, ITEM_NONE
-		givemon SPECIES_MONFERNO, 31, ITEM_NONE
+		givemon SPECIES_GALVANTULA, 32, ITEM_NONE
+		givemon SPECIES_EXCADRILL, 32, ITEM_NONE
+		givemon SPECIES_INFERNAPE, 32, ITEM_NONE
 		end
 	
 	Debug_EventScript_GetItems::

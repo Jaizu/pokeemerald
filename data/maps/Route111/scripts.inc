@@ -93,9 +93,9 @@ Route111_EventScript_EndCheckSetSandstorm:: @ 81F0E25
 
 Route111_EventScript_SetWinstratesNotDefeated:: @ 81F0E26
 	clearflag 0
-	setflag FLAG_HIDE_ROUTE_111_VICTORIA_WINSTRATE
-	setflag FLAG_HIDE_ROUTE_111_VIVI_WINSTRATE
-	setflag FLAG_HIDE_ROUTE_111_VICKY_WINSTRATE
+	setflag 0
+	setflag 0
+	setflag 0
 	cleartrainerflag TRAINER_VICTOR
 	cleartrainerflag TRAINER_VICTORIA
 	cleartrainerflag TRAINER_VIVI

@@ -31,7 +31,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SabuloIsland_EventScript_Fisherman",
-      "flag": "0"
+      "flag": "FLAG_HIDE_SABULO_ISLAND_CIVILIANS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
@@ -44,7 +44,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SabuloIsland_EventScript_Sailor",
-      "flag": "0"
+      "flag": "FLAG_HIDE_SABULO_ISLAND_CIVILIANS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
@@ -57,7 +57,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SabuloIsland_EventScript_OldWoman",
-      "flag": "0"
+      "flag": "FLAG_HIDE_SABULO_ISLAND_CIVILIANS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ACE_TRAINER_F",
@@ -70,7 +70,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SabuloIsland_EventScript_AceTrainerF",
-      "flag": "0"
+      "flag": "FLAG_HIDE_SABULO_ISLAND_CIVILIANS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
@@ -83,7 +83,33 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SabuloIsland_EventScript_SabuloCaveGuard",
-      "flag": "0"
+      "flag": "FLAG_HIDE_SABULO_CAVE_GUARD"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_REGIROCK",
+      "x": 43,
+      "y": 18,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_SABULO_ISLAND_REGIROCK"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BELLE",
+      "x": 24,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_SABULO_ISLAND_BELLE"
     }
   ],
   "warp_events": [

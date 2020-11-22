@@ -807,11 +807,11 @@
 #define FLAG_HIDE_WINDMIST_CITY_REDWOOD                             0x2FE // FLAG_HIDE_VERDANTURF_TOWN_SCOTT in Emerald
 #define FLAG_HIDE_AEROUS_CITY_REDWOOD                               0x2FF // FLAG_HIDE_FALLARBOR_TOWN_BATTLE_TENT_SCOTT in Emerald
 #define FLAG_HIDE_SABULO_TOWER_6F_2R_BELLE                          0x300 // FLAG_HIDE_ROUTE_111_VICTOR_WINSTRATE in Emerald
+#define FLAG_HIDE_SABULO_ISLAND_REGIROCK                            0x301 // FLAG_HIDE_ROUTE_111_VICTORIA_WINSTRATE in Emerald
+#define FLAG_HIDE_SABULO_ISLAND_BELLE                               0x302 // FLAG_HIDE_ROUTE_111_VIVI_WINSTRATE in Emerald
+#define FLAG_HIDE_SABULO_CAVE_GUARD                                 0x303 // FLAG_HIDE_ROUTE_111_VICKY_WINSTRATE in Emerald
+#define FLAG_HIDE_SABULO_ISLAND_CIVILIANS                           0x304 // FLAG_HIDE_PETALBURG_GYM_NORMAN in Emerald
 
-#define FLAG_HIDE_ROUTE_111_VICTORIA_WINSTRATE                      0x301
-#define FLAG_HIDE_ROUTE_111_VIVI_WINSTRATE                          0x302
-#define FLAG_HIDE_ROUTE_111_VICKY_WINSTRATE                         0x303
-#define FLAG_HIDE_PETALBURG_GYM_NORMAN                              0x304
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_2                         0x305
 #define FLAG_HIDE_LILYCOVE_CONTEST_HALL_CONTEST_ATTENDANT_1         0x306
 #define FLAG_HIDE_LILYCOVE_MUSEUM_CURATOR                           0x307
