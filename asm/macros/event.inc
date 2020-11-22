@@ -1607,7 +1607,6 @@
 	.2byte \quantity
 	.endm
 
-
 @ Supplementary
 
 	.macro goto_if_unset flag:req, dest:req

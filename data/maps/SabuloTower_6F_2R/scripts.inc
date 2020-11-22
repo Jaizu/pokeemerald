@@ -92,7 +92,9 @@ SabuloTower_6F_2R_EventScript_PanCameraWalkBelleToPlayer2:
 	return
 
 SabuloTower_6F_2R_EventScript_ExplainMegaEvolution:
+	textcolor 1 // Red
 	msgbox MegaEvolution_Text_ExplainMegaEvolution, MSGBOX_DEFAULT
+	textcolor 0xFF
 	return
 
 SabuloTower_6F_2R_EventScript_ExitBelle0:

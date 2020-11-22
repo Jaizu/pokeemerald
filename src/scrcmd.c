@@ -1677,6 +1677,14 @@ bool8 ScrCmd_bufferboxname(struct ScriptContext *ctx)
     return FALSE;
 }
 
+bool8 ScrCmd_textcolor(struct ScriptContext * ctx)
+{
+    u8 color = ScriptReadByte(ctx);
+    if (color > 2) color = 0xFF;
+    gSpecialVar_TextColor = color;
+    return FALSE;
+}
+
 bool8 ScrCmd_givemon(struct ScriptContext *ctx)
 {
     u16 species = VarGet(ScriptReadHalfword(ctx));

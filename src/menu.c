@@ -2121,6 +2121,9 @@ u8 ContextNpcGetTextColor(void)
     u8 gfxId;
     u8 color;
     
+    if (gSpecialVar_TextColor != 0xFF)
+        return gSpecialVar_TextColor;
+    
     if (gSelectedObjectEvent == 0)
         return COLOR_MODE_DARK_GREY;
     
