@@ -1552,7 +1552,7 @@ void PrintMenuTable(u8 windowId, u8 itemCount, const struct MenuAction *strs)
 
     for (i = 0; i < itemCount; i++)
     {
-        AddTextPrinterParameterized(windowId, 1, strs[i].text, 8, (i * 16) + 1, 0xFF, NULL);
+        AddTextPrinterParameterized(windowId, 2, strs[i].text, 8, (i * 16) + 1, 0xFF, NULL);
     }
 
     CopyWindowToVram(windowId, 2);
@@ -1594,17 +1594,17 @@ void CreateYesNoMenu(const struct WindowTemplate *window, u16 baseTileNum, u8 pa
 
     printer.currentChar = gText_YesNo;
     printer.windowId = sYesNoWindowId;
-    printer.fontId = 1;
+    printer.fontId = 2;
     printer.x = 8;
     printer.y = 1;
     printer.currentX = printer.x;
     printer.currentY = printer.y;
-    printer.fgColor = GetFontAttribute(1, FONTATTR_COLOR_FOREGROUND);
-    printer.bgColor = GetFontAttribute(1, FONTATTR_COLOR_BACKGROUND);
-    printer.shadowColor = GetFontAttribute(1, FONTATTR_COLOR_SHADOW);
-    printer.unk = GetFontAttribute(1, FONTATTR_UNKNOWN);
-    printer.letterSpacing = 0;
-    printer.lineSpacing = 0;
+    printer.fgColor = GetFontAttribute(2, FONTATTR_COLOR_FOREGROUND);
+    printer.bgColor = GetFontAttribute(2, FONTATTR_COLOR_BACKGROUND);
+    printer.shadowColor = GetFontAttribute(2, FONTATTR_COLOR_SHADOW);
+    printer.unk = GetFontAttribute(2, FONTATTR_UNKNOWN);
+    printer.letterSpacing = 1;
+    printer.lineSpacing = 1;
 
     AddTextPrinter(&printer, 0xFF, NULL);
     InitMenuInUpperLeftCornerPlaySoundWhenAPressed(sYesNoWindowId, 2, initialCursorPos);
