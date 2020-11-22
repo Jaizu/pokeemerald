@@ -442,7 +442,7 @@ static void InitItemStorageMenu(u8 taskId, u8 var)
 static void ItemStorageMenuPrint(const u8 *textPtr)
 {
     DrawDialogueFrame(0, 0);
-    AddTextPrinterParameterized(0, 1, textPtr, 0, 1, 0, 0);
+    AddTextPrinterParameterized(0, 2, textPtr, 0, 1, 0, 0);
 }
 
 static void ItemStorageMenuProcessInput(u8 taskId)
@@ -615,7 +615,7 @@ static void Mailbox_DrawMailboxMenu(u8 taskId)
 
     windowId = sub_81D1C84(0);
     sub_81D1C84(1);
-    AddTextPrinterParameterized(windowId, 1, gText_Mailbox, GetStringCenterAlignXOffset(1, gText_Mailbox, 0x40), 1, 0, NULL);
+    AddTextPrinterParameterized(windowId, 2, gText_Mailbox, GetStringCenterAlignXOffset(1, gText_Mailbox, 0x40), 1, 0, NULL);
     ScheduleBgCopyTilemapToVram(0);
     gTasks[taskId].data[5] = sub_81D1DC0(&playerPCItemPageInfo);
     sub_81D1E90(&playerPCItemPageInfo);
@@ -968,7 +968,7 @@ static void sub_816BEF0(s32 id)
     else
         description = ItemStorage_GetItemPcResponse(ITEMPC_GO_BACK_TO_PREV);
     FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
-    AddTextPrinterParameterized(windowId, 1, description, 0, 1, 0, NULL);
+    AddTextPrinterParameterized(windowId, 2, description, 0, 1, 0, NULL);
 }
 
 static void ItemStorage_StartScrollIndicator(void)
@@ -997,7 +997,7 @@ static void sub_816BFE0(u8 y, u8 b, u8 speed)
     if (b == 0xFF)
         FillWindowPixelRect(windowId, PIXEL_FILL(1), 0, y, GetMenuCursorDimensionByFont(1, 0), GetMenuCursorDimensionByFont(1, 1));
     else
-        AddTextPrinterParameterized4(windowId, 1, 0, y, 0, 0, gUnknown_085DFF8C, speed, gText_SelectorArrow2);
+        AddTextPrinterParameterized4(windowId, 2, 0, y, 0, 0, gUnknown_085DFF8C, speed, gText_SelectorArrow2);
 }
 
 static void sub_816C060(u16 itemId)
@@ -1059,7 +1059,7 @@ static void ItemStorage_ProcessWithdrawTossInput(u8 taskId)
     if (!toss)
         text = gText_WithdrawItem;
     x = GetStringCenterAlignXOffset(1, text, 104);
-    AddTextPrinterParameterized(gUnknown_0203BCC4->windowIds[3], 1, text, x, 1, 0, NULL);
+    AddTextPrinterParameterized(gUnknown_0203BCC4->windowIds[3], 2, text, x, 1, 0, NULL);
     CopyWindowToVram(gUnknown_0203BCC4->windowIds[2], 2);
     sub_816C110();
     sub_816C140();
@@ -1115,7 +1115,7 @@ static void ItemStorage_PrintItemPcResponse(const u8 *string)
     u8 windowId = gUnknown_0203BCC4->windowIds[1];
     FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
     StringExpandPlaceholders(gStringVar4, string);
-    AddTextPrinterParameterized(windowId, 1, gStringVar4, 0, 1, 0, NULL);
+    AddTextPrinterParameterized(windowId, 2, gStringVar4, 0, 1, 0, NULL);
 }
 
 static void ItemStorage_ProcessInput(u8 taskId)
@@ -1275,7 +1275,7 @@ static void sub_816C6BC(u8 windowId, u16 value, u32 mode, u8 x, u8 y, u8 n)
 {
     ConvertIntToDecimalStringN(gStringVar1, value, mode, n);
     StringExpandPlaceholders(gStringVar4, gText_xVar1);
-    AddTextPrinterParameterized(windowId, 1, gStringVar4, GetStringCenterAlignXOffset(1, gStringVar4, 48), y, 0, NULL);
+    AddTextPrinterParameterized(windowId, 2, gStringVar4, GetStringCenterAlignXOffset(1, gStringVar4, 48), y, 0, NULL);
 }
 
 static void ItemStorage_DoItemAction(u8 taskId)

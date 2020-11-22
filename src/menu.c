@@ -401,7 +401,7 @@ u16 sub_81978D0(u8 colorNum)
 void DisplayItemMessageOnField(u8 taskId, const u8 *string, TaskFunc callback)
 {
     LoadMessageBoxAndBorderGfx();
-    DisplayMessageAndContinueTask(taskId, 0, DLG_WINDOW_BASE_TILE_NUM, DLG_WINDOW_PALETTE_NUM, 1, GetPlayerTextSpeedDelay(), string, callback);
+    DisplayMessageAndContinueTask(taskId, 0, DLG_WINDOW_BASE_TILE_NUM, DLG_WINDOW_PALETTE_NUM, 2, GetPlayerTextSpeedDelay(), string, callback);
     CopyWindowToVram(0, 3);
 }
 
@@ -521,97 +521,7 @@ void DrawDialogFrameWithCustomTile(u8 windowId, bool8 copyToVram, u16 tileNum)
 
 void WindowFunc_DrawDialogFrameWithCustomTileAndPalette(u8 bg, u8 tilemapLeft, u8 tilemapTop, u8 width, u8 height, u8 paletteNum)
 {
-    FillBgTilemapBufferRect(bg,
-                            sTileNum + 1,
-                            tilemapLeft - 2,
-                            tilemapTop - 1,
-                            1,
-                            1,
-                            sPaletteNum);
-    FillBgTilemapBufferRect(bg,
-                            sTileNum + 3,
-                            tilemapLeft - 1,
-                            tilemapTop - 1,
-                            1,
-                            1,
-                            sPaletteNum);
-    FillBgTilemapBufferRect(bg,
-                            sTileNum + 4,
-                            tilemapLeft,
-                            tilemapTop - 1,
-                            width - 1,
-                            1,
-                            sPaletteNum);
-    FillBgTilemapBufferRect(bg,
-                            sTileNum + 5,
-                            tilemapLeft + width - 1,
-                            tilemapTop - 1,
-                            1,
-                            1,
-                            sPaletteNum);
-    FillBgTilemapBufferRect(bg,
-                            sTileNum + 6,
-                            tilemapLeft + width,
-                            tilemapTop - 1,
-                            1,
-                            1,
-                            sPaletteNum);
-    FillBgTilemapBufferRect(bg,
-                            sTileNum + 7,
-                            tilemapLeft - 2,
-                            tilemapTop,
-                            1,
-                            5,
-                            sPaletteNum);
-    FillBgTilemapBufferRect(bg,
-                            sTileNum + 9,
-                            tilemapLeft - 1,
-                            tilemapTop,
-                            width + 1,
-                            5,
-                            sPaletteNum);
-    FillBgTilemapBufferRect(bg,
-                            sTileNum + 10,
-                            tilemapLeft + width,
-                            tilemapTop,
-                            1,
-                            5,
-                            sPaletteNum);
-    FillBgTilemapBufferRect(bg,
-                            BG_TILE_V_FLIP(sTileNum + 1),
-                            tilemapLeft - 2,
-                            tilemapTop + height,
-                            1,
-                            1,
-                            sPaletteNum);
-    FillBgTilemapBufferRect(bg,
-                            BG_TILE_V_FLIP(sTileNum + 3),
-                            tilemapLeft - 1,
-                            tilemapTop + height,
-                            1,
-                            1,
-                            sPaletteNum);
-    FillBgTilemapBufferRect(bg,
-                            BG_TILE_V_FLIP(sTileNum + 4),
-                            tilemapLeft,
-                            tilemapTop + height,
-                            width - 1,
-                            1,
-                            sPaletteNum);
-    FillBgTilemapBufferRect(bg,
-                            BG_TILE_V_FLIP(sTileNum + 5),
-                            tilemapLeft + width - 1,
-                            tilemapTop + height,
-                            1,
-                            1,
-                            sPaletteNum);
-    FillBgTilemapBufferRect(bg,
-                            BG_TILE_V_FLIP(sTileNum + 6),
-                            tilemapLeft + width,
-                            tilemapTop + height,
-                            1,
-                            1,
-                            sPaletteNum);
+    WindowFunc_DrawDialogueFrameFromBaseTile(bg, tilemapLeft, tilemapTop, width, height, sPaletteNum, sTileNum);
 }
 
 void ClearDialogWindowAndFrameToTransparent(u8 windowId, bool8 copyToVram)
@@ -1564,13 +1474,13 @@ void sub_81995E4(u8 windowId, u8 itemCount, const struct MenuAction *strs, const
     struct TextPrinterTemplate printer;
 
     printer.windowId = windowId;
-    printer.fontId = 1;
-    printer.fgColor = GetFontAttribute(1, FONTATTR_COLOR_FOREGROUND);
-    printer.bgColor = GetFontAttribute(1, FONTATTR_COLOR_BACKGROUND);
-    printer.shadowColor = GetFontAttribute(1, FONTATTR_COLOR_SHADOW);
-    printer.unk = GetFontAttribute(1, FONTATTR_UNKNOWN);
-    printer.letterSpacing = 0;
-    printer.lineSpacing = 0;
+    printer.fontId = 2;
+    printer.fgColor = GetFontAttribute(2, FONTATTR_COLOR_FOREGROUND);
+    printer.bgColor = GetFontAttribute(2, FONTATTR_COLOR_BACKGROUND);
+    printer.shadowColor = GetFontAttribute(2, FONTATTR_COLOR_SHADOW);
+    printer.unk = GetFontAttribute(2, FONTATTR_UNKNOWN);
+    printer.letterSpacing = 1;
+    printer.lineSpacing = 1;
     printer.x = 8;
     printer.currentX = 8;
 
