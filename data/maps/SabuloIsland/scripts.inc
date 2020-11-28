@@ -35,7 +35,6 @@ SabuloIsland_EventScript_RegirockScene:
 	special TeleportCamera
 	fadescreen FADE_FROM_BLACK
 	playbgm MUS_M_DUNGON, 0
-	savebgm MUS_M_DUNGON
 	playse SE_PIN
 	applymovement LOCALID_SABULO_CAVE_GUARD, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -261,6 +260,7 @@ SabuloIsland_EventScript_NewEldersScene:
 	special ReturnCameraToPlayer
 	fadescreen FADE_FROM_BLACK
 	setvar VAR_SABULO_ISLAND_STATE, 3
+	fadedefaultbgm
 	releaseall
 	end
 
