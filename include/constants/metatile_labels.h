@@ -329,8 +329,10 @@
 #define METATILE_MauvilleGym_RedBeamV2_On     0x249
 
 // gTileset_Mauville
-#define METATILE_Mauville_Door_Tan         0x251
-#define METATILE_Mauville_Door_Tan_Locked  0x2B5
+#define METATILE_Mauville_Door_Tan                 0x251
+#define METATILE_Mauville_Door_Tan_Locked          0x2B5
+#define METATILE_Mauville_SabuloTower_Door         0x2FC
+#define METATILE_Mauville_SabuloTower_Door_Locked  0x2BE
 
 // gTileset_MeteorFalls
 #define METATILE_MeteorFalls_CaveEntrance_Bottom  0x24E

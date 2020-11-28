@@ -21,6 +21,7 @@ SabuloIsland_EventScript_LockAllDoors::
 	setmetatile 18, 16, METATILE_Mauville_Door_Tan_Locked, 1
 	setmetatile  4, 21, METATILE_Mauville_Door_Tan_Locked, 1
 	setmetatile 24, 27, METATILE_Mauville_Door_Tan_Locked, 1
+	setmetatile 24,  8, METATILE_Mauville_SabuloTower_Door_Locked, 0
 	return
 
 SabuloIsland_EventScript_UnlockAllDoors::
@@ -28,6 +29,7 @@ SabuloIsland_EventScript_UnlockAllDoors::
 	setmetatile 18, 16, METATILE_Mauville_Door_Tan, 1
 	setmetatile  4, 21, METATILE_Mauville_Door_Tan, 1
 	setmetatile 24, 27, METATILE_Mauville_Door_Tan, 1
+	setmetatile 24,  8, METATILE_Mauville_SabuloTower_Door, 0
 	return
 
 SabuloIsland_OnTransition::
@@ -610,14 +612,37 @@ SabuloIsland_Movement_EnochWalkFromPlayerToRegirock2:
 	walk_up
 	step_end
 
-SabuloIsland_EventScript_BellesWordsEcho::
+SabuloIsland_EventScript_BellesWordsEcho0::
 	lockall
+	setvar VAR_0x8008, 0
+	goto SabuloIsland_EventScript_BellesWordsEcho
+	end
+
+SabuloIsland_EventScript_BellesWordsEcho1::
+	lockall
+	setvar VAR_0x8008, 1
+	goto SabuloIsland_EventScript_BellesWordsEcho
+	end
+
+SabuloIsland_EventScript_BellesWordsEcho::
 	msgbox SabuloIsland_Text_BellesWordsEcho, MSGBOX_DEFAULT
 	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
-	waitmovement 0
+	compare VAR_0x8008, 0
+	call_if_eq SabuloIsland_EventScript_PlayerWalkUp
+	compare VAR_0x8008, 1
+	call_if_eq SabuloIsland_EventScript_PlayerWalkDown
 	releaseall
 	end
+
+SabuloIsland_EventScript_PlayerWalkUp:
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	return
+
+SabuloIsland_EventScript_PlayerWalkDown:
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	return
 
 SabuloIsland_Text_BellesWordsEcho:
 	.string "Belle's words echo…\n"

@@ -303,7 +303,7 @@
       "elevation": 0,
       "var": "VAR_SABULO_ISLAND_STATE",
       "var_value": "2",
-      "script": "SabuloIsland_EventScript_BellesWordsEcho"
+      "script": "SabuloIsland_EventScript_BellesWordsEcho0"
     },
     {
       "type": "trigger",
@@ -312,7 +312,7 @@
       "elevation": 0,
       "var": "VAR_SABULO_ISLAND_STATE",
       "var_value": "2",
-      "script": "SabuloIsland_EventScript_BellesWordsEcho"
+      "script": "SabuloIsland_EventScript_BellesWordsEcho0"
     },
     {
       "type": "trigger",
@@ -321,7 +321,7 @@
       "elevation": 0,
       "var": "VAR_SABULO_ISLAND_STATE",
       "var_value": "2",
-      "script": "SabuloIsland_EventScript_BellesWordsEcho"
+      "script": "SabuloIsland_EventScript_BellesWordsEcho0"
     },
     {
       "type": "trigger",
@@ -330,7 +330,7 @@
       "elevation": 0,
       "var": "VAR_SABULO_ISLAND_STATE",
       "var_value": "2",
-      "script": "SabuloIsland_EventScript_BellesWordsEcho"
+      "script": "SabuloIsland_EventScript_BellesWordsEcho0"
     },
     {
       "type": "trigger",
@@ -339,7 +339,7 @@
       "elevation": 0,
       "var": "VAR_SABULO_ISLAND_STATE",
       "var_value": "2",
-      "script": "SabuloIsland_EventScript_BellesWordsEcho"
+      "script": "SabuloIsland_EventScript_BellesWordsEcho0"
     },
     {
       "type": "trigger",
@@ -348,7 +348,16 @@
       "elevation": 0,
       "var": "VAR_SABULO_ISLAND_STATE",
       "var_value": "2",
-      "script": "SabuloIsland_EventScript_BellesWordsEcho"
+      "script": "SabuloIsland_EventScript_BellesWordsEcho0"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_SABULO_ISLAND_STATE",
+      "var_value": "2",
+      "script": "SabuloIsland_EventScript_BellesWordsEcho1"
     }
   ],
   "bg_events": [
