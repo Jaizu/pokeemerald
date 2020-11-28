@@ -1,5 +1,8 @@
+.set LOCALID_SABULO_CAVE_GUARD, 4
+
 SabuloTower_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, SabuloTower_1F_OnLoad
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SabuloTower_1F_OnFrame
 	.byte 0
 
 SabuloTower_1F_OnLoad:
@@ -9,6 +12,40 @@ SabuloTower_1F_OnLoad:
 SabuloTower_1F_EventScript_DeactivateWarpPad::
 	setmetatile 12, 13, METATILE_SabuloTower_WarpPad_Deactivated, 0
 	return
+
+SabuloTower_1F_OnFrame:
+	map_script_2 VAR_SABULO_TOWER_STATE, 2, SabuloTower_1F_EventScript_GoCheckOutSabuloCave
+	.2byte 0
+
+SabuloTower_1F_EventScript_GoCheckOutSabuloCave::
+	lockall
+	playse SE_PIN
+	applymovement LOCALID_SABULO_CAVE_GUARD, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_SABULO_CAVE_GUARD, Common_Movement_Delay48
+	waitmovement 0
+	msgbox SabuloTower_1F_Text_OhItsYou, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SABULO_CAVE_GUARD, SabuloTower_1F_Movement_ChasePlayerOut
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestDown
+	waitmovement 0
+	warp MAP_SABULO_ISLAND, 3, 0, 0
+	waitstate
+	releaseall
+	end
+
+SabuloTower_1F_Text_OhItsYou:
+	.string "{COLOR BLUE}Ah! It's you!\n"
+	.string "Is Sabulo Cave safe yet?\p"
+	.string "You haven't checked?\n"
+	.string "Oh, you must go, quickly!\p"
+	.string "Go! Go! Go!$"
+
+SabuloTower_1F_Movement_ChasePlayerOut:
+	walk_down
+	walk_in_place_fastest_down
+	step_end
 
 SabuloTower_1F_EventScript_JimGai::
 	lock

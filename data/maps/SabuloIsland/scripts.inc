@@ -287,6 +287,8 @@ SabuloIsland_EventScript_NewEldersScene:
 	call SabuloIsland_EventScript_UnlockAllDoors
 	special DrawWholeMapView
 	fadescreen FADE_FROM_BLACK
+	setvar VAR_SABULO_TOWER_STATE, 2
+	clearflag FLAG_HIDE_SABULO_TOWER_SABULO_CAVE_GUARD
 	setvar VAR_SABULO_ISLAND_STATE, 3
 	fadedefaultbgm
 	releaseall
