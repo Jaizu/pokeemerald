@@ -68,6 +68,7 @@ const u16 gObjectEventPaletteNina[] = INCBIN_U16("graphics/object_events/palette
 const u16 gObjectEventPaletteSSWake[] = INCBIN_U16("graphics/object_events/palettes/ss_wake.gbapal");
 const u16 gObjectEventPalettePokeManiac[] = INCBIN_U16("graphics/object_events/palettes/pokemaniac.gbapal");
 const u16 gObjectEventPaletteBelle[] = INCBIN_U16("graphics/object_events/palettes/belle.gbapal");
+const u16 gObjectEventPaletteRegirock[] = INCBIN_U16("graphics/object_events/palettes/regirock.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
@@ -194,6 +195,7 @@ const u32 gObjectEventPic_Archie[] = INCBIN_U32("graphics/object_events/pics/peo
 const u32 gObjectEventPic_Kyogre[] = INCBIN_U32("graphics/object_events/pics/pokemon/kyogre.4bpp");
 const u32 gObjectEventPic_Groudon[] = INCBIN_U32("graphics/object_events/pics/pokemon/groudon.4bpp");
 const u32 gObjectEventPic_Regi[] = INCBIN_U32("graphics/object_events/pics/pokemon/regi.4bpp");
+const u32 gObjectEventPic_Regirock[] = INCBIN_U32("graphics/object_events/pics/pokemon/regirock.4bpp");
 const u32 gObjectEventPic_Psyduck[] = INCBIN_U32("graphics/object_events/pics/pokemon/psyduck.4bpp");
 const u32 gObjectEventPic_Kecleon[] = INCBIN_U32("graphics/object_events/pics/pokemon/kecleon.4bpp");
 const u32 gObjectEventPic_Machop[] = INCBIN_U32("graphics/object_events/pics/pokemon/machop.4bpp");

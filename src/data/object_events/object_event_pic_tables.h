@@ -1784,6 +1784,10 @@ const struct SpriteFrameImage gObjectEventPicTable_Regi[] = {
     obj_frame_tiles(gObjectEventPic_Regi),
 };
 
+const struct SpriteFrameImage gObjectEventPicTable_Regirock[] = {
+    overworld_frame(gObjectEventPic_Regirock, 4, 4, 0),
+};
+
 const struct SpriteFrameImage gObjectEventPicTable_Psyduck[] = {
     overworld_frame(gObjectEventPic_Psyduck, 2, 2, 0),
     overworld_frame(gObjectEventPic_Psyduck, 2, 2, 1),

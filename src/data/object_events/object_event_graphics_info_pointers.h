@@ -318,5 +318,6 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPaletteSSWake, OBJ_EVENT_PAL_TAG_SS_WAKE},
     {gObjectEventPalettePokeManiac, OBJ_EVENT_PAL_TAG_POKEMANIAC},
     {gObjectEventPaletteBelle, OBJ_EVENT_PAL_TAG_BELLE},
+    {gObjectEventPaletteRegirock, OBJ_EVENT_PAL_TAG_REGIROCK},
     {NULL, 0x0000},
 };
