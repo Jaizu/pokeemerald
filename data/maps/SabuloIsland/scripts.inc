@@ -1,6 +1,9 @@
 .set LOCALID_SABULO_CAVE_GUARD, 5
 .set LOCALID_REGIROCK, 6
 .set LOCALID_BELLE, 7
+.set LOCALID_ENOCH, 8
+.set LOCALID_GRUNT_1, 9
+.set LOCALID_GRUNT_2, 10
 
 SabuloIsland_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, SabuloIsland_OnTransition
@@ -87,6 +90,7 @@ SabuloIsland_EventScript_RegirockScene:
 	playse SE_KAIDAN
 	waitse
 	removeobject LOCALID_BELLE
+	setrespawn HEAL_LOCATION_SABULO_ISLAND
 	setflag FLAG_HIDE_SABULO_ISLAND_CIVILIANS
 	setvar VAR_SABULO_ISLAND_STATE, 2
 	releaseall
@@ -154,6 +158,430 @@ SabuloIsland_Movement_ExitSabuloCaveGuard:
 SabuloIsland_Movement_WalkPlayerToBelle:
 	walk_left
 	face_up
+	step_end
+
+SabuloIsland_EventScript_NewEldersTrigger0::
+	lockall
+	setvar VAR_0x8008, 0
+	goto SabuloIsland_EventScript_NewEldersScene
+	end
+
+SabuloIsland_EventScript_NewEldersTrigger1::
+	lockall
+	setvar VAR_0x8008, 1
+	goto SabuloIsland_EventScript_NewEldersScene
+	end
+
+SabuloIsland_EventScript_NewEldersTrigger2::
+	lockall
+	setvar VAR_0x8008, 2
+	goto SabuloIsland_EventScript_NewEldersScene
+	end
+
+SabuloIsland_EventScript_NewEldersScene:
+	fadescreen FADE_TO_BLACK
+	setvar VAR_0x8004, 43 @ x
+	setvar VAR_0x8005, 20 @ y
+	special TeleportCamera
+	fadescreen FADE_FROM_BLACK
+	delay 32
+	fadescreen FADE_TO_WHITE
+	addobject LOCALID_ENOCH
+	addobject LOCALID_GRUNT_1
+	addobject LOCALID_GRUNT_2
+	fadescreen FADE_FROM_WHITE
+	delay 10
+	applymovement LOCALID_ENOCH, Common_Movement_WalkInPlaceFastestDown
+	waitmovement 0
+	delay 10
+	msgbox SabuloIsland_Text_YouSeemToKeepFindingYourselfInvolved, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ENOCH, Common_Movement_WalkUp
+	waitmovement 0
+	compare VAR_0x8008, 0
+	call_if_eq SabuloIsland_EventScript_PanCameraAndWalkGrunt1ToPlayer0
+	compare VAR_0x8008, 1
+	call_if_eq SabuloIsland_EventScript_PanCameraAndWalkGrunt1ToPlayer1
+	compare VAR_0x8008, 2
+	call_if_eq SabuloIsland_EventScript_PanCameraAndWalkGrunt1ToPlayer2
+	special ReturnCameraToPlayer
+	msgbox SabuloIsland_Text_Grunt1Intro, MSGBOX_DEFAULT
+	cleartrainerflag TRAINER_SABULO_ISLAND_GRUNT_1
+	trainerbattle_no_intro TRAINER_SABULO_ISLAND_GRUNT_1, SabuloIsland_Text_Grunt1Defeated
+	compare VAR_0x8008, 0
+	call_if_eq SabuloIsland_EventScript_Grunt1StepBackGrunt2WalkToPlayer0
+	compare VAR_0x8008, 1
+	call_if_eq SabuloIsland_EventScript_Grunt1StepBackGrunt2WalkToPlayer1
+	compare VAR_0x8008, 2
+	call_if_eq SabuloIsland_EventScript_Grunt1StepBackGrunt2WalkToPlayer2
+	msgbox SabuloIsland_Text_Grunt2Intro, MSGBOX_DEFAULT
+	cleartrainerflag TRAINER_SABULO_ISLAND_GRUNT_2
+	trainerbattle_no_intro TRAINER_SABULO_ISLAND_GRUNT_2, SabuloIsland_Text_Grunt2Defeated
+	compare VAR_0x8008, 0
+	call_if_eq SabuloIsland_EventScript_Grunt2StepBackEnochWalkToPlayer0
+	compare VAR_0x8008, 1
+	call_if_eq SabuloIsland_EventScript_Grunt2StepBackEnochWalkToPlayer1
+	compare VAR_0x8008, 2
+	call_if_eq SabuloIsland_EventScript_Grunt2StepBackEnochWalkToPlayer2
+	msgbox SabuloIsland_Text_EnochIntro, MSGBOX_DEFAULT
+	cleartrainerflag TRAINER_SABULO_ISLAND_ENOCH
+	trainerbattle_no_intro TRAINER_SABULO_ISLAND_ENOCH, SabuloIsland_Text_EnochDefeated
+	msgbox SabuloIsland_Text_WeWereGoingToStormTheTower, MSGBOX_DEFAULT
+	closemessage
+	compare VAR_0x8008, 0
+	call_if_eq SabuloIsland_EventScript_PanCameraAndWalkEnochToRegirock0
+	compare VAR_0x8008, 1
+	call_if_eq SabuloIsland_EventScript_PanCameraAndWalkEnochToRegirock1
+	compare VAR_0x8008, 2
+	call_if_eq SabuloIsland_EventScript_PanCameraAndWalkEnochToRegirock2
+	msgbox SabuloIsland_Text_RelicBallGo, MSGBOX_DEFAULT
+	closemessage
+	fadescreen FADE_TO_WHITE
+	playse SE_NAGERU
+	waitse
+	playse SE_BOWA2
+	waitse
+	playse SE_KON4
+	waitse
+	playmoncry SPECIES_REGIROCK, 0
+	waitmoncry
+	delay 10
+	removeobject LOCALID_REGIROCK
+	fadescreen FADE_FROM_WHITE
+	delay 10
+	applymovement LOCALID_ENOCH, Common_Movement_WalkInPlaceFastestDown
+	waitmovement 0
+	msgbox SabuloIsland_Text_NextTimeIWillBeReady, MSGBOX_DEFAULT
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_ENOCH
+	removeobject LOCALID_GRUNT_1
+	removeobject LOCALID_GRUNT_2
+	clearflag FLAG_HIDE_SABULO_ISLAND_CIVILIANS
+	special ReturnCameraToPlayer
+	fadescreen FADE_FROM_BLACK
+	setvar VAR_SABULO_ISLAND_STATE, 3
+	releaseall
+	end
+
+SabuloIsland_EventScript_PanCameraAndWalkGrunt1ToPlayer0:
+	special SpawnCameraObject
+	applymovement LOCALID_GRUNT_1, SabuloIsland_Movement_Grunt1WalkToPlayer0
+	applymovement OBJ_EVENT_ID_CAMERA, SabuloIsland_Movement_CameraPanToPlayer0
+	waitmovement 0
+	special RemoveCameraObject
+	return
+
+SabuloIsland_EventScript_PanCameraAndWalkGrunt1ToPlayer1:
+	special SpawnCameraObject
+	applymovement LOCALID_GRUNT_1, SabuloIsland_Movement_Grunt1WalkToPlayer1
+	applymovement OBJ_EVENT_ID_CAMERA, SabuloIsland_Movement_CameraPanToPlayer1
+	waitmovement 0
+	special RemoveCameraObject
+	return
+
+SabuloIsland_EventScript_PanCameraAndWalkGrunt1ToPlayer2:
+	special SpawnCameraObject
+	applymovement LOCALID_GRUNT_1, SabuloIsland_Movement_Grunt1WalkToPlayer2
+	applymovement OBJ_EVENT_ID_CAMERA, SabuloIsland_Movement_CameraPanToPlayer2
+	waitmovement 0
+	special RemoveCameraObject
+	return
+
+SabuloIsland_EventScript_Grunt1StepBackGrunt2WalkToPlayer0:
+	applymovement LOCALID_GRUNT_1, SabuloIsland_Movement_Grunt1StepBack0
+	waitmovement 0
+	applymovement LOCALID_GRUNT_2, SabuloIsland_Movement_Grunt2WalkToPlayer0
+	waitmovement 0
+	return
+
+SabuloIsland_EventScript_Grunt1StepBackGrunt2WalkToPlayer1:
+	applymovement LOCALID_GRUNT_1, SabuloIsland_Movement_Grunt1StepBack1
+	waitmovement 0
+	applymovement LOCALID_GRUNT_2, SabuloIsland_Movement_Grunt2WalkToPlayer1
+	waitmovement 0
+	return
+
+SabuloIsland_EventScript_Grunt1StepBackGrunt2WalkToPlayer2:
+	applymovement LOCALID_GRUNT_1, SabuloIsland_Movement_Grunt1StepBack2
+	waitmovement 0
+	applymovement LOCALID_GRUNT_2, SabuloIsland_Movement_Grunt2WalkToPlayer2
+	waitmovement 0
+	return
+
+SabuloIsland_EventScript_Grunt2StepBackEnochWalkToPlayer0:
+	applymovement LOCALID_GRUNT_2, SabuloIsland_Movement_Grunt2StepBack0
+	waitmovement 0
+	applymovement LOCALID_ENOCH, SabuloIsland_Movement_EnochWalkToPlayer0
+	waitmovement 0
+	return
+
+SabuloIsland_EventScript_Grunt2StepBackEnochWalkToPlayer1:
+	applymovement LOCALID_GRUNT_2, SabuloIsland_Movement_Grunt2StepBack1
+	waitmovement 0
+	applymovement LOCALID_ENOCH, SabuloIsland_Movement_EnochWalkToPlayer1
+	waitmovement 0
+	return
+
+SabuloIsland_EventScript_Grunt2StepBackEnochWalkToPlayer2:
+	applymovement LOCALID_GRUNT_2, SabuloIsland_Movement_Grunt2StepBack2
+	waitmovement 0
+	applymovement LOCALID_ENOCH, SabuloIsland_Movement_EnochWalkToPlayer2
+	waitmovement 0
+	return
+
+SabuloIsland_EventScript_PanCameraAndWalkEnochToRegirock0:
+	special SpawnCameraObject
+	applymovement LOCALID_ENOCH, SabuloIsland_Movement_EnochWalkFromPlayerToRegirock0
+	applymovement OBJ_EVENT_ID_CAMERA, SabuloIsland_Movement_CameraPanToRegirock0
+	waitmovement 0
+	special RemoveCameraObject
+	return
+
+SabuloIsland_EventScript_PanCameraAndWalkEnochToRegirock1:
+	special SpawnCameraObject
+	applymovement LOCALID_ENOCH, SabuloIsland_Movement_EnochWalkFromPlayerToRegirock1
+	applymovement OBJ_EVENT_ID_CAMERA, SabuloIsland_Movement_CameraPanToRegirock1
+	waitmovement 0
+	special RemoveCameraObject
+	return
+
+SabuloIsland_EventScript_PanCameraAndWalkEnochToRegirock2:
+	special SpawnCameraObject
+	applymovement LOCALID_ENOCH, SabuloIsland_Movement_EnochWalkFromPlayerToRegirock2
+	applymovement OBJ_EVENT_ID_CAMERA, SabuloIsland_Movement_CameraPanToRegirock2
+	waitmovement 0
+	special RemoveCameraObject
+	return
+
+SabuloIsland_Text_YouSeemToKeepFindingYourselfInvolved:
+	.string "Enoch: {COLOR BLUE}You seem to keep finding\n"
+	.string "yourself involved with us, child.\p"
+	.string "I have warned you once already.\p"
+	.string "If you are here to interfere, you\n"
+	.string "shall feel my wrath!\p"
+	.string "…\p"
+	.string "Very well!\n"
+	.string "These two will crush you.\p"
+	.string "I have more pressing business to\n"
+	.string "attend to.$"
+
+SabuloIsland_Text_Grunt1Intro:
+	.string "{COLOR BLUE}You should've fled while you had\n"
+	.string "the chance, kid…$"
+
+SabuloIsland_Text_Grunt1Defeated:
+	.string "Argh.\n"
+	.string "I need to bide more time.$"
+
+SabuloIsland_Text_Grunt2Intro:
+	.string "{COLOR BLUE}You've seen nothing, yet.\n"
+	.string "I'm much stronger!$"
+
+SabuloIsland_Text_Grunt2Defeated:
+	.string "This is absurd. How have we lost\n"
+	.string "to some kid?$"
+
+SabuloIsland_Text_EnochIntro:
+	.string "Enoch: {COLOR BLUE}Fine!\n"
+	.string "I'll crush you myself, then!$"
+
+SabuloIsland_Text_EnochDefeated:
+	.string "Enough games!$"
+
+SabuloIsland_Text_WeWereGoingToStormTheTower:
+	.string "Enoch: {COLOR BLUE}Argh!\p"
+	.string "We were going to storm the Tower,\n"
+	.string "but it's clear there's no time.\p"
+	.string "I must achieve my main objective…$"
+
+SabuloIsland_Text_RelicBallGo:
+	.string "Enoch: {COLOR BLUE}Relic Ball, go!$"
+
+SabuloIsland_Text_NextTimeIWillBeReady:
+	.string "Enoch: {COLOR BLUE}Next time we meet, I will\n"
+	.string "be ready for your meddling.\p"
+	.string "Farewell, child.$"
+
+SabuloIsland_Movement_CameraPanToPlayer0:
+	delay_16
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+SabuloIsland_Movement_CameraPanToPlayer1:
+	delay_16
+	delay_16
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+SabuloIsland_Movement_CameraPanToPlayer2:
+	delay_16
+	delay_16
+	walk_down
+	walk_right
+	walk_down
+	walk_down
+	step_end
+
+SabuloIsland_Movement_Grunt1WalkToPlayer0:
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+SabuloIsland_Movement_Grunt1WalkToPlayer1:
+	walk_down
+	walk_right
+	walk_down
+	walk_down
+	step_end
+
+SabuloIsland_Movement_Grunt1WalkToPlayer2:
+	walk_down
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	step_end
+
+SabuloIsland_Movement_Grunt1StepBack0:
+	walk_up
+	walk_up
+	walk_up
+	walk_in_place_fastest_down
+	step_end
+
+SabuloIsland_Movement_Grunt1StepBack1:
+	walk_up
+	walk_left
+	walk_up
+	walk_up
+	walk_in_place_fastest_down
+	step_end
+
+SabuloIsland_Movement_Grunt1StepBack2:
+	walk_up
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_in_place_fastest_down
+	step_end
+
+SabuloIsland_Movement_Grunt2WalkToPlayer0:
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_down
+	step_end
+
+SabuloIsland_Movement_Grunt2WalkToPlayer1:
+	walk_down
+	walk_down
+	walk_left
+	walk_down
+	step_end
+
+SabuloIsland_Movement_Grunt2WalkToPlayer2:
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+SabuloIsland_Movement_Grunt2StepBack0:
+	walk_up
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_in_place_fastest_down
+	step_end
+
+SabuloIsland_Movement_Grunt2StepBack1:
+	walk_up
+	walk_right
+	walk_up
+	walk_up
+	walk_in_place_fastest_down
+	step_end
+
+SabuloIsland_Movement_Grunt2StepBack2:
+	walk_up
+	walk_up
+	walk_up
+	walk_in_place_fastest_down
+	step_end
+
+SabuloIsland_Movement_EnochWalkToPlayer0:
+	walk_down
+	walk_down
+	walk_left
+	walk_down
+	step_end
+
+SabuloIsland_Movement_EnochWalkToPlayer1:
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+SabuloIsland_Movement_EnochWalkToPlayer2:
+	walk_down
+	walk_down
+	walk_right
+	walk_down
+	step_end
+
+SabuloIsland_Movement_CameraPanToRegirock0:
+	walk_up
+	walk_up
+	walk_right
+	walk_up
+	walk_up
+	step_end
+
+SabuloIsland_Movement_CameraPanToRegirock1:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+SabuloIsland_Movement_CameraPanToRegirock2:
+	walk_up
+	walk_up
+	walk_left
+	walk_up
+	walk_up
+	step_end
+
+SabuloIsland_Movement_EnochWalkFromPlayerToRegirock0:
+	delay_16
+	walk_up
+	walk_right
+	walk_up
+	walk_up
+	step_end
+
+SabuloIsland_Movement_EnochWalkFromPlayerToRegirock1:
+	delay_16
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+SabuloIsland_Movement_EnochWalkFromPlayerToRegirock2:
+	delay_16
+	walk_up
+	walk_left
+	walk_up
+	walk_up
 	step_end
 
 SabuloIsland_EventScript_CitySign::

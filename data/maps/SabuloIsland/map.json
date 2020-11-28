@@ -110,6 +110,45 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_HIDE_SABULO_ISLAND_BELLE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ENOCH",
+      "x": 43,
+      "y": 20,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_SABULO_ISLAND_NEW_ELDERS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_M",
+      "x": 42,
+      "y": 19,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_SABULO_ISLAND_NEW_ELDERS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_NEW_ELDERS_GRUNT_M",
+      "x": 44,
+      "y": 19,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_SABULO_ISLAND_NEW_ELDERS"
     }
   ],
   "warp_events": [
@@ -178,7 +217,33 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 42,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_SABULO_ISLAND_STATE",
+      "var_value": "2",
+      "script": "SabuloIsland_EventScript_NewEldersTrigger0"
+    },
+    {
+      "type": "trigger",
+      "x": 43,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_SABULO_ISLAND_STATE",
+      "var_value": "2",
+      "script": "SabuloIsland_EventScript_NewEldersTrigger1"
+    },
+    {
+      "type": "trigger",
+      "x": 44,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_SABULO_ISLAND_STATE",
+      "var_value": "2",
+      "script": "SabuloIsland_EventScript_NewEldersTrigger2"
+    }
   ],
   "bg_events": [
     {

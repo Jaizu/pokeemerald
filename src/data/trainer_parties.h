@@ -1234,33 +1234,60 @@ static const struct TrainerMonItemCustomMoves sParty_Belle1[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Mary[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_SabuloIslandGrunt1[] = {
     {
     .iv = 60,
-    .lvl = 26,
-    .species = SPECIES_DELCATTY,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_FAINT_ATTACK, MOVE_SHOCK_WAVE, MOVE_NONE, MOVE_NONE}
+    .lvl = 28,
+    .species = SPECIES_NOCTOWL,
+    .moves = {MOVE_TAKE_DOWN, MOVE_REFLECT, MOVE_PECK, MOVE_PSYCHO_SHIFT}
+    },
+    {
+    .iv = 60,
+    .lvl = 28,
+    .species = SPECIES_DIGGERSBY,
+    .moves = {MOVE_DOUBLE_KICK, MOVE_LEER, MOVE_ODOR_SLEUTH, MOVE_QUICK_ATTACK}
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Alexia[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_SabuloIslandGrunt2[] = {
     {
-    .iv = 255,
-    .lvl = 26,
-    .species = SPECIES_WIGGLYTUFF,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_DEFENSE_CURL, MOVE_DOUBLE_EDGE, MOVE_SHADOW_BALL, MOVE_NONE}
+    .iv = 60,
+    .lvl = 28,
+    .species = SPECIES_DIGGERSBY,
+    .moves = {MOVE_MUD_SHOT, MOVE_LASER_FOCUS, MOVE_QUICK_ATTACK, MOVE_FLAIL}
+    },
+    {
+    .iv = 60,
+    .lvl = 28,
+    .species = SPECIES_NOCTOWL,
+    .moves = {MOVE_AIR_SLASH, MOVE_ECHOED_VOICE, MOVE_EXTRASENSORY, MOVE_SWIFT}
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Jody[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_SabuloIslandEnoch[] = {
     {
-    .iv = 255,
-    .lvl = 26,
-    .species = SPECIES_ZANGOOSE,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_SWORDS_DANCE, MOVE_SLASH, MOVE_NONE, MOVE_NONE}
+    .iv = 60,
+    .lvl = 30,
+    .species = SPECIES_TYRANTRUM,
+    .moves = {MOVE_STEALTH_ROCK, MOVE_BITE, MOVE_ROCK_SLIDE, MOVE_DRAGON_TAIL}
+    },
+    {
+    .iv = 60,
+    .lvl = 30,
+    .species = SPECIES_DIGGERSBY,
+    .moves = {MOVE_SWORDS_DANCE, MOVE_DOUBLE_KICK, MOVE_BULLDOZE, MOVE_QUICK_ATTACK}
+    },
+    {
+    .iv = 60,
+    .lvl = 30,
+    .species = SPECIES_GOLURK,
+    .moves = {MOVE_IRON_DEFENSE, MOVE_SHADOW_PUNCH, MOVE_STOMPING_TANTRUM, MOVE_ICE_PUNCH}
+    },
+    {
+    .iv = 60,
+    .lvl = 32,
+    .species = SPECIES_AERODACTYL,
+    .moves = {MOVE_CRUNCH, MOVE_SUPERSONIC, MOVE_FIRE_FANG, MOVE_ANCIENT_POWER}
     }
 };
 

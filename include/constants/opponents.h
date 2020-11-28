@@ -179,10 +179,13 @@
 #define TRAINER_AGEM                         87 // TRAINER_WILTON_5 in Emerald
 #define TRAINER_WARREN                       88
 #define TRAINER_BELLE_1                      88 // TRAINER_WARREN in Emerald
-
 #define TRAINER_MARY                         89
+#define TRAINER_SABULO_ISLAND_GRUNT_1        89 // TRAINER_MARY in Emerald
 #define TRAINER_ALEXIA                       90
+#define TRAINER_SABULO_ISLAND_GRUNT_2        90 // TRAINER_ALEXIA in Emerald
 #define TRAINER_JODY                         91
+#define TRAINER_SABULO_ISLAND_ENOCH          91 // TRAINER_JODY in Emerald
+
 #define TRAINER_WENDY                        92
 #define TRAINER_KEIRA                        93
 #define TRAINER_BROOKE_1                     94
