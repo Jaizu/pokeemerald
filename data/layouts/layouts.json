@@ -5210,6 +5210,26 @@
       "secondary_tileset": "gTileset_SabuloTower",
       "border_filepath": "data/layouts/SabuloTower_6F_BellesStudy/border.bin",
       "blockdata_filepath": "data/layouts/SabuloTower_6F_BellesStudy/map.bin"
+    },
+    {
+      "id": "LAYOUT_SABULO_CAVE_1R",
+      "name": "SabuloCave_1R_Layout",
+      "width": 17,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_ArchanTunnel",
+      "border_filepath": "data/layouts/SabuloCave_1R/border.bin",
+      "blockdata_filepath": "data/layouts/SabuloCave_1R/map.bin"
+    },
+    {
+      "id": "LAYOUT_SABULO_CAVE_REGIROCK_ROOM",
+      "name": "SabuloCave_RegirockRoom_Layout",
+      "width": 17,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_ArchanTunnel",
+      "border_filepath": "data/layouts/SabuloCave_RegirockRoom/border.bin",
+      "blockdata_filepath": "data/layouts/SabuloCave_RegirockRoom/map.bin"
     }
   ]
 }

@@ -55,6 +55,8 @@
 #define MAP_SABULO_TOWER_6F_1R                  (26 | (1 << 8))
 #define MAP_SABULO_TOWER_6F_2R                  (27 | (1 << 8))
 #define MAP_SABULO_TOWER_6F_BELLES_STUDY        (28 | (1 << 8))
+#define MAP_SABULO_CAVE_1R                      (29 | (1 << 8))
+#define MAP_SABULO_CAVE_REGIROCK_ROOM           (30 | (1 << 8))
 
 // Map Group 2
 #define MAP_CELANTO_PATH_HIDDEN_GROTTO   (0 | (2 << 8))

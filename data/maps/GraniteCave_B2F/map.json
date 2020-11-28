@@ -185,7 +185,7 @@
       "y": 11,
       "elevation": 3,
       "item": "ITEM_EVERSTONE",
-      "flag": "FLAG_HIDDEN_ITEM_GRANITE_CAVE_B2F_EVERSTONE_2"
+      "flag": "0"
     }
   ]
 }

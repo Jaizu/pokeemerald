@@ -97,7 +97,9 @@
     "SabuloTower_5F_2R",
     "SabuloTower_6F_1R",
     "SabuloTower_6F_2R",
-    "SabuloTower_6F_BellesStudy"
+    "SabuloTower_6F_BellesStudy",
+    "SabuloCave_1R",
+    "SabuloCave_RegirockRoom"
   ],
   "gMapGroup_HiddenGrottosSecretTemples": [
     "CelantoPath_HiddenGrotto",
