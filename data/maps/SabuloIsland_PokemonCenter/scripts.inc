@@ -7,7 +7,13 @@ SabuloIsland_PokemonCenter_OnTransition:
 	end
 
 SabuloIsland_PokemonCenter_EventScript_OldMan::
-	msgbox SabuloIsland_PokemonCenter_Text_TrainersFlockToSabuloIsland, MSGBOX_NPC
+	lock
+	faceplayer
+	compare VAR_SABULO_ISLAND_STATE, 2
+	goto_if_eq SabuloIsland_PokemonCenter_EventScript_DearMe
+	msgbox SabuloIsland_PokemonCenter_Text_TrainersFlockToSabuloIsland, MSGBOX_DEFAULT
+	closemessage
+	release
 	end
 
 SabuloIsland_PokemonCenter_Text_TrainersFlockToSabuloIsland:
@@ -16,8 +22,25 @@ SabuloIsland_PokemonCenter_Text_TrainersFlockToSabuloIsland:
 	.string "What they don't realize is it's\n"
 	.string "useless without Mega Stones!$"
 
+SabuloIsland_PokemonCenter_EventScript_DearMe:
+	msgbox SabuloIsland_PokemonCenter_Text_DearMe, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+SabuloIsland_PokemonCenter_Text_DearMe:
+	.string "Dear me!\p"
+	.string "What on earth could be going on\n"
+	.string "out there?$"
+
 SabuloIsland_PokemonCenter_EventScript_AceTrainerF::
-	msgbox SabuloIsland_PokemonCenter_Text_HaveYouTriedLookingForShards, MSGBOX_NPC
+	lock
+	faceplayer
+	compare VAR_SABULO_ISLAND_STATE, 2
+	goto_if_eq SabuloIsland_PokemonCenter_EventScript_IsSomethingHappening
+	msgbox SabuloIsland_PokemonCenter_Text_HaveYouTriedLookingForShards, MSGBOX_DEFAULT
+	closemessage
+	release
 	end
 
 SabuloIsland_PokemonCenter_Text_HaveYouTriedLookingForShards:
@@ -26,3 +49,13 @@ SabuloIsland_PokemonCenter_Text_HaveYouTriedLookingForShards:
 	.string "Shard Tutors value them highly.\p"
 	.string "They'll teach Pokémon special\n"
 	.string "moves in exchange.$"
+
+SabuloIsland_PokemonCenter_EventScript_IsSomethingHappening:
+	msgbox SabuloIsland_PokemonCenter_Text_IsSomethingHappening, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+SabuloIsland_PokemonCenter_Text_IsSomethingHappening:
+	.string "Is something happening to\n"
+	.string "Sabulo Cave? How scary!$"

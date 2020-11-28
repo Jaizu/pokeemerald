@@ -105,5 +105,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_SABULO_ISLAND_REGIROCK
 	setflag FLAG_HIDE_SABULO_ISLAND_BELLE
 	setflag FLAG_HIDE_SABULO_ISLAND_NEW_ELDERS
+	setflag FLAG_UNLOCK_SABULO_ISLAND_DOORS
 	call EventScript_ResetAllBerries
 	end

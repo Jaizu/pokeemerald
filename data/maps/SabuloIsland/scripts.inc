@@ -6,9 +6,29 @@
 .set LOCALID_GRUNT_2, 10
 
 SabuloIsland_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, SabuloIsland_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, SabuloIsland_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, SabuloIsland_OnFrame
 	.byte 0
+
+SabuloIsland_OnLoad:
+	compare VAR_SABULO_ISLAND_STATE, 2
+	call_if_eq SabuloIsland_EventScript_LockAllDoors
+	end
+
+SabuloIsland_EventScript_LockAllDoors::
+	setmetatile  6,  7, METATILE_Mauville_Door_Tan_Locked, 1
+	setmetatile 18, 16, METATILE_Mauville_Door_Tan_Locked, 1
+	setmetatile  4, 21, METATILE_Mauville_Door_Tan_Locked, 1
+	setmetatile 24, 27, METATILE_Mauville_Door_Tan_Locked, 1
+	return
+
+SabuloIsland_EventScript_UnlockAllDoors::
+	setmetatile  6,  7, METATILE_Mauville_Door_Tan, 1
+	setmetatile 18, 16, METATILE_Mauville_Door_Tan, 1
+	setmetatile  4, 21, METATILE_Mauville_Door_Tan, 1
+	setmetatile 24, 27, METATILE_Mauville_Door_Tan, 1
+	return
 
 SabuloIsland_OnTransition::
 	setflag FLAG_VISITED_SABULO_ISLAND
@@ -91,6 +111,9 @@ SabuloIsland_EventScript_RegirockScene:
 	removeobject LOCALID_BELLE
 	setrespawn HEAL_LOCATION_SABULO_ISLAND
 	setflag FLAG_HIDE_SABULO_ISLAND_CIVILIANS
+	call SabuloIsland_EventScript_LockAllDoors
+	special DrawWholeMapView
+	clearflag FLAG_UNLOCK_SABULO_ISLAND_DOORS
 	setvar VAR_SABULO_ISLAND_STATE, 2
 	releaseall
 	end
@@ -253,11 +276,14 @@ SabuloIsland_EventScript_NewEldersScene:
 	msgbox SabuloIsland_Text_NextTimeIWillBeReady, MSGBOX_DEFAULT
 	closemessage
 	fadescreen FADE_TO_BLACK
+	special ReturnCameraToPlayer
 	removeobject LOCALID_ENOCH
 	removeobject LOCALID_GRUNT_1
 	removeobject LOCALID_GRUNT_2
 	clearflag FLAG_HIDE_SABULO_ISLAND_CIVILIANS
-	special ReturnCameraToPlayer
+	setflag FLAG_UNLOCK_SABULO_ISLAND_DOORS
+	call SabuloIsland_EventScript_UnlockAllDoors
+	special DrawWholeMapView
 	fadescreen FADE_FROM_BLACK
 	setvar VAR_SABULO_ISLAND_STATE, 3
 	fadedefaultbgm
@@ -583,6 +609,25 @@ SabuloIsland_Movement_EnochWalkFromPlayerToRegirock2:
 	walk_up
 	walk_up
 	step_end
+
+SabuloIsland_EventScript_BellesWordsEcho::
+	lockall
+	msgbox SabuloIsland_Text_BellesWordsEcho, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	releaseall
+	end
+
+SabuloIsland_Text_BellesWordsEcho:
+	.string "Belle's words echo…\n"
+	.string "Best go investigate that explosion!$"
+
+SabuloIsland_EventScript_LockedDoor::
+	lock
+	msgbox SabuloIsland_Text_BellesWordsEcho, MSGBOX_DEFAULT
+	release
+	end
 
 SabuloIsland_EventScript_CitySign::
 	msgbox SabuloIsland_Text_CitySign, MSGBOX_SIGN

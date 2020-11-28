@@ -397,7 +397,6 @@ WindmistCity_Text_ICanSeeSoFar:
 
 WindmistCity_EventScript_LockedDoor::
 	lock
-	faceplayer
 	msgbox WindmistCity_Text_TheDoorIsLocked, MSGBOX_DEFAULT
 	release
 	end
