@@ -358,6 +358,33 @@
       "var": "VAR_SABULO_ISLAND_STATE",
       "var_value": "2",
       "script": "SabuloIsland_EventScript_BellesWordsEcho1"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_SABULO_ISLAND_STATE",
+      "var_value": "4",
+      "script": "SabuloIsland_EventScript_BelleGiftTrigger0"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_SABULO_ISLAND_STATE",
+      "var_value": "4",
+      "script": "SabuloIsland_EventScript_BelleGiftTrigger1"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 30,
+      "elevation": 0,
+      "var": "VAR_SABULO_ISLAND_STATE",
+      "var_value": "4",
+      "script": "SabuloIsland_EventScript_BelleGiftTrigger2"
     }
   ],
   "bg_events": [

@@ -650,6 +650,196 @@ SabuloIsland_Text_BellesWordsEcho:
 	.string "Belle's words echo…\n"
 	.string "Best go investigate that explosion!$"
 
+SabuloIsland_EventScript_BelleGiftTrigger0::
+	lockall
+	setvar VAR_0x8008, 0
+	goto SabuloIsland_EventScript_BelleGiftScene
+	end
+
+SabuloIsland_EventScript_BelleGiftTrigger1::
+	lockall
+	setvar VAR_0x8008, 1
+	goto SabuloIsland_EventScript_BelleGiftScene
+	end
+
+SabuloIsland_EventScript_BelleGiftTrigger2::
+	lockall
+	setvar VAR_0x8008, 2
+	goto SabuloIsland_EventScript_BelleGiftScene
+	end
+
+SabuloIsland_EventScript_BelleGiftScene:
+	msgbox SabuloIsland_Text_Player, MSGBOX_DEFAULT
+	closemessage
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	waitse
+	addobject LOCALID_BELLE
+	compare VAR_0x8008, 0
+	call_if_eq SabuloIsland_EventScript_MoveBelle0
+	compare VAR_0x8008, 1
+	call_if_eq SabuloIsland_EventScript_MoveBelle1
+	compare VAR_0x8008, 2
+	call_if_eq SabuloIsland_EventScript_MoveBelle2
+	applymovement LOCALID_BELLE, SabuloIsland_Movement_BelleWalkToPlayer
+	waitmovement 0
+	msgbox SabuloIsland_Text_ThankYouSoMuch, MSGBOX_DEFAULT
+	compare VAR_STARTER_MON, 0 // Player chose Turtwig
+	call_if_eq SabuloIsland_EventScript_SetWartortle
+	compare VAR_STARTER_MON, 1 // Player chose Chimchar
+	call_if_eq SabuloIsland_EventScript_SetIvysaur
+	compare VAR_STARTER_MON, 2 // Player chose Piplup
+	call_if_eq SabuloIsland_EventScript_SetCharmeleon
+	givemon VAR_TEMP_1, 25, VAR_TEMP_2
+	copyvar VAR_0x8009, VAR_RESULT
+	compare VAR_0x8009, 0
+	call_if_eq SabuloIsland_EventScript_ReceiveMonParty
+	compare VAR_0x8009, 1
+	call_if_eq SabuloIsland_EventScript_ReceiveMonPC
+	compare VAR_0x8009, 1
+	call_if_gt SabuloIsland_EventScript_NoMoreRoomForPokemon
+	applymovement LOCALID_BELLE, SabuloIsland_Movement_ExitBelle
+	waitmovement 0
+	removeobject LOCALID_BELLE
+	setvar VAR_SABULO_TOWER_STATE, 3
+	setflag FLAG_HIDE_SABULO_TOWER_SABULO_CAVE_GUARD
+	setvar VAR_SABULO_ISLAND_STATE, 5
+	releaseall
+	end
+
+SabuloIsland_EventScript_MoveBelle0:
+	setobjectxy LOCALID_BELLE, 28, 22
+	return
+
+SabuloIsland_EventScript_MoveBelle1:
+	setobjectxy LOCALID_BELLE, 28, 23
+	return
+
+SabuloIsland_EventScript_MoveBelle2:
+	setobjectxy LOCALID_BELLE, 28, 24
+	return
+
+SabuloIsland_EventScript_SetWartortle:
+	setvar VAR_TEMP_1, SPECIES_WARTORTLE
+	setvar VAR_TEMP_2, ITEM_BLASTOISINITE
+	return
+
+SabuloIsland_EventScript_SetIvysaur:
+	setvar VAR_TEMP_1, SPECIES_IVYSAUR
+	setvar VAR_TEMP_2, ITEM_VENUSAURITE
+	return
+
+SabuloIsland_EventScript_SetCharmeleon:
+	setvar VAR_TEMP_1, SPECIES_CHARMELEON
+	setvar VAR_TEMP_2, ITEM_CHARIZARDITE_Y
+	return
+
+SabuloIsland_EventScript_ReceiveMonParty::
+	call SabuloIsland_EventScript_ReceivedMonFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq SabuloIsland_EventScript_FinishReceivingMon
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto SabuloIsland_EventScript_FinishReceivingMon
+	end
+
+SabuloIsland_EventScript_ReceiveMonPC::
+	call SabuloIsland_EventScript_ReceivedMonFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq SabuloIsland_EventScript_TransferMonToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto SabuloIsland_EventScript_TransferMonToPC
+	end
+
+SabuloIsland_EventScript_TransferMonToPC::
+	call Common_EventScript_TransferredToPC
+	goto SabuloIsland_EventScript_FinishReceivingMon
+	end
+
+SabuloIsland_EventScript_ReceivedMonFanfare::
+	bufferspeciesname 1, VAR_TEMP_1
+	playfanfare MUS_RG_FAN5
+	message SabuloIsland_Text_ReceivedMonFromBelle
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, VAR_TEMP_1
+	return
+
+SabuloIsland_EventScript_NoMoreRoomForPokemon:
+	msgbox gText_NoMoreRoomForPokemon, MSGBOX_DEFAULT
+	setflag FLAG_DIDNT_RECEIVE_KANTO_STARTER
+	msgbox SabuloIsland_Text_WhenYouMakeRoom, MSGBOX_DEFAULT
+	closemessage
+	return
+
+SabuloIsland_EventScript_FinishReceivingMon:
+	setflag FLAG_RECEIVED_KANTO_STARTER
+	msgbox SabuloIsland_Text_IfYouTrainThatPokemon, MSGBOX_DEFAULT
+	closemessage
+	return
+
+SabuloIsland_Text_ThankYouSoMuch:
+	.string "Belle: {COLOR RED}Thank you so much for\n"
+	.string "dealing with that situation.\p"
+	.string "You really do have a special bond\n"
+	.string "with your Pokémon.\p"
+	.string "I'd like to thank you on behalf\n"
+	.string "of the entire Island.\p"
+	.string "Take this rare Pokémon, holding\n"
+	.string "a Mega Stone!$"
+
+SabuloIsland_Text_ReceivedMonFromBelle:
+	.string "{PLAYER} received {STR_VAR_2}\n"
+	.string "from Belle!$"
+
+SabuloIsland_Text_IfYouTrainThatPokemon:
+	.string "Belle: {COLOR RED}If you train that Pokémon\n"
+	.string "enough, it will evolve and be able\l"
+	.string "to use its Mega Stone!\p"
+	.string "You have potential for greatness\n"
+	.string "{PLAYER}.\p"
+	.string "I'm glad my judgment was correct!\n"
+	.string "Farewell, and good luck.$"
+
+SabuloIsland_Text_WhenYouMakeRoom:
+	.string "Belle: {COLOR RED}When you make room, come and\n"
+	.string "see me, okay?\p"
+	.string "I'll be waiting at the top of\n"
+	.string "Sabulo Tower, like usual.\p"
+	.string "I will hold onto this Pokémon, in\n"
+	.string "the mean time.\p"
+	.string "Thanks once more for your help,\n"
+	.string "{PLAYER}! Farewell.$"
+
+SabuloIsland_Movement_BelleWalkToPlayer:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+SabuloIsland_Movement_ExitBelle:
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
 SabuloIsland_EventScript_LockedDoor::
 	lock
 	msgbox SabuloIsland_Text_BellesWordsEcho, MSGBOX_DEFAULT
