@@ -1303,3 +1303,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/AerousRoad_HiddenGrotto_Growlithe/scripts.inc"
 
 	.include "data/maps/FrostbiteCave_SecretTemple/scripts.inc"
+
+	.include "data/maps/SabuloCross_SecretTemple/scripts.inc"

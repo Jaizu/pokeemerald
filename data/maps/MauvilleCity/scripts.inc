@@ -163,7 +163,7 @@ MauvilleCity_EventScript_DefeatedWally:: @ 81DF593
 	clearflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLYS_UNCLE
 	setflag FLAG_DEFEATED_WALLY_MAUVILLE
 	setvar VAR_WALLY_CALL_STEP_COUNTER, 0
-	setflag FLAG_ENABLE_FIRST_WALLY_POKENAV_CALL
+	setflag 0
 	compare VAR_FACING, DIR_NORTH
 	call_if_eq MauvilleCity_EventScript_ScottApproachPlayerNorth
 	compare VAR_FACING, DIR_EAST
@@ -466,7 +466,7 @@ MauvilleCity_EventScript_RegisterWallyCall:: @ 81DF7BA
 	closemessage
 	delay 30
 	setflag FLAG_ENABLE_WALLY_MATCH_CALL
-	clearflag FLAG_ENABLE_FIRST_WALLY_POKENAV_CALL
+	clearflag 0
 	releaseall
 	end
 

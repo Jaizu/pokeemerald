@@ -79,7 +79,7 @@
 #define OBJ_EVENT_GFX_LUCY                        75
 #define OBJ_EVENT_GFX_CHEST                       76
 #define OBJ_EVENT_GFX_GROWLITHE                   77
-#define OBJ_EVENT_GFX_UNUSED_SQUIRTLE_DOLL        78
+#define OBJ_EVENT_GFX_MAROWAK                     78
 #define OBJ_EVENT_GFX_UNUSED_WOOPER_DOLL          79
 #define OBJ_EVENT_GFX_UNUSED_PIKACHU_DOLL         80
 #define OBJ_EVENT_GFX_MARACTUS                    81
@@ -287,6 +287,7 @@
 #define OBJ_EVENT_GFX_ANABEL                     OBJ_EVENT_GFX_BELLE
 #define OBJ_EVENT_GFX_UNUSED_MAGNEMITE_DOLL      OBJ_EVENT_GFX_GROWLITHE
 #define OBJ_EVENT_GFX_UNUSED_NATU_DOLL           OBJ_EVENT_GFX_CHEST
+#define OBJ_EVENT_GFX_UNUSED_SQUIRTLE_DOLL       OBJ_EVENT_GFX_MAROWAK
 
 #define OBJ_EVENT_PAL_TAG_0 0x1100
 #define OBJ_EVENT_PAL_TAG_1 0x1101

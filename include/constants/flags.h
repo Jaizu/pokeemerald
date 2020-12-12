@@ -149,10 +149,10 @@
 #define FLAG_DEFEATED_AEROUS_ROAD_HIDDEN_GROTTO_GROWLITHE   0x85 // FLAG_RECEIVED_AMULET_COIN in Emerald
 #define FLAG_PENDING_DAYCARE_EGG                            0x86
 #define FLAG_RECEIVED_FROSTBITE_CAVE_SECRET_TEMPLE_RELIC_VASE 0x87 // FLAG_THANKED_FOR_PLAYING_WITH_WALLY in Emerald
+#define FLAG_CAUGHT_SABULO_CROSS_SECRET_TEMPLE_MAROWAK      0x88 // FLAG_ENABLE_FIRST_WALLY_POKENAV_CALL in Emerald
+#define FLAG_RECEIVED_HM01                                  0x89
+#define FLAG_DEFEATED_SABULO_CROSS_SECRET_TEMPLE_MAROWAK    0x8A // FLAG_SCOTT_CALL_FORTREE_GYM in Emerald
 
-#define FLAG_ENABLE_FIRST_WALLY_POKENAV_CALL 0x88 // Set after defeating Wally outside Mauville Gym. Will activate a call later to register Wally.
-#define FLAG_RECEIVED_HM01                   0x89
-#define FLAG_SCOTT_CALL_FORTREE_GYM          0x8A // Triggers call from Scott after defeating Winona
 #define FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY   0x8B
 #define FLAG_RECEIVED_6_SODA_POP             0x8C
 #define FLAG_DEFEATED_SEASHORE_HOUSE         0x8D
@@ -816,8 +816,8 @@
 #define FLAG_HIDE_SABULO_CAVE_REGIROCK                              0x307 // FLAG_HIDE_LILYCOVE_MUSEUM_CURATOR in Emerald
 #define FLAG_HIDE_SABULO_CAVE_COULTER                               0x308 // FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_1 in Emerald
 #define FLAG_HIDE_AEROUS_ROAD_HIDDEN_GROTTO_GROWLITHE               0x309 // FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_2 in Emerald
+#define FLAG_HIDE_SABULO_CROSS_SECRET_TEMPLE_MAROWAK                0x30A // FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_3 in Emerald
 
-#define FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_3                          0x30A
 #define FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_4                          0x30B
 #define FLAG_HIDE_LILYCOVE_MUSEUM_TOURISTS                          0x30C
 #define FLAG_HIDE_PETALBURG_GYM_GREETER                             0x30D

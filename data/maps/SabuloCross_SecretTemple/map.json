@@ -1,9 +1,9 @@
 {
-  "id": "MAP_FROSTBITE_CAVE_SECRET_TEMPLE",
-  "name": "FrostbiteCave_SecretTemple",
+  "id": "MAP_SABULO_CROSS_SECRET_TEMPLE",
+  "name": "SabuloCross_SecretTemple",
   "layout": "LAYOUT_SECRET_TEMPLE",
   "music": "MUS_SHINKA",
-  "region_map_section": "MAPSEC_RUSTURF_TUNNEL",
+  "region_map_section": "MAPSEC_ROUTE_111",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
@@ -15,7 +15,7 @@
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_CHEST",
+      "graphics_id": "OBJ_EVENT_GFX_MAROWAK",
       "x": 6,
       "y": 5,
       "elevation": 3,
@@ -24,8 +24,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "FrostbiteCave_SecretTemple_EventScript_Chest",
-      "flag": "0"
+      "script": "SabuloCross_SecretTemple_EventScript_Marowak",
+      "flag": "FLAG_HIDE_SABULO_CROSS_SECRET_TEMPLE_MAROWAK"
     }
   ],
   "warp_events": [
@@ -33,22 +33,22 @@
       "x": 6,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_FROSTBITE_CAVE_1F_1R",
-      "dest_warp_id": 2
+      "dest_map": "MAP_SABULO_CROSS",
+      "dest_warp_id": 0
     },
     {
       "x": 5,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_FROSTBITE_CAVE_1F_1R",
-      "dest_warp_id": 2
+      "dest_map": "MAP_SABULO_CROSS",
+      "dest_warp_id": 0
     },
     {
       "x": 7,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_FROSTBITE_CAVE_1F_1R",
-      "dest_warp_id": 2
+      "dest_map": "MAP_SABULO_CROSS",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [

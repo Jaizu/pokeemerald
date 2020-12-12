@@ -78,7 +78,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_LUCY] =                     &gObjectEventGraphicsInfo_Lucy,
     [OBJ_EVENT_GFX_CHEST] =                    &gObjectEventGraphicsInfo_Chest,
     [OBJ_EVENT_GFX_GROWLITHE] =                &gObjectEventGraphicsInfo_Growlithe,
-    [OBJ_EVENT_GFX_UNUSED_SQUIRTLE_DOLL] =     &gObjectEventGraphicsInfo_UnusedSquirtleDoll,
+    [OBJ_EVENT_GFX_MAROWAK] =                  &gObjectEventGraphicsInfo_Marowak,
     [OBJ_EVENT_GFX_UNUSED_WOOPER_DOLL] =       &gObjectEventGraphicsInfo_UnusedWooperDoll,
     [OBJ_EVENT_GFX_UNUSED_PIKACHU_DOLL] =      &gObjectEventGraphicsInfo_UnusedPikachuDoll,
     [OBJ_EVENT_GFX_MARACTUS] =                 &gObjectEventGraphicsInfo_Maractus,

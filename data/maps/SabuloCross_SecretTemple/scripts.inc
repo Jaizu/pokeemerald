@@ -1,0 +1,64 @@
+SabuloCross_SecretTemple_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, SabuloCross_SecretTemple_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, SabuloCross_SecretTemple_OnTransition
+	.byte 0
+
+SabuloCross_SecretTemple_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, SabuloCross_SecretTemple_TryRemoveMarowak
+	end
+
+SabuloCross_SecretTemple_TryRemoveMarowak:
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_ne Common_EventScript_NopReturn
+	removeobject VAR_LAST_TALKED
+	return
+
+SabuloCross_SecretTemple_OnTransition:
+	call_if_unset FLAG_DEFEATED_SABULO_CROSS_SECRET_TEMPLE_MAROWAK, SabuloCross_SecretTemple_EventScript_TryShowMarowak
+	end
+
+SabuloCross_SecretTemple_EventScript_TryShowMarowak:
+	goto_if_unset FLAG_CAUGHT_SABULO_CROSS_SECRET_TEMPLE_MAROWAK, SabuloCross_SecretTemple_EventScript_ShowMarowak
+	return
+ 
+SabuloCross_SecretTemple_EventScript_ShowMarowak:
+	clearflag FLAG_HIDE_SABULO_CROSS_SECRET_TEMPLE_MAROWAK
+	return
+
+SabuloCross_SecretTemple_EventScript_Marowak::
+	lock
+	faceplayer
+	setwildbattle SPECIES_MAROWAK, 30, ITEM_THICK_CLUB
+	waitse
+	playmoncry SPECIES_MAROWAK, 2
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	setvar VAR_0x8000, MOVE_BONE_CLUB
+	setvar VAR_0x8001, MOVE_THUNDER_PUNCH
+	setvar VAR_0x8002, MOVE_IRON_HEAD
+	setvar VAR_0x8003, MOVE_DOUBLE_EDGE
+	special StartCustomMovesBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq SabuloCross_SecretTemple_EventScript_DefeatedMarowak
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq SabuloCross_SecretTemple_EventScript_RanFromMarowak
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq SabuloCross_SecretTemple_EventScript_RanFromMarowak
+	setflag FLAG_CAUGHT_SABULO_CROSS_SECRET_TEMPLE_MAROWAK
+	release
+	end
+
+SabuloCross_SecretTemple_EventScript_DefeatedMarowak::
+	setflag FLAG_DEFEATED_SABULO_CROSS_SECRET_TEMPLE_MAROWAK
+	goto Common_EventScript_RemoveStaticPokemon
+	end
+
+SabuloCross_SecretTemple_EventScript_RanFromMarowak::
+	setvar VAR_0x8004, SPECIES_MAROWAK
+	goto Common_EventScript_PokemonFled
+	end
