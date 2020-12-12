@@ -60,12 +60,13 @@
 #define MAP_SABULO_CAVE_REGIROCK_ROOM           (30 | (1 << 8))
 
 // Map Group 2
-#define MAP_CELANTO_PATH_HIDDEN_GROTTO   (0 | (2 << 8))
-#define MAP_ARCHAN_TOWN_HIDDEN_GROTTO    (1 | (2 << 8))
-#define MAP_ARCHAN_TUNNEL_SECRET_TEMPLE  (2 | (2 << 8))
-#define MAP_ARCHAN_HILLS_SECRET_TEMPLE   (3 | (2 << 8))
-#define MAP_AEROUS_ROAD_HIDDEN_GROTTO    (4 | (2 << 8))
-#define MAP_NESTPINE_CLIMB_HIDDEN_GROTTO (5 | (2 << 8))
+#define MAP_CELANTO_PATH_HIDDEN_GROTTO          (0 | (2 << 8))
+#define MAP_ARCHAN_TOWN_HIDDEN_GROTTO           (1 | (2 << 8))
+#define MAP_ARCHAN_TUNNEL_SECRET_TEMPLE         (2 | (2 << 8))
+#define MAP_ARCHAN_HILLS_SECRET_TEMPLE          (3 | (2 << 8))
+#define MAP_AEROUS_ROAD_HIDDEN_GROTTO           (4 | (2 << 8))
+#define MAP_NESTPINE_CLIMB_HIDDEN_GROTTO        (5 | (2 << 8))
+#define MAP_AEROUS_ROAD_HIDDEN_GROTTO_GROWLITHE (6 | (2 << 8))
 
 // Map Group 3
 #define MAP_CELANTO_TOWN_PLAYERS_HOUSE_1F (0 | (3 << 8))

@@ -1,0 +1,64 @@
+AerousRoad_HiddenGrotto_Growlithe_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, AerousRoad_HiddenGrotto_Growlithe_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, AerousRoad_HiddenGrotto_Growlithe_OnTransition
+	.byte 0
+
+AerousRoad_HiddenGrotto_Growlithe_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, AerousRoad_HiddenGrotto_Growlithe_TryRemoveGrowlithe
+	end
+
+AerousRoad_HiddenGrotto_Growlithe_TryRemoveGrowlithe:
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_ne Common_EventScript_NopReturn
+	removeobject VAR_LAST_TALKED
+	return
+
+AerousRoad_HiddenGrotto_Growlithe_OnTransition:
+	call_if_unset FLAG_DEFEATED_AEROUS_ROAD_HIDDEN_GROTTO_GROWLITHE, AerousRoad_HiddenGrotto_Growlithe_EventScript_TryShowGrowlithe
+	end
+
+AerousRoad_HiddenGrotto_Growlithe_EventScript_TryShowGrowlithe:
+	goto_if_unset FLAG_CAUGHT_AEROUS_ROAD_HIDDEN_GROTTO_GROWLITHE, AerousRoad_HiddenGrotto_Growlithe_EventScript_ShowGrowlithe
+	return
+ 
+AerousRoad_HiddenGrotto_Growlithe_EventScript_ShowGrowlithe:
+	clearflag FLAG_HIDE_AEROUS_ROAD_HIDDEN_GROTTO_GROWLITHE
+	return
+
+AerousRoad_HiddenGrotto_Growlithe_EventScript_Growlithe::
+	lock
+	faceplayer
+	setwildbattle SPECIES_GROWLITHE, 25, ITEM_NONE
+	waitse
+	playmoncry SPECIES_GROWLITHE, 2
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	setvar VAR_0x8000, MOVE_WILL_O_WISP
+	setvar VAR_0x8001, MOVE_FLAME_CHARGE
+	setvar VAR_0x8002, MOVE_CRUNCH
+	setvar VAR_0x8003, MOVE_DOUBLE_KICK
+	special StartCustomMovesBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq AerousRoad_HiddenGrotto_Growlithe_EventScript_DefeatedGrowlithe
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq AerousRoad_HiddenGrotto_Growlithe_EventScript_RanFromGrowlithe
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq AerousRoad_HiddenGrotto_Growlithe_EventScript_RanFromGrowlithe
+	setflag FLAG_CAUGHT_AEROUS_ROAD_HIDDEN_GROTTO_GROWLITHE
+	release
+	end
+
+AerousRoad_HiddenGrotto_Growlithe_EventScript_DefeatedGrowlithe::
+	setflag FLAG_DEFEATED_AEROUS_ROAD_HIDDEN_GROTTO_GROWLITHE
+	goto Common_EventScript_RemoveStaticPokemon
+	end
+
+AerousRoad_HiddenGrotto_Growlithe_EventScript_RanFromGrowlithe::
+	setvar VAR_0x8004, SPECIES_GROWLITHE
+	goto Common_EventScript_PokemonFled
+	end
