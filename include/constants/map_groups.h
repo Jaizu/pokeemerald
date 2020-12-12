@@ -24,6 +24,7 @@
 #define MAP_EDAMIST_HEIGHTS (15 | (0 << 8))
 #define MAP_IGNIS_ROOST     (16 | (0 << 8))
 #define MAP_SABULO_CROSS    (17 | (0 << 8))
+#define MAP_SHARPGUST_SPAN  (18 | (0 << 8))
 
 // Map Group 1
 #define MAP_ARCHAN_TUNNEL_1F_1R                 (0 | (1 << 8))

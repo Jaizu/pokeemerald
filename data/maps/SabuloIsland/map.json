@@ -17,6 +17,11 @@
       "direction": "left",
       "offset": -4,
       "map": "MAP_SABULO_CROSS"
+    },
+    {
+      "direction": "down",
+      "offset": 10,
+      "map": "MAP_SHARPGUST_SPAN"
     }
   ],
   "object_events": [

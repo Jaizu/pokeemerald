@@ -14031,6 +14031,160 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_SHARPGUST_SPAN",
+          "base_label": "gSharpgustSpan0",
+          "fishing_mons": {
+            "encounter_rate": 25,
+            "mons": [
+              {
+                "min_level": 3,
+                "max_level": 20,
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 3,
+                "max_level": 20,
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 20,
+                "max_level": 26,
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 20,
+                "max_level": 26,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 26,
+                "species": "SPECIES_QWILFISH"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_QWILFISH"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_OCTILLERY"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_OCTILLERY"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_OCTILLERY"
+              }
+            ]
+          },
+          "land_mons": {
+            "encounter_rate": 5,
+            "mons": [
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_RUFFLET"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_RUFFLET"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_SWABLU"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_WINGULL"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_INKAY"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_RUFFLET"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_SWABLU"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_WINGULL"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_INKAY"
+              },
+              {
+                "min_level": 26,
+                "max_level": 26,
+                "species": "SPECIES_PELIPPER"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_INKAY"
+              },
+              {
+                "min_level": 26,
+                "max_level": 26,
+                "species": "SPECIES_PELIPPER"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 1,
+            "mons": [
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_WINGULL"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_FRILLISH"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_FRILLISH"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_FRILLISH"
+              }
+            ]
+          }
         }
       ]
     },

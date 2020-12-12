@@ -1297,3 +1297,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/SabuloCave_1R/scripts.inc"
 
 	.include "data/maps/SabuloCave_RegirockRoom/scripts.inc"
+
+	.include "data/maps/SharpgustSpan/scripts.inc"

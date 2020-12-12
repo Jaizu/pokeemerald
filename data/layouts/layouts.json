@@ -5230,6 +5230,16 @@
       "secondary_tileset": "gTileset_ArchanTunnel",
       "border_filepath": "data/layouts/SabuloCave_RegirockRoom/border.bin",
       "blockdata_filepath": "data/layouts/SabuloCave_RegirockRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_SHARPGUST_SPAN",
+      "name": "SharpgustSpan_Layout",
+      "width": 40,
+      "height": 68,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/SharpgustSpan/border.bin",
+      "blockdata_filepath": "data/layouts/SharpgustSpan/map.bin"
     }
   ]
 }
