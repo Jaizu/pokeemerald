@@ -1,6 +1,3 @@
-.set TRAINER_MAYA_AND_DAVE_1, 0
-.set TRAINER_PEGGY_1, 0
-
 SharpgustSpan_MapScripts::
 	.byte 0
 

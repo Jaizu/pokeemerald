@@ -185,14 +185,21 @@
 #define TRAINER_SABULO_ISLAND_GRUNT_2        90 // TRAINER_ALEXIA in Emerald
 #define TRAINER_JODY                         91
 #define TRAINER_SABULO_ISLAND_ENOCH          91 // TRAINER_JODY in Emerald
-
 #define TRAINER_WENDY                        92
+#define TRAINER_FELIX_1                      92 // TRAINER_WENDY in Emerald
 #define TRAINER_KEIRA                        93
+#define TRAINER_ESTEBAN_1                    93 // TRAINER_KEIRA in Emerald
 #define TRAINER_BROOKE_1                     94
+#define TRAINER_KRISTOFF_1                   94 // TRAINER_BROOKE_1 in Emerald
 #define TRAINER_JENNIFER                     95
+#define TRAINER_STEPHAN_1                    95 // TRAINER_JENNIFER in Emerald
 #define TRAINER_HOPE                         96
+#define TRAINER_CELESTE_1                    96 // TRAINER_HOPE in Emerald
 #define TRAINER_SHANNON                      97
+#define TRAINER_MAYA_AND_DAVE_1              97 // TRAINER_SHANNON in Emerald
 #define TRAINER_MICHELLE                     98
+#define TRAINER_PEGGY_1                      98 // TRAINER_MICHELLE in Emerald
+
 #define TRAINER_CAROLINE                     99
 #define TRAINER_JULIE                       100
 #define TRAINER_BROOKE_2                    101

@@ -1,9 +1,3 @@
-.set TRAINER_FELIX_1, 0
-.set TRAINER_ESTEBAN_1, 0
-.set TRAINER_KRISTOFF_1, 0
-.set TRAINER_STEPHAN_1, 0
-.set TRAINER_CELESTE_1, 0
-
 SabuloCross_MapScripts::
 	.byte 0
 
