@@ -69,6 +69,7 @@ const u16 gObjectEventPaletteSSWake[] = INCBIN_U16("graphics/object_events/palet
 const u16 gObjectEventPalettePokeManiac[] = INCBIN_U16("graphics/object_events/palettes/pokemaniac.gbapal");
 const u16 gObjectEventPaletteBelle[] = INCBIN_U16("graphics/object_events/palettes/belle.gbapal");
 const u16 gObjectEventPaletteRegirock[] = INCBIN_U16("graphics/object_events/palettes/regirock.gbapal");
+const u16 gObjectEventPaletteGrowlithe[] = INCBIN_U16("graphics/object_events/palettes/growlithe.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
@@ -209,7 +210,7 @@ const u32 gObjectEventPic_TuberMSwimming[] = INCBIN_U32("graphics/object_events/
 const u32 gObjectEventPic_Azurill[] = INCBIN_U32("graphics/object_events/pics/pokemon/azurill.4bpp");
 const u32 gObjectEventPic_Mom[] = INCBIN_U32("graphics/object_events/pics/people/mom.4bpp");
 const u32 gObjectEventPic_UnusedNatuDoll[] = INCBIN_U32("graphics/object_events/pics/dolls/unused_natu_doll.4bpp");
-const u32 gObjectEventPic_UnusedMagnemiteDoll[] = INCBIN_U32("graphics/object_events/pics/dolls/unused_magnemite_doll.4bpp");
+const u32 gObjectEventPic_Growlithe[] = INCBIN_U32("graphics/object_events/pics/pokemon/growlithe.4bpp");
 const u32 gObjectEventPic_UnusedSquirtleDoll[] = INCBIN_U32("graphics/object_events/pics/dolls/unused_squirtle_doll.4bpp");
 const u32 gObjectEventPic_UnusedWooperDoll[] = INCBIN_U32("graphics/object_events/pics/dolls/unused_wooper_doll.4bpp");
 const u32 gObjectEventPic_UnusedPikachuDoll[] = INCBIN_U32("graphics/object_events/pics/dolls/unused_pikachu_doll.4bpp");

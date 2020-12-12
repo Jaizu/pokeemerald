@@ -838,8 +838,10 @@ const struct SpriteFrameImage gObjectEventPicTable_UnusedNatuDoll[] = {
     obj_frame_tiles(gObjectEventPic_UnusedNatuDoll),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_UnusedMagnemiteDoll[] = {
-    obj_frame_tiles(gObjectEventPic_UnusedMagnemiteDoll),
+const struct SpriteFrameImage gObjectEventPicTable_Growlithe[] = {
+    overworld_frame(gObjectEventPic_Growlithe, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Growlithe, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Growlithe, 4, 4, 0),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_UnusedSquirtleDoll[] = {

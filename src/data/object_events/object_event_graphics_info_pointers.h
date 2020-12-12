@@ -77,7 +77,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_NOLAND] =                   &gObjectEventGraphicsInfo_Noland,
     [OBJ_EVENT_GFX_LUCY] =                     &gObjectEventGraphicsInfo_Lucy,
     [OBJ_EVENT_GFX_UNUSED_NATU_DOLL] =         &gObjectEventGraphicsInfo_UnusedNatuDoll,
-    [OBJ_EVENT_GFX_UNUSED_MAGNEMITE_DOLL] =    &gObjectEventGraphicsInfo_UnusedMagnemiteDoll,
+    [OBJ_EVENT_GFX_GROWLITHE] =                &gObjectEventGraphicsInfo_Growlithe,
     [OBJ_EVENT_GFX_UNUSED_SQUIRTLE_DOLL] =     &gObjectEventGraphicsInfo_UnusedSquirtleDoll,
     [OBJ_EVENT_GFX_UNUSED_WOOPER_DOLL] =       &gObjectEventGraphicsInfo_UnusedWooperDoll,
     [OBJ_EVENT_GFX_UNUSED_PIKACHU_DOLL] =      &gObjectEventGraphicsInfo_UnusedPikachuDoll,
@@ -319,5 +319,6 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPalettePokeManiac, OBJ_EVENT_PAL_TAG_POKEMANIAC},
     {gObjectEventPaletteBelle, OBJ_EVENT_PAL_TAG_BELLE},
     {gObjectEventPaletteRegirock, OBJ_EVENT_PAL_TAG_REGIROCK},
+    {gObjectEventPaletteGrowlithe, OBJ_EVENT_PAL_TAG_GROWLITHE},
     {NULL, 0x0000},
 };
