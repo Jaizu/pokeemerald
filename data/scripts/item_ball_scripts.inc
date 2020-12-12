@@ -279,6 +279,19 @@ Route108_EventScript_ItemStarPiece::
 	finditem ITEM_STAR_PIECE
 	end
 
+EventScript_ItemTM31::
+	finditem ITEM_TM31
+	end
+
+EventScript_ItemWaterStone::
+AbandonedShip_HiddenFloorRooms_EventScript_ItemWaterStone::
+	finditem ITEM_WATER_STONE
+	end
+
+EventScript_ItemTM40::
+	finditem ITEM_TM40
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
@@ -493,10 +506,6 @@ AbandonedShip_HiddenFloorRooms_EventScript_ItemLuxuryBall:: @ 829127B
 
 AbandonedShip_HiddenFloorRooms_EventScript_ItemScanner:: @ 8291288
 	finditem ITEM_SCANNER
-	end
-
-AbandonedShip_HiddenFloorRooms_EventScript_ItemWaterStone:: @ 8291295
-	finditem ITEM_WATER_STONE
 	end
 
 ScorchedSlab_EventScript_ItemTM11:: @ 82912AF
