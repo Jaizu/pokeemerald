@@ -33,9 +33,9 @@ PetalburgCity_WallysHouse_EventScript_WallyUncle:: @ 8204278
 	faceplayer
 	goto_if_set 0, PetalburgCity_WallysHouse_EventScript_DefeatedWallyInVictoryRoad
 	goto_if_set 0, PetalburgCity_WallysHouse_EventScript_ReceievedHM03Surf
-	goto_if_set FLAG_THANKED_FOR_PLAYING_WITH_WALLY, PetalburgCity_WallysHouse_EventScript_PlayedWithWally
+	goto_if_set 0, PetalburgCity_WallysHouse_EventScript_PlayedWithWally
 	msgbox PetalburgCity_WallysHouse_Text_ThanksForPlayingWithWally, MSGBOX_DEFAULT
-	setflag FLAG_THANKED_FOR_PLAYING_WITH_WALLY
+	setflag 0
 	release
 	end
 

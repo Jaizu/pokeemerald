@@ -147,9 +147,9 @@
 #define FLAG_DIDNT_RECEIVE_KANTO_STARTER                    0x83 // FLAG_RECEIVED_DOLL_LANETTE in Emerald
 #define FLAG_CAUGHT_AEROUS_ROAD_HIDDEN_GROTTO_GROWLITHE     0x84 // FLAG_RECEIVED_POTION_OLDALE in Emerald
 #define FLAG_DEFEATED_AEROUS_ROAD_HIDDEN_GROTTO_GROWLITHE   0x85 // FLAG_RECEIVED_AMULET_COIN in Emerald
+#define FLAG_PENDING_DAYCARE_EGG                            0x86
+#define FLAG_RECEIVED_FROSTBITE_CAVE_SECRET_TEMPLE_RELIC_VASE 0x87 // FLAG_THANKED_FOR_PLAYING_WITH_WALLY in Emerald
 
-#define FLAG_PENDING_DAYCARE_EGG             0x86
-#define FLAG_THANKED_FOR_PLAYING_WITH_WALLY  0x87
 #define FLAG_ENABLE_FIRST_WALLY_POKENAV_CALL 0x88 // Set after defeating Wally outside Mauville Gym. Will activate a call later to register Wally.
 #define FLAG_RECEIVED_HM01                   0x89
 #define FLAG_SCOTT_CALL_FORTREE_GYM          0x8A // Triggers call from Scott after defeating Winona

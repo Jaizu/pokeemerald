@@ -1,0 +1,21 @@
+.set LOCALID_CHEST, 1
+
+FrostbiteCave_SecretTemple_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, FrostbiteCave_SecretTemple_OnTransition
+	.byte 0
+
+FrostbiteCave_SecretTemple_OnTransition:
+	setvar VAR_LAST_TALKED, LOCALID_CHEST
+	goto_if_set FLAG_RECEIVED_FROSTBITE_CAVE_SECRET_TEMPLE_RELIC_VASE, EventScript_SetChestOpened
+	end
+
+FrostbiteCave_SecretTemple_EventScript_Chest::
+	lock
+	goto_if_set FLAG_RECEIVED_FROSTBITE_CAVE_SECRET_TEMPLE_RELIC_VASE, EventScript_EmptyChest
+	call EventScript_OpenChest
+	giveitem ITEM_POTION
+	compare VAR_RESULT, FALSE
+	goto_if_eq EventScript_NoRoomChest
+	setflag FLAG_RECEIVED_FROSTBITE_CAVE_SECRET_TEMPLE_RELIC_VASE
+	release
+	end
