@@ -51,7 +51,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SAILOR] =                   &gObjectEventGraphicsInfo_Sailor,
     [OBJ_EVENT_GFX_FISHERMAN] =                &gObjectEventGraphicsInfo_Fisherman,
     [OBJ_EVENT_GFX_POKEMANIAC] =               &gObjectEventGraphicsInfo_PokeManiac,
-    [OBJ_EVENT_GFX_RUNNING_TRIATHLETE_F] =     &gObjectEventGraphicsInfo_RunningTriathleteF,
+    [OBJ_EVENT_GFX_SWIMMER_F_SWIMMING] =       &gObjectEventGraphicsInfo_SwimmerFSwimming,
     [OBJ_EVENT_GFX_TUBER_F] =                  &gObjectEventGraphicsInfo_TuberF,
     [OBJ_EVENT_GFX_TUBER_M] =                  &gObjectEventGraphicsInfo_TuberM,
     [OBJ_EVENT_GFX_HIKER] =                    &gObjectEventGraphicsInfo_Hiker,
@@ -320,5 +320,6 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPaletteBelle, OBJ_EVENT_PAL_TAG_BELLE},
     {gObjectEventPaletteRegirock, OBJ_EVENT_PAL_TAG_REGIROCK},
     {gObjectEventPaletteGrowlithe, OBJ_EVENT_PAL_TAG_GROWLITHE},
+    {gObjectEventPaletteSwimmerF, OBJ_EVENT_PAL_TAG_SWIMMER_F},
     {NULL, 0x0000},
 };
