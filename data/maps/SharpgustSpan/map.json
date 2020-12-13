@@ -35,7 +35,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ACE_TRAINER_F",
-      "x": 9,
+      "x": 7,
       "y": 28,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -61,8 +61,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_SWIMMING",
-      "x": 10,
-      "y": 42,
+      "x": 16,
+      "y": 44,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -74,8 +74,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TUBER_M_SWIMMING",
-      "x": 11,
-      "y": 42,
+      "x": 17,
+      "y": 44,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -87,14 +87,14 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_SWIMMING",
-      "x": 6,
-      "y": 49,
+      "x": 11,
+      "y": 52,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_UP_LEFT_DOWN_RIGHT",
       "movement_range_x": 5,
-      "movement_range_y": 0,
+      "movement_range_y": 4,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
+      "trainer_sight_or_berry_tree_id": "2",
       "script": "SharpgustSpan_EventScript_Peggy",
       "flag": "0"
     }
