@@ -1417,16 +1417,16 @@ const struct SpriteFrameImage gObjectEventPicTable_MayFishing[] = {
     overworld_frame(gObjectEventPic_MayFishing, 4, 4, 11),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_HotSpringsOldWoman[] = {
-    overworld_frame(gObjectEventPic_HotSpringsOldWoman, 2, 4, 0),
-    overworld_frame(gObjectEventPic_HotSpringsOldWoman, 2, 4, 1),
-    overworld_frame(gObjectEventPic_HotSpringsOldWoman, 2, 4, 2),
-    overworld_frame(gObjectEventPic_HotSpringsOldWoman, 2, 4, 3),
-    overworld_frame(gObjectEventPic_HotSpringsOldWoman, 2, 4, 4),
-    overworld_frame(gObjectEventPic_HotSpringsOldWoman, 2, 4, 5),
-    overworld_frame(gObjectEventPic_HotSpringsOldWoman, 2, 4, 6),
-    overworld_frame(gObjectEventPic_HotSpringsOldWoman, 2, 4, 7),
-    overworld_frame(gObjectEventPic_HotSpringsOldWoman, 2, 4, 8),
+const struct SpriteFrameImage gObjectEventPicTable_SwimmerMSwimming[] = {
+    overworld_frame(gObjectEventPic_SwimmerMSwimming, 2, 4, 0),
+    overworld_frame(gObjectEventPic_SwimmerMSwimming, 2, 4, 1),
+    overworld_frame(gObjectEventPic_SwimmerMSwimming, 2, 4, 2),
+    overworld_frame(gObjectEventPic_SwimmerMSwimming, 2, 4, 3),
+    overworld_frame(gObjectEventPic_SwimmerMSwimming, 2, 4, 4),
+    overworld_frame(gObjectEventPic_SwimmerMSwimming, 2, 4, 5),
+    overworld_frame(gObjectEventPic_SwimmerMSwimming, 2, 4, 6),
+    overworld_frame(gObjectEventPic_SwimmerMSwimming, 2, 4, 7),
+    overworld_frame(gObjectEventPic_SwimmerMSwimming, 2, 4, 8),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_SSWake[] = {
