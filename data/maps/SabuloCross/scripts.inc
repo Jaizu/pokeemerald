@@ -190,7 +190,7 @@ SabuloCross_Text_CelestePostBattle:
 	.string "are the strongest.\p"
 	.string "That's why there's so many of them!$"
 
-SabuloCross_EventScript_Rocker::
+SabuloCross_EventScript_SwimmerM::
 	msgbox SabuloCross_Text_ThatCaveOverThereIsASecretTemple, MSGBOX_NPC
 	end
 

@@ -379,14 +379,19 @@ static void SetCutGrassMetatile(s16 x, s16 y)
     case METATILE_Fortree_SecretBase_LongGrass_BottomRight:
         MapGridSetMetatileIdAt(x, y, METATILE_Fortree_SecretBase_LongGrass_TopRight);
         break;
-    case METATILE_Lavaridge_NormalGrass:
-    case METATILE_Lavaridge_AshGrass:
-        MapGridSetMetatileIdAt(x, y, METATILE_Lavaridge_LavaField);
+    case METATILE_Lavaridge_TallGrass_SafariTreeLeft:
+        MapGridSetMetatileIdAt(x, y, METATILE_Lavaridge_Grass_SafariTreeLeft);
         break;
-    case METATILE_Fallarbor_NormalGrass:
-    case METATILE_Fallarbor_AshGrass:
-        MapGridSetMetatileIdAt(x, y, METATILE_Fallarbor_AshField);
+    case METATILE_Lavaridge_TallGrass_SafariTreeMiddle:
+        MapGridSetMetatileIdAt(x, y, METATILE_Lavaridge_Grass_SafariTreeMiddle);
         break;
+    case METATILE_Lavaridge_TallGrass_SafariTreeRight:
+        MapGridSetMetatileIdAt(x, y, METATILE_Lavaridge_Grass_SafariTreeRight);
+        break;
+    // case METATILE_Fallarbor_NormalGrass:
+    // case METATILE_Fallarbor_AshGrass:
+        // MapGridSetMetatileIdAt(x, y, METATILE_Fallarbor_AshField);
+        // break;
     case METATILE_General_TallGrass_TreeUp:
         MapGridSetMetatileIdAt(x, y, METATILE_General_Grass_TreeUp);
         break;

@@ -1305,3 +1305,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/FrostbiteCave_SecretTemple/scripts.inc"
 
 	.include "data/maps/SabuloCross_SecretTemple/scripts.inc"
+
+	.include "data/maps/ValoonWay/scripts.inc"

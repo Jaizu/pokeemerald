@@ -17,6 +17,11 @@
       "direction": "up",
       "offset": -10,
       "map": "MAP_SABULO_ISLAND"
+    },
+    {
+      "direction": "down",
+      "offset": 0,
+      "map": "MAP_VALOON_WAY"
     }
   ],
   "object_events": [

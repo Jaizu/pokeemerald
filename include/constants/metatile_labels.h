@@ -217,14 +217,14 @@
 #define METATILE_General_Grass_TreeLeft        0x1CE
 #define METATILE_General_Grass_TreeRight       0x1CF
 #define METATILE_General_Grass_TreeUp          0x00E
-#define METATILE_General_LongGrass             0x015
+#define METATILE_General_LongGrass             0x0A0
 #define METATILE_General_MuddySlope_Frame0     0x0E8
 #define METATILE_General_MuddySlope_Frame1     0x0E9
 #define METATILE_General_MuddySlope_Frame2     0x0EA
 #define METATILE_General_MuddySlope_Frame3     0x0EB
 #define METATILE_General_RedCaveIndent         0x1A0
 #define METATILE_General_RedCaveOpen           0x1A1
-#define METATILE_General_ReflectiveWater       0x0A1
+#define METATILE_General_ReflectiveWater       0x0B9
 #define METATILE_General_RockWall_GrassBase    0x079
 #define METATILE_General_RockWall_RockBase     0x07C
 #define METATILE_General_RockWall_SandBase     0x091
@@ -268,12 +268,12 @@
 #define METATILE_InsideShip_IntactDoor_Bottom_Unlocked  0x22B
 
 // gTileset_Lavaridge
-#define METATILE_Lavaridge_AshGrass             0x207
-#define METATILE_Lavaridge_CaveEntrance_Bottom  0x25E
-#define METATILE_Lavaridge_CaveEntrance_Top     0x256
-#define METATILE_Lavaridge_LavaField            0x271
-#define METATILE_Lavaridge_NormalGrass          0x206
-#define METATILE_Lavaridge_RockWall             0x274
+#define METATILE_Lavaridge_Grass_SafariTreeLeft        0x205
+#define METATILE_Lavaridge_Grass_SafariTreeMiddle      0x206
+#define METATILE_Lavaridge_Grass_SafariTreeRight       0x207
+#define METATILE_Lavaridge_TallGrass_SafariTreeLeft    0x201
+#define METATILE_Lavaridge_TallGrass_SafariTreeMiddle  0x202
+#define METATILE_Lavaridge_TallGrass_SafariTreeRight   0x203
 
 // gTileset_LilycoveMuseum
 #define METATILE_LilycoveMuseum_Painting0_Left   0x25A
