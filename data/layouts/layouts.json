@@ -5244,8 +5244,8 @@
     {
       "id": "LAYOUT_VALOON_WAY",
       "name": "ValoonWay_Layout",
-      "width": 110,
-      "height": 56,
+      "width": 108,
+      "height": 54,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/ValoonWay/border.bin",

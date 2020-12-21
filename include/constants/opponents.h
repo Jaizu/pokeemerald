@@ -199,14 +199,21 @@
 #define TRAINER_MAYA_AND_DAVE_1              97 // TRAINER_SHANNON in Emerald
 #define TRAINER_MICHELLE                     98
 #define TRAINER_PEGGY_1                      98 // TRAINER_MICHELLE in Emerald
-
 #define TRAINER_CAROLINE                     99
+#define TRAINER_NATASHA_1                    99 // TRAINER_CAROLINE in Emerald
 #define TRAINER_JULIE                       100
+#define TRAINER_HANS_1                      100 // TRAINER_JULIE in Emerald
 #define TRAINER_BROOKE_2                    101
+#define TRAINER_OLIVIA                      101 // TRAINER_BROOKE_2 in Emerald
 #define TRAINER_BROOKE_3                    102
+#define TRAINER_ERIC_1                      102 // TRAINER_BROOKE_3 in Emerald
 #define TRAINER_BROOKE_4                    103
+#define TRAINER_DOUG_1                      103 // TRAINER_BROOKE_4 in Emerald
 #define TRAINER_BROOKE_5                    104
+#define TRAINER_SAMMY_1                     104 // TRAINER_BROOKE_5 in Emerald
 #define TRAINER_PATRICIA                    105
+#define TRAINER_COLTON_1                    105 // TRAINER_PATRICIA in Emerald
+
 #define TRAINER_KINDRA                      106
 #define TRAINER_TAMMY                       107
 #define TRAINER_VALERIE_1                   108
@@ -231,7 +238,7 @@
 #define TRAINER_JESSICA_1                   127
 #define TRAINER_CONNIE                      128
 #define TRAINER_BRIDGET                     129
-#define TRAINER_OLIVIA                      130
+#define TRAINER_OLIVIA_OLD                  130 // TRAINER_OLIVIA_OLD in Emerald
 #define TRAINER_TIFFANY                     131
 #define TRAINER_JESSICA_2                   132
 #define TRAINER_JESSICA_3                   133

@@ -70,7 +70,7 @@ NestpineClimb_Text_LucyPostBattle:
 NestpineClimb_EventScript_Yoshiro::
 	lock
 	faceplayer
-	goto_if_set TRAINER_FLAGS_START + TRAINER_YOSHIRO, NestpineClimb_EventScript_YoshiroPostBattle
+	goto_if_defeated TRAINER_YOSHIRO, NestpineClimb_EventScript_YoshiroPostBattle
 	msgbox NestpineClimb_Text_HelloYoungTraveler, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_ne NestpineClimb_EventScript_DeclineYoshiro
