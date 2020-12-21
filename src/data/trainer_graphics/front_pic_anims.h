@@ -122,7 +122,7 @@ static const union AnimCmd *const sAnims_Picnicker[] ={
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_BugManiac[] ={
+static const union AnimCmd *const sAnims_Nurse[] ={
     sAnim_GeneralFrame0,
 };
 
@@ -403,7 +403,7 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_KINDLER] = sAnims_Kindler,
     [TRAINER_PIC_CAMPER] = sAnims_Camper,
     [TRAINER_PIC_PICNICKER] = sAnims_Picnicker,
-    [TRAINER_PIC_BUG_MANIAC] = sAnims_BugManiac,
+    [TRAINER_PIC_NURSE] = sAnims_Nurse,
     [TRAINER_PIC_POKEMON_BREEDER_M] = sAnims_PokemonBreederM,
     [TRAINER_PIC_PSYCHIC_M] = sAnims_PsychicM,
     [TRAINER_PIC_PSYCHIC_F] = sAnims_PsychicF,
