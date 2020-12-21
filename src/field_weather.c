@@ -778,8 +778,8 @@ void FadeScreen(u8 mode, s8 delay)
 
     if (fadeOut)
     {
-        if (useWeatherPal)
-            CpuFastCopy(gPlttBufferFaded, gPlttBufferUnfaded, 0x400);
+        // if (useWeatherPal)
+            // CpuFastCopy(gPlttBufferFaded, gPlttBufferUnfaded, 0x400);
 
         BeginNormalPaletteFade(0xFFFFFFFF, delay, 0, 16, fadeColor);
         gWeatherPtr->palProcessingState = WEATHER_PAL_STATE_SCREEN_FADING_OUT;
