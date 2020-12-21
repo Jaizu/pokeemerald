@@ -1,0 +1,21 @@
+.set LOCALID_CHEST, 1
+
+ValoonWay_SecretTemple_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, ValoonWay_SecretTemple_OnTransition
+	.byte 0
+
+ValoonWay_SecretTemple_OnTransition:
+	setvar VAR_LAST_TALKED, LOCALID_CHEST
+	goto_if_set FLAG_RECEIVED_VALOON_WAY_SECRET_TEMPLE_AERODACTYLITE, EventScript_SetChestOpened
+	end
+
+ValoonWay_SecretTemple_EventScript_Chest::
+	lock
+	goto_if_set FLAG_RECEIVED_VALOON_WAY_SECRET_TEMPLE_AERODACTYLITE, EventScript_EmptyChest
+	call EventScript_OpenChest
+	giveitem ITEM_AERODACTYLITE
+	compare VAR_RESULT, FALSE
+	goto_if_eq EventScript_NoRoomChest
+	setflag FLAG_RECEIVED_VALOON_WAY_SECRET_TEMPLE_AERODACTYLITE
+	release
+	end

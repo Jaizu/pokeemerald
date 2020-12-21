@@ -70,6 +70,7 @@
 #define MAP_NESTPINE_CLIMB_HIDDEN_GROTTO        (6 | (2 << 8))
 #define MAP_FROSTBITE_CAVE_SECRET_TEMPLE        (7 | (2 << 8))
 #define MAP_SABULO_CROSS_SECRET_TEMPLE          (8 | (2 << 8))
+#define MAP_VALOON_WAY_SECRET_TEMPLE            (9 | (2 << 8))
 
 // Map Group 3
 #define MAP_CELANTO_TOWN_PLAYERS_HOUSE_1F (0 | (3 << 8))
