@@ -271,9 +271,11 @@
 #define METATILE_Lavaridge_Grass_SafariTreeLeft        0x205
 #define METATILE_Lavaridge_Grass_SafariTreeMiddle      0x206
 #define METATILE_Lavaridge_Grass_SafariTreeRight       0x207
+#define METATILE_Lavaridge_RedDoor                     0x29B
 #define METATILE_Lavaridge_TallGrass_SafariTreeLeft    0x201
 #define METATILE_Lavaridge_TallGrass_SafariTreeMiddle  0x202
 #define METATILE_Lavaridge_TallGrass_SafariTreeRight   0x203
+#define METATILE_Lavaridge_YellowDoor                  0x276
 
 // gTileset_LilycoveMuseum
 #define METATILE_LilycoveMuseum_Painting0_Left   0x25A

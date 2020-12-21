@@ -17,6 +17,11 @@
       "direction": "up",
       "offset": 0,
       "map": "MAP_SHARPGUST_SPAN"
+    },
+    {
+      "direction": "right",
+      "offset": 24,
+      "map": "MAP_VALOON_TOWN"
     }
   ],
   "object_events": [

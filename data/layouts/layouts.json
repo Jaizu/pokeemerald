@@ -5250,6 +5250,16 @@
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/ValoonWay/border.bin",
       "blockdata_filepath": "data/layouts/ValoonWay/map.bin"
+    },
+    {
+      "id": "LAYOUT_VALOON_TOWN",
+      "name": "ValoonTown_Layout",
+      "width": 60,
+      "height": 26,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/ValoonTown/border.bin",
+      "blockdata_filepath": "data/layouts/ValoonTown/map.bin"
     }
   ]
 }

@@ -26,10 +26,6 @@ static void _InitSecondaryTilesetAnimation(void);
 static void TilesetAnim_General(u16);
 static void TilesetAnim_Winter(u16);
 static void TilesetAnim_Building(u16);
-static void TilesetAnim_Rustboro(u16);
-static void TilesetAnim_Dewford(u16);
-static void TilesetAnim_Slateport(u16);
-static void TilesetAnim_Lavaridge(u16);
 static void TilesetAnim_EverGrande(u16);
 static void TilesetAnim_Pacifidlog(u16);
 static void TilesetAnim_Sootopolis(u16);
@@ -55,17 +51,11 @@ static void QueueAnimTiles_Winter_SandWaterEdge(u16);
 static void QueueAnimTiles_Winter_Waterfall(u16);
 static void QueueAnimTiles_Winter_LandWaterEdge(u16);
 static void QueueAnimTiles_Building_TVTurnedOn(u16);
-static void QueueAnimTiles_Rustboro_WindyWater(u16, u8);
-static void QueueAnimTiles_Rustboro_Fountain(u16);
-static void QueueAnimTiles_Dewford_Flag(u16);
-static void QueueAnimTiles_Slateport_Balloons(u16);
 static void QueueAnimTiles_BikeShop_BlinkingLights(u16);
 static void QueueAnimTiles_BattlePyramid_Torch(u16);
 static void QueueAnimTiles_BattlePyramid_StatueShadow(u16);
 static void BlendAnimPalette_BattleDome_FloorLights(u16);
 static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16);
-static void QueueAnimTiles_Lavaridge_Steam(u8);
-static void QueueAnimTiles_Lavaridge_Lava(u16);
 static void QueueAnimTiles_EverGrande_Flowers(u16, u8);
 static void QueueAnimTiles_Pacifidlog_LogBridges(u8);
 static void QueueAnimTiles_Pacifidlog_WaterCurrents(u8);
@@ -229,18 +219,6 @@ const u16 *const gTilesetAnims_Winter_LandWaterEdge[] = {
     gTilesetAnims_Winter_LandWaterEdge_Frame3
 };
 
-const u16 gTilesetAnims_Lavaridge_Steam_Frame0[] = INCBIN_U16("data/tilesets/secondary/lavaridge/anim/steam/0.4bpp");
-const u16 gTilesetAnims_Lavaridge_Steam_Frame1[] = INCBIN_U16("data/tilesets/secondary/lavaridge/anim/steam/1.4bpp");
-const u16 gTilesetAnims_Lavaridge_Steam_Frame2[] = INCBIN_U16("data/tilesets/secondary/lavaridge/anim/steam/2.4bpp");
-const u16 gTilesetAnims_Lavaridge_Steam_Frame3[] = INCBIN_U16("data/tilesets/secondary/lavaridge/anim/steam/3.4bpp");
-
-const u16 *const gTilesetAnims_Lavaridge_Steam[] = {
-    gTilesetAnims_Lavaridge_Steam_Frame0,
-    gTilesetAnims_Lavaridge_Steam_Frame1,
-    gTilesetAnims_Lavaridge_Steam_Frame2,
-    gTilesetAnims_Lavaridge_Steam_Frame3
-};
-
 const u16 gTilesetAnims_Pacifidlog_LogBridges_Frame0[] = INCBIN_U16("data/tilesets/secondary/pacifidlog/anim/log_bridges/0.4bpp");
 const u16 gTilesetAnims_Pacifidlog_LogBridges_Frame1[] = INCBIN_U16("data/tilesets/secondary/pacifidlog/anim/log_bridges/1.4bpp");
 const u16 gTilesetAnims_Pacifidlog_LogBridges_Frame2[] = INCBIN_U16("data/tilesets/secondary/pacifidlog/anim/log_bridges/2.4bpp");
@@ -284,61 +262,21 @@ const u16 *const gTilesetAnims_Pacifidlog_WaterCurrents[] = {
     gTilesetAnims_Pacifidlog_WaterCurrents_Frame7
 };
 
-const u16 gTilesetAnims_Rustboro_WindyWater_Frame0[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/windy_water/0.4bpp");
-const u16 gTilesetAnims_Rustboro_WindyWater_Frame1[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/windy_water/1.4bpp");
-const u16 gTilesetAnims_Rustboro_WindyWater_Frame2[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/windy_water/2.4bpp");
-const u16 gTilesetAnims_Rustboro_WindyWater_Frame3[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/windy_water/3.4bpp");
-const u16 gTilesetAnims_Rustboro_WindyWater_Frame4[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/windy_water/4.4bpp");
-const u16 gTilesetAnims_Rustboro_WindyWater_Frame5[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/windy_water/5.4bpp");
-const u16 gTilesetAnims_Rustboro_WindyWater_Frame6[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/windy_water/6.4bpp");
-const u16 gTilesetAnims_Rustboro_WindyWater_Frame7[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/windy_water/7.4bpp");
-
-u16 *const gTilesetAnims_Rustboro_WindyWater_VDests[] = {
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 128)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 132)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 136)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 140)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 144)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 148)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 152)),
-    (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 156))
-};
-
-const u16 *const gTilesetAnims_Rustboro_WindyWater[] = {
-    gTilesetAnims_Rustboro_WindyWater_Frame0,
-    gTilesetAnims_Rustboro_WindyWater_Frame1,
-    gTilesetAnims_Rustboro_WindyWater_Frame2,
-    gTilesetAnims_Rustboro_WindyWater_Frame3,
-    gTilesetAnims_Rustboro_WindyWater_Frame4,
-    gTilesetAnims_Rustboro_WindyWater_Frame5,
-    gTilesetAnims_Rustboro_WindyWater_Frame6,
-    gTilesetAnims_Rustboro_WindyWater_Frame7
-};
-
-const u16 gTilesetAnims_Rustboro_Fountain_Frame0[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/fountain/0.4bpp");
-const u16 gTilesetAnims_Rustboro_Fountain_Frame1[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/fountain/1.4bpp");
-const u16 tileset_anims_space_2[16] = {};
-
-const u16 *const gTilesetAnims_Rustboro_Fountain[] = {
-    gTilesetAnims_Rustboro_Fountain_Frame0,
-    gTilesetAnims_Rustboro_Fountain_Frame1
-};
-
-const u16 gTilesetAnims_Lavaridge_Cave_Lava_Frame0[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/0.4bpp");
-const u16 gTilesetAnims_Lavaridge_Cave_Lava_Frame1[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/1.4bpp");
-const u16 gTilesetAnims_Lavaridge_Cave_Lava_Frame2[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/2.4bpp");
-const u16 gTilesetAnims_Lavaridge_Cave_Lava_Frame3[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/3.4bpp");
-const u16 gTilesetAnims_Lavaridge_Cave_Lava_Frame4[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/4.4bpp");
-const u16 gTilesetAnims_Lavaridge_Cave_Lava_Frame5[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/5.4bpp");
-const u16 gTilesetAnims_Lavaridge_Cave_Lava_Frame6[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/6.4bpp");
-const u16 gTilesetAnims_Lavaridge_Cave_Lava_Frame7[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/7.4bpp");
+const u16 gTilesetAnims_Cave_Lava_Frame0[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/0.4bpp");
+const u16 gTilesetAnims_Cave_Lava_Frame1[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/1.4bpp");
+const u16 gTilesetAnims_Cave_Lava_Frame2[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/2.4bpp");
+const u16 gTilesetAnims_Cave_Lava_Frame3[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/3.4bpp");
+const u16 gTilesetAnims_Cave_Lava_Frame4[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/4.4bpp");
+const u16 gTilesetAnims_Cave_Lava_Frame5[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/5.4bpp");
+const u16 gTilesetAnims_Cave_Lava_Frame6[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/6.4bpp");
+const u16 gTilesetAnims_Cave_Lava_Frame7[] = INCBIN_U16("data/tilesets/secondary/cave/anim/lava/7.4bpp");
 const u16 tileset_anims_space_3[16] = {};
 
-const u16 *const gTilesetAnims_Lavaridge_Cave_Lava[] = {
-    gTilesetAnims_Lavaridge_Cave_Lava_Frame0,
-    gTilesetAnims_Lavaridge_Cave_Lava_Frame1,
-    gTilesetAnims_Lavaridge_Cave_Lava_Frame2,
-    gTilesetAnims_Lavaridge_Cave_Lava_Frame3
+const u16 *const gTilesetAnims_Cave_Lava[] = {
+    gTilesetAnims_Cave_Lava_Frame0,
+    gTilesetAnims_Cave_Lava_Frame1,
+    gTilesetAnims_Cave_Lava_Frame2,
+    gTilesetAnims_Cave_Lava_Frame3
 };
 
 const u16 gTilesetAnims_EverGrande_Flowers_Frame0[] = INCBIN_U16("data/tilesets/secondary/ever_grande/anim/flowers/0.4bpp");
@@ -373,18 +311,6 @@ const u16 *const gTilesetAnims_EverGrande_Flowers[] = {
     gTilesetAnims_EverGrande_Flowers_Frame7
 };
 
-const u16 gTilesetAnims_Dewford_Flag_Frame0[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/flag/0.4bpp");
-const u16 gTilesetAnims_Dewford_Flag_Frame1[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/flag/1.4bpp");
-const u16 gTilesetAnims_Dewford_Flag_Frame2[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/flag/2.4bpp");
-const u16 gTilesetAnims_Dewford_Flag_Frame3[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/flag/3.4bpp");
-
-const u16 *const gTilesetAnims_Dewford_Flag[] = {
-    gTilesetAnims_Dewford_Flag_Frame0,
-    gTilesetAnims_Dewford_Flag_Frame1,
-    gTilesetAnims_Dewford_Flag_Frame2,
-    gTilesetAnims_Dewford_Flag_Frame3
-};
-
 const u16 gTilesetAnims_BattleFrontierOutsideWest_Flag_Frame0[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_west/anim/flag/0.4bpp");
 const u16 gTilesetAnims_BattleFrontierOutsideWest_Flag_Frame1[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_west/anim/flag/1.4bpp");
 const u16 gTilesetAnims_BattleFrontierOutsideWest_Flag_Frame2[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_west/anim/flag/2.4bpp");
@@ -407,18 +333,6 @@ const u16 *const gTilesetAnims_BattleFrontierOutsideEast_Flag[] = {
     gTilesetAnims_BattleFrontierOutsideEast_Flag_Frame1,
     gTilesetAnims_BattleFrontierOutsideEast_Flag_Frame2,
     gTilesetAnims_BattleFrontierOutsideEast_Flag_Frame3
-};
-
-const u16 gTilesetAnims_Slateport_Balloons_Frame0[] = INCBIN_U16("data/tilesets/secondary/slateport/anim/balloons/0.4bpp");
-const u16 gTilesetAnims_Slateport_Balloons_Frame1[] = INCBIN_U16("data/tilesets/secondary/slateport/anim/balloons/1.4bpp");
-const u16 gTilesetAnims_Slateport_Balloons_Frame2[] = INCBIN_U16("data/tilesets/secondary/slateport/anim/balloons/2.4bpp");
-const u16 gTilesetAnims_Slateport_Balloons_Frame3[] = INCBIN_U16("data/tilesets/secondary/slateport/anim/balloons/3.4bpp");
-
-const u16 *const gTilesetAnims_Slateport_Balloons[] = {
-    gTilesetAnims_Slateport_Balloons_Frame0,
-    gTilesetAnims_Slateport_Balloons_Frame1,
-    gTilesetAnims_Slateport_Balloons_Frame2,
-    gTilesetAnims_Slateport_Balloons_Frame3
 };
 
 const u16 gTilesetAnims_Building_TvTurnedOn_Frame0[] = INCBIN_U16("data/tilesets/primary/building/anim/tv_turned_on/0.4bpp");
@@ -757,14 +671,21 @@ void InitTilesetAnim_Slateport(void)
 {
     sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
-    sSecondaryTilesetAnimCallback = TilesetAnim_Slateport;
+    sSecondaryTilesetAnimCallback = NULL;
+}
+
+void InitTilesetAnim_Mauville(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = NULL;
 }
 
 void InitTilesetAnim_Lavaridge(void)
 {
     sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
-    sSecondaryTilesetAnimCallback = TilesetAnim_Lavaridge;
+    sSecondaryTilesetAnimCallback = NULL;
 }
 
 void InitTilesetAnim_Fallarbor(void)
@@ -893,49 +814,6 @@ void InitTilesetAnim_HiddenGrottoSecretTemple(void)
     sSecondaryTilesetAnimCallback = TilesetAnim_HiddenGrottoSecretTemple;
 }
 
-static void TilesetAnim_Rustboro(u16 timer)
-{
-    if (timer % 8 == 0)
-    {
-        QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 0);
-        QueueAnimTiles_Rustboro_Fountain(timer >> 3);
-    }
-    if (timer % 8 == 1)
-        QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 1);
-    if (timer % 8 == 2)
-        QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 2);
-    if (timer % 8 == 3)
-        QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 3);
-    if (timer % 8 == 4)
-        QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 4);
-    if (timer % 8 == 5)
-        QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 5);
-    if (timer % 8 == 6)
-        QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 6);
-    if (timer % 8 == 7)
-        QueueAnimTiles_Rustboro_WindyWater(timer >> 3, 7);
-}
-
-static void TilesetAnim_Dewford(u16 timer)
-{
-    if (timer % 8 == 0)
-        QueueAnimTiles_Dewford_Flag(timer >> 3);
-}
-
-static void TilesetAnim_Slateport(u16 timer)
-{
-    if (timer % 16 == 0)
-        QueueAnimTiles_Slateport_Balloons(timer >> 4);
-}
-
-static void TilesetAnim_Lavaridge(u16 timer)
-{
-    if (timer % 16 == 0)
-        QueueAnimTiles_Lavaridge_Steam(timer >> 4);
-    if (timer % 16 == 1)
-        QueueAnimTiles_Lavaridge_Lava(timer >> 4);
-}
-
 static void TilesetAnim_EverGrande(u16 timer)
 {
     if (timer % 8 == 0)
@@ -994,15 +872,6 @@ static void TilesetAnim_BattleFrontierOutsideEast(u16 timer)
         QueueAnimTiles_BattleFrontierOutsideEast_Flag(timer >> 3);
 }
 
-static void QueueAnimTiles_Lavaridge_Steam(u8 timer)
-{
-    u8 i = timer % 4;
-    AppendTilesetAnimToBuffer(gTilesetAnims_Lavaridge_Steam[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 288)), 0x80);
-
-    i = (timer + 2) % 4;
-    AppendTilesetAnimToBuffer(gTilesetAnims_Lavaridge_Steam[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 292)), 0x80);
-}
-
 static void QueueAnimTiles_Pacifidlog_LogBridges(u8 timer)
 {
     u8 i = timer % 4;
@@ -1021,26 +890,6 @@ static void QueueAnimTiles_Pacifidlog_WaterCurrents(u8 timer)
     AppendTilesetAnimToBuffer(gTilesetAnims_Pacifidlog_WaterCurrents[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 496)), 0x100);
 }
 
-static void QueueAnimTiles_Rustboro_WindyWater(u16 timer_div, u8 timer_mod)
-{
-    timer_div -= timer_mod;
-    timer_div %= 8;
-    if (gTilesetAnims_Rustboro_WindyWater[timer_div])
-        AppendTilesetAnimToBuffer(gTilesetAnims_Rustboro_WindyWater[timer_div], gTilesetAnims_Rustboro_WindyWater_VDests[timer_mod], 0x80);
-}
-
-static void QueueAnimTiles_Rustboro_Fountain(u16 timer)
-{
-    u16 i = timer % 2;
-    AppendTilesetAnimToBuffer(gTilesetAnims_Rustboro_Fountain[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 448)), 0x80);
-}
-
-static void QueueAnimTiles_Lavaridge_Lava(u16 timer)
-{
-    u16 i = timer % 4;
-    AppendTilesetAnimToBuffer(gTilesetAnims_Lavaridge_Cave_Lava[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 160)), 0x80);
-}
-
 static void QueueAnimTiles_EverGrande_Flowers(u16 timer_div, u8 timer_mod)
 {
     timer_div -= timer_mod;
@@ -1052,13 +901,7 @@ static void QueueAnimTiles_EverGrande_Flowers(u16 timer_div, u8 timer_mod)
 static void QueueAnimTiles_Cave_Lava(u16 timer)
 {
     u16 i = timer % 4;
-    AppendTilesetAnimToBuffer(gTilesetAnims_Lavaridge_Cave_Lava[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 416)), 0x80);
-}
-
-static void QueueAnimTiles_Dewford_Flag(u16 timer)
-{
-    u16 id = timer % 4;
-    AppendTilesetAnimToBuffer(gTilesetAnims_Dewford_Flag[id], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 170)), 0xC0);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Cave_Lava[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 416)), 0x80);
 }
 
 static void QueueAnimTiles_BattleFrontierOutsideWest_Flag(u16 timer)
@@ -1071,12 +914,6 @@ static void QueueAnimTiles_BattleFrontierOutsideEast_Flag(u16 timer)
 {
     u16 i = timer % 4;
     AppendTilesetAnimToBuffer(gTilesetAnims_BattleFrontierOutsideEast_Flag[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 218)), 0xC0);
-}
-
-static void QueueAnimTiles_Slateport_Balloons(u16 timer)
-{
-    u16 i = timer % 4;
-    AppendTilesetAnimToBuffer(gTilesetAnims_Slateport_Balloons[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 224)), 0x80);
 }
 
 static void TilesetAnim_MauvilleGym(u16 timer)
