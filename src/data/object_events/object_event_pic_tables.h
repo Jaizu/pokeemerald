@@ -857,8 +857,16 @@ const struct SpriteFrameImage gObjectEventPicTable_Marowak[] = {
     overworld_frame(gObjectEventPic_Marowak, 2, 2, 0),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_UnusedWooperDoll[] = {
-    obj_frame_tiles(gObjectEventPic_UnusedWooperDoll),
+const struct SpriteFrameImage gObjectEventPicTable_PkmnRangerM[] = {
+    overworld_frame(gObjectEventPic_PkmnRangerM, 2, 4, 0),
+    overworld_frame(gObjectEventPic_PkmnRangerM, 2, 4, 1),
+    overworld_frame(gObjectEventPic_PkmnRangerM, 2, 4, 2),
+    overworld_frame(gObjectEventPic_PkmnRangerM, 2, 4, 3),
+    overworld_frame(gObjectEventPic_PkmnRangerM, 2, 4, 4),
+    overworld_frame(gObjectEventPic_PkmnRangerM, 2, 4, 5),
+    overworld_frame(gObjectEventPic_PkmnRangerM, 2, 4, 6),
+    overworld_frame(gObjectEventPic_PkmnRangerM, 2, 4, 7),
+    overworld_frame(gObjectEventPic_PkmnRangerM, 2, 4, 8),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_UnusedPikachuDoll[] = {
