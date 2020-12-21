@@ -869,8 +869,10 @@ const struct SpriteFrameImage gObjectEventPicTable_PkmnRangerM[] = {
     overworld_frame(gObjectEventPic_PkmnRangerM, 2, 4, 8),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_UnusedPikachuDoll[] = {
-    obj_frame_tiles(gObjectEventPic_UnusedPikachuDoll),
+const struct SpriteFrameImage gObjectEventPicTable_Sparkles[] = {
+    overworld_frame(gObjectEventPic_Sparkles, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Sparkles, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Sparkles, 2, 2, 2),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Maractus[] = {

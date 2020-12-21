@@ -80,7 +80,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_GROWLITHE] =                &gObjectEventGraphicsInfo_Growlithe,
     [OBJ_EVENT_GFX_MAROWAK] =                  &gObjectEventGraphicsInfo_Marowak,
     [OBJ_EVENT_GFX_PKMN_RANGER_M] =            &gObjectEventGraphicsInfo_PkmnRangerM,
-    [OBJ_EVENT_GFX_UNUSED_PIKACHU_DOLL] =      &gObjectEventGraphicsInfo_UnusedPikachuDoll,
+    [OBJ_EVENT_GFX_SPARKLES] =                 &gObjectEventGraphicsInfo_Sparkles,
     [OBJ_EVENT_GFX_MARACTUS] =                 &gObjectEventGraphicsInfo_Maractus,
     [OBJ_EVENT_GFX_CUTTABLE_TREE] =            &gObjectEventGraphicsInfo_CuttableTree,
     [OBJ_EVENT_GFX_MART_EMPLOYEE] =            &gObjectEventGraphicsInfo_MartEmployee,

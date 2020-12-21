@@ -625,6 +625,14 @@ const union AnimCmd gObjectEventImageAnim_TreeCut[] =
     ANIMCMD_END,
 };
 
+const union AnimCmd gObjectEventImageAnim_Sparkle[] =
+{
+    ANIMCMD_FRAME(0, 8),
+    ANIMCMD_FRAME(1, 8),
+    ANIMCMD_FRAME(2, 8),
+    ANIMCMD_JUMP(0),
+};
+
 const union AnimCmd gObjectEventImageAnim_TakeOutRodSouth[] =
 {
     ANIMCMD_FRAME(8, 4),
@@ -1109,6 +1117,10 @@ const union AnimCmd *const gObjectEventImageAnimTable_BreakableRock[] = {
 const union AnimCmd *const gObjectEventImageAnimTable_CuttableTree[] = {
     gObjectEventImageAnim_StayStill,
     gObjectEventImageAnim_TreeCut,
+};
+
+const union AnimCmd *const gObjectEventImageAnimTable_Sparkles[] = {
+    gObjectEventImageAnim_Sparkle,
 };
 
 const union AnimCmd *const gObjectEventImageAnimTable_Fishing[] = {
