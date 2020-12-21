@@ -1,5 +1,34 @@
+.set LOCALID_ERIC, 4
+
 ValoonWay_MapScripts::
 	.byte 0
+
+ValoonWay_EventScript_RouteSign::
+	msgbox ValoonWay_Text_RouteSign, MSGBOX_SIGN
+	end
+
+ValoonWay_Text_RouteSign::
+	.string "Valoon Way\n"
+	.string "{LEFT_ARROW} Sharpgust Span {RIGHT_ARROW} Valoon Town$"
+
+ValoonWay_EventScript_TremorTrigger::
+	lockall
+	setvar VAR_0x8004, 2  @ vertical pan
+	setvar VAR_0x8005, 1  @ horizontal pan
+	setvar VAR_0x8006, 8  @ num shakes
+	setvar VAR_0x8007, 5  @ shake delay
+	special ShakeCamera
+	waitstate
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	applymovement LOCALID_ERIC, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	applymovement LOCALID_ERIC, Common_Movement_Delay48
+	waitmovement 0
+	setvar VAR_VALOON_WAY_STATE, 1
+	releaseall
+	end
 
 ValoonWay_EventScript_Natasha::
 	trainerbattle_single TRAINER_NATASHA_1, ValoonWay_Text_NatashaIntro, ValoonWay_Text_NatashaDefeat

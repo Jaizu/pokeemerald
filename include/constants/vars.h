@@ -125,7 +125,7 @@
 #define VAR_CELANTO_GROVE_STATE              0x4061 // VAR_ROUTE102_STATE in Emerald
 #define VAR_CELANTO_PATH_STATE               0x4062 // VAR_ROUTE103_STATE in Emerald
 #define VAR_ROUTE104_STATE                   0x4063
-#define VAR_ARCHAN_HILLS_STATE               0x4063
+#define VAR_ARCHAN_HILLS_STATE               0x4063 // VAR_ROUTE104_STATE in Emerald
 #define VAR_SEROS_PATH_STATE                 0x4064 // VAR_ROUTE105_STATE in Emerald
 #define VAR_AEROUS_ROAD_STATE                0x4065 // VAR_ROUTE106_STATE in Emerald
 #define VAR_NESTPINE_CLIMB_STATE             0x4066 // VAR_ROUTE107_STATE in Emerald
@@ -133,9 +133,9 @@
 #define VAR_EDAMIST_HEIGHTS_STATE            0x4068 // VAR_ROUTE109_STATE in Emerald
 #define VAR_ROUTE110_STATE                   0x4069
 #define VAR_IGNIS_ROOST_STATE                0x4069 // VAR_ROUTE110_STATE in Emerald
-#define VAR_ROUTE111_STATE                   0x406A // Unused Var
-#define VAR_ROUTE112_STATE                   0x406B // Unused Var
-#define VAR_ROUTE113_STATE                   0x406C // Unused Var
+#define VAR_SABULO_CROSS_STATE               0x406A // VAR_ROUTE111_STATE in Emerald
+#define VAR_SHARPGUST_SPAN_STATE             0x406B // VAR_ROUTE112_STATE in Emerald
+#define VAR_VALOON_WAY_STATE                 0x406C // VAR_ROUTE113_STATE in Emerald
 #define VAR_ROUTE114_STATE                   0x406D // Unused Var
 #define VAR_ROUTE115_STATE                   0x406E // Unused Var
 #define VAR_ROUTE116_STATE                   0x406F

@@ -727,7 +727,7 @@
       "y": 39,
       "elevation": 3,
       "item": "ITEM_REVIVE",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_110_REVIVE"
+      "flag": "0"
     },
     {
       "type": "hidden_item",
@@ -735,7 +735,7 @@
       "y": 45,
       "elevation": 3,
       "item": "ITEM_GREAT_BALL",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_110_GREAT_BALL"
+      "flag": "0"
     },
     {
       "type": "hidden_item",
@@ -751,7 +751,7 @@
       "y": 67,
       "elevation": 3,
       "item": "ITEM_FULL_HEAL",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_110_FULL_HEAL"
+      "flag": "0"
     },
     {
       "type": "sign",

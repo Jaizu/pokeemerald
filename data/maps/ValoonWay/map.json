@@ -110,10 +110,81 @@
       "trainer_sight_or_berry_tree_id": "3",
       "script": "ValoonWay_EventScript_Colton",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 16,
+      "y": 46,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_ItemLeafStone",
+      "flag": "FLAG_ITEM_VALOON_WAY_LEAF_STONE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 27,
+      "y": 31,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_ItemAbilityPill",
+      "flag": "FLAG_ITEM_VALOON_WAY_ABILITY_PILL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TM_BALL",
+      "x": 55,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_ItemTM30",
+      "flag": "FLAG_ITEM_VALOON_WAY_TM30"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 76,
+      "y": 46,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_ItemGyaradosite",
+      "flag": "FLAG_ITEM_VALOON_WAY_GYARADOSITE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 100,
+      "y": 46,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_ItemZinc",
+      "flag": "FLAG_ITEM_VALOON_WAY_ZINC"
     }
   ],
   "warp_events": [
-
+    {
+      "x": 100,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_VALOON_WAY",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
     {
@@ -220,9 +291,84 @@
       "y": 37,
       "elevation": 0,
       "weather": "COORD_EVENT_WEATHER_RAIN"
+    },
+    {
+      "type": "trigger",
+      "x": 42,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_VALOON_WAY_STATE",
+      "var_value": "0",
+      "script": "ValoonWay_EventScript_TremorTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 43,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_VALOON_WAY_STATE",
+      "var_value": "0",
+      "script": "ValoonWay_EventScript_TremorTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 44,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_VALOON_WAY_STATE",
+      "var_value": "0",
+      "script": "ValoonWay_EventScript_TremorTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 45,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_VALOON_WAY_STATE",
+      "var_value": "0",
+      "script": "ValoonWay_EventScript_TremorTrigger"
     }
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 71,
+      "y": 31,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ValoonWay_EventScript_RouteSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 64,
+      "y": 37,
+      "elevation": 3,
+      "item": "ITEM_ELIXIR",
+      "flag": "FLAG_HIDDEN_ITEM_VALOON_WAY_ELIXIR"
+    },
+    {
+      "type": "hidden_item",
+      "x": 81,
+      "y": 6,
+      "elevation": 3,
+      "item": "ITEM_BLUE_SHARD",
+      "flag": "FLAG_HIDDEN_ITEM_VALOON_WAY_BLUE_SHARD"
+    },
+    {
+      "type": "hidden_item",
+      "x": 88,
+      "y": 19,
+      "elevation": 3,
+      "item": "ITEM_RARE_CANDY",
+      "flag": "FLAG_HIDDEN_ITEM_VALOON_WAY_RARE_CANDY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 85,
+      "y": 35,
+      "elevation": 3,
+      "item": "ITEM_CHESTO_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_VALOON_WAY_CHESTO_BERRY"
+    }
   ]
 }

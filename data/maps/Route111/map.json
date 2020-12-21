@@ -1093,7 +1093,7 @@
       "y": 55,
       "elevation": 0,
       "item": "ITEM_PROTEIN",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_111_PROTEIN"
+      "flag": "0"
     },
     {
       "type": "hidden_item",

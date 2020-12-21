@@ -292,6 +292,30 @@ EventScript_ItemTM40::
 	finditem ITEM_TM40
 	end
 
+EventScript_ItemLeafStone::
+Route119_EventScript_ItemLeafStone::
+	finditem ITEM_LEAF_STONE
+	end
+
+EventScript_ItemAbilityPill::
+	finditem ITEM_ABILITY_CAPSULE
+	end
+
+EventScript_ItemTM30::
+	finditem ITEM_TM30
+	end
+
+EventScript_ItemGyaradosite::
+	finditem ITEM_GYARADOSITE
+	end
+
+EventScript_ItemZinc::
+Route127_EventScript_ItemZinc::
+Route121_EventScript_ItemZinc::
+Route119_EventScript_ItemZinc::
+	finditem ITEM_ZINC
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
@@ -348,24 +372,12 @@ Route117_EventScript_ItemGreatBall:: @ 8290EB9
 	finditem ITEM_GREAT_BALL
 	end
 
-Route119_EventScript_ItemZinc:: @ 8290EED
-	finditem ITEM_ZINC
-	end
-
-Route119_EventScript_ItemLeafStone:: @ 8290F07
-	finditem ITEM_LEAF_STONE
-	end
-
 Route120_EventScript_ItemNestBall:: @ 8290F6F
 	finditem ITEM_NEST_BALL
 	end
 
 Route121_EventScript_ItemCarbos:: @ 8290F89
 	finditem ITEM_CARBOS
-	end
-
-Route121_EventScript_ItemZinc:: @ 8290FA3
-	finditem ITEM_ZINC
 	end
 
 Route123_EventScript_ItemCalcium:: @ 8290FB0
@@ -398,10 +410,6 @@ Route125_EventScript_ItemBigPearl:: @ 8291018
 
 Route126_EventScript_ItemGreenShard:: @ 8291025
 	finditem ITEM_GREEN_SHARD
-	end
-
-Route127_EventScript_ItemZinc:: @ 8291032
-	finditem ITEM_ZINC
 	end
 
 Route127_EventScript_ItemCarbos:: @ 829103F
