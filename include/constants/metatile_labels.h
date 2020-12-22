@@ -268,6 +268,7 @@
 #define METATILE_InsideShip_IntactDoor_Bottom_Unlocked  0x22B
 
 // gTileset_Lavaridge
+#define METATILE_Lavaridge_Door_Yellow                 0x276
 #define METATILE_Lavaridge_Grass_SafariTreeLeft        0x205
 #define METATILE_Lavaridge_Grass_SafariTreeMiddle      0x206
 #define METATILE_Lavaridge_Grass_SafariTreeRight       0x207
@@ -275,7 +276,6 @@
 #define METATILE_Lavaridge_TallGrass_SafariTreeLeft    0x201
 #define METATILE_Lavaridge_TallGrass_SafariTreeMiddle  0x202
 #define METATILE_Lavaridge_TallGrass_SafariTreeRight   0x203
-#define METATILE_Lavaridge_YellowDoor                  0x276
 
 // gTileset_LilycoveMuseum
 #define METATILE_LilycoveMuseum_Painting0_Left   0x25A
