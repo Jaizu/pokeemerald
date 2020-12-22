@@ -226,7 +226,7 @@
 #define OBJ_EVENT_GFX_GROUDON_3                  222
 #define OBJ_EVENT_GFX_GUARD                      223
 #define OBJ_EVENT_GFX_TRICK_HOUSE_STATUE         224
-#define OBJ_EVENT_GFX_KIRLIA                     225
+#define OBJ_EVENT_GFX_NIDORINO                   225
 #define OBJ_EVENT_GFX_WEEDLE                     226
 #define OBJ_EVENT_GFX_UNION_ROOM_NURSE           227
 #define OBJ_EVENT_GFX_SUDOWOODO                  228
@@ -293,6 +293,7 @@
 #define OBJ_EVENT_GFX_UNUSED_WOOPER_DOLL         OBJ_EVENT_GFX_PKMN_RANGER_M
 #define OBJ_EVENT_GFX_UNUSED_PIKACHU_DOLL        OBJ_EVENT_GFX_SPARKLES
 #define OBJ_EVENT_GFX_CONTEST_JUDGE              OBJ_EVENT_GFX_PKMN_RANGER_F
+#define OBJ_EVENT_GFX_KIRLIA                     OBJ_EVENT_GFX_NIDORINO
 
 #define OBJ_EVENT_PAL_TAG_0 0x1100
 #define OBJ_EVENT_PAL_TAG_1 0x1101

@@ -225,7 +225,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_GROUDON_3] =                &gObjectEventGraphicsInfo_Groudon3,
     [OBJ_EVENT_GFX_GUARD] =                    &gObjectEventGraphicsInfo_Guard,
     [OBJ_EVENT_GFX_TRICK_HOUSE_STATUE] =       &gObjectEventGraphicsInfo_Statue,
-    [OBJ_EVENT_GFX_KIRLIA] =                   &gObjectEventGraphicsInfo_Kirlia,
+    [OBJ_EVENT_GFX_NIDORINO] =                 &gObjectEventGraphicsInfo_Nidorino,
     [OBJ_EVENT_GFX_WEEDLE] =                   &gObjectEventGraphicsInfo_Weedle,
     [OBJ_EVENT_GFX_UNION_ROOM_NURSE] =         &gObjectEventGraphicsInfo_UnionRoomAttendant,
     [OBJ_EVENT_GFX_SUDOWOODO] =                &gObjectEventGraphicsInfo_Sudowoodo,
