@@ -14185,6 +14185,160 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_VALOON_WAY",
+          "base_label": "gValoonWay0",
+          "land_mons": {
+            "encounter_rate": 15,
+            "mons": [
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_EKANS"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_SEVIPER"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_SKORUPI"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_YANMA"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_SKORUPI"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_YANMA"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_PANSAGE"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_PANSEAR"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_PANPOUR"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_ARBOK"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_PANPOUR"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_ARBOK"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 3,
+                "max_level": 20,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 3,
+                "max_level": 20,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_WHISCASH"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_WHISCASH"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_WHISCASH"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_WHISCASH"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 1,
+            "mons": [
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_POLIWHIRL"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_POLIWHIRL"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_LOMBRE"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_LOMBRE"
+              }
+            ]
+          }
         }
       ]
     },
