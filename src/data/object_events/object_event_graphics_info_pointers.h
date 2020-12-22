@@ -190,7 +190,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_LATIAS] =                   &gObjectEventGraphicsInfo_Latias,
     [OBJ_EVENT_GFX_LATIOS] =                   &gObjectEventGraphicsInfo_Latios,
     [OBJ_EVENT_GFX_GAMEBOY_KID] =              &gObjectEventGraphicsInfo_GameboyKid,
-    [OBJ_EVENT_GFX_CONTEST_JUDGE] =            &gObjectEventGraphicsInfo_ContestJudge,
+    [OBJ_EVENT_GFX_PKMN_RANGER_F] =            &gObjectEventGraphicsInfo_PkmnRangerF,
     [OBJ_EVENT_GFX_BRENDAN_WATERING] =         &gObjectEventGraphicsInfo_BrendanWatering,
     [OBJ_EVENT_GFX_MAY_WATERING] =             &gObjectEventGraphicsInfo_MayWatering,
     [OBJ_EVENT_GFX_BRENDAN_DECORATING] =       &gObjectEventGraphicsInfo_BrendanDecorating,

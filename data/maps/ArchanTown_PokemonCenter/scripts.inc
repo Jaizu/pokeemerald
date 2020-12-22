@@ -6,7 +6,7 @@ ArchanTown_PokemonCenter_OnTransition:
 	setrespawn HEAL_LOCATION_ARCHAN_TOWN
 	end
 
-ArchanTown_PokemonCenter_EventScript_Camper::
+ArchanTown_PokemonCenter_EventScript_PkmnRangerM::
 	msgbox ArchanTown_PokemonCenter_Text_HiddenGrottoRumors, MSGBOX_NPC
 	end
 
