@@ -83,6 +83,7 @@ static const u8 sDoorAnimTiles_BattleTentInterior[] = INCBIN_U8("graphics/door_a
 static const u8 sDoorAnimTiles_TrainerHillLobbyElevator[] = INCBIN_U8("graphics/door_anims/trainer_hill_lobby_elevator.4bpp");
 static const u8 sDoorAnimTiles_TrainerHillRoofElevator[] = INCBIN_U8("graphics/door_anims/trainer_hill_roof_elevator.4bpp");
 static const u8 sDoorAnimTiles_ValoonYellow[] = INCBIN_U8("graphics/door_anims/valoon_yellow.4bpp");
+static const u8 sDoorAnimTiles_RangersHQ[] = INCBIN_U8("graphics/door_anims/rangers_hq.4bpp");
 
 static const struct DoorAnimFrame sSmallDoorOpenAnimFrames[] =
 {
@@ -145,7 +146,7 @@ static const u8 sDoorAnimPalettes_Gym[] = {0, 0, 0, 0};
 static const u8 sDoorAnimPalettes_Littleroot[] = {10, 10, 6, 6, 6, 6, 6, 6};
 static const u8 sDoorAnimPalettes_BirchsLab[] = {8, 8, 8, 8, 8, 8, 8, 8};
 static const u8 sDoorAnimPalettes_RustboroGray[] = {10, 10, 10, 10};
-static const u8 sDoorAnimPalettes_ValoonYellow[] = {10, 10, 10, 10};
+static const u8 sDoorAnimPalettes_ValoonDoors[] = {10, 10, 10, 10};
 static const u8 sDoorAnimPalettes_FallarborLightRoof[] = {7, 7, 7, 7, 7, 7, 7, 7};
 static const u8 sDoorAnimPalettes_Lilycove[] = {8, 8, 8, 8, 8, 8, 8, 8};
 static const u8 sDoorAnimPalettes_Oldale[] = {10, 10, 9, 9, 9, 9, 9, 9};
@@ -199,7 +200,8 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_Dewford_Door_Tan,                             DOOR_SOUND_NORMAL,  0, sDoorAnimTiles_CelantoTan, sDoorAnimPalettes_CelantoTan},
     {METATILE_Slateport_Door_Tan,                           DOOR_SOUND_NORMAL,  0, sDoorAnimTiles_CelantoTan, sDoorAnimPalettes_CelantoTan},
     {METATILE_Mauville_Door_Tan,                            DOOR_SOUND_NORMAL,  0, sDoorAnimTiles_CelantoTan, sDoorAnimPalettes_CelantoTan},
-    {METATILE_Lavaridge_Door_Yellow,                        DOOR_SOUND_NORMAL,  0, sDoorAnimTiles_ValoonYellow, sDoorAnimPalettes_ValoonYellow},
+    {METATILE_Lavaridge_Door_Yellow,                        DOOR_SOUND_NORMAL,  0, sDoorAnimTiles_ValoonYellow, sDoorAnimPalettes_ValoonDoors},
+    {METATILE_Lavaridge_Door_RangersHQ,                     DOOR_SOUND_SLIDING, 0, sDoorAnimTiles_RangersHQ, sDoorAnimPalettes_ValoonDoors},
     {METATILE_Fallarbor_Door_LightRoof,                     DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_FallarborLightRoof, sDoorAnimPalettes_FallarborLightRoof},
     {METATILE_Lilycove_Door,                                DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_Lilycove, sDoorAnimPalettes_Lilycove},
     {METATILE_Lilycove_Door_Wooden,                         DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_LilycoveWooden, sDoorAnimPalettes_LilycoveWooden},
