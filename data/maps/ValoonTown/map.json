@@ -20,7 +20,123 @@
     }
   ],
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PKMN_RANGER_M",
+      "x": 17,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ValoonTown_EventScript_PkmnRangerM",
+      "flag": "FLAG_HIDE_VALOON_TOWN_PKMN_RANGER_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PKMN_RANGER_M",
+      "x": 18,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_VALOON_TOWN_PKMN_RANGERS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PKMN_RANGER_M",
+      "x": 19,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_VALOON_TOWN_PKMN_RANGERS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TWIN",
+      "x": 33,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 2,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ValoonTown_EventScript_Twin",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
+      "x": 35,
+      "y": 18,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ValoonTown_EventScript_OldMan",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PIKACHU",
+      "x": 36,
+      "y": 18,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ValoonTown_EventScript_Nidorino",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ACE_TRAINER_M",
+      "x": 34,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ValoonTown_EventScript_AceTrainerM",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_RICH_BOY",
+      "x": 47,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 3,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ValoonTown_EventScript_RichBoy",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 42,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ValoonTown_EventScript_LockedDoor",
+      "flag": "FLAG_UNLOCK_VALOON_GYM_DOOR"
+    }
   ],
   "warp_events": [
     {
@@ -81,7 +197,33 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_VALOON_TOWN_STATE",
+      "var_value": "0",
+      "script": "ValoonTown_EventScript_RangersSceneTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_VALOON_TOWN_STATE",
+      "var_value": "0",
+      "script": "ValoonTown_EventScript_RangersSceneTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_VALOON_TOWN_STATE",
+      "var_value": "0",
+      "script": "ValoonTown_EventScript_RangersSceneTrigger"
+    }
   ],
   "bg_events": [
     {

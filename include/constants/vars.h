@@ -112,6 +112,7 @@
 #define VAR_WINDMIST_CITY_STATE              0x4055 // VAR_VERDANTURF_TOWN_STATE in Emerald
 #define VAR_SABULO_ISLAND_STATE              0x4056 // VAR_PACIFIDLOG_TOWN_STATE in Emerald
 #define VAR_PETALBURG_CITY_STATE             0x4057
+#define VAR_VALOON_TOWN_STATE                0x4057 // VAR_PETALBURG_CITY_STATE in Emerald
 #define VAR_SLATEPORT_CITY_STATE             0x4058
 #define VAR_MAUVILLE_CITY_STATE              0x4059 // Unused Var
 #define VAR_RUSTBORO_CITY_STATE              0x405A

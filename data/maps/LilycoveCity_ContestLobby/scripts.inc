@@ -130,11 +130,11 @@ LilycoveCity_ContestLobby_EventScript_ShowPatron3:: @ 821A3AA
 	return
 
 LilycoveCity_ContestLobby_EventScript_ShowPatron4:: @ 821A3AE
-	clearflag FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_4
+	clearflag 0
 	return
 
 LilycoveCity_ContestLobby_EventScript_ShowTourists:: @ 821A3B2
-	clearflag FLAG_HIDE_LILYCOVE_MUSEUM_TOURISTS
+	clearflag 0
 	return
 
 LilycoveCity_ContestLobby_EventScript_SetPaintingFlag:: @ 821A3B6

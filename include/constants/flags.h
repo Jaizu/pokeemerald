@@ -153,8 +153,8 @@
 #define FLAG_RECEIVED_HM01                                  0x89
 #define FLAG_DEFEATED_SABULO_CROSS_SECRET_TEMPLE_MAROWAK    0x8A // FLAG_SCOTT_CALL_FORTREE_GYM in Emerald
 #define FLAG_RECEIVED_VALOON_WAY_SECRET_TEMPLE_AERODACTYLITE 0x8B // FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY in Emerald
+#define FLAG_UNLOCK_VALOON_GYM_DOOR                         0x8C // FLAG_RECEIVED_6_SODA_POP in Emerald
 
-#define FLAG_RECEIVED_6_SODA_POP             0x8C
 #define FLAG_DEFEATED_SEASHORE_HOUSE         0x8D
 #define FLAG_DEVON_GOODS_STOLEN              0x8E
 #define FLAG_RECOVERED_DEVON_GOODS           0x8F
@@ -817,9 +817,9 @@
 #define FLAG_HIDE_SABULO_CAVE_COULTER                               0x308 // FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_1 in Emerald
 #define FLAG_HIDE_AEROUS_ROAD_HIDDEN_GROTTO_GROWLITHE               0x309 // FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_2 in Emerald
 #define FLAG_HIDE_SABULO_CROSS_SECRET_TEMPLE_MAROWAK                0x30A // FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_3 in Emerald
+#define FLAG_HIDE_VALOON_TOWN_PKMN_RANGER_1                         0x30B // FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_4 in Emerald
+#define FLAG_HIDE_VALOON_TOWN_PKMN_RANGERS                          0x30C // FLAG_HIDE_LILYCOVE_MUSEUM_TOURISTS in Emerald
 
-#define FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_4                          0x30B
-#define FLAG_HIDE_LILYCOVE_MUSEUM_TOURISTS                          0x30C
 #define FLAG_HIDE_PETALBURG_GYM_GREETER                             0x30D
 #define FLAG_HIDE_MARINE_CAVE_KYOGRE                                0x30E
 #define FLAG_HIDE_TERRA_CAVE_GROUDON                                0x30F
