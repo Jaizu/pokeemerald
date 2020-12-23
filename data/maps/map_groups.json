@@ -11,6 +11,7 @@
     "gMapGroup_NestpineTown",
     "gMapGroup_WindmistCity",
     "gMapGroup_SabuloIsland",
+    "gMapGroup_ValoonTown",
     "gMapGroup_CelantoGrove",
     "gMapGroup_NestpineClimb",
     "gMapGroup0",
@@ -187,6 +188,9 @@
     "SabuloIsland_House2",
     "SabuloIsland_House3",
     "SabuloIsland_House4"
+  ],
+  "gMapGroup_ValoonTown": [
+    "ValoonTown_PokemonCenter"
   ],
   "gMapGroup_CelantoGrove": [
     "CelantoGrove_CableCarStation"

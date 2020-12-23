@@ -1311,3 +1311,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/ValoonWay_SecretTemple/scripts.inc"
 
 	.include "data/maps/ValoonTown/scripts.inc"
+
+	.include "data/maps/ValoonTown_PokemonCenter/scripts.inc"

@@ -17,7 +17,14 @@ ValoonTown_EventScript_LockGymDoor:
 
 ValoonTown_OnTransition::
 	setflag FLAG_VISITED_VALOON_TOWN
+	compare VAR_VALOON_TOWN_STATE, 0
+	call_if_eq ValoonTown_EventScript_MoveRanger
 	end
+
+ValoonTown_EventScript_MoveRanger::
+	setobjectxyperm LOCALID_RANGER_1, 17, 6
+	setobjectmovementtype LOCALID_RANGER_1, MOVEMENT_TYPE_FACE_RIGHT
+	return
 
 ValoonTown_EventScript_RangersSceneTrigger::
 	lockall
@@ -87,8 +94,8 @@ ValoonTown_EventScript_RangersHeadquartersSign::
 
 ValoonTown_Text_RangersHeadquartersSign::
 	.string "Valoon Rangers Headquarters\p"
-	.string "Take part in the Bug-Catching\n"
-	.string "Contest!$"
+	.string "Take part in the\n"
+	.string "Bug-Catching Contest!$"
 
 ValoonTown_EventScript_BlueShardMeisterSign::
 	msgbox ValoonTown_Text_BlueShardMeisterSign, MSGBOX_SIGN
