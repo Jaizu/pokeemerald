@@ -190,7 +190,8 @@
     "SabuloIsland_House4"
   ],
   "gMapGroup_ValoonTown": [
-    "ValoonTown_PokemonCenter"
+    "ValoonTown_PokemonCenter",
+    "ValoonTown_Mart"
   ],
   "gMapGroup_CelantoGrove": [
     "CelantoGrove_CableCarStation"

@@ -150,7 +150,7 @@
       "x": 40,
       "y": 15,
       "elevation": 0,
-      "dest_map": "MAP_VALOON_TOWN",
+      "dest_map": "MAP_VALOON_TOWN_MART",
       "dest_warp_id": 0
     },
     {
