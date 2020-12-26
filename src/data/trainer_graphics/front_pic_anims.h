@@ -170,7 +170,7 @@ static const union AnimCmd *const sAnims_Nina[] ={
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_LeaderFlannery[] ={
+static const union AnimCmd *const sAnims_Vernon[] ={
     sAnim_GeneralFrame0,
 };
 
@@ -415,7 +415,7 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_LEADER_ROXANNE] = sAnims_LeaderRoxanne,
     [TRAINER_PIC_ARIA] = sAnims_Aria,
     [TRAINER_PIC_NINA] = sAnims_Nina,
-    [TRAINER_PIC_LEADER_FLANNERY] = sAnims_LeaderFlannery,
+    [TRAINER_PIC_VERNON] = sAnims_Vernon,
     [TRAINER_PIC_LEADER_NORMAN] = sAnims_LeaderNorman,
     [TRAINER_PIC_LEADER_WINONA] = sAnims_LeaderWinona,
     [TRAINER_PIC_LEADER_TATE_AND_LIZA] = sAnims_LeaderTateAndLiza,
