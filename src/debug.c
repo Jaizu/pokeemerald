@@ -146,7 +146,7 @@ static void DebugAction_FastForward(u8 taskId)
 {
     Debug_DestroyMainMenu(taskId);
     ScriptContext2_RunNewScript(Debug_EventScript_SetUpFastForward);
-    SetWarpDestination(MAP_GROUP(SABULO_TOWER_1F), MAP_NUM(SABULO_TOWER_1F), 0, 0, 0);
+    SetWarpDestination(MAP_GROUP(VALOON_TOWN), MAP_NUM(VALOON_TOWN), 0, 0, 0);
     DoWarp();
 }
 

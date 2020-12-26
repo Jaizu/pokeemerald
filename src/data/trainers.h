@@ -4717,7 +4717,7 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_Ivan},
     },
 
-    [TRAINER_CLAUDE] =
+    [TRAINER_CLAUDE_OLD] =
     {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_FISHERMAN,
@@ -8651,7 +8651,7 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_Greg},
     },
 
-    [TRAINER_KENT] =
+    [TRAINER_KENT_OLD] =
     {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_BUG_CATCHER,
@@ -9099,7 +9099,7 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemCustomMoves = sParty_Hideo},
     },
 
-    [TRAINER_KEIGO] =
+    [TRAINER_KEIGO_OLD] =
     {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_NINJA_BOY,
@@ -10667,7 +10667,7 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_Callie},
     },
 
-    [TRAINER_CALE] =
+    [TRAINER_CALE_OLD] =
     {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_BUG_MANIAC,

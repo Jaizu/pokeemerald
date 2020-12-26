@@ -349,7 +349,7 @@ RusturfTunnel_EventScript_Grunt:: @ 822D0C2
 	waitmovement 0
 	removeobject LOCALID_BRINEY
 	removeobject LOCALID_PEEKO
-	clearflag FLAG_DEVON_GOODS_STOLEN
+	clearflag 0
 	setflag FLAG_RECOVERED_DEVON_GOODS
 	setvar VAR_RUSTBORO_CITY_STATE, 4
 	setvar VAR_BRINEY_HOUSE_STATE, 1

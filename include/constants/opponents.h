@@ -213,13 +213,19 @@
 #define TRAINER_SAMMY_1                     104 // TRAINER_BROOKE_5 in Emerald
 #define TRAINER_PATRICIA                    105
 #define TRAINER_COLTON_1                    105 // TRAINER_PATRICIA in Emerald
-
 #define TRAINER_KINDRA                      106
+#define TRAINER_JAMES                       106 // TRAINER_KINDRA in Emerald
 #define TRAINER_TAMMY                       107
+#define TRAINER_CLAUDE                      107 // TRAINER_TAMMY in Emerald
 #define TRAINER_VALERIE_1                   108
+#define TRAINER_KENT                        108 // TRAINER_VALERIE_1 in Emerald
 #define TRAINER_TASHA                       109
+#define TRAINER_RUBY                        109 // TRAINER_TASHA in Emerald
 #define TRAINER_VALERIE_2                   110
+#define TRAINER_KEIGO                       110 // TRAINER_VALERIE_2 in Emerald
 #define TRAINER_VALERIE_3                   111
+#define TRAINER_CALE                        111 // TRAINER_VALERIE_3 in Emerald
+
 #define TRAINER_VALERIE_4                   112
 #define TRAINER_VALERIE_5                   113
 #define TRAINER_CINDY_1                     114
@@ -380,6 +386,7 @@
 #define TRAINER_WATTSON_1                   267
 #define TRAINER_LEADER_NINA_1               267 // TRAINER_WATTSON_1 in Emerald
 #define TRAINER_FLANNERY_1                  268
+#define TRAINER_LEADER_VERNON_1             268 // TRAINER_FLANNERY_1 in Emerald
 #define TRAINER_NORMAN_1                    269
 #define TRAINER_WINONA_1                    270
 #define TRAINER_TATE_AND_LIZA_1             271
@@ -449,7 +456,7 @@
 #define TRAINER_WALLACE                     335
 #define TRAINER_ANDREW                      336
 #define TRAINER_IVAN                        337
-#define TRAINER_CLAUDE                      338
+#define TRAINER_CLAUDE_OLD                  338 // TRAINER_CLAUDE in Emerald
 #define TRAINER_ELLIOT_1                    339
 #define TRAINER_NED                         340
 #define TRAINER_DALE                        341
@@ -731,7 +738,7 @@
 #define TRAINER_JOSE                        617
 #define TRAINER_DOUG                        618
 #define TRAINER_GREG                        619
-#define TRAINER_KENT                        620
+#define TRAINER_KENT_OLD                    620 // TRAINER_KENT in Emerald
 #define TRAINER_JAMES_1                     621
 #define TRAINER_JAMES_2                     622
 #define TRAINER_JAMES_3                     623
@@ -763,7 +770,7 @@
 #define TRAINER_VIVIAN                      649
 #define TRAINER_DANIELLE                    650
 #define TRAINER_HIDEO                       651
-#define TRAINER_KEIGO                       652
+#define TRAINER_KEIGO_OLD                   652 // TRAINER_KEIGO in Emerald
 #define TRAINER_RILEY                       653
 #define TRAINER_FLINT                       654
 #define TRAINER_ASHLEY                      655
@@ -875,7 +882,7 @@
 #define TRAINER_RACHEL                      761
 #define TRAINER_LEONEL                      762
 #define TRAINER_CALLIE                      763
-#define TRAINER_CALE                        764
+#define TRAINER_CALE_OLD                    764 // TRAINER_CALE in Emerald
 #define TRAINER_MYLES                       765
 #define TRAINER_PAT                         766
 #define TRAINER_CRISTIN_1                   767

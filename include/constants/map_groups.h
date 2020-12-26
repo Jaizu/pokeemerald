@@ -1,10 +1,6 @@
 #ifndef GUARD_CONSTANTS_MAP_GROUPS_H
 #define GUARD_CONSTANTS_MAP_GROUPS_H
 
-//
-// DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/map_groups.json
-//
-
 // Map Group 0
 #define MAP_CELANTO_TOWN    (0 | (0 << 8))
 #define MAP_ARCHAN_TOWN     (1 | (0 << 8))
@@ -148,6 +144,7 @@
 // Map Group 10
 #define MAP_VALOON_TOWN_POKEMON_CENTER (0 | (10 << 8))
 #define MAP_VALOON_TOWN_MART           (1 | (10 << 8))
+#define MAP_VALOON_TOWN_GYM            (2 | (10 << 8))
 
 // Map Group 11
 #define MAP_CELANTO_GROVE_CABLE_CAR_STATION (0 | (11 << 8))

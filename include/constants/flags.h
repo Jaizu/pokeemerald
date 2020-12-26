@@ -155,8 +155,8 @@
 #define FLAG_RECEIVED_VALOON_WAY_SECRET_TEMPLE_AERODACTYLITE 0x8B // FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY in Emerald
 #define FLAG_UNLOCK_VALOON_GYM_DOOR                         0x8C // FLAG_RECEIVED_6_SODA_POP in Emerald
 #define FLAG_RECEIVED_VALOON_TOWN_AIR_BALLOON               0x8D // FLAG_DEFEATED_SEASHORE_HOUSE in Emerald
+#define FLAG_RECEIVED_TM49                                  0x8E // FLAG_DEVON_GOODS_STOLEN in Emerald
 
-#define FLAG_DEVON_GOODS_STOLEN              0x8E
 #define FLAG_RECOVERED_DEVON_GOODS           0x8F
 #define FLAG_RETURNED_DEVON_GOODS            0x90
 #define FLAG_CAUGHT_LUGIA                    0x91
@@ -278,7 +278,7 @@
 #define FLAG_RECEIVED_OLD_ROD                0x101
 #define FLAG_RECEIVED_COIN_CASE              0x102
 #define FLAG_RETURNED_RED_OR_BLUE_ORB        0x103
-#define FLAG_RECEIVED_TM49                   0x104
+#define FLAG_RECEIVED_TM49_OLD               0x104 // FLAG_RECEIVED_TM49 in Emerald
 #define FLAG_RECEIVED_TM28                   0x105
 #define FLAG_RECEIVED_TM09                   0x106
 #define FLAG_ENTERED_ELITE_FOUR              0x107
@@ -1316,6 +1316,7 @@
 #define FLAG_DEFEATED_MAUVILLE_GYM                                  0x4F2
 #define FLAG_DEFEATED_WINDMIST_GYM                                  0x4F2 // FLAG_DEFEATED_MAUVILLE_GYM in Emerald
 #define FLAG_DEFEATED_LAVARIDGE_GYM                                 0x4F3
+#define FLAG_DEFEATED_VALOON_GYM                                    0x4F3 // FLAG_DEFEATED_LAVARIDGE_GYM in Emerald
 #define FLAG_DEFEATED_PETALBURG_GYM                                 0x4F4
 #define FLAG_DEFEATED_FORTREE_GYM                                   0x4F5
 #define FLAG_DEFEATED_MOSSDEEP_GYM                                  0x4F6

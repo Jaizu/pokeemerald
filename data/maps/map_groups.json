@@ -191,7 +191,8 @@
   ],
   "gMapGroup_ValoonTown": [
     "ValoonTown_PokemonCenter",
-    "ValoonTown_Mart"
+    "ValoonTown_Mart",
+    "ValoonTown_Gym"
   ],
   "gMapGroup_CelantoGrove": [
     "CelantoGrove_CableCarStation"

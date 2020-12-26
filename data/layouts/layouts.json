@@ -5260,6 +5260,16 @@
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/ValoonTown/border.bin",
       "blockdata_filepath": "data/layouts/ValoonTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_VALOON_TOWN_GYM",
+      "name": "ValoonTown_Gym_Layout",
+      "width": 15,
+      "height": 23,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_DewfordGym",
+      "border_filepath": "data/layouts/ValoonTown_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/ValoonTown_Gym/map.bin"
     }
   ]
 }

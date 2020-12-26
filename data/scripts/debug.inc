@@ -345,13 +345,62 @@
 		setflag FLAG_RECEIVED_MEGA_RING
 		// Belle leaves
 		setflag FLAG_HIDE_SABULO_TOWER_6F_2R_BELLE
-		setvar VAR_SABULO_TOWER_STATE, 1
-		setvar VAR_SABULO_ISLAND_STATE, 1
+		// SABULO ISLAND
+		// Regirock cutscene, Sabulo Cave guard flees
+		setflag FLAG_HIDE_SABULO_ISLAND_SABULO_CAVE_GUARD
+		// Fight the New Elders
+		settrainerflag TRAINER_SABULO_ISLAND_GRUNT_1
+		settrainerflag TRAINER_SABULO_ISLAND_GRUNT_2
+		settrainerflag TRAINER_SABULO_ISLAND_ENOCH
+		// SABULO CAVE
+		// Obtain Ragged Map item
+		// TODO:: Add Ragged Map item
+		// additem ITEM_RAGGED_MAP
+		// Obtain HM03 from Coulter
+		additem ITEM_HM03
+		// SABULO ISLAND
+		// Receive Kanto starter from Belle
+		setflag FLAG_DIDNT_RECEIVE_KANTO_STARTER
+		setvar VAR_SABULO_TOWER_STATE, 3
+		setvar VAR_SABULO_ISLAND_STATE, 5
+		// SABULO CROSS
+		// Fight Trainers
+		settrainerflag TRAINER_FELIX_1
+		settrainerflag TRAINER_ESTEBAN_1
+		settrainerflag TRAINER_KRISTOFF_1
+		settrainerflag TRAINER_STEPHAN_1
+		settrainerflag TRAINER_CELESTE_1
+		// SHARPGUST SPAN
+		// Fight Trainers
+		settrainerflag TRAINER_MAYA_AND_DAVE_1
+		settrainerflag TRAINER_PEGGY_1
+		// VALOON WAY
+		// Fight Trainers
+		settrainerflag TRAINER_NATASHA_1
+		settrainerflag TRAINER_HANS_1
+		settrainerflag TRAINER_OLIVIA
+		// Tremor scene
+		setvar VAR_VALOON_WAY_STATE, 1
+		// Fight Trainers
+		settrainerflag TRAINER_ERIC_1
+		settrainerflag TRAINER_DOUG_1
+		settrainerflag TRAINER_SAMMY_1
+		settrainerflag TRAINER_COLTON_1
+		// VALOON TOWN
+		// Set visited flag
+		setflag FLAG_VISITED_VALOON_TOWN
+		// Rangers leaving for Nemesis Cave scene
+		setflag FLAG_HIDE_VALOON_TOWN_PKMN_RANGERS
+		setflag FLAG_HIDE_VALOON_TOWN_PKMN_RANGER_1
+		setvar VAR_VALOON_TOWN_STATE, 1
+		// Unlock Gym for testing
+		setflag FLAG_UNLOCK_VALOON_GYM_DOOR
 		end
 	
 	Debug_EventScript_GetParty::
 		givemon SPECIES_GALVANTULA, 32, ITEM_NONE
 		givemon SPECIES_EXCADRILL, 32, ITEM_NONE
+		givemon SPECIES_VENUSAUR, 32, ITEM_VENUSAURITE
 		givemon SPECIES_INFERNAPE, 32, ITEM_NONE
 		end
 	

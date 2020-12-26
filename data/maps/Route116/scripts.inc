@@ -36,7 +36,7 @@ Route116_EventScript_WandasBoyfriend:: @ 81F2C70
 	lock
 	faceplayer
 	goto_if_set FLAG_RECOVERED_DEVON_GOODS, Route116_EventScript_BoyfriendGruntLeftTunnel
-	goto_if_set FLAG_DEVON_GOODS_STOLEN, Route116_EventScript_BoyfriendGruntInTunnel
+	goto_if_set 0, Route116_EventScript_BoyfriendGruntInTunnel
 	msgbox Route116_Text_WantToDigTunnel, MSGBOX_DEFAULT
 	release
 	end

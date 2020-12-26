@@ -142,7 +142,7 @@ RustboroCity_Movement_ScientistLeave: @ 81E085D
 RustboroCity_EventScript_FatMan:: @ 81E085F
 	lock
 	faceplayer
-	goto_if_set FLAG_DEVON_GOODS_STOLEN, RustboroCity_EventScript_FatManSawGrunt
+	goto_if_set 0, RustboroCity_EventScript_FatManSawGrunt
 	msgbox RustboroCity_Text_WeShortenItToDevon, MSGBOX_DEFAULT
 	release
 	end
@@ -310,7 +310,7 @@ RustboroCity_EventScript_StolenGoodsScene:: @ 81E09CD
 	removeobject LOCALID_DEVON_EMPLOYEE
 	setobjectxyperm LOCALID_DEVON_EMPLOYEE, 30, 10
 	clearflag 0
-	setflag FLAG_DEVON_GOODS_STOLEN
+	setflag 0
 	setvar VAR_RUSTBORO_CITY_STATE, 2
 	setvar VAR_RUSTURF_TUNNEL_STATE, 2
 	setvar VAR_ROUTE116_STATE, 1
