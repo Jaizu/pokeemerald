@@ -216,7 +216,7 @@ WindmistCity_Gym_Text_JuniorMelt:
 	.string "Ugh… You can pass…$"
 
 WindmistCity_Gym_EventScript_Nina::
-	trainerbattle_single TRAINER_LEADER_NINA_1, WindmistCity_Gym_Text_NinaIntro, WindmistCity_Gym_Text_NinaDefeat, WindmistCity_Gym_EventScript_NinaDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_NINA_1, WindmistCity_Gym_Text_NinaIntro, WindmistCity_Gym_Text_NinaDefeat, WindmistCity_Gym_EventScript_NinaDefeated, NO_MUSIC
 	call_if_unset FLAG_RECEIVED_TM43, WindmistCity_Gym_EventScript_GiveFlameCharge
 	msgbox WindmistCity_Gym_Text_NinaPostBattle, MSGBOX_DEFAULT
 	release

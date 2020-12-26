@@ -122,7 +122,7 @@ NestpineTown_Gym_Text_CedricPostBattle:
 	.string "But my tunes were rocking, right?$"
 
 NestpineTown_Gym_EventScript_Aria::
-	trainerbattle_single TRAINER_LEADER_ARIA_1, NestpineTown_Gym_Text_AriaIntro, NestpineTown_Gym_Text_AriaDefeat, NestpineTown_Gym_EventScript_AriaDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_ARIA_1, NestpineTown_Gym_Text_AriaIntro, NestpineTown_Gym_Text_AriaDefeat, NestpineTown_Gym_EventScript_AriaDefeated, NO_MUSIC
 	call_if_unset FLAG_RECEIVED_TM19, NestpineTown_Gym_EventScript_GiveRoost
 	msgbox NestpineTown_Gym_Text_AriaPostBattle, MSGBOX_DEFAULT
 	release

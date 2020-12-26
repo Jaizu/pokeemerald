@@ -338,7 +338,7 @@ ValoonTown_Gym_Text_CaleClearPath:
 	.string "Well, you won!$"
 
 ValoonTown_Gym_EventScript_Vernon::
-	trainerbattle_single TRAINER_LEADER_VERNON_1, ValoonTown_Gym_Text_VernonIntro, ValoonTown_Gym_Text_VernonDefeat, ValoonTown_Gym_EventScript_VernonDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_VERNON_1, ValoonTown_Gym_Text_VernonIntro, ValoonTown_Gym_Text_VernonDefeat, ValoonTown_Gym_EventScript_VernonDefeated, NO_MUSIC
 	call_if_unset FLAG_RECEIVED_TM49, ValoonTown_Gym_EventScript_GiveUTurn
 	msgbox ValoonTown_Gym_Text_VernonPostBattle, MSGBOX_DEFAULT
 	release

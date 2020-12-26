@@ -309,7 +309,7 @@
 #define TRAINER_GRUNT_AQUA_HIDEOUT_7        192
 #define TRAINER_GRUNT_AQUA_HIDEOUT_8        193
 #define TRAINER_SHAWN                       194
-#define TRAINER_FERNANDO_1                  195
+#define TRAINER_FERNANDO_1_OLD              195 // TRAINER_FERNANDO_1 in Emerald
 #define TRAINER_DALTON_1                    196
 #define TRAINER_DALTON_2                    197
 #define TRAINER_DALTON_3                    198
@@ -380,13 +380,13 @@
 #define TRAINER_GLACIA                      263
 #define TRAINER_DRAKE                       264
 #define TRAINER_ROXANNE_1                   265
-#define TRAINER_LEADER_FERNANDO_1           265 // TRAINER_ROXANNE_1 in Emerald
+#define TRAINER_FERNANDO_1                  265 // TRAINER_ROXANNE_1 in Emerald
 #define TRAINER_BRAWLY_1                    266
-#define TRAINER_LEADER_ARIA_1               266 // TRAINER_BRAWLY_1 in Emerald
+#define TRAINER_ARIA_1                      266 // TRAINER_BRAWLY_1 in Emerald
 #define TRAINER_WATTSON_1                   267
-#define TRAINER_LEADER_NINA_1               267 // TRAINER_WATTSON_1 in Emerald
+#define TRAINER_NINA_1                      267 // TRAINER_WATTSON_1 in Emerald
 #define TRAINER_FLANNERY_1                  268
-#define TRAINER_LEADER_VERNON_1             268 // TRAINER_FLANNERY_1 in Emerald
+#define TRAINER_VERNON_1                    268 // TRAINER_FLANNERY_1 in Emerald
 #define TRAINER_NORMAN_1                    269
 #define TRAINER_WINONA_1                    270
 #define TRAINER_TATE_AND_LIZA_1             271

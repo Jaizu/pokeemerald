@@ -116,7 +116,7 @@ SerosVillage_Gym_Text_HanaPostBattle:
 	.string "affects their ability to battle!$"
 
 SerosVillage_Gym_EventScript_Fernando::
-	trainerbattle_single TRAINER_LEADER_FERNANDO_1, SerosVillage_Gym_Text_FernandoIntro, SerosVillage_Gym_Text_FernandoDefeat, SerosVillage_Gym_EventScript_FernandoDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_FERNANDO_1, SerosVillage_Gym_Text_FernandoIntro, SerosVillage_Gym_Text_FernandoDefeat, SerosVillage_Gym_EventScript_FernandoDefeated, NO_MUSIC
 	goto_if_unset FLAG_RECEIVED_TM03, SerosVillage_Gym_EventScript_GiveDisarmingVoice
 	msgbox SerosVillage_Gym_Text_FernandoPostBattle, MSGBOX_DEFAULT
 	release

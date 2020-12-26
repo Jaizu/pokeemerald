@@ -103,7 +103,7 @@
 		settrainerflag TRAINER_DAZ
 		settrainerflag TRAINER_HANA
 		// Fight Fernando
-		settrainerflag TRAINER_LEADER_FERNANDO_1
+		settrainerflag TRAINER_FERNANDO_1
 		setflag FLAG_FERNANDO_STORMED_OFF
 		// SEROS VILLAGE:
 		// Day-Care Man asks you to save Fernando & access granted to Wisp Forest
@@ -230,7 +230,7 @@
 		settrainerflag TRAINER_JANE
 		settrainerflag TRAINER_CEDRIC
 		// Fight Aria
-		settrainerflag TRAINER_LEADER_ARIA_1
+		settrainerflag TRAINER_ARIA_1
 		setflag FLAG_BADGE02_GET
 		setflag FLAG_DEFEATED_NESTPINE_GYM
 		// Access granted to second half of Frostbite Cave 1F 1R
@@ -307,7 +307,7 @@
 		// Complete the puzzle
 		setvar VAR_WINDMIST_GYM_STATE, 3
 		// Fight Nina
-		settrainerflag TRAINER_LEADER_NINA_1
+		settrainerflag TRAINER_NINA_1
 		setflag FLAG_BADGE03_GET
 		setflag FLAG_DEFEATED_WINDMIST_GYM
 		// WINDMIST CITY
@@ -398,10 +398,10 @@
 		end
 	
 	Debug_EventScript_GetParty::
-		givemon SPECIES_GALVANTULA, 32, ITEM_NONE
-		givemon SPECIES_EXCADRILL, 32, ITEM_NONE
-		givemon SPECIES_VENUSAUR, 32, ITEM_VENUSAURITE
-		givemon SPECIES_INFERNAPE, 32, ITEM_NONE
+		givemon SPECIES_GALVANTULA, 36, ITEM_NONE
+		givemon SPECIES_EXCADRILL, 36, ITEM_NONE
+		givemon SPECIES_VENUSAUR, 36, ITEM_VENUSAURITE
+		givemon SPECIES_INFERNAPE, 36, ITEM_NONE
 		end
 	
 	Debug_EventScript_GetItems::
