@@ -1320,41 +1320,6 @@ void DestroyRecordMixingLights(void)
     }
 }
 
-#define tX data[0]
-#define tY data[1]
-static void Task_ChangeCombeeTile(u8 taskId)
-{
-/*     u16 var;
-    PlaySE(SE_TOY_A);
-    
-    MapGridSetMetatileIdAt(gTasks[taskId].tX, gTasks[taskId].tY, METATILE_DewfordGym_CombeeTile_Active);
-    DrawWholeMapView();
-    
-    var = VarGet(VAR_VALOON_GYM_STATE) + 1;
-    VarSet(VAR_VALOON_GYM_STATE, var);
-    
-    if (var == 6)
-    {
-        MapGridSetMetatileIdAt(7, 5, METATILE_DewfordGym_ClearedPath);
-        DrawWholeMapView();
-        
-        PlaySE(SE_PINPON);
-        
-        FlagSet(FLAG_VALOON_GYM_PATH_CLEARED);
-    }
-    
-    DestroyTask(taskId); */
-    if (gTasks[taskId].data[1] == 7)
-    {
-        PlaySE(SE_TOY_A);
-        DestroyTask(taskId);
-    }
-    else
-    {
-        gTasks[taskId].data[1]++;
-    }
-}
-
 void ChangeCombeeTile(s16 x, s16 y)
 {
     u16 var = VarGet(VAR_VALOON_GYM_STATE);
@@ -1373,5 +1338,3 @@ void ChangeCombeeTile(s16 x, s16 y)
     MapGridSetMetatileIdAt(x, y, METATILE_DewfordGym_CombeeTile_Active);
     DrawWholeMapView();
 }
-#undef tX
-#undef tY
