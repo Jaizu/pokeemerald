@@ -1269,12 +1269,12 @@ const struct SpriteFrameImage gObjectEventPicTable_Aria[] = {
     overworld_frame(gObjectEventPic_Aria, 2, 4, 0),
     overworld_frame(gObjectEventPic_Aria, 2, 4, 1),
     overworld_frame(gObjectEventPic_Aria, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Aria, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Aria, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Aria, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Aria, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Aria, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Aria, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Aria, 2, 4, 3),
+    overworld_frame(gObjectEventPic_Aria, 2, 4, 4),
+    overworld_frame(gObjectEventPic_Aria, 2, 4, 5),
+    overworld_frame(gObjectEventPic_Aria, 2, 4, 6),
+    overworld_frame(gObjectEventPic_Aria, 2, 4, 7),
+    overworld_frame(gObjectEventPic_Aria, 2, 4, 8),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Nina[] = {
@@ -1289,16 +1289,16 @@ const struct SpriteFrameImage gObjectEventPicTable_Nina[] = {
     overworld_frame(gObjectEventPic_Nina, 2, 4, 8),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_Flannery[] = {
-    overworld_frame(gObjectEventPic_Flannery, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Flannery, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Flannery, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Flannery, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Flannery, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Flannery, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Flannery, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Flannery, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Flannery, 2, 4, 2),
+const struct SpriteFrameImage gObjectEventPicTable_Vernon[] = {
+    overworld_frame(gObjectEventPic_Vernon, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Vernon, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Vernon, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Vernon, 2, 4, 3),
+    overworld_frame(gObjectEventPic_Vernon, 2, 4, 4),
+    overworld_frame(gObjectEventPic_Vernon, 2, 4, 5),
+    overworld_frame(gObjectEventPic_Vernon, 2, 4, 6),
+    overworld_frame(gObjectEventPic_Vernon, 2, 4, 7),
+    overworld_frame(gObjectEventPic_Vernon, 2, 4, 8),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Norman[] = {
