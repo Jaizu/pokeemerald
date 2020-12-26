@@ -6,10 +6,25 @@
 .set LOCALID_CALE, 7
 
 ValoonTown_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, ValoonTown_Gym_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, ValoonTown_Gym_OnTransition
 	.byte 0
 
+ValoonTown_Gym_OnLoad::
+	call_if_set FLAG_VALOON_GYM_PATH_CLEARED, ValoonTown_Gym_EventScript_ClearPathAndActivateCombeeTiles
+	end
+
+ValoonTown_Gym_EventScript_ClearPathAndActivateCombeeTiles:
+	setmetatile  7,  5, METATILE_DewfordGym_ClearedPath, 0
+	setmetatile  3, 14, METATILE_DewfordGym_CombeeTile_Active, 0
+	setmetatile 11, 14, METATILE_DewfordGym_CombeeTile_Active, 0
+	setmetatile  7, 11, METATILE_DewfordGym_CombeeTile_Active, 0
+	setmetatile 11,  6, METATILE_DewfordGym_CombeeTile_Active, 0
+	setmetatile  3,  4, METATILE_DewfordGym_CombeeTile_Active, 0
+	return
+
 ValoonTown_Gym_OnTransition::
+	call_if_unset FLAG_VALOON_GYM_PATH_CLEARED, ValoonTown_Gym_EventScript_ResetGymState
 	call_if_defeated TRAINER_JAMES, ValoonTown_Gym_EventScript_MoveJames
 	call_if_defeated TRAINER_CLAUDE, ValoonTown_Gym_EventScript_MoveClaude
 	call_if_defeated TRAINER_KENT, ValoonTown_Gym_EventScript_MoveKent
@@ -17,6 +32,10 @@ ValoonTown_Gym_OnTransition::
 	call_if_defeated TRAINER_KEIGO, ValoonTown_Gym_EventScript_MoveKeigo
 	call_if_defeated TRAINER_CALE, ValoonTown_Gym_EventScript_MoveCale
 	end
+
+ValoonTown_Gym_EventScript_ResetGymState::
+	setvar VAR_VALOON_GYM_STATE, 0
+	return
 
 ValoonTown_Gym_EventScript_MoveJames::
 	setobjectxyperm LOCALID_JAMES, 4, 13

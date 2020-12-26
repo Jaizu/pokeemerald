@@ -8,7 +8,7 @@ Route116_MapScripts:: @ 81F2C0C
 	.byte 0
 
 Route116_OnTransition: @ 81F2C1C
-	call_if_set FLAG_RECOVERED_DEVON_GOODS, Route116_EventScript_SetWandasBoyfriendPos
+	call_if_set 0, Route116_EventScript_SetWandasBoyfriendPos
 	compare VAR_SHOULD_END_ABNORMAL_WEATHER, 1
 	call_if_eq AbnormalWeather_EventScript_HideMapNamePopup
 	compare VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_116_NORTH
@@ -35,7 +35,7 @@ Route116_OnFrame: @ 81F2C66
 Route116_EventScript_WandasBoyfriend:: @ 81F2C70
 	lock
 	faceplayer
-	goto_if_set FLAG_RECOVERED_DEVON_GOODS, Route116_EventScript_BoyfriendGruntLeftTunnel
+	goto_if_set 0, Route116_EventScript_BoyfriendGruntLeftTunnel
 	goto_if_set 0, Route116_EventScript_BoyfriendGruntInTunnel
 	msgbox Route116_Text_WantToDigTunnel, MSGBOX_DEFAULT
 	release

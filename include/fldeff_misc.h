@@ -28,6 +28,7 @@ bool32 FldEffPoison_IsActive(void);
 void DoWateringBerryTreeAnim(void);
 u8 CreateRecordMixingLights(void);
 void DestroyRecordMixingLights(void);
+void ChangeCombeeTile(s16 x, s16 y);
 
 extern const struct SpritePalette gSpritePalette_SecretPower_Cave;
 extern const struct SpritePalette gSpritePalette_SecretPower_Plant;

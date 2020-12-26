@@ -155,9 +155,9 @@
 #define FLAG_RECEIVED_VALOON_WAY_SECRET_TEMPLE_AERODACTYLITE 0x8B // FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY in Emerald
 #define FLAG_UNLOCK_VALOON_GYM_DOOR                         0x8C // FLAG_RECEIVED_6_SODA_POP in Emerald
 #define FLAG_RECEIVED_VALOON_TOWN_AIR_BALLOON               0x8D // FLAG_DEFEATED_SEASHORE_HOUSE in Emerald
-#define FLAG_RECEIVED_TM49                                  0x8E // FLAG_DEVON_GOODS_STOLEN in Emerald
+#define FLAG_VALOON_GYM_PATH_CLEARED                        0x8E // FLAG_DEVON_GOODS_STOLEN in Emerald
+#define FLAG_RECEIVED_TM49                                  0x8F // FLAG_RECOVERED_DEVON_GOODS in Emerald
 
-#define FLAG_RECOVERED_DEVON_GOODS           0x8F
 #define FLAG_RETURNED_DEVON_GOODS            0x90
 #define FLAG_CAUGHT_LUGIA                    0x91
 #define FLAG_CAUGHT_HO_OH                    0x92

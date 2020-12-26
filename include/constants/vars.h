@@ -181,6 +181,7 @@
 #define VAR_LITTLEROOT_RIVAL_STATE           0x408D
 #define VAR_SABULO_TOWER_STATE               0x408D // VAR_LITTLEROOT_RIVAL_STATE in Emerald
 #define VAR_BOARD_BRINEY_BOAT_STATE          0x408E
+#define VAR_VALOON_GYM_STATE                 0x408E // VAR_BOARD_BRINEY_BOAT_STATE in Emerald
 #define VAR_DEVON_CORP_3F_STATE              0x408F
 #define VAR_BRINEY_HOUSE_STATE               0x4090
 #define VAR_UNUSED_0x4091                    0x4091 // Unused Var

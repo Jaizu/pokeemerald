@@ -583,6 +583,12 @@ static bool8 TryStartMiscWalkingScripts(u16 metatileBehavior)
         PlaySecretBaseMusicNoteMatSound(MapGridGetMetatileIdAt(x, y));
         return FALSE;
     }
+    else if (MetatileBehavior_IsValoonGymCombeeTile(metatileBehavior) == TRUE)
+    {
+        PlayerGetDestCoords(&x, &y);
+        ChangeCombeeTile(x, y);
+        return FALSE;
+    }
     return FALSE;
 }
 

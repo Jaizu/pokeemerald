@@ -163,5 +163,7 @@ bool8 MetatileBehavior_IsDirectionalDownLeftStairWarp(u8 metatileBehavior);
 bool8 MetatileBehavior_IsDirectionalStairWarp(u8 metatileBehavior);
 // hidden grotto
 bool8 MetatileBehavior_IsHiddenGrottoTree(u8 metatileBehavior);
+// valoon gym
+bool8 MetatileBehavior_IsValoonGymCombeeTile(u8 metatileBehavior);
 
 #endif // GUARD_METATILE_BEHAVIOR

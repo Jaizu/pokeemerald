@@ -36,7 +36,7 @@ RustboroCity_DevonCorp_1F_EventScript_StairGuard:: @ 8211293
 	lock
 	faceplayer
 	goto_if_set FLAG_RETURNED_DEVON_GOODS, RustboroCity_DevonCorp_1F_EventScript_AlwaysWelcome
-	goto_if_set FLAG_RECOVERED_DEVON_GOODS, RustboroCity_DevonCorp_1F_EventScript_GotRobbed
+	goto_if_set 0, RustboroCity_DevonCorp_1F_EventScript_GotRobbed
 	goto_if_set 0, RustboroCity_DevonCorp_1F_EventScript_GotRobbed
 	msgbox RustboroCity_DevonCorp_1F_Text_OnlyAuthorizedPeopleEnter, MSGBOX_DEFAULT
 	release
@@ -56,7 +56,7 @@ RustboroCity_DevonCorp_1F_EventScript_Greeter:: @ 82112CE
 	lock
 	faceplayer
 	goto_if_set FLAG_RETURNED_DEVON_GOODS, RustboroCity_DevonCorp_1F_EventScript_WelcomeToDevonCorp
-	goto_if_set FLAG_RECOVERED_DEVON_GOODS, RustboroCity_DevonCorp_1F_EventScript_StaffGotRobbed
+	goto_if_set 0, RustboroCity_DevonCorp_1F_EventScript_StaffGotRobbed
 	goto_if_set 0, RustboroCity_DevonCorp_1F_EventScript_StaffGotRobbed
 	msgbox RustboroCity_DevonCorp_1F_Text_WelcomeToDevonCorp, MSGBOX_DEFAULT
 	release

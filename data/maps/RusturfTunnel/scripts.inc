@@ -350,7 +350,7 @@ RusturfTunnel_EventScript_Grunt:: @ 822D0C2
 	removeobject LOCALID_BRINEY
 	removeobject LOCALID_PEEKO
 	clearflag 0
-	setflag FLAG_RECOVERED_DEVON_GOODS
+	setflag 0
 	setvar VAR_RUSTBORO_CITY_STATE, 4
 	setvar VAR_BRINEY_HOUSE_STATE, 1
 	setflag FLAG_HIDE_ROUTE_116_MR_BRINEY

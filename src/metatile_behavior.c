@@ -168,7 +168,7 @@ static const u8 sTileBitAttributes[] =
     [MB_SECRET_BASE_SPOT_BLUE_CAVE_OPEN] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_SECRET_BASE_SPOT_TREE_RIGHT] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_SECRET_BASE_SPOT_TREE_RIGHT_OPEN] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
-    [MB_UNUSED_9E] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
+    [MB_VALOON_GYM_COMBEE_TILE] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_UNUSED_9F] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_BERRY_TREE_SOIL] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_UNUSED_A1] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
@@ -1608,6 +1608,14 @@ bool8 MetatileBehavior_IsDirectionalStairWarp(u8 metatileBehavior)
 bool8 MetatileBehavior_IsHiddenGrottoTree(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_HIDDEN_GROTTO_TREE)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsValoonGymCombeeTile(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_VALOON_GYM_COMBEE_TILE)
         return TRUE;
     else
         return FALSE;

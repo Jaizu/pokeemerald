@@ -470,7 +470,7 @@ RustboroCity_Movement_EmployeeApproachPlayerFar: @ 81E0AD5
 RustboroCity_EventScript_DevonEmployee1:: @ 81E0ADD
 	lock
 	faceplayer
-	goto_if_set FLAG_RECOVERED_DEVON_GOODS, RustboroCity_EventScript_ReturnGoodsSpokeToEmployee
+	goto_if_set 0, RustboroCity_EventScript_ReturnGoodsSpokeToEmployee
 	msgbox RustboroCity_Text_ShadyCharacterTookOffTowardsTunnel, MSGBOX_DEFAULT
 	release
 	end
