@@ -21,7 +21,7 @@ TerraCave_End_OnTransition: @ 823B0D9
 	end
 
 TerraCave_End_EventScript_ShowGroudon:: @ 823B0E3
-	clearflag FLAG_HIDE_TERRA_CAVE_GROUDON
+	clearflag 0
 	setvar VAR_TEMP_1, 1
 	return
 

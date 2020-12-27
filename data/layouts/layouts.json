@@ -5300,6 +5300,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/ValoonTown_House/border.bin",
       "blockdata_filepath": "data/layouts/ValoonTown_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEMESIS_RIVER",
+      "name": "NemesisRiver_Layout",
+      "width": 60,
+      "height": 62,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/NemesisRiver/border.bin",
+      "blockdata_filepath": "data/layouts/NemesisRiver/map.bin"
     }
   ]
 }

@@ -37,6 +37,14 @@ AbandonedShip_Rooms2_1F_EventScript_ItemRevive::
 	finditem ITEM_REVIVE
 	end
 
+EventScript_ItemMaxRevive::
+MagmaHideout_4F_EventScript_MaxRevive::
+SafariZone_Southwest_EventScript_ItemMaxRevive::
+PetalburgCity_EventScript_ItemMaxRevive::
+Route133_EventScript_ItemMaxRevive::
+	finditem ITEM_MAX_REVIVE
+	end
+
 EventScript_ItemRareCandy::
 Route110_EventScript_ItemRareCandy::
 Route114_EventScript_ItemRareCandy::
@@ -316,6 +324,10 @@ Route119_EventScript_ItemZinc::
 	finditem ITEM_ZINC
 	end
 
+EventScript_ItemHelixFossil::
+	finditem ITEM_HELIX_FOSSIL
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
@@ -424,16 +436,8 @@ Route133_EventScript_ItemBigPearl:: @ 8291073
 	finditem ITEM_BIG_PEARL
 	end
 
-Route133_EventScript_ItemMaxRevive:: @ 829108D
-	finditem ITEM_MAX_REVIVE
-	end
-
 Route134_EventScript_ItemCarbos:: @ 829109A
 	finditem ITEM_CARBOS
-	end
-
-PetalburgCity_EventScript_ItemMaxRevive:: @ 82910B4
-	finditem ITEM_MAX_REVIVE
 	end
 
 MauvilleCity_EventScript_ItemXSpeed:: @ 82910CE
@@ -526,10 +530,6 @@ SafariZone_Northwest_EventScript_ItemTM22:: @ 82912BC
 
 SafariZone_North_EventScript_ItemCalcium:: @ 82912C9
 	finditem ITEM_CALCIUM
-	end
-
-SafariZone_Southwest_EventScript_ItemMaxRevive:: @ 82912D6
-	finditem ITEM_MAX_REVIVE
 	end
 
 SafariZone_Southeast_EventScript_ItemBigPearl:: @ 82912F0
@@ -654,8 +654,4 @@ MagmaHideout_2F_2R_EventScript_MaxElixir:: @ 82914EB
 
 MagmaHideout_3F_2R_EventScript_ItemPPMax:: @ 8291512
 	finditem ITEM_PP_MAX
-	end
-
-MagmaHideout_4F_EventScript_MaxRevive:: @ 829151F
-	finditem ITEM_MAX_REVIVE
 	end

@@ -22,6 +22,11 @@
       "direction": "right",
       "offset": 24,
       "map": "MAP_VALOON_TOWN"
+    },
+    {
+      "direction": "right",
+      "offset": -38,
+      "map": "MAP_NEMESIS_RIVER"
     }
   ],
   "object_events": [

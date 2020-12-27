@@ -225,8 +225,9 @@
 #define TRAINER_KEIGO                       110 // TRAINER_VALERIE_2 in Emerald
 #define TRAINER_VALERIE_3                   111
 #define TRAINER_CALE                        111 // TRAINER_VALERIE_3 in Emerald
-
 #define TRAINER_VALERIE_4                   112
+#define TRAINER_WENDY_1                     112 // TRAINER_VALERIE_4 in Emerald
+
 #define TRAINER_VALERIE_5                   113
 #define TRAINER_CINDY_1                     114
 #define TRAINER_DAPHNE                      115

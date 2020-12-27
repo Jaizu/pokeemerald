@@ -17,6 +17,11 @@
       "direction": "left",
       "offset": -24,
       "map": "MAP_VALOON_WAY"
+    },
+    {
+      "direction": "up",
+      "offset": 0,
+      "map": "MAP_NEMESIS_RIVER"
     }
   ],
   "object_events": [

@@ -271,7 +271,7 @@
       "y": 6,
       "elevation": 3,
       "item": "ITEM_TINY_MUSHROOM",
-      "flag": "FLAG_HIDDEN_ITEM_PETALBURG_WOODS_TINY_MUSHROOM_1"
+      "flag": "0"
     },
     {
       "type": "hidden_item",
@@ -279,7 +279,7 @@
       "y": 29,
       "elevation": 3,
       "item": "ITEM_TINY_MUSHROOM",
-      "flag": "FLAG_HIDDEN_ITEM_PETALBURG_WOODS_TINY_MUSHROOM_2"
+      "flag": "0"
     },
     {
       "type": "hidden_item",

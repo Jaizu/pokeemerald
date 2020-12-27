@@ -406,6 +406,7 @@
 	Debug_EventScript_GetItems::
 		additem ITEM_FULL_RESTORE, 99
 		additem ITEM_MAX_REVIVE, 99
+		additem ITEM_MAX_REPEL, 99
 		additem ITEM_MASTER_BALL, 99
 		end
 .endif

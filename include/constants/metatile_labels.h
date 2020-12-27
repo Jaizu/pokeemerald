@@ -272,6 +272,8 @@
 #define METATILE_InsideShip_IntactDoor_Bottom_Unlocked  0x22B
 
 // gTileset_Lavaridge
+#define METATILE_Lavaridge_BarbedWireFence_Bottom      0x29E
+#define METATILE_Lavaridge_BarbedWireFence_Top         0x27E
 #define METATILE_Lavaridge_Door_RangersHQ              0x29B
 #define METATILE_Lavaridge_Door_Yellow                 0x276
 #define METATILE_Lavaridge_Grass_SafariTreeLeft        0x205
