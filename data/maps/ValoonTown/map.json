@@ -60,7 +60,7 @@
       "flag": "FLAG_HIDE_VALOON_TOWN_PKMN_RANGERS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_TWIN",
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
       "x": 33,
       "y": 7,
       "elevation": 3,
@@ -69,7 +69,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ValoonTown_EventScript_Twin",
+      "script": "ValoonTown_EventScript_LittleGirl",
       "flag": "0"
     },
     {
@@ -168,17 +168,10 @@
       "dest_warp_id": 0
     },
     {
-      "x": 57,
-      "y": 5,
-      "elevation": 0,
-      "dest_map": "MAP_VALOON_TOWN",
-      "dest_warp_id": 0
-    },
-    {
       "x": 28,
       "y": 15,
       "elevation": 0,
-      "dest_map": "MAP_VALOON_TOWN",
+      "dest_map": "MAP_VALOON_TOWN_BLUE_SHARD_MEISTERS_HOUSE",
       "dest_warp_id": 0
     },
     {

@@ -114,7 +114,7 @@ ValoonTown_Text_MyJobIsToProtect::
 	.string "As a Ranger, my job is to protect\n"
 	.string "the townspeople and their Pokémon.$"
 
-ValoonTown_EventScript_Twin::
+ValoonTown_EventScript_LittleGirl::
 	msgbox ValoonTown_Text_WhenImOlder, MSGBOX_NPC
 	end
 

@@ -5280,6 +5280,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/ValoonTown_RangersHQ/border.bin",
       "blockdata_filepath": "data/layouts/ValoonTown_RangersHQ/map.bin"
+    },
+    {
+      "id": "LAYOUT_VALOON_TOWN_BLUE_SHARD_MEISTERS_HOUSE",
+      "name": "ValoonTown_BlueShardMeistersHouse_Layout",
+      "width": 13,
+      "height": 9,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/ValoonTown_BlueShardMeistersHouse/border.bin",
+      "blockdata_filepath": "data/layouts/ValoonTown_BlueShardMeistersHouse/map.bin"
     }
   ]
 }
