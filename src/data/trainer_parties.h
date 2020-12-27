@@ -3602,7 +3602,7 @@ static const struct TrainerMonItemCustomMoves sParty_Vernon1[] = {
     .lvl = 36,
     .species = SPECIES_BEEDRILL,
     .heldItem = ITEM_BEEDRILLITE,
-    .moves = {MOVE_U_TURN, MOVE_PURSUIT, MOVE_FURY_ATTACK, MOVE_AERIAL_ACE}
+    .moves = {MOVE_U_TURN, MOVE_PURSUIT, MOVE_DRILL_RUN, MOVE_AERIAL_ACE}
     }
 };
 

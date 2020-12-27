@@ -53,10 +53,10 @@ EventScript_PkmnCenterNurse_Bow:
     step_end
 
 Common_EventScript_FieldHeal::
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 	closemessage
 	playse SE_KAIFUKU
 	special HealPlayerParty
 	waitse
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 	return

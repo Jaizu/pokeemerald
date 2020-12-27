@@ -156,9 +156,9 @@
 #define FLAG_UNLOCK_VALOON_GYM_DOOR                         0x8C // FLAG_RECEIVED_6_SODA_POP in Emerald
 #define FLAG_RECEIVED_VALOON_TOWN_AIR_BALLOON               0x8D // FLAG_DEFEATED_SEASHORE_HOUSE in Emerald
 #define FLAG_VALOON_GYM_PATH_CLEARED                        0x8E // FLAG_DEVON_GOODS_STOLEN in Emerald
-#define FLAG_RECEIVED_TM49                                  0x8F // FLAG_RECOVERED_DEVON_GOODS in Emerald
+#define FLAG_RECEIVED_FREE_PARK_BALLS                       0x8F // FLAG_RECOVERED_DEVON_GOODS in Emerald
+#define FLAG_RECEIVED_TM49                                  0x90 // FLAG_RETURNED_DEVON_GOODS in Emerald
 
-#define FLAG_RETURNED_DEVON_GOODS            0x90
 #define FLAG_CAUGHT_LUGIA                    0x91
 #define FLAG_CAUGHT_HO_OH                    0x92
 #define FLAG_MR_BRINEY_SAILING_INTRO         0x93
@@ -819,8 +819,8 @@
 #define FLAG_HIDE_SABULO_CROSS_SECRET_TEMPLE_MAROWAK                0x30A // FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_3 in Emerald
 #define FLAG_HIDE_VALOON_TOWN_PKMN_RANGER_1                         0x30B // FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_4 in Emerald
 #define FLAG_HIDE_VALOON_TOWN_PKMN_RANGERS                          0x30C // FLAG_HIDE_LILYCOVE_MUSEUM_TOURISTS in Emerald
+#define FLAG_HIDE_VALOON_TOWN_RANGERS_HQ_VERNON                     0x30D // FLAG_HIDE_PETALBURG_GYM_GREETER in Emerald
 
-#define FLAG_HIDE_PETALBURG_GYM_GREETER                             0x30D
 #define FLAG_HIDE_MARINE_CAVE_KYOGRE                                0x30E
 #define FLAG_HIDE_TERRA_CAVE_GROUDON                                0x30F
 #define FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_MOM          0x310

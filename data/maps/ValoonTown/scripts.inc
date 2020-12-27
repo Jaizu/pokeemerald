@@ -88,11 +88,11 @@ ValoonTown_Text_GymSign::
 	.string "Leader: Vernon\n"
 	.string "“He wouldn't harm a Joltik!”$"
 
-ValoonTown_EventScript_RangersHeadquartersSign::
-	msgbox ValoonTown_Text_RangersHeadquartersSign, MSGBOX_SIGN
+ValoonTown_EventScript_RangersHQSign::
+	msgbox ValoonTown_Text_RangersHQSign, MSGBOX_SIGN
 	end
 
-ValoonTown_Text_RangersHeadquartersSign::
+ValoonTown_Text_RangersHQSign::
 	.string "Valoon Rangers Headquarters\p"
 	.string "Take part in the\n"
 	.string "Bug-Catching Contest!$"

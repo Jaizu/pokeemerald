@@ -672,7 +672,7 @@ Common_ShowEasyChatScreen:: @ 8271E7C
 	return
 
 Common_EventScript_ReadyPetalburgGymForBattle:: @ 8271E84
-	clearflag FLAG_HIDE_PETALBURG_GYM_GREETER
+	clearflag 0
 	setflag FLAG_PETALBURG_MART_EXPANDED_ITEMS
 	return
 
@@ -1317,3 +1317,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/ValoonTown_Mart/scripts.inc"
 
 	.include "data/maps/ValoonTown_Gym/scripts.inc"
+
+	.include "data/maps/ValoonTown_RangersHQ/scripts.inc"

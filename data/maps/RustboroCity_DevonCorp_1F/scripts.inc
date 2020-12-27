@@ -5,7 +5,7 @@ RustboroCity_DevonCorp_1F_MapScripts:: @ 8211245
 	.byte 0
 
 RustboroCity_DevonCorp_1F_OnTransition: @ 821124B
-	call_if_unset FLAG_RETURNED_DEVON_GOODS, RustboroCity_DevonCorp_1F_EventScript_BlockStairs
+	call_if_unset 0, RustboroCity_DevonCorp_1F_EventScript_BlockStairs
 	end
 
 RustboroCity_DevonCorp_1F_EventScript_BlockStairs:: @ 8211255
@@ -16,7 +16,7 @@ RustboroCity_DevonCorp_1F_EventScript_BlockStairs:: @ 8211255
 RustboroCity_DevonCorp_1F_EventScript_Employee:: @ 8211261
 	lock
 	faceplayer
-	goto_if_set FLAG_RETURNED_DEVON_GOODS, RustboroCity_DevonCorp_1F_EventScript_GoodsRecovered
+	goto_if_set 0, RustboroCity_DevonCorp_1F_EventScript_GoodsRecovered
 	goto_if_set 0, RustboroCity_DevonCorp_1F_EventScript_RobberWasntBright
 	msgbox RustboroCity_DevonCorp_1F_Text_ThoseShoesAreOurProduct, MSGBOX_DEFAULT
 	release
@@ -35,7 +35,7 @@ RustboroCity_DevonCorp_1F_EventScript_GoodsRecovered:: @ 8211289
 RustboroCity_DevonCorp_1F_EventScript_StairGuard:: @ 8211293
 	lock
 	faceplayer
-	goto_if_set FLAG_RETURNED_DEVON_GOODS, RustboroCity_DevonCorp_1F_EventScript_AlwaysWelcome
+	goto_if_set 0, RustboroCity_DevonCorp_1F_EventScript_AlwaysWelcome
 	goto_if_set 0, RustboroCity_DevonCorp_1F_EventScript_GotRobbed
 	goto_if_set 0, RustboroCity_DevonCorp_1F_EventScript_GotRobbed
 	msgbox RustboroCity_DevonCorp_1F_Text_OnlyAuthorizedPeopleEnter, MSGBOX_DEFAULT
@@ -55,7 +55,7 @@ RustboroCity_DevonCorp_1F_EventScript_GotRobbed:: @ 82112C4
 RustboroCity_DevonCorp_1F_EventScript_Greeter:: @ 82112CE
 	lock
 	faceplayer
-	goto_if_set FLAG_RETURNED_DEVON_GOODS, RustboroCity_DevonCorp_1F_EventScript_WelcomeToDevonCorp
+	goto_if_set 0, RustboroCity_DevonCorp_1F_EventScript_WelcomeToDevonCorp
 	goto_if_set 0, RustboroCity_DevonCorp_1F_EventScript_StaffGotRobbed
 	goto_if_set 0, RustboroCity_DevonCorp_1F_EventScript_StaffGotRobbed
 	msgbox RustboroCity_DevonCorp_1F_Text_WelcomeToDevonCorp, MSGBOX_DEFAULT

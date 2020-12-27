@@ -617,7 +617,7 @@ RustboroCity_EventScript_ReturnGoods:: @ 81E0C5B
 	call_if_eq RustboroCity_EventScript_BagFull
 	msgbox RustboroCity_Text_PleaseComeWithMe, MSGBOX_DEFAULT
 	closemessage
-	setflag FLAG_RETURNED_DEVON_GOODS
+	setflag 0
 	setflag 0
 	setvar VAR_RUSTBORO_CITY_STATE, 5
 	delay 30

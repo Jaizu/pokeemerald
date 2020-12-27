@@ -5270,6 +5270,16 @@
       "secondary_tileset": "gTileset_DewfordGym",
       "border_filepath": "data/layouts/ValoonTown_Gym/border.bin",
       "blockdata_filepath": "data/layouts/ValoonTown_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_VALOON_TOWN_RANGERS_HQ",
+      "name": "ValoonTown_RangersHQ_Layout",
+      "width": 16,
+      "height": 11,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/ValoonTown_RangersHQ/border.bin",
+      "blockdata_filepath": "data/layouts/ValoonTown_RangersHQ/map.bin"
     }
   ]
 }

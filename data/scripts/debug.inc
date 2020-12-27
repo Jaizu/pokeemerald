@@ -27,7 +27,7 @@
 		setflag FLAG_HIDE_CHIMCHAR_BALL
 		setflag FLAG_HIDE_PIPLUP_BALL
 		setflag FLAG_SYS_POKEMON_GET
-		setvar VAR_STARTER_MON, 1 // Chose Chimchar
+		setvar VAR_STARTER_MON, 2 // Chose Piplup
 		// Redwood leaves
 		setflag FLAG_HIDE_LIBRARY_BACK_ROOM_REDWOOD
 		// Coulter leaves
@@ -393,15 +393,14 @@
 		setflag FLAG_HIDE_VALOON_TOWN_PKMN_RANGERS
 		setflag FLAG_HIDE_VALOON_TOWN_PKMN_RANGER_1
 		setvar VAR_VALOON_TOWN_STATE, 1
-		// Unlock Gym for testing
-		setflag FLAG_UNLOCK_VALOON_GYM_DOOR
+		// setflag FLAG_UNLOCK_VALOON_GYM_DOOR
 		end
 	
 	Debug_EventScript_GetParty::
 		givemon SPECIES_GALVANTULA, 36, ITEM_NONE
 		givemon SPECIES_EXCADRILL, 36, ITEM_NONE
-		givemon SPECIES_VENUSAUR, 36, ITEM_VENUSAURITE
-		givemon SPECIES_INFERNAPE, 36, ITEM_NONE
+		givemon SPECIES_CHARIZARD, 36, ITEM_CHARIZARDITE_Y
+		givemon SPECIES_EMPOLEON, 36, ITEM_NONE
 		end
 	
 	Debug_EventScript_GetItems::
