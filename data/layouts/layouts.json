@@ -5290,6 +5290,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/ValoonTown_BlueShardMeistersHouse/border.bin",
       "blockdata_filepath": "data/layouts/ValoonTown_BlueShardMeistersHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_VALOON_TOWN_HOUSE",
+      "name": "ValoonTown_House_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/ValoonTown_House/border.bin",
+      "blockdata_filepath": "data/layouts/ValoonTown_House/map.bin"
     }
   ]
 }

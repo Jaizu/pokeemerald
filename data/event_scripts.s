@@ -1321,3 +1321,7 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/ValoonTown_RangersHQ/scripts.inc"
 
 	.include "data/maps/ValoonTown_BlueShardMeistersHouse/scripts.inc"
+
+	.include "data/maps/ValoonTown_House1/scripts.inc"
+
+	.include "data/maps/ValoonTown_House2/scripts.inc"

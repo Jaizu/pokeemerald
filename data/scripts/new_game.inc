@@ -109,5 +109,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_SABULO_TOWER_SABULO_CAVE_GUARD
 	setflag FLAG_HIDE_SABULO_CAVE_REGIROCK
 	setflag FLAG_HIDE_SABULO_CAVE_COULTER
+	setflag FLAG_HIDE_VALOON_TOWN_HOUSE_1_PKMN_RANGER_M
 	call EventScript_ResetAllBerries
 	end

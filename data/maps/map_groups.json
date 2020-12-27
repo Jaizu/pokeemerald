@@ -194,7 +194,9 @@
     "ValoonTown_Mart",
     "ValoonTown_Gym",
     "ValoonTown_RangersHQ",
-    "ValoonTown_BlueShardMeistersHouse"
+    "ValoonTown_BlueShardMeistersHouse",
+    "ValoonTown_House1",
+    "ValoonTown_House2"
   ],
   "gMapGroup_CelantoGrove": [
     "CelantoGrove_CableCarStation"
