@@ -175,7 +175,7 @@
       "x": 10,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_NEMESIS_RIVER",
+      "dest_map": "MAP_NEMESIS_RIVER_HIDDEN_GROTTO",
       "dest_warp_id": 0
     }
   ],

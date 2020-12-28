@@ -116,7 +116,8 @@
     "NestpineClimb_HiddenGrotto",
     "FrostbiteCave_SecretTemple",
     "SabuloCross_SecretTemple",
-    "ValoonWay_SecretTemple"
+    "ValoonWay_SecretTemple",
+    "NemesisRiver_HiddenGrotto"
   ],
   "gMapGroup_CelantoTown": [
     "CelantoTown_PlayersHouse_1F",

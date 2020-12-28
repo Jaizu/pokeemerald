@@ -328,6 +328,10 @@ EventScript_ItemHelixFossil::
 	finditem ITEM_HELIX_FOSSIL
 	end
 
+EventScript_ItemAltarianite::
+	finditem ITEM_ALTARIANITE
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
