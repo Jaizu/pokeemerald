@@ -1,8 +1,13 @@
 // TODO: Create Broken Tool item
 .set ITEM_BROKEN_TOOL, ITEM_FULL_RESTORE
 
+.set LOCALID_EZEKIEL, 8
+.set LOCALID_GRUNT_1, 9
+.set LOCALID_GRUNT_2, 10
+
 NemesisRiver_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, NemesisRiver_OnResume
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, NemesisRiver_OnFrame
 	.byte 0
 
 NemesisRiver_OnResume:
@@ -17,6 +22,45 @@ NemesisRiver_EventScript_ClearPathToSecretLab:
 	setmetatile 50, 17, METATILE_Lavaridge_BarbedWireFence_Bottom, 1
 	setmetatile 51, 17, METATILE_Lavaridge_BarbedWireFence_Bottom, 1
 	return
+
+NemesisRiver_OnFrame:
+	map_script_2 VAR_NEMESIS_RIVER_STATE, 1, NemesisRiver_EventScript_NewEldersScene
+	.2byte 0
+
+NemesisRiver_EventScript_NewEldersScene::
+	lockall
+	fadescreen FADE_TO_BLACK
+	setvar VAR_0x8004, 19 @ x
+	setvar VAR_0x8005, 43 @ y
+	special TeleportCamera
+	fadescreen FADE_FROM_BLACK
+	applymovement LOCALID_EZEKIEL, Common_Movement_WalkInPlaceFastestLeft
+	waitmovement 0
+	msgbox NemesisRiver_Text_NewEldersConversation, MSGBOX_DEFAULT
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_EZEKIEL
+	removeobject LOCALID_GRUNT_1
+	removeobject LOCALID_GRUNT_2
+	special ReturnCameraToPlayer
+	fadescreen FADE_FROM_BLACK
+	setvar VAR_NEMESIS_RIVER_STATE, 2
+	releaseall
+	end
+
+NemesisRiver_Text_NewEldersConversation:
+	.string "???: {COLOR BLUE}Are you sure it's here?\p"
+	.string "{COLOR DARK_GREY}Grunt: {COLOR BLUE}Well…\n"
+	.string "I sort of lost the map.\p"
+	.string "I'm not sure where we are right\n"
+	.string "now.\p"
+	.string "{COLOR DARK_GREY}???: {COLOR BLUE}…\n"
+	.string "Why didn't you say so, then?!\p"
+	.string "I'm certain this isn't the right\n"
+	.string "way.\p"
+	.string "We should go back and check the\n"
+	.string "other path.\p"
+	.string "{COLOR DARK_GREY}Grunt: {COLOR BLUE}Sorry, {COLOR GREEN}Ezekiel{COLOR BLUE}, sir!$"
 
 NemesisRiver_EventScript_RouteSign::
 	msgbox NemesisRiver_Text_RouteSign, MSGBOX_SIGN
