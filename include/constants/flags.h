@@ -160,8 +160,8 @@
 #define FLAG_RECEIVED_TM49                                  0x90 // FLAG_RETURNED_DEVON_GOODS in Emerald
 #define FLAG_RECEIVED_VS_SEEKER                             0x91 // FLAG_CAUGHT_LUGIA in Emerald
 #define FLAG_CLEAR_PATH_TO_SECRET_LAB                       0x92 // FLAG_CAUGHT_HO_OH in Emerald
+#define FLAG_NEMESIS_CAVE_RANGERS_RETURNED                  0x93 // FLAG_MR_BRINEY_SAILING_INTRO in Emerald
 
-#define FLAG_MR_BRINEY_SAILING_INTRO         0x93
 #define FLAG_DOCK_REJECTED_DEVON_GOODS       0x94
 #define FLAG_DELIVERED_DEVON_GOODS           0x95
 #define FLAG_RECEIVED_CONTEST_PASS           0x96 // Unused, leftover from R/S
@@ -822,9 +822,9 @@
 #define FLAG_HIDE_VALOON_TOWN_RANGERS_HQ_VERNON                     0x30D // FLAG_HIDE_PETALBURG_GYM_GREETER in Emerald
 #define FLAG_HIDE_VALOON_TOWN_HOUSE_1_PKMN_RANGER_M                 0x30E // FLAG_HIDE_MARINE_CAVE_KYOGRE in Emerald
 #define FLAG_HIDE_NEMESIS_RIVER_NEW_ELDERS                          0x30F // FLAG_HIDE_TERRA_CAVE_GROUDON in Emerald
+#define FLAG_HIDE_NEMESIS_CAVE_PKMN_RANGER_M                        0x310 // FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_MOM in Emerald
+#define FLAG_HIDE_NEMESIS_CAVE_PKMN_RANGERS                         0x311 // FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_MOM in Emerald
 
-#define FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_MOM          0x310
-#define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_MOM              0x311
 #define FLAG_HIDE_ROUTE_119_SCOTT                                   0x312
 #define FLAG_HIDE_LILCOVE_MOTEL_SCOTT                               0x313
 #define FLAG_HIDE_MOSSDEEP_CITY_SCOTT                               0x314

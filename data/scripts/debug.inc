@@ -393,6 +393,9 @@
 		setflag FLAG_HIDE_VALOON_TOWN_PKMN_RANGERS
 		setflag FLAG_HIDE_VALOON_TOWN_PKMN_RANGER_1
 		setvar VAR_VALOON_TOWN_STATE, 1
+		// NEMESIS RIVER
+		// Fight Trainers
+		settrainerflag TRAINER_WENDY_1
 		// setflag FLAG_UNLOCK_VALOON_GYM_DOOR
 		end
 	

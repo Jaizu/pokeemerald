@@ -111,5 +111,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_SABULO_CAVE_COULTER
 	setflag FLAG_HIDE_VALOON_TOWN_HOUSE_1_PKMN_RANGER_M
 	setflag FLAG_HIDE_NEMESIS_RIVER_NEW_ELDERS
+	setflag FLAG_HIDE_NEMESIS_CAVE_PKMN_RANGER_M
 	call EventScript_ResetAllBerries
 	end

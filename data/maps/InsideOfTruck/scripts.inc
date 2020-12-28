@@ -28,7 +28,7 @@ InsideOfTruck_EventScript_SetIntroFlagsMale:: @ 823BF20
 	setvar VAR_LITTLEROOT_INTRO_STATE, 1
 	setflag 0
 	setflag 0
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_MOM
+	setflag 0
 	setflag 0
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_POKE_BALL
 	setvar VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 1
@@ -41,7 +41,7 @@ InsideOfTruck_EventScript_SetIntroFlagsFemale:: @ 823BF46
 	setvar VAR_LITTLEROOT_INTRO_STATE, 2
 	setflag 0
 	setflag 0
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_MOM
+	setflag 0
 	setflag 0
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_POKE_BALL
 	setvar VAR_LITTLEROOT_HOUSES_STATE_MAY, 1

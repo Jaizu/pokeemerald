@@ -137,7 +137,7 @@
 #define VAR_SABULO_CROSS_STATE               0x406A // VAR_ROUTE111_STATE in Emerald
 #define VAR_SHARPGUST_SPAN_STATE             0x406B // VAR_ROUTE112_STATE in Emerald
 #define VAR_VALOON_WAY_STATE                 0x406C // VAR_ROUTE113_STATE in Emerald
-#define VAR_ROUTE114_STATE                   0x406D // Unused Var
+#define VAR_NEMESIS_RIVER_STATE              0x406D // VAR_ROUTE114_STATE in Emerald
 #define VAR_ROUTE115_STATE                   0x406E // Unused Var
 #define VAR_ROUTE116_STATE                   0x406F
 #define VAR_ROUTE117_STATE                   0x4070 // Unused Var
@@ -183,6 +183,7 @@
 #define VAR_BOARD_BRINEY_BOAT_STATE          0x408E
 #define VAR_VALOON_GYM_STATE                 0x408E // VAR_BOARD_BRINEY_BOAT_STATE in Emerald
 #define VAR_DEVON_CORP_3F_STATE              0x408F
+#define VAR_NEMESIS_CAVE_STATE               0x408F // VAR_DEVON_CORP_3F_STATE in Emerald
 #define VAR_BRINEY_HOUSE_STATE               0x4090
 #define VAR_UNUSED_0x4091                    0x4091 // Unused Var
 #define VAR_LITTLEROOT_INTRO_STATE           0x4092

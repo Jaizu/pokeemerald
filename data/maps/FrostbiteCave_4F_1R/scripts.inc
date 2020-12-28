@@ -29,6 +29,8 @@ FrostbiteCave_4F_1R_EventScript_EuniceScene::
 	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
 	compare VAR_0x8008, 0
 	call_if_eq FrostbiteCave_4F_1R_EventScript_PanCameraToEunice0
 	compare VAR_0x8008, 1
@@ -43,7 +45,8 @@ FrostbiteCave_4F_1R_EventScript_EuniceScene::
 	playse SE_PIN
 	applymovement LOCALID_SOUTH_GRUNT, Common_Movement_ExclamationMark
 	waitmovement 0
-	delay 20
+	applymovement LOCALID_SOUTH_GRUNT, Common_Movement_Delay48
+	waitmovement 0
 	applymovement LOCALID_SOUTH_GRUNT, Common_Movement_WalkInPlaceFastestUp
 	waitmovement 0
 	delay 20
@@ -61,6 +64,8 @@ FrostbiteCave_4F_1R_EventScript_EuniceScene::
 	delay 20
 	playse SE_PIN
 	applymovement LOCALID_EUNICE, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_EUNICE, Common_Movement_Delay48
 	waitmovement 0
 	msgbox FrostbiteCave_4F_1R_Text_TheChildFromTheMuseum, MSGBOX_DEFAULT
 	closemessage
@@ -215,7 +220,8 @@ FrostbiteCave_4F_1R_EventScript_EuniceBattleScene::
 	playse SE_PIN
 	applymovement LOCALID_EUNICE, Common_Movement_ExclamationMark
 	waitmovement 0
-	delay 10
+	applymovement LOCALID_EUNICE, Common_Movement_Delay48
+	waitmovement 0
 	compare VAR_0x8008, 0
 	call_if_eq FrostbiteCave_4F_1R_EventScript_TurnPlayerToEunice0
 	msgbox FrostbiteCave_4F_1R_Text_WasINotClear, MSGBOX_DEFAULT

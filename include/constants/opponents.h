@@ -227,12 +227,17 @@
 #define TRAINER_CALE                        111 // TRAINER_VALERIE_3 in Emerald
 #define TRAINER_VALERIE_4                   112
 #define TRAINER_WENDY_1                     112 // TRAINER_VALERIE_4 in Emerald
-
 #define TRAINER_VALERIE_5                   113
+#define TRAINER_AMALIA                      113 // TRAINER_VALERIE_5 in Emerald
 #define TRAINER_CINDY_1                     114
+#define TRAINER_KOICHI                      114 // TRAINER_CINDY_1 in Emerald
 #define TRAINER_DAPHNE                      115
+#define TRAINER_MARLON                      115 // TRAINER_DAPHNE in Emerald
 #define TRAINER_GRUNT_SPACE_CENTER_2        116
+#define TRAINER_INGRID                      116 // TRAINER_GRUNT_SPACE_CENTER_2 in Emerald
 #define TRAINER_CINDY_2                     117
+#define TRAINER_HIDEKI                      117 // TRAINER_CINDY_2 in Emerald
+
 #define TRAINER_BRIANNA                     118
 #define TRAINER_NAOMI                       119
 #define TRAINER_CINDY_3                     120
@@ -297,7 +302,7 @@
 #define TRAINER_TAKAO                       179
 #define TRAINER_HITOSHI                     180
 #define TRAINER_KIYO                        181
-#define TRAINER_KOICHI                      182
+#define TRAINER_KOICHI_OLD                  182
 #define TRAINER_NOB_1                       183
 #define TRAINER_NOB_2                       184
 #define TRAINER_NOB_3                       185

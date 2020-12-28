@@ -26,14 +26,14 @@ Route104_MrBrineysHouse_EventScript_SetBrineyPeekoPos:: @ 8229D50
 Route104_MrBrineysHouse_EventScript_Briney:: @ 8229D67
 	lock
 	faceplayer
-	call_if_unset FLAG_MR_BRINEY_SAILING_INTRO, Route104_MrBrineysHouse_EventScript_SailingIntro
+	call_if_unset 0, Route104_MrBrineysHouse_EventScript_SailingIntro
 	goto_if_unset FLAG_DELIVERED_STEVEN_LETTER, Route104_MrBrineysHouse_EventScript_SailBothDeliveries
 	goto_if_unset FLAG_DELIVERED_DEVON_GOODS, Route104_MrBrineysHouse_EventScript_SailDeliverPackage
 	goto Route104_MrBrineysHouse_EventScript_WhereAreWeBound
 	end
 
 Route104_MrBrineysHouse_EventScript_SailingIntro:: @ 8229D8A
-	setflag FLAG_MR_BRINEY_SAILING_INTRO
+	setflag 0
 	msgbox Route104_MrBrineysHouse_Text_WaitUpPeeko, MSGBOX_DEFAULT
 	msgbox Route104_MrBrineysHouse_Text_ItsYouLetsSailToDewford, MSGBOX_YESNO
 	compare VAR_RESULT, NO

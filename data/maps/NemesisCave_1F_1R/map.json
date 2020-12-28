@@ -2,10 +2,10 @@
   "id": "MAP_NEMESIS_CAVE_1F_1R",
   "name": "NemesisCave_1F_1R",
   "layout": "LAYOUT_NEMESIS_CAVE_1F_1R",
-  "music": "MUS_AJITO",
+  "music": "MUS_DAN01",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
+  "weather": "WEATHER_SHADE",
   "map_type": "MAP_TYPE_UNDERGROUND",
   "allow_cycling": true,
   "allow_escaping": true,
@@ -91,6 +91,110 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_ItemOldAmber",
       "flag": "FLAG_ITEM_NEMESIS_CAVE_OLD_AMBER"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "x": 15,
+      "y": 44,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "NemesisCave_1F_1R_EventScript_Amalia",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "x": 47,
+      "y": 36,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "NemesisCave_1F_1R_EventScript_Koichi",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKER",
+      "x": 4,
+      "y": 37,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "NemesisCave_1F_1R_EventScript_Marlon",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BATTLE_GIRL",
+      "x": 17,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "NemesisCave_1F_1R_EventScript_Ingrid",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 40,
+      "y": 51,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "NemesisCave_1F_1R_EventScript_Hideki",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PKMN_RANGER_M",
+      "x": 59,
+      "y": 17,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_NEMESIS_CAVE_PKMN_RANGER_M"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PKMN_RANGER_M",
+      "x": 17,
+      "y": 61,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NemesisCave_1F_1R_EventScript_PkmnRangerM",
+      "flag": "FLAG_HIDE_NEMESIS_CAVE_PKMN_RANGERS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PKMN_RANGER_M",
+      "x": 22,
+      "y": 38,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NemesisCave_1F_1R_EventScript_PkmnRangerF",
+      "flag": "FLAG_HIDE_NEMESIS_CAVE_PKMN_RANGERS"
     }
   ],
   "warp_events": [
@@ -121,6 +225,46 @@
       "elevation": 3,
       "item": "ITEM_FULL_HEAL",
       "flag": "FLAG_HIDDEN_ITEM_NEMESIS_CAVE_FULL_HEAL"
+    },
+    {
+      "type": "sign",
+      "x": 59,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NemesisCave_1F_1R_EventScript_LileepTablet"
+    },
+    {
+      "type": "sign",
+      "x": 65,
+      "y": 37,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NemesisCave_1F_1R_EventScript_MossyRock"
+    },
+    {
+      "type": "sign",
+      "x": 66,
+      "y": 37,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NemesisCave_1F_1R_EventScript_MossyRock"
+    },
+    {
+      "type": "sign",
+      "x": 65,
+      "y": 38,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NemesisCave_1F_1R_EventScript_MossyRock"
+    },
+    {
+      "type": "sign",
+      "x": 66,
+      "y": 38,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NemesisCave_1F_1R_EventScript_MossyRock"
     }
   ]
 }
