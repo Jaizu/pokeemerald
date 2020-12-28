@@ -1329,3 +1329,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/NemesisRiver/scripts.inc"
 
 	.include "data/maps/NemesisRiver_HiddenGrotto/scripts.inc"
+
+	.include "data/maps/NemesisCave_1F_1R/scripts.inc"

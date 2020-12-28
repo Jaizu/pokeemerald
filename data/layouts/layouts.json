@@ -5310,6 +5310,16 @@
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/NemesisRiver/border.bin",
       "blockdata_filepath": "data/layouts/NemesisRiver/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEMESIS_CAVE_1F_1R",
+      "name": "NemesisCave_1F_1R_Layout",
+      "width": 80,
+      "height": 92,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NemesisCave",
+      "border_filepath": "data/layouts/NemesisCave_1F_1R/border.bin",
+      "blockdata_filepath": "data/layouts/NemesisCave_1F_1R/map.bin"
     }
   ]
 }

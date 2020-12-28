@@ -1929,3 +1929,23 @@ gTilesetPalettes_SabuloTower::
 	.align 2
 gTilesetTiles_SabuloTower::
 	.incbin "data/tilesets/secondary/sabulotower/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_NemesisCave::
+	.incbin "data/tilesets/secondary/nemesiscave/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/nemesiscave/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/nemesiscave/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/nemesiscave/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/nemesiscave/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/nemesiscave/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/nemesiscave/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/nemesiscave/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/nemesiscave/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/nemesiscave/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/nemesiscave/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/nemesiscave/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/nemesiscave/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_NemesisCave::
+	.incbin "data/tilesets/secondary/nemesiscave/tiles.4bpp.lz"

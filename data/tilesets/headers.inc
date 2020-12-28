@@ -940,3 +940,14 @@ gTileset_SabuloTower::
 	.4byte gMetatiles_SabuloTower
 	.4byte gMetatileAttributes_SabuloTower
 	.4byte NULL
+
+	.align 2
+gTileset_NemesisCave::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_NemesisCave
+	.4byte gTilesetPalettes_NemesisCave
+	.4byte gMetatiles_NemesisCave
+	.4byte gMetatileAttributes_NemesisCave
+	.4byte NULL

@@ -1,0 +1,34 @@
+{
+  "id": "MAP_NEMESIS_CAVE_1F_1R",
+  "name": "NemesisCave_1F_1R",
+  "layout": "LAYOUT_NEMESIS_CAVE_1F_1R",
+  "music": "MUS_AJITO",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 14,
+      "y": 83,
+      "elevation": 0,
+      "dest_map": "MAP_NEMESIS_RIVER",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

@@ -631,3 +631,10 @@ gMetatiles_SabuloTower::
 	.align 1
 gMetatileAttributes_SabuloTower::
 	.incbin "data/tilesets/secondary/sabulotower/metatile_attributes.bin"
+	.align 1
+gMetatiles_NemesisCave::
+	.incbin "data/tilesets/secondary/nemesiscave/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_NemesisCave::
+	.incbin "data/tilesets/secondary/nemesiscave/metatile_attributes.bin"
