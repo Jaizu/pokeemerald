@@ -66,8 +66,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
-      "x": 23,
-      "y": 55,
+      "x": 6,
+      "y": 57,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -117,7 +117,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ENOCH",
+      "graphics_id": "OBJ_EVENT_GFX_EZEKIEL",
       "x": 19,
       "y": 43,
       "elevation": 3,

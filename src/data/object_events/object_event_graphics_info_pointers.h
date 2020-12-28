@@ -195,7 +195,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_MAY_WATERING] =             &gObjectEventGraphicsInfo_MayWatering,
     [OBJ_EVENT_GFX_BRENDAN_DECORATING] =       &gObjectEventGraphicsInfo_BrendanDecorating,
     [OBJ_EVENT_GFX_MAY_DECORATING] =           &gObjectEventGraphicsInfo_MayDecorating,
-    [OBJ_EVENT_GFX_ARCHIE] =                   &gObjectEventGraphicsInfo_Archie,
+    [OBJ_EVENT_GFX_EZEKIEL] =                  &gObjectEventGraphicsInfo_Ezekiel,
     [OBJ_EVENT_GFX_MORGANA] =                  &gObjectEventGraphicsInfo_Morgana,
     [OBJ_EVENT_GFX_KYOGRE_1] =                 &gObjectEventGraphicsInfo_Kyogre1,
     [OBJ_EVENT_GFX_GROUDON_1] =                &gObjectEventGraphicsInfo_Groudon1,
@@ -323,5 +323,6 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPaletteSwimmerF, OBJ_EVENT_PAL_TAG_SWIMMER_F},
     {gObjectEventPalettePkmnRanger, OBJ_EVENT_PAL_TAG_PKMN_RANGER},
     {gObjectEventPaletteVernon, OBJ_EVENT_PAL_TAG_VERNON},
+    {gObjectEventPaletteEzekiel, OBJ_EVENT_PAL_TAG_EZEKIEL},
     {NULL, 0x0000},
 };

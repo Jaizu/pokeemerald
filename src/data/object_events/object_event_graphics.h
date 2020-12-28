@@ -73,6 +73,7 @@ const u16 gObjectEventPaletteGrowlithe[] = INCBIN_U16("graphics/object_events/pa
 const u16 gObjectEventPaletteSwimmerF[] = INCBIN_U16("graphics/object_events/palettes/swimmer_f.gbapal");
 const u16 gObjectEventPalettePkmnRanger[] = INCBIN_U16("graphics/object_events/palettes/pkmn_ranger.gbapal");
 const u16 gObjectEventPaletteVernon[] = INCBIN_U16("graphics/object_events/palettes/vernon.gbapal");
+const u16 gObjectEventPaletteEzekiel[] = INCBIN_U16("graphics/object_events/palettes/ezekiel.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
@@ -195,7 +196,7 @@ const u32 gObjectEventPic_SwimmerMSwimming[] = INCBIN_U32("graphics/object_event
 const u32 gObjectEventPic_LatiasLatios[] = INCBIN_U32("graphics/object_events/pics/pokemon/latias_latios.4bpp");
 const u32 gObjectEventPic_GameboyKid[] = INCBIN_U32("graphics/object_events/pics/people/gameboy_kid.4bpp");
 const u32 gObjectEventPic_PkmnRangerF[] = INCBIN_U32("graphics/object_events/pics/people/pkmn_ranger_f.4bpp");
-const u32 gObjectEventPic_Archie[] = INCBIN_U32("graphics/object_events/pics/people/team_aqua/archie.4bpp");
+const u32 gObjectEventPic_Ezekiel[] = INCBIN_U32("graphics/object_events/pics/people/ezekiel.4bpp");
 const u32 gObjectEventPic_Kyogre[] = INCBIN_U32("graphics/object_events/pics/pokemon/kyogre.4bpp");
 const u32 gObjectEventPic_Groudon[] = INCBIN_U32("graphics/object_events/pics/pokemon/groudon.4bpp");
 const u32 gObjectEventPic_Regi[] = INCBIN_U32("graphics/object_events/pics/pokemon/regi.4bpp");

@@ -196,7 +196,7 @@
 #define OBJ_EVENT_GFX_MAY_WATERING               192
 #define OBJ_EVENT_GFX_BRENDAN_DECORATING         193
 #define OBJ_EVENT_GFX_MAY_DECORATING             194
-#define OBJ_EVENT_GFX_ARCHIE                     195
+#define OBJ_EVENT_GFX_EZEKIEL                    195
 #define OBJ_EVENT_GFX_MORGANA                    196
 #define OBJ_EVENT_GFX_KYOGRE_1                   197
 #define OBJ_EVENT_GFX_GROUDON_1                  198
@@ -295,6 +295,7 @@
 #define OBJ_EVENT_GFX_CONTEST_JUDGE              OBJ_EVENT_GFX_PKMN_RANGER_F
 #define OBJ_EVENT_GFX_KIRLIA                     OBJ_EVENT_GFX_NIDORINO
 #define OBJ_EVENT_GFX_FLANNERY                   OBJ_EVENT_GFX_VERNON
+#define OBJ_EVENT_GFX_ARCHIE                     OBJ_EVENT_GFX_EZEKIEL
 
 #define OBJ_EVENT_PAL_TAG_0 0x1100
 #define OBJ_EVENT_PAL_TAG_1 0x1101
@@ -367,6 +368,7 @@
 #define OBJ_EVENT_PAL_TAG_SWIMMER_F 0x1144
 #define OBJ_EVENT_PAL_TAG_PKMN_RANGER 0x1145
 #define OBJ_EVENT_PAL_TAG_VERNON 0x1146
+#define OBJ_EVENT_PAL_TAG_EZEKIEL 0x1147
 #define OBJ_EVENT_PAL_TAG_NONE 0x11FF
 
 // These are dynamic object gfx ids.
