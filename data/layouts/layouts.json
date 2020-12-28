@@ -5314,8 +5314,8 @@
     {
       "id": "LAYOUT_NEMESIS_CAVE_1F_1R",
       "name": "NemesisCave_1F_1R_Layout",
-      "width": 80,
-      "height": 92,
+      "width": 76,
+      "height": 76,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_NemesisCave",
       "border_filepath": "data/layouts/NemesisCave_1F_1R/border.bin",

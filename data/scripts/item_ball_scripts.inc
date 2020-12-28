@@ -23,6 +23,11 @@ Route113_EventScript_ItemHyperPotion::
 	finditem ITEM_HYPER_POTION
 	end
 
+EventScript_ItemMaxPotion::
+MtPyre_Exterior_EventScript_ItemMaxPotion::
+	finditem ITEM_MAX_POTION
+	end
+
 EventScript_ItemFullRestore::
 MagmaHideout_2F_2R_EventScript_ItemFullRestore::
 VictoryRoad_B1F_EventScript_ItemFullRestore::
@@ -332,6 +337,14 @@ EventScript_ItemAltarianite::
 	finditem ITEM_ALTARIANITE
 	end
 
+EventScript_ItemTM28::
+	finditem ITEM_TM28
+	end
+
+EventScript_ItemOldAmber::
+	finditem ITEM_OLD_AMBER
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
@@ -554,10 +567,6 @@ MtPyre_5F_EventScript_ItemLaxIncense:: @ 8291324
 
 MtPyre_6F_EventScript_ItemTM30:: @ 8291331
 	finditem ITEM_TM30
-	end
-
-MtPyre_Exterior_EventScript_ItemMaxPotion:: @ 829133E
-	finditem ITEM_MAX_POTION
 	end
 
 MtPyre_Exterior_EventScript_ItemTM48:: @ 829134B
