@@ -11,6 +11,12 @@ ValoonTown_RangersHQ_Text_BulletinBoard:
 ValoonTown_RangersHQ_EventScript_ContestClerk::
 	lock
 	faceplayer
+	goto_if_unset FLAG_NEMESIS_CAVE_RANGERS_RETURNED, ValoonTown_RangersHQ_EventScript_TheBugCatchingContestWillStartSoon
+	// TODO: Implement
+	release
+	end
+
+ValoonTown_RangersHQ_EventScript_TheBugCatchingContestWillStartSoon:
 	msgbox ValoonTown_RangersHQ_Text_TheBugCatchingContestWillStartSoon, MSGBOX_DEFAULT
 	release
 	end
@@ -108,7 +114,13 @@ ValoonTown_RangersHQ_Text_AreYouANewRecruit:
 ValoonTown_RangersHQ_EventScript_Vernon::
 	lock
 	faceplayer
+	goto_if_set FLAG_NEMESIS_CAVE_RANGERS_RETURNED, ValoonTown_RangersHQ_EventScript_ImGoingToEnter
 	msgbox ValoonTown_RangersHQ_Text_HeyThere, MSGBOX_DEFAULT
+	release
+	end
+
+ValoonTown_RangersHQ_EventScript_ImGoingToEnter:
+	msgbox ValoonTown_RangersHQ_Text_ImGoingToEnter, MSGBOX_DEFAULT
 	release
 	end
 
@@ -123,3 +135,8 @@ ValoonTown_RangersHQ_Text_HeyThere:
 	.string "Rangers get back, first.\p"
 	.string "I think they were headed to\n"
 	.string "Nemesis Cave.$"
+
+ValoonTown_RangersHQ_Text_ImGoingToEnter:
+	.string "{COLOR DARK_GREY}Vernon: {COLOR BLUE}Hey there!\p"
+	.string "I'm going to enter in the next\n"
+	.string "Bug-Catching Contest.$"
