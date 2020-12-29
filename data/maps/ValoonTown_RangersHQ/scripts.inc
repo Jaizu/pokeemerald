@@ -30,9 +30,8 @@ ValoonTown_RangersHQ_EventScript_ContestClerk::
 	call_if_eq ValoonTown_RangersHQ_EventScript_PlayerEnterValoonReserve1
 	compare VAR_0x8008, 11
 	call_if_eq ValoonTown_RangersHQ_EventScript_PlayerEnterValoonReserve2
-	// TODO: Add the Valoon Reserve map
-	// warp VALOON_RESERVE, 0, 0, 0
-	// waitstate
+	warp MAP_VALOON_RESERVE, 0, 0, 0
+	waitstate
 	release
 	end
 

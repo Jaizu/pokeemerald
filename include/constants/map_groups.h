@@ -62,6 +62,7 @@
 #define MAP_SABULO_CAVE_1R                      (29 | (1 << 8))
 #define MAP_SABULO_CAVE_REGIROCK_ROOM           (30 | (1 << 8))
 #define MAP_NEMESIS_CAVE_1F_1R                  (31 | (1 << 8))
+#define MAP_VALOON_RESERVE                      (32 | (1 << 8))
 
 // Map Group 2
 #define MAP_CELANTO_PATH_HIDDEN_GROTTO          (0 | (2 << 8))

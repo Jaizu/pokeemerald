@@ -131,7 +131,14 @@
       "x": 10,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_VALOON_TOWN_RANGERS_HQ",
+      "dest_map": "MAP_VALOON_RESERVE",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_VALOON_RESERVE",
       "dest_warp_id": 0
     }
   ],

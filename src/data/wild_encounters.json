@@ -14647,6 +14647,105 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_VALOON_RESERVE",
+          "base_label": "gValoonReserve0",
+          "land_mons": {
+            "encounter_rate": 25,
+            "mons": [
+              {
+                "min_level": 12,
+                "max_level": 25,
+                "species": "SPECIES_CATERPIE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 25,
+                "species": "SPECIES_CASCOON"
+              },
+              {
+                "min_level": 12,
+                "max_level": 25,
+                "species": "SPECIES_BEEDRILL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_BEAUTIFLY"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_NINCADA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_YANMA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_PINSIR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_SCYTHER"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_HERACROSS"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_LARVESTA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_HERACROSS"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_LARVESTA"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 15,
+            "mons": [
+              {
+                "min_level": 12,
+                "max_level": 25,
+                "species": "SPECIES_SURSKIT"
+              },
+              {
+                "min_level": 12,
+                "max_level": 25,
+                "species": "SPECIES_SURSKIT"
+              },
+              {
+                "min_level": 12,
+                "max_level": 25,
+                "species": "SPECIES_SURSKIT"
+              },
+              {
+                "min_level": 12,
+                "max_level": 25,
+                "species": "SPECIES_SURSKIT"
+              },
+              {
+                "min_level": 12,
+                "max_level": 25,
+                "species": "SPECIES_SURSKIT"
+              }
+            ]
+          }
         }
       ]
     },
