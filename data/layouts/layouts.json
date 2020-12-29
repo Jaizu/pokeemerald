@@ -5330,6 +5330,26 @@
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/ValoonReserve/border.bin",
       "blockdata_filepath": "data/layouts/ValoonReserve/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEMESIS_CAVE_SECRET_LAB_1F",
+      "name": "NemesisCave_SecretLab_1F_Layout",
+      "width": 11,
+      "height": 11,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NemesisCave",
+      "border_filepath": "data/layouts/NemesisCave_SecretLab_1F/border.bin",
+      "blockdata_filepath": "data/layouts/NemesisCave_SecretLab_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEMESIS_CAVE_SECRET_LAB_B1F",
+      "name": "NemesisCave_SecretLab_B1F_Layout",
+      "width": 11,
+      "height": 11,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NemesisCave",
+      "border_filepath": "data/layouts/NemesisCave_SecretLab_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/NemesisCave_SecretLab_B1F/map.bin"
     }
   ]
 }

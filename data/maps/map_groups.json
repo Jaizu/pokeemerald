@@ -106,6 +106,8 @@
     "SabuloCave_1R",
     "SabuloCave_RegirockRoom",
     "NemesisCave_1F_1R",
+    "NemesisCave_SecretLab_1F",
+    "NemesisCave_SecretLab_B1F",
     "ValoonReserve"
   ],
   "gMapGroup_HiddenGrottosSecretTemples": [

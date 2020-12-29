@@ -1333,3 +1333,7 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/NemesisCave_1F_1R/scripts.inc"
 
 	.include "data/maps/ValoonReserve/scripts.inc"
+
+	.include "data/maps/NemesisCave_SecretLab_1F/scripts.inc"
+
+	.include "data/maps/NemesisCave_SecretLab_B1F/scripts.inc"

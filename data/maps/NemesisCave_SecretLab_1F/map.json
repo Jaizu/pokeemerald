@@ -1,0 +1,41 @@
+{
+  "id": "MAP_NEMESIS_CAVE_SECRET_LAB_1F",
+  "name": "NemesisCave_SecretLab_1F",
+  "layout": "LAYOUT_NEMESIS_CAVE_SECRET_LAB_1F",
+  "music": "MUS_DAN01",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "requires_flash": false,
+  "weather": "WEATHER_SHADE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 5,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_NEMESIS_RIVER",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_NEMESIS_CAVE_SECRET_LAB_B1F",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}
