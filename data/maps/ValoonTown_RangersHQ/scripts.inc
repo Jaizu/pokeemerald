@@ -1,3 +1,5 @@
+.set LOCALID_CONTEST_CLERK, 1
+
 ValoonTown_RangersHQ_MapScripts::
 	.byte 0
 
@@ -12,7 +14,44 @@ ValoonTown_RangersHQ_EventScript_ContestClerk::
 	lock
 	faceplayer
 	goto_if_unset FLAG_NEMESIS_CAVE_RANGERS_RETURNED, ValoonTown_RangersHQ_EventScript_TheBugCatchingContestWillStartSoon
-	// TODO: Implement
+	msgbox ValoonTown_RangersHQ_Text_WouldYouLikeToEnter, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_ne ValoonTown_RangersHQ_EventScript_PleaseComeAgain
+	getpartysize
+	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq ValoonTown_RangersHQ_EventScript_PleaseMakeRoom
+	call_if_unset FLAG_RECEIVED_FREE_PARK_BALLS, ValoonTown_RangersHQ_EventScript_TryGiveFreeParkBalls
+	msgbox ValoonTown_RangersHQ_Text_TheContestWillBeginSoon, MSGBOX_DEFAULT
+	closemessage
+	getplayerxy VAR_0x8008, VAR_0x8009
+	compare VAR_0x8008, 9
+	call_if_eq ValoonTown_RangersHQ_EventScript_PlayerEnterValoonReserve0
+	compare VAR_0x8008, 10
+	call_if_eq ValoonTown_RangersHQ_EventScript_PlayerEnterValoonReserve1
+	compare VAR_0x8008, 11
+	call_if_eq ValoonTown_RangersHQ_EventScript_PlayerEnterValoonReserve2
+	// TODO: Add the Valoon Reserve map
+	// warp VALOON_RESERVE, 0, 0, 0
+	// waitstate
+	release
+	end
+
+ValoonTown_RangersHQ_EventScript_PleaseMakeRoom:
+	msgbox ValoonTown_RangersHQ_Text_PleaseMakeRoom, MSGBOX_DEFAULT
+	release
+	end
+
+ValoonTown_RangersHQ_EventScript_TryGiveFreeParkBalls:
+	msgbox ValoonTown_RangersHQ_Text_AsThisIsYourFirstTime, MSGBOX_DEFAULT
+	giveitem ITEM_PARK_BALL, 15
+	compare VAR_RESULT, FALSE
+	goto_if_eq Common_EventScript_BagIsFull
+	setflag FLAG_RECEIVED_FREE_PARK_BALLS
+	msgbox ValoonTown_RangersHQ_Text_YouCanBuyMore, MSGBOX_DEFAULT
+	return
+
+ValoonTown_RangersHQ_EventScript_PleaseComeAgain:
+	msgbox ValoonTown_RangersHQ_Text_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
@@ -21,10 +60,80 @@ ValoonTown_RangersHQ_EventScript_TheBugCatchingContestWillStartSoon:
 	release
 	end
 
+ValoonTown_RangersHQ_EventScript_PlayerEnterValoonReserve0:
+	applymovement LOCALID_CONTEST_CLERK, Common_Movement_WalkRight
+	waitmovement 0
+	applymovement LOCALID_CONTEST_CLERK, Common_Movement_WalkInPlaceFastestLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, ValoonTown_RangersHQ_Movement_PlayerEnterValoonReserve0
+	waitmovement 0
+	return
+
+ValoonTown_RangersHQ_EventScript_PlayerEnterValoonReserve1:
+	applymovement LOCALID_CONTEST_CLERK, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement LOCALID_CONTEST_CLERK, Common_Movement_WalkInPlaceFastestRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, ValoonTown_RangersHQ_Movement_PlayerEnterValoonReserve1
+	waitmovement 0
+	return
+
+ValoonTown_RangersHQ_EventScript_PlayerEnterValoonReserve2:
+	applymovement LOCALID_CONTEST_CLERK, Common_Movement_WalkLeft
+	waitmovement 0
+	applymovement LOCALID_CONTEST_CLERK, Common_Movement_WalkInPlaceFastestRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, ValoonTown_RangersHQ_Movement_PlayerEnterValoonReserve2
+	waitmovement 0
+	return
+
+ValoonTown_RangersHQ_Text_WouldYouLikeToEnter:
+	.string "Would you like to enter the\n"
+	.string "Bug-Catching Contest?$"
+
+ValoonTown_RangersHQ_Text_PleaseMakeRoom:
+	.string "Your party appears to be full.\n"
+	.string "Please make room before we begin.$"
+
+ValoonTown_RangersHQ_Text_AsThisIsYourFirstTime:
+	.string "As this is your first time, take\n"
+	.string "these complementary Park Balls!$"
+
+ValoonTown_RangersHQ_Text_YouCanBuyMore:
+	.string "Park Balls are special Balls that\n"
+	.string "perform best in the Valoon Reserve.\p"
+	.string "You can buy more from my colleague\n"
+	.string "over by the computer.$"
+
+ValoonTown_RangersHQ_Text_TheContestWillBeginSoon:
+	.string "Great! Go on through, the contest\n"
+	.string "will begin soon!$"
+
+ValoonTown_RangersHQ_Text_PleaseComeAgain:
+	.string "Please come again.$"
+
 ValoonTown_RangersHQ_Text_TheBugCatchingContestWillStartSoon:
 	.string "The Bug-Catching Contest will\n"
 	.string "start once the other Rangers get\l"
 	.string "back from Nemesis Cave.$"
+
+ValoonTown_RangersHQ_Movement_PlayerEnterValoonReserve0:
+	walk_right
+	walk_up
+	set_invisible
+	step_end
+
+ValoonTown_RangersHQ_Movement_PlayerEnterValoonReserve1:
+	walk_up
+	walk_up
+	set_invisible
+	step_end
+
+ValoonTown_RangersHQ_Movement_PlayerEnterValoonReserve2:
+	walk_left
+	walk_up
+	set_invisible
+	step_end
 
 ValoonTown_RangersHQ_EventScript_ParkBallSalesman::
 	lock
