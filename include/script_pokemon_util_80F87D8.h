@@ -3,6 +3,7 @@
 
 u16 GetContestRand(void);
 void ReducePlayerPartyToSelectedMons(void);
+void ReducePlayerPartyToSelectedMon(void);
 void HealPlayerParty(void);
 u8 CountPlayerContestPaintings(void);
 

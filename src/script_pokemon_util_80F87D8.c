@@ -720,3 +720,15 @@ void ReducePlayerPartyToSelectedMons(void)
 
     CalculatePlayerPartyCount();
 }
+
+void ReducePlayerPartyToSelectedMon(void)
+{
+    struct Pokemon party[1];
+
+    CpuFill32(0, party, sizeof party);
+    party[0] = gPlayerParty[gSpecialVar_0x8004];
+    CpuFill32(0, gPlayerParty, sizeof gPlayerParty);
+    gPlayerParty[0] = party[0];
+
+    CalculatePlayerPartyCount();
+}

@@ -17,9 +17,11 @@ ValoonTown_RangersHQ_EventScript_ContestClerk::
 	msgbox ValoonTown_RangersHQ_Text_WouldYouLikeToEnter, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_ne ValoonTown_RangersHQ_EventScript_PleaseComeAgain
+	special SavePlayerParty
 	getpartysize
-	compare VAR_RESULT, PARTY_SIZE
-	goto_if_eq ValoonTown_RangersHQ_EventScript_PleaseMakeRoom
+	compare VAR_RESULT, 1
+	call_if_ne ValoonTown_RangersHQ_EventScript_YouHaveMoreThanOnePokemon
+	special HealPlayerParty
 	call_if_unset FLAG_RECEIVED_FREE_PARK_BALLS, ValoonTown_RangersHQ_EventScript_TryGiveFreeParkBalls
 	msgbox ValoonTown_RangersHQ_Text_TheContestWillBeginSoon, MSGBOX_DEFAULT
 	closemessage
@@ -35,9 +37,31 @@ ValoonTown_RangersHQ_EventScript_ContestClerk::
 	release
 	end
 
-ValoonTown_RangersHQ_EventScript_PleaseMakeRoom:
-	msgbox ValoonTown_RangersHQ_Text_PleaseMakeRoom, MSGBOX_DEFAULT
-	release
+ValoonTown_RangersHQ_EventScript_YouHaveMoreThanOnePokemon:
+	msgbox ValoonTown_RangersHQ_Text_OhYouHaveMoreThanOne, MSGBOX_DEFAULT
+	goto ValoonTown_RangersHQ_EventScript_PleaseSelectAPokemon
+	end
+
+ValoonTown_RangersHQ_EventScript_PleaseSelectAPokemon:
+	msgbox ValoonTown_RangersHQ_Text_PleaseSelectAPokemon, MSGBOX_DEFAULT
+	special ChoosePartyMon
+	waitstate
+	copyvar VAR_RESULT, VAR_0x8004
+	compare VAR_RESULT, 255
+	goto_if_eq ValoonTown_RangersHQ_EventScript_PleaseComeAgain
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	compare VAR_RESULT, SPECIES_EGG
+	goto_if_eq ValoonTown_RangersHQ_EventScript_CantCompeteWithAnEgg
+	bufferpartymonnick 0, VAR_0x8004
+	msgbox ValoonTown_RangersHQ_Text_MonWillJoinYou, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_ne ValoonTown_RangersHQ_EventScript_PleaseSelectAPokemon
+	special ReducePlayerPartyToSelectedMon
+	return
+
+ValoonTown_RangersHQ_EventScript_CantCompeteWithAnEgg:
+	msgbox ValoonTown_RangersHQ_Text_CantCompeteWithAnEgg, MSGBOX_DEFAULT
+	goto ValoonTown_RangersHQ_EventScript_PleaseSelectAPokemon
 	end
 
 ValoonTown_RangersHQ_EventScript_TryGiveFreeParkBalls:
@@ -49,13 +73,13 @@ ValoonTown_RangersHQ_EventScript_TryGiveFreeParkBalls:
 	msgbox ValoonTown_RangersHQ_Text_YouCanBuyMore, MSGBOX_DEFAULT
 	return
 
-ValoonTown_RangersHQ_EventScript_PleaseComeAgain:
-	msgbox ValoonTown_RangersHQ_Text_PleaseComeAgain, MSGBOX_DEFAULT
-	release
-	end
-
 ValoonTown_RangersHQ_EventScript_TheBugCatchingContestWillStartSoon:
 	msgbox ValoonTown_RangersHQ_Text_TheBugCatchingContestWillStartSoon, MSGBOX_DEFAULT
+	goto ValoonTown_RangersHQ_EventScript_PleaseComeAgain
+	end
+
+ValoonTown_RangersHQ_EventScript_PleaseComeAgain:
+	msgbox ValoonTown_RangersHQ_Text_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
@@ -90,9 +114,22 @@ ValoonTown_RangersHQ_Text_WouldYouLikeToEnter:
 	.string "Would you like to enter the\n"
 	.string "Bug-Catching Contest?$"
 
-ValoonTown_RangersHQ_Text_PleaseMakeRoom:
-	.string "Your party appears to be full.\n"
-	.string "Please make room before we begin.$"
+ValoonTown_RangersHQ_Text_OhYouHaveMoreThanOne:
+	.string "Oh, you have more than one Pokémon.\n"
+	.string "The rules only let you bring one.$"
+
+ValoonTown_RangersHQ_Text_PleaseSelectAPokemon:
+	.string "Please select one Pokémon to\n"
+	.string "take with you.$"
+
+ValoonTown_RangersHQ_Text_CantCompeteWithAnEgg:
+	.string "You cannot compete with an Egg!$"
+
+ValoonTown_RangersHQ_Text_MonWillJoinYou:
+	.string "Your Pokémon {STR_VAR_1}\n"
+	.string "will join you.\p"
+	.string "I will look after your other\n"
+	.string "Pokémon. Is this okay?$"
 
 ValoonTown_RangersHQ_Text_AsThisIsYourFirstTime:
 	.string "As this is your first time, take\n"

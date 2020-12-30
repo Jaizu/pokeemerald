@@ -7,7 +7,7 @@
 
 .set __special__, 0
 		.align 2
-gSpecials:: @ 81DBA64
+gSpecials::
 	def_special HealPlayerParty
 	def_special SetCableClubWarp
 	def_special DoCableClubWarp
@@ -537,3 +537,4 @@ gSpecials:: @ 81DBA64
 	def_special CheckPartyForMon
 	def_special TeleportCamera
 	def_special ReturnCameraToPlayer
+	def_special ReducePlayerPartyToSelectedMon
