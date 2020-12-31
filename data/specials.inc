@@ -539,3 +539,4 @@ gSpecials::
 	def_special ReturnCameraToPlayer
 	def_special ReducePlayerPartyToSelectedMon
 	def_special GetClearBattleOutcome
+	def_special PlayerHasCaughtBug

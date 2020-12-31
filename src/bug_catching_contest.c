@@ -17,3 +17,8 @@ bool8 InValoonReserve(void)
 {
     return gMapHeader.mapLayoutId == LAYOUT_VALOON_RESERVE;
 }
+
+bool8 PlayerHasCaughtBug(void)
+{
+    return FALSE;
+}
