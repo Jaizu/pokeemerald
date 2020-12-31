@@ -3,6 +3,14 @@
 
 #include "constants/items.h"
 
+enum {
+    BALL_AFFINE_ANIM_0,
+    BALL_ROTATE_RIGHT,
+    BALL_ROTATE_LEFT, 
+    BALL_AFFINE_ANIM_3,
+    BALL_AFFINE_ANIM_4
+};
+
 extern const struct SpriteTemplate gBallSpriteTemplates[];
 
 #define POKEBALL_PLAYER_SENDOUT     0xFF

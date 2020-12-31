@@ -648,12 +648,10 @@ static void UpdateSaveAddresses(void)
         gRamSaveSectionLocations[i].size = sSaveSectionOffsets[i].size;
     }
 
-    for (i = SECTOR_ID_PKMN_STORAGE_START; i <= SECTOR_ID_PKMN_STORAGE_END; i++)
+    for (; i <= SECTOR_ID_PKMN_STORAGE_END; i++) //setting i to SECTOR_ID_PKMN_STORAGE_START does not match
     {
         gRamSaveSectionLocations[i].data = (void*)(gPokemonStoragePtr) + sSaveSectionOffsets[i].toAdd;
         gRamSaveSectionLocations[i].size = sSaveSectionOffsets[i].size;
-
-        i++;i--; // needed to match
     }
 }
 
@@ -912,7 +910,7 @@ void Task_LinkSave(u8 taskId)
         tState = 1;
         break;
     case 1:
-        sub_800ADF8();
+        SetLinkStandbyCallback();
         tState = 2;
         break;
     case 2:
@@ -949,7 +947,7 @@ void Task_LinkSave(u8 taskId)
     case 7:
         if (!tPartialSave)
             ClearContinueGameWarpStatus2();
-        sub_800ADF8();
+        SetLinkStandbyCallback();
         tState = 8;
         break;
     case 8:
@@ -960,7 +958,7 @@ void Task_LinkSave(u8 taskId)
         }
         break;
     case 9:
-        sub_800ADF8();
+        SetLinkStandbyCallback();
         tState = 10;
         break;
     case 10:

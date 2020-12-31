@@ -196,7 +196,7 @@
 #define HITMARKER_x4000000              (1 << 26)
 #define HITMARKER_CHARGING              (1 << 27)
 #define HITMARKER_FAINTED(battler)      (gBitTable[battler] << 28)
-#define HITMARKER_FAINTED2(battler)     (1 << (28 + battler))
+#define HITMARKER_FAINTED2(battler)     ((1 << 28) << battler)
 
 // Per-side statuses that affect an entire party
 #define SIDE_STATUS_REFLECT                 (1 << 0)
@@ -233,6 +233,8 @@
 #define STATUS_FIELD_PSYCHIC_TERRAIN    0x200
 #define STATUS_FIELD_ION_DELUGE         0x400
 #define STATUS_FIELD_FAIRY_LOCK         0x800
+
+#define STATUS_TERRAIN_ANY              (STATUS_FIELD_GRASSY_TERRAIN | STATUS_FIELD_MISTY_TERRAIN | STATUS_FIELD_ELECTRIC_TERRAIN | STATUS_FIELD_PSYCHIC_TERRAIN)
 
 // Flags describing move's result
 #define MOVE_RESULT_MISSED             (1 << 0)

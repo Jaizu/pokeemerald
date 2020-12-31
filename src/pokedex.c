@@ -28,7 +28,6 @@
 #include "window.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
-#include "constants/species.h"
 
 enum
 {
@@ -1671,7 +1670,7 @@ static void Task_HandlePokedexInput(u8 taskId)
     }
     else
     {
-        if ((gMain.newKeys & A_BUTTON) && sPokedexView->pokedexList[sPokedexView->selectedPokemon].seen)
+        if ((JOY_NEW(A_BUTTON)) && sPokedexView->pokedexList[sPokedexView->selectedPokemon].seen)
         {
             UpdateSelectedMonSpriteId();
             BeginNormalPaletteFade(~(1 << (gSprites[sPokedexView->selectedMonSpriteId].oam.paletteNum + 16)), 0, 0, 0x10, RGB_BLACK);
@@ -1680,7 +1679,7 @@ static void Task_HandlePokedexInput(u8 taskId)
             PlaySE(SE_PIN);
             FreeWindowAndBgBuffers();
         }
-        else if (gMain.newKeys & START_BUTTON)
+        else if (JOY_NEW(START_BUTTON))
         {
             sPokedexView->menuY = 0;
             sPokedexView->menuIsOpen = TRUE;
@@ -1688,7 +1687,7 @@ static void Task_HandlePokedexInput(u8 taskId)
             gTasks[taskId].func = Task_HandlePokedexStartMenuInput;
             PlaySE(SE_SELECT);
         }
-        else if (gMain.newKeys & SELECT_BUTTON)
+        else if (JOY_NEW(SELECT_BUTTON))
         {
             PlaySE(SE_SELECT);
             BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 0x10, RGB_BLACK);
@@ -1702,7 +1701,7 @@ static void Task_HandlePokedexInput(u8 taskId)
             PlaySE(SE_PC_LOGIN);
             FreeWindowAndBgBuffers();
         }
-        else if (gMain.newKeys & B_BUTTON)
+        else if (JOY_NEW(B_BUTTON))
         {
             BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 0x10, RGB_BLACK);
             gTasks[taskId].func = Task_ClosePokedex;
@@ -1735,7 +1734,7 @@ static void Task_HandlePokedexStartMenuInput(u8 taskId)
     }
     else
     {
-        if (gMain.newKeys & A_BUTTON)
+        if (JOY_NEW(A_BUTTON))
         {
             switch (sPokedexView->menuCursorPos)
             {
@@ -1766,18 +1765,18 @@ static void Task_HandlePokedexStartMenuInput(u8 taskId)
         }
 
         //Exit menu when Start or B is pressed
-        if (gMain.newKeys & (START_BUTTON | B_BUTTON))
+        if (JOY_NEW(START_BUTTON | B_BUTTON))
         {
             sPokedexView->menuIsOpen = FALSE;
             gTasks[taskId].func = Task_HandlePokedexInput;
             PlaySE(SE_SELECT);
         }
-        else if ((gMain.newAndRepeatedKeys & DPAD_UP) && sPokedexView->menuCursorPos != 0)
+        else if ((JOY_REPEAT(DPAD_UP)) && sPokedexView->menuCursorPos != 0)
         {
             sPokedexView->menuCursorPos--;
             PlaySE(SE_SELECT);
         }
-        else if ((gMain.newAndRepeatedKeys & DPAD_DOWN) && sPokedexView->menuCursorPos < 3)
+        else if ((JOY_REPEAT(DPAD_DOWN)) && sPokedexView->menuCursorPos < 3)
         {
             sPokedexView->menuCursorPos++;
             PlaySE(SE_SELECT);
@@ -1871,7 +1870,7 @@ static void Task_HandleSearchResultsInput(u8 taskId)
     }
     else
     {
-        if ((gMain.newKeys & A_BUTTON) && sPokedexView->pokedexList[sPokedexView->selectedPokemon].seen)
+        if ((JOY_NEW(A_BUTTON)) && sPokedexView->pokedexList[sPokedexView->selectedPokemon].seen)
         {
             u32 a;
 
@@ -1883,7 +1882,7 @@ static void Task_HandleSearchResultsInput(u8 taskId)
             PlaySE(SE_PIN);
             FreeWindowAndBgBuffers();
         }
-        else if (gMain.newKeys & START_BUTTON)
+        else if (JOY_NEW(START_BUTTON))
         {
             sPokedexView->menuY = 0;
             sPokedexView->menuIsOpen = TRUE;
@@ -1891,7 +1890,7 @@ static void Task_HandleSearchResultsInput(u8 taskId)
             gTasks[taskId].func = Task_HandleSearchResultsStartMenuInput;
             PlaySE(SE_SELECT);
         }
-        else if (gMain.newKeys & SELECT_BUTTON)
+        else if (JOY_NEW(SELECT_BUTTON))
         {
             BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 0x10, RGB_BLACK);
             gTasks[taskId].tTaskId = LoadSearchMenu();
@@ -1900,7 +1899,7 @@ static void Task_HandleSearchResultsInput(u8 taskId)
             PlaySE(SE_PC_LOGIN);
             FreeWindowAndBgBuffers();
         }
-        else if (gMain.newKeys & B_BUTTON)
+        else if (JOY_NEW(B_BUTTON))
         {
             BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 0x10, RGB_BLACK);
             gTasks[taskId].func = Task_ReturnToPokedexFromSearchResults;
@@ -1932,7 +1931,7 @@ static void Task_HandleSearchResultsStartMenuInput(u8 taskId)
     }
     else
     {
-        if (gMain.newKeys & A_BUTTON)
+        if (JOY_NEW(A_BUTTON))
         {
             switch (sPokedexView->menuCursorPos)
             {
@@ -1957,7 +1956,7 @@ static void Task_HandleSearchResultsStartMenuInput(u8 taskId)
             case 3: //BACK TO POKEDEX
                 BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 0x10, RGB_BLACK);
                 gTasks[taskId].func = Task_ReturnToPokedexFromSearchResults;
-                PlaySE(SE_TRACK_DOOR);
+                PlaySE(SE_TRUCK_DOOR);
                 break;
             case 4: //CLOSE POKEDEX
                 BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 0x10, RGB_BLACK);
@@ -1968,18 +1967,18 @@ static void Task_HandleSearchResultsStartMenuInput(u8 taskId)
         }
 
         //Exit menu when Start or B is pressed
-        if (gMain.newKeys & (START_BUTTON | B_BUTTON))
+        if (JOY_NEW(START_BUTTON | B_BUTTON))
         {
             sPokedexView->menuIsOpen = FALSE;
             gTasks[taskId].func = Task_HandleSearchResultsInput;
             PlaySE(SE_SELECT);
         }
-        else if ((gMain.newAndRepeatedKeys & DPAD_UP) && sPokedexView->menuCursorPos)
+        else if ((JOY_REPEAT(DPAD_UP)) && sPokedexView->menuCursorPos)
         {
             sPokedexView->menuCursorPos--;
             PlaySE(SE_SELECT);
         }
-        else if ((gMain.newAndRepeatedKeys & DPAD_DOWN) && sPokedexView->menuCursorPos < 4)
+        else if ((JOY_REPEAT(DPAD_DOWN)) && sPokedexView->menuCursorPos < 4)
         {
             sPokedexView->menuCursorPos++;
             PlaySE(SE_SELECT);
@@ -2058,10 +2057,10 @@ static bool8 LoadPokedexListPage(u8 page)
         SetGpuReg(REG_OFFSET_BG2VOFS, sPokedexView->initialVOffset);
         ResetBgsAndClearDma3BusyFlags(0);
         InitBgsFromTemplates(0, sPokedex_BgTemplate, ARRAY_COUNT(sPokedex_BgTemplate));
-        SetBgTilemapBuffer(3, AllocZeroed(0x800));
-        SetBgTilemapBuffer(2, AllocZeroed(0x800));
-        SetBgTilemapBuffer(1, AllocZeroed(0x800));
-        SetBgTilemapBuffer(0, AllocZeroed(0x800));
+        SetBgTilemapBuffer(3, AllocZeroed(BG_SCREEN_SIZE));
+        SetBgTilemapBuffer(2, AllocZeroed(BG_SCREEN_SIZE));
+        SetBgTilemapBuffer(1, AllocZeroed(BG_SCREEN_SIZE));
+        SetBgTilemapBuffer(0, AllocZeroed(BG_SCREEN_SIZE));
         DecompressAndLoadBgGfxUsingHeap(3, gPokedexMenu_Gfx, 0x2000, 0, 0);
         CopyToBgTilemapBuffer(1, gPokedexList_Tilemap, 0, 0);
         CopyToBgTilemapBuffer(3, gPokedexListUnderlay_Tilemap, 0, 0);
@@ -2588,23 +2587,23 @@ static u16 TryDoPokedexScroll(u16 selectedMon, u16 ignored)
     u16 startingPos;
     u8 scrollDir = 0;
 
-    if ((gMain.heldKeys & DPAD_UP) && (selectedMon > 0))
+    if ((JOY_HELD(DPAD_UP)) && (selectedMon > 0))
     {
         scrollDir = 1;
         selectedMon = GetNextPosition(1, selectedMon, 0, sPokedexView->pokemonListCount - 1);
         CreateScrollingPokemonSprite(1, selectedMon);
         CreateMonListEntry(1, selectedMon, ignored);
-        PlaySE(SE_Z_SCROLL);
+        PlaySE(SE_DEX_SCROLL);
     }
-    else if ((gMain.heldKeys & DPAD_DOWN) && (selectedMon < sPokedexView->pokemonListCount - 1))
+    else if ((JOY_HELD(DPAD_DOWN)) && (selectedMon < sPokedexView->pokemonListCount - 1))
     {
         scrollDir = 2;
         selectedMon = GetNextPosition(0, selectedMon, 0, sPokedexView->pokemonListCount - 1);
         CreateScrollingPokemonSprite(2, selectedMon);
         CreateMonListEntry(2, selectedMon, ignored);
-        PlaySE(SE_Z_SCROLL);
+        PlaySE(SE_DEX_SCROLL);
     }
-    else if ((gMain.newKeys & DPAD_LEFT) && (selectedMon > 0))
+    else if ((JOY_NEW(DPAD_LEFT)) && (selectedMon > 0))
     {
         startingPos = selectedMon;
 
@@ -2613,9 +2612,9 @@ static u16 TryDoPokedexScroll(u16 selectedMon, u16 ignored)
         sPokedexView->pokeBallRotation += 16 * (selectedMon - startingPos);
         ClearMonSprites();
         CreateMonSpritesAtPos(selectedMon, 0xE);
-        PlaySE(SE_Z_PAGE);
+        PlaySE(SE_DEX_PAGE);
     }
-    else if ((gMain.newKeys & DPAD_RIGHT) && (selectedMon < sPokedexView->pokemonListCount - 1))
+    else if ((JOY_NEW(DPAD_RIGHT)) && (selectedMon < sPokedexView->pokemonListCount - 1))
     {
         startingPos = selectedMon;
         for (i = 0; i < 7; i++)
@@ -2623,7 +2622,7 @@ static u16 TryDoPokedexScroll(u16 selectedMon, u16 ignored)
         sPokedexView->pokeBallRotation += 16 * (selectedMon - startingPos);
         ClearMonSprites();
         CreateMonSpritesAtPos(selectedMon, 0xE);
-        PlaySE(SE_Z_PAGE);
+        PlaySE(SE_DEX_PAGE);
     }
 
     if (scrollDir == 0)
@@ -2664,7 +2663,7 @@ static bool8 TryDoInfoScreenScroll(void)
     u16 nextPokemon;
     u16 selectedPokemon = sPokedexView->selectedPokemon;
 
-    if ((gMain.newKeys & DPAD_UP) && selectedPokemon)
+    if ((JOY_NEW(DPAD_UP)) && selectedPokemon)
     {
         nextPokemon = selectedPokemon;
         while (nextPokemon != 0)
@@ -2687,7 +2686,7 @@ static bool8 TryDoInfoScreenScroll(void)
             return TRUE;
         }
     }
-    else if ((gMain.newKeys & DPAD_DOWN) && selectedPokemon < sPokedexView->pokemonListCount - 1)
+    else if ((JOY_NEW(DPAD_DOWN)) && selectedPokemon < sPokedexView->pokemonListCount - 1)
     {
         nextPokemon = selectedPokemon;
         while (nextPokemon < sPokedexView->pokemonListCount - 1)
@@ -3184,10 +3183,10 @@ static u8 LoadInfoScreen(struct PokedexListItem* item, u8 monSpriteId)
     gTasks[taskId].data[5] = 255;
     ResetBgsAndClearDma3BusyFlags(0);
     InitBgsFromTemplates(0, sInfoScreen_BgTemplate, ARRAY_COUNT(sInfoScreen_BgTemplate));
-    SetBgTilemapBuffer(3, AllocZeroed(0x800));
-    SetBgTilemapBuffer(2, AllocZeroed(0x800));
-    SetBgTilemapBuffer(1, AllocZeroed(0x800));
-    SetBgTilemapBuffer(0, AllocZeroed(0x800));
+    SetBgTilemapBuffer(3, AllocZeroed(BG_SCREEN_SIZE));
+    SetBgTilemapBuffer(2, AllocZeroed(BG_SCREEN_SIZE));
+    SetBgTilemapBuffer(1, AllocZeroed(BG_SCREEN_SIZE));
+    SetBgTilemapBuffer(0, AllocZeroed(BG_SCREEN_SIZE));
     InitWindows(sInfoScreen_WindowTemplates);
     DeactivateAllTextPrinters();
 
@@ -3351,17 +3350,17 @@ static void Task_HandleInfoScreenInput(u8 taskId)
         // Scroll up/down
         BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB_BLACK);
         gTasks[taskId].func = Task_LoadInfoScreenWaitForFade;
-        PlaySE(SE_Z_SCROLL);
+        PlaySE(SE_DEX_SCROLL);
         return;
     }
-    if (gMain.newKeys & B_BUTTON)
+    if (JOY_NEW(B_BUTTON))
     {
         BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB_BLACK);
         gTasks[taskId].func = Task_ExitInfoScreen;
         PlaySE(SE_PC_OFF);
         return;
     }
-    if (gMain.newKeys & A_BUTTON)
+    if (JOY_NEW(A_BUTTON))
     {
         switch (sPokedexView->selectedScreen)
         {
@@ -3380,7 +3379,7 @@ static void Task_HandleInfoScreenInput(u8 taskId)
         case SIZE_SCREEN:
             if (!sPokedexListItem->owned)
             {
-                PlaySE(SE_HAZURE);
+                PlaySE(SE_FAILURE);
             }
             else
             {
@@ -3398,22 +3397,22 @@ static void Task_HandleInfoScreenInput(u8 taskId)
         }
         return;
     }
-    if (((gMain.newKeys & DPAD_LEFT)
-     || ((gMain.newKeys & L_BUTTON) && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR))
+    if (((JOY_NEW(DPAD_LEFT))
+     || ((JOY_NEW(L_BUTTON)) && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR))
      && sPokedexView->selectedScreen > 0)
     {
         sPokedexView->selectedScreen--;
         HighlightScreenSelectBarItem(sPokedexView->selectedScreen, 0xD);
-        PlaySE(SE_Z_PAGE);
+        PlaySE(SE_DEX_PAGE);
         return;
     }
-    if (((gMain.newKeys & DPAD_RIGHT)
-     || ((gMain.newKeys & R_BUTTON) && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR))
+    if (((JOY_NEW(DPAD_RIGHT))
+     || ((JOY_NEW(R_BUTTON)) && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR))
      && sPokedexView->selectedScreen < CANCEL_SCREEN)
     {
         sPokedexView->selectedScreen++;
         HighlightScreenSelectBarItem(sPokedexView->selectedScreen, 0xD);
-        PlaySE(SE_Z_PAGE);
+        PlaySE(SE_DEX_PAGE);
         return;
     }
 }
@@ -3628,7 +3627,7 @@ static void Task_HandleCryScreenInput(u8 taskId)
     else
         LoadPlayArrowPalette(FALSE);
 
-    if (gMain.newKeys & A_BUTTON)
+    if (JOY_NEW(A_BUTTON))
     {
         LoadPlayArrowPalette(TRUE);
         CryScreenPlayButton(NationalPokedexNumToSpecies(sPokedexListItem->dexNum));
@@ -3636,7 +3635,7 @@ static void Task_HandleCryScreenInput(u8 taskId)
     }
     else if (!gPaletteFade.active)
     {
-        if (gMain.newKeys & B_BUTTON)
+        if (JOY_NEW(B_BUTTON))
         {
             BeginNormalPaletteFade(0xFFFFFFEB, 0, 0, 0x10, RGB_BLACK);
             m4aMPlayContinue(&gMPlayInfo_BGM);
@@ -3645,22 +3644,22 @@ static void Task_HandleCryScreenInput(u8 taskId)
             PlaySE(SE_PC_OFF);
             return;
         }
-        if ((gMain.newKeys & DPAD_LEFT)
-         || ((gMain.newKeys & L_BUTTON) && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR))
+        if ((JOY_NEW(DPAD_LEFT))
+         || ((JOY_NEW(L_BUTTON)) && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR))
         {
             BeginNormalPaletteFade(0xFFFFFFEB, 0, 0, 0x10, RGB_BLACK);
             m4aMPlayContinue(&gMPlayInfo_BGM);
             sPokedexView->screenSwitchState = 2;
             gTasks[taskId].func = Task_SwitchScreensFromCryScreen;
-            PlaySE(SE_Z_PAGE);
+            PlaySE(SE_DEX_PAGE);
             return;
         }
-        if ((gMain.newKeys & DPAD_RIGHT)
-         || ((gMain.newKeys & R_BUTTON) && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR))
+        if ((JOY_NEW(DPAD_RIGHT))
+         || ((JOY_NEW(R_BUTTON)) && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR))
         {
             if (!sPokedexListItem->owned)
             {
-                PlaySE(SE_HAZURE);
+                PlaySE(SE_FAILURE);
             }
             else
             {
@@ -3668,7 +3667,7 @@ static void Task_HandleCryScreenInput(u8 taskId)
                 m4aMPlayContinue(&gMPlayInfo_BGM);
                 sPokedexView->screenSwitchState = 3;
                 gTasks[taskId].func = Task_SwitchScreensFromCryScreen;
-                PlaySE(SE_Z_PAGE);
+                PlaySE(SE_DEX_PAGE);
             }
             return;
         }
@@ -3808,20 +3807,20 @@ static void Task_LoadSizeScreen(u8 taskId)
 
 static void Task_HandleSizeScreenInput(u8 taskId)
 {
-    if (gMain.newKeys & B_BUTTON)
+    if (JOY_NEW(B_BUTTON))
     {
         BeginNormalPaletteFade(0xFFFFFFEB, 0, 0, 0x10, RGB_BLACK);
         sPokedexView->screenSwitchState = 1;
         gTasks[taskId].func = Task_SwitchScreensFromSizeScreen;
         PlaySE(SE_PC_OFF);
     }
-    else if ((gMain.newKeys & DPAD_LEFT)
-     || ((gMain.newKeys & L_BUTTON) && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR))
+    else if ((JOY_NEW(DPAD_LEFT))
+     || ((JOY_NEW(L_BUTTON)) && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR))
     {
         BeginNormalPaletteFade(0xFFFFFFEB, 0, 0, 0x10, RGB_BLACK);
         sPokedexView->screenSwitchState = 2;
         gTasks[taskId].func = Task_SwitchScreensFromSizeScreen;
-        PlaySE(SE_Z_PAGE);
+        PlaySE(SE_DEX_PAGE);
     }
 }
 
@@ -3949,8 +3948,8 @@ static void Task_DisplayCaughtMonDexPage(u8 taskId)
             ResetOtherVideoRegisters(DISPCNT_BG0_ON);
             ResetBgsAndClearDma3BusyFlags(0);
             InitBgsFromTemplates(0, sNewEntryInfoScreen_BgTemplate, ARRAY_COUNT(sNewEntryInfoScreen_BgTemplate));
-            SetBgTilemapBuffer(3, AllocZeroed(0x800));
-            SetBgTilemapBuffer(2, AllocZeroed(0x800));
+            SetBgTilemapBuffer(3, AllocZeroed(BG_SCREEN_SIZE));
+            SetBgTilemapBuffer(2, AllocZeroed(BG_SCREEN_SIZE));
             InitWindows(sNewEntryInfoScreen_WindowTemplates);
             DeactivateAllTextPrinters();
             gTasks[taskId].tState = 1;
@@ -4008,7 +4007,7 @@ static void Task_DisplayCaughtMonDexPage(u8 taskId)
 
 static void Task_HandleCaughtMonPageInput(u8 taskId)
 {
-    if (gMain.newKeys & (A_BUTTON | B_BUTTON))
+    if (JOY_NEW(A_BUTTON | B_BUTTON))
     {
         BeginNormalPaletteFade(0x0000FFFF, 0, 0, 16, RGB_BLACK);
         gSprites[gTasks[taskId].tMonSpriteId].callback = SpriteCB_SlideCaughtMonToCenter;
@@ -4165,21 +4164,17 @@ static void PrintMonHeight(u16 height, u8 left, u8 top)
 
 static void PrintMonWeight(u16 weight, u8 left, u8 top)
 {
-#ifndef NONMATCHING
-    asm("":::"r9");
-{
-#endif
     u8 buffer[16];
     bool8 output;
-    u8 i = 0;
+    u8 i;
     u32 lbs = (weight * 100000) / 4536;
 
     if (lbs % 10u >= 5)
         lbs += 10;
+    i = 0;
     output = FALSE;
 
-    buffer[i] = (lbs / 100000) + CHAR_0;
-    if (buffer[i] == CHAR_0)
+    if ((buffer[i] = (lbs / 100000) + CHAR_0) == CHAR_0 && !output)
     {
         buffer[i++] = 0x77;
     }
@@ -4190,8 +4185,7 @@ static void PrintMonWeight(u16 weight, u8 left, u8 top)
     }
 
     lbs %= 100000;
-    buffer[i] = (lbs / 10000) + CHAR_0;
-    if (buffer[i] == CHAR_0 && !output)
+    if ((buffer[i] = (lbs / 10000) + CHAR_0) == CHAR_0 && !output)
     {
         buffer[i++] = 0x77;
     }
@@ -4202,13 +4196,13 @@ static void PrintMonWeight(u16 weight, u8 left, u8 top)
     }
 
     lbs %= 10000;
-    buffer[i] = (lbs / 1000) + CHAR_0;
-    if (buffer[i] == CHAR_0 && !output)
+    if ((buffer[i] = (lbs / 1000) + CHAR_0) == CHAR_0 && !output)
     {
         buffer[i++] = 0x77;
     }
     else
     {
+        output = TRUE;
         i++;
     }
 
@@ -4224,9 +4218,6 @@ static void PrintMonWeight(u16 weight, u8 left, u8 top)
     buffer[i++] = CHAR_PERIOD;
     buffer[i++] = EOS;
     PrintInfoScreenText(buffer, left, top);
-#ifndef NONMATCHING
-}
-#endif
 }
 
 const u8 *GetPokedexCategoryName(u16 dexNum) // unused
@@ -4790,10 +4781,10 @@ static void Task_LoadSearchMenu(u8 taskId)
             ResetOtherVideoRegisters(0);
             ResetBgsAndClearDma3BusyFlags(0);
             InitBgsFromTemplates(0, sSearchMenu_BgTemplate, ARRAY_COUNT(sSearchMenu_BgTemplate));
-            SetBgTilemapBuffer(3, AllocZeroed(0x800));
-            SetBgTilemapBuffer(2, AllocZeroed(0x800));
-            SetBgTilemapBuffer(1, AllocZeroed(0x800));
-            SetBgTilemapBuffer(0, AllocZeroed(0x800));
+            SetBgTilemapBuffer(3, AllocZeroed(BG_SCREEN_SIZE));
+            SetBgTilemapBuffer(2, AllocZeroed(BG_SCREEN_SIZE));
+            SetBgTilemapBuffer(1, AllocZeroed(BG_SCREEN_SIZE));
+            SetBgTilemapBuffer(0, AllocZeroed(BG_SCREEN_SIZE));
             InitWindows(sSearchMenu_WindowTemplate);
             DeactivateAllTextPrinters();
             PutWindowTilemap(0);
@@ -4877,13 +4868,13 @@ static void Task_SwitchToSearchMenuTopBar(u8 taskId)
 
 static void Task_HandleSearchTopBarInput(u8 taskId)
 {
-    if (gMain.newKeys & B_BUTTON)
+    if (JOY_NEW(B_BUTTON))
     {
         PlaySE(SE_PC_OFF);
         gTasks[taskId].func = Task_ExitSearch;
         return;
     }
-    if (gMain.newKeys & A_BUTTON)
+    if (JOY_NEW(A_BUTTON))
     {
         switch (gTasks[taskId].tTopBarItem)
         {
@@ -4904,17 +4895,17 @@ static void Task_HandleSearchTopBarInput(u8 taskId)
         }
         return;
     }
-    if ((gMain.newKeys & DPAD_LEFT) && gTasks[taskId].tTopBarItem > SEARCH_TOPBAR_SEARCH)
+    if ((JOY_NEW(DPAD_LEFT)) && gTasks[taskId].tTopBarItem > SEARCH_TOPBAR_SEARCH)
     {
-        PlaySE(SE_Z_PAGE);
+        PlaySE(SE_DEX_PAGE);
         gTasks[taskId].tTopBarItem--;
         HighlightSelectedSearchTopBarItem(gTasks[taskId].tTopBarItem);
         CopyWindowToVram(0, 2);
         CopyBgTilemapBufferToVram(3);
     }
-    if ((gMain.newKeys & DPAD_RIGHT) && gTasks[taskId].tTopBarItem < SEARCH_TOPBAR_CANCEL)
+    if ((JOY_NEW(DPAD_RIGHT)) && gTasks[taskId].tTopBarItem < SEARCH_TOPBAR_CANCEL)
     {
-        PlaySE(SE_Z_PAGE);
+        PlaySE(SE_DEX_PAGE);
         gTasks[taskId].tTopBarItem++;
         HighlightSelectedSearchTopBarItem(gTasks[taskId].tTopBarItem);
         CopyWindowToVram(0, 2);
@@ -4951,14 +4942,14 @@ static void Task_HandleSearchMenuInput(u8 taskId)
             movementMap = sSearchMovementMap_SearchNatDex;
     }
 
-    if (gMain.newKeys & B_BUTTON)
+    if (JOY_NEW(B_BUTTON))
     {
-        PlaySE(SE_BOWA);
+        PlaySE(SE_BALL);
         SetDefaultSearchModeAndOrder(taskId);
         gTasks[taskId].func = Task_SwitchToSearchMenuTopBar;
         return;
     }
-    if (gMain.newKeys & A_BUTTON)
+    if (JOY_NEW(A_BUTTON))
     {
         if (gTasks[taskId].tMenuItem == SEARCH_OK)
         {
@@ -4981,7 +4972,7 @@ static void Task_HandleSearchMenuInput(u8 taskId)
             {
                 EraseAndPrintSearchTextBox(gText_SearchingPleaseWait);
                 gTasks[taskId].func = Task_StartPokedexSearch;
-                PlaySE(SE_Z_SEARCH);
+                PlaySE(SE_DEX_SEARCH);
                 CopyWindowToVram(0, 2);
             }
         }
@@ -4993,7 +4984,7 @@ static void Task_HandleSearchMenuInput(u8 taskId)
         return;
     }
 
-    if ((gMain.newKeys & DPAD_LEFT) && movementMap[gTasks[taskId].tMenuItem][0] != 0xFF)
+    if ((JOY_NEW(DPAD_LEFT)) && movementMap[gTasks[taskId].tMenuItem][0] != 0xFF)
     {
         PlaySE(SE_SELECT);
         gTasks[taskId].tMenuItem = movementMap[gTasks[taskId].tMenuItem][0];
@@ -5001,7 +4992,7 @@ static void Task_HandleSearchMenuInput(u8 taskId)
         CopyWindowToVram(0, 2);
         CopyBgTilemapBufferToVram(3);
     }
-    if ((gMain.newKeys & DPAD_RIGHT) && movementMap[gTasks[taskId].tMenuItem][1] != 0xFF)
+    if ((JOY_NEW(DPAD_RIGHT)) && movementMap[gTasks[taskId].tMenuItem][1] != 0xFF)
     {
         PlaySE(SE_SELECT);
         gTasks[taskId].tMenuItem = movementMap[gTasks[taskId].tMenuItem][1];
@@ -5009,7 +5000,7 @@ static void Task_HandleSearchMenuInput(u8 taskId)
         CopyWindowToVram(0, 2);
         CopyBgTilemapBufferToVram(3);
     }
-    if ((gMain.newKeys & DPAD_UP) && movementMap[gTasks[taskId].tMenuItem][2] != 0xFF)
+    if ((JOY_NEW(DPAD_UP)) && movementMap[gTasks[taskId].tMenuItem][2] != 0xFF)
     {
         PlaySE(SE_SELECT);
         gTasks[taskId].tMenuItem = movementMap[gTasks[taskId].tMenuItem][2];
@@ -5017,7 +5008,7 @@ static void Task_HandleSearchMenuInput(u8 taskId)
         CopyWindowToVram(0, 2);
         CopyBgTilemapBufferToVram(3);
     }
-    if ((gMain.newKeys & DPAD_DOWN) && movementMap[gTasks[taskId].tMenuItem][3] != 0xFF)
+    if ((JOY_NEW(DPAD_DOWN)) && movementMap[gTasks[taskId].tMenuItem][3] != 0xFF)
     {
         PlaySE(SE_SELECT);
         gTasks[taskId].tMenuItem = movementMap[gTasks[taskId].tMenuItem][3];
@@ -5046,12 +5037,12 @@ static void Task_WaitAndCompleteSearch(u8 taskId)
     {
         if (sPokedexView->pokemonListCount != 0)
         {
-            PlaySE(SE_SEIKAI);
+            PlaySE(SE_SUCCESS);
             EraseAndPrintSearchTextBox(gText_SearchCompleted);
         }
         else
         {
-            PlaySE(SE_HAZURE);
+            PlaySE(SE_FAILURE);
             EraseAndPrintSearchTextBox(gText_NoMatchingPkmnWereFound);
         }
         gTasks[taskId].func = Task_SearchCompleteWaitForInput;
@@ -5061,7 +5052,7 @@ static void Task_WaitAndCompleteSearch(u8 taskId)
 
 static void Task_SearchCompleteWaitForInput(u8 taskId)
 {
-    if (gMain.newKeys & A_BUTTON)
+    if (JOY_NEW(A_BUTTON))
     {
         if (sPokedexView->pokemonListCount != 0)
         {
@@ -5075,7 +5066,7 @@ static void Task_SearchCompleteWaitForInput(u8 taskId)
         else
         {
             gTasks[taskId].func = Task_SwitchToSearchMenu;
-            PlaySE(SE_BOWA);
+            PlaySE(SE_BALL);
         }
     }
 }
@@ -5087,9 +5078,9 @@ static void Task_SelectSearchMenuItem(u8 taskId)
     u16 *scrollOffset;
 
     DrawOrEraseSearchParameterBox(FALSE);
-    menuItem = (u16)gTasks[taskId].tMenuItem;
-    cursorPos = (u16*)&gTasks[taskId].data[sSearchOptions[menuItem].taskDataCursorPos];
-    scrollOffset = (u16*)&gTasks[taskId].data[sSearchOptions[menuItem].taskDataScrollOffset];
+    menuItem = gTasks[taskId].tMenuItem;
+    cursorPos = &gTasks[taskId].data[sSearchOptions[menuItem].taskDataCursorPos];
+    scrollOffset = &gTasks[taskId].data[sSearchOptions[menuItem].taskDataScrollOffset];
     gTasks[taskId].tCursorPos = *cursorPos;
     gTasks[taskId].tScrollOffset = *scrollOffset;
     PrintSearchParameterText(taskId);
@@ -5114,7 +5105,7 @@ static void Task_HandleSearchParameterInput(u8 taskId)
     cursorPos = &gTasks[taskId].data[sSearchOptions[menuItem].taskDataCursorPos];
     scrollOffset = &gTasks[taskId].data[sSearchOptions[menuItem].taskDataScrollOffset];
     maxOption = sSearchOptions[menuItem].numOptions - 1;
-    if (gMain.newKeys & A_BUTTON)
+    if (JOY_NEW(A_BUTTON))
     {
         PlaySE(SE_PIN);
         ClearSearchParameterBoxText();
@@ -5124,9 +5115,9 @@ static void Task_HandleSearchParameterInput(u8 taskId)
         CopyBgTilemapBufferToVram(3);
         return;
     }
-    if (gMain.newKeys & B_BUTTON)
+    if (JOY_NEW(B_BUTTON))
     {
-        PlaySE(SE_BOWA);
+        PlaySE(SE_BALL);
         ClearSearchParameterBoxText();
         DrawOrEraseSearchParameterBox(TRUE);
         *cursorPos = gTasks[taskId].tCursorPos;
@@ -5137,7 +5128,7 @@ static void Task_HandleSearchParameterInput(u8 taskId)
         return;
     }
     moved = FALSE;
-    if (gMain.newAndRepeatedKeys & DPAD_UP)
+    if (JOY_REPEAT(DPAD_UP))
     {
         if (*cursorPos != 0)
         {
@@ -5163,7 +5154,7 @@ static void Task_HandleSearchParameterInput(u8 taskId)
         }
         return;
     }
-    if (gMain.newAndRepeatedKeys & DPAD_DOWN)
+    if (JOY_REPEAT(DPAD_DOWN))
     {
         if (*cursorPos < MAX_SEARCH_PARAM_CURSOR_POS && *cursorPos < maxOption)
         {
@@ -5206,84 +5197,25 @@ static void Task_ExitSearchWaitForFade(u8 taskId)
     }
 }
 
-#ifdef NONMATCHING
-// This doesn't match because gcc flips the naming of the r7 and r6
-// registers. It also does one of the additions backwards.
 void SetSearchRectHighlight(u8 flags, u8 x, u8 y, u8 width)
 {
     u16 i;
-    u16* ptr = GetBgTilemapBuffer(3);
+    u16 temp; //should be a pointer, but does not match as one
+    u32 ptr = (u32)GetBgTilemapBuffer(3); //same as above
 
-    u16* temp;
     for (i = 0; i < width; i++)
     {
-        // This addition is supposed to be done in this order; however,
-        // gcc will always do it in ptr + (y * 32) order.
-        temp = (y * 32) + ptr;
-        temp[x + i] %= 0x1000;
-        temp[x + i] |= flags * 0x1000;
-
-        temp[x + i + 32] %= 0x1000;
-        temp[x + i + 32] |= flags * 0x1000;
+        temp = *(u16 *)(ptr + (y + 0) * 64 + (x + i) * 2);
+        temp &= 0x0fff;
+        temp |= (flags << 12);
+        *(u16 *)(ptr + (y + 0) * 64 + (x + i) * 2) = temp;
+        
+        temp = *(u16 *)(ptr + (y + 1) * 64 + (x + i) * 2);
+        temp &= 0x0fff;
+        temp |= (flags << 12);
+        *(u16 *)(ptr + (y + 1) * 64 + (x + i) * 2) = temp;
     }
 }
-#else
-__attribute__((naked))
-void SetSearchRectHighlight(u8 flags, u8 x, u8 y, u8 width)
-{
-    asm(".syntax unified\n\
-    push {r4-r7,lr}\n\
-    mov r7, r8\n\
-    push {r7}\n\
-    adds r4, r3, 0\n\
-    lsls r0, 24\n\
-    lsrs r6, r0, 24\n\
-    lsls r1, 24\n\
-    lsrs r1, 24\n\
-    mov r8, r1\n\
-    lsls r2, 24\n\
-    lsrs r5, r2, 24\n\
-    lsls r4, 24\n\
-    lsrs r4, 24\n\
-    movs r0, 0x3\n\
-    bl GetBgTilemapBuffer\n\
-    adds r2, r0, 0\n\
-    movs r3, 0\n\
-    cmp r3, r4\n\
-    bcs _080C1DEC\n\
-    lsls r0, r5, 6\n\
-    adds r7, r0, r2\n\
-    ldr r5, =0x00000fff\n\
-    lsls r2, r6, 12\n\
-_080C1DC8:\n\
-    mov r0, r8\n\
-    adds r1, r0, r3\n\
-    lsls r1, 1\n\
-    adds r1, r7\n\
-    ldrh r0, [r1]\n\
-    ands r0, r5\n\
-    orrs r0, r2\n\
-    strh r0, [r1]\n\
-    adds r1, 0x40\n\
-    ldrh r0, [r1]\n\
-    ands r0, r5\n\
-    orrs r0, r2\n\
-    strh r0, [r1]\n\
-    adds r0, r3, 0x1\n\
-    lsls r0, 16\n\
-    lsrs r3, r0, 16\n\
-    cmp r3, r4\n\
-    bcc _080C1DC8\n\
-_080C1DEC:\n\
-    pop {r3}\n\
-    mov r8, r3\n\
-    pop {r4-r7}\n\
-    pop {r0}\n\
-    bx r0\n\
-    .pool\n\
-    .syntax divided\n");
-}
-#endif
 
 #define SEARCH_BG_SEARCH                SEARCH_TOPBAR_SEARCH
 #define SEARCH_BG_SHIFT                 SEARCH_TOPBAR_SHIFT

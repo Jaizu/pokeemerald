@@ -16,7 +16,6 @@
 #include "util.h"
 #include "gpu_regs.h"
 #include "battle_message.h"
-#include "constants/species.h"
 #include "pokedex.h"
 #include "palette.h"
 #include "international_string_util.h"
@@ -940,10 +939,65 @@ void DummyBattleInterfaceFunc(u8 healthboxSpriteId, bool8 isDoubleBattleBattlerO
 
 }
 
+static void TryToggleHealboxVisibility(u8 priority, u8 healthboxLeftSpriteId, u8 healthboxRightSpriteId, u8 healthbarSpriteId, u8 indicatorSpriteId)
+{
+    u8 spriteIds[4] = {healthboxLeftSpriteId, healthboxRightSpriteId, healthbarSpriteId, indicatorSpriteId};
+    int i;
+    
+    switch (gBattleResources->bufferA[gBattleAnimAttacker][0])
+    {
+    case CONTROLLER_MOVEANIMATION:
+        if (gBattleResources->bufferA[gBattleAnimAttacker][1] == MOVE_TRANSFORM)
+            return;
+        break;
+    case CONTROLLER_BALLTHROWANIM:
+        return;   //throwing ball does not hide hp boxes
+    case CONTROLLER_BATTLEANIMATION:
+        //check special anims that hide health boxes
+        switch (gBattleResources->bufferA[gBattleAnimAttacker][1])
+        {
+        case B_ANIM_TURN_TRAP:
+        case B_ANIM_LEECH_SEED_DRAIN:
+        case B_ANIM_MON_HIT:
+        case B_ANIM_SNATCH_MOVE:
+        case B_ANIM_FUTURE_SIGHT_HIT:
+        case B_ANIM_DOOM_DESIRE_HIT:
+        case B_ANIM_WISH_HEAL:
+        //new
+        case B_ANIM_MEGA_EVOLUTION:
+        case B_ANIM_TERRAIN_MISTY:
+        case B_ANIM_TERRAIN_GRASSY:
+        case B_ANIM_TERRAIN_ELECTRIC:
+        case B_ANIM_TERRAIN_PSYCHIC:
+            break;
+        }
+        return; //all other special anims dont hide
+    default:
+        return;
+    }
+    
+    // if we've reached here, we should hide hp boxes
+    for (i = 0; i < NELEMS(spriteIds); i++)
+    {
+        if (spriteIds[i] == 0xFF)
+            continue;
+        
+        switch (priority)
+        {
+        case 0: //start of anim -> make invisible
+            gSprites[spriteIds[i]].invisible = TRUE;
+            break;
+        case 1: //end of anim -> make visible
+            gSprites[spriteIds[i]].invisible = FALSE;
+            break;
+        }
+    }
+}
+
 void UpdateOamPriorityInAllHealthboxes(u8 priority)
 {
     s32 i;
-
+    
     for (i = 0; i < gBattlersCount; i++)
     {
         u8 healthboxLeftSpriteId = gHealthboxSpriteIds[i];
@@ -956,6 +1010,11 @@ void UpdateOamPriorityInAllHealthboxes(u8 priority)
         gSprites[healthbarSpriteId].oam.priority = priority;
         if (indicatorSpriteId != 0xFF)
             gSprites[indicatorSpriteId].oam.priority = priority;
+        
+        #if HIDE_HEALTHBOXES_DURING_ANIMS
+        if (IsBattlerAlive(i))
+            TryToggleHealboxVisibility(priority, healthboxLeftSpriteId, healthboxRightSpriteId, healthbarSpriteId, indicatorSpriteId);
+        #endif
     }
 }
 
@@ -1751,7 +1810,7 @@ u8 CreatePartyStatusSummarySprites(u8 battlerId, struct HpAndStatus *partyInfo, 
         gBattleSpritesDataPtr->animationData->field_9_x1C++;
     }
 
-    PlaySE12WithPanning(SE_TB_START, 0);
+    PlaySE12WithPanning(SE_BALL_TRAY_ENTER, 0);
     return taskId;
 }
 
@@ -1954,9 +2013,9 @@ static void SpriteCB_StatusSummaryBallsOnBattleStart(struct Sprite *sprite)
             pan = SOUND_PAN_ATTACKER;
 
         if (sprite->data[7] != 0)
-            PlaySE2WithPanning(SE_TB_KARA, pan);
+            PlaySE2WithPanning(SE_BALL_TRAY_EXIT, pan);
         else
-            PlaySE1WithPanning(SE_TB_KON, pan);
+            PlaySE1WithPanning(SE_BALL_TRAY_BALL, pan);
 
         sprite->callback = SpriteCallbackDummy;
     }
@@ -2957,7 +3016,7 @@ void CreateAbilityPopUp(u8 battlerId, u32 ability, bool32 isDoubleBattle)
     const s16 (*coords)[2];
     u8 spriteId1, spriteId2, battlerPosition, taskId;
 
-    if (B_ABILITY_POP_UP < GEN_5)
+    if (!B_ABILITY_POP_UP)
         return;
 
     if (!gBattleStruct->activeAbilityPopUps)
@@ -3003,6 +3062,9 @@ void CreateAbilityPopUp(u8 battlerId, u32 ability, bool32 isDoubleBattle)
         gSprites[spriteId1].tRightToLeft = FALSE;
         gSprites[spriteId2].tRightToLeft = FALSE;
     }
+    
+    gBattleStruct->abilityPopUpSpriteIds[gBattleAnimAttacker][0] = spriteId1;
+    gBattleStruct->abilityPopUpSpriteIds[gBattleAnimAttacker][1] = spriteId2;
 
     taskId = CreateTask(Task_FreeAbilityPopUpGfx, 5);
     gTasks[taskId].tSpriteId1 = spriteId1;
@@ -3051,9 +3113,17 @@ static void SpriteCb_AbilityPopUp(struct Sprite *sprite)
         }
         else
         {
-            sprite->tFrames--;
+            if (!gBattleScripting.fixedPopup)
+                sprite->tFrames--;
         }
     }
+}
+
+void DestroyAbilityPopUp(u8 battlerId)
+{
+    gSprites[gBattleStruct->abilityPopUpSpriteIds[battlerId][0]].tFrames = 0;
+    gSprites[gBattleStruct->abilityPopUpSpriteIds[battlerId][1]].tFrames = 0;
+    gBattleScripting.fixedPopup = FALSE;
 }
 
 static void Task_FreeAbilityPopUpGfx(u8 taskId)

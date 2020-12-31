@@ -327,7 +327,7 @@ void PlayerPC(void)
 
 static void InitPlayerPCMenu(u8 taskId)
 {
-    s16 *data;
+    u16 *data;
     struct WindowTemplate windowTemplate;
 
     data = gTasks[taskId].data;
@@ -346,7 +346,7 @@ static void InitPlayerPCMenu(u8 taskId)
 
 static void PlayerPCProcessMenuInput(u8 taskId)
 {
-    s16 *data;
+    u16 *data;
     s8 inputOptionId;
 
     data = gTasks[taskId].data;
@@ -425,7 +425,7 @@ static void PlayerPC_TurnOff(u8 taskId)
 
 static void InitItemStorageMenu(u8 taskId, u8 var)
 {
-    s16 *data;
+    u16 *data;
     struct WindowTemplate windowTemplate;
 
     data = gTasks[taskId].data;
@@ -538,7 +538,7 @@ static void ItemStorage_Toss(u8 taskId)
 
 static void ItemStorage_WithdrawToss_Helper(u8 taskId, bool8 toss)
 {
-    s16 *data = gTasks[taskId].data;
+    u16 *data = gTasks[taskId].data;
 
     data[3] = toss;
     sub_816B4DC(taskId);
@@ -571,9 +571,9 @@ static void ItemStorage_SetItemAndMailCount(u8 taskId)
 
 static void sub_816B4DC(u8 taskId)
 {
-    u16 *data = (u16 *)gTasks[taskId].data;
+    u16 *data = gTasks[taskId].data;
 
-    ClearStdWindowAndFrameToTransparent((u8)data[4], FALSE);
+    ClearStdWindowAndFrameToTransparent(data[4], FALSE);
     ClearWindowTilemap(data[4]);
     RemoveWindow(data[4]);
     ScheduleBgCopyTilemapToVram(0);
@@ -1124,7 +1124,7 @@ static void ItemStorage_ProcessInput(u8 taskId)
     s32 id;
 
     data = gTasks[taskId].data;
-    if (gMain.newKeys & SELECT_BUTTON)
+    if (JOY_NEW(SELECT_BUTTON))
     {
         ListMenuGetScrollAndRow(data[5], &(playerPCItemPageInfo.itemsAbove), &(playerPCItemPageInfo.cursorPos));
         if ((playerPCItemPageInfo.itemsAbove + playerPCItemPageInfo.cursorPos) != (playerPCItemPageInfo.count - 1))
@@ -1202,7 +1202,7 @@ static void sub_816C4FC(u8 taskId)
     s32 id;
 
     data = gTasks[taskId].data;
-    if (gMain.newKeys & SELECT_BUTTON)
+    if (JOY_NEW(SELECT_BUTTON))
     {
         ListMenuGetScrollAndRow(data[5], &(playerPCItemPageInfo.itemsAbove), &(playerPCItemPageInfo.cursorPos));
         ItemStorage_DoItemSwap(taskId, FALSE);
@@ -1217,7 +1217,7 @@ static void sub_816C4FC(u8 taskId)
     case LIST_NOTHING_CHOSEN:
         break;
     case LIST_CANCEL:
-        if (gMain.newKeys & A_BUTTON)
+        if (JOY_NEW(A_BUTTON))
         {
             ItemStorage_DoItemSwap(taskId, FALSE);
         }
@@ -1322,7 +1322,7 @@ static void ItemStorage_HandleQuantityRolling(u8 taskId)
         sub_816C6BC(sub_816BC7C(4), data[2], STR_CONV_MODE_LEADING_ZEROS, 8, 1, 3);
     else
     {
-        if (gMain.newKeys & A_BUTTON)
+        if (JOY_NEW(A_BUTTON))
         {
             PlaySE(SE_SELECT);
             sub_816BCC4(4);
@@ -1331,7 +1331,7 @@ static void ItemStorage_HandleQuantityRolling(u8 taskId)
             else
                 ItemStorage_DoItemToss(taskId);
         }
-        else if (gMain.newKeys & B_BUTTON)
+        else if (JOY_NEW(B_BUTTON))
         {
             PlaySE(SE_SELECT);
             sub_816BCC4(4);
@@ -1370,7 +1370,7 @@ static void ItemStorage_DoItemToss(u8 taskId)
 
     data = gTasks[taskId].data;
     b = (playerPCItemPageInfo.cursorPos + playerPCItemPageInfo.itemsAbove);
-    if (ItemId_GetImportance(gSaveBlock1Ptr->pcItems[b].itemId) == 0)
+    if (!ItemId_GetImportance(gSaveBlock1Ptr->pcItems[b].itemId))
     {
         CopyItemName(gSaveBlock1Ptr->pcItems[b].itemId, gStringVar1);
         ConvertIntToDecimalStringN(gStringVar2, data[2], STR_CONV_MODE_LEFT_ALIGN, 3);
@@ -1402,7 +1402,7 @@ static void ItemStorage_HandleRemoveItem(u8 taskId)
     s16 *data;
 
     data = gTasks[taskId].data;
-    if (gMain.newKeys & (A_BUTTON | B_BUTTON))
+    if (JOY_NEW(A_BUTTON | B_BUTTON))
     {
         RemovePCItem((playerPCItemPageInfo.cursorPos + playerPCItemPageInfo.itemsAbove), data[2]);
         DestroyListMenuTask(data[5], &(playerPCItemPageInfo.itemsAbove), &(playerPCItemPageInfo.cursorPos));
@@ -1419,7 +1419,7 @@ static void ItemStorage_WaitPressHandleResumeProcessInput(u8 taskId)
     s16 *data;
 
     data = gTasks[taskId].data;
-    if (gMain.newKeys & (A_BUTTON | B_BUTTON))
+    if (JOY_NEW(A_BUTTON | B_BUTTON))
     {
         ItemStorage_PrintItemPcResponse(ItemStorage_GetItemPcResponse(gSaveBlock1Ptr->pcItems[(playerPCItemPageInfo.itemsAbove + playerPCItemPageInfo.cursorPos)].itemId));
         ItemStorage_StartScrollIndicatorAndProcessInput(taskId);

@@ -58,7 +58,7 @@ JaggedPass_EventScript_OpenMagmaHideout:: @ 82306BB
 	setvar VAR_0x8007, 3   @ shake delay
 	special ShakeCamera
 	waitstate
-	playse SE_KOUKA_M
+	playse SE_EFFECTIVE
 	setmetatile 16, 17, 0, 1
 	setmetatile 16, 18, 0, 0
 	special DrawWholeMapView
