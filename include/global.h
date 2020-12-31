@@ -68,10 +68,6 @@
 // Converts a Q24.8 fixed-point format number to a regular integer
 #define Q_24_8_TO_INT(n) ((int)((n) >> 8))
 
-// Rounding value for Q4.12 fixed-point format
-#define Q_4_12_ROUND ((1) << (12 - 1))
-#define UQ_4_12_ROUND ((1) << (12 - 1))
-
 #define min(a, b) ((a) < (b) ? (a) : (b))
 #define max(a, b) ((a) >= (b) ? (a) : (b))
 
@@ -122,14 +118,13 @@
 // Each define must be here for each of RHH's branch you have pulled.
 // e.g. If you have both the battle_engine and pokemon_expansion branch,
 //      then both BATTLE_ENGINE and POKEMON_EXPANSION must be defined here.
-
 #define BATTLE_ENGINE
 #define ITEM_EXPANSION
 #define POKEMON_EXPANSION
 
 #define ROUND_BITS_TO_BYTES(numBits)(((numBits) / 8) + (((numBits) % 8) ? 1 : 0))
 
-#define DEX_FLAGS_NO (ROUND_BITS_TO_BYTES(NUM_SPECIES))
+#define DEX_FLAGS_NO (ROUND_BITS_TO_BYTES(POKEMON_SLOTS_NUMBER))
 #define NUM_FLAG_BYTES (ROUND_BITS_TO_BYTES(FLAGS_COUNT))
 
 struct Coords8

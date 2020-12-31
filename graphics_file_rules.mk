@@ -75,6 +75,8 @@ $(CHERRIMGFXDIR)/shiny.gbapal: $(CHERRIMGFXDIR)/shiny_normal.gbapal \
 								$(CHERRIMGFXDIR)/shiny_sun.gbapal
 	@cat $^ >$@
 
+### Tilesets ###
+
 SOOTOPOLISANIMDIR := $(TILESETGFXDIR)/secondary/sootopolis/anim
 
 $(SOOTOPOLISANIMDIR)/stormy_water/0.4bpp: $(SOOTOPOLISANIMDIR)/stormy_water/0_kyogre.4bpp \
