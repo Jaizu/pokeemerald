@@ -354,8 +354,9 @@
 		settrainerflag TRAINER_SABULO_ISLAND_ENOCH
 		// SABULO CAVE
 		// Obtain Ragged Map item
-		// TODO:: Add Ragged Map item
+		// TODO: Add Ragged Map item
 		// additem ITEM_RAGGED_MAP
+		setflag FLAG_ITEM_SABULO_CAVE_RAGGED_MAP
 		// Obtain HM03 from Coulter
 		additem ITEM_HM03
 		// SABULO ISLAND
@@ -396,6 +397,25 @@
 		// NEMESIS RIVER
 		// Fight Trainers
 		settrainerflag TRAINER_WENDY_1
+		// NEMESIS CAVE
+		// Fight Trainers
+		settrainerflag TRAINER_AMALIA
+		settrainerflag TRAINER_KOICHI
+		settrainerflag TRAINER_MARLON
+		settrainerflag TRAINER_INGRID
+		settrainerflag TRAINER_HIDEKI
+		// Discover the Lileep Tablet
+		setflag FLAG_HIDE_NEMESIS_CAVE_PKMN_RANGER_M
+		setflag FLAG_HIDE_NEMESIS_CAVE_PKMN_RANGERS
+		setflag FLAG_NEMESIS_CAVE_RANGERS_RETURNED
+		clearflag FLAG_HIDE_VALOON_TOWN_PKMN_RANGER_1
+		clearflag FLAG_HIDE_VALOON_TOWN_HOUSE_1_PKMN_RANGER_M
+		clearflag FLAG_HIDE_NEMESIS_RIVER_NEW_ELDERS
+		// NEMESIS RIVER
+		// Ezekiel scene
+		setvar VAR_NEMESIS_RIVER_STATE, 2
+		// VALOON RESERVE
+		// Player enters the compulsory Bug-Catching Contest
 		// setflag FLAG_UNLOCK_VALOON_GYM_DOOR
 		end
 	
