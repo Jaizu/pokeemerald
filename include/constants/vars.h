@@ -185,6 +185,7 @@
 #define VAR_DEVON_CORP_3F_STATE              0x408F
 #define VAR_NEMESIS_CAVE_STATE               0x408F // VAR_DEVON_CORP_3F_STATE in Emerald
 #define VAR_BRINEY_HOUSE_STATE               0x4090
+#define VAR_VALOON_RESERVE_STATE             0x4090 // VAR_BRINEY_HOUSE_STATE in Emerald
 #define VAR_UNUSED_0x4091                    0x4091 // Unused Var
 #define VAR_LITTLEROOT_INTRO_STATE           0x4092
 #define VAR_MAUVILLE_GYM_STATE               0x4093

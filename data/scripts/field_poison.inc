@@ -1,4 +1,4 @@
-EventScript_FieldPoison:: @ 82736BC
+EventScript_FieldPoison::
 	lockall
 	special TryFieldPoisonWhiteOut
 	waitstate
@@ -6,10 +6,12 @@ EventScript_FieldPoison:: @ 82736BC
 	goto_if_eq EventScript_FieldWhiteOut
 	compare VAR_RESULT, FLDPSN_FRONTIER_WHITEOUT
 	goto_if_eq EventScript_FrontierFieldWhiteOut
+	compare VAR_RESULT, FLDPSN_VALOON_RESERVE_WHITEOUT
+	goto_if_eq ValoonReserve_EventScript_BugCatchingContestWhiteOut
 	releaseall
 	end
 
-EventScript_FieldWhiteOut:: @ 82736D9
+EventScript_FieldWhiteOut::
 	message gText_PlayerWhitedOut
 	waitmessage
 	waitbuttonpress
@@ -25,7 +27,7 @@ EventScript_SetRespawnWindmistPkmnCenter::
 	setrespawn HEAL_LOCATION_WINDMIST_CITY
 	return
 
-EventScript_FrontierFieldWhiteOut:: @ 82736F8
+EventScript_FrontierFieldWhiteOut::
 	message gText_PlayerWhitedOut
 	waitmessage
 	waitbuttonpress

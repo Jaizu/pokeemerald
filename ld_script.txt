@@ -330,6 +330,7 @@ SECTIONS {
         src/battle_transition_frontier.o(.text);
         src/international_string_util.o(.text);
         src/debug.o(.text);
+        src/bug_catching_contest.o(.text);
     } =0
 
     script_data :

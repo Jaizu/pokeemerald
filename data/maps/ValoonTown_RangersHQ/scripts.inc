@@ -21,8 +21,9 @@ ValoonTown_RangersHQ_EventScript_ContestClerk::
 	getpartysize
 	compare VAR_RESULT, 1
 	call_if_ne ValoonTown_RangersHQ_EventScript_YouHaveMoreThanOnePokemon
-	special HealPlayerParty
 	call_if_unset FLAG_RECEIVED_FREE_PARK_BALLS, ValoonTown_RangersHQ_EventScript_TryGiveFreeParkBalls
+	setflag FLAG_SYS_NO_PAYOUT
+	special HealPlayerParty
 	msgbox ValoonTown_RangersHQ_Text_TheContestWillBeginSoon, MSGBOX_DEFAULT
 	closemessage
 	getplayerxy VAR_0x8008, VAR_0x8009

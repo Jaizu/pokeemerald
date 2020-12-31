@@ -4226,3 +4226,9 @@ bool8 CheckPartyForMon(void)
     
     return FALSE;
 }
+
+void GetClearBattleOutcome(void)
+{
+    gSpecialVar_Result = gBattleOutcome;
+    gBattleOutcome = 0;
+}

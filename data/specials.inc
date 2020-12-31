@@ -538,3 +538,4 @@ gSpecials::
 	def_special TeleportCamera
 	def_special ReturnCameraToPlayer
 	def_special ReducePlayerPartyToSelectedMon
+	def_special GetClearBattleOutcome
