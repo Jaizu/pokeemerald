@@ -365,7 +365,7 @@ const struct SpriteTemplate gBallSpriteTemplates[POKEBALL_COUNT] =
         .oam = &sBallOamData,
         .anims = sBallAnimSequences,
         .images = NULL,
-        .affineAnims = sBallAffineAnimSequences,
+        .affineAnims = sAffineAnim_BallRotate,
         .callback = SpriteCB_TestBallThrow,
     },
 	{
@@ -374,7 +374,7 @@ const struct SpriteTemplate gBallSpriteTemplates[POKEBALL_COUNT] =
         .oam = &sBallOamData,
         .anims = sBallAnimSequences,
         .images = NULL,
-        .affineAnims = sBallAffineAnimSequences,
+        .affineAnims = sAffineAnim_BallRotate,
         .callback = SpriteCB_TestBallThrow,
     },
 	{
@@ -383,7 +383,7 @@ const struct SpriteTemplate gBallSpriteTemplates[POKEBALL_COUNT] =
         .oam = &sBallOamData,
         .anims = sBallAnimSequences,
         .images = NULL,
-        .affineAnims = sBallAffineAnimSequences,
+        .affineAnims = sAffineAnim_BallRotate,
         .callback = SpriteCB_TestBallThrow,
     },
 	{
@@ -392,7 +392,7 @@ const struct SpriteTemplate gBallSpriteTemplates[POKEBALL_COUNT] =
         .oam = &sBallOamData,
         .anims = sBallAnimSequences,
         .images = NULL,
-        .affineAnims = sBallAffineAnimSequences,
+        .affineAnims = sAffineAnim_BallRotate,
         .callback = SpriteCB_TestBallThrow,
     },
 	{
@@ -401,7 +401,7 @@ const struct SpriteTemplate gBallSpriteTemplates[POKEBALL_COUNT] =
         .oam = &sBallOamData,
         .anims = sBallAnimSequences,
         .images = NULL,
-        .affineAnims = sBallAffineAnimSequences,
+        .affineAnims = sAffineAnim_BallRotate,
         .callback = SpriteCB_TestBallThrow,
     },
 	{
@@ -410,7 +410,7 @@ const struct SpriteTemplate gBallSpriteTemplates[POKEBALL_COUNT] =
         .oam = &sBallOamData,
         .anims = sBallAnimSequences,
         .images = NULL,
-        .affineAnims = sBallAffineAnimSequences,
+        .affineAnims = sAffineAnim_BallRotate,
         .callback = SpriteCB_TestBallThrow,
     },
 	{
@@ -419,7 +419,7 @@ const struct SpriteTemplate gBallSpriteTemplates[POKEBALL_COUNT] =
         .oam = &sBallOamData,
         .anims = sBallAnimSequences,
         .images = NULL,
-        .affineAnims = sBallAffineAnimSequences,
+        .affineAnims = sAffineAnim_BallRotate,
         .callback = SpriteCB_TestBallThrow,
     },
 	{
@@ -428,7 +428,7 @@ const struct SpriteTemplate gBallSpriteTemplates[POKEBALL_COUNT] =
         .oam = &sBallOamData,
         .anims = sBallAnimSequences,
         .images = NULL,
-        .affineAnims = sBallAffineAnimSequences,
+        .affineAnims = sAffineAnim_BallRotate,
         .callback = SpriteCB_TestBallThrow,
     },
 	{
@@ -437,7 +437,7 @@ const struct SpriteTemplate gBallSpriteTemplates[POKEBALL_COUNT] =
         .oam = &sBallOamData,
         .anims = sBallAnimSequences,
         .images = NULL,
-        .affineAnims = sBallAffineAnimSequences,
+        .affineAnims = sAffineAnim_BallRotate,
         .callback = SpriteCB_TestBallThrow,
     },
 	{
@@ -446,7 +446,7 @@ const struct SpriteTemplate gBallSpriteTemplates[POKEBALL_COUNT] =
         .oam = &sBallOamData,
         .anims = sBallAnimSequences,
         .images = NULL,
-        .affineAnims = sBallAffineAnimSequences,
+        .affineAnims = sAffineAnim_BallRotate,
         .callback = SpriteCB_TestBallThrow,
     },
 	{
@@ -455,7 +455,7 @@ const struct SpriteTemplate gBallSpriteTemplates[POKEBALL_COUNT] =
         .oam = &sBallOamData,
         .anims = sBallAnimSequences,
         .images = NULL,
-        .affineAnims = sBallAffineAnimSequences,
+        .affineAnims = sAffineAnim_BallRotate,
         .callback = SpriteCB_TestBallThrow,
     },
 	{
@@ -464,7 +464,7 @@ const struct SpriteTemplate gBallSpriteTemplates[POKEBALL_COUNT] =
         .oam = &sBallOamData,
         .anims = sBallAnimSequences,
         .images = NULL,
-        .affineAnims = sBallAffineAnimSequences,
+        .affineAnims = sAffineAnim_BallRotate,
         .callback = SpriteCB_TestBallThrow,
     },
 	{
@@ -473,7 +473,7 @@ const struct SpriteTemplate gBallSpriteTemplates[POKEBALL_COUNT] =
         .oam = &sBallOamData,
         .anims = sBallAnimSequences,
         .images = NULL,
-        .affineAnims = sBallAffineAnimSequences,
+        .affineAnims = sAffineAnim_BallRotate,
         .callback = SpriteCB_TestBallThrow,
     },
 	{
@@ -482,7 +482,7 @@ const struct SpriteTemplate gBallSpriteTemplates[POKEBALL_COUNT] =
         .oam = &sBallOamData,
         .anims = sBallAnimSequences,
         .images = NULL,
-        .affineAnims = sBallAffineAnimSequences,
+        .affineAnims = sAffineAnim_BallRotate,
         .callback = SpriteCB_TestBallThrow,
     },
 	{
@@ -491,7 +491,7 @@ const struct SpriteTemplate gBallSpriteTemplates[POKEBALL_COUNT] =
         .oam = &sBallOamData,
         .anims = sBallAnimSequences,
         .images = NULL,
-        .affineAnims = sBallAffineAnimSequences,
+        .affineAnims = sAffineAnim_BallRotate,
         .callback = SpriteCB_TestBallThrow,
     },
 };
