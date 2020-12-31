@@ -28,7 +28,7 @@ ArchanHills_EventScript_TryClearPsyduck:
 	return
 
 ArchanHills_EventScript_ClearPsyduck:
-	playfanfare MUS_FANFA4
+	playfanfare MUS_OBTAIN_ITEM
 	message ArchanHills_Text_UsedTheSecretPotion
 	waitfanfare
 	removeitem ITEM_SECRET_POTION, 1
@@ -46,7 +46,7 @@ ArchanHills_EventScript_ClearPsyduck:
 	applymovement LOCALID_PSYDUCK_1, Common_Movement_Delay48
 	waitmovement 0
 	fadescreen FADE_TO_BLACK
-	playse SE_NIGERU
+	playse SE_FLEE
 	removeobject LOCALID_PSYDUCK_1
 	removeobject LOCALID_PSYDUCK_2
 	removeobject LOCALID_PSYDUCK_3

@@ -2,7 +2,7 @@
   "id": "MAP_SABULO_ISLAND_MART",
   "name": "SabuloIsland_Mart",
   "layout": "LAYOUT_ORBTUS_MART",
-  "music": "MUS_FRIENDLY",
+  "music": "MUS_POKE_MART",
   "region_map_section": "MAPSEC_PACIFIDLOG_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

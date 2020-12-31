@@ -2,7 +2,7 @@
   "id": "MAP_SEROS_VILLAGE_COULTERS_HOUSE_2F",
   "name": "SerosVillage_CoultersHouse_2F",
   "layout": "LAYOUT_SEROS_VILLAGE_COULTERS_HOUSE_2F",
-  "music": "MUS_GOTOWN",
+  "music": "MUS_RG_SEVII_45",
   "region_map_section": "MAPSEC_DEWFORD_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

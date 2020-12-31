@@ -23,11 +23,11 @@ SerosVillage_House_EventScript_OfferToBuy:
 
 SerosVillage_House_EventScript_SellRareBone:
 	removeitem ITEM_RARE_BONE, 1
-	playse SE_REGI
+	playse SE_SHOP
 	addmoney 10000, 0
 	updatemoneybox 0, 0
 	waitse
-	playfanfare MUS_FANFA4
+	playfanfare MUS_OBTAIN_ITEM
 	message SerosVillage_House_Text_PlayerSoldOneRareBone
 	waitfanfare
 	hidemoneybox

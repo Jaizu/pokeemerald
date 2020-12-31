@@ -46,7 +46,7 @@ ArchanTown_EventScript_TabletScene:
 	waitmovement 0	
 	msgbox ArchanTown_Text_RaceToFindTheSecondTablet, MSGBOX_DEFAULT
 	closemessage
-	playbgm MUS_RG_RIVAL2, 0
+	playbgm MUS_RG_RIVAL_EXIT, 0
 	applymovement LOCALID_COULTER, ArchanTown_Movement_CoulterExit
 	waitmovement 0
 	removeobject LOCALID_COULTER

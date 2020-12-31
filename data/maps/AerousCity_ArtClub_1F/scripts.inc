@@ -21,7 +21,7 @@ AerousCity_ArtClub_1F_EventScript_TryGiveEgg:
 	goto_if_eq AerousCity_ArtClub_1F_EventScript_NoRoomForEgg
 	giveegg SPECIES_EEVEE
 	setflag FLAG_RECEIVED_EGG_FROM_VINCENT
-	playfanfare MUS_FANFA4
+	playfanfare MUS_OBTAIN_ITEM
 	message AerousCity_ArtClub_1F_Text_ReceivedTheEgg
 	waitfanfare
 	msgbox AerousCity_ArtClub_1F_Text_InAWayRaisingAPokemonEggIsLike, MSGBOX_DEFAULT
@@ -54,7 +54,7 @@ AerousCity_ArtClub_1F_Text_GoodDayChallenger:
 	.string "I share that same passion for\n"
 	.string "Pokémon battles.\p"
 	.string "It is time to show me your true\n"
-	.string "colors, challenger!{PLAY_BGM}{MUS_TEST}$"
+	.string "colors, challenger!{PLAY_BGM}{MUS_ENCOUNTER_RICH}$"
 	
 AerousCity_ArtClub_1F_Text_VincentDefeat:
 	.string "Art.\n"

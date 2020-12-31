@@ -1013,7 +1013,7 @@ static bool16 IsRegirockSabuloIsland(struct WarpData *warp)
 u16 GetLocationMusic(struct WarpData *warp)
 {
     if (IsRegirockSabuloIsland(warp) == TRUE)
-        return MUS_M_DUNGON;
+        return MUS_MT_PYRE;
     else
         return Overworld_GetMapHeaderByGroupAndId(warp->mapGroup, warp->mapNum)->music;
 }

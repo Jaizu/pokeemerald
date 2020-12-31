@@ -2,7 +2,7 @@
   "id": "MAP_SABULO_ISLAND",
   "name": "SabuloIsland",
   "layout": "LAYOUT_SABULO_ISLAND",
-  "music": "MUS_HIGHTOWN",
+  "music": "MUS_RG_CINNABAR",
   "region_map_section": "MAPSEC_PACIFIDLOG_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",

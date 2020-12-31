@@ -2,7 +2,7 @@
   "id": "MAP_SABULO_CROSS",
   "name": "SabuloCross",
   "layout": "LAYOUT_SABULO_CROSS",
-  "music": "MUS_DOORO_X3",
+  "music": "MUS_ROUTE120",
   "region_map_section": "MAPSEC_ROUTE_111",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",

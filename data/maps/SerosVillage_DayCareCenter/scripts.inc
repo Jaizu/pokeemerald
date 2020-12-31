@@ -44,7 +44,7 @@ SerosVillage_DayCareCenter_EventScript_GiveHM01Scene:
 	closemessage
 	applymovement LOCALID_FERNANDO, SerosVillage_DayCareCenter_Movement_ExitFernando
 	waitmovement 0
-	playse SE_KAIDAN
+	playse SE_EXIT
 	waitse
 	removeobject LOCALID_FERNANDO
 	clearflag FLAG_HIDE_SEROS_GYM_FERNANDO
@@ -53,7 +53,7 @@ SerosVillage_DayCareCenter_EventScript_GiveHM01Scene:
 	closemessage
 	applymovement LOCALID_DAYCARE_MAN, SerosVillage_DayCareCenter_Movement_ExitDayCareMan
 	waitmovement 0
-	playse SE_KAIDAN
+	playse SE_EXIT
 	waitse
 	removeobject LOCALID_DAYCARE_MAN
 	fadescreen FADE_TO_BLACK
@@ -277,7 +277,7 @@ SerosVillage_DayCareCenter_EventScript_RetrieveMon::
 	waitmovement 0
 	specialvar VAR_RESULT, TakePokemonFromDaycare
 	special SubtractMoneyFromVar0x8005
-	playse SE_REGI
+	playse SE_SHOP
 	msgbox SerosVillage_DayCareCenter_Text_HeresYourMon, MSGBOX_DEFAULT
 	waitse
 	playmoncry VAR_RESULT, 0

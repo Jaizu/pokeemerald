@@ -29,7 +29,7 @@ ArchanTown_RedwoodResidence_EventScript_CarePackageScene:
 	applymovement LOCALID_REDWOOD, Common_Movement_WalkInPlaceFastestDown
 	waitmovement 0
 	delay 10
-	playfanfare MUS_FANFA4
+	playfanfare MUS_OBTAIN_ITEM
 	message ArchanTown_RedwoodResidence_Text_ObtainedTheCarePackage
 	waitfanfare
 	applymovement LOCALID_REDWOOD, Common_Movement_WalkInPlaceFastestRight
@@ -46,20 +46,20 @@ ArchanTown_RedwoodResidence_EventScript_CarePackageScene:
 	applymovement LOCALID_COULTER, Common_Movement_WalkInPlaceFastestDown
 	waitmovement 0
 	msgbox ArchanTown_RedwoodResidence_Text_OpenedItUp, MSGBOX_DEFAULT
-	playfanfare MUS_FANFA4
+	playfanfare MUS_OBTAIN_ITEM
 	message ArchanTown_RedwoodResidence_Text_ObtainedTheOrbtusPokedex
 	setflag FLAG_SYS_POKEDEX_GET
 	special SetUnlockedPokedexFlags
 	waitfanfare
 	msgbox ArchanTown_RedwoodResidence_Text_PlayerPutPokedexInBag, MSGBOX_DEFAULT
-	playfanfare MUS_FANFA4
+	playfanfare MUS_OBTAIN_ITEM
 	message ArchanTown_RedwoodResidence_Text_ObtainedTheRedwoodCardAndMap
 	// TODO: Add Redwood Card item
 	// additem ITEM_REDWOOD_CARD
 	additem ITEM_TOWN_MAP
 	waitfanfare
 	msgbox ArchanTown_RedwoodResidence_Text_PlayerPutCardAndMapInBag, MSGBOX_DEFAULT
-	playfanfare MUS_FANFA4
+	playfanfare MUS_OBTAIN_ITEM
 	message ArchanTown_RedwoodResidence_Text_ObtainedThePokeBallsAndPotions
 	additem ITEM_POKE_BALL, 10
 	additem ITEM_POTION, 5
@@ -74,17 +74,17 @@ ArchanTown_RedwoodResidence_EventScript_CarePackageScene:
 	setflag FLAG_HIDE_MAP_NAME_POPUP
 	setflag FLAG_DONT_TRANSITION_MUSIC
 	setflag FLAG_DONT_CLEAR_SAVED_MUSIC
-	playbgm MUS_TSURETEK, 0
-	savebgm MUS_TSURETEK
+	playbgm MUS_FOLLOW_ME, 0
+	savebgm MUS_FOLLOW_ME
 	applymovement LOCALID_REDWOOD, ArchanTown_RedwoodResidence_Movement_ExitRedwood
 	waitmovement 0	
-	playse SE_KAIDAN
+	playse SE_EXIT
 	waitse
 	removeobject LOCALID_REDWOOD
 	applymovement LOCALID_COULTER, ArchanTown_RedwoodResidence_Movement_ExitCoulter
 	applymovement OBJ_EVENT_ID_PLAYER, ArchanTown_RedwoodResidence_Movement_ExitPlayer
 	delay 50
-	playse SE_KAIDAN
+	playse SE_EXIT
 	waitse
 	removeobject LOCALID_COULTER
 	waitmovement 0

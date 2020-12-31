@@ -59,7 +59,7 @@ SabuloTower_6F_2R_EventScript_BelleFightScene:
 	call_if_eq SabuloTower_6F_2R_EventScript_ExitBelle1
 	compare VAR_0x8008, 2
 	call_if_eq SabuloTower_6F_2R_EventScript_ExitBelle2
-	playse SE_KAIDAN
+	playse SE_EXIT
 	waitse
 	removeobject LOCALID_BELLE
 	setvar VAR_SABULO_TOWER_STATE, 1
@@ -144,7 +144,7 @@ SabuloTower_6F_2R_Text_BelleDefeat:
 	.string "You are now worthy of this.\n"
 	.string "Take it with pride!\p"
 	.string "{PLAYER} received the\n"
-	.string "Mega Ring from Belle!{PAUSE_MUSIC}{PLAY_BGM}{MUS_ME_BACHI}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
+	.string "Mega Ring from Belle!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
 	.string "You have achieved a great feat,\n"
 	.string "{PLAYER}.$"
 

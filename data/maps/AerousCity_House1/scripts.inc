@@ -19,7 +19,7 @@ AerousCity_House1_EventScript_TryBuyAmuletCoin:
 	checkmoney 5000, 0
 	compare VAR_RESULT, FALSE
 	goto_if_eq AerousCity_House1_EventScript_NotEnoughMoney
-	playse SE_REGI
+	playse SE_SHOP
 	removemoney 5000, 0
 	updatemoneybox 0, 0
 	waitse

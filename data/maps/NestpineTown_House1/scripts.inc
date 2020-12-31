@@ -15,7 +15,7 @@ NestpineTown_House1_EventScript_OfferTrade:
 	msgbox NestpineTown_House1_Text_AhYouHaveOneTradeForMyPPUp, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_ne NestpineTown_House1_EventScript_Goodbye
-	playfanfare MUS_FANFA4
+	playfanfare MUS_OBTAIN_ITEM
 	message NestpineTown_House1_Text_PlayerTradedOneStarPiece
 	waitfanfare
 	removeitem ITEM_STAR_PIECE, 1

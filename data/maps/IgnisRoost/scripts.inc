@@ -22,7 +22,7 @@ IgnisRoost_EventScript_CoulterMeeting_Trigger2::
 	end
 
 IgnisRoost_EventScript_CoulterMeetingScene::
-	playbgm MUS_MGM0, 0
+	playbgm MUS_ENCOUNTER_MAGMA, 0
 	compare VAR_0x8008, 0
 	call_if_eq IgnisRoost_EventScript_PanCameraToCoulter0
 	compare VAR_0x8008, 1

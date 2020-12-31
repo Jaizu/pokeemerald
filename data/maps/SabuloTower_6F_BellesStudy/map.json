@@ -2,7 +2,7 @@
   "id": "MAP_SABULO_TOWER_6F_BELLES_STUDY",
   "name": "SabuloTower_6F_BellesStudy",
   "layout": "LAYOUT_SABULO_TOWER_6F_BELLES_STUDY",
-  "music": "MUS_C_ROAD",
+  "music": "MUS_VICTORY_ROAD",
   "region_map_section": "MAPSEC_SAFARI_ZONE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

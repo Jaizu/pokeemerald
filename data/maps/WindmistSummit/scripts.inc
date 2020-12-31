@@ -253,7 +253,7 @@ WindmistSummit_EventScript_CoulterMeetingScene:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
 	waitmovement 0
-	playbgm MUS_RG_RIVAL1, 0
+	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
 	addobject LOCALID_COULTER
 	compare VAR_0x8008, 0
 	call_if_eq WindmistSummit_EventScript_AlignCoulterWithPlayer0

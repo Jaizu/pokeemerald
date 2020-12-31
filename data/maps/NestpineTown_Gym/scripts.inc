@@ -155,7 +155,7 @@ NestpineTown_Gym_Text_AriaIntro:
 	.string "Will this battle be a peak, or\n"
 	.string "will you fall?\p"
 	.string "What tune do you play to?\n"
-	.string "It's time to find out!{PLAY_BGM}{MUS_RG_EXEYE}$"
+	.string "It's time to find out!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 NestpineTown_Gym_Text_AriaDefeat:
 	.string "Simply stunning!\p"
@@ -164,7 +164,7 @@ NestpineTown_Gym_Text_AriaDefeat:
 	.string "It is my honor to bestow upon you\n"
 	.string "the official Plume Badge.\p"
 	.string "{PLAYER} received the Plume Badge\n"
-	.string "from Aria!{PAUSE_MUSIC}{PLAY_BGM}{MUS_ME_BACHI}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}$"
+	.string "from Aria!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}$"
 
 NestpineTown_Gym_Text_HereTakeThisCommemorativeTM:
 	.string "I'm stunned at your battling\n"

@@ -2,7 +2,7 @@
   "id": "MAP_ARCHAN_TOWN_REDWOOD_RESIDENCE",
   "name": "ArchanTown_RedwoodResidence",
   "layout": "LAYOUT_ARCHAN_TOWN_REDWOOD_RESIDENCE",
-  "music": "MUS_RG_KENKYU",
+  "music": "MUS_RG_OAK_LAB",
   "region_map_section": "MAPSEC_OLDALE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -2,7 +2,7 @@
   "id": "MAP_NEMESIS_RIVER",
   "name": "NemesisRiver",
   "layout": "LAYOUT_NEMESIS_RIVER",
-  "music": "MUS_DOORO_X1",
+  "music": "MUS_ROUTE119",
   "region_map_section": "MAPSEC_ROUTE_114",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

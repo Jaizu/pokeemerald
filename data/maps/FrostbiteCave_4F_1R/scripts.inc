@@ -24,7 +24,7 @@ FrostbiteCave_4F_1R_EventScript_EuniceSceneTrigger2::
 	end
 
 FrostbiteCave_4F_1R_EventScript_EuniceScene::
-	playbgm MUS_M_DUNGON, 0
+	playbgm MUS_MT_PYRE, 0
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
@@ -212,8 +212,8 @@ FrostbiteCave_4F_1R_EventScript_Eunice::
 	end
 
 FrostbiteCave_4F_1R_EventScript_EuniceBattleScene::
-	playbgm MUS_M_DUNGON, 0
-	savebgm MUS_M_DUNGON
+	playbgm MUS_MT_PYRE, 0
+	savebgm MUS_MT_PYRE
 	applymovement LOCALID_EUNICE, Common_Movement_FacePlayer
 	waitmovement 0
 	delay 20
@@ -241,7 +241,7 @@ FrostbiteCave_4F_1R_EventScript_EuniceBattleScene::
 	call_if_eq FrostbiteCave_4F_1R_EventScript_WalkGruntToPlayer0
 	compare VAR_0x8008, 1
 	call_if_eq FrostbiteCave_4F_1R_EventScript_WalkGruntToPlayer1
-	playbgm MUS_MGM0, 0
+	playbgm MUS_ENCOUNTER_MAGMA, 0
 	msgbox FrostbiteCave_4F_1R_Text_GruntMIntro, MSGBOX_DEFAULT
 	cleartrainerflag TRAINER_FROSTBITE_CAVE_GRUNT_5
 	trainerbattle_no_intro TRAINER_FROSTBITE_CAVE_GRUNT_5, FrostbiteCave_4F_1R_Text_GruntMDefeated
@@ -272,7 +272,7 @@ FrostbiteCave_4F_1R_EventScript_EuniceBattleScene::
 	removeobject LOCALID_EUNICE
 	removeobject LOCALID_EAST_GRUNT
 	removeobject LOCALID_SOUTH_GRUNT
-	playse SE_KAIDAN
+	playse SE_EXIT
 	waitse
 	delay 24
 	fadedefaultbgm
@@ -344,7 +344,7 @@ FrostbiteCave_4F_1R_Text_ContinueWithTheMissionAsPlanned:
 FrostbiteCave_4F_1R_Text_EuniceIntro:
 	.string "{COLOR DARK_GREY}Eunice: {COLOR RED}Your insistence is rather\n"
 	.string "irritating, child.\p"
-	.string "{PLAY_BGM}{MUS_MGM0}My name is Eunice, Elder Knight of\n"
+	.string "{PLAY_BGM}{MUS_ENCOUNTER_MAGMA}My name is Eunice, Elder Knight of\n"
 	.string "the New Elders!\p"
 	.string "I will make you regret disobeying\n"
 	.string "my orders!$"

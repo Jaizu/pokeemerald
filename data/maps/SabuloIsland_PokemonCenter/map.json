@@ -2,7 +2,7 @@
   "id": "MAP_SABULO_ISLAND_POKEMON_CENTER",
   "name": "SabuloIsland_PokemonCenter",
   "layout": "LAYOUT_POKEMON_CENTER",
-  "music": "MUS_POKECEN",
+  "music": "MUS_POKE_CENTER",
   "region_map_section": "MAPSEC_PACIFIDLOG_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

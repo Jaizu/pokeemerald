@@ -2,7 +2,7 @@
   "id": "MAP_NESTPINE_TOWN",
   "name": "NestpineTown",
   "layout": "LAYOUT_NESTPINE_TOWN",
-  "music": "MUS_MACHI_S4",
+  "music": "MUS_RG_PEWTER",
   "region_map_section": "MAPSEC_FALLARBOR_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",

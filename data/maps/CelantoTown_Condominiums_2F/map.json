@@ -2,7 +2,7 @@
   "id": "MAP_CELANTO_TOWN_CONDOMINIUMS_2F",
   "name": "CelantoTown_Condominiums_2F",
   "layout": "LAYOUT_CELANTO_TOWN_CONDOMINIUMS_2F",
-  "music": "MUS_BIJYUTU",
+  "music": "MUS_LILYCOVE_MUSEUM",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

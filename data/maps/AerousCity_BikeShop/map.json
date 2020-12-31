@@ -2,7 +2,7 @@
   "id": "MAP_AEROUS_CITY_BIKE_SHOP",
   "name": "AerousCity_BikeShop",
   "layout": "LAYOUT_AEROUS_CITY_BIKE_SHOP",
-  "music": "MUS_FINECITY",
+  "music": "MUS_SLATEPORT",
   "region_map_section": "MAPSEC_LAVARIDGE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -86,7 +86,7 @@ SabuloTower_6F_BellesStudy_EventScript_TransferMonToPC::
 
 SabuloTower_6F_BellesStudy_EventScript_ReceivedMonFanfare::
 	bufferspeciesname 1, VAR_TEMP_1
-	playfanfare MUS_RG_FAN5
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
 	message SabuloTower_6F_BellesStudy_Text_ReceivedMonFromBelle
 	waitmessage
 	waitfanfare

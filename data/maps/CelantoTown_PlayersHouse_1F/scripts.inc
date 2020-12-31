@@ -131,7 +131,7 @@ CelantoTown_PlayersHouse_1F_Movement_MomWalkFromExitToTable:
 
 CelantoTown_PlayersHouse_1F_EventScript_GiveRunningShoes::
 	msgbox CelantoTown_PlayersHouse_1F_Text_OhIJustRemembered
-	playfanfare MUS_FANFA4
+	playfanfare MUS_OBTAIN_ITEM
 	message CelantoTown_PlayersHouse_1F_Text_SwitchShoesWithRunningShoes
 	waitfanfare
 	setflag FLAG_SYS_B_DASH

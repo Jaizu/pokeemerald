@@ -2,7 +2,7 @@
   "id": "MAP_VALOON_TOWN_MART",
   "name": "ValoonTown_Mart",
   "layout": "LAYOUT_ORBTUS_MART",
-  "music": "MUS_FRIENDLY",
+  "music": "MUS_POKE_MART",
   "region_map_section": "MAPSEC_PETALBURG_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

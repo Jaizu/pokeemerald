@@ -67,10 +67,10 @@ ArchanTunnel_TangrowthTabletRoom_EventScript_TabletDiscoveryScene:
 	waitmovement 0
 	msgbox ArchanTunnel_TangrowthTabletRoom_Text_AlrightPlayer, MSGBOX_DEFAULT
 	closemessage
-	playbgm MUS_RG_RIVAL2, 0
+	playbgm MUS_RG_RIVAL_EXIT, 0
 	applymovement LOCALID_COULTER, ArchanTunnel_TangrowthTabletRoom_Movement_ExitCoulter
 	waitmovement 0
-	playse SE_KAIDAN
+	playse SE_EXIT
 	waitse
 	removeobject LOCALID_COULTER
 	setflag FLAG_HIDE_COULTERS_HOUSE_COULTER
@@ -172,7 +172,7 @@ ArchanTunnel_TangrowthTabletRoom_EventScript_HerschelTranslationScene::
 	delay 10
 	applymovement LOCALID_HERSCHEL, Common_Movement_WalkInPlaceFastestRight
 	waitmovement 0
-	fadenewbgm MUS_MABOROSI
+	fadenewbgm MUS_SEALED_CHAMBER
 	msgbox ArchanTunnel_TangrowthTabletRoom_Text_AhThisCertainlyAlludesToApexTemple, MSGBOX_DEFAULT
 	closemessage
 	delay 10
@@ -196,7 +196,7 @@ ArchanTunnel_TangrowthTabletRoom_EventScript_HerschelTranslationScene::
 	closemessage
 	applymovement LOCALID_HERSCHEL, ArchanTunnel_TangrowthTabletRoom_Movement_ExitHerschel
 	waitmovement 0
-	playse SE_KAIDAN
+	playse SE_EXIT
 	waitse
 	removeobject LOCALID_HERSCHEL
 	applymovement LOCALID_REDWOOD, Common_Movement_WalkInPlaceFastestDown
@@ -211,7 +211,7 @@ ArchanTunnel_TangrowthTabletRoom_EventScript_HerschelTranslationScene::
 	delay 10
 	applymovement LOCALID_REDWOOD, Common_Movement_WalkInPlaceRight
 	waitmovement 0
-	playse SE_W088
+	playse SE_M_ROCK_THROW
 	applymovement LOCALID_TOP_ROCK, Movement_SmashRock
 	waitmovement 0
 	removeobject LOCALID_TOP_ROCK
@@ -224,7 +224,7 @@ ArchanTunnel_TangrowthTabletRoom_EventScript_HerschelTranslationScene::
 	delay 10
 	applymovement LOCALID_REDWOOD, Common_Movement_WalkInPlaceRight
 	waitmovement 0
-	playse SE_W088
+	playse SE_M_ROCK_THROW
 	applymovement LOCALID_BOTTOM_ROCK, Movement_SmashRock
 	waitmovement 0
 	removeobject LOCALID_BOTTOM_ROCK
@@ -236,7 +236,7 @@ ArchanTunnel_TangrowthTabletRoom_EventScript_HerschelTranslationScene::
 	closemessage
 	applymovement LOCALID_REDWOOD, ArchanTunnel_TangrowthTabletRoom_Movement_ExitRedwood
 	waitmovement 0
-	playse SE_KAIDAN
+	playse SE_EXIT
 	waitse
 	removeobject LOCALID_REDWOOD
 	setflag FLAG_HIDE_CELANTO_PATH_BREAKABLE_ROCK_LEFT

@@ -372,13 +372,13 @@ ValoonTown_Gym_Text_VernonIntro:
 	.string "I find talented Pokémon hunters\n"
 	.string "tend to be equally great battlers!\p"
 	.string "Why don't we put that theory to\n"
-	.string "the test?{PLAY_BGM}{MUS_RG_EXEYE}$"
+	.string "the test?{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 ValoonTown_Gym_Text_VernonDefeat:
 	.string "It looks like my theory was right!\n"
 	.string "Take this, please.\p"
 	.string "{PLAYER} received the\n"
-	.string "Honeycomb Badge from Vernon!{PAUSE_MUSIC}{PLAY_BGM}{MUS_ME_BACHI}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
+	.string "Honeycomb Badge from Vernon!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
 	.string "That fight was fun!$"
 
 ValoonTown_Gym_Text_TakeThis:

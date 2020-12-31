@@ -38,7 +38,7 @@ NestpineTown_EventScript_CoulterBattle:
 	call_if_eq NestpineTown_EventScript_NoRoomForExpShare
 	msgbox NestpineTown_Text_ImGoingToForgetThisBattleHappened, MSGBOX_DEFAULT
 	closemessage
-	playbgm MUS_RG_RIVAL2, 0
+	playbgm MUS_RG_RIVAL_EXIT, 0
 	getplayerxy VAR_0x8000, VAR_0x8001
 	compare VAR_0x8000, SOUTH_OF_COULTER
 	call_if_eq NestpineTown_EventScript_ExitCoulter0
@@ -100,7 +100,7 @@ NestpineTown_Text_ComeBackWhenYoureReady:
 
 NestpineTown_Text_IllWinThisTimeForSure:
 	.string "{COLOR DARK_GREY}{RIVAL}: {COLOR BLUE}I'll win this time,\n"
-	.string "for sure!{PLAY_BGM}{MUS_RG_RIVAL2}$"
+	.string "for sure!{PLAY_BGM}{MUS_RG_RIVAL_EXIT}$"
 
 NestpineTown_Text_CoulterDefeat:
 	.string "No…\n"

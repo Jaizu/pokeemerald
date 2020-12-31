@@ -29,7 +29,7 @@ AerousCity_Port_EventScript_BattleBraveton:
 	msgbox AerousCity_Port_Text_ThatWasAGreatBattle, MSGBOX_DEFAULT
 	closemessage
 	delay 20
-	playse SE_RG_KITEKI
+	playse SE_RG_SS_ANNE_HORN
 	delay 20
 	applymovement LOCALID_BRAVETON, Common_Movement_WalkInPlaceFastestRight
 	waitmovement 0

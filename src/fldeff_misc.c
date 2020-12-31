@@ -1325,12 +1325,12 @@ void ChangeCombeeTile(s16 x, s16 y)
     u16 var = VarGet(VAR_VALOON_GYM_STATE);
     if (var < 4)
     {
-        PlaySE(SE_TOY_A);
+        PlaySE(SE_NOTE_A);
         VarSet(VAR_VALOON_GYM_STATE, var + 1);
     }
     else
     {
-        PlaySE(SE_PINPON);
+        PlaySE(SE_DING_DONG);
         MapGridSetMetatileIdAt(7 + 7, 5 + 7, METATILE_DewfordGym_ClearedPath);
         FlagSet(FLAG_VALOON_GYM_PATH_CLEARED);
     }

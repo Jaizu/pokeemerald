@@ -2,7 +2,7 @@
   "id": "MAP_CELANTO_GROVE",
   "name": "CelantoGrove",
   "layout": "LAYOUT_CELANTO_GROVE",
-  "music": "MUS_DOORO_X1",
+  "music": "MUS_ROUTE104",
   "region_map_section": "MAPSEC_ROUTE_102",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",

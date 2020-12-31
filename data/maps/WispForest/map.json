@@ -2,7 +2,7 @@
   "id": "MAP_WISP_FOREST",
   "name": "WispForest",
   "layout": "LAYOUT_WISP_FOREST",
-  "music": "MUS_DAN01",
+  "music": "MUS_RG_VIRIDIAN_FOREST",
   "region_map_section": "MAPSEC_PETALBURG_WOODS",
   "requires_flash": false,
   "weather": "WEATHER_SHADE",

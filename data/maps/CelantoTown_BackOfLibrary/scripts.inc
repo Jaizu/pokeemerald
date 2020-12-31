@@ -28,7 +28,7 @@ CelantoTown_BackOfLibrary_EventScript_RedwoodWelcome:
 	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_WalkUp
 	waitmovement 0
 	special RemoveCameraObject
-	playbgm MUS_RG_OHKIDO, 0
+	playbgm MUS_RG_OAK, 0
 	msgbox CelantoTown_BackOfLibrary_Text_AtLastThirdPerson, MSGBOX_DEFAULT
 	closemessage
 	playse SE_BOO
@@ -38,7 +38,7 @@ CelantoTown_BackOfLibrary_EventScript_RedwoodWelcome:
 	waitmovement 0
 	applymovement LOCALID_OPP_GENDER, CelantoTown_BackOfLibrary_Movement_ExitOppGender
 	waitmovement 0
-	playse SE_KAIDAN
+	playse SE_EXIT
 	waitse
 	removeobject LOCALID_OPP_GENDER
 	msgbox CelantoTown_BackOfLibrary_Text_WellThen, MSGBOX_DEFAULT
@@ -164,7 +164,7 @@ CelantoTown_BackOfLibrary_EventScript_PokemonSelection:
 	hidemonpic
 	givemon VAR_0x8008, 5, ITEM_NONE
 	setflag FLAG_SYS_POKEMON_GET
-	playfanfare MUS_RG_FAN5
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
 	message CelantoTown_BackOfLibrary_Text_ReceivedStarter
 	waitmessage
 	waitfanfare
@@ -194,7 +194,7 @@ CelantoTown_BackOfLibrary_EventScript_PokemonSelection:
 	closemessage
 	applymovement LOCALID_REDWOOD, CelantoTown_BackOfLibrary_Movement_RedwoodExit
 	waitmovement 0
-	playse SE_KAIDAN
+	playse SE_EXIT
 	waitse
 	removeobject LOCALID_REDWOOD
 	delay 10
@@ -207,14 +207,14 @@ CelantoTown_BackOfLibrary_EventScript_PokemonSelection:
 	call CelantoTown_BackOfLibrary_EventScript_SetRivalName
 	msgbox CelantoTown_BackOfLibrary_Text_TheNamesRival, MSGBOX_DEFAULT
 	closemessage
-	playbgm MUS_RG_RIVAL2, 0
+	playbgm MUS_RG_RIVAL_EXIT, 0
 	compare VAR_0x8008, SPECIES_TURTWIG
 	call_if_eq CelantoTown_BackOfLibrary_EventScript_CoulterExitFromChimcharBall
 	compare VAR_0x8008, SPECIES_CHIMCHAR
 	call_if_eq CelantoTown_BackOfLibrary_EventScript_CoulterExitFromPiplupBall
 	compare VAR_0x8008, SPECIES_PIPLUP
 	call_if_eq CelantoTown_BackOfLibrary_EventScript_CoulterExitFromTurtwigBall
-	playse SE_KAIDAN
+	playse SE_EXIT
 	waitse
 	removeobject LOCALID_COULTER
 	fadedefaultbgm

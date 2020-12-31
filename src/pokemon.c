@@ -6924,7 +6924,7 @@ void ClearBattleMonForms(void)
 
 u16 GetBattleBGM(void)
 {
-    else if (gBattleTypeFlags & BATTLE_TYPE_REGI)
+    if (gBattleTypeFlags & BATTLE_TYPE_REGI)
         return MUS_VS_REGI;
     else if (gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_x2000000))
         return MUS_VS_TRAINER;
@@ -6943,7 +6943,7 @@ u16 GetBattleBGM(void)
         {
         case TRAINER_CLASS_AQUA_LEADER:
         case TRAINER_CLASS_MAGMA_LEADER:
-            return MUS_BATTLE30;
+            return MUS_VS_AQUA_MAGMA_LEADER;
         case TRAINER_CLASS_MUSEUM:
         case TRAINER_CLASS_NEW_ELDERS:
             return MUS_NEW_ELDERS_GRUNT;

@@ -48,7 +48,7 @@ ApexTemple_MainChamber_EventScript_EnochMeetingScene::
 	call_if_eq ApexTemple_MainChamber_EventScript_AlignCoulterWithPlayer0
 	compare VAR_0x8008, 1
 	call_if_eq ApexTemple_MainChamber_EventScript_AlignCoulterWithPlayer1
-	playbgm MUS_RG_RIVAL1, 0
+	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
 	applymovement OBJ_EVENT_ID_PLAYER, ApexTemple_MainChamber_Movement_PlayerFaceCoulter
 	applymovement LOCALID_COULTER, ApexTemple_MainChamber_Movement_CoulterWalkToPlayer
 	waitmovement 0

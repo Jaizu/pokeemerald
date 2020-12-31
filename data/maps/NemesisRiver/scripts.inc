@@ -109,7 +109,7 @@ NemesisRiver_EventScript_GiveVSSeeker:
 	msgbox NemesisRiver_Text_OhYouSayYouveFoundIt, MSGBOX_DEFAULT
 	closemessage
 	fadescreen FADE_TO_BLACK
-	playse SE_W231 // SE_M_HARDEN
+	playse SE_M_HARDEN
 	waitse
 	delay 10
 	fadescreen FADE_FROM_BLACK

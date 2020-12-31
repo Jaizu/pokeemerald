@@ -2,7 +2,7 @@
   "id": "MAP_WINDMIST_CITY",
   "name": "WindmistCity",
   "layout": "LAYOUT_WINDMIST_CITY",
-  "music": "MUS_GOTOWN",
+  "music": "MUS_RUSTBORO",
   "region_map_section": "MAPSEC_VERDANTURF_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_SNOW",

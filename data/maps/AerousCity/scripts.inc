@@ -98,7 +98,7 @@ AerousCity_EventScript_MuseumClerk::
 	closemessage
 	applymovement LOCALID_MUSEUM_CLERK, Common_Movement_WalkUp
 	waitmovement 0
-	playse SE_KAIDAN
+	playse SE_EXIT
 	waitse
 	removeobject LOCALID_MUSEUM_CLERK
 	release
@@ -109,7 +109,7 @@ AerousCity_Text_TheAerousMuseumIsHavingAnExhibit:
 	.string "Having an exhibit!\n"
 	.string "Yeah…\p"
 	.string "…You don't believe me?\n"
-	.string "Argh, you're a belligerent child!{PLAY_BGM}{MUS_MGM0}\p"
+	.string "Argh, you're a belligerent child!{PLAY_BGM}{MUS_ENCOUNTER_MAGMA}\p"
 	.string "I'll make you pay!$"
 
 AerousCity_Text_MuseumClerkDefeat:

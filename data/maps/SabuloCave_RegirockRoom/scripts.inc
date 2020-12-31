@@ -9,7 +9,7 @@ SabuloCave_RegirockRoom_EventScript_RaggedMap::
 	textcolor 2 // Dark Grey
 	finditem ITEM_RAGGED_MAP
 	delay 10
-	playse SE_KAIDAN
+	playse SE_EXIT
 	addobject LOCALID_COULTER
 	waitse
 	playse SE_PIN
@@ -39,12 +39,12 @@ SabuloCave_RegirockRoom_EventScript_RaggedMap::
 	giveitem ITEM_HM03
 	msgbox SabuloCave_RegirockRoom_Text_TheRaceContinues, MSGBOX_DEFAULT
 	closemessage
-	playbgm MUS_RG_RIVAL2, 0
+	playbgm MUS_RG_RIVAL_EXIT, 0
 	compare VAR_0x8009, 8
 	call_if_ne SabuloCave_RegirockRoom_EventScript_ExitCoulter0
 	compare VAR_0x8009, 8
 	call_if_eq SabuloCave_RegirockRoom_EventScript_ExitCoulter1
-	playse SE_KAIDAN
+	playse SE_EXIT
 	removeobject LOCALID_COULTER
 	waitse
 	fadedefaultbgm

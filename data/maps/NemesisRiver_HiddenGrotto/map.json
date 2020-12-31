@@ -2,7 +2,7 @@
   "id": "MAP_NEMESIS_RIVER_HIDDEN_GROTTO",
   "name": "NemesisRiver_HiddenGrotto",
   "layout": "LAYOUT_HIDDEN_GROTTO",
-  "music": "MUS_SHINKA",
+  "music": "MUS_EVOLUTION",
   "region_map_section": "MAPSEC_ROUTE_114",
   "requires_flash": false,
   "weather": "WEATHER_SHADE",

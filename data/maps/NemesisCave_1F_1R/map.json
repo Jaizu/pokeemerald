@@ -2,7 +2,7 @@
   "id": "MAP_NEMESIS_CAVE_1F_1R",
   "name": "NemesisCave_1F_1R",
   "layout": "LAYOUT_NEMESIS_CAVE_1F_1R",
-  "music": "MUS_DAN01",
+  "music": "MUS_RG_MT_MOON",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_SHADE",

@@ -2,7 +2,7 @@
   "id": "MAP_SABULO_TOWER_5F_1R",
   "name": "SabuloTower_5F_1R",
   "layout": "LAYOUT_SABULO_TOWER_5F_1R",
-  "music": "MUS_C_ROAD",
+  "music": "MUS_VICTORY_ROAD",
   "region_map_section": "MAPSEC_SAFARI_ZONE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

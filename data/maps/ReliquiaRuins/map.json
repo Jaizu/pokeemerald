@@ -2,7 +2,7 @@
   "id": "MAP_RELIQUIA_RUINS",
   "name": "ReliquiaRuins",
   "layout": "LAYOUT_RELIQUIA_RUINS",
-  "music": "MUS_M_DUNGON",
+  "music": "MUS_MT_PYRE",
   "region_map_section": "MAPSEC_ROUTE_101",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",

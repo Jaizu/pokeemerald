@@ -2,7 +2,7 @@
   "id": "MAP_NESTPINE_TOWN_POKEMON_CENTER",
   "name": "NestpineTown_PokemonCenter",
   "layout": "LAYOUT_POKEMON_CENTER",
-  "music": "MUS_POKECEN",
+  "music": "MUS_POKE_CENTER",
   "region_map_section": "MAPSEC_FALLARBOR_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

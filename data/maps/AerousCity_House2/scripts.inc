@@ -21,7 +21,7 @@ AerousCity_House2_EventScript_OfferTradeForTM34:
 	msgbox AerousCity_House2_Text_ThatHarborMailIsExactlyWhatImLookingFor, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq AerousCity_House2_EventScript_DeclineTrade
-	playfanfare MUS_FANFA4
+	playfanfare MUS_OBTAIN_ITEM
 	message AerousCity_House2_Text_PlayerTradedHarborMailForTM34
 	waitfanfare
 	removeitem ITEM_HARBOR_MAIL, 1

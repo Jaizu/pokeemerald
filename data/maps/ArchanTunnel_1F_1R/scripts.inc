@@ -25,7 +25,7 @@ ArchanTunnel_1F_1R_EventScript_TurnPlayerNorth:
 
 ArchanTunnel_1F_1R_EventScript_ReturnStingaScene:
 	lockall
-	playfanfare MUS_FANFA1
+	playfanfare MUS_LEVEL_UP
 	message ArchanTunnel_1F_1R_Text_PlayerReturnedStinga
 	waitfanfare
 	waitmessage
@@ -52,7 +52,7 @@ ArchanTunnel_1F_1R_EventScript_StingaBoyGoesHome:
 	closemessage
 	applymovement LOCALID_STINGA_BOY, ArchanTunnel_1F_1R_Movement_StingaBoyLeave
 	waitmovement 0
-	playse SE_KAIDAN
+	playse SE_EXIT
 	waitse
 	removeobject LOCALID_STINGA_BOY
 	clearflag FLAG_HIDE_HOUSE_STINGA_BOY

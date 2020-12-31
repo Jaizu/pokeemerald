@@ -100,7 +100,7 @@ WindmistCity_EventScript_RedwoodWalkFromKnickKnackStore:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestRight
 	waitmovement 0
-	playbgm MUS_RG_OHKIDO, 0
+	playbgm MUS_RG_OAK, 0
 	applymovement LOCALID_REDWOOD, WindmistCity_Movement_RedwoodWalkToPlayerFromKnickKnackStore
 	waitmovement 0
 	return
@@ -118,7 +118,7 @@ WindmistCity_EventScript_RedwoodNoticePlayer:
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestLeft
 	waitmovement 0
-	playbgm MUS_RG_OHKIDO, 0
+	playbgm MUS_RG_OAK, 0
 	applymovement LOCALID_REDWOOD, WindmistCity_Movement_RedwoodWalkToPlayerFromGym
 	waitmovement 0
 	return
@@ -297,7 +297,7 @@ WindmistCity_EventScript_OfferTradeForTM13:
 	msgbox WindmistCity_Text_WhatsThatYouHaveARedScarf, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq WindmistCity_EventScript_DeclineTrade
-	playfanfare MUS_FANFA4
+	playfanfare MUS_OBTAIN_ITEM
 	message WindmistCity_Text_PlayerTradedRedScarfForTM13
 	waitfanfare
 	removeitem ITEM_RED_SCARF, 1

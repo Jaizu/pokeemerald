@@ -2,7 +2,7 @@
   "id": "MAP_APEX_TEMPLE_MAIN_CHAMBER",
   "name": "ApexTemple_MainChamber",
   "layout": "LAYOUT_APEX_TEMPLE_MAIN_CHAMBER",
-  "music": "MUS_M_DUNGON",
+  "music": "MUS_MT_PYRE",
   "region_map_section": "MAPSEC_MT_CHIMNEY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

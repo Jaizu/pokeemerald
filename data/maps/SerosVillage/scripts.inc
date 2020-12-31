@@ -51,7 +51,7 @@ SerosVillage_EventScript_WelcomeScene:
 	waitmovement 0
 	msgbox SerosVillage_Text_LooksLikeIWonTheRaceHere, MSGBOX_DEFAULT
 	closemessage
-	playbgm MUS_RG_RIVAL2, 0
+	playbgm MUS_RG_RIVAL_EXIT, 0
 	applymovement LOCALID_COULTER, SerosVillage_Movement_CoulterWalkToParentsHouse
 	waitmovement 0
 	opendoor COULTERS_HOUSE_DOOR_X, COULTERS_HOUSE_DOOR_Y
@@ -324,7 +324,7 @@ SerosVillage_EventScript_DaycareAcceptEgg::
 
 SerosVillage_EventScript_DaycareReceiveEgg::
 	message SerosVillage_Text_ReceivedEgg
-	playfanfare MUS_FANFA1
+	playfanfare MUS_LEVEL_UP
 	waitfanfare
 	waitbuttonpress
 	msgbox SerosVillage_Text_TakeGoodCareOfIt, MSGBOX_DEFAULT
@@ -454,7 +454,7 @@ SerosVillage_EventScript_SecondTunnelDiscoveryScene::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	delay 5
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestDown
-	playbgm MUS_RG_OHKIDO, 0
+	playbgm MUS_RG_OAK, 0
 	compare VAR_0x8008, 0
 	call_if_eq SerosVillage_EventScript_EnterRedwood0
 	compare VAR_0x8008, 1

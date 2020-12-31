@@ -56,7 +56,7 @@ SabuloIsland_EventScript_RegirockScene:
 	setvar VAR_0x8005, 18 @ y
 	special TeleportCamera
 	fadescreen FADE_FROM_BLACK
-	playbgm MUS_M_DUNGON, 0
+	playbgm MUS_MT_PYRE, 0
 	playse SE_PIN
 	applymovement LOCALID_SABULO_CAVE_GUARD, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -87,7 +87,7 @@ SabuloIsland_EventScript_RegirockScene:
 	special ReturnCameraToPlayer
 	fadescreen FADE_FROM_BLACK
 	addobject LOCALID_BELLE
-	playse SE_KAIDAN
+	playse SE_EXIT
 	applymovement LOCALID_BELLE, Common_Movement_WalkDown
 	waitmovement 0
 	waitse
@@ -96,7 +96,7 @@ SabuloIsland_EventScript_RegirockScene:
 	applymovement OBJ_EVENT_ID_PLAYER, SabuloIsland_Movement_WalkPlayerToBelle
 	waitmovement 0
 	msgbox SabuloIsland_Text_WhatWasThatExplosion, MSGBOX_DEFAULT
-	playfanfare MUS_FANFA4
+	playfanfare MUS_OBTAIN_ITEM
 	message SabuloIsland_Text_ObtainedTheHyperPotionsAndRevives
 	additem ITEM_HYPER_POTION, 5
 	additem ITEM_REVIVE, 5
@@ -108,7 +108,7 @@ SabuloIsland_EventScript_RegirockScene:
 	closemessage
 	applymovement LOCALID_BELLE, Common_Movement_WalkUp
 	waitmovement 0
-	playse SE_KAIDAN
+	playse SE_EXIT
 	waitse
 	removeobject LOCALID_BELLE
 	setrespawn HEAL_LOCATION_SABULO_ISLAND
@@ -261,11 +261,11 @@ SabuloIsland_EventScript_NewEldersScene:
 	msgbox SabuloIsland_Text_RelicBallGo, MSGBOX_DEFAULT
 	closemessage
 	fadescreen FADE_TO_WHITE
-	playse SE_NAGERU
+	playse SE_BALL_THROW
 	waitse
-	playse SE_BOWA2
+	playse SE_BALL_OPEN
 	waitse
-	playse SE_KON4
+	playse SE_BALL_BOUNCE_4
 	waitse
 	playmoncry SPECIES_REGIROCK, 0
 	waitmoncry
@@ -763,7 +763,7 @@ SabuloIsland_EventScript_TransferMonToPC::
 
 SabuloIsland_EventScript_ReceivedMonFanfare::
 	bufferspeciesname 1, VAR_TEMP_1
-	playfanfare MUS_RG_FAN5
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
 	message SabuloIsland_Text_ReceivedMonFromBelle
 	waitmessage
 	waitfanfare

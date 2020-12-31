@@ -18,11 +18,11 @@ WindmistCity_PokemonCenter_OnFrame:
 WindmistCity_PokemonCenter_EventScript_RedwoodMeetingScene::
 	lockall
 	msgbox WindmistCity_PokemonCenter_Text_TheProfessorsJustBoarded, MSGBOX_DEFAULT
-	fadenewbgm MUS_MABOROSI
+	fadenewbgm MUS_SEALED_CHAMBER
 	msgbox WindmistCity_PokemonCenter_Text_ICantShakeABadFeeling, MSGBOX_DEFAULT
 	closemessage
 	delay 64
-	playse SE_KAIDAN
+	playse SE_EXIT
 	addobject LOCALID_REDWOOD
 	delay 10
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestDown
@@ -51,10 +51,10 @@ WindmistCity_PokemonCenter_EventScript_RedwoodMeetingScene::
 	waitmovement 0
 	msgbox WindmistCity_PokemonCenter_Text_ItsQuiteAnOldPainting, MSGBOX_DEFAULT
 	closemessage
-	playbgm MUS_RG_RIVAL2, 0
+	playbgm MUS_RG_RIVAL_EXIT, 0
 	applymovement LOCALID_COULTER, WindmistCity_PokemonCenter_Movement_ExitCoulter
 	waitmovement 0
-	playse SE_KAIDAN
+	playse SE_EXIT
 	waitse
 	removeobject LOCALID_COULTER
 	fadedefaultbgm
@@ -62,7 +62,7 @@ WindmistCity_PokemonCenter_EventScript_RedwoodMeetingScene::
 	closemessage
 	applymovement LOCALID_REDWOOD, WindmistCity_PokemonCenter_Movement_ExitRedwood
 	waitmovement 0
-	playse SE_KAIDAN
+	playse SE_EXIT
 	waitse
 	removeobject LOCALID_REDWOOD
 	clearflag FLAG_HIDE_KNICK_KNACK_STORE_REDWOOD

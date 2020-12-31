@@ -2,7 +2,7 @@
   "id": "MAP_ARCHAN_TUNNEL_B1F_1R",
   "name": "ArchanTunnel_B1F_1R",
   "layout": "LAYOUT_ARCHAN_TUNNEL_B1F_1R",
-  "music": "MUS_DAN01",
+  "music": "MUS_PETALBURG_WOODS",
   "region_map_section": "MAPSEC_GRANITE_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

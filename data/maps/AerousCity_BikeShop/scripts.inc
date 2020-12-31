@@ -31,7 +31,7 @@ AerousCity_BikeShop_EventScript_ClerkGoodbye:
 
 AerousCity_BikeShop_EventScript_ExchangeBikeVoucher:
 	msgbox AerousCity_BikeShop_Text_OhBikeVoucherHereYouGo
-	playfanfare MUS_FANFA4
+	playfanfare MUS_OBTAIN_ITEM
 	message AerousCity_BikeShop_Text_ExchangedVoucherForBicycle
 	additem ITEM_BICYCLE
 	setflag FLAG_RECEIVED_BIKE

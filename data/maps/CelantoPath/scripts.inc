@@ -76,7 +76,7 @@ CelantoPath_EventScript_CoulterFightScene:
 	waitmovement 0
 	applymovement LOCALID_COULTER, Common_Movement_Delay48
 	waitmovement 0
-	playbgm MUS_RG_RIVAL1, 0
+	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
 	compare VAR_0x8008, 0
 	call_if_eq CelantoPath_EventScript_CoulterWalkToPlayer0
 	compare VAR_0x8008, 1
@@ -92,7 +92,7 @@ CelantoPath_EventScript_CoulterFightScene:
 	call_if_eq CelantoPath_EventScript_StartCoulterBattleTurtwig
 	msgbox CelantoPath_Text_ArghICantBelieveIt, MSGBOX_DEFAULT
 	closemessage
-	playbgm MUS_RG_RIVAL2, 0
+	playbgm MUS_RG_RIVAL_EXIT, 0
 	compare VAR_0x8008, 0
 	call_if_eq CelantoPath_EventScript_CoulterExit0
 	compare VAR_0x8008, 1

@@ -107,7 +107,7 @@ WindmistCity_Gym_EventScript_HectorDefeated:
 	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFastestUp
 	waitmovement 0
 	fadescreen FADE_TO_WHITE
-	playse SE_W052
+	playse SE_M_EMBER
 	call WindmistCity_Gym_EventScript_MeltPillars0
 	special DrawWholeMapView
 	waitse
@@ -148,7 +148,7 @@ WindmistCity_Gym_EventScript_AngelicaDefeated:
 	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFastestDown
 	waitmovement 0
 	fadescreen FADE_TO_WHITE
-	playse SE_W052
+	playse SE_M_EMBER
 	call WindmistCity_Gym_EventScript_MeltPillars1
 	special DrawWholeMapView
 	waitse
@@ -188,7 +188,7 @@ WindmistCity_Gym_EventScript_JuniorDefeated:
 	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFastestUp
 	waitmovement 0
 	fadescreen FADE_TO_WHITE
-	playse SE_W052
+	playse SE_M_EMBER
 	call WindmistCity_Gym_EventScript_MeltPillars2
 	special DrawWholeMapView
 	waitse
@@ -256,13 +256,13 @@ WindmistCity_Gym_Text_NinaIntro:
 	.string "battling. I have but one question!\p"
 	.string "Does that same flame burn within\n"
 	.string "you?\p"
-	.string "There's only one way to find out!{PLAY_BGM}{MUS_RG_EXEYE}$"
+	.string "There's only one way to find out!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 WindmistCity_Gym_Text_NinaDefeat:
 	.string "What? No way this happened!\n"
 	.string "Here, take the Ember Badge.\p"
 	.string "{PLAYER} received the Ember Badge\n"
-	.string "from Nina!{PAUSE_MUSIC}{PLAY_BGM}{MUS_ME_BACHI}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
+	.string "from Nina!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
 	.string "…I can't believe I actually lost.$"
 
 WindmistCity_Gym_Text_TakeThis:

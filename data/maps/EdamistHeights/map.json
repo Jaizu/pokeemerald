@@ -2,7 +2,7 @@
   "id": "MAP_EDAMIST_HEIGHTS",
   "name": "EdamistHeights",
   "layout": "LAYOUT_EDAMIST_HEIGHTS",
-  "music": "MUS_DOORO_X1",
+  "music": "MUS_ROUTE119",
   "region_map_section": "MAPSEC_ROUTE_109",
   "requires_flash": false,
   "weather": "WEATHER_SNOW",

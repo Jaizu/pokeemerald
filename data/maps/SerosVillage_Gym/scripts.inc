@@ -132,7 +132,7 @@ SerosVillage_Gym_EventScript_FernandoDefeated:
 	call_if_eq SerosVillage_Gym_EventScript_FernandoWalkRight
 	applymovement LOCALID_FERNANDO, SerosVillage_Gym_Movement_ExitFernando
 	waitmovement 0
-	playse SE_KAIDAN
+	playse SE_EXIT
 	waitse
 	removeobject LOCALID_FERNANDO
 	setflag FLAG_FERNANDO_STORMED_OFF
@@ -165,7 +165,7 @@ SerosVillage_Gym_Text_FernandoIntro:
 	.string "I'm sort of new at this…\p"
 	.string "Go easy on me, okay?\n"
 	.string "Alright…\p"
-	.string "Bring it on!{PLAY_BGM}{MUS_RG_EXEYE}$"
+	.string "Bring it on!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 SerosVillage_Gym_Text_FernandoDefeat:
 	.string "Waaah!\n"

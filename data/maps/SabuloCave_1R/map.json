@@ -2,7 +2,7 @@
   "id": "MAP_SABULO_CAVE_1R",
   "name": "SabuloCave_1R",
   "layout": "LAYOUT_SABULO_CAVE_1R",
-  "music": "MUS_MABOROSI",
+  "music": "MUS_SEALED_CHAMBER",
   "region_map_section": "MAPSEC_PACIFIDLOG_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

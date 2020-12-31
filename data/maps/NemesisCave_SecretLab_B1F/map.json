@@ -2,7 +2,7 @@
   "id": "MAP_NEMESIS_CAVE_SECRET_LAB_B1F",
   "name": "NemesisCave_SecretLab_B1F",
   "layout": "LAYOUT_NEMESIS_CAVE_SECRET_LAB_B1F",
-  "music": "MUS_DAN01",
+  "music": "MUS_RG_MT_MOON",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_SHADE",

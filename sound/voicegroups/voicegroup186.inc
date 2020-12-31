@@ -1,130 +1,130 @@
 	.align 2
 voicegroup186:: @ 86B2C4C
 	voice_keysplit_all voicegroup001
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_2 0, 0, 1, 7, 1
-	voice_square_1 0, 0, 0, 1, 7, 1
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_sc88_tubular_bell, 255, 250, 0, 242
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_sc88_organ2, 255, 96, 255, 168
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_sc88_accordion, 255, 0, 255, 165
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_2 60, 0, 0, 0, 1, 7, 1
+	voice_square_1 60, 0, 0, 0, 0, 1, 7, 1
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_tubular_bell, 255, 250, 0, 242
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_organ2, 255, 96, 255, 168
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_accordion, 255, 0, 255, 165
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_overdrive_guitar, 255, 0, 255, 127
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_sc88_pick_bass, 255, 253, 0, 149
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_jv1080_slap_bass, 255, 235, 204, 115
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_sc88_synth_bass, 255, 252, 0, 115
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_sc88_harp, 255, 246, 0, 235
-	voice_directsound 60, 0, DirectSoundWaveData_sc88_timpani, 255, 204, 193, 239
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fingered_bass, 255, 253, 0, 149
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_slap_bass, 255, 235, 204, 115
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_synth_bass, 255, 252, 0, 115
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_harp, 255, 246, 0, 235
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_timpani, 255, 204, 193, 239
 	voice_keysplit voicegroup006, KeySplitTable2
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroup007, KeySplitTable3
-	voice_square_1 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroup008, KeySplitTable4
-	voice_square_1 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroup009, KeySplitTable5
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_programmable_wave_alt ProgrammableWaveData_86B4850, 0, 7, 15, 2
-	voice_square_1 0, 2, 0, 1, 1, 1
-	voice_square_2 2, 0, 1, 6, 0
-	voice_square_1 0, 2, 0, 1, 7, 1
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_programmable_wave_alt ProgrammableWaveData_86B4880, 0, 7, 15, 2
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_unknown_polysynth, 255, 0, 255, 127
-	voice_square_1_alt 21, 2, 0, 1, 9, 0
-	voice_square_1_alt 0, 0, 0, 0, 15, 1
-	voice_square_1_alt 47, 2, 0, 2, 6, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_square_1 0, 2, 0, 0, 15, 0
-	voice_noise 0, 0, 7, 15, 0
-	voice_noise 0, 2, 7, 15, 0
-	voice_noise_alt 0, 2, 0, 15, 0
-	voice_noise_alt 1, 0, 0, 15, 0
-	voice_noise_alt 0, 0, 0, 15, 0
-	voice_noise_alt 0, 0, 3, 0, 0
-	voice_noise_alt 0, 0, 2, 0, 0
-	voice_noise_alt 0, 0, 1, 0, 0
-	voice_noise_alt 0, 0, 2, 0, 2
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4850, 0, 7, 15, 2
+	voice_square_1 60, 0, 0, 2, 0, 1, 1, 1
+	voice_square_2 60, 0, 2, 0, 1, 6, 0
+	voice_square_1 60, 0, 0, 2, 0, 1, 7, 1
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4880, 0, 7, 15, 2
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_trinity_big_boned, 255, 0, 255, 127
+	voice_square_1_alt 60, 0, 21, 2, 0, 1, 9, 0
+	voice_square_1_alt 60, 0, 0, 0, 0, 0, 15, 1
+	voice_square_1_alt 60, 0, 47, 2, 0, 2, 6, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_noise 60, 0, 0, 0, 7, 15, 0
+	voice_noise 60, 0, 0, 2, 7, 15, 0
+	voice_noise_alt 60, 0,  0, 2, 0, 15, 0
+	voice_noise_alt 60, 0,  1, 0, 0, 15, 0
+	voice_noise_alt 60, 0,  0, 0, 0, 15, 0
+	voice_noise_alt 60, 0,  0, 0, 3, 0, 0
+	voice_noise_alt 60, 0,  0, 0, 2, 0, 0
+	voice_noise_alt 60, 0,  0, 0, 1, 0, 0
+	voice_noise_alt 60, 0,  0, 0, 2, 0, 2

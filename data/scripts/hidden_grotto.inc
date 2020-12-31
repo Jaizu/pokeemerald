@@ -30,7 +30,7 @@ HiddenGrotto_Text_ItsEmpty:
 EventScript_OpenChest::
 	msgbox HiddenGrotto_Text_PlayerOpenedUpTheChest, MSGBOX_DEFAULT
 	closemessage
-	playse SE_KI_GASYAN // SE_UNLOCK
+	playse SE_UNLOCK
 	waitse
 	call EventScript_SetChestOpened
 	delay 10

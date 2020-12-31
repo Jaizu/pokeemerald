@@ -2,7 +2,7 @@
   "id": "MAP_VALOON_WAY",
   "name": "ValoonWay",
   "layout": "LAYOUT_VALOON_WAY",
-  "music": "MUS_DOORO_X3",
+  "music": "MUS_ROUTE119",
   "region_map_section": "MAPSEC_ROUTE_113",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
