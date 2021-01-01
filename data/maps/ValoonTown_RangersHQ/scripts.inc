@@ -1,16 +1,35 @@
-.set LOCALID_CONTEST_CLERK, 1
+.set LOCALID_CONTEST_HELPER, 1
 
 ValoonTown_RangersHQ_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, ValoonTown_RangersHQ_OnFrame
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, ValoonTown_RangersHQ_OnWarp
 	.byte 0
 
-ValoonTown_RangersHQ_EventScript_BulletinBoard::
-	msgbox ValoonTown_RangersHQ_Text_BulletinBoard, MSGBOX_SIGN
+ValoonTown_RangersHQ_OnFrame:
+	map_script_2 VAR_RANGERS_HQ_STATE, 1, ValoonTown_RangersHQ_EventScript_ReturnFromContest
+	.2byte 0
+
+ValoonTown_RangersHQ_EventScript_ReturnFromContest:
+	lockall
+	applymovement LOCALID_CONTEST_HELPER, Common_Movement_WalkInPlaceFastestDown
+	waitmovement 0
+	msgbox ValoonTown_RangersHQ_Text_PleaseComeAgain, MSGBOX_DEFAULT
+	closemessage
+	clearflag FLAG_SYS_BUG_CATCHING_CONTEST_MODE
+	special LoadPlayerParty
+	setvar VAR_RANGERS_HQ_STATE, 0
+	releaseall
 	end
 
-ValoonTown_RangersHQ_Text_BulletinBoard:
-	.string "It is a bulletin board.$"
+ValoonTown_RangersHQ_OnWarp:
+	map_script_2 VAR_RANGERS_HQ_STATE, 1, ValoonTown_RangersHQ_EventScript_PlayerTurnNorth
+	.2byte 0
 
-ValoonTown_RangersHQ_EventScript_ContestClerk::
+ValoonTown_RangersHQ_EventScript_PlayerTurnNorth::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	end
+
+ValoonTown_RangersHQ_EventScript_ContestHelper::
 	lock
 	faceplayer
 	goto_if_unset FLAG_NEMESIS_CAVE_RANGERS_RETURNED, ValoonTown_RangersHQ_EventScript_TheBugCatchingContestWillStartSoon
@@ -20,11 +39,13 @@ ValoonTown_RangersHQ_EventScript_ContestClerk::
 	special SavePlayerParty
 	getpartysize
 	compare VAR_RESULT, 1
-	call_if_ne ValoonTown_RangersHQ_EventScript_YouHaveMoreThanOnePokemon
-	call_if_unset FLAG_RECEIVED_FREE_PARK_BALLS, ValoonTown_RangersHQ_EventScript_TryGiveFreeParkBalls
-	setflag FLAG_SYS_NO_PAYOUT
+	call_if_ne ValoonTown_RangersHQ_EventScript_PleaseSelectAPokemon
 	special HealPlayerParty
-	msgbox ValoonTown_RangersHQ_Text_TheContestWillBeginSoon, MSGBOX_DEFAULT
+	setflag FLAG_SYS_BUG_CATCHING_CONTEST_MODE
+	setrespawn HEAL_LOCATION_VALOON_TOWN_RANGERS_HQ
+	msgbox ValoonTown_RangersHQ_Text_HereAreTheParkBalls, MSGBOX_DEFAULT
+	giveitem ITEM_PARK_BALL, 20
+	msgbox ValoonTown_RangersHQ_Text_ExplainRules, MSGBOX_DEFAULT
 	closemessage
 	getplayerxy VAR_0x8008, VAR_0x8009
 	compare VAR_0x8008, 9
@@ -36,11 +57,6 @@ ValoonTown_RangersHQ_EventScript_ContestClerk::
 	warp MAP_VALOON_RESERVE, 0, 0, 0
 	waitstate
 	release
-	end
-
-ValoonTown_RangersHQ_EventScript_YouHaveMoreThanOnePokemon:
-	msgbox ValoonTown_RangersHQ_Text_OhYouHaveMoreThanOne, MSGBOX_DEFAULT
-	goto ValoonTown_RangersHQ_EventScript_PleaseSelectAPokemon
 	end
 
 ValoonTown_RangersHQ_EventScript_PleaseSelectAPokemon:
@@ -58,21 +74,15 @@ ValoonTown_RangersHQ_EventScript_PleaseSelectAPokemon:
 	compare VAR_RESULT, YES
 	goto_if_ne ValoonTown_RangersHQ_EventScript_PleaseSelectAPokemon
 	special ReducePlayerPartyToSelectedMon
+	playfanfare MUS_OBTAIN_ITEM
+	message ValoonTown_RangersHQ_Text_PlayerLeftWithTheContestHelper
+	waitfanfare
 	return
 
 ValoonTown_RangersHQ_EventScript_CantCompeteWithAnEgg:
 	msgbox ValoonTown_RangersHQ_Text_CantCompeteWithAnEgg, MSGBOX_DEFAULT
 	goto ValoonTown_RangersHQ_EventScript_PleaseSelectAPokemon
 	end
-
-ValoonTown_RangersHQ_EventScript_TryGiveFreeParkBalls:
-	msgbox ValoonTown_RangersHQ_Text_AsThisIsYourFirstTime, MSGBOX_DEFAULT
-	giveitem ITEM_PARK_BALL, 15
-	compare VAR_RESULT, FALSE
-	goto_if_eq Common_EventScript_BagIsFull
-	setflag FLAG_RECEIVED_FREE_PARK_BALLS
-	msgbox ValoonTown_RangersHQ_Text_YouCanBuyMore, MSGBOX_DEFAULT
-	return
 
 ValoonTown_RangersHQ_EventScript_TheBugCatchingContestWillStartSoon:
 	msgbox ValoonTown_RangersHQ_Text_TheBugCatchingContestWillStartSoon, MSGBOX_DEFAULT
@@ -85,27 +95,27 @@ ValoonTown_RangersHQ_EventScript_PleaseComeAgain:
 	end
 
 ValoonTown_RangersHQ_EventScript_PlayerEnterValoonReserve0:
-	applymovement LOCALID_CONTEST_CLERK, Common_Movement_WalkRight
+	applymovement LOCALID_CONTEST_HELPER, Common_Movement_WalkRight
 	waitmovement 0
-	applymovement LOCALID_CONTEST_CLERK, Common_Movement_WalkInPlaceFastestLeft
+	applymovement LOCALID_CONTEST_HELPER, Common_Movement_WalkInPlaceFastestLeft
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, ValoonTown_RangersHQ_Movement_PlayerEnterValoonReserve0
 	waitmovement 0
 	return
 
 ValoonTown_RangersHQ_EventScript_PlayerEnterValoonReserve1:
-	applymovement LOCALID_CONTEST_CLERK, Common_Movement_WalkLeft
+	applymovement LOCALID_CONTEST_HELPER, Common_Movement_WalkLeft
 	waitmovement 0
-	applymovement LOCALID_CONTEST_CLERK, Common_Movement_WalkInPlaceFastestRight
+	applymovement LOCALID_CONTEST_HELPER, Common_Movement_WalkInPlaceFastestRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, ValoonTown_RangersHQ_Movement_PlayerEnterValoonReserve1
 	waitmovement 0
 	return
 
 ValoonTown_RangersHQ_EventScript_PlayerEnterValoonReserve2:
-	applymovement LOCALID_CONTEST_CLERK, Common_Movement_WalkLeft
+	applymovement LOCALID_CONTEST_HELPER, Common_Movement_WalkLeft
 	waitmovement 0
-	applymovement LOCALID_CONTEST_CLERK, Common_Movement_WalkInPlaceFastestRight
+	applymovement LOCALID_CONTEST_HELPER, Common_Movement_WalkInPlaceFastestRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, ValoonTown_RangersHQ_Movement_PlayerEnterValoonReserve2
 	waitmovement 0
@@ -115,10 +125,6 @@ ValoonTown_RangersHQ_Text_WouldYouLikeToEnter:
 	.string "Would you like to enter the\n"
 	.string "Bug-Catching Contest?$"
 
-ValoonTown_RangersHQ_Text_OhYouHaveMoreThanOne:
-	.string "Oh, you have more than one Pokémon.\n"
-	.string "The rules only let you bring one.$"
-
 ValoonTown_RangersHQ_Text_PleaseSelectAPokemon:
 	.string "Please select one Pokémon to\n"
 	.string "take with you.$"
@@ -127,32 +133,34 @@ ValoonTown_RangersHQ_Text_CantCompeteWithAnEgg:
 	.string "You cannot compete with an Egg!$"
 
 ValoonTown_RangersHQ_Text_MonWillJoinYou:
-	.string "Your Pokémon {STR_VAR_1}\n"
-	.string "will join you.\p"
+	.string "{STR_VAR_1} will join you.\p"
 	.string "I will look after your other\n"
 	.string "Pokémon. Is this okay?$"
 
-ValoonTown_RangersHQ_Text_AsThisIsYourFirstTime:
-	.string "As this is your first time, take\n"
-	.string "these complementary Park Balls!$"
+ValoonTown_RangersHQ_Text_PlayerLeftWithTheContestHelper:
+	.string "{COLOR DARK_GREY}{PLAYER}'s Pokémon were\n"
+	.string "left with the Contest Helper.$"
 
-ValoonTown_RangersHQ_Text_YouCanBuyMore:
-	.string "Park Balls are special Balls that\n"
-	.string "perform best in the Valoon Reserve.\p"
-	.string "You can buy more from my colleague\n"
-	.string "over by the computer.$"
+ValoonTown_RangersHQ_Text_HereAreTheParkBalls:
+	.string "Here are the Park Balls for\n"
+	.string "the Contest.$"
 
-ValoonTown_RangersHQ_Text_TheContestWillBeginSoon:
-	.string "Great! Go on through, the contest\n"
-	.string "will begin soon!$"
-
-ValoonTown_RangersHQ_Text_PleaseComeAgain:
-	.string "Please come again.$"
+ValoonTown_RangersHQ_Text_ExplainRules:
+	.string "The person who gets the strongest\n"
+	.string "Bug-type Pokémon is the winner.\p"
+	.string "If you white out or run out of\n"
+	.string "Park Balls, you're done.\p"
+	.string "You can keep the last Pokémon you\n"
+	.string "catch as your own.\p"
+	.string "Good luck out there!$"
 
 ValoonTown_RangersHQ_Text_TheBugCatchingContestWillStartSoon:
 	.string "The Bug-Catching Contest will\n"
 	.string "start once the other Rangers get\l"
 	.string "back from Nemesis Cave.$"
+
+ValoonTown_RangersHQ_Text_PleaseComeAgain:
+	.string "{COLOR BLUE}Please come again.$"
 
 ValoonTown_RangersHQ_Movement_PlayerEnterValoonReserve0:
 	walk_right
@@ -172,47 +180,12 @@ ValoonTown_RangersHQ_Movement_PlayerEnterValoonReserve2:
 	set_invisible
 	step_end
 
-ValoonTown_RangersHQ_EventScript_ParkBallSalesman::
-	lock
-	faceplayer
-	goto_if_set FLAG_RECEIVED_FREE_PARK_BALLS, ValoonTown_RangersHQ_EventScript_TrySellParkBalls
-	msgbox ValoonTown_RangersHQ_Text_ExplainParkBalls, MSGBOX_DEFAULT
-	giveitem ITEM_PARK_BALL, 15
-	compare VAR_RESULT, FALSE
-	goto_if_eq Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_FREE_PARK_BALLS
-	msgbox ValoonTown_RangersHQ_Text_IfYouRunOut, MSGBOX_DEFAULT
-	release
+ValoonTown_RangersHQ_EventScript_BulletinBoard::
+	msgbox ValoonTown_RangersHQ_Text_BulletinBoard, MSGBOX_SIGN
 	end
 
-ValoonTown_RangersHQ_EventScript_TrySellParkBalls::
-	message ValoonTown_RangersHQ_Text_WouldYouLikeToBuyParkBalls
-	waitmessage
-	pokemart ValoonTown_RangersHQ_Pokemart_ParkBalls
-	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
-	release
-	end
-
-ValoonTown_RangersHQ_Text_ExplainParkBalls:
-	.string "Welcome to the Valoon Rangers HQ!\n"
-	.string "We sell Park Balls here.\p"
-	.string "They are Poké Balls which are more\n"
-	.string "effective in the Valoon Reserve.\p"
-	.string "Here, take some for free!$"
-
-ValoonTown_RangersHQ_Text_IfYouRunOut:
-	.string "If you run out of Park Balls, come\n"
-	.string "talk to me!$"
-
-ValoonTown_RangersHQ_Text_WouldYouLikeToBuyParkBalls:
-	.string "Hi, there!\n"
-	.string "Would you like to buy Park Balls?$"
-
-ValoonTown_RangersHQ_Pokemart_ParkBalls::
-	.2byte ITEM_PARK_BALL
-	.2byte ITEM_NONE
-	release
-	end
+ValoonTown_RangersHQ_Text_BulletinBoard:
+	.string "It is a bulletin board.$"
 
 ValoonTown_RangersHQ_EventScript_PkmnRangerF1::
 	msgbox ValoonTown_RangersHQ_Text_ThereDontSeemToBeAnyNewMissions, MSGBOX_NPC

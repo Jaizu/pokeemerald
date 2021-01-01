@@ -401,8 +401,10 @@ static void Overworld_ResetStateAfterWhiteOut(void)
     FlagClear(FLAG_SYS_CYCLING_ROAD);
     FlagClear(FLAG_SYS_CRUISE_MODE);
     FlagClear(FLAG_SYS_SAFARI_MODE);
+    FlagClear(FLAG_SYS_BUG_CATCHING_CONTEST_MODE);
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_USE_FLASH);
+    FlagClear(FLAG_SYS_NO_PAYOUT);
     // If you were defeated by Kyogre/Groudon and the step counter has
     // maxed out, end the abnormal weather.
     if (VarGet(VAR_SHOULD_END_ABNORMAL_WEATHER) == 1)
@@ -3132,8 +3134,6 @@ static void SpriteCB_LinkPlayer(struct Sprite *sprite)
 
 void PayPrizeMoney(void)
 {
-    if (!FlagGet(FLAG_SYS_NO_PAYOUT))
+    if (!FlagGet(FLAG_SYS_NO_PAYOUT) && !FlagGet(FLAG_SYS_BUG_CATCHING_CONTEST_MODE))
         SetMoney(&gSaveBlock1Ptr->money, GetMoney(&gSaveBlock1Ptr->money) / 2);
-    else
-        FlagClear(FLAG_SYS_NO_PAYOUT);
 }

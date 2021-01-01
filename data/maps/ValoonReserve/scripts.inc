@@ -17,7 +17,7 @@ ValoonReserve_EventScript_TriggerWhiteOut:
 	end
 
 ValoonReserve_OnFrame:
-	map_script_2 VAR_VALOON_RESERVE_STATE, BCC_STATE_WHITE_OUT, 	ValoonReserve_EventScript_WhiteOut
+	map_script_2 VAR_VALOON_RESERVE_STATE, BCC_STATE_WHITE_OUT,     ValoonReserve_EventScript_WhiteOut
 	map_script_2 VAR_VALOON_RESERVE_STATE, BCC_STATE_JUDGING_ROUND, ValoonReserve_EventScript_JudgingRound
 	.2byte 0
 
@@ -35,8 +35,7 @@ ValoonReserve_EventScript_BugCatchingContestWhiteOut::
 	message ValoonReserve_Text_PlayerIsOutOfUsablePokemon
 	waitmessage
 	waitbuttonpress
-	special LoadPlayerParty
-	setrespawn HEAL_LOCATION_VALOON_TOWN_RANGERS_HQ
+	setvar VAR_RANGERS_HQ_STATE, 1
 	special Script_FadeOutMapMusic
 	waitstate
 	fadescreen FADE_TO_BLACK
@@ -68,8 +67,7 @@ ValoonReserve_EventScript_ForfeitClerk::
 	goto_if_ne ValoonReserve_EventScript_GoCatchTheBestBug
 	msgbox ValoonReserve_Text_PleaseComeBackSoon, MSGBOX_DEFAULT
 	closemessage
-	clearflag FLAG_SYS_NO_PAYOUT
-	special LoadPlayerParty
+	setvar VAR_RANGERS_HQ_STATE, 1
 	warp MAP_VALOON_TOWN_RANGERS_HQ, 255, 10, 3
 	waitstate
 	release
