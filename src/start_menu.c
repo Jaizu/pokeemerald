@@ -3,6 +3,7 @@
 #include "battle_pyramid.h"
 #include "battle_pyramid_bag.h"
 #include "bg.h"
+#include "bug_catching_contest.h"
 #include "event_data.h"
 #include "event_object_movement.h"
 #include "event_object_lock.h"
@@ -61,7 +62,8 @@ enum
     MENU_ACTION_PLAYER_LINK,
     MENU_ACTION_REST_FRONTIER,
     MENU_ACTION_RETIRE_FRONTIER,
-    MENU_ACTION_PYRAMID_BAG
+    MENU_ACTION_PYRAMID_BAG,
+    MENU_ACTION_RETIRE_BUG_CATCHING_CONTEST
 };
 
 // Save status
@@ -77,7 +79,7 @@ enum
 bool8 (*gMenuCallback)(void);
 
 // EWRAM
-EWRAM_DATA static u8 sSafariBallsWindowId = 0;
+EWRAM_DATA static u8 sBallsStockWindowId = 0;
 EWRAM_DATA static u8 sBattlePyramidFloorWindowId = 0;
 EWRAM_DATA static u8 sStartMenuCursorPos = 0;
 EWRAM_DATA static u8 sNumStartMenuActions = 0;
@@ -102,6 +104,7 @@ static bool8 StartMenuSafariZoneRetireCallback(void);
 static bool8 StartMenuLinkModePlayerNameCallback(void);
 static bool8 StartMenuBattlePyramidRetireCallback(void);
 static bool8 StartMenuBattlePyramidBagCallback(void);
+static bool8 StartMenuBugCatchingContestRetireCallback(void);
 
 // Menu callbacks
 static bool8 SaveStartCallback(void);
@@ -136,7 +139,7 @@ static void Task_SaveAfterLinkBattle(u8 taskId);
 static void Task_WaitForBattleTowerLinkSave(u8 taskId);
 static bool8 FieldCB_ReturnToFieldStartMenu(void);
 
-static const struct WindowTemplate sSafariBallsWindowTemplate = {0, 1, 1, 9, 4, 0xF, 8};
+static const struct WindowTemplate sBallsStockWindowTemplate = {0, 1, 1, 9, 4, 0xF, 8};
 
 static const u8* const sPyramindFloorNames[] =
 {
@@ -155,19 +158,20 @@ static const struct WindowTemplate sPyramidFloorWindowTemplate_1 = {0, 1, 1, 0xC
 
 static const struct MenuAction sStartMenuItems[] =
 {
-    {gText_MenuPokedex, {.u8_void = StartMenuPokedexCallback}},
-    {gText_MenuPokemon, {.u8_void = StartMenuPokemonCallback}},
-    {gText_MenuBag, {.u8_void = StartMenuBagCallback}},
-    {gText_MenuPokenav, {.u8_void = StartMenuPokeNavCallback}},
-    {gText_MenuPlayer, {.u8_void = StartMenuPlayerNameCallback}},
-    {gText_MenuSave, {.u8_void = StartMenuSaveCallback}},
-    {gText_MenuOption, {.u8_void = StartMenuOptionCallback}},
-    {gText_MenuExit, {.u8_void = StartMenuExitCallback}},
-    {gText_MenuRetire, {.u8_void = StartMenuSafariZoneRetireCallback}},
-    {gText_MenuPlayer, {.u8_void = StartMenuLinkModePlayerNameCallback}},
-    {gText_MenuRest, {.u8_void = StartMenuSaveCallback}},
-    {gText_MenuRetire, {.u8_void = StartMenuBattlePyramidRetireCallback}},
-    {gText_MenuBag, {.u8_void = StartMenuBattlePyramidBagCallback}}
+    [MENU_ACTION_POKEDEX] = {gText_MenuPokedex, {.u8_void = StartMenuPokedexCallback}},
+    [MENU_ACTION_POKEMON] = {gText_MenuPokemon, {.u8_void = StartMenuPokemonCallback}},
+    [MENU_ACTION_BAG] = {gText_MenuBag, {.u8_void = StartMenuBagCallback}},
+    [MENU_ACTION_POKENAV] = {gText_MenuPokenav, {.u8_void = StartMenuPokeNavCallback}},
+    [MENU_ACTION_PLAYER] = {gText_MenuPlayer, {.u8_void = StartMenuPlayerNameCallback}},
+    [MENU_ACTION_SAVE] = {gText_MenuSave, {.u8_void = StartMenuSaveCallback}},
+    [MENU_ACTION_OPTION] = {gText_MenuOption, {.u8_void = StartMenuOptionCallback}},
+    [MENU_ACTION_EXIT] = {gText_MenuExit, {.u8_void = StartMenuExitCallback}},
+    [MENU_ACTION_RETIRE_SAFARI] = {gText_MenuRetire, {.u8_void = StartMenuSafariZoneRetireCallback}},
+    [MENU_ACTION_PLAYER_LINK] = {gText_MenuPlayer, {.u8_void = StartMenuLinkModePlayerNameCallback}},
+    [MENU_ACTION_REST_FRONTIER] = {gText_MenuRest, {.u8_void = StartMenuSaveCallback}},
+    [MENU_ACTION_RETIRE_FRONTIER] = {gText_MenuRetire, {.u8_void = StartMenuBattlePyramidRetireCallback}},
+    [MENU_ACTION_PYRAMID_BAG] = {gText_MenuBag, {.u8_void = StartMenuBattlePyramidBagCallback}},
+    [MENU_ACTION_RETIRE_BUG_CATCHING_CONTEST] = {gText_MenuRetire, {.u8_void = StartMenuBugCatchingContestRetireCallback}}
 };
 
 static const struct BgTemplate sUnknown_085105A8[] =
@@ -201,7 +205,8 @@ static void BuildUnionRoomStartMenu(void);
 static void BuildBattlePikeStartMenu(void);
 static void BuildBattlePyramidStartMenu(void);
 static void BuildMultiPartnerRoomStartMenu(void);
-static void ShowSafariBallsWindow(void);
+static void BuildBugCatchingContestStartMenu(void);
+static void ShowBallsStockWindow(bool8 isSafariZone);
 static void ShowPyramidFloorWindow(void);
 static void RemoveExtraStartMenuWindows(void);
 static bool32 PrintStartMenuActions(s8 *pIndex, u32 count);
@@ -258,6 +263,10 @@ static void BuildStartMenuActions(void)
     else if (InMultiPartnerRoom())
     {
         BuildMultiPartnerRoomStartMenu();
+    }
+    else if (GetBugCatchingContestFlag() == TRUE)
+    {
+        BuildBugCatchingContestStartMenu();
     }
     else
     {
@@ -363,15 +372,33 @@ static void BuildMultiPartnerRoomStartMenu(void)
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
 
-static void ShowSafariBallsWindow(void)
+static void BuildBugCatchingContestStartMenu(void)
 {
-    sSafariBallsWindowId = AddWindow(&sSafariBallsWindowTemplate);
-    PutWindowTilemap(sSafariBallsWindowId);
-    DrawStdWindowFrame(sSafariBallsWindowId, FALSE);
-    ConvertIntToDecimalStringN(gStringVar1, gNumSafariBalls, STR_CONV_MODE_RIGHT_ALIGN, 2);
-    StringExpandPlaceholders(gStringVar4, gText_SafariBallStock);
-    AddTextPrinterParameterized(sSafariBallsWindowId, 1, gStringVar4, 0, 1, 0xFF, NULL);
-    CopyWindowToVram(sSafariBallsWindowId, 2);
+    AddStartMenuAction(MENU_ACTION_RETIRE_BUG_CATCHING_CONTEST);
+    AddStartMenuAction(MENU_ACTION_POKEDEX);
+    AddStartMenuAction(MENU_ACTION_POKEMON);
+    AddStartMenuAction(MENU_ACTION_PLAYER);
+    AddStartMenuAction(MENU_ACTION_OPTION);
+    AddStartMenuAction(MENU_ACTION_EXIT);
+}
+
+static void ShowBallsStockWindow(bool8 isSafariZone)
+{
+    sBallsStockWindowId = AddWindow(&sBallsStockWindowTemplate);
+    PutWindowTilemap(sBallsStockWindowId);
+    DrawStdWindowFrame(sBallsStockWindowId, FALSE);
+    if (isSafariZone)
+    {
+        ConvertIntToDecimalStringN(gStringVar1, gNumSafariBalls, STR_CONV_MODE_RIGHT_ALIGN, 2);
+        StringExpandPlaceholders(gStringVar4, gText_SafariBallStock);
+    }
+    else
+    {
+        ConvertIntToDecimalStringN(gStringVar1, gNumParkBalls, STR_CONV_MODE_RIGHT_ALIGN, 2);
+        StringExpandPlaceholders(gStringVar4, gText_ParkBallStock);
+    }
+    AddTextPrinterParameterized(sBallsStockWindowId, 1, gStringVar4, 0, 1, 0xFF, NULL);
+    CopyWindowToVram(sBallsStockWindowId, 2);
 }
 
 static void ShowPyramidFloorWindow(void)
@@ -391,11 +418,11 @@ static void ShowPyramidFloorWindow(void)
 
 static void RemoveExtraStartMenuWindows(void)
 {
-    if (GetSafariZoneFlag())
+    if (GetSafariZoneFlag() || GetBugCatchingContestFlag())
     {
-        ClearStdWindowAndFrameToTransparent(sSafariBallsWindowId, FALSE);
-        CopyWindowToVram(sSafariBallsWindowId, 2);
-        RemoveWindow(sSafariBallsWindowId);
+        ClearStdWindowAndFrameToTransparent(sBallsStockWindowId, FALSE);
+        CopyWindowToVram(sBallsStockWindowId, 2);
+        RemoveWindow(sBallsStockWindowId);
     }
     if (InBattlePyramid())
     {
@@ -455,8 +482,8 @@ static bool32 InitStartMenuStep(void)
         sInitStartMenuData[0]++;
         break;
     case 3:
-        if (GetSafariZoneFlag())
-            ShowSafariBallsWindow();
+        if (GetSafariZoneFlag() || GetBugCatchingContestFlag())
+            ShowBallsStockWindow(GetSafariZoneFlag());
         if (InBattlePyramid())
             ShowPyramidFloorWindow();
         sInitStartMenuData[0]++;
@@ -576,7 +603,8 @@ static bool8 HandleStartMenuInput(void)
         if (gMenuCallback != StartMenuSaveCallback
             && gMenuCallback != StartMenuExitCallback
             && gMenuCallback != StartMenuSafariZoneRetireCallback
-            && gMenuCallback != StartMenuBattlePyramidRetireCallback)
+            && gMenuCallback != StartMenuBattlePyramidRetireCallback
+            && gMenuCallback != StartMenuBugCatchingContestRetireCallback)
         {
            FadeScreen(FADE_TO_BLACK, 0);
         }
@@ -738,6 +766,15 @@ static bool8 StartMenuBattlePyramidRetireCallback(void)
     gMenuCallback = BattlePyramidRetireStartCallback; // Confirm retire
 
     return FALSE;
+}
+
+static bool8 StartMenuBugCatchingContestRetireCallback(void)
+{
+    RemoveExtraStartMenuWindows();
+    HideStartMenu();
+    BugCatchingContestRetirePrompt();
+
+    return TRUE;
 }
 
 // Functionally unused

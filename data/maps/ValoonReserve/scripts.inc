@@ -47,34 +47,62 @@ ValoonReserve_Text_PlayerIsOutOfUsablePokemon:
 	.string "Announcer: {COLOR BLUE}Oh dear!\n"
 	.string "We have a disqualification!\p"
 	.string "{PLAYER} is out of usable\n"
-	.string "Pokémon, and therefore forfeits!\p"
+	.string "Pokémon, and therefore Retires!\p"
 	.string "Better luck next time!$"
 
 ValoonReserve_EventScript_BugCatchingContestJudgingRound::
+	textcolor 0 // Blue
 	fadescreen FADE_TO_BLACK
 	setobjectxy OBJ_EVENT_ID_PLAYER, 27, 10
 	setobjectxyperm OBJ_EVENT_ID_PLAYER, 27, 10
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	fadescreen FADE_FROM_BLACK
+	msgbox ValoonReserve_Text_WeWillNowJudgeThePokemon, MSGBOX_DEFAULT
 	// TODO: Implement
+	msgbox ValoonReserve_Text_ThankYouAllForCompeting, MSGBOX_DEFAULT
+	goto ValoonReserve_EventScript_Retire
 	end
 
-ValoonReserve_EventScript_ForfeitClerk::
+ValoonReserve_Text_WeWillNowJudgeThePokemon:
+	.string "We will now judge the Pokémon\n"
+	.string "you have caught.\p"
+	.string "… …\n"
+	.string "… …\p"
+	.string "We have chosen the winners!\n"
+	.string "Are you ready for this?$"
+
+ValoonReserve_Text_ThankYouAllForCompeting:
+	.string "Thank you all for competing!\n"
+	.string "We hope to see you again.$"
+
+ValoonReserve_EventScript_RetirePrompt::
+	lockall
+	msgbox ValoonReserve_Text_WouldYouLikeToExit, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq ValoonReserve_EventScript_Retire
+	releaseall
+	end
+
+ValoonReserve_EventScript_Retire:
+	setvar VAR_RANGERS_HQ_STATE, 1
+	warp MAP_VALOON_TOWN_RANGERS_HQ, 255, 10, 3
+	waitstate
+	releaseall
+	end
+
+ValoonReserve_Text_WouldYouLikeToExit:
+	.string "Would you like to exit?$"
+
+ValoonReserve_EventScript_RetireClerk::
 	lock
 	faceplayer
-	msgbox ValoonReserve_Text_WouldYouLikeToForfeit, MSGBOX_YESNO
+	msgbox ValoonReserve_Text_WouldYouLikeToExit, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_ne ValoonReserve_EventScript_GoCatchTheBestBug
 	msgbox ValoonReserve_Text_PleaseComeBackSoon, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_RANGERS_HQ_STATE, 1
-	warp MAP_VALOON_TOWN_RANGERS_HQ, 255, 10, 3
-	waitstate
-	release
+	goto ValoonReserve_EventScript_Retire
 	end
-
-ValoonReserve_Text_WouldYouLikeToForfeit:
-	.string "Would you like to forfeit?$"
 
 ValoonReserve_Text_PleaseComeBackSoon:
 	.string "Alright, then.\n"

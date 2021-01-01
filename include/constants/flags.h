@@ -156,11 +156,11 @@
 #define FLAG_UNLOCK_VALOON_GYM_DOOR                         0x8C // FLAG_RECEIVED_6_SODA_POP in Emerald
 #define FLAG_RECEIVED_VALOON_TOWN_AIR_BALLOON               0x8D // FLAG_DEFEATED_SEASHORE_HOUSE in Emerald
 #define FLAG_VALOON_GYM_PATH_CLEARED                        0x8E // FLAG_DEVON_GOODS_STOLEN in Emerald
-#define FLAG_RECEIVED_FREE_PARK_BALLS                       0x8F // FLAG_RECOVERED_DEVON_GOODS in Emerald
-#define FLAG_RECEIVED_TM49                                  0x90 // FLAG_RETURNED_DEVON_GOODS in Emerald
-#define FLAG_RECEIVED_VS_SEEKER                             0x91 // FLAG_CAUGHT_LUGIA in Emerald
-#define FLAG_CLEAR_PATH_TO_SECRET_LAB                       0x92 // FLAG_CAUGHT_HO_OH in Emerald
-#define FLAG_NEMESIS_CAVE_RANGERS_RETURNED                  0x93 // FLAG_MR_BRINEY_SAILING_INTRO in Emerald
+#define FLAG_RECEIVED_VS_SEEKER                             0x8F // FLAG_RECOVERED_DEVON_GOODS in Emerald
+#define FLAG_CLEAR_PATH_TO_SECRET_LAB                       0x90 // FLAG_RETURNED_DEVON_GOODS in Emerald
+#define FLAG_NEMESIS_CAVE_RANGERS_RETURNED                  0x91 // FLAG_CAUGHT_LUGIA in Emerald
+#define FLAG_RECEIVED_TM49                                  0x92 // FLAG_CAUGHT_HO_OH in Emerald
+#define FLAG_UNUSED_0x93                                    0x93 // FLAG_MR_BRINEY_SAILING_INTRO in Emerald
 
 #define FLAG_DOCK_REJECTED_DEVON_GOODS       0x94
 #define FLAG_DELIVERED_DEVON_GOODS           0x95

@@ -15,7 +15,7 @@ ValoonTown_RangersHQ_EventScript_ReturnFromContest:
 	waitmovement 0
 	msgbox ValoonTown_RangersHQ_Text_PleaseComeAgain, MSGBOX_DEFAULT
 	closemessage
-	clearflag FLAG_SYS_BUG_CATCHING_CONTEST_MODE
+	special ExitBugCatchingContestMode
 	special LoadPlayerParty
 	setvar VAR_RANGERS_HQ_STATE, 0
 	releaseall
@@ -41,10 +41,10 @@ ValoonTown_RangersHQ_EventScript_ContestHelper::
 	compare VAR_RESULT, 1
 	call_if_ne ValoonTown_RangersHQ_EventScript_PleaseSelectAPokemon
 	special HealPlayerParty
-	setflag FLAG_SYS_BUG_CATCHING_CONTEST_MODE
-	setrespawn HEAL_LOCATION_VALOON_TOWN_RANGERS_HQ
 	msgbox ValoonTown_RangersHQ_Text_HereAreTheParkBalls, MSGBOX_DEFAULT
-	giveitem ITEM_PARK_BALL, 20
+	playfanfare MUS_OBTAIN_ITEM
+	message ValoonTown_RangersHQ_Text_PlayerObtainedParkBalls
+	waitfanfare
 	msgbox ValoonTown_RangersHQ_Text_ExplainRules, MSGBOX_DEFAULT
 	closemessage
 	getplayerxy VAR_0x8008, VAR_0x8009
@@ -54,6 +54,7 @@ ValoonTown_RangersHQ_EventScript_ContestHelper::
 	call_if_eq ValoonTown_RangersHQ_EventScript_PlayerEnterValoonReserve1
 	compare VAR_0x8008, 11
 	call_if_eq ValoonTown_RangersHQ_EventScript_PlayerEnterValoonReserve2
+	special EnterBugCatchingContestMode
 	warp MAP_VALOON_RESERVE, 0, 0, 0
 	waitstate
 	release
@@ -144,6 +145,9 @@ ValoonTown_RangersHQ_Text_PlayerLeftWithTheContestHelper:
 ValoonTown_RangersHQ_Text_HereAreTheParkBalls:
 	.string "Here are the Park Balls for\n"
 	.string "the Contest.$"
+
+ValoonTown_RangersHQ_Text_PlayerObtainedParkBalls:
+	.string "{COLOR DARK_GREY}Obtained 20 Park Balls!$"
 
 ValoonTown_RangersHQ_Text_ExplainRules:
 	.string "The person who gets the strongest\n"

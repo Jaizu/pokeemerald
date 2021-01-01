@@ -265,6 +265,7 @@ extern const u8 gText_Floor6[];
 extern const u8 gText_Floor7[];
 extern const u8 gText_Peak[];
 extern const u8 gText_SafariBallStock[];
+extern const u8 gText_ParkBallStock[];
 extern const u8 gText_BattlePyramidFloor[];
 
 extern const u8 gText_MenuOptionPokedex[];
