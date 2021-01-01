@@ -4,6 +4,7 @@
 #include "battle_setup.h"
 #include "berry.h"
 #include "bg.h"
+#include "bug_catching_contest.h"
 #include "cable_club.h"
 #include "clock.h"
 #include "event_data.h"
@@ -370,6 +371,7 @@ void Overworld_ResetStateAfterFly(void)
     FlagClear(FLAG_SYS_CYCLING_ROAD);
     FlagClear(FLAG_SYS_CRUISE_MODE);
     FlagClear(FLAG_SYS_SAFARI_MODE);
+    FlagClear(FLAG_SYS_BUG_CATCHING_CONTEST_MODE);
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_USE_FLASH);
 }
@@ -380,6 +382,7 @@ void Overworld_ResetStateAfterTeleport(void)
     FlagClear(FLAG_SYS_CYCLING_ROAD);
     FlagClear(FLAG_SYS_CRUISE_MODE);
     FlagClear(FLAG_SYS_SAFARI_MODE);
+    FlagClear(FLAG_SYS_BUG_CATCHING_CONTEST_MODE);
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_USE_FLASH);
     ScriptContext2_RunNewScript(EventScript_ResetMrBriney);
@@ -391,6 +394,7 @@ void Overworld_ResetStateAfterDigEscRope(void)
     FlagClear(FLAG_SYS_CYCLING_ROAD);
     FlagClear(FLAG_SYS_CRUISE_MODE);
     FlagClear(FLAG_SYS_SAFARI_MODE);
+    FlagClear(FLAG_SYS_BUG_CATCHING_CONTEST_MODE);
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_USE_FLASH);
 }
@@ -3134,6 +3138,6 @@ static void SpriteCB_LinkPlayer(struct Sprite *sprite)
 
 void PayPrizeMoney(void)
 {
-    if (!FlagGet(FLAG_SYS_NO_PAYOUT) && !FlagGet(FLAG_SYS_BUG_CATCHING_CONTEST_MODE))
+    if (!FlagGet(FLAG_SYS_NO_PAYOUT) && !GetBugCatchingContestFlag)
         SetMoney(&gSaveBlock1Ptr->money, GetMoney(&gSaveBlock1Ptr->money) / 2);
 }

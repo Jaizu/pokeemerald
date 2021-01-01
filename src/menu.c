@@ -1861,7 +1861,7 @@ void PrintPlayerNameOnWindow(u8 windowId, const u8 *src, u16 x, u16 y)
 
     StringExpandPlaceholders(gStringVar4, src);
 
-    AddTextPrinterParameterized(windowId, 1, gStringVar4, x, y, 0xFF, 0);
+    AddTextPrinterParameterized(windowId, 2, gStringVar4, x, y, 0xFF, 0);
 }
 
 // Unused. Similar to BlitBitmapRect4Bit.
