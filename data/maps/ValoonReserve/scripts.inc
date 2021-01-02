@@ -1,5 +1,5 @@
-.set BCC_STATE_WHITE_OUT, 	            1
-.set BCC_STATE_JUDGING_ROUND,           2
+.set BCC_STATE_WHITE_OUT, 	  1
+.set BCC_STATE_JUDGING_ROUND, 2
 
 ValoonReserve_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, ValoonReserve_OnResume
@@ -17,8 +17,8 @@ ValoonReserve_EventScript_TriggerWhiteOut:
 	end
 
 ValoonReserve_OnFrame:
-	map_script_2 VAR_VALOON_RESERVE_STATE, BCC_STATE_WHITE_OUT,               ValoonReserve_EventScript_WhiteOut
-	map_script_2 VAR_VALOON_RESERVE_STATE, BCC_STATE_JUDGING_ROUND,           ValoonReserve_EventScript_JudgingRound
+	map_script_2 VAR_VALOON_RESERVE_STATE, BCC_STATE_WHITE_OUT,     ValoonReserve_EventScript_WhiteOut
+	map_script_2 VAR_VALOON_RESERVE_STATE, BCC_STATE_JUDGING_ROUND, ValoonReserve_EventScript_JudgingRound
 	.2byte 0
 
 ValoonReserve_EventScript_WhiteOut::
