@@ -93,6 +93,7 @@
 #define B_OUTCOME_NO_SAFARI_BALLS      8
 #define B_OUTCOME_FORFEITED            9
 #define B_OUTCOME_MON_TELEPORTED       10
+#define B_OUTCOME_NO_PARK_BALLS        11
 #define B_OUTCOME_LINK_BATTLE_RAN      (1 << 7) // 128
 
 // Non-volatile status conditions

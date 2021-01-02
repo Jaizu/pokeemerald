@@ -11,8 +11,6 @@ ValoonTown_RangersHQ_OnFrame:
 
 ValoonTown_RangersHQ_EventScript_ReturnFromContest:
 	lockall
-	applymovement LOCALID_CONTEST_HELPER, Common_Movement_WalkInPlaceFastestDown
-	waitmovement 0
 	msgbox ValoonTown_RangersHQ_Text_PleaseComeAgain, MSGBOX_DEFAULT
 	closemessage
 	special ExitBugCatchingContestMode

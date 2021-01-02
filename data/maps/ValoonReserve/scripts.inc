@@ -1,5 +1,5 @@
-.set BCC_STATE_WHITE_OUT, 	  1
-.set BCC_STATE_JUDGING_ROUND, 2
+.set BCC_STATE_WHITE_OUT, 	            1
+.set BCC_STATE_JUDGING_ROUND,           2
 
 ValoonReserve_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, ValoonReserve_OnResume
@@ -17,8 +17,8 @@ ValoonReserve_EventScript_TriggerWhiteOut:
 	end
 
 ValoonReserve_OnFrame:
-	map_script_2 VAR_VALOON_RESERVE_STATE, BCC_STATE_WHITE_OUT,     ValoonReserve_EventScript_WhiteOut
-	map_script_2 VAR_VALOON_RESERVE_STATE, BCC_STATE_JUDGING_ROUND, ValoonReserve_EventScript_JudgingRound
+	map_script_2 VAR_VALOON_RESERVE_STATE, BCC_STATE_WHITE_OUT,               ValoonReserve_EventScript_WhiteOut
+	map_script_2 VAR_VALOON_RESERVE_STATE, BCC_STATE_JUDGING_ROUND,           ValoonReserve_EventScript_JudgingRound
 	.2byte 0
 
 ValoonReserve_EventScript_WhiteOut::
@@ -30,6 +30,35 @@ ValoonReserve_EventScript_JudgingRound::
 	setvar VAR_VALOON_RESERVE_STATE, 0
 	goto ValoonReserve_EventScript_BugCatchingContestJudgingRound
 	end
+
+ValoonReserve_EventScript_OutOfBallsMidBattle::
+	specialvar VAR_RESULT, PlayerHasCaughtBug
+	compare VAR_RESULT, TRUE
+	goto_if_eq ValoonReserve_EventScript_OutOfBallsBeginJudging
+	setvar VAR_VALOON_RESERVE_STATE, 0
+	msgbox ValoonReserve_Text_OutOfBallsNothingCaught, MSGBOX_DEFAULT
+	closemessage
+	goto ValoonReserve_EventScript_Retire
+	end
+
+ValoonReserve_Text_OutOfBallsNothingCaught:
+	.string "Announcer: {COLOR BLUE}Oh dear!\n"
+	.string "We have a disqualification!\p"
+	.string "{PLAYER} is out of Park Balls, and\n"
+	.string "has not caught anything!\p"
+	.string "Better luck next time!$"
+
+ValoonReserve_EventScript_OutOfBallsBeginJudging::
+	msgbox ValoonReserve_Text_OutOfBallsBeginJudging, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_VALOON_RESERVE_STATE, BCC_STATE_JUDGING_ROUND
+	end
+
+ValoonReserve_Text_OutOfBallsBeginJudging:
+	.string "Announcer: {COLOR BLUE}{PLAYER} is out of\n"
+	.string "Park Balls, and so must stop!\p"
+	.string "Please wait for the Judging Round\n"
+	.string "to begin.$"
 
 ValoonReserve_EventScript_BugCatchingContestWhiteOut::
 	message ValoonReserve_Text_PlayerIsOutOfUsablePokemon
@@ -47,12 +76,15 @@ ValoonReserve_Text_PlayerIsOutOfUsablePokemon:
 	.string "Announcer: {COLOR BLUE}Oh dear!\n"
 	.string "We have a disqualification!\p"
 	.string "{PLAYER} is out of usable\n"
-	.string "Pokémon, and therefore Retires!\p"
+	.string "Pokémon, and therefore retires!\p"
 	.string "Better luck next time!$"
 
 ValoonReserve_EventScript_BugCatchingContestJudgingRound::
 	textcolor 0 // Blue
 	fadescreen FADE_TO_BLACK
+	setvar VAR_0x8004, 27 @ x
+	setvar VAR_0x8005, 8  @ y
+	special TeleportCamera
 	setobjectxy OBJ_EVENT_ID_PLAYER, 27, 10
 	setobjectxyperm OBJ_EVENT_ID_PLAYER, 27, 10
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -98,7 +130,7 @@ ValoonReserve_EventScript_RetireClerk::
 	faceplayer
 	msgbox ValoonReserve_Text_WouldYouLikeToExit, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_ne ValoonReserve_EventScript_GoCatchTheBestBug
+	goto_if_ne ValoonReserve_EventScript_TryPromptJudgingRound
 	msgbox ValoonReserve_Text_PleaseComeBackSoon, MSGBOX_DEFAULT
 	closemessage
 	goto ValoonReserve_EventScript_Retire
@@ -111,10 +143,14 @@ ValoonReserve_Text_PleaseComeBackSoon:
 ValoonReserve_EventScript_Judge::
 	lock
 	faceplayer
+	goto ValoonReserve_EventScript_TryPromptJudgingRound
+	end
+
+ValoonReserve_EventScript_TryPromptJudgingRound::
 	specialvar VAR_RESULT, PlayerHasCaughtBug
 	compare VAR_RESULT, FALSE
 	goto_if_eq ValoonReserve_EventScript_GoCatchTheBestBug
-	msgbox ValoonReserve_Text_WouldYouLikeToBeginTheJudgingRound, MSGBOX_YESNO
+	msgbox ValoonReserve_Text_AreYouReadyForJudging, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_ne ValoonReserve_EventScript_GoCatchTheBestBug
 	msgbox ValoonReserve_Text_VeryWell, MSGBOX_DEFAULT
@@ -123,13 +159,13 @@ ValoonReserve_EventScript_Judge::
 	release
 	end
 
-ValoonReserve_Text_WouldYouLikeToBeginTheJudgingRound:
-	.string "Would you like to begin the\n"
-	.string "judging round?$"
+ValoonReserve_Text_AreYouReadyForJudging:
+	.string "Are you ready for the Judging Round\n"
+	.string "to begin?$"
 
 ValoonReserve_Text_VeryWell:
-	.string "Very well!\n"
-	.string "I will gather the contestants.$"
+	.string "Very well! Please wait here for the\n"
+	.string "Judging Round to begin.$"
 
 ValoonReserve_EventScript_GoCatchTheBestBug::
 	msgbox ValoonReserve_Text_GoCatchTheBestBug, MSGBOX_DEFAULT

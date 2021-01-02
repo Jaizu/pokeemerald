@@ -559,7 +559,9 @@
 #define STRINGID_COMATOSEENTERS 555
 #define STRINGID_SCREENCLEANERENTERS 556
 
-#define BATTLESTRINGS_COUNT     557
+#define STRINGID_OUTOFPARKBALLS           557
+
+#define BATTLESTRINGS_COUNT     558
 
 //// multichoice message IDs
 // switch in ability message

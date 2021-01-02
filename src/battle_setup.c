@@ -68,6 +68,7 @@ struct TrainerBattleParameter
 // this file's functions
 static void DoBattlePikeWildBattle(void);
 static void DoSafariBattle(void);
+static void DoBugCatchingContestBattle(void);
 static void DoStandardWildBattle(bool32 isDouble);
 static void CB2_EndWildBattle(void);
 static void CB2_EndScriptedWildBattle(void);
@@ -385,6 +386,8 @@ void BattleSetup_StartWildBattle(void)
 {
     if (GetSafariZoneFlag())
         DoSafariBattle();
+    else if (GetBugCatchingContestFlag())
+        DoBugCatchingContestBattle();
     else
         DoStandardWildBattle(FALSE);
 }
@@ -412,10 +415,6 @@ static void DoStandardWildBattle(bool32 isDouble)
     {
         VarSet(VAR_TEMP_E, 0);
         gBattleTypeFlags |= BATTLE_TYPE_PYRAMID;
-    }
-    if (InValoonReserve())
-    {
-        gBattleTypeFlags |= BATTLE_TYPE_BUG_CATCHING_CONTEST;
     }
     CreateBattleStartTask(GetWildBattleTransition(), 0);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
@@ -445,6 +444,16 @@ static void DoSafariBattle(void)
     sub_808BCF4();
     gMain.savedCallback = CB2_EndSafariBattle;
     gBattleTypeFlags = BATTLE_TYPE_SAFARI;
+    CreateBattleStartTask(GetWildBattleTransition(), 0);
+}
+
+static void DoBugCatchingContestBattle(void)
+{
+    ScriptContext2_Enable();
+    FreezeObjectEvents();
+    sub_808BCF4();
+    gMain.savedCallback = CB2_EndBugCatchingContestBattle;
+    gBattleTypeFlags = BATTLE_TYPE_BUG_CATCHING_CONTEST;
     CreateBattleStartTask(GetWildBattleTransition(), 0);
 }
 

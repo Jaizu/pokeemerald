@@ -256,7 +256,10 @@ static void HandleInputChooseAction(void)
             BtlController_EmitTwoReturnValues(1, B_ACTION_USE_MOVE, 0);
             break;
         case 1:
-            BtlController_EmitTwoReturnValues(1, B_ACTION_USE_ITEM, 0);
+            if (gBattleTypeFlags & BATTLE_TYPE_BUG_CATCHING_CONTEST)
+                BtlController_EmitTwoReturnValues(1, B_ACTION_PARK_BALL, 0);
+            else
+                BtlController_EmitTwoReturnValues(1, B_ACTION_USE_ITEM, 0);
             break;
         case 2:
             BtlController_EmitTwoReturnValues(1, B_ACTION_SWITCH, 0);
@@ -2655,7 +2658,10 @@ static void PlayerHandleChooseAction(void)
 
     gBattlerControllerFuncs[gActiveBattler] = HandleChooseActionAfterDma3;
     BattleTv_ClearExplosionFaintCause();
-    BattlePutTextOnWindow(gText_BattleMenu, 2);
+    if (gBattleTypeFlags & BATTLE_TYPE_BUG_CATCHING_CONTEST)
+        BattlePutTextOnWindow(gText_BugCatchingContestMenu, 2);
+    else
+        BattlePutTextOnWindow(gText_BattleMenu, 2);
 
     for (i = 0; i < 4; i++)
         ActionSelectionDestroyCursorAt(i);

@@ -10,5 +10,6 @@ bool8 InValoonReserve(void);
 void EnterBugCatchingContestMode(void);
 void ExitBugCatchingContestMode(void);
 void BugCatchingContestRetirePrompt(void);
+void CB2_EndBugCatchingContestBattle(void);
 
 #endif // GUARD_BUG_CATCHING_CONTEST_H

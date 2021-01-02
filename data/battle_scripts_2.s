@@ -116,11 +116,18 @@ BattleScript_WallyBallThrow::
 BattleScript_ShakeBallThrow::
 	printfromtable gBallEscapeStringIds
 	waitmessage 0x40
-	jumpifword CMP_NO_COMMON_BITS, gBattleTypeFlags, BATTLE_TYPE_SAFARI, BattleScript_ShakeBallThrowEnd
+	jumpifword CMP_NO_COMMON_BITS, gBattleTypeFlags, BATTLE_TYPE_SAFARI, BattleScript_ParkBallsCheck
 	jumpifbyte CMP_NOT_EQUAL, gNumSafariBalls, 0x0, BattleScript_ShakeBallThrowEnd
 	printstring STRINGID_OUTOFSAFARIBALLS
 	waitmessage 0x40
 	setbyte gBattleOutcome, B_OUTCOME_NO_SAFARI_BALLS
+    goto BattleScript_ShakeBallThrowEnd
+BattleScript_ParkBallsCheck:
+	jumpifword CMP_NO_COMMON_BITS, gBattleTypeFlags, BATTLE_TYPE_BUG_CATCHING_CONTEST, BattleScript_ShakeBallThrowEnd
+	jumpifbyte CMP_NOT_EQUAL, gNumParkBalls, 0x0, BattleScript_ShakeBallThrowEnd
+	printstring STRINGID_OUTOFPARKBALLS
+	waitmessage 0x40
+	setbyte gBattleOutcome, B_OUTCOME_NO_PARK_BALLS
 BattleScript_ShakeBallThrowEnd::
 	finishaction
 
