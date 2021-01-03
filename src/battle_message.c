@@ -386,6 +386,8 @@ static const u8 sText_PkmnIgnoredX[] = _("{B_OPPONENT_MON1_NAME} completely igno
 static const u8 sText_ThrewPokeblockAtPkmn[] = _("{B_PLAYER_NAME} threw a {POKEBLOCK}\nat the {B_OPPONENT_MON1_NAME}!");
 static const u8 sText_OutOfSafariBalls[] = _("{PLAY_SE SE_DING_DONG}Announcer: You're out of\nSafari Balls! Game over!\p");
 static const u8 sText_OutOfParkBalls[] = _("{PLAY_SE SE_DING_DONG}Announcer: You're out of\nPark Balls! Game over!\p");
+static const u8 sText_SwapTheBugWithCaughtBug[] = _("Swap the {B_OPPONENT_MON1_NAME} for your\n{B_BUFF1}?");
+static const u8 sText_ReleasedBugAndCaughtBug[] = _("Released {B_BUFF1} and caught\n{B_OPPONENT_MON1_NAME}!\p");
 static const u8 sText_OpponentMon1Appeared[] = _("{B_OPPONENT_MON1_NAME} appeared!\p");
 static const u8 sText_WildPkmnAppeared[] = _("Wild {B_OPPONENT_MON1_NAME} appeared!\p");
 static const u8 sText_WildPkmnAppeared2[] = _("Wild {B_OPPONENT_MON1_NAME} appeared!\p");
@@ -1235,6 +1237,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_COMATOSEENTERS - 12] = sText_ComatoseActivates,
     [STRINGID_SCREENCLEANERENTERS - 12] = sText_ScreenCleanerActivates,
     [STRINGID_OUTOFPARKBALLS - 12] = sText_OutOfParkBalls,
+    [STRINGID_SWAPTHEBUGWITHCAUGHTBUG - 12] = sText_SwapTheBugWithCaughtBug,
+    [STRINGID_RELEASEDBUGANDCAUGHTBUG - 12] = sText_ReleasedBugAndCaughtBug,
 };
 
 const u16 gTerrainStringIds[] =

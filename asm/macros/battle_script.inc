@@ -1759,7 +1759,21 @@
 	.macro destroyabilitypopup
 	various BS_ABILITY_BATTLER, VARIOUS_DESTROY_ABILITY_POPUP
 	.endm
-	
+
+	.macro tryswapcaughtbug ptr:req
+	various BS_ATTACKER, VARIOUS_TRY_SWAP_CAUGHT_BUG
+	.4byte \ptr
+	.endm
+
+	.macro jumpifnocaughtbug ptr:req
+	various BS_ATTACKER, VARIOUS_JUMP_IF_NO_CAUGHT_BUG
+	.4byte \ptr
+	.endm
+
+	.macro buffercaughtbugname
+	various BS_ABILITY_BATTLER, VARIOUS_BUFFER_CAUGHT_BUG_NAME
+	.endm
+
 @ helpful macros
 	.macro setstatchanger stat:req, stages:req, down:req
 	setbyte sSTATCHANGER \stat | \stages << 3 | \down << 7

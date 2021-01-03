@@ -555,6 +555,7 @@ static void Cmd_jumpifoppositegenders(void);
 static void Cmd_trygetbaddreamstarget(void);
 static void Cmd_tryworryseed(void);
 static void Cmd_metalburstdamagecalculator(void);
+static void TrySwapCaughtBug(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -7104,6 +7105,7 @@ static void Cmd_various(void)
     s32 i, j;
     u8 data[10];
     u32 side, bits;
+    u8 nick[POKEMON_NAME_LENGTH];
 
     if (gBattleControllerExecFlags)
         return;
@@ -8306,6 +8308,19 @@ static void Cmd_various(void)
         return;
     case VARIOUS_DESTROY_ABILITY_POPUP:
         DestroyAbilityPopUp(gActiveBattler);
+        break;
+    case VARIOUS_TRY_SWAP_CAUGHT_BUG:
+        TrySwapCaughtBug();
+        return;
+    case VARIOUS_JUMP_IF_NO_CAUGHT_BUG:
+        if (PlayerHasCaughtBug())
+            gBattlescriptCurrInstr += 7;
+        else
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
+        return;
+    case VARIOUS_BUFFER_CAUGHT_BUG_NAME:
+        GetMonData(&gSaveBlock1Ptr->caughtBug.mon, MON_DATA_NICKNAME, nick);
+        StringCopy(gBattleTextBuff1, nick);
         break;
     }
 
@@ -12172,11 +12187,69 @@ static void Cmd_handleballthrow(void)
     }
 }
 
+static void TrySwapCaughtBug(void)
+{
+    switch (gBattleCommunication[MULTIUSE_STATE])
+    {
+    case 0:
+        HandleBattleWindow(0x18, 8, 0x1D, 0xD, 0);
+        BattlePutTextOnWindow(gText_BattleYesNoChoice, 0xC);
+        gBattleCommunication[MULTIUSE_STATE]++;
+        gBattleCommunication[CURSOR_POSITION] = 0;
+        BattleCreateYesNoCursorAt(0);
+        break;
+    case 1:
+        if (JOY_NEW(DPAD_UP) && gBattleCommunication[CURSOR_POSITION] != 0)
+        {
+            PlaySE(SE_SELECT);
+            BattleDestroyYesNoCursorAt(gBattleCommunication[CURSOR_POSITION]);
+            gBattleCommunication[CURSOR_POSITION] = 0;
+            BattleCreateYesNoCursorAt(0);
+        }
+        if (JOY_NEW(DPAD_DOWN) && gBattleCommunication[CURSOR_POSITION] == 0)
+        {
+            PlaySE(SE_SELECT);
+            BattleDestroyYesNoCursorAt(gBattleCommunication[CURSOR_POSITION]);
+            gBattleCommunication[CURSOR_POSITION] = 1;
+            BattleCreateYesNoCursorAt(1);
+        }
+        if (JOY_NEW(A_BUTTON))
+        {
+            PlaySE(SE_SELECT);
+            if (gBattleCommunication[CURSOR_POSITION] == 0)
+            {
+                gBattleCommunication[MULTIUSE_STATE]++; // YES
+            }
+            else
+            {
+                gBattleCommunication[MULTIUSE_STATE] = 3; // NO
+            }
+        }
+        else if (JOY_NEW(B_BUTTON))
+        {
+            PlaySE(SE_SELECT);
+            gBattleCommunication[MULTIUSE_STATE] = 3; // NO
+        }
+        break;
+    case 2: // YES
+        SetCaughtBug(&gEnemyParty[gBattlerPartyIndexes[GetCatchingBattler()]]);
+        gBattlescriptCurrInstr += 7;
+        break;
+    case 3: // NO
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
+        break;
+    }
+}
+
+
 static void Cmd_givecaughtmon(void)
 {
     if (gBattleTypeFlags & BATTLE_TYPE_BUG_CATCHING_CONTEST)
     {
-        SetCaughtBug(&gEnemyParty[gBattlerPartyIndexes[GetCatchingBattler()]]);
+        if (!PlayerHasCaughtBug())
+        {
+            SetCaughtBug(&gEnemyParty[gBattlerPartyIndexes[GetCatchingBattler()]]);
+        }
     }
     else if (GiveMonToPlayer(&gEnemyParty[gBattlerPartyIndexes[GetCatchingBattler()]]) != MON_GIVEN_TO_PARTY)
     {

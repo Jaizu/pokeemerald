@@ -95,7 +95,7 @@ BattleScript_TryPrintCaughtMonInfo:
 	setbyte gBattleCommunication, 0x0
 	displaydexinfo
 BattleScript_TryNicknameCaughtMon::
-	jumpifword CMP_COMMON_BITS, gBattleTypeFlags, BATTLE_TYPE_BUG_CATCHING_CONTEST, BattleScript_GiveCaughtMonEnd
+	jumpifword CMP_COMMON_BITS, gBattleTypeFlags, BATTLE_TYPE_BUG_CATCHING_CONTEST, BattleScript_GiveCaughtBug
 	printstring STRINGID_GIVENICKNAMECAPTURED
 	waitstate
 	setbyte gBattleCommunication, 0x0
@@ -109,6 +109,18 @@ BattleScript_GiveCaughtMonEnd::
 BattleScript_SuccessBallThrowEnd::
 	setbyte gBattleOutcome, B_OUTCOME_CAUGHT
 	finishturn
+
+BattleScript_GiveCaughtBug::
+    jumpifnocaughtbug BattleScript_GiveCaughtMonEnd
+	buffercaughtbugname
+    givecaughtmon
+	printstring STRINGID_SWAPTHEBUGWITHCAUGHTBUG
+	waitstate
+	setbyte gBattleCommunication, 0x0
+	tryswapcaughtbug BattleScript_SuccessBallThrowEnd
+	printstring STRINGID_RELEASEDBUGANDCAUGHTBUG
+	waitstate
+    goto BattleScript_SuccessBallThrowEnd
 
 BattleScript_WallyBallThrow::
 	printstring STRINGID_GOTCHAPKMNCAUGHT2

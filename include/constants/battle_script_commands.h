@@ -167,6 +167,9 @@
 #define VARIOUS_PARALYZE_TYPE_IMMUNITY          100
 #define VARIOUS_JUMP_IF_ABSENT                  101
 #define VARIOUS_DESTROY_ABILITY_POPUP           102
+#define VARIOUS_TRY_SWAP_CAUGHT_BUG             103
+#define VARIOUS_JUMP_IF_NO_CAUGHT_BUG           104
+#define VARIOUS_BUFFER_CAUGHT_BUG_NAME          105
 
 // Cmd_manipulatedamage
 #define DMG_CHANGE_SIGN            0

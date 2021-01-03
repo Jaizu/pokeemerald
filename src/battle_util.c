@@ -582,8 +582,13 @@ void HandleAction_ParkBallThrow(void)
     gBattle_BG0_X = 0;
     gBattle_BG0_Y = 0;
     gNumParkBalls--;
-    gLastUsedItem = ITEM_PARK_BALL;
-    gBattlescriptCurrInstr = gBattlescriptsForBallThrow[ITEM_PARK_BALL];
+    #ifdef DEBUG
+        gLastUsedItem = ITEM_MASTER_BALL;
+        gBattlescriptCurrInstr = gBattlescriptsForBallThrow[ITEM_MASTER_BALL];
+    #else
+        gLastUsedItem = ITEM_PARK_BALL;
+        gBattlescriptCurrInstr = gBattlescriptsForBallThrow[ITEM_PARK_BALL];
+    #endif
     gCurrentActionFuncId = B_ACTION_EXEC_SCRIPT;
 }
 
