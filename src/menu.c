@@ -9,6 +9,7 @@
 #include "main.h"
 #include "menu.h"
 #include "menu_helpers.h"
+#include "bug_catching_contest.h"
 #include "palette.h"
 #include "pokedex.h"
 #include "pokemon_icon.h"
@@ -434,7 +435,12 @@ u8 GetPlayerTextSpeedDelay(void)
 u8 sub_81979C4(u8 a1)
 {
     if (sStartMenuWindowId == 0xFF)
-        sStartMenuWindowId = sub_8198AA4(0, 0x16, 1, 7, (a1 * 2) + 2, 0xF, 0x139);
+    {
+        if (PlayerHasCaughtBug())
+            sStartMenuWindowId = sub_8198AA4(0, 0x15, 1, 8, (a1 * 2) + 2, 0xF, 0x139);
+        else
+            sStartMenuWindowId = sub_8198AA4(0, 0x16, 1, 7, (a1 * 2) + 2, 0xF, 0x139);
+    }
     return sStartMenuWindowId;
 }
 
@@ -1855,9 +1861,9 @@ void AddTextPrinterParameterized5(u8 windowId, u8 fontId, const u8 *str, u8 left
 
 void PrintPlayerNameOnWindow(u8 windowId, const u8 *src, u16 x, u16 y)
 {
-    int count = 0;
-    while (gSaveBlock2Ptr->playerName[count] != EOS)
-        count++;
+    // int count = 0;
+    // while (gSaveBlock2Ptr->playerName[count] != EOS)
+        // count++;
 
     StringExpandPlaceholders(gStringVar4, src);
 

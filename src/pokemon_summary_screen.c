@@ -109,8 +109,8 @@ static EWRAM_DATA struct PokemonSummaryScreenData
         u32 exp; // 0x10
         u16 moves[MAX_MON_MOVES]; // 0x14
         u8 pp[MAX_MON_MOVES]; // 0x1C
-        u16 currentHP; // 0x20
-        u16 maxHP; // 0x22
+        u32 currentHP; // 0x20
+        u32 maxHP; // 0x22
         u16 atk; // 0x24
         u16 def; // 0x26
         u16 spatk; // 0x28
@@ -1042,7 +1042,7 @@ void ShowPokemonSummaryScreen(u8 mode, void *mons, u8 monIndex, u8 maxMonIndex, 
     sMonSummaryScreen->maxMonIndex = maxMonIndex;
     sMonSummaryScreen->callback = callback;
 
-    if (mode == PSS_MODE_BOX)
+    if (mode == PSS_MODE_BOX || mode == PSS_MODE_BUG_CATCHING_CONTEST)
         sMonSummaryScreen->isBoxMon = TRUE;
     else
         sMonSummaryScreen->isBoxMon = FALSE;
@@ -1055,6 +1055,7 @@ void ShowPokemonSummaryScreen(u8 mode, void *mons, u8 monIndex, u8 maxMonIndex, 
         sMonSummaryScreen->maxPageIndex = PSS_PAGE_COUNT - 1;
         break;
     case PSS_MODE_LOCK_MOVES:
+    case PSS_MODE_BUG_CATCHING_CONTEST:
         sMonSummaryScreen->minPageIndex = 0;
         sMonSummaryScreen->maxPageIndex = PSS_PAGE_COUNT - 1;
         sMonSummaryScreen->lockMovesFlag = TRUE;
@@ -1378,10 +1379,13 @@ static bool8 ExtractMonDataToSummaryStruct(struct Pokemon *mon)
         sum->ppBonuses = GetMonData(mon, MON_DATA_PP_BONUSES);
         break;
     case 2:
-        if (sMonSummaryScreen->monList.mons == gPlayerParty || sMonSummaryScreen->mode == PSS_MODE_BOX || sMonSummaryScreen->unk40EF == TRUE)
+        if (sMonSummaryScreen->monList.mons == gPlayerParty || sMonSummaryScreen->mode == PSS_MODE_BOX || sMonSummaryScreen->mode == PSS_MODE_BUG_CATCHING_CONTEST || sMonSummaryScreen->unk40EF == TRUE)
         {
             sum->nature = GetNature(mon);
-            sum->currentHP = GetMonData(mon, MON_DATA_HP);
+            if (sMonSummaryScreen->mode == PSS_MODE_BUG_CATCHING_CONTEST)
+                sum->currentHP = gSaveBlock1Ptr->caughtBug.hp;
+            else
+                sum->currentHP = GetMonData(mon, MON_DATA_HP);
             sum->maxHP = GetMonData(mon, MON_DATA_MAX_HP);
             sum->atk = GetMonData(mon, MON_DATA_ATK);
             sum->def = GetMonData(mon, MON_DATA_DEF);
@@ -2319,8 +2323,8 @@ static void CreateHealthBarSprites(u16 tileTag, u16 palTag)
     gfxBufferPtr = AllocZeroed(0x20 * 12);
     LZ77UnCompWram(gSummaryHealthBar_Tiles, gfxBufferPtr);
     
-    curHp = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_HP);
-    maxHp = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_MAX_HP);
+    curHp = sMonSummaryScreen->summary.currentHP;
+    maxHp = sMonSummaryScreen->summary.maxHP;
     
     if (maxHp / 4 > curHp)
         hpBarPalTagOffset = 2;
@@ -2389,9 +2393,9 @@ static void ConfigureHealthBarSprites(void)
     
     if (summary->isEgg)
         return;
-    
-    curHp = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_HP);
-    maxHp = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_MAX_HP);
+        
+    curHp = sMonSummaryScreen->summary.currentHP;
+    maxHp = sMonSummaryScreen->summary.maxHP;
     
     if (maxHp / 5 >= curHp)
         hpBarPalOffset = 2;

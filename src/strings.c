@@ -1479,6 +1479,7 @@ const u8 gText_MenuOption[] = _("Options");
 const u8 gText_MenuExit[] = _("Exit");
 const u8 gText_MenuRetire[] = _("Retire");
 const u8 gText_MenuRest[] = _("Rest");
+const u8 gText_MenuViewCaughtBug[] = _("View Bug");
 const u8 gText_SafariBallStock[] = _("Safari Balls\nStock: {STR_VAR_1}");
 const u8 gText_ParkBallStock[] = _("Park Balls\nStock: {STR_VAR_1}");
 const u8 gText_BattlePyramidFloor[] = _("Battle Pyramid\n{STR_VAR_1}");

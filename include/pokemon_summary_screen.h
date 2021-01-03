@@ -23,6 +23,7 @@ enum PokemonSummaryScreenMode
     PSS_MODE_LOCK_MOVES,
     PSS_MODE_BOX,
     PSS_MODE_SELECT_MOVE,
+    PSS_MODE_BUG_CATCHING_CONTEST,
 };
 
 enum PokemonSummaryScreenPage

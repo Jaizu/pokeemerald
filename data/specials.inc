@@ -542,3 +542,4 @@ gSpecials::
 	def_special EnterBugCatchingContestMode
 	def_special ExitBugCatchingContestMode
 	def_special PlayerHasCaughtBug
+	def_special ViewCaughtBug

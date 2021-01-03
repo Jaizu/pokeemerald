@@ -83,6 +83,7 @@ BattleScript_SuccessBallThrow::
 	incrementgamestat GAME_STAT_POKEMON_CAPTURES
 BattleScript_PrintCaughtMonInfo::
 	printstring STRINGID_GOTCHAPKMNCAUGHT
+	jumpifword CMP_COMMON_BITS, gBattleTypeFlags, BATTLE_TYPE_BUG_CATCHING_CONTEST, BattleScript_TryPrintCaughtMonInfo
 	jumpifbyte CMP_NOT_EQUAL, sEXP_CATCH, TRUE, BattleScript_TryPrintCaughtMonInfo
 	setbyte sGIVEEXP_STATE, 0x0
 	getexp BS_TARGET
@@ -94,6 +95,7 @@ BattleScript_TryPrintCaughtMonInfo:
 	setbyte gBattleCommunication, 0x0
 	displaydexinfo
 BattleScript_TryNicknameCaughtMon::
+	jumpifword CMP_COMMON_BITS, gBattleTypeFlags, BATTLE_TYPE_BUG_CATCHING_CONTEST, BattleScript_GiveCaughtMonEnd
 	printstring STRINGID_GIVENICKNAMECAPTURED
 	waitstate
 	setbyte gBattleCommunication, 0x0

@@ -8,6 +8,9 @@
 #include "random.h"
 #include "task.h"
 #include "party_menu.h"
+#include "pokemon.h"
+#include "pokemon_storage_system.h"
+#include "pokemon_summary_screen.h"
 #include "malloc.h"
 #include "palette.h"
 #include "script.h"
@@ -21,6 +24,8 @@ extern const u8 ValoonReserve_EventScript_OutOfBallsMidBattle[];
 extern const u8 ValoonReserve_EventScript_OutOfBallsBeginJudging[];
 
 EWRAM_DATA u8 gNumParkBalls = 0;
+
+void ResetCaughtBug(void);
 
 bool32 GetBugCatchingContestFlag(void)
 {
@@ -51,6 +56,7 @@ void EnterBugCatchingContestMode(void)
 {
     SetBugCatchingContestFlag();
     ResetValoonReserveState();
+    ResetCaughtBug();
     SetLastHealLocationWarp(HEAL_LOCATION_VALOON_TOWN_RANGERS_HQ);
     gNumParkBalls = 20;
 }
@@ -59,14 +65,16 @@ void ExitBugCatchingContestMode(void)
 {
     ResetBugCatchingContestFlag();
     ResetValoonReserveState();
+    ResetCaughtBug();
     SetLastHealLocationWarp(HEAL_LOCATION_VALOON_TOWN);
     gNumParkBalls = 0;
 }
 
 bool8 PlayerHasCaughtBug(void)
 {
-    // TODO: Implement properly
-    return CalculatePlayerPartyCount() > 1;
+    // You cannot catch a Pokémon at 0HP, so we just set the HP to 0 if
+    // nothing has been caught yet
+    return gSaveBlock1Ptr->caughtBug.hp != 0;
 }
 
 void BugCatchingContestRetirePrompt(void)
@@ -90,4 +98,25 @@ void CB2_EndBugCatchingContestBattle(void)
     {
         SetMainCallback2(CB2_ReturnToField);
     }
+}
+
+void ResetCaughtBug(void)
+{
+    ZeroBoxMonData(&gSaveBlock1Ptr->caughtBug.mon);
+    gSaveBlock1Ptr->caughtBug.hp = 0;
+}
+
+void SetCaughtBug(struct Pokemon *mon)
+{
+    SetMonData(mon, MON_DATA_OT_NAME, gSaveBlock2Ptr->playerName);
+    SetMonData(mon, MON_DATA_OT_GENDER, &gSaveBlock2Ptr->playerGender);
+    SetMonData(mon, MON_DATA_OT_ID, gSaveBlock2Ptr->playerTrainerId);
+
+    gSaveBlock1Ptr->caughtBug.mon = mon->box;
+    gSaveBlock1Ptr->caughtBug.hp = GetMonData(mon, MON_DATA_HP);
+}
+
+void ViewCaughtBug(void)
+{
+    ShowPokemonSummaryScreen(PSS_MODE_BUG_CATCHING_CONTEST, &gSaveBlock1Ptr->caughtBug.mon, 0, 0, CB2_ReturnToField);
 }

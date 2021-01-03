@@ -12174,7 +12174,11 @@ static void Cmd_handleballthrow(void)
 
 static void Cmd_givecaughtmon(void)
 {
-    if (GiveMonToPlayer(&gEnemyParty[gBattlerPartyIndexes[GetCatchingBattler()]]) != MON_GIVEN_TO_PARTY)
+    if (gBattleTypeFlags & BATTLE_TYPE_BUG_CATCHING_CONTEST)
+    {
+        SetCaughtBug(&gEnemyParty[gBattlerPartyIndexes[GetCatchingBattler()]]);
+    }
+    else if (GiveMonToPlayer(&gEnemyParty[gBattlerPartyIndexes[GetCatchingBattler()]]) != MON_GIVEN_TO_PARTY)
     {
         if (!ShouldShowBoxWasFullMessage())
         {

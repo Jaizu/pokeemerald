@@ -63,7 +63,8 @@ enum
     MENU_ACTION_REST_FRONTIER,
     MENU_ACTION_RETIRE_FRONTIER,
     MENU_ACTION_PYRAMID_BAG,
-    MENU_ACTION_RETIRE_BUG_CATCHING_CONTEST
+    MENU_ACTION_RETIRE_BUG_CATCHING_CONTEST,
+    MENU_ACTION_VIEW_CAUGHT_BUG_BUG_CATCHING_CONTEST
 };
 
 // Save status
@@ -105,6 +106,7 @@ static bool8 StartMenuLinkModePlayerNameCallback(void);
 static bool8 StartMenuBattlePyramidRetireCallback(void);
 static bool8 StartMenuBattlePyramidBagCallback(void);
 static bool8 StartMenuBugCatchingContestRetireCallback(void);
+static bool8 StartMenuBugCatchingContestViewCaughtBugCallback(void);
 
 // Menu callbacks
 static bool8 SaveStartCallback(void);
@@ -171,7 +173,8 @@ static const struct MenuAction sStartMenuItems[] =
     [MENU_ACTION_REST_FRONTIER] = {gText_MenuRest, {.u8_void = StartMenuSaveCallback}},
     [MENU_ACTION_RETIRE_FRONTIER] = {gText_MenuRetire, {.u8_void = StartMenuBattlePyramidRetireCallback}},
     [MENU_ACTION_PYRAMID_BAG] = {gText_MenuBag, {.u8_void = StartMenuBattlePyramidBagCallback}},
-    [MENU_ACTION_RETIRE_BUG_CATCHING_CONTEST] = {gText_MenuRetire, {.u8_void = StartMenuBugCatchingContestRetireCallback}}
+    [MENU_ACTION_RETIRE_BUG_CATCHING_CONTEST] = {gText_MenuRetire, {.u8_void = StartMenuBugCatchingContestRetireCallback}},
+    [MENU_ACTION_VIEW_CAUGHT_BUG_BUG_CATCHING_CONTEST] = {gText_MenuViewCaughtBug, {.u8_void = StartMenuBugCatchingContestViewCaughtBugCallback}}
 };
 
 static const struct BgTemplate sUnknown_085105A8[] =
@@ -377,6 +380,8 @@ static void BuildBugCatchingContestStartMenu(void)
     AddStartMenuAction(MENU_ACTION_RETIRE_BUG_CATCHING_CONTEST);
     AddStartMenuAction(MENU_ACTION_POKEDEX);
     AddStartMenuAction(MENU_ACTION_POKEMON);
+    if (PlayerHasCaughtBug())
+        AddStartMenuAction(MENU_ACTION_VIEW_CAUGHT_BUG_BUG_CATCHING_CONTEST);
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
@@ -431,15 +436,33 @@ static void RemoveExtraStartMenuWindows(void)
     }
 }
 
+void PrintCaughtBugNameOnWindow(u8 windowId, const u8 *src, u16 x, u16 y)
+{
+    // int count = 0;
+    // while (gSaveBlock2Ptr->playerName[count] != EOS)
+        // count++;
+
+    StringExpandPlaceholders(gStringVar4, src);
+
+    AddTextPrinterParameterized(windowId, 2, gStringVar4, x, y, 0xFF, 0);
+}
+
+
 static bool32 PrintStartMenuActions(s8 *pIndex, u32 count)
 {
     s8 index = *pIndex;
-
+    u8 nick[POKEMON_NAME_LENGTH];
+    
     do
     {
         if (sStartMenuItems[sCurrentStartMenuActions[index]].func.u8_void == StartMenuPlayerNameCallback)
         {
             PrintPlayerNameOnWindow(GetStartMenuWindowId(), sStartMenuItems[sCurrentStartMenuActions[index]].text, 8, (index << 4) + 9);
+        }
+        else if(sStartMenuItems[sCurrentStartMenuActions[index]].func.u8_void == StartMenuBugCatchingContestViewCaughtBugCallback)
+        {
+            GetMonData(&gSaveBlock1Ptr->caughtBug.mon, MON_DATA_NICKNAME, nick);
+            PrintCaughtBugNameOnWindow(GetStartMenuWindowId(), nick, 8, (index << 4) + 9);
         }
         else
         {
@@ -775,6 +798,18 @@ static bool8 StartMenuBugCatchingContestRetireCallback(void)
     BugCatchingContestRetirePrompt();
 
     return TRUE;
+}
+
+static bool8 StartMenuBugCatchingContestViewCaughtBugCallback(void)
+{
+    if (!gPaletteFade.active)
+    {
+        ViewCaughtBug();
+
+        return TRUE;
+    }
+
+    return FALSE;
 }
 
 // Functionally unused
