@@ -67,9 +67,9 @@ void EnterBugCatchingContestMode(void)
 {
     SavePlayerParty();
     ReducePlayerPartyToSelectedMon();
+    ResetCaughtBug();
     SetBugCatchingContestFlag();
     ResetValoonReserveState();
-    ResetCaughtBug();
     SetLastHealLocationWarp(HEAL_LOCATION_VALOON_TOWN_RANGERS_HQ);
     gNumParkBalls = 20;
 }
@@ -79,7 +79,6 @@ void ExitBugCatchingContestMode(void)
     LoadPlayerParty();
     ResetBugCatchingContestFlag();
     ResetValoonReserveState();
-    SetLastHealLocationWarp(HEAL_LOCATION_VALOON_TOWN);
     gNumParkBalls = 0;
 }
 

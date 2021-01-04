@@ -13,6 +13,7 @@ ValoonTown_RangersHQ_EventScript_ReturnFromContest:
 	lockall
 	msgbox ValoonTown_RangersHQ_Text_PleaseComeAgain, MSGBOX_DEFAULT
 	closemessage
+	setrespawn HEAL_LOCATION_VALOON_TOWN
 	setvar VAR_RANGERS_HQ_STATE, 0
 	releaseall
 	end

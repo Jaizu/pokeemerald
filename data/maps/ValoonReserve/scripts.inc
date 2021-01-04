@@ -64,6 +64,7 @@ ValoonReserve_EventScript_BugCatchingContestWhiteOut::
 	message ValoonReserve_Text_PlayerIsOutOfUsablePokemon
 	waitmessage
 	waitbuttonpress
+	special ExitBugCatchingContestMode
 	setvar VAR_RANGERS_HQ_STATE, 1
 	special Script_FadeOutMapMusic
 	waitstate
