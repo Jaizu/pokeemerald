@@ -544,3 +544,4 @@ gSpecials::
 	def_special ViewCaughtBug
 	def_special BufferCaughtBugSpecies
 	def_special GiveAndResetCaughtBug
+	def_special IsSelectedMonHealthy

@@ -146,10 +146,10 @@ u8 GiveAndResetCaughtBug(void)
 {
     u8 sentToPc;
     struct Pokemon mon;
-
+    
     BoxMonToMon(&gSaveBlock1Ptr->caughtBug.mon, &mon);
     sentToPc = GiveMonToPlayer(&mon);
-
+    
     ResetCaughtBug();
     
     return sentToPc;

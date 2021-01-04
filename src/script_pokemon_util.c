@@ -244,3 +244,8 @@ void ReducePlayerPartyToSelectedMons(void)
 
     CalculatePlayerPartyCount();
 }
+
+bool8 IsSelectedMonHealthy(void)
+{
+    return (GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_HP) > 0);
+}

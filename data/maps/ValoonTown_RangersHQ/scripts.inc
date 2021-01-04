@@ -65,6 +65,9 @@ ValoonTown_RangersHQ_EventScript_PleaseSelectAPokemon:
 	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
 	compare VAR_RESULT, SPECIES_EGG
 	goto_if_eq ValoonTown_RangersHQ_EventScript_CantCompeteWithAnEgg
+	specialvar VAR_RESULT, IsSelectedMonHealthy
+	compare VAR_RESULT, FALSE
+	goto_if_eq ValoonTown_RangersHQ_EventScript_CantCompeteWithAFaintedPokemon
 	bufferpartymonnick 0, VAR_0x8004
 	msgbox ValoonTown_RangersHQ_Text_MonWillJoinYou, MSGBOX_YESNO
 	compare VAR_RESULT, YES
@@ -76,6 +79,11 @@ ValoonTown_RangersHQ_EventScript_PleaseSelectAPokemon:
 
 ValoonTown_RangersHQ_EventScript_CantCompeteWithAnEgg:
 	msgbox ValoonTown_RangersHQ_Text_CantCompeteWithAnEgg, MSGBOX_DEFAULT
+	goto ValoonTown_RangersHQ_EventScript_PleaseSelectAPokemon
+	end
+
+ValoonTown_RangersHQ_EventScript_CantCompeteWithAFaintedPokemon:
+	msgbox ValoonTown_RangersHQ_Text_CantCompeteWithAFaintedPokemon, MSGBOX_DEFAULT
 	goto ValoonTown_RangersHQ_EventScript_PleaseSelectAPokemon
 	end
 
@@ -126,6 +134,10 @@ ValoonTown_RangersHQ_Text_PleaseSelectAPokemon:
 
 ValoonTown_RangersHQ_Text_CantCompeteWithAnEgg:
 	.string "You cannot compete with an Egg!$"
+
+ValoonTown_RangersHQ_Text_CantCompeteWithAFaintedPokemon:
+	.string "You cannot compete with a\n"
+	.string "Pokémon that has fainted!$"
 
 ValoonTown_RangersHQ_Text_MonWillJoinYou:
 	.string "{STR_VAR_1} will join you.\p"

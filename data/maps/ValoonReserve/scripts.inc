@@ -135,6 +135,8 @@ ValoonReserve_Text_WeWillNowJudgeThePokemon:
 	.string "Are you ready for this?$"
 
 ValoonReserve_Text_ThankYouAllForCompeting:
+	.string "We'll return the Pokémon we kept\n"
+	.string "for you. Here you go!\p"
 	.string "Thank you all for competing!\n"
 	.string "We hope to see you again.$"
 
