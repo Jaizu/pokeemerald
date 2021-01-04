@@ -3,6 +3,10 @@
 
 #define BUG_CATCHING_CONTEST_TRAINER_NAME_LENGTH 8
 
+// CONTESTANTS_COUNT is the number of contestants in a given, ongoing Contest
+// Not to be confused with the total number of possible contestants, NUM_BUG_CATCHING_CONTEST_TRAINERS
+#define CONTESTANTS_COUNT 4
+
 struct BugCatchingContestTrainer {
     u16 trainerClass;
     u16 sprite;

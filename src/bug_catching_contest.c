@@ -30,8 +30,12 @@ extern const u8 ValoonReserve_EventScript_OutOfBallsMidBattle[];
 extern const u8 ValoonReserve_EventScript_OutOfBallsBeginJudging[];
 
 EWRAM_DATA u8 gNumParkBalls = 0;
+EWRAM_DATA static u8 sBugCatchingContestants[CONTESTANTS_COUNT] = {0, 0, 0, 0};
+EWRAM_DATA static u8 sBugCatchingFinalists[3] = {0, 0, 0};
 
 void ResetCaughtBug(void);
+void ResetContestants(void);
+void SelectContestants(void);
 
 bool32 GetBugCatchingContestFlag(void)
 {
@@ -78,6 +82,7 @@ void EnterBugCatchingContestMode(void)
     SetBugCatchingContestFlag();
     ResetValoonReserveState();
     SetLastHealLocationWarp(HEAL_LOCATION_VALOON_TOWN_RANGERS_HQ);
+    SelectContestants();
     gNumParkBalls = 20;
 }
 
@@ -161,19 +166,58 @@ u8 GiveAndResetCaughtBug(void)
     return sentToPc;
 }
 
+void ResetContestants(void)
+{
+    u8 i;
+    for (i = 0; i < CONTESTANTS_COUNT; i++)
+    {
+        sBugCatchingContestants[i] = 0;
+    }
+}
+
+void SelectContestants(void)
+{
+    u8 i, j, contestantId;
+    
+    ResetContestants();
+    
+    for (j = 0; j < CONTESTANTS_COUNT; j++)
+    {
+        if (j == 0 && !FlagGet(FLAG_UNLOCK_VALOON_GYM_DOOR))
+            sBugCatchingContestants[j] = BUG_CATCHING_CONTEST_TRAINER_VERNON;
+        else
+        {
+            do
+            {
+                contestantId = Random() % NUM_BUG_CATCHING_CONTEST_TRAINERS;
+                for (i = 0; i < j; i++)
+                {
+                    if (sBugCatchingContestants[i] == contestantId)
+                        break;
+                }
+            } while (i != j);
+            sBugCatchingContestants[i] = contestantId;
+        }
+    }
+}
+
+#define FIRST_PLACE  2
+#define SECOND_PLACE 1
+#define THIRD_PLACE  0
+
 void SelectBugCatchingContestWinners(void)
 {
     // Decide the scores for 3rd, 2nd and 1st place
+    sBugCatchingFinalists[FIRST_PLACE]  = sBugCatchingContestants[2];
+    sBugCatchingFinalists[SECOND_PLACE] = sBugCatchingContestants[1];
+    sBugCatchingFinalists[THIRD_PLACE]  = sBugCatchingContestants[0];
     // Determine whether the player is a finalist
     // Select and store the contestants and their Pokémon
 }
 
 u16 GetContestantIdInPosition(u16 pos)
 {
-    // If pos = 0, return the contestant in 3rd place
-    // If pos = 1, return the contestant in 2nd place
-    // Otherwise,  return the contestant in 1st place
-    return pos;
+    return sBugCatchingFinalists[pos];
 }
 
 u8 GetPokemonIdForContestantInPosition(u16 pos)
@@ -206,4 +250,9 @@ void BufferBugCatchingContestScore(void)
     u8 numDigits = CountDigits(num);
 
     ConvertIntToDecimalStringN(gStringVar1, num, STR_CONV_MODE_LEFT_ALIGN, numDigits);
+}
+
+bool8 IsVernonCompeting(void)
+{
+    return (sBugCatchingContestants[0] == BUG_CATCHING_CONTEST_TRAINER_VERNON);
 }

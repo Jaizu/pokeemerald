@@ -10,9 +10,10 @@ enum
     BUG_CATCHING_CONTEST_TRAINER_MICKEY,
     BUG_CATCHING_CONTEST_TRAINER_SIMON,
     BUG_CATCHING_CONTEST_TRAINER_SESSEL,
-    BUG_CATCHING_CONTEST_TRAINER_VERNON,
-    BUG_CATCHING_CONTEST_TRAINERS_COUNT
+    BUG_CATCHING_CONTEST_TRAINER_VERNON
 };
+
+#define NUM_BUG_CATCHING_CONTEST_TRAINERS BUG_CATCHING_CONTEST_TRAINER_VERNON
 
 static const struct BugCatchingContestTrainer contestants[] =
 {
@@ -128,7 +129,7 @@ static const struct BugCatchingContestTrainer contestants[] =
     },
     [BUG_CATCHING_CONTEST_TRAINER_VERNON] =
     {
-        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .trainerClass = TRAINER_CLASS_LEADER,
         .sprite = OBJ_EVENT_GFX_VERNON,
         .name = _("Vernon"),
         .pokemon = {

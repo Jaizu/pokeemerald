@@ -81,6 +81,9 @@ ValoonReserve_Text_PlayerIsOutOfUsablePokemon:
 	.string "Better luck next time!$"
 
 ValoonReserve_EventScript_BugCatchingContestJudgingRound::
+	specialvar VAR_RESULT, IsVernonCompeting
+	compare VAR_RESULT, TRUE
+	call_if_eq ValoonReserve_EventScript_UnlockValoonGym
 	special ExitBugCatchingContestMode
 	textcolor 0 // Blue
 	fadescreen FADE_TO_BLACK
@@ -177,6 +180,11 @@ ValoonReserve_Text_ThankYouAllForCompeting:
 ValoonReserve_Text_NicknameThisPokemon:
 	.string "Would you like to give a nickname\n"
 	.string "to the {STR_VAR_1} you caught?$"
+
+ValoonReserve_EventScript_UnlockValoonGym:
+	setflag FLAG_UNLOCK_VALOON_GYM_DOOR
+	setflag FLAG_HIDE_VALOON_TOWN_RANGERS_HQ_VERNON
+	return
 
 ValoonReserve_EventScript_RetirePrompt::
 	lockall

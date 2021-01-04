@@ -548,3 +548,4 @@ gSpecials::
 	def_special SelectBugCatchingContestWinners
 	def_special BufferBugCatchingContestStrings
 	def_special BufferBugCatchingContestScore
+	def_special IsVernonCompeting
