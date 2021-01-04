@@ -693,6 +693,7 @@ SECTIONS {
         src/m4a_tables.o(.rodata);
         data/sound_data.o(.rodata);
         src/debug.o(.rodata);
+        src/bug_catching_contest.o(.rodata);
     } =0
 
     song_data :

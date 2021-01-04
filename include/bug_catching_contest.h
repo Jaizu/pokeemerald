@@ -1,6 +1,18 @@
 #ifndef GUARD_BUG_CATCHING_CONTEST_H
 #define GUARD_BUG_CATCHING_CONTEST_H
 
+#define BUG_CATCHING_CONTEST_TRAINER_NAME_LENGTH 8
+
+struct BugCatchingContestTrainer {
+    u16 trainerClass;
+    u16 sprite;
+    const u8 name[BUG_CATCHING_CONTEST_TRAINER_NAME_LENGTH + 1];
+    struct {
+        u16 species;
+        u16 score;
+    } pokemon[3];
+};
+
 extern u8 gNumParkBalls;
 
 bool32 GetBugCatchingContestFlag(void);

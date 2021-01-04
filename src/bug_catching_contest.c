@@ -2,6 +2,7 @@
 #include "battle.h"
 #include "battle_setup.h"
 #include "bug_catching_contest.h"
+#include "data.h"
 #include "event_data.h"
 #include "fieldmap.h"
 #include "field_screen_effect.h"
@@ -12,11 +13,17 @@
 #include "pokemon.h"
 #include "pokemon_storage_system.h"
 #include "pokemon_summary_screen.h"
+#include "random.h"
 #include "script.h"
 #include "string_util.h"
+#include "strings.h"
 #include "task.h"
+#include "tv.h"
+#include "constants/event_objects.h"
 #include "constants/heal_locations.h"
 #include "constants/layouts.h"
+#include "constants/trainers.h"
+#include "data/bug_catching_contest.h"
 
 extern const u8 ValoonReserve_EventScript_RetirePrompt[];
 extern const u8 ValoonReserve_EventScript_OutOfBallsMidBattle[];
@@ -152,4 +159,51 @@ u8 GiveAndResetCaughtBug(void)
     ResetCaughtBug();
     
     return sentToPc;
+}
+
+void SelectBugCatchingContestWinners(void)
+{
+    // Decide the scores for 3rd, 2nd and 1st place
+    // Determine whether the player is a finalist
+    // Select and store the contestants and their Pokémon
+}
+
+u16 GetContestantIdInPosition(u16 pos)
+{
+    // If pos = 0, return the contestant in 3rd place
+    // If pos = 1, return the contestant in 2nd place
+    // Otherwise,  return the contestant in 1st place
+    return pos;
+}
+
+u8 GetPokemonIdForContestantInPosition(u16 pos)
+{
+    // If pos = 0, return the Pokémon ID for the contestant in 3rd place
+    // If pos = 1, return the Pokémon ID for the contestant in 2nd place
+    // Otherwise,  return the Pokémon ID for the contestant in 1st place
+    return 0;
+}
+
+void BufferBugCatchingContestStrings(void)
+{
+    u16 id = GetContestantIdInPosition(gSpecialVar_Result);
+    u8 pkmnID = GetPokemonIdForContestantInPosition(gSpecialVar_Result);
+    
+    // Buffer the contestant's Trainer Class
+    StringCopy(gStringVar1, gTrainerClassNames[contestants[id].trainerClass]);
+    // Buffer the contestant's name
+    StringCopy(gStringVar2, contestants[id].name);
+    // Buffer the species of the contestant's entry
+    StringCopy(gStringVar3, gSpeciesNames[contestants[id].pokemon[pkmnID].species]);
+}
+
+void BufferBugCatchingContestScore(void)
+{
+    u16 id = GetContestantIdInPosition(gSpecialVar_Result);
+    u8 pkmnID = GetPokemonIdForContestantInPosition(gSpecialVar_Result);
+    
+    u16 num = contestants[id].pokemon[pkmnID].score;
+    u8 numDigits = CountDigits(num);
+
+    ConvertIntToDecimalStringN(gStringVar1, num, STR_CONV_MODE_LEFT_ALIGN, numDigits);
 }

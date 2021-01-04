@@ -92,7 +92,22 @@ ValoonReserve_EventScript_BugCatchingContestJudgingRound::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	fadescreen FADE_FROM_BLACK
 	msgbox ValoonReserve_Text_WeWillNowJudgeThePokemon, MSGBOX_DEFAULT
-	// TODO: Implement
+	special SelectBugCatchingContestWinners
+	setvar VAR_RESULT, 0
+	special BufferBugCatchingContestStrings
+	msgbox ValoonReserve_Text_PlacingThirdIs, MSGBOX_DEFAULT
+	special BufferBugCatchingContestScore
+	msgbox ValoonReserve_Text_TheScoreWas, MSGBOX_DEFAULT
+	setvar VAR_RESULT, 1
+	special BufferBugCatchingContestStrings
+	msgbox ValoonReserve_Text_PlacingSecondIs, MSGBOX_DEFAULT
+	special BufferBugCatchingContestScore
+	msgbox ValoonReserve_Text_TheScoreWas, MSGBOX_DEFAULT
+	setvar VAR_RESULT, 2
+	special BufferBugCatchingContestStrings
+	msgbox ValoonReserve_Text_ThisBugCatchingContestWinnerIs, MSGBOX_DEFAULT
+	special BufferBugCatchingContestScore
+	msgbox ValoonReserve_Text_TheScoreWas, MSGBOX_DEFAULT
 	msgbox ValoonReserve_Text_ThankYouAllForCompeting, MSGBOX_DEFAULT
 	textcolor 2 // Dark Grey
 	special BufferCaughtBugSpecies
@@ -134,6 +149,24 @@ ValoonReserve_Text_WeWillNowJudgeThePokemon:
 	.string "… …\p"
 	.string "We have chosen the winners!\n"
 	.string "Are you ready for this?$"
+
+ValoonReserve_Text_PlacingThirdIs:
+	.string "Placing third is {STR_VAR_1}\n"
+	.string "{STR_VAR_2}, who caught a writhing\l"
+	.string "{STR_VAR_3}!$"
+
+ValoonReserve_Text_PlacingSecondIs:
+	.string "Placing second is {STR_VAR_1}\n"
+	.string "{STR_VAR_2}, who caught a wriggling\l"
+	.string "{STR_VAR_3}!$"
+
+ValoonReserve_Text_ThisBugCatchingContestWinnerIs:
+	.string "This Bug-Catching Contest winner is…\p"
+	.string "{STR_VAR_1} {STR_VAR_2}, who\n"
+	.string "caught a whopping {STR_VAR_3}!$"
+
+ValoonReserve_Text_TheScoreWas:
+	.string "The score was {STR_VAR_1} points!$"
 
 ValoonReserve_Text_ThankYouAllForCompeting:
 	.string "We'll return the Pokémon we kept\n"

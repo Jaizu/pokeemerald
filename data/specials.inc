@@ -545,3 +545,6 @@ gSpecials::
 	def_special BufferCaughtBugSpecies
 	def_special GiveAndResetCaughtBug
 	def_special IsSelectedMonHealthy
+	def_special SelectBugCatchingContestWinners
+	def_special BufferBugCatchingContestStrings
+	def_special BufferBugCatchingContestScore
