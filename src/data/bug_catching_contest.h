@@ -15,7 +15,7 @@ enum
 
 #define NUM_BUG_CATCHING_CONTEST_TRAINERS BUG_CATCHING_CONTEST_TRAINER_VERNON
 
-static const struct BugCatchingContestTrainer contestants[] =
+static const struct BugCatchingContestTrainer sBugCatchingContestTrainers[] =
 {
     [BUG_CATCHING_CONTEST_TRAINER_BEASLY] =
     {

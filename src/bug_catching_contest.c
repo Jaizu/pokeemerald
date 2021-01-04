@@ -30,12 +30,13 @@ extern const u8 ValoonReserve_EventScript_OutOfBallsMidBattle[];
 extern const u8 ValoonReserve_EventScript_OutOfBallsBeginJudging[];
 
 EWRAM_DATA u8 gNumParkBalls = 0;
-EWRAM_DATA static u8 sBugCatchingContestants[CONTESTANTS_COUNT] = {0, 0, 0, 0};
+EWRAM_DATA static u8 sContestants[CONTESTANTS_COUNT] = {0, 0, 0, 0};
 EWRAM_DATA static u8 sBugCatchingFinalists[3] = {0, 0, 0};
 
 void ResetCaughtBug(void);
 void ResetContestants(void);
 void SelectContestants(void);
+void SetContestantObjectEventSprites(void);
 
 bool32 GetBugCatchingContestFlag(void)
 {
@@ -83,6 +84,7 @@ void EnterBugCatchingContestMode(void)
     ResetValoonReserveState();
     SetLastHealLocationWarp(HEAL_LOCATION_VALOON_TOWN_RANGERS_HQ);
     SelectContestants();
+    SetContestantObjectEventSprites();
     gNumParkBalls = 20;
 }
 
@@ -171,7 +173,7 @@ void ResetContestants(void)
     u8 i;
     for (i = 0; i < CONTESTANTS_COUNT; i++)
     {
-        sBugCatchingContestants[i] = 0;
+        sContestants[i] = 0;
     }
 }
 
@@ -184,7 +186,7 @@ void SelectContestants(void)
     for (j = 0; j < CONTESTANTS_COUNT; j++)
     {
         if (j == 0 && !FlagGet(FLAG_UNLOCK_VALOON_GYM_DOOR))
-            sBugCatchingContestants[j] = BUG_CATCHING_CONTEST_TRAINER_VERNON;
+            sContestants[j] = BUG_CATCHING_CONTEST_TRAINER_VERNON;
         else
         {
             do
@@ -192,13 +194,20 @@ void SelectContestants(void)
                 contestantId = Random() % NUM_BUG_CATCHING_CONTEST_TRAINERS;
                 for (i = 0; i < j; i++)
                 {
-                    if (sBugCatchingContestants[i] == contestantId)
+                    if (sContestants[i] == contestantId)
                         break;
                 }
             } while (i != j);
-            sBugCatchingContestants[i] = contestantId;
+            sContestants[i] = contestantId;
         }
     }
+}
+
+void SetContestantObjectEventSprites(void)
+{
+    u8 i;
+    for (i = 0; i < CONTESTANTS_COUNT; i++)
+        VarSet(VAR_OBJ_GFX_ID_0 + i, sBugCatchingContestTrainers[sContestants[i]].sprite);
 }
 
 #define FIRST_PLACE  2
@@ -208,9 +217,9 @@ void SelectContestants(void)
 void SelectBugCatchingContestWinners(void)
 {
     // Decide the scores for 3rd, 2nd and 1st place
-    sBugCatchingFinalists[FIRST_PLACE]  = sBugCatchingContestants[2];
-    sBugCatchingFinalists[SECOND_PLACE] = sBugCatchingContestants[1];
-    sBugCatchingFinalists[THIRD_PLACE]  = sBugCatchingContestants[0];
+    sBugCatchingFinalists[FIRST_PLACE]  = sContestants[2];
+    sBugCatchingFinalists[SECOND_PLACE] = sContestants[1];
+    sBugCatchingFinalists[THIRD_PLACE]  = sContestants[0];
     // Determine whether the player is a finalist
     // Select and store the contestants and their Pokémon
 }
@@ -234,11 +243,11 @@ void BufferBugCatchingContestStrings(void)
     u8 pkmnID = GetPokemonIdForContestantInPosition(gSpecialVar_Result);
     
     // Buffer the contestant's Trainer Class
-    StringCopy(gStringVar1, gTrainerClassNames[contestants[id].trainerClass]);
+    StringCopy(gStringVar1, gTrainerClassNames[sBugCatchingContestTrainers[id].trainerClass]);
     // Buffer the contestant's name
-    StringCopy(gStringVar2, contestants[id].name);
+    StringCopy(gStringVar2, sBugCatchingContestTrainers[id].name);
     // Buffer the species of the contestant's entry
-    StringCopy(gStringVar3, gSpeciesNames[contestants[id].pokemon[pkmnID].species]);
+    StringCopy(gStringVar3, gSpeciesNames[sBugCatchingContestTrainers[id].pokemon[pkmnID].species]);
 }
 
 void BufferBugCatchingContestScore(void)
@@ -246,7 +255,7 @@ void BufferBugCatchingContestScore(void)
     u16 id = GetContestantIdInPosition(gSpecialVar_Result);
     u8 pkmnID = GetPokemonIdForContestantInPosition(gSpecialVar_Result);
     
-    u16 num = contestants[id].pokemon[pkmnID].score;
+    u16 num = sBugCatchingContestTrainers[id].pokemon[pkmnID].score;
     u8 numDigits = CountDigits(num);
 
     ConvertIntToDecimalStringN(gStringVar1, num, STR_CONV_MODE_LEFT_ALIGN, numDigits);
@@ -254,5 +263,5 @@ void BufferBugCatchingContestScore(void)
 
 bool8 IsVernonCompeting(void)
 {
-    return (sBugCatchingContestants[0] == BUG_CATCHING_CONTEST_TRAINER_VERNON);
+    return (sContestants[0] == BUG_CATCHING_CONTEST_TRAINER_VERNON);
 }

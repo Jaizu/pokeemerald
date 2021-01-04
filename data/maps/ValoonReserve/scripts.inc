@@ -1,5 +1,9 @@
 .set BCC_STATE_WHITE_OUT, 	  1
 .set BCC_STATE_JUDGING_ROUND, 2
+.set LOCALID_CONTESTANT_1, 3
+.set LOCALID_CONTESTANT_2, 4
+.set LOCALID_CONTESTANT_3, 5
+.set LOCALID_CONTESTANT_4, 6
 
 ValoonReserve_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, ValoonReserve_OnResume
@@ -81,19 +85,28 @@ ValoonReserve_Text_PlayerIsOutOfUsablePokemon:
 	.string "Better luck next time!$"
 
 ValoonReserve_EventScript_BugCatchingContestJudgingRound::
-	specialvar VAR_RESULT, IsVernonCompeting
-	compare VAR_RESULT, TRUE
-	call_if_eq ValoonReserve_EventScript_UnlockValoonGym
 	special ExitBugCatchingContestMode
-	textcolor 0 // Blue
 	fadescreen FADE_TO_BLACK
 	setvar VAR_0x8004, 27 @ x
 	setvar VAR_0x8005, 8  @ y
 	special TeleportCamera
-	setobjectxy OBJ_EVENT_ID_PLAYER, 27, 10
-	setobjectxyperm OBJ_EVENT_ID_PLAYER, 27, 10
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	addobject LOCALID_CONTESTANT_1
+	addobject LOCALID_CONTESTANT_2
+	addobject LOCALID_CONTESTANT_3
+	addobject LOCALID_CONTESTANT_4
+	setobjectxy OBJ_EVENT_ID_PLAYER,  23, 10
+	setobjectxy LOCALID_CONTESTANT_1, 25, 10
+	setobjectxy LOCALID_CONTESTANT_2, 27, 10
+	setobjectxy LOCALID_CONTESTANT_3, 29, 10
+	setobjectxy LOCALID_CONTESTANT_4, 31, 10
+	lockall
+	turnobject OBJ_EVENT_ID_PLAYER,  DIR_NORTH
+	turnobject LOCALID_CONTESTANT_1, DIR_NORTH
+	turnobject LOCALID_CONTESTANT_2, DIR_NORTH
+	turnobject LOCALID_CONTESTANT_3, DIR_NORTH
+	turnobject LOCALID_CONTESTANT_4, DIR_NORTH
 	fadescreen FADE_FROM_BLACK
+	textcolor 0 // Blue
 	msgbox ValoonReserve_Text_WeWillNowJudgeThePokemon, MSGBOX_DEFAULT
 	special SelectBugCatchingContestWinners
 	setvar VAR_RESULT, 0
@@ -112,6 +125,9 @@ ValoonReserve_EventScript_BugCatchingContestJudgingRound::
 	special BufferBugCatchingContestScore
 	msgbox ValoonReserve_Text_TheScoreWas, MSGBOX_DEFAULT
 	msgbox ValoonReserve_Text_ThankYouAllForCompeting, MSGBOX_DEFAULT
+	specialvar VAR_RESULT, IsVernonCompeting
+	compare VAR_RESULT, TRUE
+	call_if_eq ValoonReserve_EventScript_UnlockValoonGym
 	textcolor 2 // Dark Grey
 	special BufferCaughtBugSpecies
 	specialvar VAR_RESULT, GiveAndResetCaughtBug
@@ -259,3 +275,11 @@ ValoonReserve_EventScript_GoCatchTheBestBug::
 ValoonReserve_Text_GoCatchTheBestBug:
 	.string "Go out there and catch the\n"
 	.string "strongest Bug-type you can find!$"
+
+ValoonReserve_EventScript_Contestant::
+	msgbox ValoonReserve_Text_PlaceholderString, MSGBOX_NPC
+	end
+
+ValoonReserve_Text_PlaceholderString:
+	.string "I am competing in the\n"
+	.string "Bug-Catching Contest!$"
