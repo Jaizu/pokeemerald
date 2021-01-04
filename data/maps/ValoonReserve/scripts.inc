@@ -80,6 +80,7 @@ ValoonReserve_Text_PlayerIsOutOfUsablePokemon:
 	.string "Better luck next time!$"
 
 ValoonReserve_EventScript_BugCatchingContestJudgingRound::
+	special ExitBugCatchingContestMode
 	textcolor 0 // Blue
 	fadescreen FADE_TO_BLACK
 	setvar VAR_0x8004, 27 @ x
@@ -92,7 +93,37 @@ ValoonReserve_EventScript_BugCatchingContestJudgingRound::
 	msgbox ValoonReserve_Text_WeWillNowJudgeThePokemon, MSGBOX_DEFAULT
 	// TODO: Implement
 	msgbox ValoonReserve_Text_ThankYouAllForCompeting, MSGBOX_DEFAULT
-	goto ValoonReserve_EventScript_Retire
+	textcolor 2 // Dark Grey
+	special BufferCaughtBugSpecies
+	specialvar VAR_RESULT, GiveAndResetCaughtBug
+	compare VAR_RESULT, 0
+	goto_if_eq ValoonReserve_EventScript_ReceiveCaughtBugParty
+	compare VAR_RESULT, 1
+	goto_if_eq ValoonReserve_EventScript_ReceiveCaughtBugPC
+	msgbox gText_NoMoreRoomForPokemon, MSGBOX_DEFAULT
+	goto ValoonReserve_EventScript_Exit
+	end
+
+ValoonReserve_EventScript_ReceiveCaughtBugParty::
+	msgbox ValoonReserve_Text_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq ValoonReserve_EventScript_Exit
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto ValoonReserve_EventScript_Exit
+	end
+
+ValoonReserve_EventScript_ReceiveCaughtBugPC::
+	msgbox ValoonReserve_Text_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq ValoonReserve_EventScript_SendCaughtBugToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto ValoonReserve_EventScript_SendCaughtBugToPC
+	end
+
+ValoonReserve_EventScript_SendCaughtBugToPC::
+	call Common_EventScript_TransferredToPC
+	goto ValoonReserve_EventScript_Exit
 	end
 
 ValoonReserve_Text_WeWillNowJudgeThePokemon:
@@ -107,6 +138,10 @@ ValoonReserve_Text_ThankYouAllForCompeting:
 	.string "Thank you all for competing!\n"
 	.string "We hope to see you again.$"
 
+ValoonReserve_Text_NicknameThisPokemon:
+	.string "Would you like to give a nickname\n"
+	.string "to the {STR_VAR_1} you caught?$"
+
 ValoonReserve_EventScript_RetirePrompt::
 	lockall
 	msgbox ValoonReserve_Text_WouldYouLikeToExit, MSGBOX_YESNO
@@ -116,6 +151,11 @@ ValoonReserve_EventScript_RetirePrompt::
 	end
 
 ValoonReserve_EventScript_Retire:
+	special ExitBugCatchingContestMode
+	goto ValoonReserve_EventScript_Exit
+	end
+
+ValoonReserve_EventScript_Exit:
 	setvar VAR_RANGERS_HQ_STATE, 1
 	warp MAP_VALOON_TOWN_RANGERS_HQ, 255, 10, 3
 	waitstate

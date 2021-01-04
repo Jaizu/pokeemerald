@@ -13,8 +13,6 @@ ValoonTown_RangersHQ_EventScript_ReturnFromContest:
 	lockall
 	msgbox ValoonTown_RangersHQ_Text_PleaseComeAgain, MSGBOX_DEFAULT
 	closemessage
-	special ExitBugCatchingContestMode
-	special LoadPlayerParty
 	setvar VAR_RANGERS_HQ_STATE, 0
 	releaseall
 	end
@@ -34,11 +32,11 @@ ValoonTown_RangersHQ_EventScript_ContestHelper::
 	msgbox ValoonTown_RangersHQ_Text_WouldYouLikeToEnter, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_ne ValoonTown_RangersHQ_EventScript_PleaseComeAgain
-	special SavePlayerParty
+	setvar VAR_0x8004, 0
 	getpartysize
 	compare VAR_RESULT, 1
 	call_if_ne ValoonTown_RangersHQ_EventScript_PleaseSelectAPokemon
-	special HealPlayerParty
+	special EnterBugCatchingContestMode
 	msgbox ValoonTown_RangersHQ_Text_HereAreTheParkBalls, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM
 	message ValoonTown_RangersHQ_Text_PlayerObtainedParkBalls
@@ -52,7 +50,6 @@ ValoonTown_RangersHQ_EventScript_ContestHelper::
 	call_if_eq ValoonTown_RangersHQ_EventScript_PlayerEnterValoonReserve1
 	compare VAR_0x8008, 11
 	call_if_eq ValoonTown_RangersHQ_EventScript_PlayerEnterValoonReserve2
-	special EnterBugCatchingContestMode
 	warp MAP_VALOON_RESERVE, 0, 0, 0
 	waitstate
 	release
@@ -72,7 +69,6 @@ ValoonTown_RangersHQ_EventScript_PleaseSelectAPokemon:
 	msgbox ValoonTown_RangersHQ_Text_MonWillJoinYou, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_ne ValoonTown_RangersHQ_EventScript_PleaseSelectAPokemon
-	special ReducePlayerPartyToSelectedMon
 	playfanfare MUS_OBTAIN_ITEM
 	message ValoonTown_RangersHQ_Text_PlayerLeftWithTheContestHelper
 	waitfanfare

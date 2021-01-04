@@ -537,9 +537,10 @@ gSpecials::
 	def_special CheckPartyForMon
 	def_special TeleportCamera
 	def_special ReturnCameraToPlayer
-	def_special ReducePlayerPartyToSelectedMon
 	def_special GetClearBattleOutcome
 	def_special EnterBugCatchingContestMode
 	def_special ExitBugCatchingContestMode
 	def_special PlayerHasCaughtBug
 	def_special ViewCaughtBug
+	def_special BufferCaughtBugSpecies
+	def_special GiveAndResetCaughtBug

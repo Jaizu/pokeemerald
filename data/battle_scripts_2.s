@@ -111,16 +111,16 @@ BattleScript_SuccessBallThrowEnd::
 	finishturn
 
 BattleScript_GiveCaughtBug::
-    jumpifnocaughtbug BattleScript_GiveCaughtMonEnd
+	jumpifnocaughtbug BattleScript_GiveCaughtMonEnd
 	buffercaughtbugname
-    givecaughtmon
+	givecaughtmon
 	printstring STRINGID_SWAPTHEBUGWITHCAUGHTBUG
 	waitstate
 	setbyte gBattleCommunication, 0x0
 	tryswapcaughtbug BattleScript_SuccessBallThrowEnd
 	printstring STRINGID_RELEASEDBUGANDCAUGHTBUG
 	waitstate
-    goto BattleScript_SuccessBallThrowEnd
+	goto BattleScript_SuccessBallThrowEnd
 
 BattleScript_WallyBallThrow::
 	printstring STRINGID_GOTCHAPKMNCAUGHT2

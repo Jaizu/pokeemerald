@@ -1,23 +1,22 @@
 #include "global.h"
+#include "battle.h"
+#include "battle_setup.h"
 #include "bug_catching_contest.h"
 #include "event_data.h"
 #include "fieldmap.h"
 #include "field_screen_effect.h"
-#include "save.h"
-#include "battle.h"
-#include "random.h"
-#include "task.h"
+#include "load_save.h"
+#include "malloc.h"
+#include "overworld.h"
 #include "party_menu.h"
 #include "pokemon.h"
 #include "pokemon_storage_system.h"
 #include "pokemon_summary_screen.h"
-#include "malloc.h"
-#include "palette.h"
 #include "script.h"
-#include "battle_setup.h"
-#include "overworld.h"
-#include "constants/layouts.h"
+#include "string_util.h"
+#include "task.h"
 #include "constants/heal_locations.h"
+#include "constants/layouts.h"
 
 extern const u8 ValoonReserve_EventScript_RetirePrompt[];
 extern const u8 ValoonReserve_EventScript_OutOfBallsMidBattle[];
@@ -52,8 +51,22 @@ void ResetValoonReserveState(void)
     *GetVarPointer(VAR_VALOON_RESERVE_STATE) = 0;
 }
 
+void ReducePlayerPartyToSelectedMon(void)
+{
+    struct Pokemon party[1];
+
+    CpuFill32(0, party, sizeof party);
+    party[0] = gPlayerParty[gSpecialVar_0x8004];
+    CpuFill32(0, gPlayerParty, sizeof gPlayerParty);
+    gPlayerParty[0] = party[0];
+
+    CalculatePlayerPartyCount();
+}
+
 void EnterBugCatchingContestMode(void)
 {
+    SavePlayerParty();
+    ReducePlayerPartyToSelectedMon();
     SetBugCatchingContestFlag();
     ResetValoonReserveState();
     ResetCaughtBug();
@@ -63,9 +76,9 @@ void EnterBugCatchingContestMode(void)
 
 void ExitBugCatchingContestMode(void)
 {
+    LoadPlayerParty();
     ResetBugCatchingContestFlag();
     ResetValoonReserveState();
-    ResetCaughtBug();
     SetLastHealLocationWarp(HEAL_LOCATION_VALOON_TOWN);
     gNumParkBalls = 0;
 }
@@ -119,4 +132,25 @@ void SetCaughtBug(struct Pokemon *mon)
 void ViewCaughtBug(void)
 {
     ShowPokemonSummaryScreen(PSS_MODE_BUG_CATCHING_CONTEST, &gSaveBlock1Ptr->caughtBug.mon, 0, 0, CB2_ReturnToField);
+}
+
+void BufferCaughtBugSpecies(void)
+{
+    u8 nick[POKEMON_NAME_LENGTH];
+    GetMonData(&gSaveBlock1Ptr->caughtBug.mon, MON_DATA_NICKNAME, nick);
+    StringCopy(gStringVar1, nick);
+    VarSet(VAR_TEMP_1, GetMonData(&gSaveBlock1Ptr->caughtBug.mon, MON_DATA_SPECIES, NULL));
+}
+
+u8 GiveAndResetCaughtBug(void)
+{
+    u8 sentToPc;
+    struct Pokemon mon;
+
+    BoxMonToMon(&gSaveBlock1Ptr->caughtBug.mon, &mon);
+    sentToPc = GiveMonToPlayer(&mon);
+
+    ResetCaughtBug();
+    
+    return sentToPc;
 }
