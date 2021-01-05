@@ -164,8 +164,8 @@
 #define FLAG_OBTAINED_SCIZORITE                             0x94 // FLAG_DOCK_REJECTED_DEVON_GOODS in Emerald
 #define FLAG_OBTAINED_HERACRONITE                           0x95 // FLAG_DELIVERED_DEVON_GOODS in Emerald
 #define FLAG_OBTAINED_BEEDRILLITE                           0x96 // FLAG_RECEIVED_CONTEST_PASS in Emerald
+#define FLAG_VERNON_WON_BEEDRILLITE                         0x97 // FLAG_RECEIVED_CASTFORM in Emerald
 
-#define FLAG_RECEIVED_CASTFORM               0x97
 #define FLAG_RECEIVED_SUPER_ROD              0x98
 #define FLAG_RUSTBORO_NPC_TRADE_COMPLETED    0x99
 #define FLAG_PACIFIDLOG_NPC_TRADE_COMPLETED  0x9A

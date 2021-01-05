@@ -555,3 +555,9 @@ void TrySetMegaStonePrizeFlag(void)
     if (sContestants[0].contestantId == BUG_CATCHING_CONTEST_PLAYER)
         SetMegaStonePrizeFlag(gSpecialVar_0x8004);
 }
+
+void TrySetVernonBeedrilliteFlag(void)
+{
+    if (sContestants[0].contestantId == BUG_CATCHING_CONTEST_TRAINER_VERNON)
+        FlagSet(FLAG_VERNON_WON_BEEDRILLITE);
+}

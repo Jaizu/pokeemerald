@@ -237,8 +237,9 @@
 #define TRAINER_INGRID                      116 // TRAINER_GRUNT_SPACE_CENTER_2 in Emerald
 #define TRAINER_CINDY_2                     117
 #define TRAINER_HIDEKI                      117 // TRAINER_CINDY_2 in Emerald
-
 #define TRAINER_BRIANNA                     118
+#define TRAINER_VERNON_2                    118 // TRAINER_BRIANNA in Emerald
+
 #define TRAINER_NAOMI                       119
 #define TRAINER_CINDY_3                     120
 #define TRAINER_CINDY_4                     121

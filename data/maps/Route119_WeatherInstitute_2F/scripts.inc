@@ -133,7 +133,7 @@ Route119_WeatherInstitute_2F_EventScript_ReceivedCastformFanfare:: @ 82700DB
 
 Route119_WeatherInstitute_2F_EventScript_ExplainCastform:: @ 82700EA
 	msgbox Route119_WeatherInstitute_2F_Text_PokemonChangesWithWeather, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_CASTFORM
+	setflag 0
 	release
 	end
 
@@ -214,7 +214,7 @@ Route119_WeatherInstitute_2F_Movement_ScientistApproachPlayer: @ 8270187
 Route119_WeatherInstitute_2F_EventScript_WeatherScientist:: @ 827018B
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_CASTFORM, Route119_WeatherInstitute_2F_EventScript_ScientistMentionWeather
+	goto_if_set 0, Route119_WeatherInstitute_2F_EventScript_ScientistMentionWeather
 	goto Route119_WeatherInstitute_2F_EventScript_ReceiveCastform
 	end
 

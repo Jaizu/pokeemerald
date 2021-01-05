@@ -1635,15 +1635,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Hideki[] = {
     }
 };
 
-static const struct TrainerMonItemDefaultMoves sParty_Brianna[] = {
-    {
-    .iv = 150,
-    .lvl = 40,
-    .species = SPECIES_SEAKING,
-    .heldItem = ITEM_NUGGET
-    }
-};
-
 static const struct TrainerMonItemDefaultMoves sParty_Naomi[] = {
     {
     .iv = 100,
@@ -3583,6 +3574,37 @@ static const struct TrainerMonItemCustomMoves sParty_Vernon1[] = {
     .species = SPECIES_BEEDRILL,
     .heldItem = ITEM_BEEDRILLITE,
     .moves = {MOVE_U_TURN, MOVE_PURSUIT, MOVE_DRILL_RUN, MOVE_AERIAL_ACE}
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_Vernon2[] = {
+    {
+    .iv = 100,
+    .lvl = 34,
+    .species = SPECIES_SHUCKLE,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_STICKY_WEB, MOVE_STEALTH_ROCK, MOVE_WITHDRAW, MOVE_ROCK_SLIDE}
+    },
+    {
+    .iv = 20,
+    .lvl = 34,
+    .species = SPECIES_SCIZOR,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_U_TURN, MOVE_BULLET_PUNCH, MOVE_SLASH, MOVE_PURSUIT}
+    },
+    {
+    .iv = 60,
+    .lvl = 34,
+    .species = SPECIES_MASQUERAIN,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_U_TURN, MOVE_AIR_CUTTER, MOVE_SCALD, MOVE_QUICK_ATTACK}
+    },
+    {
+    .iv = 60,
+    .lvl = 36,
+    .species = SPECIES_HERACROSS,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_BRICK_BREAK, MOVE_AERIAL_ACE, MOVE_PIN_MISSILE, MOVE_THROAT_CHOP}
     }
 };
 

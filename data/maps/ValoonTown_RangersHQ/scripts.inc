@@ -231,7 +231,7 @@ ValoonTown_RangersHQ_Text_AlwaysGetLowScoringBugs:
 	.string "Are you going to enter the\n"
 	.string "Bug-Catching Contest?\p"
 	.string "I would, but I only ever find\n"
-	.string "low-scoring Pokémon like Weedle!$"
+	.string "low-scoring Pokémon like Combee!$"
 
 ValoonTown_RangersHQ_EventScript_PkmnRangerF2::
 	msgbox ValoonTown_RangersHQ_Text_AreYouANewRecruit, MSGBOX_NPC

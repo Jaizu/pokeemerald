@@ -159,6 +159,7 @@ ValoonReserve_EventScript_BugCatchingContestJudgingRound::
 ValoonReserve_EventScript_UnlockValoonGym:
 	setflag FLAG_UNLOCK_VALOON_GYM_DOOR
 	setflag FLAG_HIDE_VALOON_TOWN_RANGERS_HQ_VERNON
+	special TrySetVernonBeedrilliteFlag
 	return
 
 ValoonReserve_EventScript_TrySetMegaStonePrizeFlag:

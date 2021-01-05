@@ -338,7 +338,19 @@ ValoonTown_Gym_Text_CaleClearPath:
 	.string "Well, you won!$"
 
 ValoonTown_Gym_EventScript_Vernon::
+	lock
+	faceplayer
+	goto_if_unset FLAG_VERNON_WON_BEEDRILLITE, ValoonTown_Gym_EventScript_VernonNoBeedrilliteBattle
 	trainerbattle_single TRAINER_VERNON_1, ValoonTown_Gym_Text_VernonIntro, ValoonTown_Gym_Text_VernonDefeat, ValoonTown_Gym_EventScript_VernonDefeated, NO_MUSIC
+	goto ValoonTown_Gym_EventScript_VernonPostBattle
+	end
+
+ValoonTown_Gym_EventScript_VernonNoBeedrilliteBattle:
+	trainerbattle_single TRAINER_VERNON_2, ValoonTown_Gym_Text_VernonIntroNoBeedrill, ValoonTown_Gym_Text_VernonDefeat, ValoonTown_Gym_EventScript_VernonDefeated, NO_MUSIC
+	goto ValoonTown_Gym_EventScript_VernonPostBattle
+	end
+
+ValoonTown_Gym_EventScript_VernonPostBattle:
 	call_if_unset FLAG_RECEIVED_TM49, ValoonTown_Gym_EventScript_GiveUTurn
 	msgbox ValoonTown_Gym_Text_VernonPostBattle, MSGBOX_DEFAULT
 	release
@@ -362,11 +374,22 @@ ValoonTown_Gym_EventScript_GiveUTurn:
 	setflag FLAG_RECEIVED_TM49
 	msgbox ValoonTown_Gym_Text_ExplainTM49, MSGBOX_DEFAULT
 	return
-	
+
 ValoonTown_Gym_Text_VernonIntro:
 	.string "Why, hey there!\p"
-	.string "Say, you're the newcomer that came\n"
-	.string "third in the Bug-Catching Contest!\p"
+	.string "Say, you're the newcomer that was\n"
+	.string "in the Bug-Catching Contest!\p"
+	.string "It was mighty fun competing\n"
+	.string "against you.\p"
+	.string "I find talented Pokémon hunters\n"
+	.string "tend to be equally great battlers!\p"
+	.string "Why don't we put that theory to\n"
+	.string "the test?{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+
+ValoonTown_Gym_Text_VernonIntroNoBeedrill:
+	.string "Why, hey there!\p"
+	.string "Say, you're the newcomer that won\n"
+	.string "the Bug-Catching Contest!\p"
 	.string "It was mighty fun competing\n"
 	.string "against you.\p"
 	.string "I find talented Pokémon hunters\n"
