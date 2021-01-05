@@ -553,3 +553,4 @@ gSpecials::
 	def_special GetPlayersBugCatchingContestPrize
 	def_special TrySetMegaStonePrizeFlag
 	def_special TrySetVernonBeedrilliteFlag
+	def_special BufferBugCatchingContestantDialog

@@ -315,7 +315,11 @@ ValoonReserve_Text_GoCatchTheBestBug:
 	.string "strongest Bug-type you can find!$"
 
 ValoonReserve_EventScript_Contestant::
-	msgbox ValoonReserve_Text_PlaceholderString, MSGBOX_NPC
+	lock
+	faceplayer
+	special BufferBugCatchingContestantDialog
+	msgbox gStringVar4, MSGBOX_DEFAULT
+	release
 	end
 
 ValoonReserve_Text_PlaceholderString:

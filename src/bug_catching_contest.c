@@ -561,3 +561,9 @@ void TrySetVernonBeedrilliteFlag(void)
     if (sContestants[0].contestantId == BUG_CATCHING_CONTEST_TRAINER_VERNON)
         FlagSet(FLAG_VERNON_WON_BEEDRILLITE);
 }
+
+void BufferBugCatchingContestantDialog(void)
+{
+    u16 contestantId = sContestants[gSpecialVar_LastTalked - LOCALID_CONTESTANT_1].contestantId;
+    StringCopy(gStringVar4, sBugCatchingContestTrainers[contestantId].dialog);
+}

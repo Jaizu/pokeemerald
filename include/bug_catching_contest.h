@@ -12,10 +12,13 @@
 
 #define MAX_IVS_TOTAL (0x1F * NUM_STATS)
 
+#define LOCALID_CONTESTANT_1 3
+
 struct BugCatchingContestTrainer {
     u16 trainerClass;
     u16 sprite;
     const u8 name[BUG_CATCHING_CONTEST_TRAINER_NAME_LENGTH + 1];
+    const u8 *dialog;
     struct {
         u16 species;
         u16 score;
