@@ -11,12 +11,30 @@ ValoonTown_RangersHQ_OnFrame:
 
 ValoonTown_RangersHQ_EventScript_ReturnFromContest:
 	lockall
+	call_if_unset FLAG_TOLD_ABOUT_VALOON_GYM_OPENING, ValoonTown_RangersHQ_EventScript_TryExplainGymIsOpen
 	msgbox ValoonTown_RangersHQ_Text_PleaseComeAgain, MSGBOX_DEFAULT
 	closemessage
 	setrespawn HEAL_LOCATION_VALOON_TOWN
 	setvar VAR_RANGERS_HQ_STATE, 0
 	releaseall
 	end
+
+ValoonTown_RangersHQ_EventScript_TryExplainGymIsOpen:
+	goto_if_set FLAG_UNLOCK_VALOON_GYM_DOOR, ValoonTown_RangersHQ_EventScript_ExplainGymIsOpen
+	return
+
+ValoonTown_RangersHQ_EventScript_ExplainGymIsOpen:
+	setflag FLAG_TOLD_ABOUT_VALOON_GYM_OPENING
+	msgbox ValoonTown_RangersHQ_Text_TheValoonGymIsOpen, MSGBOX_DEFAULT
+	return
+
+ValoonTown_RangersHQ_Text_TheValoonGymIsOpen:
+	.string "{COLOR BLUE}So…\n"
+	.string "How did it go?\p"
+	.string "Competing with Vernon, I mean.\n"
+	.string "It must have been exciting!\p"
+	.string "Well, he's returned to his Gym.\n"
+	.string "I wonder if you could take him on?$"
 
 ValoonTown_RangersHQ_OnWarp:
 	map_script_2 VAR_RANGERS_HQ_STATE, 1, ValoonTown_RangersHQ_EventScript_PlayerTurnNorth
