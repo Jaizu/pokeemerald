@@ -16,7 +16,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_COULTER_CELANTO_PATH_CHIMCHAR] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .trainerClass = TRAINER_CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_COULTER,
         .trainerName = _("Coulter"),
@@ -30,7 +30,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_COULTER_CELANTO_PATH_PIPLUP] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .trainerClass = TRAINER_CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_COULTER,
         .trainerName = _("Coulter"),
@@ -44,7 +44,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_COULTER_CELANTO_PATH_TURTWIG] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .trainerClass = TRAINER_CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_COULTER,
         .trainerName = _("Coulter"),
@@ -660,7 +660,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_COULTER_NESTPINE_TOWN_MONFERNO] =
     {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .trainerClass = TRAINER_CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_COULTER,
         .trainerName = _("Coulter"),
@@ -674,7 +674,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_COULTER_NESTPINE_TOWN_PRINPLUP] =
     {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .trainerClass = TRAINER_CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_COULTER,
         .trainerName = _("Coulter"),
@@ -688,7 +688,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_COULTER_NESTPINE_TOWN_GROTLE] =
     {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .trainerClass = TRAINER_CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_COULTER,
         .trainerName = _("Coulter"),

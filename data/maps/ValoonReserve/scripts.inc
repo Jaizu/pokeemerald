@@ -109,7 +109,7 @@ ValoonReserve_EventScript_BugCatchingContestJudgingRound::
 	textcolor 0 // Blue
 	msgbox ValoonReserve_Text_WeWillNowJudgeThePokemon, MSGBOX_DEFAULT
 	special SelectBugCatchingContestWinners
-	setvar VAR_RESULT, 0
+	setvar VAR_RESULT, 2
 	special BufferBugCatchingContestStrings
 	msgbox ValoonReserve_Text_PlacingThirdIs, MSGBOX_DEFAULT
 	special BufferBugCatchingContestScore
@@ -119,7 +119,7 @@ ValoonReserve_EventScript_BugCatchingContestJudgingRound::
 	msgbox ValoonReserve_Text_PlacingSecondIs, MSGBOX_DEFAULT
 	special BufferBugCatchingContestScore
 	msgbox ValoonReserve_Text_TheScoreWas, MSGBOX_DEFAULT
-	setvar VAR_RESULT, 2
+	setvar VAR_RESULT, 0
 	special BufferBugCatchingContestStrings
 	msgbox ValoonReserve_Text_ThisBugCatchingContestWinnerIs, MSGBOX_DEFAULT
 	special BufferBugCatchingContestScore
@@ -180,7 +180,8 @@ ValoonReserve_Text_PlacingSecondIs:
 	.string "{STR_VAR_3}!$"
 
 ValoonReserve_Text_ThisBugCatchingContestWinnerIs:
-	.string "This Bug-Catching Contest winner is…\p"
+	.string "This Bug-Catching Contest winner\n"
+	.string "is…\p"
 	.string "{STR_VAR_1} {STR_VAR_2}, who\n"
 	.string "caught a whopping {STR_VAR_3}!$"
 

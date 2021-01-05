@@ -10,7 +10,8 @@ enum
     BUG_CATCHING_CONTEST_TRAINER_MICKEY,
     BUG_CATCHING_CONTEST_TRAINER_SIMON,
     BUG_CATCHING_CONTEST_TRAINER_SESSEL,
-    BUG_CATCHING_CONTEST_TRAINER_VERNON
+    BUG_CATCHING_CONTEST_TRAINER_VERNON,
+    BUG_CATCHING_CONTEST_PLAYER
 };
 
 #define NUM_BUG_CATCHING_CONTEST_TRAINERS BUG_CATCHING_CONTEST_TRAINER_VERNON
@@ -23,9 +24,9 @@ static const struct BugCatchingContestTrainer sBugCatchingContestTrainers[] =
         .sprite = OBJ_EVENT_GFX_BUG_CATCHER,
         .name = _("Beasly"),
         .pokemon = {
-            {SPECIES_NINCADA, 270},
-            {SPECIES_NINCADA, 265},
-            {SPECIES_NINCADA, 234},
+            {SPECIES_NINCADA, 263},
+            {SPECIES_NINCADA, 245},
+            {SPECIES_NINCADA, 214},
         }
     },
     [BUG_CATCHING_CONTEST_TRAINER_CALUM] =
@@ -34,9 +35,9 @@ static const struct BugCatchingContestTrainer sBugCatchingContestTrainers[] =
         .sprite = OBJ_EVENT_GFX_YOUNGSTER,
         .name = _("Calum"),
         .pokemon = {
-            {SPECIES_BEAUTIFLY, 286},
-            {SPECIES_BEAUTIFLY, 251},
-            {SPECIES_CATERPIE,  237},
+            {SPECIES_BEAUTIFLY, 246},
+            {SPECIES_BEAUTIFLY, 222},
+            {SPECIES_CATERPIE,  189},
         }
     },
     [BUG_CATCHING_CONTEST_TRAINER_JESS] =
@@ -45,9 +46,9 @@ static const struct BugCatchingContestTrainer sBugCatchingContestTrainers[] =
         .sprite = OBJ_EVENT_GFX_ACE_TRAINER_F,
         .name = _("Jess"),
         .pokemon = {
-            {SPECIES_COMBEE,   301},
-            {SPECIES_SURSKIT,  341},
-            {SPECIES_CATERPIE, 264},
+            {SPECIES_COMBEE,   287},
+            {SPECIES_SURSKIT,  254},
+            {SPECIES_CATERPIE, 183},
         }
     },
     [BUG_CATCHING_CONTEST_TRAINER_DOMINIK] =
@@ -57,8 +58,8 @@ static const struct BugCatchingContestTrainer sBugCatchingContestTrainers[] =
         .name = _("Dominik"),
         .pokemon = {
             {SPECIES_CASCOON,  301},
-            {SPECIES_COMBEE,   341},
             {SPECIES_CATERPIE, 264},
+            {SPECIES_COMBEE,   241},
         }
     },
     [BUG_CATCHING_CONTEST_TRAINER_SANDRA] =
@@ -80,7 +81,7 @@ static const struct BugCatchingContestTrainer sBugCatchingContestTrainers[] =
         .pokemon = {
             {SPECIES_SCYTHER,  321},
             {SPECIES_BEEDRILL, 316},
-            {SPECIES_CATERPIE, 264},
+            {SPECIES_CATERPIE, 277},
         }
     },
     [BUG_CATCHING_CONTEST_TRAINER_MARIANNE] =
@@ -100,8 +101,8 @@ static const struct BugCatchingContestTrainer sBugCatchingContestTrainers[] =
         .sprite = OBJ_EVENT_GFX_PKMN_RANGER_M,
         .name = _("Mickey"),
         .pokemon = {
-            {SPECIES_NINCADA,  277},
-            {SPECIES_CATERPIE, 226},
+            {SPECIES_NINCADA,  279},
+            {SPECIES_CATERPIE, 223},
             {SPECIES_COMBEE,   214},
         }
     },
@@ -122,7 +123,7 @@ static const struct BugCatchingContestTrainer sBugCatchingContestTrainers[] =
         .sprite = OBJ_EVENT_GFX_SCHOOL_KID_M,
         .name = _("Sessel"),
         .pokemon = {
-            {SPECIES_LARVESTA,  379},
+            {SPECIES_LARVESTA,  358},
             {SPECIES_HERACROSS, 344},
             {SPECIES_CATERPIE,  226},
         }
@@ -133,9 +134,22 @@ static const struct BugCatchingContestTrainer sBugCatchingContestTrainers[] =
         .sprite = OBJ_EVENT_GFX_VERNON,
         .name = _("Vernon"),
         .pokemon = {
-            {SPECIES_BEEDRILL, 393},
-            {SPECIES_BEEDRILL, 391},
-            {SPECIES_BEEDRILL, 387},
+            {SPECIES_BEEDRILL, 380},
+            {SPECIES_BEEDRILL, 377},
+            {SPECIES_BEEDRILL, 366},
         }
     }
 };
+
+static const u16 sCommonSpecies[] =
+{
+    SPECIES_CATERPIE, SPECIES_CASCOON, SPECIES_COMBEE, SPECIES_NINCADA, SPECIES_SURSKIT
+};
+
+static const u16 sRareSpecies[] =
+{
+    SPECIES_PINSIR, SPECIES_SCYTHER, SPECIES_HERACROSS, SPECIES_LARVESTA
+};
+
+#define NUM_COMMON_SPECIES (sizeof(sCommonSpecies) / sizeof(u16))
+#define NUM_RARE_SPECIES (sizeof(sRareSpecies) / sizeof(u16))

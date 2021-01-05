@@ -44,5 +44,6 @@ u16 GetLocalWildMon(bool8 *isWaterMon);
 u16 GetLocalWaterMon(void);
 bool8 UpdateRepelCounter(void);
 bool8 TryDoDoubleWildBattle(void);
+u16 GetCurrentMapWildMonHeaderId(void);
 
 #endif // GUARD_WILD_ENCOUNTER_H

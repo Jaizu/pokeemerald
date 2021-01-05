@@ -7249,6 +7249,13 @@ bool8 IsMonShiny(struct Pokemon *mon)
     return IsShinyOtIdPersonality(otId, personality);
 }
 
+bool8 IsBoxMonShiny(struct BoxPokemon *mon)
+{
+    u32 otId = GetBoxMonData(mon, MON_DATA_OT_ID, 0);
+    u32 personality = GetBoxMonData(mon, MON_DATA_PERSONALITY, 0);
+    return IsShinyOtIdPersonality(otId, personality);
+}
+
 bool8 IsShinyOtIdPersonality(u32 otId, u32 personality)
 {
     bool8 retVal = FALSE;
