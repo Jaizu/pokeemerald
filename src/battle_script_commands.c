@@ -11972,6 +11972,10 @@ static void Cmd_handleballthrow(void)
             case ITEM_CHERISH_BALL:
                 ballMultiplier = 10;
                 break;
+            case ITEM_PARK_BALL:
+                if (InValoonReserve())
+                    ballMultiplier = 25;
+                break;
             case ITEM_SPORT_BALL:
                 ballMultiplier = 15;
                 break;

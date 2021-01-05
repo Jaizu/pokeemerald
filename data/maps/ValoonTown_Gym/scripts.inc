@@ -388,12 +388,12 @@ ValoonTown_Gym_Text_VernonIntro:
 
 ValoonTown_Gym_Text_VernonIntroNoBeedrill:
 	.string "Why, hey there!\p"
-	.string "Say, you're the newcomer that won\n"
-	.string "the Bug-Catching Contest!\p"
-	.string "It was mighty fun competing\n"
-	.string "against you.\p"
-	.string "I find talented Pokémon hunters\n"
-	.string "tend to be equally great battlers!\p"
+	.string "Say, you're the newcomer that was\n"
+	.string "in the Bug-Catching Contest!\p"
+	.string "It was mighty fun competing,\n"
+	.string "even though I didn't win…\p"
+	.string "Talented Pokémon hunters are also\n"
+	.string "great battlers, don't you agree?\p"
 	.string "Why don't we put that theory to\n"
 	.string "the test?{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
