@@ -22,6 +22,11 @@
       "direction": "up",
       "offset": 0,
       "map": "MAP_NEMESIS_RIVER"
+    },
+    {
+      "direction": "right",
+      "offset": -4,
+      "map": "MAP_TELMURK_SWAMP"
     }
   ],
   "object_events": [

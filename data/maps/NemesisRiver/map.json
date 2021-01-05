@@ -22,6 +22,11 @@
       "direction": "left",
       "offset": 38,
       "map": "MAP_VALOON_WAY"
+    },
+    {
+      "direction": "right",
+      "offset": 58,
+      "map": "MAP_TELMURK_SWAMP"
     }
   ],
   "object_events": [
@@ -201,8 +206,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 13,
-      "y": 27,
+      "x": 12,
+      "y": 26,
       "elevation": 3,
       "item": "ITEM_X_SPEED",
       "flag": "FLAG_HIDDEN_ITEM_NEMESIS_RIVER_X_SPEED"
