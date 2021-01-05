@@ -15,6 +15,7 @@
 #include "pokemon_summary_screen.h"
 #include "random.h"
 #include "script.h"
+#include "sort.h"
 #include "string_util.h"
 #include "strings.h"
 #include "task.h"
@@ -436,91 +437,24 @@ void GenerateContestantScores(void)
     }
 }
 
-static void CopyArray(struct BugCatchingContestant A[], u32 iBegin, u32 iEnd, struct BugCatchingContestant B[])
+int CompareBugCatchingContestantScores(const void *a, const void *b)
 {
-    u8 k;
-    for (k = iBegin; k < iEnd; k++)
-    {
-        B[k].contestantId = A[k].contestantId;
-        B[k].pkmnId = A[k].pkmnId;
-        B[k].score = A[k].score;
-    }
-}
-
-static void TopDownMerge(struct BugCatchingContestant A[], u32 iBegin, u32 iMiddle, u32 iEnd, struct BugCatchingContestant B[])
-{
-    u32 i, j, k;
-    i = iBegin;
-    j = iMiddle;
-    
-    for (k = iBegin; k < iEnd; k++)
-    {
-        if (i < iMiddle && (j >= iEnd || A[i].score <= A[j].score))
-        {
-            B[k] = A[i];
-            i = i + 1;
-        }
-        else
-        {
-            B[k] = A[j];
-            j = j + 1;
-        }
-    }
-}
-
-static void TopDownSplitMerge(struct BugCatchingContestant B[], u32 iBegin, u32 iEnd, struct BugCatchingContestant A[])
-{
-    u32 iMiddle;
-    if (iEnd - iBegin <= 1)
-        return;
-    
-    iMiddle = (iEnd + iBegin) / 2;
-    
-    TopDownSplitMerge(A, iBegin,  iMiddle, B);
-    TopDownSplitMerge(A, iMiddle,    iEnd, B);
-    
-    TopDownMerge(B, iBegin, iMiddle, iEnd, A);
-}
-
-static void TopDownMergeSort(struct BugCatchingContestant A[], struct BugCatchingContestant B[], u8 n)
-{
-    CopyArray(A, 0, n, B);
-    TopDownSplitMerge(B, 0, n, A);
-}
-
-static void Reverse(struct BugCatchingContestant A[], u8 start, u8 end)
-{
-    while (start < end)
-    {
-        struct BugCatchingContestant temp;
-        
-        temp.contestantId = A[start].contestantId;
-        temp.pkmnId = A[start].pkmnId;
-        temp.score = A[start].score;
-        
-        A[start].contestantId = A[end].contestantId;
-        A[start].pkmnId = A[end].pkmnId;
-        A[start].score = A[end].score;
-        
-        A[end].contestantId = temp.contestantId;
-        A[end].pkmnId = temp.pkmnId;
-        A[end].score = temp.score;
-        
-        start++;
-        end--;
-    }
+    struct BugCatchingContestant *a1 = (struct BugCatchingContestant *)a;
+    struct BugCatchingContestant *b1 = (struct BugCatchingContestant *)b;
+    return (a1->score <= b1->score);
 }
 
 void SelectBugCatchingContestWinners(void)
 {
-    struct BugCatchingContestant workArray[CONTESTANT_COUNT + 1];
-    
+    // Generate the 4 NPC contestants' scores
     GenerateContestantScores();
+    
+    // Add the player's score to the end of the array
     sContestants[CONTESTANT_COUNT].contestantId = BUG_CATCHING_CONTEST_PLAYER;
     sContestants[CONTESTANT_COUNT].score = CalculatePlayerScore();
     
-    TopDownMergeSort(sContestants, workArray, CONTESTANT_COUNT + 1);
-    Reverse(sContestants, 0, CONTESTANT_COUNT);
+    // Sort the array s.t. element 0 is the contestant 1st place, element 1 is 2nd place, etc.
+    MergeSort(sContestants, CONTESTANT_COUNT + 1, sizeof(struct BugCatchingContestant), CompareBugCatchingContestantScores);
 }
 
 void BufferBugCatchingContestStrings(void)

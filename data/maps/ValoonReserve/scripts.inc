@@ -109,16 +109,19 @@ ValoonReserve_EventScript_BugCatchingContestJudgingRound::
 	textcolor 0 // Blue
 	msgbox ValoonReserve_Text_WeWillNowJudgeThePokemon, MSGBOX_DEFAULT
 	special SelectBugCatchingContestWinners
+	// Third place
 	setvar VAR_RESULT, 2
 	special BufferBugCatchingContestStrings
 	msgbox ValoonReserve_Text_PlacingThirdIs, MSGBOX_DEFAULT
 	special BufferBugCatchingContestScore
 	msgbox ValoonReserve_Text_TheScoreWas, MSGBOX_DEFAULT
+	// Second place
 	setvar VAR_RESULT, 1
 	special BufferBugCatchingContestStrings
 	msgbox ValoonReserve_Text_PlacingSecondIs, MSGBOX_DEFAULT
 	special BufferBugCatchingContestScore
 	msgbox ValoonReserve_Text_TheScoreWas, MSGBOX_DEFAULT
+	// First place
 	setvar VAR_RESULT, 0
 	special BufferBugCatchingContestStrings
 	msgbox ValoonReserve_Text_ThisBugCatchingContestWinnerIs, MSGBOX_DEFAULT
