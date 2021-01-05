@@ -186,8 +186,8 @@ DewfordTown_EventScript_SailToSlateport:: @ 81E96E7
 	clearflag 0
 	setflag 0
 	hideobjectat LOCALID_BOAT_DEWFORD, MAP_DEWFORD_TOWN
-	call_if_unset FLAG_DELIVERED_DEVON_GOODS, DewfordTown_EventScript_LandedSlateportDeliverGoods
-	call_if_set FLAG_DELIVERED_DEVON_GOODS, DewfordTown_EventScript_LandedSlateport
+	call_if_unset 0, DewfordTown_EventScript_LandedSlateportDeliverGoods
+	call_if_set 0, DewfordTown_EventScript_LandedSlateport
 	closemessage
 	copyvar VAR_BRINEY_LOCATION, VAR_0x8008
 	resetobjectpriority OBJ_EVENT_ID_PLAYER, MAP_DEWFORD_TOWN

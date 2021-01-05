@@ -115,20 +115,34 @@ ValoonReserve_EventScript_BugCatchingContestJudgingRound::
 	msgbox ValoonReserve_Text_PlacingThirdIs, MSGBOX_DEFAULT
 	special BufferBugCatchingContestScore
 	msgbox ValoonReserve_Text_TheScoreWas, MSGBOX_DEFAULT
+	bufferitemname 0, ITEM_SITRUS_BERRY
+	msgbox ValoonReserve_Text_ThePrizeForThird, MSGBOX_DEFAULT
 	// Second place
 	setvar VAR_RESULT, 1
 	special BufferBugCatchingContestStrings
 	msgbox ValoonReserve_Text_PlacingSecondIs, MSGBOX_DEFAULT
 	special BufferBugCatchingContestScore
 	msgbox ValoonReserve_Text_TheScoreWas, MSGBOX_DEFAULT
+	bufferitemname 0, ITEM_EVERSTONE
+	msgbox ValoonReserve_Text_ThePrizeForSecond, MSGBOX_DEFAULT
 	// First place
 	setvar VAR_RESULT, 0
 	special BufferBugCatchingContestStrings
 	msgbox ValoonReserve_Text_ThisBugCatchingContestWinnerIs, MSGBOX_DEFAULT
 	special BufferBugCatchingContestScore
 	msgbox ValoonReserve_Text_TheScoreWas, MSGBOX_DEFAULT
+	specialvar VAR_0x8004, GiveFirstPlaceBugCatchingContestPrize
+	bufferitemname 0, VAR_0x8004
+	bufferitemname 1, ITEM_SHED_SHELL
+	msgbox ValoonReserve_Text_ThePrizeForFirst, MSGBOX_DEFAULT
+	specialvar VAR_0x8005, GetPlayersBugCatchingContestPrize
+	giveitem VAR_0x8005
+	compare VAR_RESULT, TRUE
+	call_if_eq ValoonReserve_EventScript_TrySetMegaStonePrizeFlag
+	compare VAR_RESULT, FALSE
+	call_if_eq Common_EventScript_BagIsFull
 	msgbox ValoonReserve_Text_ThankYouAllForCompeting, MSGBOX_DEFAULT
-	specialvar VAR_RESULT, IsVernonCompeting
+	specialvar VAR_RESULT, IsVernonCompetingInBugCatchingContest
 	compare VAR_RESULT, TRUE
 	call_if_eq ValoonReserve_EventScript_UnlockValoonGym
 	textcolor 2 // Dark Grey
@@ -141,6 +155,15 @@ ValoonReserve_EventScript_BugCatchingContestJudgingRound::
 	msgbox gText_NoMoreRoomForPokemon, MSGBOX_DEFAULT
 	goto ValoonReserve_EventScript_Exit
 	end
+
+ValoonReserve_EventScript_UnlockValoonGym:
+	setflag FLAG_UNLOCK_VALOON_GYM_DOOR
+	setflag FLAG_HIDE_VALOON_TOWN_RANGERS_HQ_VERNON
+	return
+
+ValoonReserve_EventScript_TrySetMegaStonePrizeFlag:
+	special TrySetMegaStonePrizeFlag
+	return
 
 ValoonReserve_EventScript_ReceiveCaughtBugParty::
 	msgbox ValoonReserve_Text_NicknameThisPokemon, MSGBOX_YESNO
@@ -177,10 +200,18 @@ ValoonReserve_Text_PlacingThirdIs:
 	.string "{STR_VAR_2}, who caught a writhing\l"
 	.string "{STR_VAR_3}!$"
 
+ValoonReserve_Text_ThePrizeForThird:
+	.string "The prize for third place\n"
+	.string "is {COLOR GREEN}1 {STR_VAR_1}{COLOR BLUE}!$"
+
 ValoonReserve_Text_PlacingSecondIs:
 	.string "Placing second is {STR_VAR_1}\n"
 	.string "{STR_VAR_2}, who caught a wriggling\l"
 	.string "{STR_VAR_3}!$"
+
+ValoonReserve_Text_ThePrizeForSecond:
+	.string "The prize for second place\n"
+	.string "is {COLOR GREEN}1 {STR_VAR_1}{COLOR BLUE}!$"
 
 ValoonReserve_Text_ThisBugCatchingContestWinnerIs:
 	.string "This Bug-Catching Contest winner\n"
@@ -188,23 +219,25 @@ ValoonReserve_Text_ThisBugCatchingContestWinnerIs:
 	.string "{STR_VAR_1} {STR_VAR_2}, who\n"
 	.string "caught a whopping {STR_VAR_3}!$"
 
+ValoonReserve_Text_ThePrizeForFirst:
+	.string "The prize for first place\n"
+	.string "is a rare {COLOR GREEN}{STR_VAR_1}{COLOR BLUE}!\p"
+	.string "Congratulations to the winners!\p"
+	.string "The consolation prize is\n"
+	.string "{COLOR GREEN}1 {STR_VAR_2}{COLOR BLUE}!$"
+
 ValoonReserve_Text_TheScoreWas:
 	.string "The score was {STR_VAR_1} points!$"
 
 ValoonReserve_Text_ThankYouAllForCompeting:
+	.string "Thank you all for competing!\p"
 	.string "We'll return the Pokémon we kept\n"
 	.string "for you. Here you go!\p"
-	.string "Thank you all for competing!\n"
 	.string "We hope to see you again.$"
 
 ValoonReserve_Text_NicknameThisPokemon:
 	.string "Would you like to give a nickname\n"
 	.string "to the {STR_VAR_1} you caught?$"
-
-ValoonReserve_EventScript_UnlockValoonGym:
-	setflag FLAG_UNLOCK_VALOON_GYM_DOOR
-	setflag FLAG_HIDE_VALOON_TOWN_RANGERS_HQ_VERNON
-	return
 
 ValoonReserve_EventScript_RetirePrompt::
 	lockall

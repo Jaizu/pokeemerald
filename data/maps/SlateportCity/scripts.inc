@@ -277,7 +277,7 @@ SlateportCity_EventScript_Man1SternInterview:: @ 81DCF0D
 SlateportCity_EventScript_Woman1:: @ 81DCF17
 	lock
 	faceplayer
-	goto_if_set FLAG_DOCK_REJECTED_DEVON_GOODS, SlateportCity_EventScript_Woman1AquaGone
+	goto_if_set 0, SlateportCity_EventScript_Woman1AquaGone
 	msgbox SlateportCity_Text_WhatsLongLineOverThere, MSGBOX_DEFAULT
 	release
 	end

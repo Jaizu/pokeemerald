@@ -28,6 +28,12 @@ struct BugCatchingContestant {
     u16 score;
 };
 
+struct MegaStonePrize {
+    u16 species;
+    u16 item;
+    u16 flag;
+};
+
 extern u8 gNumParkBalls;
 
 bool32 GetBugCatchingContestFlag(void);

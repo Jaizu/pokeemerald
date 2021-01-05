@@ -453,7 +453,7 @@ void SelectBugCatchingContestWinners(void)
     sContestants[CONTESTANT_COUNT].contestantId = BUG_CATCHING_CONTEST_PLAYER;
     sContestants[CONTESTANT_COUNT].score = CalculatePlayerScore();
     
-    // Sort the array s.t. element 0 is the contestant 1st place, element 1 is 2nd place, etc.
+    // Sort the array s.t. element 0 is the contestant in 1st place, element 1 is 2nd place, etc.
     MergeSort(sContestants, CONTESTANT_COUNT + 1, sizeof(struct BugCatchingContestant), CompareBugCatchingContestantScores);
 }
 
@@ -485,13 +485,73 @@ void BufferBugCatchingContestScore(void)
     ConvertIntToDecimalStringN(gStringVar1, score, STR_CONV_MODE_LEFT_ALIGN, CountDigits(score));
 }
 
-bool8 IsVernonCompeting(void)
+bool8 IsVernonCompetingInBugCatchingContest(void)
 {
     u8 i;
     for (i = 0; i < CONTESTANT_COUNT + 1; i++)
-    {
         if (sContestants[i].contestantId == BUG_CATCHING_CONTEST_TRAINER_VERNON)
             return TRUE;
-    }
+
     return FALSE;
+}
+
+bool8 IsntGivingPlayerSecondMegaStone(u8 i)
+{
+    return (!FlagGet(sMegaStonePrizes[i].flag) || sContestants[0].contestantId != BUG_CATCHING_CONTEST_PLAYER);
+}
+
+u16 GetMegaStonePrizeFromSpecies(u16 species)
+{
+    u16 prize = ITEM_NONE;
+    u8 i;
+    for (i = 0; i < NUM_MEGA_STONE_PRIZES; i++)
+        if (sMegaStonePrizes[i].species == species && IsntGivingPlayerSecondMegaStone(i))
+            prize = sMegaStonePrizes[i].item;
+    
+    return prize;
+}
+
+u16 GetRandomPrize(void)
+{
+    return sBugCatchingContestPrizes[Random() % NUM_BUG_CATCHING_CONTEST_PRIZES];
+}
+
+u16 GiveFirstPlaceBugCatchingContestPrize(void)
+{
+    u16 contestantId = sContestants[0].contestantId;
+    u8 pkmnID = sContestants[0].pkmnId;
+    
+    u16 prize = GetMegaStonePrizeFromSpecies(sBugCatchingContestTrainers[contestantId].pokemon[pkmnID].species);
+    if (prize == ITEM_NONE)
+        prize = GetRandomPrize();
+    
+    return prize;
+}
+
+u16 GetPlayersBugCatchingContestPrize(void)
+{
+    // Assume the first place prize is still stored in gSpecialVar_0x8004
+    if (sContestants[0].contestantId == BUG_CATCHING_CONTEST_PLAYER)
+        return gSpecialVar_0x8004;
+    else if (sContestants[1].contestantId == BUG_CATCHING_CONTEST_PLAYER)
+        return ITEM_EVERSTONE;
+    else if (sContestants[2].contestantId == BUG_CATCHING_CONTEST_PLAYER)
+        return ITEM_SITRUS_BERRY;
+    
+    return ITEM_SHED_SHELL;
+}
+
+void SetMegaStonePrizeFlag(u16 itemId)
+{
+    u8 i;
+    for (i = 0; i < NUM_MEGA_STONE_PRIZES; i++)
+        if (sMegaStonePrizes[i].item == itemId)
+            FlagSet(sMegaStonePrizes[i].flag);
+}
+
+void TrySetMegaStonePrizeFlag(void)
+{
+    // Assume the first place prize is still stored in gSpecialVar_0x8004
+    if (sContestants[0].contestantId == BUG_CATCHING_CONTEST_PLAYER)
+        SetMegaStonePrizeFlag(gSpecialVar_0x8004);
 }

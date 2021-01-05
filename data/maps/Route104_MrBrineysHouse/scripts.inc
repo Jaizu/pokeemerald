@@ -28,7 +28,7 @@ Route104_MrBrineysHouse_EventScript_Briney:: @ 8229D67
 	faceplayer
 	call_if_unset 0, Route104_MrBrineysHouse_EventScript_SailingIntro
 	goto_if_unset FLAG_DELIVERED_STEVEN_LETTER, Route104_MrBrineysHouse_EventScript_SailBothDeliveries
-	goto_if_unset FLAG_DELIVERED_DEVON_GOODS, Route104_MrBrineysHouse_EventScript_SailDeliverPackage
+	goto_if_unset 0, Route104_MrBrineysHouse_EventScript_SailDeliverPackage
 	goto Route104_MrBrineysHouse_EventScript_WhereAreWeBound
 	end
 

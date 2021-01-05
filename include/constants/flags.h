@@ -160,11 +160,11 @@
 #define FLAG_CLEAR_PATH_TO_SECRET_LAB                       0x90 // FLAG_RETURNED_DEVON_GOODS in Emerald
 #define FLAG_NEMESIS_CAVE_RANGERS_RETURNED                  0x91 // FLAG_CAUGHT_LUGIA in Emerald
 #define FLAG_RECEIVED_TM49                                  0x92 // FLAG_CAUGHT_HO_OH in Emerald
-#define FLAG_UNUSED_0x93                                    0x93 // FLAG_MR_BRINEY_SAILING_INTRO in Emerald
+#define FLAG_OBTAINED_PINSIRITE                             0x93 // FLAG_MR_BRINEY_SAILING_INTRO in Emerald
+#define FLAG_OBTAINED_SCIZORITE                             0x94 // FLAG_DOCK_REJECTED_DEVON_GOODS in Emerald
+#define FLAG_OBTAINED_HERACRONITE                           0x95 // FLAG_DELIVERED_DEVON_GOODS in Emerald
+#define FLAG_OBTAINED_BEEDRILLITE                           0x96 // FLAG_RECEIVED_CONTEST_PASS in Emerald
 
-#define FLAG_DOCK_REJECTED_DEVON_GOODS       0x94
-#define FLAG_DELIVERED_DEVON_GOODS           0x95
-#define FLAG_RECEIVED_CONTEST_PASS           0x96 // Unused, leftover from R/S
 #define FLAG_RECEIVED_CASTFORM               0x97
 #define FLAG_RECEIVED_SUPER_ROD              0x98
 #define FLAG_RUSTBORO_NPC_TRADE_COMPLETED    0x99

@@ -548,4 +548,7 @@ gSpecials::
 	def_special SelectBugCatchingContestWinners
 	def_special BufferBugCatchingContestStrings
 	def_special BufferBugCatchingContestScore
-	def_special IsVernonCompeting
+	def_special IsVernonCompetingInBugCatchingContest
+	def_special GiveFirstPlaceBugCatchingContestPrize
+	def_special GetPlayersBugCatchingContestPrize
+	def_special TrySetMegaStonePrizeFlag
