@@ -80,7 +80,13 @@ ValoonTown_Gym_EventScript_JimGai::
 	lock
 	faceplayer
 	goto_if_set FLAG_BADGE04_GET, ValoonTown_Gym_EventScript_CongratulatePlayer
+	goto_if_unset FLAG_VERNON_WON_BEEDRILLITE, ValoonTown_Gym_EventScript_WelcomeChampVernonDidntWin
 	msgbox ValoonTown_Gym_Text_WelcomeChamp, MSGBOX_DEFAULT
+	release
+	end
+
+ValoonTown_Gym_EventScript_WelcomeChampVernonDidntWin:
+	msgbox ValoonTown_Gym_Text_WelcomeChampVernonDidntWin, MSGBOX_DEFAULT
 	release
 	end
 
@@ -95,6 +101,19 @@ ValoonTown_Gym_Text_WelcomeChamp:
 	.string "Vernon was busy over at the\n"
 	.string "Bug-Catching Contest.\p"
 	.string "I heard he came first place!\p"
+	.string "Anyway, to challenge him you'll\n"
+	.string "need to activate each Combee tile.\p"
+	.string "Once all the Combee are smiling,\n"
+	.string "the honeycomb will clear!\p"
+	.string "Simple, right?$"
+
+ValoonTown_Gym_Text_WelcomeChampVernonDidntWin:
+	.string "Hey, champ!\n"
+	.string "We just re-opened.\p"
+	.string "Vernon was busy over at the\n"
+	.string "Bug-Catching Contest.\p"
+	.string "I heard he didn't win,\n"
+	.string "though…\p"
 	.string "Anyway, to challenge him you'll\n"
 	.string "need to activate each Combee tile.\p"
 	.string "Once all the Combee are smiling,\n"
