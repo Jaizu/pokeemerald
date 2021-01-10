@@ -3948,10 +3948,10 @@ const struct Item gItems[] =
         .itemId = ITEM_LETTER,
         .price = 0,
         .description = sLetterDesc,
-        .importance = 2,
+        .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
-        .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = 3,
+        .fieldUseFunc = ItemUseOutOfBattle_MorganasLetter,
         .secondaryId = 0,
     },
 

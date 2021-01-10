@@ -21,6 +21,7 @@
 #include "item.h"
 #include "item_menu.h"
 #include "item_use.h"
+#include "letter.h"
 #include "mail.h"
 #include "main.h"
 #include "menu.h"
@@ -71,6 +72,8 @@ static void Task_UseRepel(u8 taskId);
 static void Task_CloseCantUseKeyItemMessage(u8 taskId);
 static void SetDistanceOfClosestHiddenItem(u8 taskId, s16 x, s16 y);
 static void CB2_OpenPokeblockCaseOnField(void);
+static void CB2_ShowMorganasLetterFromBag(void);
+static void Task_ShowRegisteredMorganasLetter(u8 taskId);
 
 // EWRAM variables
 EWRAM_DATA static void(*sItemUseOnFieldCB)(u8 taskId) = NULL;
@@ -1152,6 +1155,40 @@ void ItemUseInBattle_EnigmaBerry(u8 taskId)
 void ItemUseOutOfBattle_CannotUse(u8 taskId)
 {
     DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+}
+
+void ItemUseOutOfBattle_MorganasLetter(u8 taskId)
+{
+    if (MenuHelpers_LinkSomething() == TRUE) // link func
+    {
+        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+    }
+    else if (gTasks[taskId].tUsingRegisteredKeyItem != TRUE)
+    {
+        gBagMenu->exitCallback = CB2_ShowMorganasLetterFromBag;
+        Task_FadeAndCloseBagMenu(taskId);
+    }
+    else
+    {
+        gFieldCallback = sub_80AF6D4; // FieldCB_ReturnToFieldNoScript
+        FadeScreen(FADE_TO_BLACK, 0);
+        gTasks[taskId].func = Task_ShowRegisteredMorganasLetter;
+    }
+}
+
+static void CB2_ShowMorganasLetterFromBag(void)
+{
+    ShowLetter(LETTER_MORGANAS_LETTER, CB2_ReturnToBagMenuPocket);
+}
+
+static void Task_ShowRegisteredMorganasLetter(u8 taskId)
+{
+    if (!gPaletteFade.active)
+    {
+        CleanupOverworldWindowsAndTilemaps();
+        ShowLetter(LETTER_MORGANAS_LETTER, CB2_ReturnToField);
+        DestroyTask(taskId);
+    }
 }
 
 #undef tUsingRegisteredKeyItem

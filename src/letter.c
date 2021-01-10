@@ -16,13 +16,12 @@
 #include "script.h"
 #include "event_data.h"
 #include "constants/rgb.h"
-#include "constants/letters.h"
 #include "data/letters.h"
 
+EWRAM_DATA static struct LetterSavedData sSavedLetterData = {0};
 EWRAM_DATA static u8 *sLetterTilemapPtr = NULL;
-EWRAM_DATA static u8 sLetterId = 0;
 
-void ShowLetter(void);
+void Special_ShowLetter(void);
 static void CB2_ShowLetter(void);
 static void MainCB2(void);
 static void Task_LetterFadeIn(u8);
@@ -69,11 +68,18 @@ static const struct WindowTemplate sLetterWinTemplates[2] =
     DUMMY_WIN_TEMPLATE,
 };
 
-void ShowLetter(void)
+void Special_ShowLetter(void)
 {
-    sLetterId = gSpecialVar_0x8004;
-    SetMainCallback2(CB2_ShowLetter);
+    ShowLetter(gSpecialVar_0x8004, CB2_ReturnToFieldContinueScriptPlayMapMusic);
     ScriptContext2_Enable();
+}
+
+void ShowLetter(u8 letterId, void (*callback)(void))
+{
+    sSavedLetterData.letterId = letterId;
+    sSavedLetterData.callback = callback;
+    
+    SetMainCallback2(CB2_ShowLetter);
 }
 
 static void VBlankCB(void)
@@ -107,15 +113,15 @@ static void CB2_ShowLetter(void)
     ResetSpriteData();
     ResetPaletteFade();
     FreeAllSpritePalettes();
-    LoadPalette(sLetters[sLetterId].palette, 0, 0x20);
+    LoadPalette(sLetters[sSavedLetterData.letterId].palette, 0, 0x20);
     sLetterTilemapPtr = malloc(0x1000);
     InitLetterBg();
     InitLetterWindow();
     ResetTempTileDataBuffers();
-    DecompressAndCopyTileDataToVram(1, sLetters[sLetterId].tiles, 0, 0, 0);
+    DecompressAndCopyTileDataToVram(1, sLetters[sSavedLetterData.letterId].tiles, 0, 0, 0);
     while (FreeTempTileDataBuffersIfPossible())
         ;
-    LZDecompressWram(sLetters[sLetterId].tilemap, sLetterTilemapPtr);
+    LZDecompressWram(sLetters[sSavedLetterData.letterId].tilemap, sLetterTilemapPtr);
     CopyBgTilemapBufferToVram(1);
     DisplayLetterText();
     BlendPalettes(-1, 16, 0);
@@ -156,15 +162,15 @@ static void Task_LetterFadeOut(u8 taskId)
         Free(sLetterTilemapPtr);
         FreeAllWindowBuffers();
         DestroyTask(taskId);
-        SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
+        SetMainCallback2(sSavedLetterData.callback);
     }
 }
 
 static void DisplayLetterText(void)
 {
     SetGpuReg(REG_OFFSET_BG1HOFS, DISPCNT_MODE_0);
-    StringExpandPlaceholders(gStringVar4, sLetters[sLetterId].string);
-    PrintLetterText(gStringVar4, sLetters[sLetterId].textX, sLetters[sLetterId].textY);
+    StringExpandPlaceholders(gStringVar4, sLetters[sSavedLetterData.letterId].string);
+    PrintLetterText(gStringVar4, sLetters[sSavedLetterData.letterId].textX, sLetters[sSavedLetterData.letterId].textY);
     PutWindowTilemap(0);
     CopyWindowToVram(0, 3);
 }

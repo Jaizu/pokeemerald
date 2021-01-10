@@ -1,6 +1,8 @@
 #ifndef GUARD_LETTER_H
 #define GUARD_LETTER_H
 
+#include "constants/letters.h"
+
 struct LetterData {
     const u16 *palette;
     const u32 *tilemap;
@@ -9,5 +11,13 @@ struct LetterData {
     u8 textX;
     u8 textY;
 };
+
+struct LetterSavedData
+{
+    void (*callback)(void);
+    u8 letterId;
+};
+
+void ShowLetter(u8 letterId, void (*callback)(void));
 
 #endif // GUARD_LETTER_H

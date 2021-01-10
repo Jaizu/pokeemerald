@@ -33,7 +33,7 @@ CelantoTown_PlayersHouse_1F_EventScript_DeliverLetterScene::
 	msgbox CelantoTown_PlayersHouse_1F_Text_WeGotThisLetter, MSGBOX_AUTOCLOSE
 	additem ITEM_LETTER
 	setvar VAR_0x8004, LETTER_MORGANAS_LETTER
-	special ShowLetter
+	special Special_ShowLetter
 	waitstate
 	msgbox CelantoTown_PlayersHouse_1F_Text_SoMeetAtReliquia
 	goto_if_unset FLAG_HIDE_DUSTY_TOME, CelantoTown_PlayersHouse_1F_EventScript_GoGetTheBook

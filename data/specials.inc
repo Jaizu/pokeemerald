@@ -554,4 +554,4 @@ gSpecials::
 	def_special TrySetMegaStonePrizeFlag
 	def_special TrySetVernonBeedrilliteFlag
 	def_special BufferBugCatchingContestantDialog
-	def_special ShowLetter
+	def_special Special_ShowLetter
