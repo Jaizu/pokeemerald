@@ -1420,10 +1420,10 @@ static const u8 sSuperRodDesc[] = _(
     "rod for catching\n"
     "wild POKéMON.");
 
-static const u8 sSSTicketDesc[] = _(
-    "The ticket required\n"
-    "for sailing on a\n"
-    "ferry.");
+static const u8 sRedwoodCardDesc[] = _(
+    "An official Redwood\n"
+    "Membership Card. It\n"
+    "is probably useful!");
 
 static const u8 sContestPassDesc[] = _(
     "The pass required\n"

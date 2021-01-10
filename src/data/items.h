@@ -3836,12 +3836,12 @@ const struct Item gItems[] =
         .secondaryId = SUPER_ROD,
     },
 
-    [ITEM_SS_TICKET] =
+    [ITEM_REDWOOD_CARD] =
     {
-        .name = _("S.S. Ticket"),
-        .itemId = ITEM_SS_TICKET,
+        .name = _("Redwood Card"),
+        .itemId = ITEM_REDWOOD_CARD,
         .price = 0,
-        .description = sSSTicketDesc,
+        .description = sRedwoodCardDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,

@@ -52,8 +52,7 @@
 		setflag FLAG_SYS_POKEDEX_GET
 		special SetUnlockedPokedexFlags
 		// Obtain Care Package items
-		// TODO: Add Redwood Card item
-		// additem ITEM_REDWOOD_CARD
+		additem ITEM_REDWOOD_CARD
 		additem ITEM_TOWN_MAP
 		// Coulter leaves
 		setflag FLAG_HIDE_REDWOOD_RESIDENCE_COULTER

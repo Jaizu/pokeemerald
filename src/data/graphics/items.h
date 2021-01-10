@@ -601,8 +601,8 @@ const u32 gItemIconPalette_GoodRod[] = INCBIN_U32("graphics/items/icon_palettes/
 const u32 gItemIcon_SuperRod[] = INCBIN_U32("graphics/items/icons/super_rod.4bpp.lz");
 const u32 gItemIconPalette_SuperRod[] = INCBIN_U32("graphics/items/icon_palettes/super_rod.gbapal.lz");
 
-const u32 gItemIcon_SSTicket[] = INCBIN_U32("graphics/items/icons/ss_ticket.4bpp.lz");
-const u32 gItemIconPalette_SSTicket[] = INCBIN_U32("graphics/items/icon_palettes/ss_ticket.gbapal.lz");
+const u32 gItemIcon_RedwoodCard[] = INCBIN_U32("graphics/items/icons/redwood_card.4bpp.lz");
+const u32 gItemIconPalette_RedwoodCard[] = INCBIN_U32("graphics/items/icon_palettes/redwood_card.gbapal.lz");
 
 const u32 gItemIcon_ContestPass[] = INCBIN_U32("graphics/items/icons/contest_pass.4bpp.lz");
 const u32 gItemIconPalette_ContestPass[] = INCBIN_U32("graphics/items/icon_palettes/contest_pass.gbapal.lz");
