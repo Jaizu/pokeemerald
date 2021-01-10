@@ -29,6 +29,7 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_PARK_BALL] = {gItemIcon_ParkBall, gItemIconPalette_ParkBall},
     [ITEM_DREAM_BALL] = {gItemIcon_DreamBall, gItemIconPalette_DreamBall},
     [ITEM_BEAST_BALL] = {gItemIcon_BeastBall, gItemIconPalette_BeastBall},
+    [ITEM_RELIC_BALL] = {gItemIcon_RelicBall, gItemIconPalette_RelicBall},
     // Medicine
     [ITEM_POTION] = {gItemIcon_Potion, gItemIconPalette_Potion},
     [ITEM_ANTIDOTE] = {gItemIcon_Antidote, gItemIconPalette_Antidote},

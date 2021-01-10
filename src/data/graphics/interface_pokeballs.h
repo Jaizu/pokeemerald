@@ -79,4 +79,7 @@ const u32 gInterfacePal_DreamBall[] = INCBIN_U32("graphics/interface/ball/dream.
 const u32 gInterfaceGfx_BeastBall[] = INCBIN_U32("graphics/interface/ball/beast.4bpp.lz");
 const u32 gInterfacePal_BeastBall[] = INCBIN_U32("graphics/interface/ball/beast.gbapal.lz");
 
+const u32 gInterfaceGfx_RelicBall[] = INCBIN_U32("graphics/interface/ball/relic.4bpp.lz");
+const u32 gInterfacePal_RelicBall[] = INCBIN_U32("graphics/interface/ball/relic.gbapal.lz");
+
 const u32 gOpenPokeballGfx[] = INCBIN_U32("graphics/interface/ball_open.4bpp.lz");

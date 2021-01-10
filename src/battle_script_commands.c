@@ -12078,6 +12078,10 @@ static void Cmd_handleballthrow(void)
             case ITEM_BEAST_BALL:
                 ballMultiplier = 1;
                 break;
+            case ITEM_RELIC_BALL:
+                // TODO: Implement the Relic Ball buff on Ancient Power-learning Pokémon
+                ballMultiplier = 15;
+                break;
             }
         }
         else

@@ -1,6 +1,3 @@
-// TODO: Create the Relic Ball item
-.equ ITEM_RELIC_BALL, ITEM_POKE_BALL
-
 AerousCity_Museum_1F_MapScripts::
 	.byte 0
 

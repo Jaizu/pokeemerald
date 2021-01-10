@@ -123,8 +123,9 @@ static const u8 sSportBallDesc[] = _(
     "Contest.");
 
 static const u8 sParkBallDesc[] = _(
-    "A special Ball for\n"
-    "the Pal Park.");
+    "A special Ball used\n"
+    "in the Bug-Catching\n"
+    "Contest.");
 
 static const u8 sDreamBallDesc[] = _(
     "A Poké Ball used in\n"
@@ -134,6 +135,11 @@ static const u8 sDreamBallDesc[] = _(
 static const u8 sBeastBallDesc[] = _(
     "A Ball designed to\n"
     "catch Ultra Beasts.");
+
+static const u8 sRelicBallDesc[] = _(
+    "A rare Ball that\n"
+    "works well on\n"
+    "ancient Pokémon.");
 
 // Medicine
 static const u8 sPotionDesc[] = _(

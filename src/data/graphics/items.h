@@ -85,6 +85,9 @@ const u32 gItemIconPalette_DreamBall[] = INCBIN_U32("graphics/items/icon_palette
 const u32 gItemIcon_BeastBall[] = INCBIN_U32("graphics/items/icons/beast_ball.4bpp.lz");
 const u32 gItemIconPalette_BeastBall[] = INCBIN_U32("graphics/items/icon_palettes/beast_ball.gbapal.lz");
 
+const u32 gItemIcon_RelicBall[] = INCBIN_U32("graphics/items/icons/relic_ball.4bpp.lz");
+const u32 gItemIconPalette_RelicBall[] = INCBIN_U32("graphics/items/icon_palettes/relic_ball.gbapal.lz");
+
 // Medicine
 
 const u32 gItemIcon_Potion[] = INCBIN_U32("graphics/items/icons/potion.4bpp.lz");

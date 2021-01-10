@@ -154,6 +154,7 @@ static const struct CaptureStar sCaptureStars[] =
 #define TAG_PARTICLES_PARKBALL    65054
 #define TAG_PARTICLES_DREAMBALL   65065
 #define TAG_PARTICLES_BEASTBALL   65056
+#define TAG_PARTICLES_RELICBALL   65057
 
 static const u32 sNewParticlesGfx[] = INCBIN_U32("graphics/interface/ball/particles2.4bpp.lz");
 static const u32 sNewParticlesPal[] = INCBIN_U32("graphics/interface/ball/particles2.gbapal.lz");
@@ -187,6 +188,7 @@ static const struct CompressedSpriteSheet sBallParticleSpriteSheets[] =
     [BALL_PARK]     = {gBattleAnimSpriteGfx_Particles,      0x100, TAG_PARTICLES_PARKBALL},
     [BALL_DREAM]    = {gBattleAnimSpriteGfx_Particles,      0x100, TAG_PARTICLES_DREAMBALL},
     [BALL_BEAST]    = {gBattleAnimSpriteGfx_Particles,      0x100, TAG_PARTICLES_BEASTBALL},
+    [BALL_RELIC]    = {gBattleAnimSpriteGfx_Particles,      0x100, TAG_PARTICLES_RELICBALL},
 };
 
 static const struct CompressedSpritePalette sBallParticlePalettes[] =
@@ -218,6 +220,7 @@ static const struct CompressedSpritePalette sBallParticlePalettes[] =
     [BALL_PARK]     = {gBattleAnimSpritePal_CircleImpact,   TAG_PARTICLES_PARKBALL},
     [BALL_DREAM]    = {gBattleAnimSpritePal_CircleImpact,   TAG_PARTICLES_DREAMBALL},
     [BALL_BEAST]    = {gBattleAnimSpritePal_CircleImpact,   TAG_PARTICLES_BEASTBALL},
+    [BALL_RELIC]    = {gBattleAnimSpritePal_CircleImpact,   TAG_PARTICLES_RELICBALL},
 };
 
 static const union AnimCmd sAnim_RegularBall[] =
@@ -302,6 +305,7 @@ static const u8 sBallParticleAnimNums[POKEBALL_COUNT] =
     [BALL_PARK] = 5,
     [BALL_DREAM] = 5,
     [BALL_BEAST] = 5,
+    [BALL_RELIC] = 5,
 };
 
 static const TaskFunc sBallParticleAnimationFuncs[] =
@@ -334,7 +338,8 @@ static const TaskFunc sBallParticleAnimationFuncs[] =
     [BALL_CHERISH] = MasterBallOpenParticleAnimation,
     [BALL_PARK] = UltraBallOpenParticleAnimation,
     [BALL_DREAM] = UltraBallOpenParticleAnimation,
-    [BALL_BEAST] = UltraBallOpenParticleAnimation
+    [BALL_BEAST] = UltraBallOpenParticleAnimation,
+    [BALL_RELIC] = UltraBallOpenParticleAnimation
 };
 
 static const struct SpriteTemplate sBallParticleSpriteTemplates[POKEBALL_COUNT] =
@@ -447,7 +452,7 @@ static const struct SpriteTemplate sBallParticleSpriteTemplates[POKEBALL_COUNT] 
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCallbackDummy,
     },
-    {
+    [BALL_LEVEL] = {
         .tileTag = TAG_PARTICLES_LEVELBALL,
         .paletteTag = TAG_PARTICLES_LEVELBALL,
         .oam = &gOamData_AffineOff_ObjNormal_8x8,
@@ -456,7 +461,7 @@ static const struct SpriteTemplate sBallParticleSpriteTemplates[POKEBALL_COUNT] 
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCallbackDummy,
     },
-    {
+    [BALL_LURE] = {
         .tileTag = TAG_PARTICLES_LUREBALL,
         .paletteTag = TAG_PARTICLES_LUREBALL,
         .oam = &gOamData_AffineOff_ObjNormal_8x8,
@@ -465,7 +470,7 @@ static const struct SpriteTemplate sBallParticleSpriteTemplates[POKEBALL_COUNT] 
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCallbackDummy,
     },
-    {
+    [BALL_MOON] = {
         .tileTag = TAG_PARTICLES_MOONBALL,
         .paletteTag = TAG_PARTICLES_MOONBALL,
         .oam = &gOamData_AffineOff_ObjNormal_8x8,
@@ -474,7 +479,7 @@ static const struct SpriteTemplate sBallParticleSpriteTemplates[POKEBALL_COUNT] 
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCallbackDummy,
     },
-    {
+    [BALL_FRIEND] = {
         .tileTag = TAG_PARTICLES_FRIENDBALL,
         .paletteTag = TAG_PARTICLES_FRIENDBALL,
         .oam = &gOamData_AffineOff_ObjNormal_8x8,
@@ -483,7 +488,7 @@ static const struct SpriteTemplate sBallParticleSpriteTemplates[POKEBALL_COUNT] 
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCallbackDummy,
     },
-    {
+    [BALL_LOVE] = {
         .tileTag = TAG_PARTICLES_LOVEBALL,
         .paletteTag = TAG_PARTICLES_LOVEBALL,
         .oam = &gOamData_AffineOff_ObjNormal_8x8,
@@ -492,7 +497,7 @@ static const struct SpriteTemplate sBallParticleSpriteTemplates[POKEBALL_COUNT] 
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCallbackDummy,
     },
-    {
+    [BALL_HEAVY] = {
         .tileTag = TAG_PARTICLES_HEAVYBALL,
         .paletteTag = TAG_PARTICLES_HEAVYBALL,
         .oam = &gOamData_AffineOff_ObjNormal_8x8,
@@ -501,7 +506,7 @@ static const struct SpriteTemplate sBallParticleSpriteTemplates[POKEBALL_COUNT] 
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCallbackDummy,
     },
-    {
+    [BALL_FAST] = {
         .tileTag = TAG_PARTICLES_FASTBALL,
         .paletteTag = TAG_PARTICLES_FASTBALL,
         .oam = &gOamData_AffineOff_ObjNormal_8x8,
@@ -510,7 +515,7 @@ static const struct SpriteTemplate sBallParticleSpriteTemplates[POKEBALL_COUNT] 
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCallbackDummy,
     },
-    {
+    [BALL_SPORT] = {
         .tileTag = TAG_PARTICLES_SPORTBALL,
         .paletteTag = TAG_PARTICLES_SPORTBALL,
         .oam = &gOamData_AffineOff_ObjNormal_8x8,
@@ -519,7 +524,7 @@ static const struct SpriteTemplate sBallParticleSpriteTemplates[POKEBALL_COUNT] 
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCallbackDummy,
     },
-    {
+    [BALL_DUSK] = {
         .tileTag = TAG_PARTICLES_DUSKBALL,
         .paletteTag = TAG_PARTICLES_DUSKBALL,
         .oam = &gOamData_AffineOff_ObjNormal_8x8,
@@ -528,7 +533,7 @@ static const struct SpriteTemplate sBallParticleSpriteTemplates[POKEBALL_COUNT] 
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCallbackDummy,
     },
-    {
+    [BALL_QUICK] = {
         .tileTag = TAG_PARTICLES_QUICKBALL,
         .paletteTag = TAG_PARTICLES_QUICKBALL,
         .oam = &gOamData_AffineOff_ObjNormal_8x8,
@@ -537,7 +542,7 @@ static const struct SpriteTemplate sBallParticleSpriteTemplates[POKEBALL_COUNT] 
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCallbackDummy,
     },
-    {
+    [BALL_HEAL] = {
         .tileTag = TAG_PARTICLES_HEALBALL,
         .paletteTag = TAG_PARTICLES_HEALBALL,
         .oam = &gOamData_AffineOff_ObjNormal_8x8,
@@ -546,7 +551,7 @@ static const struct SpriteTemplate sBallParticleSpriteTemplates[POKEBALL_COUNT] 
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCallbackDummy,
     },
-    {
+    [BALL_CHERISH] = {
         .tileTag = TAG_PARTICLES_CHERISHBALL,
         .paletteTag = TAG_PARTICLES_CHERISHBALL,
         .oam = &gOamData_AffineOff_ObjNormal_8x8,
@@ -555,7 +560,7 @@ static const struct SpriteTemplate sBallParticleSpriteTemplates[POKEBALL_COUNT] 
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCallbackDummy,
     },
-    {
+    [BALL_PARK] = {
         .tileTag = TAG_PARTICLES_PARKBALL,
         .paletteTag = TAG_PARTICLES_PARKBALL,
         .oam = &gOamData_AffineOff_ObjNormal_8x8,
@@ -564,7 +569,7 @@ static const struct SpriteTemplate sBallParticleSpriteTemplates[POKEBALL_COUNT] 
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCallbackDummy,
     },
-    {
+    [BALL_DREAM] = {
         .tileTag = TAG_PARTICLES_DREAMBALL,
         .paletteTag = TAG_PARTICLES_DREAMBALL,
         .oam = &gOamData_AffineOff_ObjNormal_8x8,
@@ -573,9 +578,18 @@ static const struct SpriteTemplate sBallParticleSpriteTemplates[POKEBALL_COUNT] 
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCallbackDummy,
     },
-    {
+    [BALL_BEAST] = {
         .tileTag = TAG_PARTICLES_BEASTBALL,
         .paletteTag = TAG_PARTICLES_BEASTBALL,
+        .oam = &gOamData_AffineOff_ObjNormal_8x8,
+        .anims = sAnims_BallParticles,
+        .images = NULL,
+        .affineAnims = gDummySpriteAffineAnimTable,
+        .callback = SpriteCallbackDummy,
+    },
+    [BALL_RELIC] = {
+        .tileTag = TAG_PARTICLES_RELICBALL,
+        .paletteTag = TAG_PARTICLES_RELICBALL,
         .oam = &gOamData_AffineOff_ObjNormal_8x8,
         .anims = sAnims_BallParticles,
         .images = NULL,
@@ -615,6 +629,7 @@ const u16 gBallOpenFadeColors[] =
     [BALL_PARK] = RGB(31, 31, 15),
     [BALL_DREAM] = RGB(31, 31, 15),
     [BALL_BEAST] = RGB(31, 31, 15),
+    [BALL_RELIC] = RGB(11, 8, 7),
 };
 
 const struct SpriteTemplate gPokeblockSpriteTemplate =
@@ -1003,6 +1018,8 @@ u8 ItemIdToBallId(u16 ballItem)
         return BALL_DREAM;
     case ITEM_BEAST_BALL:
         return BALL_BEAST;
+    case ITEM_RELIC_BALL:
+        return BALL_RELIC;
     default:
         return BALL_POKE;
     }
