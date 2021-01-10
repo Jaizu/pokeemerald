@@ -1390,8 +1390,8 @@ const u32 gItemIconPalette_Salamencite[] = INCBIN_U32("graphics/items/icon_palet
 const u32 gItemIcon_Beedrillite[] = INCBIN_U32("graphics/items/icons/beedrillite.4bpp.lz");
 const u32 gItemIconPalette_Beedrillite[] = INCBIN_U32("graphics/items/icon_palettes/beedrillite.gbapal.lz");
 
-const u32 gItemIcon_MegaBracelet[] = INCBIN_U32("graphics/items/icons/mega_bracelet.4bpp.lz");
-const u32 gItemIconPalette_MegaBracelet[] = INCBIN_U32("graphics/items/icon_palettes/mega_bracelet.gbapal.lz");
+const u32 gItemIcon_MegaRing[] = INCBIN_U32("graphics/items/icons/mega_ring.4bpp.lz");
+const u32 gItemIconPalette_MegaRing[] = INCBIN_U32("graphics/items/icon_palettes/mega_ring.gbapal.lz");
 
 const u32 gItemIcon_AbilityCapsule[] = INCBIN_U32("graphics/items/icons/ability_capsule.4bpp.lz");
 const u32 gItemIconPalette_AbilityCapsule[] = INCBIN_U32("graphics/items/icon_palettes/ability_capsule.gbapal.lz");

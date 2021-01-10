@@ -1,8 +1,5 @@
 .set LOCALID_BELLE, 1
 
-// TODO: Add Mega Ring item
-.set ITEM_MEGA_RING, 0
-
 SabuloTower_6F_2R_MapScripts::
 	.byte 0
 

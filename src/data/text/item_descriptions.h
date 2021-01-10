@@ -2739,7 +2739,7 @@ static const u8 sBeedrilliteDesc[] = _(
     "Beedrill to Mega\n"
     "Evolve in battle.");
 
-static const u8 sMegaBraceletDesc[] = _(
+static const u8 sMegaRingDesc[] = _(
     "Enables {PKMN} holding\n"
     "their Mega Stone to\n"
     "Mega Evolve.");

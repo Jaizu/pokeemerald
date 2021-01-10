@@ -7403,12 +7403,12 @@ const struct Item gItems[] =
         .secondaryId = 0,
     },
 
-    [ITEM_MEGA_BRACELET] =
+    [ITEM_MEGA_RING] =
     {
-        .name = _("Mega Bracelet"),
-        .itemId = ITEM_MEGA_BRACELET,
-        .price = 200,
-        .description = sMegaBraceletDesc,
+        .name = _("Mega Ring"),
+        .itemId = ITEM_MEGA_RING,
+        .price = 0,
+        .description = sMegaRingDesc,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,

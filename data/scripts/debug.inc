@@ -339,8 +339,7 @@
 		// Fight Belle
 		settrainerflag TRAINER_BELLE_1
 		// Obtain Mega Ring
-		// TODO: Add Mega Ring item
-		// additem ITEM_MEGA_RING
+		additem ITEM_MEGA_RING
 		setflag FLAG_RECEIVED_MEGA_RING
 		// Belle leaves
 		setflag FLAG_HIDE_SABULO_TOWER_6F_2R_BELLE
