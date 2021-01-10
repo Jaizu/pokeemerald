@@ -16,17 +16,17 @@ enum
 
 #define NUM_BUG_CATCHING_CONTEST_TRAINERS BUG_CATCHING_CONTEST_TRAINER_VERNON
 
-static const u8 sText_BeaslyDialog[] = _("The Pokémon's level affects the\npoints you get!$");
-static const u8 sText_CalumDialog[] = _("Hm… Do I keep the Pokémon I have,\nor try to find a stronger one?$");
-static const u8 sText_JessDialog[] = _("All I'm finding are Caterpie!$");
-static const u8 sText_DominikDialog[] = _("The judging is rigged!\nRigged I tell you!$");
-static const u8 sText_SandraDialog[] = _("Scyther!\nThat's the one I'm looking for.$");
-static const u8 sText_HilaDialog[] = _("No time to talk!\nI've gotta win this!$");
-static const u8 sText_MarianneDialog[] = _("Even Pokémon that are the same\nlevel and same species can have\ldifferent stats!\pStronger ones will do better in\nthe judging.$");
-static const u8 sText_MickeyDialog[] = _("Did you know?\pThe Johto region has its own\nBug-Catching Contest, too!$");
-static const u8 sText_SimonDialog[] = _("Have you tried checking the water\nfor any rare bugs?$");
-static const u8 sText_SesselDialog[] = _("I may be small, but I'm great at\ncatching bugs!$");
-static const u8 sText_VernonDialog[] = _("{COLOR DARK_GREY}Vernon: {COLOR BLUE}I have a passion for\ncatching Bug-types that I don't\lthink anybody really shares.\pThey're just so amazing!$");
+static const u8 sText_BeaslyDialog[] = _("The Pokémon's level affects the\npoints you get!");
+static const u8 sText_CalumDialog[] = _("Hm… Do I keep the Pokémon I have,\nor try to find a stronger one?");
+static const u8 sText_JessDialog[] = _("All I'm finding are Caterpie!");
+static const u8 sText_DominikDialog[] = _("The judging is rigged!\nRigged I tell you!");
+static const u8 sText_SandraDialog[] = _("Scyther!\nThat's the one I'm looking for.");
+static const u8 sText_HilaDialog[] = _("No time to talk!\nI've gotta win this!");
+static const u8 sText_MarianneDialog[] = _("Even Pokémon that are the same\nlevel and same species can have\ldifferent stats!\pStronger ones will do better in\nthe judging.");
+static const u8 sText_MickeyDialog[] = _("Did you know?\pThe Johto region has its own\nBug-Catching Contest, too!");
+static const u8 sText_SimonDialog[] = _("Have you tried checking the water\nfor any rare bugs?");
+static const u8 sText_SesselDialog[] = _("I may be small, but I'm great at\ncatching bugs!");
+static const u8 sText_VernonDialog[] = _("{COLOR DARK_GREY}Vernon: {COLOR BLUE}I have a passion for\ncatching Bug-types that I don't\lthink anybody really shares.\pThey're just so amazing!");
 
 static const struct BugCatchingContestTrainer sBugCatchingContestTrainers[] =
 {

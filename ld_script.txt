@@ -332,6 +332,7 @@ SECTIONS {
         src/debug.o(.text);
         src/bug_catching_contest.o(.text);
         src/sort.o(.text);
+        src/letter.o(.text);
     } =0
 
     script_data :
@@ -695,6 +696,7 @@ SECTIONS {
         data/sound_data.o(.rodata);
         src/debug.o(.rodata);
         src/bug_catching_contest.o(.rodata);
+        src/letter.o(.rodata);
     } =0
 
     song_data :

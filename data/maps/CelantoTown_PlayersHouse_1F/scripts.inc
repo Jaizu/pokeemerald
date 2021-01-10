@@ -32,9 +32,9 @@ CelantoTown_PlayersHouse_1F_EventScript_DeliverLetterScene::
 	waitmovement 0
 	msgbox CelantoTown_PlayersHouse_1F_Text_WeGotThisLetter, MSGBOX_AUTOCLOSE
 	additem ITEM_LETTER
-	// TODO: Implement Letter display special
-	// special nullsub_37
-	// waitstate
+	setvar VAR_0x8004, LETTER_MORGANAS_LETTER
+	special ShowLetter
+	waitstate
 	msgbox CelantoTown_PlayersHouse_1F_Text_SoMeetAtReliquia
 	goto_if_unset FLAG_HIDE_DUSTY_TOME, CelantoTown_PlayersHouse_1F_EventScript_GoGetTheBook
 	msgbox CelantoTown_PlayersHouse_1F_Text_HowStrange
