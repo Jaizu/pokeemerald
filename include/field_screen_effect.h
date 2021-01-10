@@ -18,7 +18,7 @@ void FieldCB_WarpExitFadeFromBlack(void);
 void FieldCB_WarpExitFadeFromWhite(void);
 bool8 FieldCB_ReturnToFieldOpenStartMenu(void);
 void ReturnToFieldOpenStartMenu(void);
-void sub_80AF6D4(void);
+void FieldCB_ReturnToFieldNoScript(void);
 void sub_80AF6F0(void);
 void DoWarp(void);
 void DoDiveWarp(void);

@@ -456,7 +456,7 @@ static void task_mpl_807E3C8(u8 taskId)
     }
 }
 
-void sub_80AF6D4(void)
+void FieldCB_ReturnToFieldNoScript(void)
 {
     ScriptContext2_Enable();
     FadeInFromBlack();

@@ -624,7 +624,7 @@ void ItemUseOutOfBattle_PokeblockCase(u8 taskId)
     }
     else
     {
-        gFieldCallback = sub_80AF6D4;
+        gFieldCallback = FieldCB_ReturnToFieldNoScript;
         FadeScreen(FADE_TO_BLACK, 0);
         gTasks[taskId].func = sub_80FDC00;
     }
@@ -1170,7 +1170,7 @@ void ItemUseOutOfBattle_MorganasLetter(u8 taskId)
     }
     else
     {
-        gFieldCallback = sub_80AF6D4; // FieldCB_ReturnToFieldNoScript
+        gFieldCallback = FieldCB_ReturnToFieldNoScript;
         FadeScreen(FADE_TO_BLACK, 0);
         gTasks[taskId].func = Task_ShowRegisteredMorganasLetter;
     }
