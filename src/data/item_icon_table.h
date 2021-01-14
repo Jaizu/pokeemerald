@@ -605,4 +605,5 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_MORGANAS_LETTER] = {gItemIcon_Letter, gItemIconPalette_LavaCookieAndLetter},
     [ITEM_REDWOOD_CARD] = {gItemIcon_RedwoodCard, gItemIconPalette_RedwoodCard},
     [ITEM_SECRET_POTION] = {gItemIcon_SecretPotion, gItemIconPalette_SecretPotion},
+    [ITEM_BROKEN_TOOL] = {gItemIcon_BrokenTool, gItemIconPalette_BrokenTool},
 };

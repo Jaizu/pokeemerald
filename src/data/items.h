@@ -7803,4 +7803,17 @@ const struct Item gItems[] =
         .secondaryId = 0,
     },
 
+    [ITEM_BROKEN_TOOL] =
+    {
+        .name = _("Broken Tool"),
+        .itemId = ITEM_BROKEN_TOOL,
+        .price = 0,
+        .description = sBrokenToolDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
 };

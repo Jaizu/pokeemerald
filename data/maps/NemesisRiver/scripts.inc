@@ -1,6 +1,3 @@
-// TODO: Create Broken Tool item
-.set ITEM_BROKEN_TOOL, ITEM_FULL_RESTORE
-
 .set LOCALID_EZEKIEL, 8
 .set LOCALID_GRUNT_1, 9
 .set LOCALID_GRUNT_2, 10
