@@ -1431,10 +1431,10 @@ static const u8 sSuperRodDesc[] = _(
     "rod for catching\n"
     "wild POKéMON.");
 
-static const u8 sRedwoodCardDesc[] = _(
-    "An official Redwood\n"
-    "Membership Card. It\n"
-    "is probably useful!");
+static const u8 sSSTicketDesc[] = _(
+    "The ticket required\n"
+    "for sailing on a\n"
+    "ferry.");
 
 static const u8 sContestPassDesc[] = _(
     "The pass required\n"
@@ -1446,20 +1446,20 @@ static const u8 sWailmerPailDesc[] = _(
     "watering BERRIES\n"
     "and plants.");
 
-static const u8 sDustyTomeDesc[] = _(
-    "An old library book\n"
-    "that tells of an\n"
-    "ancient power.");
+static const u8 sDevonGoodsDesc[] = _(
+    "A package that\n"
+    "contains DEVON's\n"
+    "machine parts.");
 
 static const u8 sSootSackDesc[] = _(
     "A sack used to\n"
     "gather and hold\n"
     "volcanic ash.");
 
-static const u8 sSecretPotionDesc[] = _(
-    "Medicine for ill\n"
-    "Pokémon. It can\n"
-    "heal many at once.");
+static const u8 sBasementKeyDesc[] = _(
+    "The key for NEW\n"
+    "MAUVILLE beneath\n"
+    "MAUVILLE CITY.");
 
 static const u8 sAcroBikeDesc[] = _(
     "A folding bicycle\n"
@@ -1472,9 +1472,9 @@ static const u8 sPokeblockCaseDesc[] = _(
     "a BERRY BLENDER.");
 
 static const u8 sLetterDesc[] = _(
-    "A letter for you!\n"
-    "It asks to meet at\n"
-    "the Reliquia Ruins.");
+    "A letter to STEVEN\n"
+    "from the PRESIDENT\n"
+    "of the DEVON CORP.");
 
 static const u8 sEonTicketDesc[] = _(
     "The ticket for a\n"
@@ -2839,4 +2839,24 @@ static const u8 sOvalCharmDesc[] = _(
     "Raises the chance\n"
     "of finding eggs\n"
     "at the daycare.");
+
+static const u8 sDustyTomeDesc[] = _(
+    "An old library book\n"
+    "that tells of an\n"
+    "ancient power.");
+
+static const u8 sMorganasLetterDesc[] = _(
+    "A letter for you!\n"
+    "It asks to meet at\n"
+    "the Reliquia Ruins.");
+
+static const u8 sRedwoodCardDesc[] = _(
+    "An official Redwood\n"
+    "Membership Card. It\n"
+    "is probably useful!");
+
+static const u8 sSecretPotionDesc[] = _(
+    "Medicine for ill\n"
+    "Pokémon. It can\n"
+    "heal many at once.");
 

@@ -1,5 +1,3 @@
-// TODO: Create Relic Vase item
-.set ITEM_RELIC_VASE, 0
 .set LOCALID_CHEST, 1
 
 FrostbiteCave_SecretTemple_MapScripts::

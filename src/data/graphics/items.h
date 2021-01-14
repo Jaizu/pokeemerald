@@ -604,8 +604,8 @@ const u32 gItemIconPalette_GoodRod[] = INCBIN_U32("graphics/items/icon_palettes/
 const u32 gItemIcon_SuperRod[] = INCBIN_U32("graphics/items/icons/super_rod.4bpp.lz");
 const u32 gItemIconPalette_SuperRod[] = INCBIN_U32("graphics/items/icon_palettes/super_rod.gbapal.lz");
 
-const u32 gItemIcon_RedwoodCard[] = INCBIN_U32("graphics/items/icons/redwood_card.4bpp.lz");
-const u32 gItemIconPalette_RedwoodCard[] = INCBIN_U32("graphics/items/icon_palettes/redwood_card.gbapal.lz");
+const u32 gItemIcon_SSTicket[] = INCBIN_U32("graphics/items/icons/ss_ticket.4bpp.lz");
+const u32 gItemIconPalette_SSTicket[] = INCBIN_U32("graphics/items/icon_palettes/ss_ticket.gbapal.lz");
 
 const u32 gItemIcon_ContestPass[] = INCBIN_U32("graphics/items/icons/contest_pass.4bpp.lz");
 const u32 gItemIconPalette_ContestPass[] = INCBIN_U32("graphics/items/icon_palettes/contest_pass.gbapal.lz");
@@ -613,14 +613,14 @@ const u32 gItemIconPalette_ContestPass[] = INCBIN_U32("graphics/items/icon_palet
 const u32 gItemIcon_WailmerPail[] = INCBIN_U32("graphics/items/icons/wailmer_pail.4bpp.lz");
 const u32 gItemIconPalette_WailmerPail[] = INCBIN_U32("graphics/items/icon_palettes/wailmer_pail.gbapal.lz");
 
-const u32 gItemIcon_DustyTome[] = INCBIN_U32("graphics/items/icons/dusty_tome.4bpp.lz");
-const u32 gItemIconPalette_DustyTome[] = INCBIN_U32("graphics/items/icon_palettes/dusty_tome.gbapal.lz");
+const u32 gItemIcon_DevonGoods[] = INCBIN_U32("graphics/items/icons/devon_goods.4bpp.lz");
+const u32 gItemIconPalette_DevonGoods[] = INCBIN_U32("graphics/items/icon_palettes/devon_goods.gbapal.lz");
 
 const u32 gItemIcon_SootSack[] = INCBIN_U32("graphics/items/icons/soot_sack.4bpp.lz");
 const u32 gItemIconPalette_SootSack[] = INCBIN_U32("graphics/items/icon_palettes/soot_sack.gbapal.lz");
 
-const u32 gItemIcon_SecretPotion[] = INCBIN_U32("graphics/items/icons/secret_potion.4bpp.lz");
-const u32 gItemIconPalette_SecretPotion[] = INCBIN_U32("graphics/items/icon_palettes/secret_potion.gbapal.lz");
+const u32 gItemIcon_BasementKey[] = INCBIN_U32("graphics/items/icons/basement_key.4bpp.lz");
+const u32 gItemIconPalette_OldKey[] = INCBIN_U32("graphics/items/icon_palettes/old_key.gbapal.lz");
 
 const u32 gItemIcon_AcroBike[] = INCBIN_U32("graphics/items/icons/acro_bike.4bpp.lz");
 const u32 gItemIconPalette_AcroBike[] = INCBIN_U32("graphics/items/icon_palettes/acro_bike.gbapal.lz");
@@ -655,7 +655,6 @@ const u32 gItemIcon_Room4Key[] = INCBIN_U32("graphics/items/icons/room4_key.4bpp
 const u32 gItemIcon_Room6Key[] = INCBIN_U32("graphics/items/icons/room6_key.4bpp.lz");
 
 const u32 gItemIcon_StorageKey[] = INCBIN_U32("graphics/items/icons/storage_key.4bpp.lz");
-const u32 gItemIconPalette_StorageKey[] = INCBIN_U32("graphics/items/icon_palettes/storage_key.gbapal.lz");
 
 const u32 gItemIcon_RootFossil[] = INCBIN_U32("graphics/items/icons/root_fossil.4bpp.lz");
 const u32 gItemIconPalette_HoennFossil[] = INCBIN_U32("graphics/items/icon_palettes/hoenn_fossil.gbapal.lz");
@@ -663,6 +662,15 @@ const u32 gItemIcon_ClawFossil[] = INCBIN_U32("graphics/items/icons/claw_fossil.
 
 const u32 gItemIcon_DevonScope[] = INCBIN_U32("graphics/items/icons/devon_scope.4bpp.lz");
 const u32 gItemIconPalette_DevonScope[] = INCBIN_U32("graphics/items/icon_palettes/devon_scope.gbapal.lz");
+
+const u32 gItemIcon_RedwoodCard[] = INCBIN_U32("graphics/items/icons/redwood_card.4bpp.lz");
+const u32 gItemIconPalette_RedwoodCard[] = INCBIN_U32("graphics/items/icon_palettes/redwood_card.gbapal.lz");
+
+const u32 gItemIcon_DustyTome[] = INCBIN_U32("graphics/items/icons/dusty_tome.4bpp.lz");
+const u32 gItemIconPalette_DustyTome[] = INCBIN_U32("graphics/items/icon_palettes/dusty_tome.gbapal.lz");
+
+const u32 gItemIcon_SecretPotion[] = INCBIN_U32("graphics/items/icons/secret_potion.4bpp.lz");
+const u32 gItemIconPalette_SecretPotion[] = INCBIN_U32("graphics/items/icon_palettes/secret_potion.gbapal.lz");
 
 // TMs/HMs
 

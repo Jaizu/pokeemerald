@@ -3862,12 +3862,12 @@ const struct Item gItems[] =
         .secondaryId = SUPER_ROD,
     },
 
-    [ITEM_REDWOOD_CARD] =
+    [ITEM_SS_TICKET] =
     {
-        .name = _("Redwood Card"),
-        .itemId = ITEM_REDWOOD_CARD,
+        .name = _("S.S. Ticket"),
+        .itemId = ITEM_SS_TICKET,
         .price = 0,
-        .description = sRedwoodCardDesc,
+        .description = sSSTicketDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
@@ -3901,12 +3901,12 @@ const struct Item gItems[] =
         .secondaryId = 0,
     },
 
-    [ITEM_DUSTY_TOME] =
+    [ITEM_DEVON_GOODS] =
     {
-        .name = _("Dusty Tome"),
-        .itemId = ITEM_DUSTY_TOME,
+        .name = _("Devon Goods"),
+        .itemId = ITEM_DEVON_GOODS,
         .price = 0,
-        .description = sDustyTomeDesc,
+        .description = sDevonGoodsDesc,
         .importance = 2,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
@@ -3927,12 +3927,12 @@ const struct Item gItems[] =
         .secondaryId = 0,
     },
 
-    [ITEM_SECRET_POTION] =
+    [ITEM_BASEMENT_KEY] =
     {
-        .name = _("SecretPotion"),
-        .itemId = ITEM_SECRET_POTION,
+        .name = _("Basement Key"),
+        .itemId = ITEM_BASEMENT_KEY,
         .price = 0,
-        .description = sSecretPotionDesc,
+        .description = sBasementKeyDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
@@ -3974,10 +3974,10 @@ const struct Item gItems[] =
         .itemId = ITEM_LETTER,
         .price = 0,
         .description = sLetterDesc,
-        .importance = 1,
+        .importance = 2,
         .pocket = POCKET_KEY_ITEMS,
-        .type = 3,
-        .fieldUseFunc = ItemUseOutOfBattle_MorganasLetter,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 0,
     },
 
@@ -7651,7 +7651,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 0,
     },
-    
+
     [ITEM_OVAL_CHARM] =
     {
         .name = _("Oval Charm"),
@@ -7664,4 +7664,57 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 0,
     },
+
+    [ITEM_MORGANAS_LETTER] =
+    {
+        .name = _("Letter"),
+        .itemId = ITEM_MORGANAS_LETTER,
+        .price = 0,
+        .description = sMorganasLetterDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = 3,
+        .fieldUseFunc = ItemUseOutOfBattle_MorganasLetter,
+        .secondaryId = 0,
+    },
+
+    [ITEM_DUSTY_TOME] =
+    {
+        .name = _("Dusty Tome"),
+        .itemId = ITEM_DUSTY_TOME,
+        .price = 0,
+        .description = sDustyTomeDesc,
+        .importance = 2,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_REDWOOD_CARD] =
+    {
+        .name = _("Redwood Card"),
+        .itemId = ITEM_REDWOOD_CARD,
+        .price = 0,
+        .description = sRedwoodCardDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_SECRET_POTION] =
+    {
+        .name = _("SecretPotion"),
+        .itemId = ITEM_SECRET_POTION,
+        .price = 0,
+        .description = sSecretPotionDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
 };

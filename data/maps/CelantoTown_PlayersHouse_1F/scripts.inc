@@ -31,7 +31,7 @@ CelantoTown_PlayersHouse_1F_EventScript_DeliverLetterScene::
 	applymovement LOCALID_MOM, CelantoTown_PlayersHouse_1F_Movement_MomApproachPlayer
 	waitmovement 0
 	msgbox CelantoTown_PlayersHouse_1F_Text_WeGotThisLetter, MSGBOX_AUTOCLOSE
-	additem ITEM_LETTER
+	additem ITEM_MORGANAS_LETTER
 	setvar VAR_0x8004, LETTER_MORGANAS_LETTER
 	special Special_ShowLetter
 	waitstate

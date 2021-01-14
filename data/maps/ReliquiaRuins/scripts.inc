@@ -159,7 +159,7 @@ ReliquiaRuins_EventScript_HandOverTheBook:
 	applymovement LOCALID_MORGANA, Common_Movement_WalkDown
 	waitmovement 0
 	removeitem ITEM_DUSTY_TOME
-	removeitem ITEM_LETTER
+	removeitem ITEM_MORGANAS_LETTER
 	msgbox ReliquiaRuins_Text_HandedOverTheDustyTome
 	delay 30
 	return
