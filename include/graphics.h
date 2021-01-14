@@ -7850,6 +7850,9 @@ extern const u32 gItemIcon_WaterMemory[];
 extern const u32 gItemIconPalette_WaterMemory[];
 extern const u32 gItemIconPalette_BugTMHM[];
 extern const u32 gItemIconPalette_FairyTMHM[];
+// Gaia Items
+extern const u32 gItemIcon_RegalStone[];
+extern const u32 gItemIconPalette_RegalStone[];
 
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u32 gItemIconPalette_ReturnToFieldArrow[];

@@ -1,5 +1,4 @@
 // TODO: Remove duplicate definition labels
-// TODO: Add Regal Stone item
 
 EventScript_ItemPotion::
 Route102_EventScript_ItemPotion::
@@ -189,7 +188,7 @@ EventScript_ItemSilkScarf::
 	end
 
 EventScript_ItemRegalStone::
-	finditem ITEM_SUN_STONE
+	finditem ITEM_REGAL_STONE
 	end
 
 EventScript_ItemRootFossil::
