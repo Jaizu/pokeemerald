@@ -352,8 +352,7 @@
 		settrainerflag TRAINER_SABULO_ISLAND_ENOCH
 		// SABULO CAVE
 		// Obtain Ragged Map item
-		// TODO: Add Ragged Map item
-		// additem ITEM_RAGGED_MAP
+		additem ITEM_RAGGED_MAP
 		setflag FLAG_ITEM_SABULO_CAVE_RAGGED_MAP
 		// Obtain HM03 from Coulter
 		additem ITEM_HM03

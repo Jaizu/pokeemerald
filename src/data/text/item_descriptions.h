@@ -2896,6 +2896,11 @@ static const u8 sSecretPotionDesc[] = _(
     "Pokémon. It can\n"
     "heal many at once.");
 
+static const u8 sRaggedMapDesc[] = _(
+    "A ragged map.\n"
+    "It was left in\n"
+    "Sabulo Cave.");
+
 static const u8 sBrokenToolDesc[] = _(
     "A broken tool.\n"
     "Perhaps it belongs\n"

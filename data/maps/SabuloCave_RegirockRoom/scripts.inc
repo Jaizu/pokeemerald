@@ -1,5 +1,3 @@
-// TODO: Create Ragged Map item
-.set ITEM_RAGGED_MAP, 0
 .set LOCALID_COULTER, 3
 
 SabuloCave_RegirockRoom_MapScripts::

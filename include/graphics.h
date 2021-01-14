@@ -7868,6 +7868,8 @@ extern const u32 gItemIcon_RedwoodCard[];
 extern const u32 gItemIconPalette_RedwoodCard[];
 extern const u32 gItemIcon_SecretPotion[];
 extern const u32 gItemIconPalette_SecretPotion[];
+extern const u32 gItemIcon_RaggedMap[];
+extern const u32 gItemIconPalette_RaggedMap[];
 extern const u32 gItemIcon_BrokenTool[];
 extern const u32 gItemIconPalette_BrokenTool[];
 

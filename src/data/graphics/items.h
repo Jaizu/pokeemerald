@@ -685,6 +685,9 @@ const u32 gItemIconPalette_DustyTome[] = INCBIN_U32("graphics/items/icon_palette
 const u32 gItemIcon_SecretPotion[] = INCBIN_U32("graphics/items/icons/secret_potion.4bpp.lz");
 const u32 gItemIconPalette_SecretPotion[] = INCBIN_U32("graphics/items/icon_palettes/secret_potion.gbapal.lz");
 
+const u32 gItemIcon_RaggedMap[] = INCBIN_U32("graphics/items/icons/ragged_map.4bpp.lz");
+const u32 gItemIconPalette_RaggedMap[] = INCBIN_U32("graphics/items/icon_palettes/ragged_map.gbapal.lz");
+
 const u32 gItemIcon_BrokenTool[] = INCBIN_U32("graphics/items/icons/broken_tool.4bpp.lz");
 const u32 gItemIconPalette_BrokenTool[] = INCBIN_U32("graphics/items/icon_palettes/broken_tool.gbapal.lz");
 
