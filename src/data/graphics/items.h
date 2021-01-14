@@ -268,6 +268,19 @@ const u32 gItemIconPalette_Nugget[] = INCBIN_U32("graphics/items/icon_palettes/n
 const u32 gItemIcon_HeartScale[] = INCBIN_U32("graphics/items/icons/heart_scale.4bpp.lz");
 const u32 gItemIconPalette_HeartScale[] = INCBIN_U32("graphics/items/icon_palettes/heart_scale.gbapal.lz");
 
+// Relic items
+
+const u32 gItemIcon_RelicCoin[] = INCBIN_U32("graphics/items/icons/relic_coin.4bpp.lz");;
+const u32 gItemIconPalette_RelicCopper[] = INCBIN_U32("graphics/items/icon_palettes/relic_copper.gbapal.lz");
+const u32 gItemIconPalette_RelicSilver[] = INCBIN_U32("graphics/items/icon_palettes/relic_silver.gbapal.lz");
+const u32 gItemIconPalette_RelicGold[] = INCBIN_U32("graphics/items/icon_palettes/relic_gold.gbapal.lz");
+
+const u32 gItemIcon_RelicVase[] = INCBIN_U32("graphics/items/icons/relic_vase.4bpp.lz");;
+const u32 gItemIcon_RelicBand[] = INCBIN_U32("graphics/items/icons/relic_band.4bpp.lz");;
+const u32 gItemIcon_RelicStatue[] = INCBIN_U32("graphics/items/icons/relic_statue.4bpp.lz");;
+const u32 gItemIcon_RelicCrown[] = INCBIN_U32("graphics/items/icons/relic_crown.4bpp.lz");;
+const u32 gItemIconPalette_RelicArtefact[] = INCBIN_U32("graphics/items/icon_palettes/relic_artefact.gbapal.lz");
+
 // Mail
 
 const u32 gItemIcon_OrangeMail[] = INCBIN_U32("graphics/items/icons/orange_mail.4bpp.lz");

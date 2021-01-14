@@ -112,6 +112,14 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_STAR_PIECE] = {gItemIcon_StarPiece, gItemIconPalette_Star},
     [ITEM_NUGGET] = {gItemIcon_Nugget, gItemIconPalette_Nugget},
     [ITEM_HEART_SCALE] = {gItemIcon_HeartScale, gItemIconPalette_HeartScale},
+    // Relic items
+    [ITEM_RELIC_COPPER] = {gItemIcon_RelicCoin, gItemIconPalette_RelicCopper},
+    [ITEM_RELIC_SILVER] = {gItemIcon_RelicCoin, gItemIconPalette_RelicSilver},
+    [ITEM_RELIC_GOLD] = {gItemIcon_RelicCoin, gItemIconPalette_RelicGold},
+    [ITEM_RELIC_VASE] = {gItemIcon_RelicVase, gItemIconPalette_RelicArtefact},
+    [ITEM_RELIC_BAND] = {gItemIcon_RelicBand, gItemIconPalette_RelicArtefact},
+    [ITEM_RELIC_STATUE] = {gItemIcon_RelicStatue, gItemIconPalette_RelicArtefact},
+    [ITEM_RELIC_CROWN] = {gItemIcon_RelicCrown, gItemIconPalette_RelicArtefact},
     // Mail
     [ITEM_ORANGE_MAIL] = {gItemIcon_OrangeMail, gItemIconPalette_OrangeMail},
     [ITEM_HARBOR_MAIL] = {gItemIcon_HarborMail, gItemIconPalette_HarborMail},

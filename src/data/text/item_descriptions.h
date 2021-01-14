@@ -624,6 +624,42 @@ static const u8 sRareBoneDesc[] = _(
     "It can be sold at\n"
     "a high price.");
 
+// Relic items
+static const u8 sRelicCopperDesc[] = _(
+    "An ancient coin.\n"
+    "It can be sold at\n"
+    "a high price.");
+
+static const u8 sRelicSilverDesc[] = _(
+    "An ancient coin.\n"
+    "It can be sold at\n"
+    "a high price.");
+
+static const u8 sRelicGoldDesc[] = _(
+    "An ancient coin.\n"
+    "It can be sold at\n"
+    "a high price.");
+
+static const u8 sRelicVaseDesc[] = _(
+    "An ancient vase.\n"
+    "It can be sold at\n"
+    "a high price.");
+
+static const u8 sRelicBandDesc[] = _(
+    "An old bracelet.\n"
+    "It can be sold at\n"
+    "a high price.");
+
+static const u8 sRelicStatueDesc[] = _(
+    "An old statue.\n"
+    "It can be sold at\n"
+    "a high price.");
+
+static const u8 sRelicCrownDesc[] = _(
+    "An ancient crown.\n"
+    "It can be sold at\n"
+    "a high price.");
+
 // Mail
 static const u8 sOrangeMailDesc[] = _(
     "A ZIGZAGOON-print\n"

@@ -1703,6 +1703,92 @@ const struct Item gItems[] =
         .secondaryId = 0,
     },
 
+// Relic items
+
+    [ITEM_RELIC_COPPER] =
+    {
+        .name = _("Relic Copper"),
+        .itemId = ITEM_RELIC_COPPER,
+        .price = 0,
+        .description = sRelicCopperDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_RELIC_SILVER] =
+    {
+        .name = _("Relic Silver"),
+        .itemId = ITEM_RELIC_SILVER,
+        .price = 0,
+        .description = sRelicSilverDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_RELIC_GOLD] =
+    {
+        .name = _("Relic Gold"),
+        .itemId = ITEM_RELIC_GOLD,
+        .price = 0,
+        .description = sRelicGoldDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_RELIC_VASE] =
+    {
+        .name = _("Relic Vase"),
+        .itemId = ITEM_RELIC_VASE,
+        .price = 0,
+        .description = sRelicVaseDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_RELIC_BAND] =
+    {
+        .name = _("Relic Band"),
+        .itemId = ITEM_RELIC_BAND,
+        .price = 0,
+        .description = sRelicBandDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_RELIC_STATUE] =
+    {
+        .name = _("Relic Statue"),
+        .itemId = ITEM_RELIC_STATUE,
+        .price = 0,
+        .description = sRelicStatueDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_RELIC_CROWN] =
+    {
+        .name = _("Relic Crown"),
+        .itemId = ITEM_RELIC_CROWN,
+        .price = 0,
+        .description = sRelicCrownDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
 // Mail
     [ITEM_ORANGE_MAIL] =
     {

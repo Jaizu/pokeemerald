@@ -421,7 +421,6 @@
 		givemon SPECIES_EXCADRILL, 36, ITEM_NONE
 		givemon SPECIES_CHARIZARD, 36, ITEM_CHARIZARDITE_Y
 		givemon SPECIES_EMPOLEON, 36, ITEM_NONE
-		givemon SPECIES_CLAMPERL, 36, ITEM_NONE
 		end
 	
 	Debug_EventScript_GetItems::
@@ -429,7 +428,5 @@
 		additem ITEM_MAX_REVIVE, 99
 		additem ITEM_MAX_REPEL, 99
 		additem ITEM_MASTER_BALL, 99
-		additem ITEM_RELIC_BALL, 99
-		additem ITEM_REGAL_STONE, 99
 		end
 .endif

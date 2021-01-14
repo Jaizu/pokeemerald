@@ -7016,6 +7016,16 @@ extern const u32 gItemIcon_Nugget[];
 extern const u32 gItemIconPalette_Nugget[];
 extern const u32 gItemIcon_HeartScale[];
 extern const u32 gItemIconPalette_HeartScale[];
+// Relic items
+extern const u32 gItemIcon_RelicCoin[];
+extern const u32 gItemIconPalette_RelicCopper[];
+extern const u32 gItemIconPalette_RelicSilver[];
+extern const u32 gItemIconPalette_RelicGold[];
+extern const u32 gItemIcon_RelicVase[];
+extern const u32 gItemIcon_RelicBand[];
+extern const u32 gItemIcon_RelicStatue[];
+extern const u32 gItemIcon_RelicCrown[];
+extern const u32 gItemIconPalette_RelicArtefact[];
 // Mail
 extern const u32 gItemIcon_OrangeMail[];
 extern const u32 gItemIconPalette_OrangeMail[];
