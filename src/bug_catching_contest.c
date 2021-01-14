@@ -175,7 +175,7 @@ u8 GiveAndResetCaughtBug(void)
 void ResetContestants(void)
 {
     u8 i;
-    for (i = 0; i < CONTESTANT_COUNT; i++)
+    for (i = 0; i < ARRAY_COUNT(sContestants); i++)
     {
         sContestants[i].contestantId = 0;
         sContestants[i].pkmnId = 0;
@@ -243,11 +243,11 @@ static u8 GetMinLevel(u16 species)
     waterMonsInfo = gWildMonHeaders[headerId].waterMonsInfo;
     for (i = 0; i < NUM_WATER_MON_SLOTS; i++)
     {
-        if (landMonsInfo->wildPokemon[i].species == species)
+        if (waterMonsInfo->wildPokemon[i].species == species)
         {
-            if (landMonsInfo->wildPokemon[i].minLevel < minLevel)
+            if (waterMonsInfo->wildPokemon[i].minLevel < minLevel)
             {
-                minLevel = landMonsInfo->wildPokemon[i].minLevel;
+                minLevel = waterMonsInfo->wildPokemon[i].minLevel;
             }
         }
     }
@@ -282,11 +282,11 @@ static u8 GetMaxLevel(u16 species)
     waterMonsInfo = gWildMonHeaders[headerId].waterMonsInfo;
     for (i = 0; i < NUM_WATER_MON_SLOTS; i++)
     {
-        if (landMonsInfo->wildPokemon[i].species == species)
+        if (waterMonsInfo->wildPokemon[i].species == species)
         {
-            if (landMonsInfo->wildPokemon[i].maxLevel > maxLevel)
+            if (waterMonsInfo->wildPokemon[i].maxLevel > maxLevel)
             {
-                maxLevel = landMonsInfo->wildPokemon[i].maxLevel;
+                maxLevel = waterMonsInfo->wildPokemon[i].maxLevel;
             }
         }
     }
@@ -429,7 +429,6 @@ static u16 CalculatePlayerScore(void)
 void GenerateContestantScores(void)
 {
     u8 i;
-    
     for (i = 0; i < CONTESTANT_COUNT; i++)
     {
         sContestants[i].pkmnId = Random() % 3;
@@ -454,7 +453,7 @@ void SelectBugCatchingContestWinners(void)
     sContestants[CONTESTANT_COUNT].score = CalculatePlayerScore();
     
     // Sort the array s.t. element 0 is the contestant in 1st place, element 1 is 2nd place, etc.
-    MergeSort(sContestants, CONTESTANT_COUNT + 1, sizeof(struct BugCatchingContestant), CompareBugCatchingContestantScores);
+    MergeSort(sContestants, ARRAY_COUNT(sContestants), sizeof(sContestants[0]), CompareBugCatchingContestantScores);
 }
 
 void BufferBugCatchingContestStrings(void)
@@ -488,7 +487,7 @@ void BufferBugCatchingContestScore(void)
 bool8 IsVernonCompetingInBugCatchingContest(void)
 {
     u8 i;
-    for (i = 0; i < CONTESTANT_COUNT + 1; i++)
+    for (i = 0; i < ARRAY_COUNT(sContestants); i++)
         if (sContestants[i].contestantId == BUG_CATCHING_CONTEST_TRAINER_VERNON)
             return TRUE;
 
