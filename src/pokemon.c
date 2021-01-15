@@ -7693,3 +7693,11 @@ void SetLeadMonBall(void)
 {
     SetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_POKEBALL, &gSpecialVar_0x8004);
 }
+
+bool8 CanMonLearnTM50AncientPower(struct Pokemon *mon)
+{
+    // TODO: Update TM50 to be AncientPower, use the commented return condition
+    u8 result = CanMonLearnTMTutor(mon, ITEM_TM50, 0);
+    // return (result == CAN_LEARN_MOVE || result == ALREADY_KNOWS_MOVE);
+    return (result != 0);
+}

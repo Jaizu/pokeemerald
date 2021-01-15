@@ -12079,8 +12079,8 @@ static void Cmd_handleballthrow(void)
                 ballMultiplier = 1;
                 break;
             case ITEM_RELIC_BALL:
-                // TODO: Implement the Relic Ball buff on Ancient Power-learning Pokémon
-                ballMultiplier = 15;
+                if (CanMonLearnTM50AncientPower(&gEnemyParty[gBattlerPartyIndexes[gBattlerTarget]]))
+                    ballMultiplier = 15;
                 break;
             }
         }
