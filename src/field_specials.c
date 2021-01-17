@@ -29,6 +29,7 @@
 #include "overworld.h"
 #include "party_menu.h"
 #include "pokeblock.h"
+#include "pokedex.h"
 #include "pokemon.h"
 #include "pokemon_summary_screen.h"
 #include "pokemon_storage_system.h"
@@ -4233,4 +4234,9 @@ void GetClearBattleOutcome(void)
 {
     gSpecialVar_Result = gBattleOutcome;
     gBattleOutcome = 0;
+}
+
+void SetSeenMon(void)
+{
+    GetSetPokedexFlag(SpeciesToNationalPokedexNum(gSpecialVar_0x8004), FLAG_SET_SEEN);
 }

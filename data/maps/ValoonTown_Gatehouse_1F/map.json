@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "ValoonTown_Gatehouse_1F_EventScript_Guard",
       "flag": "0"
     }
   ],
@@ -57,45 +57,45 @@
       "x": 6,
       "y": 4,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_VALOON_TOWN_GATEHOUSE_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "ValoonTown_Gatehouse_1F_EventScript_Roadblock"
     },
     {
       "type": "trigger",
       "x": 6,
       "y": 5,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_VALOON_TOWN_GATEHOUSE_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "ValoonTown_Gatehouse_1F_EventScript_Roadblock"
     },
     {
       "type": "trigger",
       "x": 6,
       "y": 6,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_VALOON_TOWN_GATEHOUSE_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "ValoonTown_Gatehouse_1F_EventScript_Roadblock"
     },
     {
       "type": "trigger",
       "x": 6,
       "y": 7,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_VALOON_TOWN_GATEHOUSE_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "ValoonTown_Gatehouse_1F_EventScript_Roadblock"
     },
     {
       "type": "trigger",
       "x": 6,
       "y": 8,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_VALOON_TOWN_GATEHOUSE_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "ValoonTown_Gatehouse_1F_EventScript_Roadblock"
     }
   ],
   "bg_events": [
