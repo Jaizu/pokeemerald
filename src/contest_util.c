@@ -877,7 +877,7 @@ static void Task_ShowWinnerMonBanner(u8 taskId)
         {
             HandleLoadSpecialPokePic_2(
                 &gMonFrontPicTable[species],
-                gMonSpritesGfxPtr->sprites[1],
+                gMonSpritesGfxPtr->sprites.ptr[1],
                 species,
                 personality);
         }
@@ -885,7 +885,7 @@ static void Task_ShowWinnerMonBanner(u8 taskId)
         {
             HandleLoadSpecialPokePic_DontHandleDeoxys(
                 &gMonFrontPicTable[species],
-                gMonSpritesGfxPtr->sprites[1],
+                gMonSpritesGfxPtr->sprites.ptr[1],
                 species,
                 personality);
         }
@@ -2481,7 +2481,6 @@ void LoadLinkContestPlayerPalettes(void)
             objectEventId = GetObjectEventIdByLocalIdAndMap(sContestantLocalIds[i], gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup);
             sprite = &gSprites[gObjectEvents[objectEventId].spriteId];
             sprite->oam.paletteNum = 6 + i;
-
             LoadPalette(gObjectEventPalettePlayer, 0x160 + i * 0x10, 0x20);
         }
     }
@@ -2536,9 +2535,9 @@ void ShowContestEntryMonPic(void)
         gTasks[taskId].data[0] = 0;
         gTasks[taskId].data[1] = species;
         if (gSpecialVar_0x8006 == gContestPlayerMonIndex)
-            HandleLoadSpecialPokePic_2(&gMonFrontPicTable[species], gMonSpritesGfxPtr->sprites[1], species, personality);
+            HandleLoadSpecialPokePic_2(&gMonFrontPicTable[species], gMonSpritesGfxPtr->sprites.ptr[1], species, personality);
         else
-            HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonFrontPicTable[species], gMonSpritesGfxPtr->sprites[1], species, personality);
+            HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonFrontPicTable[species], gMonSpritesGfxPtr->sprites.ptr[1], species, personality);
 
         palette = GetMonSpritePalStructFromOtIdPersonality(species, otId, personality);
         LoadCompressedSpritePalette(palette);
