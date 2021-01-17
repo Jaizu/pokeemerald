@@ -5360,6 +5360,26 @@
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/TelmurkSwamp/border.bin",
       "blockdata_filepath": "data/layouts/TelmurkSwamp/map.bin"
+    },
+    {
+      "id": "LAYOUT_VALOON_TOWN_GATEHOUSE_1F",
+      "name": "ValoonTown_Gatehouse_1F_Layout",
+      "width": 13,
+      "height": 12,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/ValoonTown_Gatehouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/ValoonTown_Gatehouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_VALOON_TOWN_GATEHOUSE_2F",
+      "name": "ValoonTown_Gatehouse_2F_Layout",
+      "width": 13,
+      "height": 11,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/ValoonTown_Gatehouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/ValoonTown_Gatehouse_2F/map.bin"
     }
   ]
 }

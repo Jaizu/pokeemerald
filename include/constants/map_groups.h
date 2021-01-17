@@ -160,6 +160,8 @@
 #define MAP_VALOON_TOWN_BLUE_SHARD_MEISTERS_HOUSE (4 | (10 << 8))
 #define MAP_VALOON_TOWN_HOUSE1                    (5 | (10 << 8))
 #define MAP_VALOON_TOWN_HOUSE2                    (6 | (10 << 8))
+#define MAP_VALOON_TOWN_GATEHOUSE_1F              (7 | (10 << 8))
+#define MAP_VALOON_TOWN_GATEHOUSE_2F              (8 | (10 << 8))
 
 // Map Group 11
 #define MAP_CELANTO_GROVE_CABLE_CAR_STATION (0 | (11 << 8))

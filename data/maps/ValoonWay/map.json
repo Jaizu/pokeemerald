@@ -32,7 +32,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_SWIMMING",
-      "in_connection": false,
       "x": 9,
       "y": 18,
       "elevation": 3,
@@ -42,11 +41,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "ValoonWay_EventScript_Natasha",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_SWIMMING",
-      "in_connection": false,
       "x": 17,
       "y": 38,
       "elevation": 3,
@@ -56,11 +55,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "ValoonWay_EventScript_Hans",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NURSE",
-      "in_connection": false,
       "x": 33,
       "y": 38,
       "elevation": 3,
@@ -70,11 +69,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ValoonWay_EventScript_Olivia",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKEMANIAC",
-      "in_connection": false,
       "x": 42,
       "y": 29,
       "elevation": 3,
@@ -84,11 +83,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "ValoonWay_EventScript_Eric",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ACE_TRAINER_M",
-      "in_connection": false,
       "x": 51,
       "y": 17,
       "elevation": 3,
@@ -98,11 +97,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "ValoonWay_EventScript_Doug",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "in_connection": false,
       "x": 73,
       "y": 24,
       "elevation": 3,
@@ -112,11 +111,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "ValoonWay_EventScript_Sammy",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PKMN_RANGER_M",
-      "in_connection": false,
       "x": 94,
       "y": 33,
       "elevation": 3,
@@ -126,11 +125,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "ValoonWay_EventScript_Colton",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 16,
       "y": 46,
       "elevation": 3,
@@ -140,11 +139,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_ItemLeafStone",
-      "flag": "FLAG_ITEM_VALOON_WAY_LEAF_STONE"
+      "flag": "FLAG_ITEM_VALOON_WAY_LEAF_STONE",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 27,
       "y": 31,
       "elevation": 3,
@@ -154,11 +153,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_ItemAbilityPill",
-      "flag": "FLAG_ITEM_VALOON_WAY_ABILITY_PILL"
+      "flag": "FLAG_ITEM_VALOON_WAY_ABILITY_PILL",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TM_BALL",
-      "in_connection": false,
       "x": 55,
       "y": 10,
       "elevation": 3,
@@ -168,11 +167,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_ItemTM30",
-      "flag": "FLAG_ITEM_VALOON_WAY_TM30"
+      "flag": "FLAG_ITEM_VALOON_WAY_TM30",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPARKLES",
-      "in_connection": false,
       "x": 76,
       "y": 46,
       "elevation": 3,
@@ -182,11 +181,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_ItemGyaradosite",
-      "flag": "FLAG_ITEM_VALOON_WAY_GYARADOSITE"
+      "flag": "FLAG_ITEM_VALOON_WAY_GYARADOSITE",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 100,
       "y": 44,
       "elevation": 3,
@@ -196,7 +195,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_ItemZinc",
-      "flag": "FLAG_ITEM_VALOON_WAY_ZINC"
+      "flag": "FLAG_ITEM_VALOON_WAY_ZINC",
+      "in_connection": ""
     }
   ],
   "warp_events": [
