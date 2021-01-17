@@ -7696,8 +7696,7 @@ void SetLeadMonBall(void)
 
 bool8 CanMonLearnTM50AncientPower(struct Pokemon *mon)
 {
-    // TODO: Update TM50 to be AncientPower, use the commented return condition
+    // TODO: Update TM50 to be AncientPower
     u8 result = CanMonLearnTMTutor(mon, ITEM_TM50, 0);
-    // return (result == CAN_LEARN_MOVE || result == ALREADY_KNOWS_MOVE);
-    return (result != 0);
+    return (result == CAN_LEARN_MOVE || result == ALREADY_KNOWS_MOVE);
 }
