@@ -10,7 +10,7 @@ const struct SpriteFrameImage gObjectEventPicTable_PechaBerryTree[] = {
     overworld_frame(gObjectEventPic_PechaBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Pecha[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2};
+const u16 gBerryTreePaletteTagTable_Pecha[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3};
 
 const struct SpriteFrameImage gObjectEventPicTable_KelpsyBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -24,7 +24,7 @@ const struct SpriteFrameImage gObjectEventPicTable_KelpsyBerryTree[] = {
     overworld_frame(gObjectEventPic_KelpsyBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Kelpsy[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_0, OBJ_EVENT_PAL_TAG_0, OBJ_EVENT_PAL_TAG_0};
+const u16 gBerryTreePaletteTagTable_Kelpsy[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1};
 
 const struct SpriteFrameImage gObjectEventPicTable_WepearBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -38,7 +38,7 @@ const struct SpriteFrameImage gObjectEventPicTable_WepearBerryTree[] = {
     overworld_frame(gObjectEventPic_WepearBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Wepear[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_0, OBJ_EVENT_PAL_TAG_0, OBJ_EVENT_PAL_TAG_0};
+const u16 gBerryTreePaletteTagTable_Wepear[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1};
 
 const struct SpriteFrameImage gObjectEventPicTable_IapapaBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -52,7 +52,7 @@ const struct SpriteFrameImage gObjectEventPicTable_IapapaBerryTree[] = {
     overworld_frame(gObjectEventPic_IapapaBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Iapapa[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1};
+const u16 gBerryTreePaletteTagTable_Iapapa[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2};
 
 const struct SpriteFrameImage gObjectEventPicTable_CheriBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -66,7 +66,7 @@ const struct SpriteFrameImage gObjectEventPicTable_CheriBerryTree[] = {
     overworld_frame(gObjectEventPic_CheriBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Cheri[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2};
+const u16 gBerryTreePaletteTagTable_Cheri[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3};
 
 const struct SpriteFrameImage gObjectEventPicTable_FigyBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -80,7 +80,7 @@ const struct SpriteFrameImage gObjectEventPicTable_FigyBerryTree[] = {
     overworld_frame(gObjectEventPic_FigyBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Figy[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1};
+const u16 gBerryTreePaletteTagTable_Figy[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2};
 
 const struct SpriteFrameImage gObjectEventPicTable_MagoBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -94,7 +94,7 @@ const struct SpriteFrameImage gObjectEventPicTable_MagoBerryTree[] = {
     overworld_frame(gObjectEventPic_MagoBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Mago[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1};
+const u16 gBerryTreePaletteTagTable_Mago[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2};
 
 const struct SpriteFrameImage gObjectEventPicTable_LumBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -108,7 +108,7 @@ const struct SpriteFrameImage gObjectEventPicTable_LumBerryTree[] = {
     overworld_frame(gObjectEventPic_LumBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Lum[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2};
+const u16 gBerryTreePaletteTagTable_Lum[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3};
 
 const struct SpriteFrameImage gObjectEventPicTable_RazzBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -122,7 +122,7 @@ const struct SpriteFrameImage gObjectEventPicTable_RazzBerryTree[] = {
     overworld_frame(gObjectEventPic_RazzBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Razz[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2};
+const u16 gBerryTreePaletteTagTable_Razz[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3};
 
 const struct SpriteFrameImage gObjectEventPicTable_GrepaBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -136,7 +136,7 @@ const struct SpriteFrameImage gObjectEventPicTable_GrepaBerryTree[] = {
     overworld_frame(gObjectEventPic_GrepaBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Grepa[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1};
+const u16 gBerryTreePaletteTagTable_Grepa[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2};
 
 const struct SpriteFrameImage gObjectEventPicTable_RabutaBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -150,7 +150,7 @@ const struct SpriteFrameImage gObjectEventPicTable_RabutaBerryTree[] = {
     overworld_frame(gObjectEventPic_RabutaBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Rabuta[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2};
+const u16 gBerryTreePaletteTagTable_Rabuta[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3};
 
 const struct SpriteFrameImage gObjectEventPicTable_NomelBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -164,7 +164,7 @@ const struct SpriteFrameImage gObjectEventPicTable_NomelBerryTree[] = {
     overworld_frame(gObjectEventPic_NomelBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Nomel[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1};
+const u16 gBerryTreePaletteTagTable_Nomel[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2};
 
 const struct SpriteFrameImage gObjectEventPicTable_LeppaBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -178,7 +178,7 @@ const struct SpriteFrameImage gObjectEventPicTable_LeppaBerryTree[] = {
     overworld_frame(gObjectEventPic_LeppaBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Leppa[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1};
+const u16 gBerryTreePaletteTagTable_Leppa[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2};
 
 const struct SpriteFrameImage gObjectEventPicTable_LiechiBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -192,7 +192,7 @@ const struct SpriteFrameImage gObjectEventPicTable_LiechiBerryTree[] = {
     overworld_frame(gObjectEventPic_LiechiBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Liechi[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2};
+const u16 gBerryTreePaletteTagTable_Liechi[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3};
 
 const struct SpriteFrameImage gObjectEventPicTable_HondewBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -206,7 +206,7 @@ const struct SpriteFrameImage gObjectEventPicTable_HondewBerryTree[] = {
     overworld_frame(gObjectEventPic_HondewBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Hondew[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_3, OBJ_EVENT_PAL_TAG_3, OBJ_EVENT_PAL_TAG_3};
+const u16 gBerryTreePaletteTagTable_Hondew[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_4, OBJ_EVENT_PAL_TAG_NPC_4, OBJ_EVENT_PAL_TAG_NPC_4};
 
 const struct SpriteFrameImage gObjectEventPicTable_AguavBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -220,7 +220,7 @@ const struct SpriteFrameImage gObjectEventPicTable_AguavBerryTree[] = {
     overworld_frame(gObjectEventPic_AguavBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Aguav[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2};
+const u16 gBerryTreePaletteTagTable_Aguav[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3};
 
 const struct SpriteFrameImage gObjectEventPicTable_WikiBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -234,7 +234,7 @@ const struct SpriteFrameImage gObjectEventPicTable_WikiBerryTree[] = {
     overworld_frame(gObjectEventPic_WikiBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Wiki[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1};
+const u16 gBerryTreePaletteTagTable_Wiki[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2};
 
 const struct SpriteFrameImage gObjectEventPicTable_PomegBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -248,7 +248,7 @@ const struct SpriteFrameImage gObjectEventPicTable_PomegBerryTree[] = {
     overworld_frame(gObjectEventPic_PomegBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Pomeg[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1};
+const u16 gBerryTreePaletteTagTable_Pomeg[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2};
 
 const struct SpriteFrameImage gObjectEventPicTable_RawstBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -262,7 +262,7 @@ const struct SpriteFrameImage gObjectEventPicTable_RawstBerryTree[] = {
     overworld_frame(gObjectEventPic_RawstBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Rawst[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2};
+const u16 gBerryTreePaletteTagTable_Rawst[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3};
 
 const struct SpriteFrameImage gObjectEventPicTable_SpelonBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -276,7 +276,7 @@ const struct SpriteFrameImage gObjectEventPicTable_SpelonBerryTree[] = {
     overworld_frame(gObjectEventPic_SpelonBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Spelon[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1};
+const u16 gBerryTreePaletteTagTable_Spelon[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2};
 
 const struct SpriteFrameImage gObjectEventPicTable_ChestoBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -290,7 +290,7 @@ const struct SpriteFrameImage gObjectEventPicTable_ChestoBerryTree[] = {
     overworld_frame(gObjectEventPic_ChestoBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Chesto[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_0, OBJ_EVENT_PAL_TAG_0, OBJ_EVENT_PAL_TAG_0};
+const u16 gBerryTreePaletteTagTable_Chesto[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1};
 
 const struct SpriteFrameImage gObjectEventPicTable_OranBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -304,7 +304,7 @@ const struct SpriteFrameImage gObjectEventPicTable_OranBerryTree[] = {
     overworld_frame(gObjectEventPic_OranBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Oran[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_0, OBJ_EVENT_PAL_TAG_0, OBJ_EVENT_PAL_TAG_0};
+const u16 gBerryTreePaletteTagTable_Oran[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1};
 
 const struct SpriteFrameImage gObjectEventPicTable_PersimBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -318,7 +318,7 @@ const struct SpriteFrameImage gObjectEventPicTable_PersimBerryTree[] = {
     overworld_frame(gObjectEventPic_PersimBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Persim[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_0, OBJ_EVENT_PAL_TAG_0, OBJ_EVENT_PAL_TAG_0};
+const u16 gBerryTreePaletteTagTable_Persim[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1};
 
 const struct SpriteFrameImage gObjectEventPicTable_SitrusBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -332,7 +332,7 @@ const struct SpriteFrameImage gObjectEventPicTable_SitrusBerryTree[] = {
     overworld_frame(gObjectEventPic_SitrusBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Sitrus[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2};
+const u16 gBerryTreePaletteTagTable_Sitrus[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3};
 
 const struct SpriteFrameImage gObjectEventPicTable_AspearBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -346,7 +346,7 @@ const struct SpriteFrameImage gObjectEventPicTable_AspearBerryTree[] = {
     overworld_frame(gObjectEventPic_AspearBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Aspear[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1};
+const u16 gBerryTreePaletteTagTable_Aspear[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2};
 
 const struct SpriteFrameImage gObjectEventPicTable_PamtreBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -360,7 +360,7 @@ const struct SpriteFrameImage gObjectEventPicTable_PamtreBerryTree[] = {
     overworld_frame(gObjectEventPic_PamtreBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Pamtre[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_0, OBJ_EVENT_PAL_TAG_0, OBJ_EVENT_PAL_TAG_0};
+const u16 gBerryTreePaletteTagTable_Pamtre[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1};
 
 const struct SpriteFrameImage gObjectEventPicTable_CornnBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -374,7 +374,7 @@ const struct SpriteFrameImage gObjectEventPicTable_CornnBerryTree[] = {
     overworld_frame(gObjectEventPic_CornnBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Cornn[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_0, OBJ_EVENT_PAL_TAG_0, OBJ_EVENT_PAL_TAG_0};
+const u16 gBerryTreePaletteTagTable_Cornn[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1};
 
 const struct SpriteFrameImage gObjectEventPicTable_LansatBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -388,7 +388,7 @@ const struct SpriteFrameImage gObjectEventPicTable_LansatBerryTree[] = {
     overworld_frame(gObjectEventPic_LansatBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Lansat[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_0, OBJ_EVENT_PAL_TAG_0, OBJ_EVENT_PAL_TAG_0};
+const u16 gBerryTreePaletteTagTable_Lansat[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1};
 
 const struct SpriteFrameImage gObjectEventPicTable_DurinBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -402,7 +402,7 @@ const struct SpriteFrameImage gObjectEventPicTable_DurinBerryTree[] = {
     overworld_frame(gObjectEventPic_DurinBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Durin[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2};
+const u16 gBerryTreePaletteTagTable_Durin[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3};
 
 const struct SpriteFrameImage gObjectEventPicTable_TamatoBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -416,7 +416,7 @@ const struct SpriteFrameImage gObjectEventPicTable_TamatoBerryTree[] = {
     overworld_frame(gObjectEventPic_TamatoBerryTree, 2, 4, 5),
 };
 
-const u16 gBerryTreePaletteTagTable_Tamato[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_0, OBJ_EVENT_PAL_TAG_0, OBJ_EVENT_PAL_TAG_0};
+const u16 gBerryTreePaletteTagTable_Tamato[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1, OBJ_EVENT_PAL_TAG_NPC_1};
 
 const struct SpriteFrameImage gObjectEventPicTable_OccaBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -430,7 +430,7 @@ const struct SpriteFrameImage gObjectEventPicTable_OccaBerryTree[] = {
     overworld_frame(gObjectEventPic_OccaBerryTree, 2, 4, 5)
 };
 
-const u16 gBerryTreePaletteTagTable_Occa[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2};
+const u16 gBerryTreePaletteTagTable_Occa[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3};
 
 const struct SpriteFrameImage gObjectEventPicTable_YacheBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -444,7 +444,7 @@ const struct SpriteFrameImage gObjectEventPicTable_YacheBerryTree[] = {
     overworld_frame(gObjectEventPic_YacheBerryTree, 2, 4, 5)
 };
 
-const u16 gBerryTreePaletteTagTable_Yache[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2};
+const u16 gBerryTreePaletteTagTable_Yache[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3};
 
 const struct SpriteFrameImage gObjectEventPicTable_ChopleBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -458,7 +458,7 @@ const struct SpriteFrameImage gObjectEventPicTable_ChopleBerryTree[] = {
     overworld_frame(gObjectEventPic_ChopleBerryTree, 2, 4, 5)
 };
 
-const u16 gBerryTreePaletteTagTable_Chople[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1};
+const u16 gBerryTreePaletteTagTable_Chople[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2};
 
 const struct SpriteFrameImage gObjectEventPicTable_KebiaBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -472,7 +472,7 @@ const struct SpriteFrameImage gObjectEventPicTable_KebiaBerryTree[] = {
     overworld_frame(gObjectEventPic_KebiaBerryTree, 2, 4, 5)
 };
 
-const u16 gBerryTreePaletteTagTable_Kebia[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2};
+const u16 gBerryTreePaletteTagTable_Kebia[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3};
 
 const struct SpriteFrameImage gObjectEventPicTable_ShucaBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -486,7 +486,7 @@ const struct SpriteFrameImage gObjectEventPicTable_ShucaBerryTree[] = {
     overworld_frame(gObjectEventPic_ShucaBerryTree, 2, 4, 5)
 };
 
-const u16 gBerryTreePaletteTagTable_Shuca[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_3, OBJ_EVENT_PAL_TAG_3, OBJ_EVENT_PAL_TAG_3};
+const u16 gBerryTreePaletteTagTable_Shuca[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_4, OBJ_EVENT_PAL_TAG_NPC_4, OBJ_EVENT_PAL_TAG_NPC_4};
 
 const struct SpriteFrameImage gObjectEventPicTable_PayapaBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -500,7 +500,7 @@ const struct SpriteFrameImage gObjectEventPicTable_PayapaBerryTree[] = {
     overworld_frame(gObjectEventPic_PayapaBerryTree, 2, 4, 5)
 };
 
-const u16 gBerryTreePaletteTagTable_Payapa[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_3, OBJ_EVENT_PAL_TAG_3, OBJ_EVENT_PAL_TAG_3};
+const u16 gBerryTreePaletteTagTable_Payapa[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_4, OBJ_EVENT_PAL_TAG_NPC_4, OBJ_EVENT_PAL_TAG_NPC_4};
 
 const struct SpriteFrameImage gObjectEventPicTable_TangaBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -514,7 +514,7 @@ const struct SpriteFrameImage gObjectEventPicTable_TangaBerryTree[] = {
     overworld_frame(gObjectEventPic_TangaBerryTree, 2, 4, 5)
 };
 
-const u16 gBerryTreePaletteTagTable_Tanga[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2};
+const u16 gBerryTreePaletteTagTable_Tanga[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3};
 
 const struct SpriteFrameImage gObjectEventPicTable_KasibBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -528,7 +528,7 @@ const struct SpriteFrameImage gObjectEventPicTable_KasibBerryTree[] = {
     overworld_frame(gObjectEventPic_KasibBerryTree, 2, 4, 5)
 };
 
-const u16 gBerryTreePaletteTagTable_Kasib[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2};
+const u16 gBerryTreePaletteTagTable_Kasib[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3};
 
 const struct SpriteFrameImage gObjectEventPicTable_HabanBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -542,7 +542,7 @@ const struct SpriteFrameImage gObjectEventPicTable_HabanBerryTree[] = {
     overworld_frame(gObjectEventPic_HabanBerryTree, 2, 4, 5)
 };
 
-const u16 gBerryTreePaletteTagTable_Haban[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_1};
+const u16 gBerryTreePaletteTagTable_Haban[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_2};
 
 const struct SpriteFrameImage gObjectEventPicTable_ColburBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -556,7 +556,7 @@ const struct SpriteFrameImage gObjectEventPicTable_ColburBerryTree[] = {
     overworld_frame(gObjectEventPic_ColburBerryTree, 2, 4, 5)
 };
 
-const u16 gBerryTreePaletteTagTable_Colbur[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_3, OBJ_EVENT_PAL_TAG_3, OBJ_EVENT_PAL_TAG_3};
+const u16 gBerryTreePaletteTagTable_Colbur[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_4, OBJ_EVENT_PAL_TAG_NPC_4, OBJ_EVENT_PAL_TAG_NPC_4};
 
 const struct SpriteFrameImage gObjectEventPicTable_RoseliBerryTree[] = {
     overworld_frame(gObjectEventPic_BerryTreeDirtPile, 2, 2, 0),
@@ -570,7 +570,7 @@ const struct SpriteFrameImage gObjectEventPicTable_RoseliBerryTree[] = {
     overworld_frame(gObjectEventPic_RoseliBerryTree, 2, 4, 5)
 };
 
-const u16 gBerryTreePaletteTagTable_Roseli[] = {OBJ_EVENT_PAL_TAG_1, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2, OBJ_EVENT_PAL_TAG_2};
+const u16 gBerryTreePaletteTagTable_Roseli[] = {OBJ_EVENT_PAL_TAG_NPC_2, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3, OBJ_EVENT_PAL_TAG_NPC_3};
 
 const u16 gDeadBerryTreeObjectEventGraphicsIdTable[] = {OBJ_EVENT_GFX_BERRY_TREE_EARLY_STAGES, OBJ_EVENT_GFX_BERRY_TREE_EARLY_STAGES, OBJ_EVENT_GFX_BERRY_TREE_EARLY_STAGES, OBJ_EVENT_GFX_BERRY_TREE_EARLY_STAGES, OBJ_EVENT_GFX_BERRY_TREE_EARLY_STAGES};
 

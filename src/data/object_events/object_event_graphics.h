@@ -1,10 +1,10 @@
-const u16 gObjectEventPal_0[] = INCBIN_U16("graphics/object_events/palettes/00.gbapal");
-const u16 gObjectEventPal_1[] = INCBIN_U16("graphics/object_events/palettes/01.gbapal");
-const u16 gObjectEventPal_2[] = INCBIN_U16("graphics/object_events/palettes/02.gbapal");
-const u16 gObjectEventPal_3[] = INCBIN_U16("graphics/object_events/palettes/03.gbapal");
-const u16 gObjectEventPal_4[] = INCBIN_U16("graphics/object_events/palettes/04.gbapal");
-const u16 gObjectEventPal_5[] = INCBIN_U16("graphics/object_events/palettes/05.gbapal");
-const u16 gObjectEventPal_6[] = INCBIN_U16("graphics/object_events/palettes/06.gbapal");
+const u16 gObjectEventPal_Npc1[] = INCBIN_U16("graphics/object_events/palettes/npc_1.gbapal");
+const u16 gObjectEventPal_Npc2[] = INCBIN_U16("graphics/object_events/palettes/npc_2.gbapal");
+const u16 gObjectEventPal_Npc3[] = INCBIN_U16("graphics/object_events/palettes/npc_3.gbapal");
+const u16 gObjectEventPal_Npc4[] = INCBIN_U16("graphics/object_events/palettes/npc_4.gbapal");
+const u16 gObjectEventPal_Npc5[] = INCBIN_U16("graphics/object_events/palettes/npc_5.gbapal");
+const u16 gObjectEventPal_Npc6[] = INCBIN_U16("graphics/object_events/palettes/npc_6.gbapal");
+const u16 gObjectEventPal_Npc7[] = INCBIN_U16("graphics/object_events/palettes/npc_7.gbapal");
 const u16 gObjectEventPal_TMBall[] = INCBIN_U16("graphics/object_events/palettes/tm_ball.gbapal");
 const u16 gObjectEventPal_FieldEffects[] = INCBIN_U16("graphics/object_events/palettes/field_effects.gbapal");
 const u16 gObjectEventPal_BugCatcher[] = INCBIN_U16("graphics/object_events/palettes/bug_catcher.gbapal");

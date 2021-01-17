@@ -166,7 +166,7 @@ static void SpriteCB_Confetti(struct Sprite *sprite);
 static void Task_ShowContestEntryMonPic(u8 taskId);
 static void Task_LinkContestWaitForConnection(u8 taskId);
 
-extern const u16 gObjectEventPalettePlayer[];
+extern const u16 gObjectEventPal_Player[];
 
 static const u16 sUnknown_0858D6B0[] = INCBIN_U16("graphics/unknown/unknown_58D6B0.gbapal");
 static const u8 sUnknown_0858D6D0[] = INCBIN_U8("graphics/unknown/unknown_58D6D0.4bpp");
@@ -2481,7 +2481,7 @@ void LoadLinkContestPlayerPalettes(void)
             objectEventId = GetObjectEventIdByLocalIdAndMap(sContestantLocalIds[i], gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup);
             sprite = &gSprites[gObjectEvents[objectEventId].spriteId];
             sprite->oam.paletteNum = 6 + i;
-            LoadPalette(gObjectEventPalettePlayer, 0x160 + i * 0x10, 0x20);
+            LoadPalette(gObjectEventPal_Player, 0x160 + i * 0x10, 0x20);
         }
     }
 }

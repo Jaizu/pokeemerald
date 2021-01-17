@@ -89,7 +89,7 @@ static EWRAM_DATA u32 sBattleTowerMultiBattleTypeFlags = 0;
 
 struct ListMenuTemplate gScrollableMultichoice_ListMenuTemplate;
 
-extern const u16 gObjectEventPalettePlayer[];
+extern const u16 gObjectEventPal_Player[];
 
 void TryLoseFansFromPlayTime(void);
 void SetPlayerGotFirstFans(void);
@@ -512,16 +512,16 @@ static void LoadLinkPartnerObjectEventSpritePalette(u8 graphicsId, u8 localEvent
             switch (graphicsId)
             {
                 case OBJ_EVENT_GFX_LINK_RS_BRENDAN:
-                    LoadPalette(gObjectEventPalettePlayer, 0x100 + (adjustedPaletteNum << 4), 0x20);
+                    LoadPalette(gObjectEventPal_Player, 0x100 + (adjustedPaletteNum << 4), 0x20);
                     break;
                 case OBJ_EVENT_GFX_LINK_RS_MAY:
-                    LoadPalette(gObjectEventPalettePlayer, 0x100 + (adjustedPaletteNum << 4), 0x20);
+                    LoadPalette(gObjectEventPal_Player, 0x100 + (adjustedPaletteNum << 4), 0x20);
                     break;
                 case OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL:
-                    LoadPalette(gObjectEventPalettePlayer, 0x100 + (adjustedPaletteNum << 4), 0x20);
+                    LoadPalette(gObjectEventPal_Player, 0x100 + (adjustedPaletteNum << 4), 0x20);
                     break;
                 case OBJ_EVENT_GFX_RIVAL_MAY_NORMAL:
-                    LoadPalette(gObjectEventPalettePlayer, 0x100 + (adjustedPaletteNum << 4), 0x20);
+                    LoadPalette(gObjectEventPal_Player, 0x100 + (adjustedPaletteNum << 4), 0x20);
                     break;
             }
         }
