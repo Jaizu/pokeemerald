@@ -7829,4 +7829,17 @@ const struct Item gItems[] =
         .secondaryId = 0,
     },
 
+    [ITEM_GAS_MASK] =
+    {
+        .name = _("Gas Mask"),
+        .itemId = ITEM_GAS_MASK,
+        .price = 0,
+        .description = sGasMaskDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
 };

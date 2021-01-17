@@ -7872,6 +7872,8 @@ extern const u32 gItemIcon_RaggedMap[];
 extern const u32 gItemIconPalette_RaggedMap[];
 extern const u32 gItemIcon_BrokenTool[];
 extern const u32 gItemIconPalette_BrokenTool[];
+extern const u32 gItemIcon_GasMask[];
+extern const u32 gItemIconPalette_GasMask[];
 
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u32 gItemIconPalette_ReturnToFieldArrow[];

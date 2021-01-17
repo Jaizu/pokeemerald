@@ -691,6 +691,9 @@ const u32 gItemIconPalette_RaggedMap[] = INCBIN_U32("graphics/items/icon_palette
 const u32 gItemIcon_BrokenTool[] = INCBIN_U32("graphics/items/icons/broken_tool.4bpp.lz");
 const u32 gItemIconPalette_BrokenTool[] = INCBIN_U32("graphics/items/icon_palettes/broken_tool.gbapal.lz");
 
+const u32 gItemIcon_GasMask[] = INCBIN_U32("graphics/items/icons/gas_mask.4bpp.lz");
+const u32 gItemIconPalette_GasMask[] = INCBIN_U32("graphics/items/icon_palettes/gas_mask.gbapal.lz");
+
 // TMs/HMs
 
 const u32 gItemIcon_TM[] = INCBIN_U32("graphics/items/icons/tm.4bpp.lz");

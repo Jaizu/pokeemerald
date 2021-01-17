@@ -411,8 +411,29 @@
 		// Ezekiel scene
 		setvar VAR_NEMESIS_RIVER_STATE, 2
 		// VALOON RESERVE
-		// Player enters the compulsory Bug-Catching Contest
-		// setflag FLAG_UNLOCK_VALOON_GYM_DOOR
+		// Player enters the Bug-Catching Contest with Vernon
+		setflag FLAG_VERNON_WON_BEEDRILLITE
+		setflag FLAG_UNLOCK_VALOON_GYM_DOOR
+		setflag FLAG_HIDE_VALOON_TOWN_RANGERS_HQ_VERNON
+		// RANGERS HQ
+		// Told about the Gym opening
+		setflag FLAG_TOLD_ABOUT_VALOON_GYM_OPENING
+		// VALOON GYM
+		// Fight Trainers
+		settrainerflag TRAINER_JAMES
+		settrainerflag TRAINER_CLAUDE
+		settrainerflag TRAINER_KENT
+		settrainerflag TRAINER_RUBY
+		settrainerflag TRAINER_KEIGO
+		settrainerflag TRAINER_CALE
+		// Complete the puzzle
+		setvar VAR_VALOON_GYM_STATE, 5
+		setflag FLAG_VALOON_GYM_PATH_CLEARED
+		// Fight Vernon
+		settrainerflag TRAINER_VERNON_1
+		setflag FLAG_BADGE04_GET
+		setflag FLAG_DEFEATED_VALOON_GYM
+		setvar VAR_VALOON_TOWN_STATE, 2
 		end
 	
 	Debug_EventScript_GetParty::

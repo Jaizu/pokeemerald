@@ -607,4 +607,5 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_SECRET_POTION] = {gItemIcon_SecretPotion, gItemIconPalette_SecretPotion},
     [ITEM_RAGGED_MAP] = {gItemIcon_RaggedMap, gItemIconPalette_RaggedMap},
     [ITEM_BROKEN_TOOL] = {gItemIcon_BrokenTool, gItemIconPalette_BrokenTool},
+    [ITEM_GAS_MASK] = {gItemIcon_GasMask, gItemIconPalette_GasMask},
 };

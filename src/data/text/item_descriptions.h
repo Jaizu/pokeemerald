@@ -2906,3 +2906,7 @@ static const u8 sBrokenToolDesc[] = _(
     "Perhaps it belongs\n"
     "to a scientist?");
 
+static const u8 sGasMaskDesc[] = _(
+    "A gas mask.\n"
+    "It looks just\n"
+    "like Trubbish!");

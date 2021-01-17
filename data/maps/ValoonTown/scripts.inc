@@ -1,9 +1,11 @@
 .set LOCALID_RANGER_1, 1
 .set LOCALID_RANGER_2, 2
 .set LOCALID_RANGER_3, 3
+.set LOCALID_COULTER, 10
 
 ValoonTown_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, ValoonTown_OnLoad
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, ValoonTown_OnFrame
 	map_script MAP_SCRIPT_ON_TRANSITION, ValoonTown_OnTransition
 	.byte 0
 
@@ -15,6 +17,10 @@ ValoonTown_EventScript_LockGymDoor:
 	setmetatile 42, 3, METATILE_General_Door_GymLocked, 1
 	return
 
+ValoonTown_OnFrame:
+	map_script_2 VAR_VALOON_TOWN_STATE, 2, ValoonTown_EventScript_CoulterGasMaskScene
+	.byte 0
+
 ValoonTown_OnTransition::
 	setflag FLAG_VISITED_VALOON_TOWN
 	compare VAR_VALOON_TOWN_STATE, 0
@@ -25,6 +31,79 @@ ValoonTown_EventScript_MoveRanger::
 	setobjectxyperm LOCALID_RANGER_1, 17, 6
 	setobjectmovementtype LOCALID_RANGER_1, MOVEMENT_TYPE_FACE_RIGHT
 	return
+
+ValoonTown_EventScript_CoulterGasMaskScene::
+	lockall
+	addobject LOCALID_COULTER
+	msgbox ValoonTown_Text_Player, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
+	applymovement LOCALID_COULTER, ValoonTown_Movement_WalkToPlayer
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox ValoonTown_Text_GiveGasMask, MSGBOX_DEFAULT
+	giveitem ITEM_GAS_MASK
+	msgbox ValoonTown_Text_ExplainGasMask, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_COULTER, ValoonTown_Movement_ExitCoulter
+	waitmovement 0
+	removeobject LOCALID_COULTER
+	fadedefaultbgm
+	setvar VAR_VALOON_TOWN_GATEHOUSE_STATE, 1
+	setvar VAR_VALOON_TOWN_STATE, 3
+	releaseall
+	end
+
+ValoonTown_Text_Player:
+	.string "{RIVAL}: {COLOR BLUE}{PLAYER}!$"
+
+ValoonTown_Text_GiveGasMask:
+	.string "{RIVAL}: {COLOR BLUE}Looks like I beat you this\n"
+	.string "time!\p"
+	.string "I got Vernon's Badge before he\n"
+	.string "closed his Gym to enter the\l"
+	.string "Bug-Catching Contest.\p"
+	.string "Anyway, looks like they're not\n"
+	.string "letting people into Telmurk Swamp.\p"
+	.string "Something about noxious gases.\p"
+	.string "Lucky for you, I had the foresight\n"
+	.string "to buy these! Here's yours.$"
+
+ValoonTown_Text_ExplainGasMask:
+	.string "{RIVAL}: {COLOR BLUE}With these Gas Masks,\n"
+	.string "we'll be able to get through.\p"
+	.string "It's been a while since we've had\n"
+	.string "a battle, hasn't it?\p"
+	.string "Maybe when we get to Telmurk City,\n"
+	.string "we can battle again.\p"
+	.string "I look forward to it.\n"
+	.string "Later, {PLAYER}!$"
+
+ValoonTown_Movement_WalkToPlayer:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	face_up
+	step_end
+
+ValoonTown_Movement_ExitCoulter:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
 
 ValoonTown_EventScript_RangersSceneTrigger::
 	lockall
