@@ -30,8 +30,7 @@ void sub_81556E8(struct ObjectEvent *, struct Sprite *);
 static void CreateBobbingEffect(struct ObjectEvent *, struct Sprite *, struct Sprite *);
 static void sub_8155850(struct Sprite *);
 static u32 ShowDisguiseFieldEffect(u8, u8);
-
-void LoadSpecialReflectionPalette(struct Sprite *sprite);
+void LoadSpecialReflectionPalette(struct Sprite *sprite, u16 rTone, u16 gTone, u16 bTone);
 
 extern u16 gReflectionPaletteBuffer[];
 
@@ -81,16 +80,22 @@ void LoadObjectReflectionPalette(struct ObjectEvent *objectEvent, struct Sprite 
     }
     else
     {
-        LoadSpecialReflectionPalette(sprite);
+        u16 rTone, gTone, bTone;
+        // TODO: Change these values for different water metatiles (e.g. swamp)
+        rTone = Q_8_8(1.0);
+        gTone = Q_8_8(1.0);
+        bTone = Q_8_8(3.5);
+        
+        LoadSpecialReflectionPalette(sprite, rTone, gTone, bTone);
     }
 }
 
-void LoadSpecialReflectionPalette(struct Sprite *sprite)
+void LoadSpecialReflectionPalette(struct Sprite *sprite, u16 rTone, u16 gTone, u16 bTone)
 {
     struct SpritePalette reflectionPalette;
 
     CpuCopy16(&gPlttBufferUnfaded[0x100 + sprite->oam.paletteNum * 16], gReflectionPaletteBuffer, 32);
-    TintPalette_CustomTone(gReflectionPaletteBuffer, 16, Q_8_8(1.0), Q_8_8(1.0), Q_8_8(3.5));
+    TintPalette_CustomTone(gReflectionPaletteBuffer, 16, rTone, gTone, bTone);
     reflectionPalette.data = gReflectionPaletteBuffer;
     reflectionPalette.tag = GetSpritePaletteTagByPaletteNum(sprite->oam.paletteNum) + 0x1000;
     LoadSpritePalette(&reflectionPalette);
