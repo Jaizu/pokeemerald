@@ -14,7 +14,7 @@ static const u8 sTileBitAttributes[] =
     [MB_SECRET_BASE_WALL] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_TALL_GRASS] = TILE_ATTRIBUTES(TRUE, FALSE, TRUE),
     [MB_LONG_GRASS] = TILE_ATTRIBUTES(TRUE, FALSE, TRUE),
-    [MB_UNUSED_04] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
+    [MB_SWAMP_WATER] = TILE_ATTRIBUTES(TRUE, TRUE, TRUE),
     [MB_UNUSED_05] = TILE_ATTRIBUTES(FALSE, FALSE, TRUE),
     [MB_DEEP_SAND] = TILE_ATTRIBUTES(TRUE, FALSE, TRUE),
     [MB_SHORT_GRASS] = TILE_ATTRIBUTES(TRUE, FALSE, FALSE),
@@ -328,7 +328,8 @@ bool8 MetatileBehavior_IsReflective(u8 metatileBehavior)
      || metatileBehavior == MB_UNUSED_SOOTOPOLIS_DEEP_WATER_2
      || metatileBehavior == MB_ICE
      || metatileBehavior == MB_SOOTOPOLIS_DEEP_WATER
-     || metatileBehavior == MB_REFLECTION_UNDER_BRIDGE)
+     || metatileBehavior == MB_REFLECTION_UNDER_BRIDGE
+     || metatileBehavior == MB_SWAMP_WATER)
         return TRUE;
     else
         return FALSE;
@@ -368,9 +369,9 @@ bool8 MetatileBehavior_IsEscalator(u8 metatileBehavior)
         return FALSE;
 }
 
-bool8 Unref_MetatileBehavior_IsUnused04(u8 metatileBehavior)
+bool8 MetatileBehavior_IsSwampWater(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_UNUSED_04)
+    if (metatileBehavior == MB_SWAMP_WATER)
         return TRUE;
     else
         return FALSE;
@@ -833,7 +834,10 @@ bool8 MetatileBehavior_IsPlayerRoomPCOn(u8 metatileBehavior)
 
 bool8 MetatileBehavior_HasRipples(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_POND_WATER || metatileBehavior == MB_PUDDLE || metatileBehavior == MB_SOOTOPOLIS_DEEP_WATER)
+    if (metatileBehavior == MB_POND_WATER
+        || metatileBehavior == MB_PUDDLE
+        || metatileBehavior == MB_SOOTOPOLIS_DEEP_WATER
+        || metatileBehavior == MB_SWAMP_WATER)
         return TRUE;
     else
         return FALSE;
@@ -1262,8 +1266,13 @@ bool8 MetatileBehavior_IsMossdeepGymWarp(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsSurfableFishableWater(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_POND_WATER || metatileBehavior == MB_OCEAN_WATER || metatileBehavior == MB_SEMI_DEEP_WATER || metatileBehavior == MB_DEEP_WATER
-        || metatileBehavior == MB_SOOTOPOLIS_DEEP_WATER || (metatileBehavior == MB_EASTWARD_CURRENT || metatileBehavior == MB_WESTWARD_CURRENT
+    if (metatileBehavior == MB_POND_WATER
+        || metatileBehavior == MB_OCEAN_WATER
+        || metatileBehavior == MB_SEMI_DEEP_WATER
+        || metatileBehavior == MB_DEEP_WATER
+        || metatileBehavior == MB_SOOTOPOLIS_DEEP_WATER
+        || metatileBehavior == MB_SWAMP_WATER
+        || (metatileBehavior == MB_EASTWARD_CURRENT || metatileBehavior == MB_WESTWARD_CURRENT
         || metatileBehavior == MB_NORTHWARD_CURRENT || metatileBehavior == MB_SOUTHWARD_CURRENT))
         return TRUE;
     else
