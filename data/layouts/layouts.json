@@ -5354,7 +5354,7 @@
     {
       "id": "LAYOUT_TELMURK_SWAMP",
       "name": "TelmurkSwamp_Layout",
-      "width": 46,
+      "width": 48,
       "height": 62,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lavaridge",
