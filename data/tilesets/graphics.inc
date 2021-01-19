@@ -1949,3 +1949,43 @@ gTilesetPalettes_NemesisCave::
 	.align 2
 gTilesetTiles_NemesisCave::
 	.incbin "data/tilesets/secondary/nemesiscave/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_Swamp::
+	.incbin "data/tilesets/primary/swamp/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/swamp/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/swamp/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/swamp/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/swamp/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/swamp/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/swamp/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/swamp/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/swamp/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/swamp/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/swamp/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/swamp/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/swamp/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_Swamp::
+	.incbin "data/tilesets/primary/swamp/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_BattleMarsh::
+	.incbin "data/tilesets/secondary/battlemarsh/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/battlemarsh/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/battlemarsh/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/battlemarsh/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/battlemarsh/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/battlemarsh/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/battlemarsh/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/battlemarsh/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/battlemarsh/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/battlemarsh/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/battlemarsh/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/battlemarsh/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/battlemarsh/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_BattleMarsh::
+	.incbin "data/tilesets/secondary/battlemarsh/tiles.4bpp.lz"

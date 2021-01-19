@@ -638,3 +638,17 @@ gMetatiles_NemesisCave::
 	.align 1
 gMetatileAttributes_NemesisCave::
 	.incbin "data/tilesets/secondary/nemesiscave/metatile_attributes.bin"
+	.align 1
+gMetatiles_Swamp::
+	.incbin "data/tilesets/primary/swamp/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_Swamp::
+	.incbin "data/tilesets/primary/swamp/metatile_attributes.bin"
+	.align 1
+gMetatiles_BattleMarsh::
+	.incbin "data/tilesets/secondary/battlemarsh/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_BattleMarsh::
+	.incbin "data/tilesets/secondary/battlemarsh/metatile_attributes.bin"

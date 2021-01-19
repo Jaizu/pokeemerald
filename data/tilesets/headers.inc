@@ -951,3 +951,25 @@ gTileset_NemesisCave::
 	.4byte gMetatiles_NemesisCave
 	.4byte gMetatileAttributes_NemesisCave
 	.4byte NULL
+
+	.align 2
+gTileset_Swamp::
+	.byte TRUE @ is compressed
+	.byte FALSE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_Swamp
+	.4byte gTilesetPalettes_Swamp
+	.4byte gMetatiles_Swamp
+	.4byte gMetatileAttributes_Swamp
+	.4byte NULL
+
+	.align 2
+gTileset_BattleMarsh::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_BattleMarsh
+	.4byte gTilesetPalettes_BattleMarsh
+	.4byte gMetatiles_BattleMarsh
+	.4byte gMetatileAttributes_BattleMarsh
+	.4byte NULL
