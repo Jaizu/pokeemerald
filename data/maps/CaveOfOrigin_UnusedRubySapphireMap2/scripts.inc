@@ -3,6 +3,6 @@ CaveOfOrigin_UnusedRubySapphireMap2_MapScripts:: @ 8235788
 	.byte 0
 
 CaveOfOrigin_UnusedRubySapphireMap2_OnTransition: @ 823578E
-	call_if_set 0, CaveOfOrigin_EventScript_SetTempVars
+	call_if_set 0, CaveOfOrigin_EventScript_DisableTriggers
 	end
 

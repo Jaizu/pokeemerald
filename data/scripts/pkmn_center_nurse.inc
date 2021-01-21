@@ -41,13 +41,13 @@ EventScript_PkmnCenterNurse_TakeAndHealPkmn::
     return
 
 EventScript_PkmnCenterNurse_ReturnPkmn::
-    applymovement VAR_LAST_TALKED, EventScript_PkmnCenterNurse_Bow
+    applymovement VAR_LAST_TALKED, Movement_PkmnCenterNurse_Bow
     msgbox gText_RestoredPkmnToFullHealth, MSGBOX_DEFAULT
     waitmovement 0
     release
 	end
 
-EventScript_PkmnCenterNurse_Bow:
+Movement_PkmnCenterNurse_Bow:
     nurse_joy_bow
     delay_4
     step_end

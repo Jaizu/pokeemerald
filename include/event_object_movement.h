@@ -16,14 +16,22 @@ enum SpinnerRunnerFollowPatterns
     RUNFOLLOW_SOUTH_EAST_WEST
 };
 
+enum ReflectionTypes
+{
+    REFL_TYPE_NONE,
+    REFL_TYPE_ICE,
+    REFL_TYPE_WATER,
+    NUM_REFLECTION_TYPES
+};
+
 #define FIGURE_8_LENGTH 72
 
 #define GROUND_EFFECT_FLAG_TALL_GRASS_ON_SPAWN   (1 << 0)
 #define GROUND_EFFECT_FLAG_TALL_GRASS_ON_MOVE    (1 << 1)
 #define GROUND_EFFECT_FLAG_LONG_GRASS_ON_SPAWN   (1 << 2)
 #define GROUND_EFFECT_FLAG_LONG_GRASS_ON_MOVE    (1 << 3)
-#define GROUND_EFFECT_FLAG_ICE_REFLECTION        (1 << 4)
-#define GROUND_EFFECT_FLAG_REFLECTION            (1 << 5)
+#define GROUND_EFFECT_FLAG_WATER_REFLECTION      (1 << 4)
+#define GROUND_EFFECT_FLAG_ICE_REFLECTION        (1 << 5)
 #define GROUND_EFFECT_FLAG_SHALLOW_FLOWING_WATER (1 << 6)
 #define GROUND_EFFECT_FLAG_SAND                  (1 << 7)
 #define GROUND_EFFECT_FLAG_DEEP_SAND             (1 << 8)
@@ -416,18 +424,20 @@ u8 MovementType_RunInPlace_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementType_Invisible_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementType_Invisible_Step1(struct ObjectEvent *, struct Sprite *);
 u8 MovementType_Invisible_Step2(struct ObjectEvent *, struct Sprite *);
-void SetObjectEventSpriteInvisibility(u8 var, bool32 var2);
-bool32 IsObjectEventSpriteInvisible(u8 var);
-void SetObjectEventSpriteGraphics(u8 var1, u8 graphicsId);
-void SetObjectEventSpriteAnim(u8 var1, u8 var2);
-bool32 IsObjectEventSpriteAnimating(u8 var);
-// NEW
+void SetObjectEventSpriteInvisibility(u8 objectEventId, bool32 invisible);
+bool32 IsObjectEventSpriteInvisible(u8 objectEventId);
+void SetObjectEventSpriteGraphics(u8 objectEventId, u8 graphicsId);
+void SetObjectEventSpriteAnim(u8 objectEventId, u8 animNum);
+bool32 IsObjectEventSpriteAnimating(u8 objectEventId);
+
 u16 GetMiniStepCount(u8 speed);
 void RunMiniStep(struct Sprite *sprite, u8 speed, u8 currentFrame);
 bool8 PlayerIsUnderWaterfall(struct ObjectEvent *objectEvent);
+
 // run slow
 u8 GetPlayerRunSlowMovementAction(u32);
-//sideways stairs
+
+// sideways stairs
 u8 GetSidewaysStairsToRightDirection(s16, s16, u8);
 u8 GetSidewaysStairsToLeftDirection(s16, s16, u8);
 u8 GetSidewaysStairsCollision(struct ObjectEvent *objectEvent, u8 dir, u8 currentBehavior, u8 nextBehavior, u8 collision);

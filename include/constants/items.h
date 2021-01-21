@@ -32,7 +32,11 @@
 #define ITEM_RELIC_BALL 27
 #define ITEM_PREMIER_BALL 28
 
-#define LAST_BALL ITEM_PREMIER_BALL
+// Note: If moving ball IDs around, updating FIRST_BALL/LAST_BALL is not sufficient
+//       Several places expect the ball IDs to be first and contiguous (e.g. gBattlescriptsForBallThrow and MON_DATA_POKEBALL)
+//       If adding new balls, it's easiest to insert them after the last ball and increment the below IDs (and removing ITEM_034 for example)
+#define FIRST_BALL ITEM_MASTER_BALL
+#define LAST_BALL  ITEM_PREMIER_BALL
 
 // Pokemon Items
 #define ITEM_POTION 29
@@ -164,6 +168,9 @@
 #define ITEM_DREAM_MAIL 150
 #define ITEM_FAB_MAIL 151
 #define ITEM_RETRO_MAIL 152
+
+#define FIRST_MAIL_INDEX ITEM_ORANGE_MAIL
+
 // Berries
 #define ITEM_CHERI_BERRY 153
 #define ITEM_CHESTO_BERRY 154
@@ -232,6 +239,10 @@
 #define ITEM_ROWAP_BERRY 217
 #define ITEM_KEE_BERRY 218
 #define ITEM_MARANGA_BERRY 219
+
+#define FIRST_BERRY_INDEX ITEM_CHERI_BERRY
+#define LAST_BERRY_INDEX  ITEM_MARANGA_BERRY
+
 // Battle Held items
 #define ITEM_BRIGHT_POWDER 220
 #define ITEM_WHITE_HERB 221
@@ -673,9 +684,6 @@
 #define ITEMS_COUNT 584
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
-#define FIRST_BERRY_INDEX             ITEM_CHERI_BERRY
-#define LAST_BERRY_INDEX              ITEM_MARANGA_BERRY
-
 // Range of berries given out by various NPCS
 #define FIRST_BERRY_MASTER_BERRY      ITEM_POMEG_BERRY
 #define LAST_BERRY_MASTER_BERRY       ITEM_NOMEL_BERRY
@@ -743,6 +751,21 @@
 #define BALL_RELIC 27
 
 #define POKEBALL_COUNT 28
+
+// Secondary IDs for bikes
+#define MACH_BIKE 0
+#define ACRO_BIKE 1
+
+// Item type IDs (used to determine the exit callback)
+#define ITEM_USE_MAIL        0
+#define ITEM_USE_PARTY_MENU  1
+#define ITEM_USE_FIELD       2
+#define ITEM_USE_PBLOCK_CASE 3
+#define ITEM_USE_BAG_MENU    4 // No exit callback, stays in bag menu
+
+// Item battle usage IDs (only checked to see if nonzero)
+#define ITEM_B_USE_MEDICINE 1
+#define ITEM_B_USE_OTHER    2
 
 // Check if the item is one that can be used on a Pokemon.
 #define ITEM_HAS_EFFECT(item) ((item) >= ITEM_POTION && (item) <= LAST_BERRY_INDEX)

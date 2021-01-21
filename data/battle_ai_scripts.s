@@ -788,16 +788,16 @@ AI_IsOppositeGender:
 	get_ability AI_TARGET
 	if_equal ABILITY_OBLIVIOUS, Score_Minus10
 	get_gender AI_USER
-	if_equal 0, AI_IsOppositeGenderFemale
-	if_equal 254, AI_IsOppositeGenderMale
+	if_equal MON_MALE, AI_IsOppositeGenderFemale
+	if_equal MON_FEMALE, AI_IsOppositeGenderMale
 	goto Score_Minus10
 AI_IsOppositeGenderFemale: @ 82DC61A
 	get_gender AI_TARGET
-	if_equal 254, AI_CBM_Attract_End
+	if_equal MON_FEMALE, AI_CBM_Attract_End
 	goto Score_Minus10
 AI_IsOppositeGenderMale: @ 82DC627
 	get_gender AI_TARGET
-	if_equal 0, AI_CBM_Attract_End
+	if_equal MON_MALE, AI_CBM_Attract_End
 	goto Score_Minus10
 	end
 	
@@ -2932,13 +2932,13 @@ AI_CV_SemiInvulnerable2:
 	if_status2 AI_TARGET, STATUS2_CURSED, AI_CV_SemiInvulnerable_TryEncourage
 	if_status3 AI_TARGET, STATUS3_LEECHSEED, AI_CV_SemiInvulnerable_TryEncourage
 	get_weather
-	.ifdef BUGFIX
+.ifdef BUGFIX
 	if_equal AI_WEATHER_HAIL, AI_CV_SemiInvulnerable_CheckIceType
 	if_equal AI_WEATHER_SANDSTORM, AI_CV_SemiInvulnerable_CheckSandstormTypes
-	.else
+.else
 	if_equal AI_WEATHER_HAIL, AI_CV_SemiInvulnerable_CheckSandstormTypes
 	if_equal AI_WEATHER_SANDSTORM, AI_CV_SemiInvulnerable_CheckIceType
-	.endif
+.endif
 	goto AI_CV_SemiInvulnerable5
 
 AI_CV_SemiInvulnerable_CheckSandstormTypes:
@@ -3073,11 +3073,11 @@ AI_CV_Sandstorm_End:
 
 @ BUG: Facade score is increased if the target is statused, but should be if the user is
 AI_CV_Facade:
-	.ifdef BUGFIX
+.ifdef BUGFIX
 	if_not_status AI_USER, STATUS1_POISON | STATUS1_BURN | STATUS1_PARALYSIS | STATUS1_TOXIC_POISON, AI_CV_Facade_End
-	.else
+.else
 	if_not_status AI_TARGET, STATUS1_POISON | STATUS1_BURN | STATUS1_PARALYSIS | STATUS1_TOXIC_POISON, AI_CV_Facade_End
-	.endif
+.endif
 	score +1
 AI_CV_Facade_End:
 	end
