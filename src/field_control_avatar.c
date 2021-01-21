@@ -26,6 +26,8 @@
 #include "secret_base.h"
 #include "sound.h"
 #include "start_menu.h"
+#include "string_util.h"
+#include "strings.h"
 #include "trainer_see.h"
 #include "trainer_hill.h"
 #include "wild_encounter.h"
@@ -496,6 +498,14 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
     }
 
     return NULL;
+}
+
+void GetSurfString(void)
+{
+    const u8 *string = gText_WaterIsDyedDeepBlueUseSurf;
+    if (IsPlayerFacingFilthyWater() == TRUE)
+        string = gText_WaterIsFilthyUseSurf;
+    StringCopy(gStringVar4, string);
 }
 
 static const u8 *GetInteractedWaterScript(struct MapPosition *unused1, u8 metatileBehavior, u8 direction)

@@ -556,3 +556,4 @@ gSpecials::
 	def_special BufferBugCatchingContestantDialog
 	def_special Special_ShowLetter
 	def_special SetSeenMon
+	def_special GetSurfString

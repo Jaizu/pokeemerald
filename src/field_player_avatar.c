@@ -2328,3 +2328,18 @@ bool8 ObjectMovingOnRockStairs(struct ObjectEvent *objectEvent, u8 direction)
     #endif
 }
 
+bool8 IsPlayerFacingFilthyWater(void)
+{
+    struct ObjectEvent *playerObjEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
+    s16 x = playerObjEvent->currentCoords.x;
+    s16 y = playerObjEvent->currentCoords.y;
+
+    MoveCoords(playerObjEvent->facingDirection, &x, &y);
+    if (GetCollisionAtCoords(playerObjEvent, x, y, playerObjEvent->facingDirection) == COLLISION_ELEVATION_MISMATCH
+     && PlayerGetZCoord() == 3
+     && MetatileBehavior_IsSwampyWater(MapGridGetMetatileBehaviorAt(x, y)))
+        return TRUE;
+    else
+        return FALSE;
+}
+
