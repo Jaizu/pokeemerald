@@ -940,7 +940,7 @@ void TintPalette_CustomTone(u16 *palette, u16 count, u16 rTone, u16 gTone, u16 b
     }
 }
 
-void TintPalette_CustomRGB(u16 *palIn, u16 *palOut, u16 palOffset, u16 count, u8 coeff, u16 blendColor)
+void TintPalette_CustomRGB_PalInPalOut(u16 *palIn, u16 *palOut, u16 palOffset, u16 count, u8 coeff, u16 blendColor)
 {
     u16 i;
     for (i = 0; i < count; i++)
@@ -955,6 +955,11 @@ void TintPalette_CustomRGB(u16 *palIn, u16 *palOut, u16 palOffset, u16 count, u8
                             (g + (((data2->g - g) * coeff) >> 4)),
                             (b + (((data2->b - b) * coeff) >> 4)));
     }
+}
+
+void TintPalette_CustomRGB(u16 *palette, u16 count, u8 coeff, u16 blendColor)
+{
+    TintPalette_CustomRGB_PalInPalOut(palette, palette, 0, count, coeff, blendColor);
 }
 
 #define tCoeff       data[0]

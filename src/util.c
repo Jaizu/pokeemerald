@@ -262,5 +262,5 @@ u32 CalcByteArraySum(const u8* data, u32 length)
 
 void BlendPalette(u16 palOffset, u16 numEntries, u8 coeff, u16 blendColor)
 {
-    TintPalette_CustomRGB(gPlttBufferUnfaded, gPlttBufferFaded, palOffset, numEntries, coeff, blendColor);
+    TintPalette_CustomRGB_PalInPalOut(gPlttBufferUnfaded, gPlttBufferFaded, palOffset, numEntries, coeff, blendColor);
 }

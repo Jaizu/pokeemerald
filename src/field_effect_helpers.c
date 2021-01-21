@@ -106,7 +106,7 @@ void LoadSpecialReflectionPalette(struct Sprite *reflectionSprite, u16 color)
     struct SpritePalette reflectionPalette;
 
     CpuCopy16(&gPlttBufferUnfaded[0x100 + reflectionSprite->oam.paletteNum * 16], gReflectionPaletteBuffer, 32);
-    TintPalette_CustomRGB(gReflectionPaletteBuffer, gReflectionPaletteBuffer, 0, 16, 6, color);
+    TintPalette_CustomRGB(gReflectionPaletteBuffer, 16, 6, color);
     reflectionPalette.data = gReflectionPaletteBuffer;
     reflectionPalette.tag = GetSpritePaletteTagByPaletteNum(reflectionSprite->oam.paletteNum) + 0x1000;
     LoadSpritePalette(&reflectionPalette);
