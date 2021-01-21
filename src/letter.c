@@ -178,7 +178,7 @@ static void DisplayLetterText(void)
 static void InitLetterBg(void)
 {
     ResetBgsAndClearDma3BusyFlags(0);
-    InitBgsFromTemplates(0, sLetterBgTemplates, 2);
+    InitBgsFromTemplates(0, sLetterBgTemplates, ARRAY_COUNT(sLetterBgTemplates));
     SetBgTilemapBuffer(1, sLetterTilemapPtr);
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
     ShowBg(0);
