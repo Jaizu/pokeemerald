@@ -7481,16 +7481,17 @@ static void ObjectEventUpdateMetatileBehaviors(struct ObjectEvent *objEvent)
 static void GetGroundEffectFlags_Reflection(struct ObjectEvent *objEvent, u32 *flags)
 {
     u32 reflectionFlags[NUM_REFLECTION_TYPES - 1] = { 
-        [REFL_TYPE_ICE   - 1] = GROUND_EFFECT_FLAG_ICE_REFLECTION,
-        [REFL_TYPE_WATER - 1] = GROUND_EFFECT_FLAG_WATER_REFLECTION
+        [REFL_TYPE_ICE    - 1] = GROUND_EFFECT_FLAG_ICE_REFLECTION,
+        [REFL_TYPE_WATER  - 1] = GROUND_EFFECT_FLAG_WATER_REFLECTION,
+        [REFL_TYPE_SWAMPY - 1] = GROUND_EFFECT_FLAG_SWAMPY_REFLECTION
     };
     u8 reflType = ObjectEventGetNearbyReflectionType(objEvent);
 
     if (reflType)
     {
-        if (objEvent->hasReflection == 0)
+        if (objEvent->hasReflection == FALSE)
         {
-            objEvent->hasReflection++;
+            objEvent->hasReflection = TRUE;
             *flags |= reflectionFlags[reflType - 1];
         }
     }
@@ -7708,10 +7709,12 @@ static u8 GetReflectionTypeByMetatileBehavior(u32 behavior)
 {
     if (MetatileBehavior_IsIce(behavior))
         return REFL_TYPE_ICE;
+    else if (MetatileBehavior_IsSwampyWater(behavior))
+        return REFL_TYPE_SWAMPY;
     else if (MetatileBehavior_IsReflective(behavior))
         return REFL_TYPE_WATER;
-    else
-        return REFL_TYPE_NONE;
+    
+    return REFL_TYPE_NONE;
 }
 
 u8 GetLedgeJumpDirection(s16 x, s16 y, u8 z)
@@ -7912,12 +7915,23 @@ void GroundEffect_StepOnLongGrass(struct ObjectEvent *objEvent, struct Sprite *s
 
 void GroundEffect_WaterReflection(struct ObjectEvent *objEvent, struct Sprite *sprite)
 {
-    SetUpReflection(objEvent, sprite, FALSE);
+    gFieldEffectArguments[FLDEFF_ARG_REFLECTION_IS_STILL]  = FALSE;
+    gFieldEffectArguments[FLDEFF_ARG_REFLECTION_IS_SWAMPY] = FALSE;
+    SetUpReflection(objEvent, sprite);
 }
 
 void GroundEffect_IceReflection(struct ObjectEvent *objEvent, struct Sprite *sprite)
 {
-    SetUpReflection(objEvent, sprite, TRUE);
+    gFieldEffectArguments[FLDEFF_ARG_REFLECTION_IS_STILL]  = TRUE;
+    gFieldEffectArguments[FLDEFF_ARG_REFLECTION_IS_SWAMPY] = FALSE;
+    SetUpReflection(objEvent, sprite);
+}
+
+void GroundEffect_SwampyWaterReflection(struct ObjectEvent *objEvent, struct Sprite *sprite)
+{
+    gFieldEffectArguments[FLDEFF_ARG_REFLECTION_IS_STILL]  = FALSE;
+    gFieldEffectArguments[FLDEFF_ARG_REFLECTION_IS_SWAMPY] = TRUE;
+    SetUpReflection(objEvent, sprite);
 }
 
 void GroundEffect_FlowingWater(struct ObjectEvent *objEvent, struct Sprite *sprite)
@@ -8099,7 +8113,8 @@ static void (*const sGroundEffectFuncs[])(struct ObjectEvent *objEvent, struct S
     GroundEffect_JumpLandingDust,       // GROUND_EFFECT_FLAG_LAND_ON_NORMAL_GROUND
     GroundEffect_ShortGrass,            // GROUND_EFFECT_FLAG_SHORT_GRASS
     GroundEffect_HotSprings,            // GROUND_EFFECT_FLAG_HOT_SPRINGS
-    GroundEffect_Seaweed                // GROUND_EFFECT_FLAG_SEAWEED
+    GroundEffect_Seaweed,               // GROUND_EFFECT_FLAG_SEAWEED
+    GroundEffect_SwampyWaterReflection  // GROUND_EFFECT_FLAG_SWAMPY_REFLECTION
 };
 
 static void DoFlaggedGroundEffects(struct ObjectEvent *objEvent, struct Sprite *sprite, u32 flags)

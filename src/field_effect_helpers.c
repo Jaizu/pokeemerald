@@ -11,8 +11,10 @@
 #include "sound.h"
 #include "sprite.h"
 #include "trig.h"
+#include "util.h"
 #include "constants/event_objects.h"
 #include "constants/field_effects.h"
+#include "constants/rgb.h"
 #include "constants/songs.h"
 
 static void UpdateObjectReflectionSprite(struct Sprite *);
@@ -29,16 +31,17 @@ void sub_81556E8(struct ObjectEvent *, struct Sprite *);
 static void CreateBobbingEffect(struct ObjectEvent *, struct Sprite *, struct Sprite *);
 static void sub_8155850(struct Sprite *);
 static u32 ShowDisguiseFieldEffect(u8, u8);
-void LoadSpecialReflectionPalette(struct Sprite *sprite, u16 rTone, u16 gTone, u16 bTone);
+static void LoadSpecialReflectionPalette(struct Sprite *sprite, u16 color);
 
 extern u16 gReflectionPaletteBuffer[];
 
 #define sReflectionObjEventId       data[0]
 #define sReflectionObjEventLocalId  data[1]
 #define sReflectionVerticalOffset   data[2] 
-#define sIsStillReflection          data[7]
+#define sIsStillReflection          data[3]
+#define sIsSwampyReflection         data[4]
 
-void SetUpReflection(struct ObjectEvent *objectEvent, struct Sprite *sprite, bool8 stillReflection)
+void SetUpReflection(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
     struct Sprite *reflectionSprite;
 
@@ -53,10 +56,11 @@ void SetUpReflection(struct ObjectEvent *objectEvent, struct Sprite *sprite, boo
     reflectionSprite->subspriteMode = SUBSPRITES_OFF;
     reflectionSprite->sReflectionObjEventId = sprite->data[0];
     reflectionSprite->sReflectionObjEventLocalId = objectEvent->localId;
-    reflectionSprite->sIsStillReflection = stillReflection;
+    reflectionSprite->sIsStillReflection = gFieldEffectArguments[FLDEFF_ARG_REFLECTION_IS_STILL];
+    reflectionSprite->sIsSwampyReflection = gFieldEffectArguments[FLDEFF_ARG_REFLECTION_IS_SWAMPY];
     LoadObjectReflectionPalette(objectEvent, reflectionSprite);
 
-    if (!stillReflection)
+    if (reflectionSprite->sIsStillReflection == FALSE)
         reflectionSprite->oam.affineMode = ST_OAM_AFFINE_NORMAL;
 }
 
@@ -69,6 +73,17 @@ void LoadObjectReflectionPalette(struct ObjectEvent *objectEvent, struct Sprite 
 {
     u8 bridgeType;
     u16 bridgeReflectionVerticalOffsets[] = { 12, 28, 44 };
+    u16 color;
+    
+    if (reflectionSprite->sIsSwampyReflection)
+    {
+        color = RGB(25, 27, 8);
+    }
+    else
+    {
+        color = RGB(12, 20, 27);
+    }
+    
     reflectionSprite->sReflectionVerticalOffset = 0;
     if (!GetObjectEventGraphicsInfo(objectEvent->graphicsId)->disableReflectionPaletteLoad && ((bridgeType = MetatileBehavior_GetBridgeType(objectEvent->previousMetatileBehavior)) || (bridgeType = MetatileBehavior_GetBridgeType(objectEvent->currentMetatileBehavior))))
     {
@@ -82,28 +97,22 @@ void LoadObjectReflectionPalette(struct ObjectEvent *objectEvent, struct Sprite 
     }
     else
     {
-        u16 rTone, gTone, bTone;
-        // TODO: Change these values for different water metatiles (e.g. swamp)
-        rTone = Q_8_8(1.0);
-        gTone = Q_8_8(1.0);
-        bTone = Q_8_8(3.5);
-        
-        LoadSpecialReflectionPalette(reflectionSprite, rTone, gTone, bTone);
+        LoadSpecialReflectionPalette(reflectionSprite, color);
     }
 }
 
-void LoadSpecialReflectionPalette(struct Sprite *sprite, u16 rTone, u16 gTone, u16 bTone)
+void LoadSpecialReflectionPalette(struct Sprite *reflectionSprite, u16 color)
 {
     struct SpritePalette reflectionPalette;
 
-    CpuCopy16(&gPlttBufferUnfaded[0x100 + sprite->oam.paletteNum * 16], gReflectionPaletteBuffer, 32);
-    TintPalette_CustomTone(gReflectionPaletteBuffer, 16, rTone, gTone, bTone);
+    CpuCopy16(&gPlttBufferUnfaded[0x100 + reflectionSprite->oam.paletteNum * 16], gReflectionPaletteBuffer, 32);
+    TintPalette_CustomRGB(gReflectionPaletteBuffer, gReflectionPaletteBuffer, 0, 16, 6, color);
     reflectionPalette.data = gReflectionPaletteBuffer;
-    reflectionPalette.tag = GetSpritePaletteTagByPaletteNum(sprite->oam.paletteNum) + 0x1000;
+    reflectionPalette.tag = GetSpritePaletteTagByPaletteNum(reflectionSprite->oam.paletteNum) + 0x1000;
     LoadSpritePalette(&reflectionPalette);
-    sprite->oam.paletteNum = IndexOfSpritePaletteTag(reflectionPalette.tag);
-    UpdatePaletteGammaType(sprite->oam.paletteNum, GAMMA_ALT);
-    UpdateSpritePaletteWithWeather(sprite->oam.paletteNum);
+    reflectionSprite->oam.paletteNum = IndexOfSpritePaletteTag(reflectionPalette.tag);
+    UpdatePaletteGammaType(reflectionSprite->oam.paletteNum, GAMMA_ALT);
+    UpdateSpritePaletteWithWeather(reflectionSprite->oam.paletteNum);
 }
 
 static void UpdateObjectReflectionSprite(struct Sprite *reflectionSprite)
@@ -153,6 +162,7 @@ static void UpdateObjectReflectionSprite(struct Sprite *reflectionSprite)
 #undef sReflectionObjEventLocalId
 #undef sReflectionVerticalOffset
 #undef sIsStillReflection
+#undef sIsSwampyReflection
 
 extern const struct SpriteTemplate *const gFieldEffectObjectTemplatePointers[];
 

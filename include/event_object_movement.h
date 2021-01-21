@@ -21,8 +21,12 @@ enum ReflectionTypes
     REFL_TYPE_NONE,
     REFL_TYPE_ICE,
     REFL_TYPE_WATER,
+    REFL_TYPE_SWAMPY,
     NUM_REFLECTION_TYPES
 };
+
+#define FLDEFF_ARG_REFLECTION_IS_STILL   0
+#define FLDEFF_ARG_REFLECTION_IS_SWAMPY  1
 
 #define FIGURE_8_LENGTH 72
 
@@ -46,6 +50,7 @@ enum ReflectionTypes
 #define GROUND_EFFECT_FLAG_SHORT_GRASS           (1 << 17)
 #define GROUND_EFFECT_FLAG_HOT_SPRINGS           (1 << 18)
 #define GROUND_EFFECT_FLAG_SEAWEED               (1 << 19)
+#define GROUND_EFFECT_FLAG_SWAMPY_REFLECTION     (1 << 20)
 
 struct UnkStruct_085094AC
 {

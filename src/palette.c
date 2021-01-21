@@ -940,6 +940,23 @@ void TintPalette_CustomTone(u16 *palette, u16 count, u16 rTone, u16 gTone, u16 b
     }
 }
 
+void TintPalette_CustomRGB(u16 *palIn, u16 *palOut, u16 palOffset, u16 count, u8 coeff, u16 blendColor)
+{
+    u16 i;
+    for (i = 0; i < count; i++)
+    {
+        u16 index = i + palOffset;
+        struct PlttData *data1 = (struct PlttData *)&palIn[index];
+        s8 r = data1->r;
+        s8 g = data1->g;
+        s8 b = data1->b;
+        struct PlttData *data2 = (struct PlttData *)&blendColor;
+        palOut[index] = RGB((r + (((data2->r - r) * coeff) >> 4)),
+                            (g + (((data2->g - g) * coeff) >> 4)),
+                            (b + (((data2->b - b) * coeff) >> 4)));
+    }
+}
+
 #define tCoeff       data[0]
 #define tCoeffTarget data[1]
 #define tCoeffDelta  data[2]
