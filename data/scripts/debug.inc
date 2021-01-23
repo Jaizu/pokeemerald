@@ -263,6 +263,8 @@
 		// WINDMIST CITY
 		// Set visited flag
 		setflag FLAG_VISITED_WINDMIST_CITY
+		// Allow access to the Cable Car via Celanto Grove
+		setvar VAR_CELANTO_GROVE_STATE, 1
 		// WINDMIST SUMMIT
 		// Fight Trainers
 		settrainerflag TRAINER_BRODY_1
@@ -433,7 +435,11 @@
 		settrainerflag TRAINER_VERNON_1
 		setflag FLAG_BADGE04_GET
 		setflag FLAG_DEFEATED_VALOON_GYM
-		setvar VAR_VALOON_TOWN_STATE, 2
+		// VALOON TOWN
+		// Obtain the Gas Mask from Coulter
+		additem ITEM_GAS_MASK
+		setvar VAR_VALOON_TOWN_GATEHOUSE_STATE, 1
+		setvar VAR_VALOON_TOWN_STATE, 3
 		end
 	
 	Debug_EventScript_GetParty::
