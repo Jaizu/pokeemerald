@@ -499,6 +499,9 @@ const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[
     [MAUVILLE_MAN_UNUSED2]     = &gObjectEventGraphicsInfo_UnusedMauvilleOldMan2,
 };
 
+extern const u16 gTilesetPalettes_General[][16];
+extern const u16 gTilesetPalettes_Winter[][16];
+
 const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Npc1, OBJ_EVENT_PAL_TAG_NPC_1},
     {gObjectEventPal_Npc2, OBJ_EVENT_PAL_TAG_NPC_2},
@@ -572,5 +575,7 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_PkmnRanger, OBJ_EVENT_PAL_TAG_PKMN_RANGER},
     {gObjectEventPal_Vernon, OBJ_EVENT_PAL_TAG_VERNON},
     {gObjectEventPal_Ezekiel, OBJ_EVENT_PAL_TAG_EZEKIEL},
+    {gTilesetPalettes_General[2], FLDEFF_PAL_TAG_TALL_GRASS},
+    {gTilesetPalettes_Winter[2], FLDEFF_PAL_TAG_SNOWY_TALL_GRASS},
     {NULL, 0x0000},
 };

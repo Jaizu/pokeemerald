@@ -109,10 +109,9 @@ void LoadSpecialReflectionPalette(struct Sprite *reflectionSprite, u16 color)
     TintPalette_CustomRGB(gReflectionPaletteBuffer, 16, 6, color);
     reflectionPalette.data = gReflectionPaletteBuffer;
     reflectionPalette.tag = GetSpritePaletteTagByPaletteNum(reflectionSprite->oam.paletteNum) + 0x1000;
-    LoadSpritePalette(&reflectionPalette);
+    LoadCustomWeatherSpritePalette(&reflectionPalette);
     reflectionSprite->oam.paletteNum = IndexOfSpritePaletteTag(reflectionPalette.tag);
     UpdatePaletteGammaType(reflectionSprite->oam.paletteNum, GAMMA_ALT);
-    UpdateSpritePaletteWithWeather(reflectionSprite->oam.paletteNum);
 }
 
 static void UpdateObjectReflectionSprite(struct Sprite *reflectionSprite)
@@ -276,18 +275,23 @@ u32 FldEff_TallGrass(void)
 {
     s16 x;
     s16 y;
-    u8 spriteId;
+    u8 spriteId, fldEffObjId;
     struct Sprite *sprite;
 
     x = gFieldEffectArguments[0];
     y = gFieldEffectArguments[1];
     SetSpritePosToOffsetMapCoords(&x, &y, 8, 8);
-    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_TALL_GRASS], x, y, 0);
+    if (gFieldEffectArguments[3] == 0)
+        fldEffObjId = FLDEFFOBJ_TALL_GRASS;
+    else if (gFieldEffectArguments[3] == 1)
+        fldEffObjId = FLDEFFOBJ_SNOWY_TALL_GRASS;
+    LoadFieldEffectPalette(fldEffObjId);
+    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[fldEffObjId], x, y, 0);
     if (spriteId != MAX_SPRITES)
     {
         sprite = &gSprites[spriteId];
         sprite->coordOffsetEnabled = TRUE;
-        sprite->oam.priority = gFieldEffectArguments[3];
+        sprite->oam.priority = 2;
         sprite->data[0] = gFieldEffectArguments[2];
         sprite->data[1] = gFieldEffectArguments[0];
         sprite->data[2] = gFieldEffectArguments[1];
@@ -323,7 +327,7 @@ void UpdateTallGrassFieldEffect(struct Sprite *sprite)
     mapNum = sprite->data[3];
     mapGroup = sprite->data[4];
     metatileBehavior = MapGridGetMetatileBehaviorAt(sprite->data[1], sprite->data[2]);
-    if (TryGetObjectEventIdByLocalIdAndMap(localId, mapNum, mapGroup, &objectEventId) || !MetatileBehavior_IsTallGrass(metatileBehavior) || (sprite->data[7] && sprite->animEnded))
+    if (TryGetObjectEventIdByLocalIdAndMap(localId, mapNum, mapGroup, &objectEventId) || !(MetatileBehavior_IsTallGrass(metatileBehavior) || MetatileBehavior_IsSnowyTallGrass(metatileBehavior)) || (sprite->data[7] && sprite->animEnded))
     {
         FieldEffectStop(sprite, FLDEFF_TALL_GRASS);
     }
@@ -353,7 +357,7 @@ u32 FldEff_JumpTallGrass(void)
     {
         sprite = &gSprites[spriteId];
         sprite->coordOffsetEnabled = TRUE;
-        sprite->oam.priority = gFieldEffectArguments[3];
+        sprite->oam.priority = 2;
         sprite->data[0] = gFieldEffectArguments[2];
         sprite->data[1] = FLDEFF_JUMP_TALL_GRASS;
     }
@@ -1281,6 +1285,7 @@ void LoadFieldEffectPalette(u8 fieldEffect)
     {
         LoadObjectEventPalette(spriteTemplate->paletteTag);
         UpdatePaletteGammaType(IndexOfSpritePaletteTag(spriteTemplate->paletteTag), GAMMA_NORMAL);
+        UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(spriteTemplate->paletteTag));
     }
 }
 

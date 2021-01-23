@@ -30,7 +30,6 @@ bool8 MetatileBehavior_IsArrowWarp(u8);
 bool8 MetatileBehavior_IsForcedMovementTile(u8);
 bool8 MetatileBehavior_IsIce_2(u8);
 bool8 MetatileBehavior_IsTrickHouseSlipperyFloor(u8);
-bool8 MetatileBehavior_IsMB_05(u8);
 bool8 MetatileBehavior_IsWalkNorth(u8);
 bool8 MetatileBehavior_IsWalkSouth(u8);
 bool8 MetatileBehavior_IsWalkWest(u8);
@@ -167,5 +166,7 @@ bool8 MetatileBehavior_IsDirectionalStairWarp(u8 metatileBehavior);
 bool8 MetatileBehavior_IsHiddenGrottoTree(u8 metatileBehavior);
 // valoon gym
 bool8 MetatileBehavior_IsValoonGymCombeeTile(u8 metatileBehavior);
+// different grass types
+bool8 MetatileBehavior_IsSnowyTallGrass(u8 metatileBehavior);
 
 #endif // GUARD_METATILE_BEHAVIOR
