@@ -111,6 +111,16 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_SnowyTallGrass = {
     .callback = UpdateTallGrassFieldEffect,
 };
 
+const struct SpriteTemplate gFieldEffectObjectTemplate_SwampyTallGrass = {
+    .tileTag = 0xFFFF,
+    .paletteTag = FLDEFF_PAL_TAG_SWAMPY_TALL_GRASS,
+    .oam = &gObjectEventBaseOam_16x16,
+    .anims = sAnimTable_TallGrass,
+    .images = sPicTable_TallGrass,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = UpdateTallGrassFieldEffect,
+};
+
 static const struct SpriteFrameImage sPicTable_Ripple[] = {
     overworld_frame(gFieldEffectObjectPic_Ripple, 2, 2, 0),
     overworld_frame(gFieldEffectObjectPic_Ripple, 2, 2, 1),

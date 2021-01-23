@@ -501,6 +501,7 @@ const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[
 
 extern const u16 gTilesetPalettes_General[][16];
 extern const u16 gTilesetPalettes_Winter[][16];
+extern const u16 gTilesetPalettes_Swamp[][16];
 
 const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Npc1, OBJ_EVENT_PAL_TAG_NPC_1},
@@ -577,5 +578,6 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Ezekiel, OBJ_EVENT_PAL_TAG_EZEKIEL},
     {gTilesetPalettes_General[2], FLDEFF_PAL_TAG_TALL_GRASS},
     {gTilesetPalettes_Winter[2], FLDEFF_PAL_TAG_SNOWY_TALL_GRASS},
+    {gTilesetPalettes_Swamp[2], FLDEFF_PAL_TAG_SWAMPY_TALL_GRASS},
     {NULL, 0x0000},
 };

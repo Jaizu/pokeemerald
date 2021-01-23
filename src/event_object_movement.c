@@ -75,6 +75,7 @@ static void ObjectEventUpdateMetatileBehaviors(struct ObjectEvent*);
 static void GetGroundEffectFlags_Reflection(struct ObjectEvent*, u32*);
 static void GetGroundEffectFlags_TallGrassOnSpawn(struct ObjectEvent*, u32*);
 static void GetGroundEffectFlags_SnowyTallGrassOnSpawn(struct ObjectEvent*, u32*);
+static void GetGroundEffectFlags_SwampyTallGrassOnSpawn(struct ObjectEvent*, u32*);
 static void GetGroundEffectFlags_LongGrassOnSpawn(struct ObjectEvent*, u32*);
 static void GetGroundEffectFlags_SandHeap(struct ObjectEvent*, u32*);
 static void GetGroundEffectFlags_ShallowFlowingWater(struct ObjectEvent*, u32*);
@@ -82,6 +83,7 @@ static void GetGroundEffectFlags_ShortGrass(struct ObjectEvent*, u32*);
 static void GetGroundEffectFlags_HotSprings(struct ObjectEvent*, u32*);
 static void GetGroundEffectFlags_TallGrassOnBeginStep(struct ObjectEvent*, u32*);
 static void GetGroundEffectFlags_SnowyTallGrassOnBeginStep(struct ObjectEvent*, u32*);
+static void GetGroundEffectFlags_SwampyTallGrassOnBeginStep(struct ObjectEvent*, u32*);
 static void GetGroundEffectFlags_LongGrassOnBeginStep(struct ObjectEvent*, u32*);
 static void GetGroundEffectFlags_Tracks(struct ObjectEvent*, u32*);
 static void GetGroundEffectFlags_Puddle(struct ObjectEvent*, u32*);
@@ -7441,6 +7443,7 @@ static void GetAllGroundEffectFlags_OnSpawn(struct ObjectEvent *objEvent, u32 *f
     GetGroundEffectFlags_Reflection(objEvent, flags);
     GetGroundEffectFlags_TallGrassOnSpawn(objEvent, flags);
     GetGroundEffectFlags_SnowyTallGrassOnSpawn(objEvent, flags);
+    GetGroundEffectFlags_SwampyTallGrassOnSpawn(objEvent, flags);
     GetGroundEffectFlags_LongGrassOnSpawn(objEvent, flags);
     GetGroundEffectFlags_SandHeap(objEvent, flags);
     GetGroundEffectFlags_ShallowFlowingWater(objEvent, flags);
@@ -7454,6 +7457,7 @@ static void GetAllGroundEffectFlags_OnBeginStep(struct ObjectEvent *objEvent, u3
     GetGroundEffectFlags_Reflection(objEvent, flags);
     GetGroundEffectFlags_TallGrassOnBeginStep(objEvent, flags);
     GetGroundEffectFlags_SnowyTallGrassOnBeginStep(objEvent, flags);
+    GetGroundEffectFlags_SwampyTallGrassOnBeginStep(objEvent, flags);
     GetGroundEffectFlags_LongGrassOnBeginStep(objEvent, flags);
     GetGroundEffectFlags_Tracks(objEvent, flags);
     GetGroundEffectFlags_SandHeap(objEvent, flags);
@@ -7527,6 +7531,18 @@ static void GetGroundEffectFlags_SnowyTallGrassOnBeginStep(struct ObjectEvent *o
 {
     if (MetatileBehavior_IsSnowyTallGrass(objEvent->currentMetatileBehavior))
         *flags |= GROUND_EFFECT_FLAG_SNOWY_TALL_GRASS_ON_MOVE;
+}
+
+static void GetGroundEffectFlags_SwampyTallGrassOnSpawn(struct ObjectEvent *objEvent, u32 *flags)
+{
+    if (MetatileBehavior_IsSwampyTallGrass(objEvent->currentMetatileBehavior))
+        *flags |= GROUND_EFFECT_FLAG_SWAMPY_TALL_GRASS_ON_SPAWN;
+}
+
+static void GetGroundEffectFlags_SwampyTallGrassOnBeginStep(struct ObjectEvent *objEvent, u32 *flags)
+{
+    if (MetatileBehavior_IsSwampyTallGrass(objEvent->currentMetatileBehavior))
+        *flags |= GROUND_EFFECT_FLAG_SWAMPY_TALL_GRASS_ON_MOVE;
 }
 
 static void GetGroundEffectFlags_LongGrassOnSpawn(struct ObjectEvent *objEvent, u32 *flags)
@@ -7656,6 +7672,7 @@ static void GetGroundEffectFlags_JumpLanding(struct ObjectEvent *objEvent, u32 *
     static const MetatileFunc metatileFuncs[] = {
         MetatileBehavior_IsTallGrass,
         MetatileBehavior_IsSnowyTallGrass,
+        MetatileBehavior_IsSwampyTallGrass,
         MetatileBehavior_IsLongGrass,
         MetatileBehavior_IsPuddle,
         MetatileBehavior_IsSurfableWaterOrUnderwater,
@@ -7666,6 +7683,7 @@ static void GetGroundEffectFlags_JumpLanding(struct ObjectEvent *objEvent, u32 *
     static const u32 jumpLandingFlags[] = {
         GROUND_EFFECT_FLAG_LAND_IN_TALL_GRASS,
         GROUND_EFFECT_FLAG_LAND_IN_SNOWY_TALL_GRASS,
+        GROUND_EFFECT_FLAG_LAND_IN_SWAMPY_TALL_GRASS,
         GROUND_EFFECT_FLAG_LAND_IN_LONG_GRASS,
         GROUND_EFFECT_FLAG_LAND_IN_SHALLOW_WATER,
         GROUND_EFFECT_FLAG_LAND_IN_DEEP_WATER,
@@ -7931,6 +7949,32 @@ void GroundEffect_StepOnSnowyTallGrass(struct ObjectEvent *objEvent, struct Spri
     FieldEffectStart(FLDEFF_TALL_GRASS);
 }
 
+void GroundEffect_SpawnOnSwampyTallGrass(struct ObjectEvent *objEvent, struct Sprite *sprite)
+{
+    gFieldEffectArguments[0] = objEvent->currentCoords.x;
+    gFieldEffectArguments[1] = objEvent->currentCoords.y;
+    gFieldEffectArguments[2] = objEvent->previousElevation;
+    gFieldEffectArguments[3] = 2;
+    gFieldEffectArguments[4] = objEvent->localId << 8 | objEvent->mapNum;
+    gFieldEffectArguments[5] = objEvent->mapGroup;
+    gFieldEffectArguments[6] = (u8)gSaveBlock1Ptr->location.mapNum << 8 | (u8)gSaveBlock1Ptr->location.mapGroup;
+    gFieldEffectArguments[7] = 1;
+    FieldEffectStart(FLDEFF_TALL_GRASS);
+}
+
+void GroundEffect_StepOnSwampyTallGrass(struct ObjectEvent *objEvent, struct Sprite *sprite)
+{
+    gFieldEffectArguments[0] = objEvent->currentCoords.x;
+    gFieldEffectArguments[1] = objEvent->currentCoords.y;
+    gFieldEffectArguments[2] = objEvent->previousElevation;
+    gFieldEffectArguments[3] = 2;
+    gFieldEffectArguments[4] = objEvent->localId << 8 | objEvent->mapNum;
+    gFieldEffectArguments[5] = objEvent->mapGroup;
+    gFieldEffectArguments[6] = (u8)gSaveBlock1Ptr->location.mapNum << 8 | (u8)gSaveBlock1Ptr->location.mapGroup;
+    gFieldEffectArguments[7] = 0;
+    FieldEffectStart(FLDEFF_TALL_GRASS);
+}
+
 void GroundEffect_SpawnOnLongGrass(struct ObjectEvent *objEvent, struct Sprite *sprite)
 {
     gFieldEffectArguments[0] = objEvent->currentCoords.x;
@@ -8070,7 +8114,7 @@ void GroundEffect_JumpOnTallGrass(struct ObjectEvent *objEvent, struct Sprite *s
     gFieldEffectArguments[0] = objEvent->currentCoords.x;
     gFieldEffectArguments[1] = objEvent->currentCoords.y;
     gFieldEffectArguments[2] = objEvent->previousElevation;
-    gFieldEffectArguments[3] = 2;
+    gFieldEffectArguments[3] = 0;
     FieldEffectStart(FLDEFF_JUMP_TALL_GRASS);
 
     spriteId = FindTallGrassFieldEffectSpriteId(
@@ -8091,7 +8135,7 @@ void GroundEffect_JumpOnSnowyTallGrass(struct ObjectEvent *objEvent, struct Spri
     gFieldEffectArguments[0] = objEvent->currentCoords.x;
     gFieldEffectArguments[1] = objEvent->currentCoords.y;
     gFieldEffectArguments[2] = objEvent->previousElevation;
-    gFieldEffectArguments[3] = 2;
+    gFieldEffectArguments[3] = 1;
     FieldEffectStart(FLDEFF_JUMP_TALL_GRASS);
 
     spriteId = FindTallGrassFieldEffectSpriteId(
@@ -8103,6 +8147,27 @@ void GroundEffect_JumpOnSnowyTallGrass(struct ObjectEvent *objEvent, struct Spri
 
     if (spriteId == MAX_SPRITES)
         GroundEffect_SpawnOnSnowyTallGrass(objEvent, sprite);
+}
+
+void GroundEffect_JumpOnSwampyTallGrass(struct ObjectEvent *objEvent, struct Sprite *sprite)
+{
+    u8 spriteId;
+
+    gFieldEffectArguments[0] = objEvent->currentCoords.x;
+    gFieldEffectArguments[1] = objEvent->currentCoords.y;
+    gFieldEffectArguments[2] = objEvent->previousElevation;
+    gFieldEffectArguments[3] = 2;
+    FieldEffectStart(FLDEFF_JUMP_TALL_GRASS);
+
+    spriteId = FindTallGrassFieldEffectSpriteId(
+        objEvent->localId,
+        objEvent->mapNum,
+        objEvent->mapGroup,
+        objEvent->currentCoords.x,
+        objEvent->currentCoords.y);
+
+    if (spriteId == MAX_SPRITES)
+        GroundEffect_SpawnOnSwampyTallGrass(objEvent, sprite);
 }
 
 void GroundEffect_JumpOnLongGrass(struct ObjectEvent *objEvent, struct Sprite *sprite)
@@ -8159,30 +8224,33 @@ void GroundEffect_Seaweed(struct ObjectEvent *objEvent, struct Sprite *sprite)
 }
 
 static void (*const sGroundEffectFuncs[])(struct ObjectEvent *objEvent, struct Sprite *sprite) = {
-    GroundEffect_SpawnOnTallGrass,      // GROUND_EFFECT_FLAG_TALL_GRASS_ON_SPAWN
-    GroundEffect_StepOnTallGrass,       // GROUND_EFFECT_FLAG_TALL_GRASS_ON_MOVE
-    GroundEffect_SpawnOnLongGrass,      // GROUND_EFFECT_FLAG_LONG_GRASS_ON_SPAWN
-    GroundEffect_StepOnLongGrass,       // GROUND_EFFECT_FLAG_LONG_GRASS_ON_MOVE
-    GroundEffect_WaterReflection,       // GROUND_EFFECT_FLAG_WATER_REFLECTION
-    GroundEffect_IceReflection,         // GROUND_EFFECT_FLAG_ICE_REFLECTION
-    GroundEffect_FlowingWater,          // GROUND_EFFECT_FLAG_SHALLOW_FLOWING_WATER
-    GroundEffect_SandTracks,            // GROUND_EFFECT_FLAG_SAND
-    GroundEffect_DeepSandTracks,        // GROUND_EFFECT_FLAG_DEEP_SAND
-    GroundEffect_Ripple,                // GROUND_EFFECT_FLAG_RIPPLES
-    GroundEffect_StepOnPuddle,          // GROUND_EFFECT_FLAG_PUDDLE
-    GroundEffect_SandHeap,              // GROUND_EFFECT_FLAG_SAND_PILE
-    GroundEffect_JumpOnTallGrass,       // GROUND_EFFECT_FLAG_LAND_IN_TALL_GRASS
-    GroundEffect_JumpOnLongGrass,       // GROUND_EFFECT_FLAG_LAND_IN_LONG_GRASS
-    GroundEffect_JumpOnShallowWater,    // GROUND_EFFECT_FLAG_LAND_IN_SHALLOW_WATER
-    GroundEffect_JumpOnWater,           // GROUND_EFFECT_FLAG_LAND_IN_DEEP_WATER
-    GroundEffect_JumpLandingDust,       // GROUND_EFFECT_FLAG_LAND_ON_NORMAL_GROUND
-    GroundEffect_ShortGrass,            // GROUND_EFFECT_FLAG_SHORT_GRASS
-    GroundEffect_HotSprings,            // GROUND_EFFECT_FLAG_HOT_SPRINGS
-    GroundEffect_Seaweed,               // GROUND_EFFECT_FLAG_SEAWEED
-    GroundEffect_SwampyWaterReflection, // GROUND_EFFECT_FLAG_SWAMPY_REFLECTION
-    GroundEffect_SpawnOnSnowyTallGrass, // GROUND_EFFECT_FLAG_SNOWY_TALL_GRASS_ON_SPAWN
-    GroundEffect_StepOnSnowyTallGrass,  // GROUND_EFFECT_FLAG_SNOWY_TALL_GRASS_ON_MOVE
-    GroundEffect_JumpOnSnowyTallGrass,  // GROUND_EFFECT_FLAG_LAND_IN_SNOWY_TALL_GRASS
+    GroundEffect_SpawnOnTallGrass,       // GROUND_EFFECT_FLAG_TALL_GRASS_ON_SPAWN
+    GroundEffect_StepOnTallGrass,        // GROUND_EFFECT_FLAG_TALL_GRASS_ON_MOVE
+    GroundEffect_SpawnOnLongGrass,       // GROUND_EFFECT_FLAG_LONG_GRASS_ON_SPAWN
+    GroundEffect_StepOnLongGrass,        // GROUND_EFFECT_FLAG_LONG_GRASS_ON_MOVE
+    GroundEffect_WaterReflection,        // GROUND_EFFECT_FLAG_WATER_REFLECTION
+    GroundEffect_IceReflection,          // GROUND_EFFECT_FLAG_ICE_REFLECTION
+    GroundEffect_FlowingWater,           // GROUND_EFFECT_FLAG_SHALLOW_FLOWING_WATER
+    GroundEffect_SandTracks,             // GROUND_EFFECT_FLAG_SAND
+    GroundEffect_DeepSandTracks,         // GROUND_EFFECT_FLAG_DEEP_SAND
+    GroundEffect_Ripple,                 // GROUND_EFFECT_FLAG_RIPPLES
+    GroundEffect_StepOnPuddle,           // GROUND_EFFECT_FLAG_PUDDLE
+    GroundEffect_SandHeap,               // GROUND_EFFECT_FLAG_SAND_PILE
+    GroundEffect_JumpOnTallGrass,        // GROUND_EFFECT_FLAG_LAND_IN_TALL_GRASS
+    GroundEffect_JumpOnLongGrass,        // GROUND_EFFECT_FLAG_LAND_IN_LONG_GRASS
+    GroundEffect_JumpOnShallowWater,     // GROUND_EFFECT_FLAG_LAND_IN_SHALLOW_WATER
+    GroundEffect_JumpOnWater,            // GROUND_EFFECT_FLAG_LAND_IN_DEEP_WATER
+    GroundEffect_JumpLandingDust,        // GROUND_EFFECT_FLAG_LAND_ON_NORMAL_GROUND
+    GroundEffect_ShortGrass,             // GROUND_EFFECT_FLAG_SHORT_GRASS
+    GroundEffect_HotSprings,             // GROUND_EFFECT_FLAG_HOT_SPRINGS
+    GroundEffect_Seaweed,                // GROUND_EFFECT_FLAG_SEAWEED
+    GroundEffect_SwampyWaterReflection,  // GROUND_EFFECT_FLAG_SWAMPY_REFLECTION
+    GroundEffect_SpawnOnSnowyTallGrass,  // GROUND_EFFECT_FLAG_SNOWY_TALL_GRASS_ON_SPAWN
+    GroundEffect_StepOnSnowyTallGrass,   // GROUND_EFFECT_FLAG_SNOWY_TALL_GRASS_ON_MOVE
+    GroundEffect_JumpOnSnowyTallGrass,   // GROUND_EFFECT_FLAG_LAND_IN_SNOWY_TALL_GRASS
+    GroundEffect_SpawnOnSwampyTallGrass, // GROUND_EFFECT_FLAG_SWAMPY_TALL_GRASS_ON_SPAWN
+    GroundEffect_StepOnSwampyTallGrass,  // GROUND_EFFECT_FLAG_SWAMPY_TALL_GRASS_ON_MOVE
+    GroundEffect_JumpOnSwampyTallGrass,  // GROUND_EFFECT_FLAG_LAND_IN_SWAMPY_TALL_GRASS
 };
 
 static void DoFlaggedGroundEffects(struct ObjectEvent *objEvent, struct Sprite *sprite, u32 flags)
@@ -8210,7 +8278,8 @@ void filters_out_some_ground_effects(struct ObjectEvent *objEvent, u32 *flags)
                   | GROUND_EFFECT_FLAG_SAND_PILE
                   | GROUND_EFFECT_FLAG_SHALLOW_FLOWING_WATER
                   | GROUND_EFFECT_FLAG_TALL_GRASS_ON_MOVE
-                  | GROUND_EFFECT_FLAG_SNOWY_TALL_GRASS_ON_MOVE);
+                  | GROUND_EFFECT_FLAG_SNOWY_TALL_GRASS_ON_MOVE
+                  | GROUND_EFFECT_FLAG_SWAMPY_TALL_GRASS_ON_MOVE);
     }
 }
 

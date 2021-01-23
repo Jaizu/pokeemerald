@@ -41,7 +41,7 @@ static const u8 sTileBitAttributes[] =
     [MB_SHOAL_CAVE_ENTRANCE] = TILE_ATTRIBUTES(TRUE, FALSE, FALSE),
     [MB_HIDDEN_GROTTO_TREE] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_SNOWY_TALL_GRASS] = TILE_ATTRIBUTES(TRUE, FALSE, TRUE),
-    [MB_UNUSED_1F] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
+    [MB_SWAMPY_TALL_GRASS] = TILE_ATTRIBUTES(TRUE, FALSE, TRUE),
     [MB_ICE] = TILE_ATTRIBUTES(TRUE, FALSE, FALSE),
     [MB_SAND] = TILE_ATTRIBUTES(TRUE, FALSE, FALSE),
     [MB_SEAWEED] = TILE_ATTRIBUTES(TRUE, TRUE, TRUE),
@@ -301,6 +301,7 @@ bool8 MetatileBehavior_IsPokeGrass(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_TALL_GRASS
         || metatileBehavior == MB_SNOWY_TALL_GRASS
+        || metatileBehavior == MB_SWAMPY_TALL_GRASS
         || metatileBehavior == MB_LONG_GRASS)
         return TRUE;
     else
@@ -1387,6 +1388,7 @@ bool8 MetatileBehavior_IsCuttableGrass(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_TALL_GRASS
      || metatileBehavior == MB_SNOWY_TALL_GRASS
+     || metatileBehavior == MB_SWAMPY_TALL_GRASS
      || metatileBehavior == MB_LONG_GRASS
      || metatileBehavior == MB_ASHGRASS
      || metatileBehavior == MB_LONG_GRASS_SOUTH_EDGE)
@@ -1654,6 +1656,14 @@ bool8 MetatileBehavior_IsValoonGymCombeeTile(u8 metatileBehavior)
 bool8 MetatileBehavior_IsSnowyTallGrass(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_SNOWY_TALL_GRASS)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsSwampyTallGrass(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_SWAMPY_TALL_GRASS)
         return TRUE;
     else
         return FALSE;

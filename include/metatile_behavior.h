@@ -168,5 +168,6 @@ bool8 MetatileBehavior_IsHiddenGrottoTree(u8 metatileBehavior);
 bool8 MetatileBehavior_IsValoonGymCombeeTile(u8 metatileBehavior);
 // different grass types
 bool8 MetatileBehavior_IsSnowyTallGrass(u8 metatileBehavior);
+bool8 MetatileBehavior_IsSwampyTallGrass(u8 metatileBehavior);
 
 #endif // GUARD_METATILE_BEHAVIOR

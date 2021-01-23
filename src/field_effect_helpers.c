@@ -281,11 +281,22 @@ u32 FldEff_TallGrass(void)
     x = gFieldEffectArguments[0];
     y = gFieldEffectArguments[1];
     SetSpritePosToOffsetMapCoords(&x, &y, 8, 8);
-    if (gFieldEffectArguments[3] == 0)
+    
+    switch (gFieldEffectArguments[3])
+    {
+    case 0:
+    default:
         fldEffObjId = FLDEFFOBJ_TALL_GRASS;
-    else if (gFieldEffectArguments[3] == 1)
+        break;
+    case 1:
         fldEffObjId = FLDEFFOBJ_SNOWY_TALL_GRASS;
+        break;
+    case 2:
+        fldEffObjId = FLDEFFOBJ_SWAMPY_TALL_GRASS;
+        break;
+    }
     LoadFieldEffectPalette(fldEffObjId);
+    
     spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[fldEffObjId], x, y, 0);
     if (spriteId != MAX_SPRITES)
     {
@@ -327,7 +338,9 @@ void UpdateTallGrassFieldEffect(struct Sprite *sprite)
     mapNum = sprite->data[3];
     mapGroup = sprite->data[4];
     metatileBehavior = MapGridGetMetatileBehaviorAt(sprite->data[1], sprite->data[2]);
-    if (TryGetObjectEventIdByLocalIdAndMap(localId, mapNum, mapGroup, &objectEventId) || !(MetatileBehavior_IsTallGrass(metatileBehavior) || MetatileBehavior_IsSnowyTallGrass(metatileBehavior)) || (sprite->data[7] && sprite->animEnded))
+    if (TryGetObjectEventIdByLocalIdAndMap(localId, mapNum, mapGroup, &objectEventId)
+        || !(MetatileBehavior_IsTallGrass(metatileBehavior) || MetatileBehavior_IsSnowyTallGrass(metatileBehavior) || MetatileBehavior_IsSwampyTallGrass(metatileBehavior))
+        || (sprite->data[7] && sprite->animEnded))
     {
         FieldEffectStop(sprite, FLDEFF_TALL_GRASS);
     }
