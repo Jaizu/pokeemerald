@@ -961,7 +961,7 @@ gTileset_Swamp::
 	.4byte gTilesetPalettes_Swamp
 	.4byte gMetatiles_Swamp
 	.4byte gMetatileAttributes_Swamp
-	.4byte NULL
+	.4byte InitTilesetAnim_General
 
 	.align 2
 gTileset_BattleMarsh::
