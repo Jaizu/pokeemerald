@@ -397,7 +397,7 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
         .bg = 0,
         .tilemapLeft = 0,
         .tilemapTop = 16,
-        .width = 18,
+        .width = 24,
         .height = 4,
         .paletteNum = 8,
         .baseBlock = 519,
@@ -412,7 +412,7 @@ static const struct WindowTemplate sPageMovesTemplate[] =
         .width = 10,
         .height = 18,
         .paletteNum = 8,
-        .baseBlock = 591,
+        .baseBlock = 615,
     },
     [PSS_WINDOW_MOVE_DETAILS] = {
         .bg = 0,
@@ -421,7 +421,7 @@ static const struct WindowTemplate sPageMovesTemplate[] =
         .width = 14,
         .height = 10,
         .paletteNum = 8,
-        .baseBlock = 771,
+        .baseBlock = 795,
     },
 };
 
