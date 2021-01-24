@@ -365,7 +365,7 @@ ValoonTown_Gym_EventScript_Vernon::
 	end
 
 ValoonTown_Gym_EventScript_VernonNoBeedrilliteBattle:
-	trainerbattle_single TRAINER_VERNON_2, ValoonTown_Gym_Text_VernonIntroNoBeedrill, ValoonTown_Gym_Text_VernonDefeat, ValoonTown_Gym_EventScript_VernonDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_VERNON_1_NO_MEGA_BEEDRILL, ValoonTown_Gym_Text_VernonIntroNoBeedrill, ValoonTown_Gym_Text_VernonDefeat, ValoonTown_Gym_EventScript_VernonDefeated, NO_MUSIC
 	goto ValoonTown_Gym_EventScript_VernonPostBattle
 	end
 

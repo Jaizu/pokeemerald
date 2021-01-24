@@ -1,9 +1,3 @@
-.set TRAINER_ELIJAH_1, 1
-.set TRAINER_HANK_1, 1
-.set TRAINER_LISIA_1, 1
-.set TRAINER_FELICIA_1, 1
-.set TRAINER_RAIDEN_1, 1
-
 TelmurkSwamp_MapScripts::
 	.byte 0
 

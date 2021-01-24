@@ -238,12 +238,16 @@
 #define TRAINER_CINDY_2                     117
 #define TRAINER_HIDEKI                      117 // TRAINER_CINDY_2 in Emerald
 #define TRAINER_BRIANNA                     118
-#define TRAINER_VERNON_2                    118 // TRAINER_BRIANNA in Emerald
-
+#define TRAINER_ELIJAH_1                    118 // TRAINER_BRIANNA in Emerald
 #define TRAINER_NAOMI                       119
+#define TRAINER_HANK_1                      119 // TRAINER_NAOMI in Emerald
 #define TRAINER_CINDY_3                     120
+#define TRAINER_LISIA_1                     120 // TRAINER_CINDY_3 in Emerald
 #define TRAINER_CINDY_4                     121
+#define TRAINER_FELICIA_1                   121 // TRAINER_CINDY_4 in Emerald
 #define TRAINER_CINDY_5                     122
+#define TRAINER_RAIDEN_1                    122 // TRAINER_CINDY_5 in Emerald
+
 #define TRAINER_CINDY_6                     123
 #define TRAINER_MELISSA_OLD                 124 // TRAINER_MELISSA in Emerald
 #define TRAINER_SHEILA                      125
@@ -399,6 +403,7 @@
 #define TRAINER_TATE_AND_LIZA_1             271
 #define TRAINER_JUAN_1                      272
 #define TRAINER_JERRY_1                     273
+#define TRAINER_VERNON_1_NO_MEGA_BEEDRILL   273 // TRAINER_JERRY_1 in Emerald
 #define TRAINER_TED                         274
 #define TRAINER_PAUL                        275
 #define TRAINER_JERRY_2                     276
