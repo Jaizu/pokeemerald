@@ -247,18 +247,27 @@
 #define TRAINER_FELICIA_1                   121 // TRAINER_CINDY_4 in Emerald
 #define TRAINER_CINDY_5                     122
 #define TRAINER_RAIDEN_1                    122 // TRAINER_CINDY_5 in Emerald
-
 #define TRAINER_CINDY_6                     123
-#define TRAINER_MELISSA_OLD                 124 // TRAINER_MELISSA in Emerald
+#define TRAINER_ADRIANA_1                   123 // TRAINER_CINDY_6 in Emerald
+#define TRAINER_DEAN_1                      124 // TRAINER_MELISSA in Emerald
 #define TRAINER_SHEILA                      125
+#define TRAINER_SHANE_1                     125 // TRAINER_SHEILA in Emerald
 #define TRAINER_SHIRLEY                     126
-#define TRAINER_JESSICA_1                   127
-#define TRAINER_CONNIE                      128
-#define TRAINER_BRIDGET                     129
-#define TRAINER_OLIVIA_OLD                  130 // TRAINER_OLIVIA_OLD in Emerald
+#define TRAINER_EARL_1                      126 // TRAINER_SHIRLEY in Emerald
+#define TRAINER_JESSICA_1                      127
+#define TRAINER_COULTER_BATTLE_MARSH_INFERNAPE 127 // TRAINER_JESSICA_1 in Emerald
+#define TRAINER_CONNIE                         128
+#define TRAINER_COULTER_BATTLE_MARSH_EMPOLEON  128 // TRAINER_CONNIE in Emerald
+#define TRAINER_BRIDGET                        129
+#define TRAINER_COULTER_BATTLE_MARSH_TORTERRA  129 // TRAINER_BRIDGET in Emerald
+#define TRAINER_JENNIE_1                    130 // TRAINER_OLIVIA in Emerald
 #define TRAINER_TIFFANY                     131
+#define TRAINER_LLOYD_1                     131 // TRAINER_TIFFANY in Emerald
 #define TRAINER_JESSICA_2                   132
+#define TRAINER_DORIS_1                     132 // TRAINER_JESSICA_2 in Emerald
 #define TRAINER_JESSICA_3                   133
+#define TRAINER_CARLA_1                     133 // TRAINER_JESSICA_3 in Emerald
+
 #define TRAINER_JESSICA_4                   134
 #define TRAINER_JESSICA_5                   135
 #define TRAINER_WINSTON_1                   136
