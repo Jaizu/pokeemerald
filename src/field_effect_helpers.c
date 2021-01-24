@@ -31,7 +31,8 @@ void sub_81556E8(struct ObjectEvent *, struct Sprite *);
 static void CreateBobbingEffect(struct ObjectEvent *, struct Sprite *, struct Sprite *);
 static void sub_8155850(struct Sprite *);
 static u32 ShowDisguiseFieldEffect(u8, u8);
-static void LoadSpecialReflectionPalette(struct Sprite *sprite, u16 color);
+static void LoadSpecialReflectionPalette(struct Sprite *sprite);
+static void UpdateReflectionTint(struct Sprite *reflectionSprite);
 
 extern u16 gReflectionPaletteBuffer[];
 
@@ -73,17 +74,7 @@ void LoadObjectReflectionPalette(struct ObjectEvent *objectEvent, struct Sprite 
 {
     u8 bridgeType;
     u16 bridgeReflectionVerticalOffsets[] = { 12, 28, 44 };
-    u16 color;
-    
-    if (reflectionSprite->sIsSwampyReflection)
-    {
-        color = RGB(25, 27, 8);
-    }
-    else
-    {
-        color = RGB(12, 20, 27);
-    }
-    
+
     reflectionSprite->sReflectionVerticalOffset = 0;
     if (!GetObjectEventGraphicsInfo(objectEvent->graphicsId)->disableReflectionPaletteLoad && ((bridgeType = MetatileBehavior_GetBridgeType(objectEvent->previousMetatileBehavior)) || (bridgeType = MetatileBehavior_GetBridgeType(objectEvent->currentMetatileBehavior))))
     {
@@ -97,16 +88,16 @@ void LoadObjectReflectionPalette(struct ObjectEvent *objectEvent, struct Sprite 
     }
     else
     {
-        LoadSpecialReflectionPalette(reflectionSprite, color);
+        LoadSpecialReflectionPalette(reflectionSprite);
     }
 }
 
-void LoadSpecialReflectionPalette(struct Sprite *reflectionSprite, u16 color)
+void LoadSpecialReflectionPalette(struct Sprite *reflectionSprite)
 {
     struct SpritePalette reflectionPalette;
 
     CpuCopy16(&gPlttBufferUnfaded[0x100 + reflectionSprite->oam.paletteNum * 16], gReflectionPaletteBuffer, 32);
-    TintPalette_CustomRGB(gReflectionPaletteBuffer, 16, 6, color);
+    UpdateReflectionTint(reflectionSprite);
     reflectionPalette.data = gReflectionPaletteBuffer;
     reflectionPalette.tag = GetSpritePaletteTagByPaletteNum(reflectionSprite->oam.paletteNum) + 0x1000;
     LoadCustomWeatherSpritePalette(&reflectionPalette);
@@ -118,7 +109,7 @@ static void UpdateObjectReflectionSprite(struct Sprite *reflectionSprite)
 {
     struct ObjectEvent *objectEvent;
     struct Sprite *mainSprite;
-
+    u16 color;
     objectEvent = &gObjectEvents[reflectionSprite->sReflectionObjEventId];
     mainSprite = &gSprites[objectEvent->spriteId];
     if (!objectEvent->active || !objectEvent->hasReflection || objectEvent->localId != reflectionSprite->sReflectionObjEventLocalId)
@@ -154,7 +145,25 @@ static void UpdateObjectReflectionSprite(struct Sprite *reflectionSprite)
             if (mainSprite->oam.matrixNum & ST_OAM_HFLIP)
                 reflectionSprite->oam.matrixNum = 1;
         }
+        
+        CpuCopy16(&gPlttBufferUnfaded[0x100 + mainSprite->oam.paletteNum * 16], gReflectionPaletteBuffer, 32);
+        UpdateReflectionTint(reflectionSprite);
+        CpuCopy16(gReflectionPaletteBuffer, &gPlttBufferFaded[0x100 + reflectionSprite->oam.paletteNum * 16], 32);
     }
+}
+
+static void UpdateReflectionTint(struct Sprite *reflectionSprite)
+{
+    u16 color;
+    if (reflectionSprite->sIsSwampyReflection)
+    {
+        color = RGB(25, 27, 8);
+    }
+    else
+    {
+        color = RGB(12, 20, 27);
+    }
+    TintPalette_CustomRGB(gReflectionPaletteBuffer, 16, 6, color);
 }
 
 #undef sReflectionObjEventId
