@@ -344,6 +344,14 @@ EventScript_ItemOldAmber::
 	finditem ITEM_OLD_AMBER
 	end
 
+EventScript_ItemBrokenTool::
+	finditem ITEM_BROKEN_TOOL
+	end
+
+EventScript_ItemLuckyEgg::
+	finditem ITEM_LUCKY_EGG
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
