@@ -97,6 +97,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
       "flag": "FLAG_TEMP_11"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_COULTER",
+      "x": 32,
+      "y": 30,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FLAG_HIDE_BATTLE_MARSH_COULTER",
+      "flag": "FLAG_HIDE_BATTLE_MARSH_COULTER"
     }
   ],
   "warp_events": [
@@ -116,7 +129,51 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 31,
+      "elevation": 0,
+      "var": "VAR_BATTLE_MARSH_STATE",
+      "var_value": "0",
+      "script": "BattleMarsh_EventScript_CoulterFight_Trigger0"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_BATTLE_MARSH_STATE",
+      "var_value": "0",
+      "script": "BattleMarsh_EventScript_CoulterFight_Trigger1"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_BATTLE_MARSH_STATE",
+      "var_value": "0",
+      "script": "BattleMarsh_EventScript_CoulterFight_Trigger2"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 34,
+      "elevation": 0,
+      "var": "VAR_BATTLE_MARSH_STATE",
+      "var_value": "0",
+      "script": "BattleMarsh_EventScript_CoulterFight_Trigger3"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 35,
+      "elevation": 0,
+      "var": "VAR_BATTLE_MARSH_STATE",
+      "var_value": "0",
+      "script": "BattleMarsh_EventScript_CoulterFight_Trigger4"
+    }
   ],
   "bg_events": [
     {

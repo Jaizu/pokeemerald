@@ -440,6 +440,13 @@
 		additem ITEM_GAS_MASK
 		setvar VAR_VALOON_TOWN_GATEHOUSE_STATE, 1
 		setvar VAR_VALOON_TOWN_STATE, 3
+		// TELMURK SWAMP
+		// Fight Trainers
+		settrainerflag TRAINER_ELIJAH_1
+		settrainerflag TRAINER_HANK_1
+		settrainerflag TRAINER_LISIA_1
+		settrainerflag TRAINER_FELICIA_1
+		settrainerflag TRAINER_RAIDEN_1
 		end
 	
 	Debug_EventScript_GetParty::

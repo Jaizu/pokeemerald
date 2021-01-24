@@ -825,8 +825,8 @@
 #define FLAG_HIDE_NEMESIS_RIVER_NEW_ELDERS                          0x310 // FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_MOM in Emerald
 #define FLAG_HIDE_NEMESIS_CAVE_PKMN_RANGER_M                        0x311 // FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_MOM in Emerald
 #define FLAG_HIDE_NEMESIS_CAVE_PKMN_RANGERS                         0x312 // FLAG_HIDE_ROUTE_119_SCOTT in Emerald
+#define FLAG_HIDE_BATTLE_MARSH_COULTER                              0x313 // FLAG_HIDE_LILCOVE_MOTEL_SCOTT in Emerald
 
-#define FLAG_HIDE_LILCOVE_MOTEL_SCOTT                               0x313
 #define FLAG_HIDE_MOSSDEEP_CITY_SCOTT                               0x314
 #define FLAG_HIDE_FANCLUB_OLD_LADY                                  0x315
 #define FLAG_HIDE_FANCLUB_BOY                                       0x316

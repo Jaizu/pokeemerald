@@ -138,8 +138,9 @@
 #define VAR_SHARPGUST_SPAN_STATE             0x406B // VAR_ROUTE112_STATE in Emerald
 #define VAR_VALOON_WAY_STATE                 0x406C // VAR_ROUTE113_STATE in Emerald
 #define VAR_NEMESIS_RIVER_STATE              0x406D // VAR_ROUTE114_STATE in Emerald
-#define VAR_ROUTE115_STATE                   0x406E // Unused Var
+#define VAR_TELMURK_SWAMP_STATE              0x406E // VAR_ROUTE115_STATE in Emerald
 #define VAR_ROUTE116_STATE                   0x406F
+#define VAR_BATTLE_MARSH_STATE               0x406F // VAR_ROUTE116_STATE in Emerald
 #define VAR_ROUTE117_STATE                   0x4070 // Unused Var
 #define VAR_ROUTE118_STATE                   0x4071
 #define VAR_ROUTE119_STATE                   0x4072
