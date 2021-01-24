@@ -1,6 +1,15 @@
 .set TRAINER_COULTER_BATTLE_MARSH_INFERNAPE, 1
 .set TRAINER_COULTER_BATTLE_MARSH_EMPOLEON, 1
 .set TRAINER_COULTER_BATTLE_MARSH_TORTERRA, 1
+.set TRAINER_ADRIANA_1, 1
+.set TRAINER_DEAN_1, 1
+.set TRAINER_SHANE_1, 1
+.set TRAINER_EARL_1, 1
+.set TRAINER_JENNIE_1, 1
+.set TRAINER_LLOYD_1, 1
+.set TRAINER_DORIS_1, 1
+.set TRAINER_CARLA_1, 1
+
 .set LOCALID_COULTER, 7
 
 BattleMarsh_MapScripts::
@@ -363,3 +372,376 @@ BattleMarsh_Movement_ExitCoulter:
 	walk_right
 	walk_right
 	step_end
+
+BattleMarsh_EventScript_Adriana::
+	trainerbattle_single TRAINER_ADRIANA_1, BattleMarsh_Text_AdrianaIntro, BattleMarsh_Text_AdrianaDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	compare VAR_RESULT, TRUE
+	goto_if_eq BattleMarsh_EventScript_AdrianaRematch
+	msgbox BattleMarsh_Text_AdrianaPostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+BattleMarsh_EventScript_AdrianaRematch::
+	trainerbattle_rematch TRAINER_ADRIANA_1, BattleMarsh_Text_AdrianaRematchIntro, BattleMarsh_Text_AdrianaDefeat
+	msgbox BattleMarsh_Text_AdrianaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+BattleMarsh_Text_AdrianaIntro:
+	.string "Whoa, you have Badges!\p"
+	.string "You're gonna be a great\n"
+	.string "match for me!$"
+
+BattleMarsh_Text_AdrianaDefeat:
+	.string "I'm too weak!$"
+
+BattleMarsh_Text_AdrianaPostBattle:
+	.string "Did you get the Honeycomb Badge\n"
+	.string "from Vernon?$"
+
+BattleMarsh_Text_AdrianaRematchIntro:
+	.string "Whoa, do you have even more Badges?$"
+
+BattleMarsh_EventScript_Dean::
+	trainerbattle_single TRAINER_DEAN_1, BattleMarsh_Text_DeanIntro, BattleMarsh_Text_DeanDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	compare VAR_RESULT, TRUE
+	goto_if_eq BattleMarsh_EventScript_DeanRematch
+	msgbox BattleMarsh_Text_DeanPostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+BattleMarsh_EventScript_DeanRematch::
+	trainerbattle_rematch TRAINER_DEAN_1, BattleMarsh_Text_DeanRematchIntro, BattleMarsh_Text_DeanDefeat
+	msgbox BattleMarsh_Text_DeanPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+BattleMarsh_Text_DeanIntro:
+	.string "Service and sacrifice, those are\n"
+	.string "the tenets of being a Ranger!$"
+
+BattleMarsh_Text_DeanDefeat:
+	.string "I sacrificed my Pokémon in vain…$"
+
+BattleMarsh_Text_DeanPostBattle:
+	.string "I serve the people!$"
+
+BattleMarsh_Text_DeanRematchIntro:
+	.string "Prepare to get served!$"
+
+BattleMarsh_EventScript_Shane::
+	trainerbattle_single TRAINER_SHANE_1, BattleMarsh_Text_ShaneIntro, BattleMarsh_Text_ShaneDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	compare VAR_RESULT, TRUE
+	goto_if_eq BattleMarsh_EventScript_ShaneRematch
+	msgbox BattleMarsh_Text_ShanePostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+BattleMarsh_EventScript_ShaneRematch::
+	trainerbattle_rematch TRAINER_SHANE_1, BattleMarsh_Text_ShaneRematchIntro, BattleMarsh_Text_ShaneDefeat
+	msgbox BattleMarsh_Text_ShanePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+BattleMarsh_Text_ShaneIntro:
+	.string "I'm the groundskeeper for the\n"
+	.string "Battle Marsh.\p"
+	.string "Don't mess anything up!$"
+
+BattleMarsh_Text_ShaneDefeat:
+	.string "It was just a polite warning…$"
+
+BattleMarsh_Text_ShanePostBattle:
+	.string "Working here, I've met my fair\n"
+	.string "share of impressive Trainers.$"
+
+BattleMarsh_Text_ShaneRematchIntro:
+	.string "I'm the groundskeeper for the\n"
+	.string "Battle Marsh.\p"
+	.string "Back to cause trouble, are you?$"
+
+BattleMarsh_EventScript_Earl::
+	trainerbattle_single TRAINER_EARL_1, BattleMarsh_Text_EarlIntro, BattleMarsh_Text_EarlDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	compare VAR_RESULT, TRUE
+	goto_if_eq BattleMarsh_EventScript_EarlRematch
+	msgbox BattleMarsh_Text_EarlPostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+BattleMarsh_EventScript_EarlRematch::
+	trainerbattle_rematch TRAINER_EARL_1, BattleMarsh_Text_EarlRematchIntro, BattleMarsh_Text_EarlRematchDefeat
+	msgbox BattleMarsh_Text_EarlPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+BattleMarsh_Text_EarlIntro:
+	.string "Are you headed for Telmurk City?\n"
+	.string "You'd better be tough enough!$"
+
+BattleMarsh_Text_EarlDefeat:
+	.string "Yeah, I think you'll be fine there.$"
+
+BattleMarsh_Text_EarlPostBattle:
+	.string "The gangsters that run\n"
+	.string "Telmurk City are unforgiving…$"
+
+BattleMarsh_Text_EarlRematchIntro:
+	.string "Are you tough enough to rebattle\n"
+	.string "me? Let's find out!$"
+
+BattleMarsh_Text_EarlRematchDefeat:
+	.string "Yeah, I think you're still tough\n"
+	.string "enough…$"
+
+BattleMarsh_EventScript_Jennie::
+	trainerbattle_single TRAINER_JENNIE_1, BattleMarsh_Text_JennieIntro, BattleMarsh_Text_JennieDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	compare VAR_RESULT, TRUE
+	goto_if_eq BattleMarsh_EventScript_JennieRematch
+	msgbox BattleMarsh_Text_JenniePostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+BattleMarsh_EventScript_JennieRematch::
+	trainerbattle_rematch TRAINER_JENNIE_1, BattleMarsh_Text_JennieIntro, BattleMarsh_Text_JennieDefeat
+	msgbox BattleMarsh_Text_JenniePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+BattleMarsh_Text_JennieIntro:
+	.string "You never know what you'll find in\n"
+	.string "the swamp!$"
+
+BattleMarsh_Text_JennieDefeat:
+	.string "I just meant weird mushrooms…$"
+
+BattleMarsh_Text_JenniePostBattle:
+	.string "I plan to make a delicious stew\n"
+	.string "with the ingredients I've found\l"
+	.string "out here!$"
+
+BattleMarsh_EventScript_Lloyd::
+	trainerbattle_single TRAINER_LLOYD_1, BattleMarsh_Text_LloydIntro, BattleMarsh_Text_LloydDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	compare VAR_RESULT, TRUE
+	goto_if_eq BattleMarsh_EventScript_LloydRematch
+	msgbox BattleMarsh_Text_LloydPostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+BattleMarsh_EventScript_LloydRematch::
+	trainerbattle_rematch TRAINER_LLOYD_1, BattleMarsh_Text_LloydRematchIntro, BattleMarsh_Text_LloydDefeat
+	msgbox BattleMarsh_Text_LloydPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+BattleMarsh_Text_LloydIntro:
+	.string "I'm scouting here for my boss.$"
+
+BattleMarsh_Text_LloydDefeat:
+	.string "You're scary strong, kid!$"
+
+BattleMarsh_Text_LloydPostBattle:
+	.string "I wonder what {COLOR GREEN}Akuto{COLOR BLUE} will think\n"
+    .string "of you…$"
+
+BattleMarsh_Text_LloydRematchIntro:
+	.string "Back for more, eh kid?$"
+
+BattleMarsh_EventScript_Doris::
+	trainerbattle_single TRAINER_DORIS_1, BattleMarsh_Text_DorisIntro, BattleMarsh_Text_DorisDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	compare VAR_RESULT, TRUE
+	goto_if_eq BattleMarsh_EventScript_DorisRematch
+	msgbox BattleMarsh_Text_DorisPostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+BattleMarsh_EventScript_DorisRematch::
+	trainerbattle_rematch TRAINER_DORIS_1, BattleMarsh_Text_DorisRematchIntro, BattleMarsh_Text_DorisDefeat
+	msgbox BattleMarsh_Text_DorisPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+BattleMarsh_Text_DorisIntro:
+	.string "Are you a part of that heinous\n"
+    .string "gang?$"
+
+BattleMarsh_Text_DorisDefeat:
+	.string "Sorry for judging you…$"
+
+BattleMarsh_Text_DorisPostBattle:
+	.string "Be careful if you're going into\n"
+    .string "Telmurk, okay?$"
+
+BattleMarsh_Text_DorisRematchIntro:
+	.string "I presume you're prepared to lose\n"
+    .string "if you're back for more!$"
+
+BattleMarsh_EventScript_Carla::
+	trainerbattle_single TRAINER_CARLA_1, BattleMarsh_Text_CarlaIntro, BattleMarsh_Text_CarlaDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	compare VAR_RESULT, TRUE
+	goto_if_eq BattleMarsh_EventScript_CarlaRematch
+	msgbox BattleMarsh_Text_CarlaPostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+BattleMarsh_EventScript_CarlaRematch::
+	trainerbattle_rematch TRAINER_CARLA_1, BattleMarsh_Text_CarlaRematchIntro, BattleMarsh_Text_CarlaDefeat
+	msgbox BattleMarsh_Text_CarlaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+BattleMarsh_Text_CarlaIntro:
+	.string "I'm not here to play games.\n"
+	.string "I'll crush you!$"
+
+BattleMarsh_Text_CarlaDefeat:
+	.string "Wow, you outmatched me.$"
+
+BattleMarsh_Text_CarlaPostBattle:
+	.string "Here at the Battle Marsh, we all\n"
+	.string "take battling very seriously!$"
+
+BattleMarsh_Text_CarlaRematchIntro:
+	.string "This time, I'll crush you for real!$"
+
+BattleMarsh_EventScript_AceTrainerM::
+	lock
+	faceplayer
+	setvar VAR_0x8008, INGAME_TRADE_DRIFLOON
+	copyvar VAR_0x8004, VAR_0x8008
+	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
+	copyvar VAR_0x8009, VAR_RESULT
+	goto_if_set FLAG_BATTLE_MARSH_NPC_TRADE_COMPLETED, BattleMarsh_EventScript_TradeCompleted
+	msgbox BattleMarsh_Text_IKeepLosingInThere, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq BattleMarsh_EventScript_DeclineTrade
+	special ChoosePartyMon
+	waitstate
+	lock
+	copyvar VAR_0x800A, VAR_0x8004
+	compare VAR_0x8004, 255
+	goto_if_eq BattleMarsh_EventScript_DeclineTrade
+	copyvar VAR_0x8005, VAR_0x800A
+	specialvar VAR_RESULT, GetTradeSpecies
+	copyvar VAR_0x800B, VAR_RESULT
+	compare VAR_RESULT, VAR_0x8009
+	goto_if_ne BattleMarsh_EventScript_NotRequestedMon
+	copyvar VAR_0x8004, VAR_0x8008
+	copyvar VAR_0x8005, VAR_0x800A
+	special CreateInGameTradePokemon
+	special DoInGameTradeScene
+	waitstate
+	bufferspeciesname 0, VAR_0x8009
+	msgbox BattleMarsh_Text_MaybeNowMyLuckWillChange, MSGBOX_DEFAULT
+	setflag FLAG_BATTLE_MARSH_NPC_TRADE_COMPLETED
+	release
+	end
+
+BattleMarsh_EventScript_DeclineTrade::
+	msgbox BattleMarsh_Text_IllKeepTrainingThen, MSGBOX_DEFAULT
+	release
+	end
+
+BattleMarsh_EventScript_NotRequestedMon::
+	bufferspeciesname 0, VAR_0x8009
+	msgbox BattleMarsh_Text_YouProbablyWontLastLong, MSGBOX_DEFAULT
+	release
+	end
+
+BattleMarsh_EventScript_TradeCompleted::
+	msgbox BattleMarsh_Text_HaveYouWonAnyBattles, MSGBOX_DEFAULT
+	release
+	end
+
+BattleMarsh_Text_IKeepLosingInThere:
+	.string "I keep losing in there…\p"
+	.string "My {STR_VAR_2} just isn't\n"
+	.string "up to scratch!\p"
+	.string "I'll trade it to you for\n"
+	.string "an {STR_VAR_1}!\p"
+	.string "That's fair, right?$"
+
+BattleMarsh_Text_MaybeNowMyLuckWillChange:
+	.string "Great!\n"
+	.string "Maybe now my luck will change…$"
+
+BattleMarsh_Text_YouProbablyWontLastLong:
+	.string "You probably won't last long in\n"
+	.string "the Battle Marsh if you think\l"
+	.string "that's an {STR_VAR_1}!$"
+
+BattleMarsh_Text_IllKeepTrainingThen:
+	.string "I'll keep training, then!$"
+
+BattleMarsh_Text_HaveYouWonAnyBattles:
+	.string "Have you won any battles in there\n"
+	.string "with my {STR_VAR_2}?$"
+
+BattleMarsh_EventScript_Lass::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_BATTLE_MARSH_CHOICE_SPECS, BattleMarsh_EventScript_ReceivedChoiceSpecs
+	msgbox BattleMarsh_Text_ImOnAWinStreak, MSGBOX_DEFAULT
+	giveitem ITEM_CHOICE_SPECS
+	compare VAR_RESULT, FALSE
+	goto_if_eq Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_BATTLE_MARSH_CHOICE_SPECS
+	goto BattleMarsh_EventScript_ReceivedChoiceSpecs
+	end
+
+BattleMarsh_EventScript_ReceivedChoiceSpecs:
+	msgbox BattleMarsh_Text_ExplainChoiceSpecs, MSGBOX_DEFAULT
+	release
+	end
+
+BattleMarsh_Text_ImOnAWinStreak:
+	.string "I'm on a win streak!\n"
+	.string "I should share my success.\p"
+	.string "I know!\n"
+	.string "You, take this!$"
+
+BattleMarsh_Text_ExplainChoiceSpecs:
+	.string "Give a Pokémon those\n"
+	.string "Choice Specs to hold.\p"
+	.string "It boosts their Special Attack,\n"
+	.string "but limits them to only one move.\p"
+	.string "It's a tricky trade-off,\n"
+	.string "but it's worth it.$"
+
+BattleMarsh_EventScript_BattleGirl::
+	msgbox BattleMarsh_Text_ItMustTakeALotOfWork, MSGBOX_NPC
+	end
+
+BattleMarsh_Text_ItMustTakeALotOfWork:
+	.string "It must take a lot of work for the\n"
+	.string "Battle Marsh to clean these pools!\p"
+	.string "Maybe a swamp isn't the best place\n"
+	.string "for a prestigious battle facility…$"
+
+BattleMarsh_EventScript_Lady::
+	msgbox BattleMarsh_Text_HeyCuteGasMask, MSGBOX_NPC
+	end
+
+BattleMarsh_Text_HeyCuteGasMask:
+	.string "Hey, cute Gas Mask!\p"
+	.string "Uh…\p"
+	.string "…Do you think I need one?$"
+
+BattleMarsh_EventScript_Gentleman::
+	msgbox BattleMarsh_Text_HaveYouHeardTheRumorsOfArbokMan, MSGBOX_NPC
+	end
+
+BattleMarsh_Text_HaveYouHeardTheRumorsOfArbokMan:
+	.string "Have you heard the rumors of\n"
+	.string "Arbok-Man?\p"
+	.string "He's a masked, crime-fighting\n"
+	.string "vigilante!\p"
+	.string "Although he doesn't seem very\n"
+	.string "effective…$"
+
+BattleMarsh_EventScript_Biker::
+	msgbox BattleMarsh_Text_ImADaredevil, MSGBOX_NPC
+	end
+
+BattleMarsh_Text_ImADaredevil:
+	.string "I'm a daredevil, cycling at high\n"
+	.string "speed across such a rickety bridge!$"

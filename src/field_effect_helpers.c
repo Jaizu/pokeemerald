@@ -109,7 +109,7 @@ static void UpdateObjectReflectionSprite(struct Sprite *reflectionSprite)
 {
     struct ObjectEvent *objectEvent;
     struct Sprite *mainSprite;
-    u16 color;
+    
     objectEvent = &gObjectEvents[reflectionSprite->sReflectionObjEventId];
     mainSprite = &gSprites[objectEvent->spriteId];
     if (!objectEvent->active || !objectEvent->hasReflection || objectEvent->localId != reflectionSprite->sReflectionObjEventLocalId)

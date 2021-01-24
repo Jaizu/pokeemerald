@@ -4,7 +4,7 @@ BattleFrontier_Lounge6_MapScripts:: @ 8264FEC
 BattleFrontier_Lounge6_EventScript_Trader:: @ 8264FED
 	lock
 	faceplayer
-	goto_if_set FLAG_BATTLE_FRONTIER_TRADE_DONE, BattleFrontier_Lounge6_EventScript_TradeCompleted
+	goto_if_set 0, BattleFrontier_Lounge6_EventScript_TradeCompleted
 	setvar VAR_0x8008, INGAME_TRADE_MEOWTH
 	copyvar VAR_0x8004, VAR_0x8008
 	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
@@ -28,7 +28,7 @@ BattleFrontier_Lounge6_EventScript_Trader:: @ 8264FED
 	special DoInGameTradeScene
 	waitstate
 	msgbox BattleFrontier_Lounge6_Text_PromiseIllBeGoodToIt, MSGBOX_DEFAULT
-	setflag FLAG_BATTLE_FRONTIER_TRADE_DONE
+	setflag 0
 	release
 	end
 

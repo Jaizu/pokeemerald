@@ -9,12 +9,13 @@
 // In-game Trade IDs
 #define INGAME_TRADE_DROWZEE    0 // INGAME_TRADE_SEEDOT in Emerald
 #define INGAME_TRADE_SPIRITOMB  1 // INGAME_TRADE_PLUSLE in Emerald
-#define INGAME_TRADE_HORSEA     2
+#define INGAME_TRADE_DRIFLOON   2 // INGAME_TRADE_HORSEA in Emerald
 #define INGAME_TRADE_MEOWTH     3
 
 // TODO: Remove references to old, Emerald symbols
 #define INGAME_TRADE_SEEDOT INGAME_TRADE_DROWZEE
 #define INGAME_TRADE_PLUSLE INGAME_TRADE_SPIRITOMB
+#define INGAME_TRADE_HORSEA INGAME_TRADE_DRIFLOON
 
 // Flag IDs for sending link data
 #define INITIATE_TRADE  1
