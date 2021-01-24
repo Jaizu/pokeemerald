@@ -366,91 +366,55 @@ union Block
     u16 value;
 };
 
+#define MapGridGetBorderTileAt(x, y) ({                                                            \
+    u16 block;                                                                                     \
+    s32 xprime;                                                                                    \
+    s32 yprime;                                                                                    \
+                                                                                                   \
+    const struct MapLayout *mapLayout = gMapHeader.mapLayout;                                      \
+                                                                                                   \
+    xprime = x - 7;                                                                                \
+    xprime += 8 * mapLayout->borderWidth;                                                          \
+    xprime %= mapLayout->borderWidth;                                                              \
+                                                                                                   \
+    yprime = y - 7;                                                                                \
+    yprime += 8 * mapLayout->borderHeight;                                                         \
+    yprime %= mapLayout->borderHeight;                                                             \
+                                                                                                   \
+    block = mapLayout->border[xprime + yprime * mapLayout->borderWidth] | METATILE_COLLISION_MASK; \
+})
+
+#define AreCoordsWithinMapGridBounds(x, y) (x >= 0 && x < gBackupMapLayout.width && y >= 0 && y < gBackupMapLayout.height)
+
+#define MapGridGetTileAt(x, y) (AreCoordsWithinMapGridBounds(x, y) ? gBackupMapLayout.map[x + gBackupMapLayout.width * y] : MapGridGetBorderTileAt(x, y))
+
 u8 MapGridGetZCoordAt(int x, int y)
 {
-    u16 block;
-    int i;
-    u16 *border;
-
-    if (x >= 0 && x < gBackupMapLayout.width
-     && y >= 0 && y < gBackupMapLayout.height)
-    {
-        block = gBackupMapLayout.map[x + gBackupMapLayout.width * y];
-    }
-    else
-    {
-        border = gMapHeader.mapLayout->border;
-        i = (x + 1) & 1;
-        i += ((y + 1) & 1) * 2;
-        block = gMapHeader.mapLayout->border[i];
-        block |= METATILE_COLLISION_MASK;
-    }
+    u16 block = MapGridGetTileAt(x, y);
 
     if (block == METATILE_ID_UNDEFINED)
-    {
         return 0;
-    }
 
     return block >> METATILE_ELEVATION_SHIFT;
 }
 
 u8 MapGridIsImpassableAt(int x, int y)
 {
-    u16 block;
-    int i;
-    u16 *border;
+    u16 block = MapGridGetTileAt(x, y);
 
-    if (x >= 0 && x < gBackupMapLayout.width
-     && y >= 0 && y < gBackupMapLayout.height)
-    {
-        block = gBackupMapLayout.map[x + gBackupMapLayout.width * y];
-    }
-    else
-    {
-        border = gMapHeader.mapLayout->border;
-        i = (x + 1) & 1;
-        i += ((y + 1) & 1) * 2;
-        block = gMapHeader.mapLayout->border[i];
-        block |= METATILE_COLLISION_MASK;
-    }
     if (block == METATILE_ID_UNDEFINED)
-    {
         return 1;
-    }
+
     return (block & METATILE_COLLISION_MASK) >> METATILE_COLLISION_SHIFT;
 }
 
 u32 MapGridGetMetatileIdAt(int x, int y)
 {
-    u16 block;
-    int i;
-    int j;
-    struct MapLayout const *mapLayout;
-    u16 *border;
-    u16 block2;
+    u16 block = MapGridGetTileAt(x, y);
 
-    if (x >= 0 && x < gBackupMapLayout.width
-     && y >= 0 && y < gBackupMapLayout.height)
-    {
-        block = gBackupMapLayout.map[x + gBackupMapLayout.width * y];
-    }
-    else
-    {
-        mapLayout = gMapHeader.mapLayout;
-        i = (x + 1) & 1;
-        i += ((y + 1) & 1) * 2;
-        block = mapLayout->border[i] | METATILE_COLLISION_MASK;
-    }
     if (block == METATILE_ID_UNDEFINED)
-    {
-        border = gMapHeader.mapLayout->border;
-        j = (x + 1) & 1;
-        j += ((y + 1) & 1) * 2;
-        block2 = gMapHeader.mapLayout->border[j];
-        // This OR is completely pointless.
-        block2 |= METATILE_COLLISION_MASK;
-        return block2 & METATILE_ID_MASK;
-    }
+        return MapGridGetBorderTileAt(x, y) & METATILE_ID_MASK;
+
     return block & METATILE_ID_MASK;
 }
 
@@ -653,36 +617,9 @@ void sub_80885C4(u8 a1)
 
 int GetMapBorderIdAt(int x, int y)
 {
-    struct MapLayout const *mapLayout;
-    u16 block, block2;
-    int i, j;
-    if (x >= 0 && x < gBackupMapLayout.width
-     && y >= 0 && y < gBackupMapLayout.height)
-    {
-        i = gBackupMapLayout.width;
-        i *= y;
-        block = gBackupMapLayout.map[x + i];
-        if (block == METATILE_ID_UNDEFINED)
-        {
-            goto fail;
-        }
-    }
-    else
-    {
-        mapLayout = gMapHeader.mapLayout;
-        j = (x + 1) & 1;
-        j += ((y + 1) & 1) * 2;
-        block2 = METATILE_COLLISION_MASK | mapLayout->border[j];
-        if (block2 == METATILE_ID_UNDEFINED)
-        {
-            goto fail;
-        }
-    }
-    goto success;
-fail:
-    return -1;
-success:
-
+    if (MapGridGetTileAt(x, y) == METATILE_ID_UNDEFINED)
+        return -1;
+    
     if (x >= (gBackupMapLayout.width - 8))
     {
         if (!gMapConnectionFlags.east)

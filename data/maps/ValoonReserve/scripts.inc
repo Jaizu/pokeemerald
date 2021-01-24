@@ -87,18 +87,18 @@ ValoonReserve_Text_PlayerIsOutOfUsablePokemon:
 ValoonReserve_EventScript_BugCatchingContestJudgingRound::
 	special ExitBugCatchingContestMode
 	fadescreen FADE_TO_BLACK
-	setvar VAR_0x8004, 27 @ x
+	setvar VAR_0x8004, 24 @ x
 	setvar VAR_0x8005, 8  @ y
 	special TeleportCamera
 	addobject LOCALID_CONTESTANT_1
 	addobject LOCALID_CONTESTANT_2
 	addobject LOCALID_CONTESTANT_3
 	addobject LOCALID_CONTESTANT_4
-	setobjectxy OBJ_EVENT_ID_PLAYER,  23, 10
-	setobjectxy LOCALID_CONTESTANT_1, 25, 10
-	setobjectxy LOCALID_CONTESTANT_2, 27, 10
-	setobjectxy LOCALID_CONTESTANT_3, 29, 10
-	setobjectxy LOCALID_CONTESTANT_4, 31, 10
+	setobjectxy OBJ_EVENT_ID_PLAYER,  20, 10
+	setobjectxy LOCALID_CONTESTANT_1, 22, 10
+	setobjectxy LOCALID_CONTESTANT_2, 24, 10
+	setobjectxy LOCALID_CONTESTANT_3, 26, 10
+	setobjectxy LOCALID_CONTESTANT_4, 28, 10
 	lockall
 	turnobject OBJ_EVENT_ID_PLAYER,  DIR_NORTH
 	turnobject LOCALID_CONTESTANT_1, DIR_NORTH

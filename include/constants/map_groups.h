@@ -29,6 +29,7 @@
 #define MAP_VALOON_WAY      (20 | (0 << 8))
 #define MAP_NEMESIS_RIVER   (21 | (0 << 8))
 #define MAP_TELMURK_SWAMP   (22 | (0 << 8))
+#define MAP_BATTLE_MARSH    (23 | (0 << 8))
 
 // Map Group 1
 #define MAP_ARCHAN_TUNNEL_1F_1R                 (0 | (1 << 8))

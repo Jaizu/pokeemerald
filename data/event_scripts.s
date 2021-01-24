@@ -1344,3 +1344,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/ValoonTown_Gatehouse_1F/scripts.inc"
 
 	.include "data/maps/ValoonTown_Gatehouse_2F/scripts.inc"
+
+	.include "data/maps/BattleMarsh/scripts.inc"
