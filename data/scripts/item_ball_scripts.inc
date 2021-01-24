@@ -352,6 +352,21 @@ EventScript_ItemLuckyEgg::
 	finditem ITEM_LUCKY_EGG
 	end
 
+EventScript_ItemQuickClaw::
+	finditem ITEM_QUICK_CLAW
+	end
+
+EventScript_ItemCalcium::
+SafariZone_North_EventScript_ItemCalcium::
+Route123_EventScript_ItemCalcium::
+	finditem ITEM_CALCIUM
+	end
+
+EventScript_ItemThunderStone::
+NewMauville_Inside_EventScript_ItemThunderStone::
+	finditem ITEM_THUNDER_STONE
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
@@ -414,10 +429,6 @@ Route120_EventScript_ItemNestBall:: @ 8290F6F
 
 Route121_EventScript_ItemCarbos:: @ 8290F89
 	finditem ITEM_CARBOS
-	end
-
-Route123_EventScript_ItemCalcium:: @ 8290FB0
-	finditem ITEM_CALCIUM
 	end
 
 Route123_EventScript_ItemUltraBall:: @ 8290FBD
@@ -512,10 +523,6 @@ NewMauville_Inside_EventScript_ItemUltraBall:: @ 82911EC
 	finditem ITEM_ULTRA_BALL
 	end
 
-NewMauville_Inside_EventScript_ItemThunderStone:: @ 8291206
-	finditem ITEM_THUNDER_STONE
-	end
-
 NewMauville_Inside_EventScript_ItemParalyzeHeal:: @ 8291220
 	finditem ITEM_PARALYZE_HEAL
 	end
@@ -550,10 +557,6 @@ ScorchedSlab_EventScript_ItemTM11:: @ 82912AF
 
 SafariZone_Northwest_EventScript_ItemTM22:: @ 82912BC
 	finditem ITEM_TM22
-	end
-
-SafariZone_North_EventScript_ItemCalcium:: @ 82912C9
-	finditem ITEM_CALCIUM
 	end
 
 SafariZone_Southeast_EventScript_ItemBigPearl:: @ 82912F0

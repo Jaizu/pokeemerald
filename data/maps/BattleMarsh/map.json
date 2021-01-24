@@ -20,15 +20,176 @@
     }
   ],
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 14,
+      "y": 23,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_ItemQuickClaw",
+      "flag": "FLAG_ITEM_BATTLE_MARSH_QUICK_CLAW"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 9,
+      "y": 39,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_ItemMaxRevive",
+      "flag": "FLAG_ITEM_BATTLE_MARSH_MAX_REVIVE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 51,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_ItemRareCandy",
+      "flag": "FLAG_ITEM_BATTLE_MARSH_RARE_CANDY"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 101,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_ItemCalcium",
+      "flag": "FLAG_ITEM_BATTLE_MARSH_CALCIUM"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 51,
+      "y": 33,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_ItemThunderStone",
+      "flag": "FLAG_ITEM_BATTLE_MARSH_THUNDER_STONE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
+      "x": 49,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_TEMP_11"
+    }
   ],
   "warp_events": [
-
+    {
+      "x": 32,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_BATTLE_MARSH",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 57,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_BATTLE_MARSH",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 109,
+      "y": 37,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BattleMarsh_EventScript_RouteSign"
+    },
+    {
+      "type": "sign",
+      "x": 30,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BattleMarsh_EventScript_BattleMarshSign"
+    },
+    {
+      "type": "sign",
+      "x": 34,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BattleMarsh_EventScript_BattleMarshSign"
+    },
+    {
+      "type": "sign",
+      "x": 30,
+      "y": 30,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BattleMarsh_EventScript_BattleMarshSign"
+    },
+    {
+      "type": "sign",
+      "x": 34,
+      "y": 30,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BattleMarsh_EventScript_BattleMarshSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 41,
+      "y": 4,
+      "elevation": 3,
+      "item": "ITEM_TINY_MUSHROOM",
+      "flag": "FLAG_HIDDEN_ITEM_BATTLE_MARSH_TINY_MUSHROOM"
+    },
+    {
+      "type": "hidden_item",
+      "x": 81,
+      "y": 10,
+      "elevation": 3,
+      "item": "ITEM_NEST_BALL",
+      "flag": "FLAG_HIDDEN_ITEM_BATTLE_MARSH_NEST_BALL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 103,
+      "y": 10,
+      "elevation": 3,
+      "item": "ITEM_RED_SHARD",
+      "flag": "FLAG_HIDDEN_ITEM_BATTLE_MARSH_RED_SHARD"
+    },
+    {
+      "type": "hidden_item",
+      "x": 91,
+      "y": 32,
+      "elevation": 3,
+      "item": "ITEM_BIG_ROOT",
+      "flag": "FLAG_HIDDEN_ITEM_BATTLE_MARSH_BIG_ROOT"
+    }
   ]
 }

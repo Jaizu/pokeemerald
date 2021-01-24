@@ -14900,6 +14900,160 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_BATTLE_MARSH",
+          "base_label": "gBattleMarsh0",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_CROAGUNK"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_MANKEY"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_GLOOM"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_WEEPINBELL"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_STUNKY"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_STUNFISK"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_STUNKY"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_STUNFISK"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_CROAGUNK"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_GOOMY"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_CROAGUNK"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_GOOMY"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_TYMPOLE"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_POLIWHIRL"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_POLIWHIRL"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_PALPITOAD"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_PALPITOAD"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 3,
+                "max_level": 20,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 3,
+                "max_level": 20,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 20,
+                "max_level": 29,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 25,
+                "max_level": 29,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 25,
+                "max_level": 29,
+                "species": "SPECIES_FEEBAS"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_WHISCASH"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_WHISCASH"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_WHISCASH"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_FEEBAS"
+              },
+              {
+                "min_level": 33,
+                "max_level": 36,
+                "species": "SPECIES_FEEBAS"
+              }
+            ]
+          }
         }
       ]
     },
