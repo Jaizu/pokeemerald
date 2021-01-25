@@ -1836,9 +1836,9 @@ const struct Trainer gTrainers[] = {
     [TRAINER_LLOYD_1] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_BLACK_BELT, // ROUGHNECK
+        .trainerClass = TRAINER_CLASS_ROUGHNECK,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
-        .trainerPic = TRAINER_PIC_BLACK_BELT, // ROUGHNECK
+        .trainerPic = TRAINER_PIC_ROUGHNECK,
         .trainerName = _("Lloyd"),
         .items = {},
         .doubleBattle = FALSE,

@@ -154,8 +154,8 @@ const u32 gTrainerPalette_Worker[] = INCBIN_U32("graphics/trainers/palettes/work
 const u32 gTrainerFrontPic_Artist[] = INCBIN_U32("graphics/trainers/front_pics/artist_front_pic.4bpp.lz");
 const u32 gTrainerPalette_Artist[] = INCBIN_U32("graphics/trainers/palettes/artist.gbapal.lz");
 
-const u32 gTrainerFrontPic_PokefanF[] = INCBIN_U32("graphics/trainers/front_pics/pokefan_f_front_pic.4bpp.lz");
-const u32 gTrainerPalette_PokefanF[] = INCBIN_U32("graphics/trainers/palettes/pokefan_f.gbapal.lz");
+const u32 gTrainerFrontPic_Roughneck[] = INCBIN_U32("graphics/trainers/front_pics/roughneck_front_pic.4bpp.lz");
+const u32 gTrainerPalette_Roughneck[] = INCBIN_U32("graphics/trainers/palettes/roughneck.gbapal.lz");
 
 const u32 gTrainerFrontPic_Youngster[] = INCBIN_U32("graphics/trainers/front_pics/youngster_front_pic.4bpp.lz");
 const u32 gTrainerPalette_Youngster[] = INCBIN_U32("graphics/trainers/palettes/youngster.gbapal.lz");
