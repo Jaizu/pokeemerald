@@ -1350,3 +1350,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/BattleMarsh_SecretTemple/scripts.inc"
 
 	.include "data/maps/BattleMarsh_1F/scripts.inc"
+
+	.include "data/maps/TelmurkCity/scripts.inc"

@@ -41,6 +41,9 @@
 #define METATILE_BattleFrontier_Elevator_Top1            0x32A
 #define METATILE_BattleFrontier_Elevator_Top2            0x32B
 
+// gTileset_BattleMarsh
+#define METATILE_BattleMarsh_Door_Tan  0x2EA
+
 // gTileset_BattlePalace
 #define METATILE_BattlePalace_Door  0x219
 

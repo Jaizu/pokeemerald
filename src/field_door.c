@@ -200,6 +200,7 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_Dewford_Door_Tan,                             DOOR_SOUND_NORMAL,  0, sDoorAnimTiles_CelantoTan, sDoorAnimPalettes_CelantoTan},
     {METATILE_Slateport_Door_Tan,                           DOOR_SOUND_NORMAL,  0, sDoorAnimTiles_CelantoTan, sDoorAnimPalettes_CelantoTan},
     {METATILE_Mauville_Door_Tan,                            DOOR_SOUND_NORMAL,  0, sDoorAnimTiles_CelantoTan, sDoorAnimPalettes_CelantoTan},
+    {METATILE_BattleMarsh_Door_Tan,                         DOOR_SOUND_NORMAL,  0, sDoorAnimTiles_CelantoTan, sDoorAnimPalettes_CelantoTan},
     {METATILE_Lavaridge_Door_Yellow,                        DOOR_SOUND_NORMAL,  0, sDoorAnimTiles_ValoonYellow, sDoorAnimPalettes_ValoonDoors},
     {METATILE_Lavaridge_Door_RangersHQ,                     DOOR_SOUND_SLIDING, 0, sDoorAnimTiles_RangersHQ, sDoorAnimPalettes_ValoonDoors},
     {METATILE_Fallarbor_Door_LightRoof,                     DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_FallarborLightRoof, sDoorAnimPalettes_FallarborLightRoof},

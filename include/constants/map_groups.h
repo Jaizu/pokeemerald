@@ -1,10 +1,6 @@
 #ifndef GUARD_CONSTANTS_MAP_GROUPS_H
 #define GUARD_CONSTANTS_MAP_GROUPS_H
 
-//
-// DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/map_groups.json
-//
-
 // Map Group 0
 #define MAP_CELANTO_TOWN    (0 | (0 << 8))
 #define MAP_ARCHAN_TOWN     (1 | (0 << 8))
@@ -14,22 +10,23 @@
 #define MAP_WINDMIST_CITY   (5 | (0 << 8))
 #define MAP_SABULO_ISLAND   (6 | (0 << 8))
 #define MAP_VALOON_TOWN     (7 | (0 << 8))
-#define MAP_RELIQUIA_RUINS  (8 | (0 << 8))
-#define MAP_CELANTO_GROVE   (9 | (0 << 8))
-#define MAP_CELANTO_PATH    (10 | (0 << 8))
-#define MAP_ARCHAN_HILLS    (11 | (0 << 8))
-#define MAP_SEROS_PATH      (12 | (0 << 8))
-#define MAP_AEROUS_ROAD     (13 | (0 << 8))
-#define MAP_NESTPINE_CLIMB  (14 | (0 << 8))
-#define MAP_WINDMIST_SUMMIT (15 | (0 << 8))
-#define MAP_EDAMIST_HEIGHTS (16 | (0 << 8))
-#define MAP_IGNIS_ROOST     (17 | (0 << 8))
-#define MAP_SABULO_CROSS    (18 | (0 << 8))
-#define MAP_SHARPGUST_SPAN  (19 | (0 << 8))
-#define MAP_VALOON_WAY      (20 | (0 << 8))
-#define MAP_NEMESIS_RIVER   (21 | (0 << 8))
-#define MAP_TELMURK_SWAMP   (22 | (0 << 8))
-#define MAP_BATTLE_MARSH    (23 | (0 << 8))
+#define MAP_TELMURK_CITY    (8 | (0 << 8))
+#define MAP_RELIQUIA_RUINS  (9 | (0 << 8))
+#define MAP_CELANTO_GROVE   (10 | (0 << 8))
+#define MAP_CELANTO_PATH    (11 | (0 << 8))
+#define MAP_ARCHAN_HILLS    (12 | (0 << 8))
+#define MAP_SEROS_PATH      (13 | (0 << 8))
+#define MAP_AEROUS_ROAD     (14 | (0 << 8))
+#define MAP_NESTPINE_CLIMB  (15 | (0 << 8))
+#define MAP_WINDMIST_SUMMIT (16 | (0 << 8))
+#define MAP_EDAMIST_HEIGHTS (17 | (0 << 8))
+#define MAP_IGNIS_ROOST     (18 | (0 << 8))
+#define MAP_SABULO_CROSS    (19 | (0 << 8))
+#define MAP_SHARPGUST_SPAN  (20 | (0 << 8))
+#define MAP_VALOON_WAY      (21 | (0 << 8))
+#define MAP_NEMESIS_RIVER   (22 | (0 << 8))
+#define MAP_TELMURK_SWAMP   (23 | (0 << 8))
+#define MAP_BATTLE_MARSH    (24 | (0 << 8))
 
 // Map Group 1
 #define MAP_ARCHAN_TUNNEL_1F_1R                 (0 | (1 << 8))

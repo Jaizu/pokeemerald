@@ -17,6 +17,11 @@
       "direction": "left",
       "offset": -44,
       "map": "MAP_TELMURK_SWAMP"
+    },
+    {
+      "direction": "right",
+      "offset": 24,
+      "map": "MAP_TELMURK_CITY"
     }
   ],
   "object_events": [

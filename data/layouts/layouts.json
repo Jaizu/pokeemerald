@@ -6480,6 +6480,18 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/BattleMarsh_1F/border.bin",
       "blockdata_filepath": "data/layouts/BattleMarsh_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_TELMURK_CITY",
+      "name": "TelmurkCity_Layout",
+      "width": 78,
+      "height": 32,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Swamp",
+      "secondary_tileset": "gTileset_BattleMarsh",
+      "border_filepath": "data/layouts/TelmurkCity/border.bin",
+      "blockdata_filepath": "data/layouts/TelmurkCity/map.bin"
     }
   ]
 }
