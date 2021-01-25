@@ -1,7 +1,7 @@
 WindmistCity_Mart_MapScripts::
 	.byte 0
 
-WindmistCity_Mart_EventScript_Maniac::
+WindmistCity_Mart_EventScript_RichBoy::
 	msgbox WindmistCity_Mart_Text_HaveYouHeardOfCircleThrow, MSGBOX_NPC
 	end
 

@@ -67,7 +67,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Youngster;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BugCatcher;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PsychicM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SchoolKidM;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Maniac;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SuperNerd;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HexManiac;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Rayquaza1;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerM;
@@ -286,7 +286,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BUG_CATCHER] =              &gObjectEventGraphicsInfo_BugCatcher,
     [OBJ_EVENT_GFX_PSYCHIC_M] =                &gObjectEventGraphicsInfo_PsychicM,
     [OBJ_EVENT_GFX_SCHOOL_KID_M] =             &gObjectEventGraphicsInfo_SchoolKidM,
-    [OBJ_EVENT_GFX_MANIAC] =                   &gObjectEventGraphicsInfo_Maniac,
+    [OBJ_EVENT_GFX_SUPER_NERD] =               &gObjectEventGraphicsInfo_SuperNerd,
     [OBJ_EVENT_GFX_HEX_MANIAC] =               &gObjectEventGraphicsInfo_HexManiac,
     [OBJ_EVENT_GFX_RAYQUAZA_1] =               &gObjectEventGraphicsInfo_Rayquaza1,
     [OBJ_EVENT_GFX_SWIMMER_M] =                &gObjectEventGraphicsInfo_SwimmerM,
@@ -576,6 +576,7 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_PkmnRanger, OBJ_EVENT_PAL_TAG_PKMN_RANGER},
     {gObjectEventPal_Vernon, OBJ_EVENT_PAL_TAG_VERNON},
     {gObjectEventPal_Ezekiel, OBJ_EVENT_PAL_TAG_EZEKIEL},
+    {gObjectEventPal_SuperNerd, OBJ_EVENT_PAL_TAG_SUPER_NERD},
     {gTilesetPalettes_General[2], FLDEFF_PAL_TAG_TALL_GRASS},
     {gTilesetPalettes_Winter[2], FLDEFF_PAL_TAG_SNOWY_TALL_GRASS},
     {gTilesetPalettes_Swamp[2], FLDEFF_PAL_TAG_SWAMPY_TALL_GRASS},

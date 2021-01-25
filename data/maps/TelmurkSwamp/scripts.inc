@@ -176,7 +176,7 @@ TelmurkSwamp_Text_IWannaHallucinate:
 	.string "I kinda want to see what that\n"
 	.string "would feel like, y'know?$"
 
-TelmurkSwamp_EventScript_Maniac::
+TelmurkSwamp_EventScript_FatMan::
 	msgbox TelmurkSwamp_Text_CollectingMushroomsIsMyFavoritePastime, MSGBOX_NPC
 	end
 

@@ -74,6 +74,7 @@ const u16 gObjectEventPal_SwimmerF[] = INCBIN_U16("graphics/object_events/palett
 const u16 gObjectEventPal_PkmnRanger[] = INCBIN_U16("graphics/object_events/palettes/pkmn_ranger.gbapal");
 const u16 gObjectEventPal_Vernon[] = INCBIN_U16("graphics/object_events/palettes/vernon.gbapal");
 const u16 gObjectEventPal_Ezekiel[] = INCBIN_U16("graphics/object_events/palettes/ezekiel.gbapal");
+const u16 gObjectEventPal_SuperNerd[] = INCBIN_U16("graphics/object_events/palettes/super_nerd.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
@@ -138,7 +139,7 @@ const u32 gObjectEventPic_Youngster[] = INCBIN_U32("graphics/object_events/pics/
 const u32 gObjectEventPic_BugCatcher[] = INCBIN_U32("graphics/object_events/pics/people/bug_catcher.4bpp");
 const u32 gObjectEventPic_PsychicM[] = INCBIN_U32("graphics/object_events/pics/people/psychic_m.4bpp");
 const u32 gObjectEventPic_SchoolKidM[] = INCBIN_U32("graphics/object_events/pics/people/school_kid_m.4bpp");
-const u32 gObjectEventPic_Maniac[] = INCBIN_U32("graphics/object_events/pics/people/maniac.4bpp");
+const u32 gObjectEventPic_SuperNerd[] = INCBIN_U32("graphics/object_events/pics/people/super_nerd.4bpp");
 const u32 gObjectEventPic_HexManiac[] = INCBIN_U32("graphics/object_events/pics/people/hex_maniac.4bpp");
 const u32 gObjectEventPic_UnusedWoman[] = INCBIN_U32("graphics/object_events/pics/people/unused_woman.4bpp");
 const u32 gObjectEventPic_SwimmerM[] = INCBIN_U32("graphics/object_events/pics/people/swimmer_m.4bpp");

@@ -1,7 +1,7 @@
 AerousCity_Mart_MapScripts::
 	.byte 0
 
-AerousCity_Mart_EventScript_Maniac::
+AerousCity_Mart_EventScript_SuperNerd::
 	msgbox AerousCity_Mart_Text_DontFallForTheScam, MSGBOX_NPC
 	end
 

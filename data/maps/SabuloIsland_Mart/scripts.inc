@@ -1,7 +1,7 @@
 SabuloIsland_Mart_MapScripts::
 	.byte 0
 
-SabuloIsland_Mart_EventScript_Maniac::
+SabuloIsland_Mart_EventScript_SuperNerd::
 	lock
 	faceplayer
 	compare VAR_SABULO_ISLAND_STATE, 2

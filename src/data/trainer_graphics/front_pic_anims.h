@@ -66,7 +66,7 @@ static const union AnimCmd *const sAnims_RuinManiac[] ={
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_Interviewer[] ={
+static const union AnimCmd *const sAnims_SuperNerd[] ={
     sAnim_GeneralFrame0,
 };
 
@@ -389,7 +389,7 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_HEX_MANIAC] = sAnims_HexManiac,
     [TRAINER_PIC_AROMA_LADY] = sAnims_AromaLady,
     [TRAINER_PIC_RUIN_MANIAC] = sAnims_RuinManiac,
-    [TRAINER_PIC_INTERVIEWER] = sAnims_Interviewer,
+    [TRAINER_PIC_SUPER_NERD] = sAnims_SuperNerd,
     [TRAINER_PIC_TUBER_F] = sAnims_TuberF,
     [TRAINER_PIC_TUBER_M] = sAnims_TuberM,
     [TRAINER_PIC_COOLTRAINER_F] = sAnims_CoolTrainerF,

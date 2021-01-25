@@ -67,7 +67,7 @@ CelantoTown_Condominiums_2F_Text_AhMuchBetter:
 	.string "Ahh… Much better!\n"
 	.string "Doesn't that feel better?$"
 
-CelantoTown_Condominiums_2F_EventScript_OldRodFisherman::
+CelantoTown_Condominiums_2F_EventScript_Fisherman::
 	lock
 	faceplayer
 	goto_if_set FLAG_RECEIVED_OLD_ROD, CelantoTown_Condominiums_2F_EventScript_ExplainOldRod
@@ -111,7 +111,7 @@ CelantoTown_Condominiums_2F_Text_GreatYouveGotAFullTeam:
 	.string "That's impressive, for a newbie.\n"
 	.string "Talent needs rewarding. Take this!$"
 
-CelantoTown_Condominiums_2F_EventScript_ShuppetManiac::
+CelantoTown_Condominiums_2F_EventScript_SuperNerd::
 	lock
 	faceplayer
 	goto_if_set FLAG_RECEIVED_CELANTO_DUSK_STONE, CelantoTown_Condominiums_2F_EventScript_ExplainDuskStone

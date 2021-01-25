@@ -40,7 +40,7 @@
 #define OBJ_EVENT_GFX_BUG_CATCHER                 36
 #define OBJ_EVENT_GFX_PSYCHIC_M                   37
 #define OBJ_EVENT_GFX_SCHOOL_KID_M                38
-#define OBJ_EVENT_GFX_MANIAC                      39
+#define OBJ_EVENT_GFX_SUPER_NERD                  39
 #define OBJ_EVENT_GFX_HEX_MANIAC                  40
 #define OBJ_EVENT_GFX_RAYQUAZA_1                  41
 #define OBJ_EVENT_GFX_SWIMMER_M                   42
@@ -296,6 +296,7 @@
 #define OBJ_EVENT_GFX_KIRLIA                     OBJ_EVENT_GFX_NIDORINO
 #define OBJ_EVENT_GFX_FLANNERY                   OBJ_EVENT_GFX_VERNON
 #define OBJ_EVENT_GFX_ARCHIE                     OBJ_EVENT_GFX_EZEKIEL
+#define OBJ_EVENT_GFX_MANIAC                     OBJ_EVENT_GFX_SUPER_NERD
 
 #define OBJ_EVENT_PAL_TAG_NPC_1 0x1100
 #define OBJ_EVENT_PAL_TAG_NPC_2 0x1101
@@ -369,6 +370,7 @@
 #define OBJ_EVENT_PAL_TAG_PKMN_RANGER 0x1145
 #define OBJ_EVENT_PAL_TAG_VERNON 0x1146
 #define OBJ_EVENT_PAL_TAG_EZEKIEL 0x1147
+#define OBJ_EVENT_PAL_TAG_SUPER_NERD 0x1148
 #define OBJ_EVENT_PAL_TAG_NONE 0x11FF
 
 // These are dynamic object gfx ids.

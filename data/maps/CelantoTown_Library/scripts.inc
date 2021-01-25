@@ -9,7 +9,7 @@ CelantoTown_Library_Text_TheTotemPoles:
 	.string "Have you seen the Totem Poles?\n"
 	.string "They remind me of Xatu!$"
 
-CelantoTown_Library_EventScript_Maniac::
+CelantoTown_Library_EventScript_SuperNerd::
 	lock
 	faceplayer
 	msgbox CelantoTown_Library_Text_ImReadingThrillingNovel, MSGBOX_DEFAULT
