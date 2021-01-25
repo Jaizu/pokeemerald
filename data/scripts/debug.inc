@@ -41,7 +41,9 @@
 		setflag FLAG_RECEIVED_OLD_ROD
 		// CELANTO PATH:
 		// Fight Coulter
+		settrainerflag TRAINER_COULTER_CELANTO_PATH_CHIMCHAR
 		settrainerflag TRAINER_COULTER_CELANTO_PATH_PIPLUP
+		settrainerflag TRAINER_COULTER_CELANTO_PATH_TURTWIG
 		setflag FLAG_HIDE_CELANTO_PATH_COULTER
 		setvar VAR_CELANTO_PATH_STATE, 1
 		// ARCHAN TOWN:
@@ -208,7 +210,9 @@
 		// Set visited flag
 		setflag FLAG_VISITED_NESTPINE_TOWN
 		// Fight Coulter
+		settrainerflag TRAINER_COULTER_NESTPINE_TOWN_MONFERNO
 		settrainerflag TRAINER_COULTER_NESTPINE_TOWN_PRINPLUP
+		settrainerflag TRAINER_COULTER_NESTPINE_TOWN_GROTLE
 		// Obtain Exp Share
 		additem ITEM_EXP_SHARE
 		setflag FLAG_RECEIVED_EXP_SHARE
@@ -438,6 +442,9 @@
 		// VALOON TOWN
 		// Obtain the Gas Mask from Coulter
 		additem ITEM_GAS_MASK
+		// Gain access to Rimewood Forest
+		setflag FLAG_HIDE_WINDMIST_SUMMIT_RIMEWOOD_FOREST_GUARDS
+		// Gain access to Telmurk Swamp
 		setvar VAR_VALOON_TOWN_GATEHOUSE_STATE, 1
 		setvar VAR_VALOON_TOWN_STATE, 3
 		// TELMURK SWAMP
@@ -447,6 +454,26 @@
 		settrainerflag TRAINER_LISIA_1
 		settrainerflag TRAINER_FELICIA_1
 		settrainerflag TRAINER_RAIDEN_1
+		// BATTLE MARSH
+		// Fight Trainers
+		settrainerflag TRAINER_ADRIANA_1
+		settrainerflag TRAINER_DEAN_1
+		settrainerflag TRAINER_SHANE_1
+		settrainerflag TRAINER_EARL_1
+		// Fight Coulter
+		settrainerflag TRAINER_COULTER_BATTLE_MARSH_INFERNAPE
+		settrainerflag TRAINER_COULTER_BATTLE_MARSH_EMPOLEON
+		settrainerflag TRAINER_COULTER_BATTLE_MARSH_TORTERRA
+		setvar VAR_BATTLE_MARSH_STATE, 1
+		setflag FLAG_HIDE_BATTLE_MARSH_COULTER
+		// Fight Trainers
+		settrainerflag TRAINER_JENNIE_1
+		settrainerflag TRAINER_LLOYD_1
+		settrainerflag TRAINER_DORIS_1
+		settrainerflag TRAINER_CARLA_1
+		// TELMURK CITY
+		// Set visited flag
+		setflag FLAG_VISITED_TELMURK_CITY
 		end
 	
 	Debug_EventScript_GetParty::
@@ -454,7 +481,6 @@
 		givemon SPECIES_EXCADRILL, 36, ITEM_NONE
 		givemon SPECIES_CHARIZARD, 36, ITEM_CHARIZARDITE_Y
 		givemon SPECIES_EMPOLEON, 36, ITEM_NONE
-		givemon SPECIES_ELGYEM, 36, ITEM_NONE
 		end
 	
 	Debug_EventScript_GetItems::

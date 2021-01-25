@@ -48,6 +48,15 @@ ValoonTown_EventScript_CoulterGasMaskScene::
 	giveitem ITEM_GAS_MASK
 	msgbox ValoonTown_Text_ExplainGasMask, MSGBOX_DEFAULT
 	closemessage
+	delay 10
+	playse SE_PIN
+	applymovement LOCALID_COULTER, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_COULTER, Common_Movement_Delay48
+	waitmovement 0
+	msgbox ValoonTown_Text_ExplainRimewoodForest, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_HIDE_WINDMIST_SUMMIT_RIMEWOOD_FOREST_GUARDS
 	applymovement LOCALID_COULTER, ValoonTown_Movement_ExitCoulter
 	waitmovement 0
 	removeobject LOCALID_COULTER
@@ -79,7 +88,23 @@ ValoonTown_Text_ExplainGasMask:
 	.string "a battle, hasn't it?\p"
 	.string "Maybe when we get to Telmurk City,\n"
 	.string "we can battle again.\p"
-	.string "I look forward to it.\n"
+	.string "I look forward to it.$"
+
+ValoonTown_Text_ExplainRimewoodForest:
+	.string "{RIVAL}: {COLOR BLUE}Oh, I almost forgot!\n"
+	.string "Did you hear the news?\p"
+	.string "Apparently, some sort of {COLOR GREEN}monster{COLOR BLUE}\n"
+	.string "is rampaging near {COLOR GREEN}Windmist City{COLOR BLUE}!\p"
+	.string "There are rumors it's a super\n"
+	.string "strong Pokémon…\p"
+	.string "Sounds scary, right?\p"
+	.string "I bet a strong Trainer like you\n"
+	.string "wants to investigate that, right?\p"
+	.string "Well, I'm not so easily distracted!\p"
+	.string "That's right, I'm determined to\n"
+	.string "beat you when we battle next.\p"
+	.string "So I'm making a beeline to the\n"
+	.string "{COLOR GREEN}Battle Marsh{COLOR BLUE}, to train!\p"
 	.string "Later, {PLAYER}!$"
 
 ValoonTown_Movement_WalkToPlayer:
