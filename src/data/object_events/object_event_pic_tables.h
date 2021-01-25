@@ -941,16 +941,10 @@ const struct SpriteFrameImage gObjectEventPicTable_PushableBoulder[] = {
     obj_frame_tiles(gObjectEventPic_PushableBoulder),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_MrBrineysBoat[] = {
-    overworld_frame(gObjectEventPic_MrBrineysBoat, 4, 4, 0),
-    overworld_frame(gObjectEventPic_MrBrineysBoat, 4, 4, 1),
-    overworld_frame(gObjectEventPic_MrBrineysBoat, 4, 4, 2),
-    overworld_frame(gObjectEventPic_MrBrineysBoat, 4, 4, 0),
-    overworld_frame(gObjectEventPic_MrBrineysBoat, 4, 4, 0),
-    overworld_frame(gObjectEventPic_MrBrineysBoat, 4, 4, 1),
-    overworld_frame(gObjectEventPic_MrBrineysBoat, 4, 4, 1),
-    overworld_frame(gObjectEventPic_MrBrineysBoat, 4, 4, 2),
-    overworld_frame(gObjectEventPic_MrBrineysBoat, 4, 4, 2),
+const struct SpriteFrameImage gObjectEventPicTable_Pidgeot[] = {
+    overworld_frame(gObjectEventPic_Pidgeot, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Pidgeot, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Pidgeot, 4, 4, 2),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Truck[] = {

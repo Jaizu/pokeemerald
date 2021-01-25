@@ -114,7 +114,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Explorer;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Teala;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BreakableRock;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PushableBoulder;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MrBrineysBoat;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pidgeot;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Truck;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Machop;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Roughneck;
@@ -336,7 +336,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_TEALA] =                    &gObjectEventGraphicsInfo_Teala,
     [OBJ_EVENT_GFX_BREAKABLE_ROCK] =           &gObjectEventGraphicsInfo_BreakableRock,
     [OBJ_EVENT_GFX_PUSHABLE_BOULDER] =         &gObjectEventGraphicsInfo_PushableBoulder,
-    [OBJ_EVENT_GFX_MR_BRINEYS_BOAT] =          &gObjectEventGraphicsInfo_MrBrineysBoat,
+    [OBJ_EVENT_GFX_PIDGEOT] =                  &gObjectEventGraphicsInfo_Pidgeot,
     [OBJ_EVENT_GFX_MAY_NORMAL] =               &gObjectEventGraphicsInfo_MayNormal,
     [OBJ_EVENT_GFX_MAY_MACH_BIKE] =            &gObjectEventGraphicsInfo_MayMachBike,
     [OBJ_EVENT_GFX_MAY_ACRO_BIKE] =            &gObjectEventGraphicsInfo_MayAcroBike,
@@ -579,6 +579,7 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_SuperNerd, OBJ_EVENT_PAL_TAG_SUPER_NERD},
     {gObjectEventPal_Roughneck, OBJ_EVENT_PAL_TAG_ROUGHNECK},
     {gObjectEventPal_Kangaskhan, OBJ_EVENT_PAL_TAG_KANGASKHAN},
+    {gObjectEventPal_Pidgeot, OBJ_EVENT_PAL_TAG_PIDGEOT},
     {gTilesetPalettes_General[2], FLDEFF_PAL_TAG_TALL_GRASS},
     {gTilesetPalettes_Winter[2], FLDEFF_PAL_TAG_SNOWY_TALL_GRASS},
     {gTilesetPalettes_Swamp[2], FLDEFF_PAL_TAG_SWAMPY_TALL_GRASS},
