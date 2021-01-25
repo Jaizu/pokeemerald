@@ -148,8 +148,8 @@ const u32 gTrainerPalette_SchoolKidM[] = INCBIN_U32("graphics/trainers/palettes/
 const u32 gTrainerFrontPic_SchoolKidF[] = INCBIN_U32("graphics/trainers/front_pics/school_kid_f_front_pic.4bpp.lz");
 const u32 gTrainerPalette_SchoolKidF[] = INCBIN_U32("graphics/trainers/palettes/school_kid_f.gbapal.lz");
 
-const u32 gTrainerFrontPic_SrAndJr[] = INCBIN_U32("graphics/trainers/front_pics/sr_and_jr_front_pic.4bpp.lz");
-const u32 gTrainerPalette_SrAndJr[] = INCBIN_U32("graphics/trainers/palettes/sr_and_jr.gbapal.lz");
+const u32 gTrainerFrontPic_Worker[] = INCBIN_U32("graphics/trainers/front_pics/worker_front_pic.4bpp.lz");
+const u32 gTrainerPalette_Worker[] = INCBIN_U32("graphics/trainers/palettes/worker.gbapal.lz");
 
 const u32 gTrainerFrontPic_Artist[] = INCBIN_U32("graphics/trainers/front_pics/artist_front_pic.4bpp.lz");
 const u32 gTrainerPalette_Artist[] = INCBIN_U32("graphics/trainers/palettes/artist.gbapal.lz");

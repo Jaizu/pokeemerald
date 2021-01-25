@@ -1752,9 +1752,9 @@ const struct Trainer gTrainers[] = {
     [TRAINER_SHANE_1] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_BLACK_BELT, // WORKER
+        .trainerClass = TRAINER_CLASS_WORKER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-        .trainerPic = TRAINER_PIC_BLACK_BELT, // WORKER
+        .trainerPic = TRAINER_PIC_WORKER,
         .trainerName = _("Shane"),
         .items = {},
         .doubleBattle = FALSE,
