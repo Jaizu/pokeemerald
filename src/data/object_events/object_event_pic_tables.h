@@ -706,28 +706,28 @@ const struct SpriteFrameImage gObjectEventPicTable_Hiker[] = {
     overworld_frame(gObjectEventPic_Hiker, 2, 4, 8),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_CyclingTriathleteM[] = {
-    overworld_frame(gObjectEventPic_CyclingTriathleteM, 4, 4, 0),
-    overworld_frame(gObjectEventPic_CyclingTriathleteM, 4, 4, 1),
-    overworld_frame(gObjectEventPic_CyclingTriathleteM, 4, 4, 2),
-    overworld_frame(gObjectEventPic_CyclingTriathleteM, 4, 4, 3),
-    overworld_frame(gObjectEventPic_CyclingTriathleteM, 4, 4, 4),
-    overworld_frame(gObjectEventPic_CyclingTriathleteM, 4, 4, 5),
-    overworld_frame(gObjectEventPic_CyclingTriathleteM, 4, 4, 6),
-    overworld_frame(gObjectEventPic_CyclingTriathleteM, 4, 4, 7),
-    overworld_frame(gObjectEventPic_CyclingTriathleteM, 4, 4, 8),
+const struct SpriteFrameImage gObjectEventPicTable_Biker[] = {
+    overworld_frame(gObjectEventPic_Biker, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Biker, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Biker, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Biker, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Biker, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Biker, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Biker, 4, 4, 6),
+    overworld_frame(gObjectEventPic_Biker, 4, 4, 7),
+    overworld_frame(gObjectEventPic_Biker, 4, 4, 8),
 };
 
-const struct SpriteFrameImage gObjectEventPicTable_CyclingTriathleteF[] = {
-    overworld_frame(gObjectEventPic_CyclingTriathleteF, 4, 4, 0),
-    overworld_frame(gObjectEventPic_CyclingTriathleteF, 4, 4, 1),
-    overworld_frame(gObjectEventPic_CyclingTriathleteF, 4, 4, 2),
-    overworld_frame(gObjectEventPic_CyclingTriathleteF, 4, 4, 3),
-    overworld_frame(gObjectEventPic_CyclingTriathleteF, 4, 4, 4),
-    overworld_frame(gObjectEventPic_CyclingTriathleteF, 4, 4, 5),
-    overworld_frame(gObjectEventPic_CyclingTriathleteF, 4, 4, 6),
-    overworld_frame(gObjectEventPic_CyclingTriathleteF, 4, 4, 7),
-    overworld_frame(gObjectEventPic_CyclingTriathleteF, 4, 4, 8),
+const struct SpriteFrameImage gObjectEventPicTable_BikerDismounted[] = {
+    overworld_frame(gObjectEventPic_BikerDismounted, 2, 4, 0),
+    overworld_frame(gObjectEventPic_BikerDismounted, 2, 4, 1),
+    overworld_frame(gObjectEventPic_BikerDismounted, 2, 4, 2),
+    overworld_frame(gObjectEventPic_BikerDismounted, 2, 4, 3),
+    overworld_frame(gObjectEventPic_BikerDismounted, 2, 4, 4),
+    overworld_frame(gObjectEventPic_BikerDismounted, 2, 4, 5),
+    overworld_frame(gObjectEventPic_BikerDismounted, 2, 4, 6),
+    overworld_frame(gObjectEventPic_BikerDismounted, 2, 4, 7),
+    overworld_frame(gObjectEventPic_BikerDismounted, 2, 4, 8),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Nurse[] = {

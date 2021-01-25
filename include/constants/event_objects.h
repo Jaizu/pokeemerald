@@ -57,8 +57,8 @@
 #define OBJ_EVENT_GFX_TUBER_F                     53
 #define OBJ_EVENT_GFX_TUBER_M                     54
 #define OBJ_EVENT_GFX_HIKER                       55
-#define OBJ_EVENT_GFX_CYCLING_TRIATHLETE_M        56
-#define OBJ_EVENT_GFX_CYCLING_TRIATHLETE_F        57
+#define OBJ_EVENT_GFX_BIKER                       56
+#define OBJ_EVENT_GFX_BIKER_DISMOUNTED            57
 #define OBJ_EVENT_GFX_NURSE                       58
 #define OBJ_EVENT_GFX_ITEM_BALL                   59
 #define OBJ_EVENT_GFX_BERRY_TREE                  60
@@ -298,6 +298,8 @@
 #define OBJ_EVENT_GFX_ARCHIE                     OBJ_EVENT_GFX_EZEKIEL
 #define OBJ_EVENT_GFX_MANIAC                     OBJ_EVENT_GFX_SUPER_NERD
 #define OBJ_EVENT_GFX_VIGOROTH_FACING_AWAY       OBJ_EVENT_GFX_ROUGHNECK
+#define OBJ_EVENT_GFX_CYCLING_TRIATHLETE_M       OBJ_EVENT_GFX_BIKER
+#define OBJ_EVENT_GFX_CYCLING_TRIATHLETE_F       OBJ_EVENT_GFX_BIKER_DISMOUNTED
 
 #define OBJ_EVENT_PAL_TAG_NPC_1 0x1100
 #define OBJ_EVENT_PAL_TAG_NPC_2 0x1101

@@ -83,8 +83,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeManiac;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerFSwimming;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberM;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CyclingTriathleteM;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CyclingTriathleteF;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Biker;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BikerDismounted;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Nurse;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ItemBall;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TMBall;
@@ -303,8 +303,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_TUBER_F] =                  &gObjectEventGraphicsInfo_TuberF,
     [OBJ_EVENT_GFX_TUBER_M] =                  &gObjectEventGraphicsInfo_TuberM,
     [OBJ_EVENT_GFX_HIKER] =                    &gObjectEventGraphicsInfo_Hiker,
-    [OBJ_EVENT_GFX_CYCLING_TRIATHLETE_M] =     &gObjectEventGraphicsInfo_CyclingTriathleteM,
-    [OBJ_EVENT_GFX_CYCLING_TRIATHLETE_F] =     &gObjectEventGraphicsInfo_CyclingTriathleteF,
+    [OBJ_EVENT_GFX_BIKER] =                    &gObjectEventGraphicsInfo_Biker,
+    [OBJ_EVENT_GFX_BIKER_DISMOUNTED] =         &gObjectEventGraphicsInfo_BikerDismounted,
     [OBJ_EVENT_GFX_NURSE] =                    &gObjectEventGraphicsInfo_Nurse,
     [OBJ_EVENT_GFX_ITEM_BALL] =                &gObjectEventGraphicsInfo_ItemBall,
     [OBJ_EVENT_GFX_TM_BALL] =                  &gObjectEventGraphicsInfo_TMBall,
