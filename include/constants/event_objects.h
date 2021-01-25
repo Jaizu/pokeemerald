@@ -99,7 +99,7 @@
 #define OBJ_EVENT_GFX_MACHOP                      95
 #define OBJ_EVENT_GFX_ROUGHNECK                   96
 #define OBJ_EVENT_GFX_BIRCHS_BAG                  97
-#define OBJ_EVENT_GFX_ZIGZAGOON_1                 98
+#define OBJ_EVENT_GFX_KANGASKHAN                  98
 #define OBJ_EVENT_GFX_ARTIST                      99
 #define OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL       100
 #define OBJ_EVENT_GFX_RIVAL_BRENDAN_MACH_BIKE    101
@@ -209,7 +209,7 @@
 #define OBJ_EVENT_GFX_KYOGRE_2                   205
 #define OBJ_EVENT_GFX_GROUDON_2                  206
 #define OBJ_EVENT_GFX_RAYQUAZA_2                 207
-#define OBJ_EVENT_GFX_ZIGZAGOON_2                208
+#define OBJ_EVENT_GFX_ZIGZAGOON                  208
 #define OBJ_EVENT_GFX_PIKACHU                    209
 #define OBJ_EVENT_GFX_AZUMARILL                  210
 #define OBJ_EVENT_GFX_WINGULL                    211
@@ -300,6 +300,8 @@
 #define OBJ_EVENT_GFX_VIGOROTH_FACING_AWAY       OBJ_EVENT_GFX_ROUGHNECK
 #define OBJ_EVENT_GFX_CYCLING_TRIATHLETE_M       OBJ_EVENT_GFX_BIKER
 #define OBJ_EVENT_GFX_CYCLING_TRIATHLETE_F       OBJ_EVENT_GFX_BIKER_DISMOUNTED
+#define OBJ_EVENT_GFX_ZIGZAGOON_1                OBJ_EVENT_GFX_KANGASKHAN
+#define OBJ_EVENT_GFX_ZIGZAGOON_2                OBJ_EVENT_GFX_ZIGZAGOON
 
 #define OBJ_EVENT_PAL_TAG_NPC_1 0x1100
 #define OBJ_EVENT_PAL_TAG_NPC_2 0x1101
@@ -375,6 +377,7 @@
 #define OBJ_EVENT_PAL_TAG_EZEKIEL 0x1147
 #define OBJ_EVENT_PAL_TAG_SUPER_NERD 0x1148
 #define OBJ_EVENT_PAL_TAG_ROUGHNECK 0x1149
+#define OBJ_EVENT_PAL_TAG_KANGASKHAN 0x114A
 #define OBJ_EVENT_PAL_TAG_NONE 0x11FF
 
 // These are dynamic object gfx ids.

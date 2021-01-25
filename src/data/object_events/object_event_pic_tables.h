@@ -845,6 +845,12 @@ const struct SpriteFrameImage gObjectEventPicTable_Growlithe[] = {
     overworld_frame(gObjectEventPic_Growlithe, 4, 4, 0),
 };
 
+const struct SpriteFrameImage gObjectEventPicTable_Kangaskhan[] = {
+    overworld_frame(gObjectEventPic_Kangaskhan, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Kangaskhan, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Kangaskhan, 4, 4, 0),
+};
+
 const struct SpriteFrameImage gObjectEventPicTable_Marowak[] = {
     overworld_frame(gObjectEventPic_Marowak, 2, 2, 0),
     overworld_frame(gObjectEventPic_Marowak, 2, 2, 0),
@@ -977,18 +983,6 @@ const struct SpriteFrameImage gObjectEventPicTable_Roughneck[] = {
 
 const struct SpriteFrameImage gObjectEventPicTable_BirchsBag[] = {
     obj_frame_tiles(gObjectEventPic_BirchsBag),
-};
-
-const struct SpriteFrameImage gObjectEventPicTable_EnemyZigzagoon[] = {
-    overworld_frame(gObjectEventPic_EnemyZigzagoon, 4, 4, 0),
-    overworld_frame(gObjectEventPic_EnemyZigzagoon, 4, 4, 1),
-    overworld_frame(gObjectEventPic_EnemyZigzagoon, 4, 4, 2),
-    overworld_frame(gObjectEventPic_EnemyZigzagoon, 4, 4, 3),
-    overworld_frame(gObjectEventPic_EnemyZigzagoon, 4, 4, 4),
-    overworld_frame(gObjectEventPic_EnemyZigzagoon, 4, 4, 5),
-    overworld_frame(gObjectEventPic_EnemyZigzagoon, 4, 4, 6),
-    overworld_frame(gObjectEventPic_EnemyZigzagoon, 4, 4, 7),
-    overworld_frame(gObjectEventPic_EnemyZigzagoon, 4, 4, 8),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Poochyena[] = {

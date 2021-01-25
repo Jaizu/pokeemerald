@@ -76,6 +76,7 @@ const u16 gObjectEventPal_Vernon[] = INCBIN_U16("graphics/object_events/palettes
 const u16 gObjectEventPal_Ezekiel[] = INCBIN_U16("graphics/object_events/palettes/ezekiel.gbapal");
 const u16 gObjectEventPal_SuperNerd[] = INCBIN_U16("graphics/object_events/palettes/super_nerd.gbapal");
 const u16 gObjectEventPal_Roughneck[] = INCBIN_U16("graphics/object_events/palettes/roughneck.gbapal");
+const u16 gObjectEventPal_Kangaskhan[] = INCBIN_U16("graphics/object_events/palettes/kangaskhan.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
@@ -209,6 +210,7 @@ const u32 gObjectEventPic_Machop[] = INCBIN_U32("graphics/object_events/pics/pok
 const u32 gObjectEventPic_Rayquaza[] = INCBIN_U32("graphics/object_events/pics/pokemon/rayquaza.4bpp");
 const u32 gObjectEventPic_RayquazaStill[] = INCBIN_U32("graphics/object_events/pics/pokemon/rayquaza_still.4bpp");
 const u32 gObjectEventPic_Zigzagoon[] = INCBIN_U32("graphics/object_events/pics/pokemon/zigzagoon.4bpp");
+const u32 gObjectEventPic_Kangaskhan[] = INCBIN_U32("graphics/object_events/pics/pokemon/kangaskhan.4bpp");
 const u32 gObjectEventPic_Pikachu[] = INCBIN_U32("graphics/object_events/pics/pokemon/pikachu.4bpp");
 const u32 gObjectEventPic_Azumarill[] = INCBIN_U32("graphics/object_events/pics/pokemon/azumarill.4bpp");
 const u32 gObjectEventPic_Wingull[] = INCBIN_U32("graphics/object_events/pics/pokemon/wingull.4bpp");
