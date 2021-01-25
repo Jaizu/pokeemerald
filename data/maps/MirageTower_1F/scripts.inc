@@ -4,7 +4,7 @@ MirageTower_1F_MapScripts:: @ 823AD01
 
 MirageTower_1F_OnTransition: @ 823AD07
 	setflag FLAG_ENTERED_MIRAGE_TOWER
-	setflag FLAG_FORCE_MIRAGE_TOWER_VISIBLE
+	setflag 0
 	setflag 0
 	end
 

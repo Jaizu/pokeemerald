@@ -80,6 +80,7 @@
 #define MAP_SABULO_CROSS_SECRET_TEMPLE          (8 | (2 << 8))
 #define MAP_VALOON_WAY_SECRET_TEMPLE            (9 | (2 << 8))
 #define MAP_NEMESIS_RIVER_HIDDEN_GROTTO         (10 | (2 << 8))
+#define MAP_BATTLE_MARSH_SECRET_TEMPLE          (11 | (2 << 8))
 
 // Map Group 3
 #define MAP_CELANTO_TOWN_PLAYERS_HOUSE_1F (0 | (3 << 8))

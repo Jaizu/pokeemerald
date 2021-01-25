@@ -8,7 +8,7 @@ MauvilleCity_MapScripts:: @ 81DF385
 
 MauvilleCity_OnTransition: @ 81DF38B
 	setflag FLAG_VISITED_MAUVILLE_CITY
-	clearflag FLAG_FORCE_MIRAGE_TOWER_VISIBLE
+	clearflag 0
 	clearflag FLAG_HIDE_SLATEPORT_MUSEUM_POPULATION
 	setflag FLAG_SYS_TV_START
 	clearflag 0

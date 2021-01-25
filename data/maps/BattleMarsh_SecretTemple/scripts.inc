@@ -1,0 +1,64 @@
+BattleMarsh_SecretTemple_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, BattleMarsh_SecretTemple_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, BattleMarsh_SecretTemple_OnTransition
+	.byte 0
+
+BattleMarsh_SecretTemple_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, BattleMarsh_SecretTemple_TryRemoveKangaskhan
+	end
+
+BattleMarsh_SecretTemple_TryRemoveKangaskhan:
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_ne Common_EventScript_NopReturn
+	removeobject VAR_LAST_TALKED
+	return
+
+BattleMarsh_SecretTemple_OnTransition:
+	call_if_unset FLAG_DEFEATED_BATTLE_MARSH_SECRET_TEMPLE_KANGASKHAN, BattleMarsh_SecretTemple_EventScript_TryShowKangaskhan
+	end
+
+BattleMarsh_SecretTemple_EventScript_TryShowKangaskhan:
+	goto_if_unset FLAG_CAUGHT_BATTLE_MARSH_SECRET_TEMPLE_KANGASKHAN, BattleMarsh_SecretTemple_EventScript_ShowKangaskhan
+	return
+ 
+BattleMarsh_SecretTemple_EventScript_ShowKangaskhan:
+	clearflag FLAG_HIDE_BATTLE_MARSH_SECRET_TEMPLE_KANGASKHAN
+	return
+
+BattleMarsh_SecretTemple_EventScript_Kangaskhan::
+	lock
+	faceplayer
+	setwildbattle SPECIES_KANGASKHAN, 35, ITEM_NONE
+	waitse
+	playmoncry SPECIES_KANGASKHAN, 2
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	setvar VAR_0x8000, MOVE_FAKE_OUT
+	setvar VAR_0x8001, MOVE_POWER_UP_PUNCH
+	setvar VAR_0x8002, MOVE_SUCKER_PUNCH
+	setvar VAR_0x8003, MOVE_HEADBUTT
+	special StartCustomMovesBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq BattleMarsh_SecretTemple_EventScript_DefeatedKangaskhan
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq BattleMarsh_SecretTemple_EventScript_RanFromKangaskhan
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq BattleMarsh_SecretTemple_EventScript_RanFromKangaskhan
+	setflag FLAG_CAUGHT_BATTLE_MARSH_SECRET_TEMPLE_KANGASKHAN
+	release
+	end
+
+BattleMarsh_SecretTemple_EventScript_DefeatedKangaskhan::
+	setflag FLAG_DEFEATED_BATTLE_MARSH_SECRET_TEMPLE_KANGASKHAN
+	goto Common_EventScript_RemoveStaticPokemon
+	end
+
+BattleMarsh_SecretTemple_EventScript_RanFromKangaskhan::
+	setvar VAR_0x8004, SPECIES_KANGASKHAN
+	goto Common_EventScript_PokemonFled
+	end
