@@ -14,6 +14,7 @@
     "gMapGroup_ValoonTown",
     "gMapGroup_CelantoGrove",
     "gMapGroup_NestpineClimb",
+    "gMapGroup_BattleMarsh",
     "gMapGroup0",
     "gMapGroup1",
     "gMapGroup2",
@@ -214,6 +215,9 @@
   ],
   "gMapGroup_NestpineClimb": [
     "NestpineClimb_NetasHouse"
+  ],
+  "gMapGroup_BattleMarsh": [
+    "BattleMarsh_1F"
   ],
   "gMapGroup0": [
     "PetalburgCity",

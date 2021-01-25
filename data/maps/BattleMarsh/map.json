@@ -299,7 +299,7 @@
       "x": 32,
       "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_BATTLE_MARSH",
+      "dest_map": "MAP_BATTLE_MARSH_1F",
       "dest_warp_id": 0
     },
     {

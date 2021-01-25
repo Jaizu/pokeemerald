@@ -514,7 +514,7 @@ RustboroCity_EventScript_EmployeeAskToGetGoods:: @ 81E0B2E
 	call_if_eq RustboroCity_EventScript_EmployeeFacePlayerDown1
 	compare VAR_TEMP_1, 3
 	call_if_eq RustboroCity_EventScript_EmployeeApproachPlayerDown1
-	setflag FLAG_INTERACTED_WITH_DEVON_EMPLOYEE_GOODS_STOLEN
+	setflag 0
 	setvar VAR_RUSTBORO_CITY_STATE, 3
 	copyobjectxytoperm LOCALID_DEVON_EMPLOYEE
 	msgbox RustboroCity_Text_HelpMeIWasRobbed, MSGBOX_DEFAULT

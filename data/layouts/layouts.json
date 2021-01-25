@@ -6468,6 +6468,18 @@
       "secondary_tileset": "gTileset_BattleMarsh",
       "border_filepath": "data/layouts/BattleMarsh/border.bin",
       "blockdata_filepath": "data/layouts/BattleMarsh/map.bin"
+    },
+    {
+      "id": "LAYOUT_BATTLE_MARSH_1F",
+      "name": "BattleMarsh_1F_Layout",
+      "width": 22,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Indoors",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/BattleMarsh_1F/border.bin",
+      "blockdata_filepath": "data/layouts/BattleMarsh_1F/map.bin"
     }
   ]
 }
