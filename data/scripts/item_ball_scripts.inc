@@ -367,6 +367,17 @@ NewMauville_Inside_EventScript_ItemThunderStone::
 	finditem ITEM_THUNDER_STONE
 	end
 
+EventScript_ItemHPUp::
+ArtisanCave_B1F_EventScript_ItemHPUp::
+Route116_EventScript_ItemHPUp::
+Route111_EventScript_ItemHPUp::
+	finditem ITEM_HP_UP
+	end
+
+EventScript_ItemAbomasite::
+	finditem ITEM_ABOMASITE
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
@@ -385,10 +396,6 @@ Route110_EventScript_ItemDireHit:: @ 8290D81
 
 Route111_EventScript_ItemStardust:: @ 8290DA8
 	finditem ITEM_STARDUST
-	end
-
-Route111_EventScript_ItemHPUp:: @ 8290DB5
-	finditem ITEM_HP_UP
 	end
 
 Route114_EventScript_ItemProtein:: @ 8290E10
@@ -413,10 +420,6 @@ Route115_EventScript_ItemHealPowder:: @ 8290E5E
 
 Route116_EventScript_ItemRepel:: @ 8290E92
 	finditem ITEM_REPEL
-	end
-
-Route116_EventScript_ItemHPUp:: @ 8290E9F
-	finditem ITEM_HP_UP
 	end
 
 Route117_EventScript_ItemGreatBall:: @ 8290EB9
@@ -661,10 +664,6 @@ VictoryRoad_1F_EventScript_ItemMaxElixir:: @ 8291483
 
 VictoryRoad_B1F_EventScript_ItemTM29:: @ 829149D
 	finditem ITEM_TM29
-	end
-
-ArtisanCave_B1F_EventScript_ItemHPUp:: @ 82914C4
-	finditem ITEM_HP_UP
 	end
 
 ArtisanCave_1F_EventScript_ItemCarbos:: @ 82914D1

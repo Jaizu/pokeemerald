@@ -898,7 +898,7 @@
       "y": 120,
       "elevation": 3,
       "item": "ITEM_FULL_HEAL",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_119_FULL_HEAL"
+      "flag": "0"
     },
     {
       "type": "hidden_item",
