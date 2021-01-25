@@ -177,9 +177,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BARD",
+      "graphics_id": "OBJ_EVENT_GFX_ROUGHNECK",
       "x": 88,
-      "y": 21,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 0,

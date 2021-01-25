@@ -75,6 +75,7 @@ const u16 gObjectEventPal_PkmnRanger[] = INCBIN_U16("graphics/object_events/pale
 const u16 gObjectEventPal_Vernon[] = INCBIN_U16("graphics/object_events/palettes/vernon.gbapal");
 const u16 gObjectEventPal_Ezekiel[] = INCBIN_U16("graphics/object_events/palettes/ezekiel.gbapal");
 const u16 gObjectEventPal_SuperNerd[] = INCBIN_U16("graphics/object_events/palettes/super_nerd.gbapal");
+const u16 gObjectEventPal_Roughneck[] = INCBIN_U16("graphics/object_events/palettes/roughneck.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
@@ -272,7 +273,7 @@ const u32 gObjectEventPic_MrBrineysBoat[] = INCBIN_U32("graphics/object_events/p
 const u32 gObjectEventPic_Fossil[] = INCBIN_U32("graphics/object_events/pics/misc/fossil.4bpp");
 const u32 gObjectEventPic_SubmarineShadow[] = INCBIN_U32("graphics/object_events/pics/misc/submarine_shadow.4bpp");
 const u32 gObjectEventPic_Truck[] = INCBIN_U32("graphics/object_events/pics/misc/truck.4bpp");
-const u32 gObjectEventPic_Vigoroth[] = INCBIN_U32("graphics/object_events/pics/pokemon/vigoroth.4bpp");
+const u32 gObjectEventPic_Roughneck[] = INCBIN_U32("graphics/object_events/pics/people/roughneck.4bpp");
 const u32 gObjectEventPic_BirchsBag[] = INCBIN_U32("graphics/object_events/pics/misc/birchs_bag.4bpp");
 const u32 gObjectEventPic_EnemyZigzagoon[] = INCBIN_U32("graphics/object_events/pics/pokemon/enemy_zigzagoon.4bpp");
 const u32 gObjectEventPic_Poochyena[] = INCBIN_U32("graphics/object_events/pics/pokemon/poochyena.4bpp");

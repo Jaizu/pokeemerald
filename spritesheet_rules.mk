@@ -268,6 +268,9 @@ $(OBJEVENTGFXDIR)/people/worker.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/super_nerd.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+$(OBJEVENTGFXDIR)/people/roughneck.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
 $(OBJEVENTGFXDIR)/people/mart_employee.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
@@ -481,9 +484,6 @@ $(OBJEVENTGFXDIR)/pokemon/psyduck.4bpp: %.4bpp: %.png
 
 $(OBJEVENTGFXDIR)/pokemon/sudowoodo.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
-
-$(OBJEVENTGFXDIR)/pokemon/vigoroth.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -mwidth 4 -mheight 4
 
 $(OBJEVENTGFXDIR)/pokemon/wingull.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2

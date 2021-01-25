@@ -97,7 +97,7 @@
 #define OBJ_EVENT_GFX_MAY_FIELD_MOVE              93
 #define OBJ_EVENT_GFX_TRUCK                       94
 #define OBJ_EVENT_GFX_MACHOP                      95
-#define OBJ_EVENT_GFX_VIGOROTH_FACING_AWAY        96
+#define OBJ_EVENT_GFX_ROUGHNECK                   96
 #define OBJ_EVENT_GFX_BIRCHS_BAG                  97
 #define OBJ_EVENT_GFX_ZIGZAGOON_1                 98
 #define OBJ_EVENT_GFX_ARTIST                      99
@@ -297,6 +297,7 @@
 #define OBJ_EVENT_GFX_FLANNERY                   OBJ_EVENT_GFX_VERNON
 #define OBJ_EVENT_GFX_ARCHIE                     OBJ_EVENT_GFX_EZEKIEL
 #define OBJ_EVENT_GFX_MANIAC                     OBJ_EVENT_GFX_SUPER_NERD
+#define OBJ_EVENT_GFX_VIGOROTH_FACING_AWAY       OBJ_EVENT_GFX_ROUGHNECK
 
 #define OBJ_EVENT_PAL_TAG_NPC_1 0x1100
 #define OBJ_EVENT_PAL_TAG_NPC_2 0x1101
@@ -371,6 +372,7 @@
 #define OBJ_EVENT_PAL_TAG_VERNON 0x1146
 #define OBJ_EVENT_PAL_TAG_EZEKIEL 0x1147
 #define OBJ_EVENT_PAL_TAG_SUPER_NERD 0x1148
+#define OBJ_EVENT_PAL_TAG_ROUGHNECK 0x1149
 #define OBJ_EVENT_PAL_TAG_NONE 0x11FF
 
 // These are dynamic object gfx ids.

@@ -117,7 +117,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PushableBoulder;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MrBrineysBoat;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Truck;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Machop;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_VigorothFacingAway;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Roughneck;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BirchsBag;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EnemyZigzagoon;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Poochyena;
@@ -344,7 +344,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_MAY_FIELD_MOVE] =           &gObjectEventGraphicsInfo_MayFieldMove,
     [OBJ_EVENT_GFX_TRUCK] =                    &gObjectEventGraphicsInfo_Truck,
     [OBJ_EVENT_GFX_MACHOP] =                   &gObjectEventGraphicsInfo_Machop,
-    [OBJ_EVENT_GFX_VIGOROTH_FACING_AWAY] =     &gObjectEventGraphicsInfo_VigorothFacingAway,
+    [OBJ_EVENT_GFX_ROUGHNECK] =                &gObjectEventGraphicsInfo_Roughneck,
     [OBJ_EVENT_GFX_BIRCHS_BAG] =               &gObjectEventGraphicsInfo_BirchsBag,
     [OBJ_EVENT_GFX_ZIGZAGOON_1] =              &gObjectEventGraphicsInfo_EnemyZigzagoon,
     [OBJ_EVENT_GFX_ARTIST] =                   &gObjectEventGraphicsInfo_Artist,
@@ -577,6 +577,7 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Vernon, OBJ_EVENT_PAL_TAG_VERNON},
     {gObjectEventPal_Ezekiel, OBJ_EVENT_PAL_TAG_EZEKIEL},
     {gObjectEventPal_SuperNerd, OBJ_EVENT_PAL_TAG_SUPER_NERD},
+    {gObjectEventPal_Roughneck, OBJ_EVENT_PAL_TAG_ROUGHNECK},
     {gTilesetPalettes_General[2], FLDEFF_PAL_TAG_TALL_GRASS},
     {gTilesetPalettes_Winter[2], FLDEFF_PAL_TAG_SNOWY_TALL_GRASS},
     {gTilesetPalettes_Swamp[2], FLDEFF_PAL_TAG_SWAMPY_TALL_GRASS},
