@@ -1352,3 +1352,5 @@ Common_EventScript_PokemonFled::
 	.include "data/maps/BattleMarsh_1F/scripts.inc"
 
 	.include "data/maps/TelmurkCity/scripts.inc"
+
+	.include "data/maps/RimewoodForest/scripts.inc"

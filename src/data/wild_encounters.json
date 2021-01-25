@@ -15054,6 +15054,75 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_RIMEWOOD_FOREST",
+          "base_label": "gRimewoodForest0",
+          "land_mons": {
+            "encounter_rate": 14,
+            "mons": [
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_SNOVER"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_PINECO"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_MUNCHLAX"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_NOCTOWL"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_MURKROW"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_MURKROW"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_MUNCHLAX"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_NOCTOWL"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_SNEASEL"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_AIPOM"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_SNEASEL"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_AIPOM"
+              }
+            ]
+          }
         }
       ]
     },

@@ -1,0 +1,41 @@
+{
+  "id": "MAP_RIMEWOOD_FOREST",
+  "name": "RimewoodForest",
+  "layout": "LAYOUT_RIMEWOOD_FOREST",
+  "music": "MUS_PETALBURG_WOODS",
+  "region_map_section": "MAPSEC_METEOR_FALLS",
+  "requires_flash": false,
+  "weather": "WEATHER_SNOW",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 56,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_WINDMIST_SUMMIT",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 57,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_WINDMIST_SUMMIT",
+      "dest_warp_id": 1
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

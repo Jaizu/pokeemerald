@@ -6492,6 +6492,18 @@
       "secondary_tileset": "gTileset_BattleMarsh",
       "border_filepath": "data/layouts/TelmurkCity/border.bin",
       "blockdata_filepath": "data/layouts/TelmurkCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_RIMEWOOD_FOREST",
+      "name": "RimewoodForest_Layout",
+      "width": 70,
+      "height": 30,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Winter",
+      "secondary_tileset": "gTileset_WispForest",
+      "border_filepath": "data/layouts/RimewoodForest/border.bin",
+      "blockdata_filepath": "data/layouts/RimewoodForest/map.bin"
     }
   ]
 }

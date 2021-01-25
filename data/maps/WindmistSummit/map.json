@@ -252,15 +252,15 @@
       "x": 6,
       "y": 23,
       "elevation": 0,
-      "dest_map": "MAP_WINDMIST_SUMMIT",
+      "dest_map": "MAP_RIMEWOOD_FOREST",
       "dest_warp_id": 0
     },
     {
       "x": 7,
       "y": 23,
       "elevation": 0,
-      "dest_map": "MAP_WINDMIST_SUMMIT",
-      "dest_warp_id": 0
+      "dest_map": "MAP_RIMEWOOD_FOREST",
+      "dest_warp_id": 1
     },
     {
       "x": 40,

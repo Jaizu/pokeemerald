@@ -112,7 +112,8 @@
     "NemesisCave_1F_1R",
     "NemesisCave_SecretLab_1F",
     "NemesisCave_SecretLab_B1F",
-    "ValoonReserve"
+    "ValoonReserve",
+    "RimewoodForest"
   ],
   "gMapGroup_HiddenGrottosSecretTemples": [
     "CelantoPath_HiddenGrotto",
