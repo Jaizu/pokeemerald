@@ -77,7 +77,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LilycoveCity_PokemonTrainerFanClub_EventScript_NinjaBoy",
-      "flag": "FLAG_HIDE_FANCLUB_LITTLE_BOY"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
@@ -90,7 +90,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LilycoveCity_PokemonTrainerFanClub_EventScript_Boy",
-      "flag": "FLAG_HIDE_FANCLUB_BOY"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",

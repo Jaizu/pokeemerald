@@ -828,9 +828,9 @@
 #define FLAG_HIDE_BATTLE_MARSH_COULTER                              0x313 // FLAG_HIDE_LILCOVE_MOTEL_SCOTT in Emerald
 #define FLAG_HIDE_BATTLE_MARSH_SECRET_TEMPLE_KANGASKHAN             0x314 // FLAG_HIDE_MOSSDEEP_CITY_SCOTT in Emerald
 #define FLAG_HIDE_RIMEWOOD_FOREST_ABOMASNOW                         0x315 // FLAG_HIDE_FANCLUB_OLD_LADY in Emerald
+#define FLAG_HIDE_TELMURK_CITY_COULTER                              0x316 // FLAG_HIDE_FANCLUB_BOY in Emerald
+#define FLAG_HIDE_TELMURK_CITY_AKUTO                                0x317 // FLAG_HIDE_FANCLUB_LITTLE_BOY in Emerald
 
-#define FLAG_HIDE_FANCLUB_BOY                                       0x316
-#define FLAG_HIDE_FANCLUB_LITTLE_BOY                                0x317
 #define FLAG_HIDE_FANCLUB_LADY                                      0x318
 #define FLAG_HIDE_EVER_GRANDE_POKEMON_CENTER_1F_SCOTT               0x319
 #define FLAG_HIDE_LITTLEROOT_TOWN_RIVAL                             0x31A
