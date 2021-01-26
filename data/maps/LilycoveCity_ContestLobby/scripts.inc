@@ -155,7 +155,7 @@ LilycoveCity_ContestLobby_EventScript_MadeBeautyPainting:: @ 821A3F7
 	return
 
 LilycoveCity_ContestLobby_EventScript_MadeCutePainting:: @ 821A3FB
-	setflag FLAG_CUTE_PAINTING_MADE
+	setflag 0
 	return
 
 LilycoveCity_ContestLobby_EventScript_MadeSmartPainting:: @ 821A3FF

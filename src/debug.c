@@ -146,7 +146,7 @@ static void DebugAction_FastForward(u8 taskId)
 {
     Debug_DestroyMainMenu(taskId);
     ScriptContext2_RunNewScript(Debug_EventScript_SetUpFastForward);
-    SetWarpDestination(MAP_GROUP(WINDMIST_SUMMIT), MAP_NUM(WINDMIST_SUMMIT), -1, 7, 27);
+    SetWarpDestination(MAP_GROUP(BATTLE_MARSH), MAP_NUM(BATTLE_MARSH), 0, 0, 0);
     DoWarp();
 }
 
