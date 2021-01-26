@@ -4802,8 +4802,13 @@ bool8 ObjectEventIsHeldMovementActive(struct ObjectEvent *objectEvent)
 
 static u8 TryUpdateMovementActionOnStairs(struct ObjectEvent *objectEvent, u8 movementActionId)
 {
-    if (objectEvent->isPlayer)
-        return movementActionId;    //handled separately
+    #if FOLLOW_ME_IMPLEMENTED
+        if (objectEvent->isPlayer || objectEvent->localId == GetFollowerLocalId())
+            return movementActionId;    //handled separately
+    #else
+        if (objectEvent->isPlayer)
+            return movementActionId;    //handled separately
+    #endif
     
     if (!ObjectMovingOnRockStairs(objectEvent, objectEvent->movementDirection))
         return movementActionId;
@@ -7559,12 +7564,17 @@ static void GetGroundEffectFlags_LongGrassOnBeginStep(struct ObjectEvent *objEve
 
 static void GetGroundEffectFlags_Tracks(struct ObjectEvent *objEvent, u32 *flags)
 {
-    if (MetatileBehavior_IsDeepSand(objEvent->previousMetatileBehavior))
+    u8 behavior = objEvent->previousMetatileBehavior;
+    
+    if (objEvent->directionOverwrite)
+        return;
+    
+    if (MetatileBehavior_IsDeepSand(behavior))
     {
         *flags |= GROUND_EFFECT_FLAG_DEEP_SAND;
     }
-    else if (MetatileBehavior_IsSandOrDeepSand(objEvent->previousMetatileBehavior)
-             || MetatileBehavior_IsFootprints(objEvent->previousMetatileBehavior))
+    else if (MetatileBehavior_IsSandOrDeepSand(behavior)
+             || MetatileBehavior_IsFootprints(behavior))
     {
         *flags |= GROUND_EFFECT_FLAG_SAND;
     }
