@@ -374,6 +374,26 @@ Route111_EventScript_ItemHPUp::
 	finditem ITEM_HP_UP
 	end
 
+EventScript_ItemWiseGlasses::
+	finditem ITEM_WISE_GLASSES
+	end
+
+EventScript_ItemCameruptite::
+	finditem ITEM_CAMERUPTITE
+	end
+
+EventScript_ItemDuskBall::
+	finditem ITEM_DUSK_BALL
+	end
+
+EventScript_ItemDuskBalls::
+	finditem ITEM_DUSK_BALL, 5
+	end
+
+EventScript_ItemLuckIncense::
+	finditem ITEM_LUCK_INCENSE
+	end
+
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
 	finditem ITEM_GUARD_SPEC
 	end
