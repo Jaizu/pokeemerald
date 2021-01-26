@@ -169,5 +169,7 @@ bool8 MetatileBehavior_IsValoonGymCombeeTile(u8 metatileBehavior);
 // different grass types
 bool8 MetatileBehavior_IsSnowyTallGrass(u8 metatileBehavior);
 bool8 MetatileBehavior_IsSwampyTallGrass(u8 metatileBehavior);
+// rock climb
+bool8 MetatileBehavior_IsRockClimbable(u8 metatileBehavior);
 
 #endif // GUARD_METATILE_BEHAVIOR

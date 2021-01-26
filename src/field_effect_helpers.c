@@ -1047,10 +1047,10 @@ void SynchroniseSurfAnim(struct ObjectEvent *objectEvent, struct Sprite *sprite)
         [DIR_NORTH] = 1,
         [DIR_WEST] = 2,
         [DIR_EAST] = 3,
-        [DIR_SOUTHWEST] = 0,
-        [DIR_SOUTHEAST] = 0,
-        [DIR_NORTHWEST] = 1,
-        [DIR_NORTHEAST] = 1,
+        [DIR_SOUTHWEST] = 2,
+        [DIR_SOUTHEAST] = 3,
+        [DIR_NORTHWEST] = 2,
+        [DIR_NORTHEAST] = 3,
     };
 
     if (GetSurfBobWhileFlyingOutState(sprite) == 0)
@@ -1091,10 +1091,12 @@ static void CreateBobbingEffect(struct ObjectEvent *objectEvent, struct Sprite *
         {
             sprite->pos2.y += sprite->data[3];
         }
+        
         if ((sprite->data[4] & 0x0F) == 0)
         {
             sprite->data[3] = -sprite->data[3];
         }
+        
         if (bobState != 2)
         {
             if (GetSurfBobWhileFishingState(sprite) == 0)
@@ -1150,6 +1152,24 @@ u32 FldEff_Dust(void)
         sprite->oam.priority = gFieldEffectArguments[3];
         sprite->data[0] = gFieldEffectArguments[2];
         sprite->data[1] = FLDEFF_DUST;
+    }
+    return 0;
+}
+
+u32 FldEff_RockClimbDust(void)
+{
+    u8 spriteId;
+    struct Sprite *sprite;
+
+    SetSpritePosToOffsetMapCoords((s16 *)&gFieldEffectArguments[0], (s16 *)&gFieldEffectArguments[1], 8, 12);
+    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_ROCK_CLIMB_DUST], gFieldEffectArguments[0], gFieldEffectArguments[1], 0);
+    if (spriteId != MAX_SPRITES)
+    {
+        sprite = &gSprites[spriteId];
+        sprite->coordOffsetEnabled = TRUE;
+        sprite->oam.priority = gFieldEffectArguments[3];
+        sprite->data[0] = gFieldEffectArguments[2];
+        sprite->data[1] = FLDEFF_ROCK_CLIMB_DUST;
     }
     return 0;
 }
