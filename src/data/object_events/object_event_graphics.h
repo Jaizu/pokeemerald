@@ -79,6 +79,7 @@ const u16 gObjectEventPal_Roughneck[] = INCBIN_U16("graphics/object_events/palet
 const u16 gObjectEventPal_Kangaskhan[] = INCBIN_U16("graphics/object_events/palettes/kangaskhan.gbapal");
 const u16 gObjectEventPal_Pidgeot[] = INCBIN_U16("graphics/object_events/palettes/pidgeot.gbapal");
 const u16 gObjectEventPal_Abomasnow[] = INCBIN_U16("graphics/object_events/palettes/abomasnow.gbapal");
+const u16 gObjectEventPal_Akuto[] = INCBIN_U16("graphics/object_events/palettes/akuto.gbapal");
 
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
 const u16 gFieldEffectObjectPalette0[] = INCBIN_U16("graphics/field_effects/palettes/general_0.gbapal");
@@ -275,7 +276,7 @@ const u32 gObjectEventPic_PushableBoulder[] = INCBIN_U32("graphics/object_events
 const u32 gObjectEventPic_Pidgeot[] = INCBIN_U32("graphics/object_events/pics/pokemon/pidgeot.4bpp");
 const u32 gObjectEventPic_Fossil[] = INCBIN_U32("graphics/object_events/pics/misc/fossil.4bpp");
 const u32 gObjectEventPic_SubmarineShadow[] = INCBIN_U32("graphics/object_events/pics/misc/submarine_shadow.4bpp");
-const u32 gObjectEventPic_Truck[] = INCBIN_U32("graphics/object_events/pics/misc/truck.4bpp");
+const u32 gObjectEventPic_Akuto[] = INCBIN_U32("graphics/object_events/pics/people/akuto.4bpp");
 const u32 gObjectEventPic_Roughneck[] = INCBIN_U32("graphics/object_events/pics/people/roughneck.4bpp");
 const u32 gObjectEventPic_BirchsBag[] = INCBIN_U32("graphics/object_events/pics/misc/birchs_bag.4bpp");
 const u32 gObjectEventPic_Poochyena[] = INCBIN_U32("graphics/object_events/pics/pokemon/poochyena.4bpp");

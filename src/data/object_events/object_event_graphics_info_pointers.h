@@ -115,7 +115,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Teala;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BreakableRock;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PushableBoulder;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pidgeot;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Truck;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Akuto;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Machop;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Roughneck;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BirchsBag;
@@ -342,7 +342,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_MAY_ACRO_BIKE] =            &gObjectEventGraphicsInfo_MayAcroBike,
     [OBJ_EVENT_GFX_MAY_SURFING] =              &gObjectEventGraphicsInfo_MaySurfing,
     [OBJ_EVENT_GFX_MAY_FIELD_MOVE] =           &gObjectEventGraphicsInfo_MayFieldMove,
-    [OBJ_EVENT_GFX_TRUCK] =                    &gObjectEventGraphicsInfo_Truck,
+    [OBJ_EVENT_GFX_AKUTO] =                    &gObjectEventGraphicsInfo_Akuto,
     [OBJ_EVENT_GFX_MACHOP] =                   &gObjectEventGraphicsInfo_Machop,
     [OBJ_EVENT_GFX_ROUGHNECK] =                &gObjectEventGraphicsInfo_Roughneck,
     [OBJ_EVENT_GFX_BIRCHS_BAG] =               &gObjectEventGraphicsInfo_BirchsBag,
@@ -581,6 +581,7 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Kangaskhan, OBJ_EVENT_PAL_TAG_KANGASKHAN},
     {gObjectEventPal_Pidgeot, OBJ_EVENT_PAL_TAG_PIDGEOT},
     {gObjectEventPal_Abomasnow, OBJ_EVENT_PAL_TAG_ABOMASNOW},
+    {gObjectEventPal_Akuto, OBJ_EVENT_PAL_TAG_AKUTO},
     {gTilesetPalettes_General[2], FLDEFF_PAL_TAG_TALL_GRASS},
     {gTilesetPalettes_Winter[2], FLDEFF_PAL_TAG_SNOWY_TALL_GRASS},
     {gTilesetPalettes_Swamp[2], FLDEFF_PAL_TAG_SWAMPY_TALL_GRASS},

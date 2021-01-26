@@ -95,7 +95,7 @@
 #define OBJ_EVENT_GFX_MAY_ACRO_BIKE               91
 #define OBJ_EVENT_GFX_MAY_SURFING                 92
 #define OBJ_EVENT_GFX_MAY_FIELD_MOVE              93
-#define OBJ_EVENT_GFX_TRUCK                       94
+#define OBJ_EVENT_GFX_AKUTO                       94
 #define OBJ_EVENT_GFX_MACHOP                      95
 #define OBJ_EVENT_GFX_ROUGHNECK                   96
 #define OBJ_EVENT_GFX_BIRCHS_BAG                  97
@@ -304,6 +304,7 @@
 #define OBJ_EVENT_GFX_ZIGZAGOON_2                OBJ_EVENT_GFX_ZIGZAGOON
 #define OBJ_EVENT_GFX_MR_BRINEYS_BOAT            OBJ_EVENT_GFX_PIDGEOT
 #define OBJ_EVENT_GFX_MEOWTH_DOLL                OBJ_EVENT_GFX_ABOMASNOW
+#define OBJ_EVENT_GFX_TRUCK                      OBJ_EVENT_GFX_AKUTO
 
 #define OBJ_EVENT_PAL_TAG_NPC_1 0x1100
 #define OBJ_EVENT_PAL_TAG_NPC_2 0x1101
@@ -382,6 +383,7 @@
 #define OBJ_EVENT_PAL_TAG_KANGASKHAN 0x114A
 #define OBJ_EVENT_PAL_TAG_PIDGEOT 0x114B
 #define OBJ_EVENT_PAL_TAG_ABOMASNOW 0x114C
+#define OBJ_EVENT_PAL_TAG_AKUTO 0x114D
 #define OBJ_EVENT_PAL_TAG_NONE 0x11FF
 
 // These are dynamic object gfx ids.
