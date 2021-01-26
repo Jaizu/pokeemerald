@@ -54,17 +54,17 @@
       "flag": "FLAG_ITEM_RIMEWOOD_FOREST_HP_UP"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPARKLES",
-      "x": 4,
+      "graphics_id": "OBJ_EVENT_GFX_ABOMASNOW",
+      "x": 7,
       "y": 22,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_ItemAbomasite",
-      "flag": "FLAG_ITEM_RIMEWOOD_FOREST_ABOMASITE"
+      "script": "RimewoodForest_EventScript_Abomasnow",
+      "flag": "FLAG_HIDE_RIMEWOOD_FOREST_ABOMASNOW"
     }
   ],
   "warp_events": [
@@ -84,13 +84,138 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 54,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_RIMEWOOD_FOREST_STATE",
+      "var_value": "0",
+      "script": "RimewoodForest_EventScript_RoarTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 55,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_RIMEWOOD_FOREST_STATE",
+      "var_value": "0",
+      "script": "RimewoodForest_EventScript_RoarTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 56,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_RIMEWOOD_FOREST_STATE",
+      "var_value": "0",
+      "script": "RimewoodForest_EventScript_RoarTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 59,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_RIMEWOOD_FOREST_STATE",
+      "var_value": "1",
+      "script": "RimewoodForest_EventScript_RoarTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 60,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_RIMEWOOD_FOREST_STATE",
+      "var_value": "1",
+      "script": "RimewoodForest_EventScript_RoarTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 43,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_RIMEWOOD_FOREST_STATE",
+      "var_value": "1",
+      "script": "RimewoodForest_EventScript_RoarTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 42,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_RIMEWOOD_FOREST_STATE",
+      "var_value": "1",
+      "script": "RimewoodForest_EventScript_RoarTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 41,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_RIMEWOOD_FOREST_STATE",
+      "var_value": "1",
+      "script": "RimewoodForest_EventScript_RoarTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 40,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_RIMEWOOD_FOREST_STATE",
+      "var_value": "1",
+      "script": "RimewoodForest_EventScript_RoarTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_RIMEWOOD_FOREST_STATE",
+      "var_value": "2",
+      "script": "RimewoodForest_EventScript_RoarTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_RIMEWOOD_FOREST_STATE",
+      "var_value": "2",
+      "script": "RimewoodForest_EventScript_RoarTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_RIMEWOOD_FOREST_STATE",
+      "var_value": "3",
+      "script": "RimewoodForest_EventScript_RoarTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_RIMEWOOD_FOREST_STATE",
+      "var_value": "3",
+      "script": "RimewoodForest_EventScript_RoarTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_RIMEWOOD_FOREST_STATE",
+      "var_value": "3",
+      "script": "RimewoodForest_EventScript_RoarTrigger"
+    }
   ],
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 4,
-      "y": 23,
+      "x": 3,
+      "y": 22,
       "elevation": 3,
       "item": "ITEM_RARE_BONE",
       "flag": "FLAG_HIDDEN_ITEM_RIMEWOOD_FOREST_RARE_BONE"

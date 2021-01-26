@@ -6,12 +6,12 @@ LilycoveCity_LilycoveMuseum_2F_MapScripts:: @ 821973A
 	.byte 0
 
 LilycoveCity_LilycoveMuseum_2F_OnLoad: @ 8219745
-	goto_if_set FLAG_COOL_PAINTING_MADE, LilycoveCity_LilycoveMuseum_2F_EventScript_SetCoolPainting
+	goto_if_set 0, LilycoveCity_LilycoveMuseum_2F_EventScript_SetCoolPainting
 	goto LilycoveCity_LilycoveMuseum_2F_EventScript_CheckBeautyPainting
 	end
 
 LilycoveCity_LilycoveMuseum_2F_EventScript_CheckBeautyPainting:: @ 8219754
-	goto_if_set FLAG_BEAUTY_PAINTING_MADE, LilycoveCity_LilycoveMuseum_2F_EventScript_SetBeautyPainting
+	goto_if_set 0, LilycoveCity_LilycoveMuseum_2F_EventScript_SetBeautyPainting
 	goto LilycoveCity_LilycoveMuseum_2F_EventScript_CheckCutePainting
 	end
 
@@ -154,13 +154,13 @@ LilycoveCity_LilycoveMuseum_2F_EventScript_ToughPainting:: @ 821993E
 
 LilycoveCity_LilycoveMuseum_2F_EventScript_CoolPainting:: @ 8219951
 	lockall
-	goto_if_set FLAG_COOL_PAINTING_MADE, LilycoveCity_LilycoveMuseum_2F_EventScript_ShowCoolPainting
+	goto_if_set 0, LilycoveCity_LilycoveMuseum_2F_EventScript_ShowCoolPainting
 	msgbox LilycoveCity_LilycoveMuseum_2F_Text_ItsRedPictureFrame, MSGBOX_SIGN
 	end
 
 LilycoveCity_LilycoveMuseum_2F_EventScript_BeautyPainting:: @ 8219964
 	lockall
-	goto_if_set FLAG_BEAUTY_PAINTING_MADE, LilycoveCity_LilycoveMuseum_2F_EventScript_ShowBeautyPainting
+	goto_if_set 0, LilycoveCity_LilycoveMuseum_2F_EventScript_ShowBeautyPainting
 	msgbox LilycoveCity_LilycoveMuseum_2F_Text_ItsBluePictureFrame, MSGBOX_SIGN
 	end
 

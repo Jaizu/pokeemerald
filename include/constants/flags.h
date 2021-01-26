@@ -173,9 +173,9 @@
 #define FLAG_RECEIVED_BATTLE_MARSH_FOCUS_SASH               0x9D // FLAG_FORCE_MIRAGE_TOWER_VISIBLE in Emerald
 #define FLAG_CAUGHT_BATTLE_MARSH_SECRET_TEMPLE_KANGASKHAN   0x9E // FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE in Emerald
 #define FLAG_DEFEATED_BATTLE_MARSH_SECRET_TEMPLE_KANGASKHAN 0x9F // FLAG_INTERACTED_WITH_DEVON_EMPLOYEE_GOODS_STOLEN in Emerald
+#define FLAG_CAUGHT_RIMEWOOD_FOREST_ABOMASNOW               0xA0 // FLAG_COOL_PAINTING_MADE in Emerald
+#define FLAG_DEFEATED_RIMEWOOD_FOREST_ABOMASNOW             0xA1 // FLAG_BEAUTY_PAINTING_MADE in Emerald
 
-#define FLAG_COOL_PAINTING_MADE              0xA0
-#define FLAG_BEAUTY_PAINTING_MADE            0xA1
 #define FLAG_CUTE_PAINTING_MADE              0xA2
 #define FLAG_SMART_PAINTING_MADE             0xA3
 #define FLAG_TOUGH_PAINTING_MADE             0xA4
@@ -827,8 +827,8 @@
 #define FLAG_HIDE_NEMESIS_CAVE_PKMN_RANGERS                         0x312 // FLAG_HIDE_ROUTE_119_SCOTT in Emerald
 #define FLAG_HIDE_BATTLE_MARSH_COULTER                              0x313 // FLAG_HIDE_LILCOVE_MOTEL_SCOTT in Emerald
 #define FLAG_HIDE_BATTLE_MARSH_SECRET_TEMPLE_KANGASKHAN             0x314 // FLAG_HIDE_MOSSDEEP_CITY_SCOTT in Emerald
+#define FLAG_HIDE_RIMEWOOD_FOREST_ABOMASNOW                         0x315 // FLAG_HIDE_FANCLUB_OLD_LADY in Emerald
 
-#define FLAG_HIDE_FANCLUB_OLD_LADY                                  0x315
 #define FLAG_HIDE_FANCLUB_BOY                                       0x316
 #define FLAG_HIDE_FANCLUB_LITTLE_BOY                                0x317
 #define FLAG_HIDE_FANCLUB_LADY                                      0x318
@@ -1123,7 +1123,7 @@
 #define FLAG_ITEM_BATTLE_MARSH_THUNDER_STONE                        0x437 // FLAG_ITEM_SCORCHED_SLAB_TM_11 in Emerald
 #define FLAG_ITEM_RIMEWOOD_FOREST_ETHER                             0x438 // FLAG_ITEM_METEOR_FALLS_B1F_2R_TM_02 in Emerald
 #define FLAG_ITEM_RIMEWOOD_FOREST_HP_UP                             0x439 // FLAG_ITEM_SHOAL_CAVE_ENTRANCE_BIG_PEARL in Emerald
-#define FLAG_ITEM_RIMEWOOD_FOREST_ABOMASITE                         0x43A // FLAG_ITEM_SHOAL_CAVE_INNER_ROOM_RARE_CANDY in Emerald
+#define FLAG_ITEM_UNUSED_0x43A                                      0x43A // FLAG_ITEM_SHOAL_CAVE_INNER_ROOM_RARE_CANDY in Emerald
 
 #define FLAG_ITEM_SHOAL_CAVE_STAIRS_ROOM_ICE_HEAL                   0x43B
 #define FLAG_ITEM_VICTORY_ROAD_1F_MAX_ELIXIR                        0x43C

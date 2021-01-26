@@ -147,11 +147,11 @@ LilycoveCity_ContestLobby_EventScript_SetPaintingFlag:: @ 821A3B6
 	return
 
 LilycoveCity_ContestLobby_EventScript_MadeCoolPainting:: @ 821A3F3
-	setflag FLAG_COOL_PAINTING_MADE
+	setflag 0
 	return
 
 LilycoveCity_ContestLobby_EventScript_MadeBeautyPainting:: @ 821A3F7
-	setflag FLAG_BEAUTY_PAINTING_MADE
+	setflag 0
 	return
 
 LilycoveCity_ContestLobby_EventScript_MadeCutePainting:: @ 821A3FB

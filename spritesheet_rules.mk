@@ -428,6 +428,9 @@ $(OBJEVENTGFXDIR)/pokemon/weedle.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/pokemon/maractus.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
+$(OBJEVENTGFXDIR)/pokemon/abomasnow.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
+
 $(OBJEVENTGFXDIR)/pokemon/clefairy.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 

@@ -157,7 +157,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CyndaquilDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ChikoritaDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TotodileDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_JigglypuffDoll;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MeowthDoll;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Abomasnow;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Clefairy;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DittoDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SmoochumDoll;
@@ -398,7 +398,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_CHIKORITA_DOLL] =           &gObjectEventGraphicsInfo_ChikoritaDoll,
     [OBJ_EVENT_GFX_TOTODILE_DOLL] =            &gObjectEventGraphicsInfo_TotodileDoll,
     [OBJ_EVENT_GFX_JIGGLYPUFF_DOLL] =          &gObjectEventGraphicsInfo_JigglypuffDoll,
-    [OBJ_EVENT_GFX_MEOWTH_DOLL] =              &gObjectEventGraphicsInfo_MeowthDoll,
+    [OBJ_EVENT_GFX_ABOMASNOW] =                &gObjectEventGraphicsInfo_Abomasnow,
     [OBJ_EVENT_GFX_CLEFAIRY] =                 &gObjectEventGraphicsInfo_Clefairy,
     [OBJ_EVENT_GFX_DITTO_DOLL] =               &gObjectEventGraphicsInfo_DittoDoll,
     [OBJ_EVENT_GFX_SMOOCHUM_DOLL] =            &gObjectEventGraphicsInfo_SmoochumDoll,
@@ -580,6 +580,7 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Roughneck, OBJ_EVENT_PAL_TAG_ROUGHNECK},
     {gObjectEventPal_Kangaskhan, OBJ_EVENT_PAL_TAG_KANGASKHAN},
     {gObjectEventPal_Pidgeot, OBJ_EVENT_PAL_TAG_PIDGEOT},
+    {gObjectEventPal_Abomasnow, OBJ_EVENT_PAL_TAG_ABOMASNOW},
     {gTilesetPalettes_General[2], FLDEFF_PAL_TAG_TALL_GRASS},
     {gTilesetPalettes_Winter[2], FLDEFF_PAL_TAG_SNOWY_TALL_GRASS},
     {gTilesetPalettes_Swamp[2], FLDEFF_PAL_TAG_SWAMPY_TALL_GRASS},
