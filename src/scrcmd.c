@@ -1000,7 +1000,9 @@ bool8 ScrCmd_applymovement(struct ScriptContext *ctx)
 {
     u16 localId = VarGet(ScriptReadHalfword(ctx));
     const void *movementScript = (const void *)ScriptReadWord(ctx);
-
+    
+    gObjectEvents[GetObjectEventIdByLocalId(localId)].directionOverwrite = FALSE;
+    
     ScriptMovement_StartObjectMovementScript(localId, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup, movementScript);
     sMovingNpcId = localId;
     return FALSE;

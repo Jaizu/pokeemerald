@@ -218,6 +218,7 @@ void sub_8092EF0(u8 mapId, u8 mapNumber, u8 mapGroup);
 bool8 IsBerryTreeSparkling(u8, u8, u8);
 struct ObjectEventTemplate *GetObjectEventTemplateByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup);
 u8 TrySpawnObjectEventTemplate(struct ObjectEventTemplate *objectEventTemplate, u8 mapNum, u8 mapGroup, s16 cameraX, s16 cameraY);
+u8 GetObjectEventIdByLocalId(u8);
 
 void MovementType_None(struct Sprite *);
 void MovementType_LookAround(struct Sprite *);

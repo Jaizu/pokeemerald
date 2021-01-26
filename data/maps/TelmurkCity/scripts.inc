@@ -136,8 +136,6 @@ TelmurkCity_Text_WhatWasThatAllAbout:
 	.string "more info about the New Elders.\p"
 	.string "Seeya, {PLAYER}!$"
 
-// TODO: Fix the sideways stairs interfering with this movement
-
 TelmurkCity_Movement_WalkPlayerToCoulter0:
 	walk_right
 	walk_right
