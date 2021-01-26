@@ -96,9 +96,9 @@
 #define OBJ_EVENT_GFX_MAY_SURFING                 92
 #define OBJ_EVENT_GFX_MAY_FIELD_MOVE              93
 #define OBJ_EVENT_GFX_AKUTO                       94
-#define OBJ_EVENT_GFX_MACHOP                      95
-#define OBJ_EVENT_GFX_ROUGHNECK                   96
-#define OBJ_EVENT_GFX_BIRCHS_BAG                  97
+#define OBJ_EVENT_GFX_AKUTO_DISMOUNTED            95
+#define OBJ_EVENT_GFX_MACHOP                      96
+#define OBJ_EVENT_GFX_ROUGHNECK                   97
 #define OBJ_EVENT_GFX_KANGASKHAN                  98
 #define OBJ_EVENT_GFX_ARTIST                      99
 #define OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL       100
@@ -305,6 +305,7 @@
 #define OBJ_EVENT_GFX_MR_BRINEYS_BOAT            OBJ_EVENT_GFX_PIDGEOT
 #define OBJ_EVENT_GFX_MEOWTH_DOLL                OBJ_EVENT_GFX_ABOMASNOW
 #define OBJ_EVENT_GFX_TRUCK                      OBJ_EVENT_GFX_AKUTO
+#define OBJ_EVENT_GFX_BIRCHS_BAG                 OBJ_EVENT_GFX_AKUTO_DISMOUNTED
 
 #define OBJ_EVENT_PAL_TAG_NPC_1 0x1100
 #define OBJ_EVENT_PAL_TAG_NPC_2 0x1101

@@ -959,6 +959,18 @@ const struct SpriteFrameImage gObjectEventPicTable_Akuto[] = {
     overworld_frame(gObjectEventPic_Akuto, 4, 4, 8),
 };
 
+const struct SpriteFrameImage gObjectEventPicTable_AkutoDismounted[] = {
+    overworld_frame(gObjectEventPic_AkutoDismounted, 2, 4, 0),
+    overworld_frame(gObjectEventPic_AkutoDismounted, 2, 4, 1),
+    overworld_frame(gObjectEventPic_AkutoDismounted, 2, 4, 2),
+    overworld_frame(gObjectEventPic_AkutoDismounted, 2, 4, 3),
+    overworld_frame(gObjectEventPic_AkutoDismounted, 2, 4, 4),
+    overworld_frame(gObjectEventPic_AkutoDismounted, 2, 4, 5),
+    overworld_frame(gObjectEventPic_AkutoDismounted, 2, 4, 6),
+    overworld_frame(gObjectEventPic_AkutoDismounted, 2, 4, 7),
+    overworld_frame(gObjectEventPic_AkutoDismounted, 2, 4, 8),
+};
+
 const struct SpriteFrameImage gObjectEventPicTable_Machop[] = {
     overworld_frame(gObjectEventPic_Machop, 2, 2, 0),
     overworld_frame(gObjectEventPic_Machop, 2, 2, 1),
@@ -981,10 +993,6 @@ const struct SpriteFrameImage gObjectEventPicTable_Roughneck[] = {
     overworld_frame(gObjectEventPic_Roughneck, 2, 4, 6),
     overworld_frame(gObjectEventPic_Roughneck, 2, 4, 7),
     overworld_frame(gObjectEventPic_Roughneck, 2, 4, 8),
-};
-
-const struct SpriteFrameImage gObjectEventPicTable_BirchsBag[] = {
-    obj_frame_tiles(gObjectEventPic_BirchsBag),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Poochyena[] = {

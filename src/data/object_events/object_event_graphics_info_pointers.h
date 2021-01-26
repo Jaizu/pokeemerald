@@ -116,9 +116,9 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BreakableRock;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PushableBoulder;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pidgeot;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Akuto;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AkutoDismounted;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Machop;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Roughneck;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BirchsBag;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kangaskhan;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Poochyena;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Artist;
@@ -343,9 +343,9 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_MAY_SURFING] =              &gObjectEventGraphicsInfo_MaySurfing,
     [OBJ_EVENT_GFX_MAY_FIELD_MOVE] =           &gObjectEventGraphicsInfo_MayFieldMove,
     [OBJ_EVENT_GFX_AKUTO] =                    &gObjectEventGraphicsInfo_Akuto,
+    [OBJ_EVENT_GFX_AKUTO_DISMOUNTED] =         &gObjectEventGraphicsInfo_AkutoDismounted,
     [OBJ_EVENT_GFX_MACHOP] =                   &gObjectEventGraphicsInfo_Machop,
     [OBJ_EVENT_GFX_ROUGHNECK] =                &gObjectEventGraphicsInfo_Roughneck,
-    [OBJ_EVENT_GFX_BIRCHS_BAG] =               &gObjectEventGraphicsInfo_BirchsBag,
     [OBJ_EVENT_GFX_KANGASKHAN] =               &gObjectEventGraphicsInfo_Kangaskhan,
     [OBJ_EVENT_GFX_ARTIST] =                   &gObjectEventGraphicsInfo_Artist,
     [OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL] =     &gObjectEventGraphicsInfo_RivalBrendanNormal,
