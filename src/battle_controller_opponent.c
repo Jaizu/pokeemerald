@@ -108,6 +108,12 @@ static void sub_806280C(struct Sprite *sprite);
 static void sub_8062828(u8 taskId);
 static void sub_8062A2C(void);
 
+static bool8 TrainerPicHasVariants(u32 trainerPicId);
+static u32 RandomizeTrainerPic(u32 trainerPicId);
+static void ResetTrainerVariantIds(void);
+
+extern u8 gTrainerVariantId[];
+
 static void (*const sOpponentBufferCommands[CONTROLLER_CMDS_COUNT])(void) =
 {
     [CONTROLLER_GETMONDATA]               = OpponentHandleGetMonData,
@@ -172,6 +178,64 @@ static void (*const sOpponentBufferCommands[CONTROLLER_CMDS_COUNT])(void) =
 
 // unknown unused data
 static const u8 sUnused[] = {0xB0, 0xB0, 0xC8, 0x98, 0x28, 0x28, 0x28, 0x20};
+
+#define FISHERMAN_VARIANT_CHANCE_RAREST      1
+#define FISHERMAN_VARIANT_CHANCE_RARE       25
+#define FISHERMAN_VARIANT_CHANCE_UNCOMMON   90
+#define FISHERMAN_VARIANT_CHANCE_COMMON    100
+#define FISHERMAN_VARIANT_RARITY (FISHERMAN_VARIANT_CHANCE_COMMON + FISHERMAN_VARIANT_CHANCE_UNCOMMON + FISHERMAN_VARIANT_CHANCE_RARE + FISHERMAN_VARIANT_CHANCE_RAREST)
+
+enum
+{
+    PIC_VARIANT_COMMON,
+    PIC_VARIANT_UNCOMMON,
+    PIC_VARIANT_RARE,
+    PIC_VARIANT_RAREST,
+    NUM_PIC_VARIANTS,
+};
+
+struct TrainerPicVariantData
+{
+    u8 num;
+    u8 startId;
+};
+
+struct TrainerPicVariant
+{
+    u32 chanceRarest;
+    u32 chanceRare;
+    u32 chanceUncommon;
+    u32 chanceCommon;
+    u32 maxRarity;
+    struct TrainerPicVariantData rarityData[NUM_PIC_VARIANTS];
+};
+
+const struct TrainerPicVariant sFishermanTrainerPicVariants =
+{
+    .chanceRarest = FISHERMAN_VARIANT_CHANCE_RAREST,
+    .chanceRare = FISHERMAN_VARIANT_CHANCE_RARE,
+    .chanceUncommon = FISHERMAN_VARIANT_CHANCE_UNCOMMON,
+    .chanceCommon = FISHERMAN_VARIANT_CHANCE_COMMON,
+    .maxRarity = FISHERMAN_VARIANT_RARITY,
+    .rarityData = {
+        [PIC_VARIANT_COMMON] = {
+            .num = 6,
+            .startId = TRAINER_PIC_FISHERMAN,
+        },
+        [PIC_VARIANT_UNCOMMON] = {
+            .num = 2,
+            .startId = TRAINER_PIC_FISHERMAN_DRATINI,
+        },
+        [PIC_VARIANT_RARE] = {
+            .num = 1,
+            .startId = TRAINER_PIC_FISHERMAN_TIRE,
+        },
+        [PIC_VARIANT_RAREST] = {
+            .num = 3,
+            .startId = TRAINER_PIC_FISHERMAN_SHINY_GOLDEEN,
+        },
+    },
+};
 
 static void nullsub_26(void)
 {
@@ -1232,11 +1296,49 @@ static void DoSwitchOutAnimation(void)
     }
 }
 
-static void OpponentHandleDrawTrainerPic(void)
+static bool8 TrainerPicHasVariants(u32 trainerPicId)
+{
+    return trainerPicId == TRAINER_PIC_FISHERMAN;
+}
+
+static void SelectTrainerPicVariant(const struct TrainerPicVariant trainerPicVariants)
+{
+    u32 id, random;
+    random = Random() % trainerPicVariants.maxRarity;
+    
+    if (random < trainerPicVariants.chanceRarest)
+        id = PIC_VARIANT_RAREST;
+    else if (random < trainerPicVariants.chanceRare)
+        id = PIC_VARIANT_RARE;
+    else if (random < trainerPicVariants.chanceUncommon)
+        id = PIC_VARIANT_UNCOMMON;
+    else
+        id = PIC_VARIANT_COMMON;
+
+    random = Random() % trainerPicVariants.rarityData[id].num;
+    gTrainerVariantId[gActiveBattler] = trainerPicVariants.rarityData[id].startId + random;
+}
+
+static u32 RandomizeTrainerPic(u32 trainerPicId)
+{
+    if (gTrainerVariantId[gActiveBattler] == 0)
+    {
+        switch (trainerPicId)
+        {
+        case TRAINER_PIC_FISHERMAN:
+            SelectTrainerPicVariant(sFishermanTrainerPicVariants);
+            break;
+        default:
+            break;
+        }
+    }
+    
+    return gTrainerVariantId[gActiveBattler];
+}
+
+u32 GetOpponentTrainerPicId(void)
 {
     u32 trainerPicId;
-    s16 xPos;
-
     if (gBattleTypeFlags & BATTLE_TYPE_SECRET_BASE)
     {
         trainerPicId = GetSecretBaseTrainerPicIndex();
@@ -1288,6 +1390,19 @@ static void OpponentHandleDrawTrainerPic(void)
     {
         trainerPicId = gTrainers[gTrainerBattleOpponent_A].trainerPic;
     }
+
+    if (TrainerPicHasVariants(trainerPicId))
+        trainerPicId = RandomizeTrainerPic(trainerPicId);
+    
+    return trainerPicId;
+}
+
+static void OpponentHandleDrawTrainerPic(void)
+{
+    u32 trainerPicId;
+    s16 xPos;
+
+    trainerPicId = GetOpponentTrainerPicId();
 
     if (gBattleTypeFlags & (BATTLE_TYPE_MULTI | BATTLE_TYPE_TWO_OPPONENTS) && !BATTLE_TWO_VS_ONE_OPPONENT)
     {
@@ -1321,57 +1436,7 @@ static void OpponentHandleTrainerSlide(void)
 {
     u32 trainerPicId;
 
-    if (gBattleTypeFlags & BATTLE_TYPE_SECRET_BASE)
-    {
-        trainerPicId = GetSecretBaseTrainerPicIndex();
-    }
-    else if (gTrainerBattleOpponent_A == TRAINER_FRONTIER_BRAIN)
-    {
-        trainerPicId = GetFrontierBrainTrainerPicIndex();
-    }
-    else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER_HILL)
-    {
-        if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
-        {
-            if (gActiveBattler == 1)
-                trainerPicId = GetTrainerHillTrainerFrontSpriteId(gTrainerBattleOpponent_A);
-            else
-                trainerPicId = GetTrainerHillTrainerFrontSpriteId(gTrainerBattleOpponent_B);
-        }
-        else
-        {
-            trainerPicId = GetTrainerHillTrainerFrontSpriteId(gTrainerBattleOpponent_A);
-        }
-    }
-    else if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
-    {
-        if (gBattleTypeFlags & (BATTLE_TYPE_TWO_OPPONENTS | BATTLE_TYPE_TOWER_LINK_MULTI))
-        {
-            if (gActiveBattler == 1)
-                trainerPicId = GetFrontierTrainerFrontSpriteId(gTrainerBattleOpponent_A);
-            else
-                trainerPicId = GetFrontierTrainerFrontSpriteId(gTrainerBattleOpponent_B);
-        }
-        else
-        {
-            trainerPicId = GetFrontierTrainerFrontSpriteId(gTrainerBattleOpponent_A);
-        }
-    }
-    else if (gBattleTypeFlags & BATTLE_TYPE_EREADER_TRAINER)
-    {
-        trainerPicId = GetEreaderTrainerFrontSpriteId();
-    }
-    else if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
-    {
-        if (gActiveBattler != 1)
-            trainerPicId = gTrainers[gTrainerBattleOpponent_B].trainerPic;
-        else
-            trainerPicId = gTrainers[gTrainerBattleOpponent_A].trainerPic;
-    }
-    else
-    {
-        trainerPicId = gTrainers[gTrainerBattleOpponent_A].trainerPic;
-    }
+    trainerPicId = GetOpponentTrainerPicId();
 
     DecompressTrainerFrontPic(trainerPicId, gActiveBattler);
     SetMultiuseSpriteTemplateToTrainerBack(trainerPicId, GetBattlerPosition(gActiveBattler));

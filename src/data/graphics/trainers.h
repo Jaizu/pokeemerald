@@ -163,7 +163,18 @@ const u32 gTrainerPalette_Youngster[] = INCBIN_U32("graphics/trainers/palettes/y
 const u32 gTrainerFrontPic_ChampionWallace[] = INCBIN_U32("graphics/trainers/front_pics/champion_wallace_front_pic.4bpp.lz");
 const u32 gTrainerPalette_ChampionWallace[] = INCBIN_U32("graphics/trainers/palettes/champion_wallace.gbapal.lz");
 
-const u32 gTrainerFrontPic_Fisherman[] = INCBIN_U32("graphics/trainers/front_pics/fisherman_front_pic.4bpp.lz");
+const u32 gTrainerFrontPic_Fisherman[] = INCBIN_U32("graphics/trainers/front_pics/variants/fisherman/net_ball.4bpp.lz");
+const u32 gTrainerFrontPic_FishermanMagikarp[] = INCBIN_U32("graphics/trainers/front_pics/variants/fisherman/magikarp.4bpp.lz");
+const u32 gTrainerFrontPic_FishermanGoldeen[] = INCBIN_U32("graphics/trainers/front_pics/variants/fisherman/goldeen.4bpp.lz");
+const u32 gTrainerFrontPic_FishermanRelicanth[] = INCBIN_U32("graphics/trainers/front_pics/variants/fisherman/relicanth.4bpp.lz");
+const u32 gTrainerFrontPic_FishermanHorsea[] = INCBIN_U32("graphics/trainers/front_pics/variants/fisherman/horsea.4bpp.lz");
+const u32 gTrainerFrontPic_FishermanCorphish[] = INCBIN_U32("graphics/trainers/front_pics/variants/fisherman/corphish.4bpp.lz");
+const u32 gTrainerFrontPic_FishermanDratini[] = INCBIN_U32("graphics/trainers/front_pics/variants/fisherman/dratini.4bpp.lz");
+const u32 gTrainerFrontPic_FishermanTrubbish[] = INCBIN_U32("graphics/trainers/front_pics/variants/fisherman/trubbish.4bpp.lz");
+const u32 gTrainerFrontPic_FishermanTire[] = INCBIN_U32("graphics/trainers/front_pics/variants/fisherman/tire.4bpp.lz");
+const u32 gTrainerFrontPic_FishermanShinyGoldeen[] = INCBIN_U32("graphics/trainers/front_pics/variants/fisherman/shiny_goldeen.4bpp.lz");
+const u32 gTrainerFrontPic_FishermanShinyRelicanth[] = INCBIN_U32("graphics/trainers/front_pics/variants/fisherman/shiny_relicanth.4bpp.lz");
+const u32 gTrainerFrontPic_FishermanShinyTrubbish[] = INCBIN_U32("graphics/trainers/front_pics/variants/fisherman/shiny_trubbish.4bpp.lz");
 const u32 gTrainerPalette_Fisherman[] = INCBIN_U32("graphics/trainers/palettes/fisherman.gbapal.lz");
 
 const u32 gTrainerFrontPic_CyclingTriathleteM[] = INCBIN_U32("graphics/trainers/front_pics/cycling_triathlete_m_front_pic.4bpp.lz");

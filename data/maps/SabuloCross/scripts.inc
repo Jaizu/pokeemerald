@@ -80,6 +80,9 @@ SabuloCross_Text_FelixRematchIntro:
 	.string "fishing spot, are you?$"
 
 SabuloCross_EventScript_Esteban::
+	lock
+	faceplayer
+	cleartrainerflag TRAINER_ESTEBAN_1
 	trainerbattle_single TRAINER_ESTEBAN_1, SabuloCross_Text_EstebanIntro, SabuloCross_Text_EstebanDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
