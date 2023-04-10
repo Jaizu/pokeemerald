@@ -219,6 +219,21 @@ OldaleTown_EventScript_NotBlockingPath::
 	release
 	end
 
+OldaleTown_EventScript_FootprintFriend::
+	msgbox OldaleTown_Text_FootprintsFriend, MSGBOX_NPC
+	end
+
+OldaleTown_EventScript_BugCatcherTest::
+	msgbox OldaleTown_Text_BugCatcherTest, MSGBOX_NPC
+	end
+OldaleTown_EventScript_YoungsterTest::
+	msgbox OldaleTown_Text_YoungsterTest, MSGBOX_NPC
+	end
+OldaleTown_Text_BugCatcherTest:
+	.string "You're now in Oldale!$"
+OldaleTown_Text_YoungsterTest:
+	.string "You're now on Route 103!$"
+
 OldaleTown_EventScript_Rival::
 	lockall
 	applymovement LOCALID_RIVAL, Common_Movement_FacePlayer
@@ -383,6 +398,10 @@ OldaleTown_Text_FinishedSketchingFootprints:
 	.string "I finished sketching the footprints of\n"
 	.string "a rare POKéMON.\p"
 	.string "But it turns out they were only my\n"
+	.string "friend's footprints…$"
+	
+OldaleTown_Text_FootprintsFriend:
+	.string "Sorry for blocking the road for my\n"
 	.string "own footprints…$"
 
 OldaleTown_Text_MayLetsGoBack:
