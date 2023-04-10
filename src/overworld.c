@@ -64,6 +64,7 @@
 #include "constants/map_types.h"
 #include "constants/region_map_sections.h"
 #include "constants/songs.h"
+#include "constants/event_objects.h"
 #include "constants/trainer_hill.h"
 #include "constants/weather.h"
 
@@ -471,13 +472,108 @@ void ApplyNewEncryptionKeyToGameStats(u32 newKey)
 
 void LoadObjEventTemplatesFromHeader(void)
 {
+    int i, c, n = 0;
+    
     // Clear map object templates
     CpuFill32(0, gSaveBlock1Ptr->objectEventTemplates, sizeof(gSaveBlock1Ptr->objectEventTemplates));
 
-    // Copy map header events to save block
-    CpuCopy32(gMapHeader.events->objectEvents,
-              gSaveBlock1Ptr->objectEventTemplates,
-              gMapHeader.events->objectEventCount * sizeof(struct ObjectEventTemplate));
+    // Copy map header events to save block, counting how many there are
+    for (i = 0; i < gMapHeader.events->objectEventCount && n < OBJECT_EVENT_TEMPLATES_COUNT; i++) {
+        gSaveBlock1Ptr->objectEventTemplates[n] = gMapHeader.events->objectEvents[i];
+        n++;
+    }
+    
+    // Check to see if there's any map connections
+    if (gMapHeader.connections) {
+        int count = gMapHeader.connections->count;
+        const struct MapConnection* connection;
+        struct MapHeader const* map;
+        
+        // For every map connection
+        for (c = 0; c < count; c++) {
+            connection = &gMapHeader.connections->connections[c];
+            // If we've exceeded the size of the template array, do no more.
+            if (n >= OBJECT_EVENT_TEMPLATES_COUNT) break; 
+            // Only check connections that can be seen in the overworld (eg, not dive or emerge)
+            switch (connection->direction) {
+                case CONNECTION_NORTH:
+                case CONNECTION_SOUTH:
+                case CONNECTION_WEST:
+                case CONNECTION_EAST: break;
+                default: continue;
+            }
+            // Get the map connection
+            map = GetMapHeaderFromConnection(connection);
+            if (!map || !map->events) continue;
+            // Loop through that map's objects and add them to the template list as well
+            for (i = 0; i < map->events->objectEventCount && n < OBJECT_EVENT_TEMPLATES_COUNT; i++) 
+            {
+                const struct ObjectEventTemplate* from = &map->events->objectEvents[i];
+#if MODERN
+                struct ObjectEventTemplate* to = &gSaveBlock1Ptr->objectEventTemplates[n];
+                #define clone to
+#else
+                // This dance with two objects of different types is only needed because agbcc doesn't like anonymous structs
+                struct ObjectEventTemplate_Clone* clone = (struct ObjectEventTemplate_Clone*)&gSaveBlock1Ptr->objectEventTemplates[n];
+                struct ObjectEventTemplate* to = &gSaveBlock1Ptr->objectEventTemplates[n];
+#endif
+                
+                // Skip if too far away from the edge
+                switch (connection->direction) {
+                    case CONNECTION_NORTH: // above
+                        if (from->y < (s32) map->mapLayout->height - MAP_OFFSET) continue;
+                        if (from->x < (s32) -connection->offset - MAP_OFFSET) continue;
+                        if (from->x > (s32) -connection->offset + map->mapLayout->width + MAP_OFFSET) continue;
+                        break;
+                    case CONNECTION_SOUTH: // below
+                        if (from->y > (s32) MAP_OFFSET + 2) continue;
+                        if (from->x < (s32) -connection->offset - MAP_OFFSET) continue;
+                        if (from->x > (s32) -connection->offset + map->mapLayout->width + MAP_OFFSET) continue;
+                        break;
+                    case CONNECTION_WEST: // left
+                        if (from->x < (s32) map->mapLayout->width - MAP_OFFSET - 2) continue;
+                        if (from->y < (s32) -connection->offset - MAP_OFFSET) continue;
+                        if (from->y > (s32) -connection->offset + map->mapLayout->height + MAP_OFFSET) continue;
+                        break;
+                    case CONNECTION_EAST: // right
+                        if (from->x > (s32) MAP_OFFSET + 2) continue;
+                        if (from->y < (s32) -connection->offset - MAP_OFFSET) continue;
+                        if (from->y > (s32) -connection->offset + map->mapLayout->height + MAP_OFFSET) continue;
+                        break;
+                }
+                // If we get here, we're going to add the object to our list
+                *to = *from;
+                to->kind = OBJ_KIND_CLONE;
+                to->localId = n+1;
+                clone->targetLocalId = from->localId;
+                clone->targetMapNum = connection->mapNum;
+                clone->targetMapGroup = connection->mapGroup;
+                switch (connection->direction) {
+                    case CONNECTION_NORTH: // above
+                        to->y -= map->mapLayout->height;
+                        to->x += connection->offset;
+                        break;
+                    case CONNECTION_SOUTH: // below
+                        to->y += gMapHeader.mapLayout->height;
+                        to->x += connection->offset;
+                        break;
+                    case CONNECTION_WEST: // left
+                        to->y += connection->offset;
+                        to->x -= map->mapLayout->width;
+                        break;
+                    case CONNECTION_EAST: // right
+                        to->y += connection->offset;
+                        to->x += gMapHeader.mapLayout->width;
+                        break;
+                }
+                // DebugPrintfLevel(MGBA_LOG_INFO, "Loading clone[n=%d]: lid=%d, target=%d mapid=%d:%d @ (%d, %d)", 
+                //     n, to->localId, clone->targetLocalId, clone->targetMapGroup, clone->targetMapNum, to->x, to->y);
+                n++;
+            }
+        }
+    }
+    gMapHeader.objectEventCount = n;
+    #undef clone
 }
 
 void LoadSaveblockObjEventScripts(void)

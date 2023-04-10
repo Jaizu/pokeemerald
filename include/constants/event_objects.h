@@ -289,7 +289,7 @@
 #define FIRST_DECORATION_SPRITE_GFX OBJ_EVENT_GFX_PICHU_DOLL
 
 #define OBJ_KIND_NORMAL 0
-#define OBJ_KIND_CLONE  255 // Exclusive to FRLG
+#define OBJ_KIND_CLONE  1
 
 // Special object event local ids
 #define OBJ_EVENT_ID_PLAYER 0xFF
