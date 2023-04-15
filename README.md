@@ -1,31 +1,27 @@
 # Pokémon Emerald
 
-This is a decompilation of Pokémon Emerald.
+### Feature Branch: Dynamic In-Connection Clones
 
-It builds the following ROM:
+This feature branch implements a system to dynamically create in-connection clones from connecting maps. 
 
-* [**pokeemerald.gba**](https://datomatic.no-intro.org/index.php?page=show_record&s=23&n=1961) `sha1: f3ae088181bf583e55daf962a92bb46f4f1d07b7`
+It started with the system similar to what FireRed has, but instead of requiring the creator to manually place these clones in PoryMap, these clones are dynamically created by scanning the map connections for objects within the view distance of the current map. If it finds any such objects, it creates FireRed style clones dynamically, appending them to the end of the EventObjectTemplate array.
 
-To set up the repository, see [INSTALL.md](INSTALL.md).
+Features:
+- The ability to see objects from a connecting map, removing the limitation of object-free buffer-space being required between connecting maps.
 
+Notes:
+- The EventObjectTemplate array has not been expanded, meaning if you are close to the default limit of 64 EventObjectTemplates, the game will not have room to fill out objects dynamically.
+	- The work around for this is to just split larger maps with more object templates into smaller sections, since now moving between maps doesn't require object free buffer zones.
+- The default compiler, agbcc, does not support anonymous structs and unions like modern compilers do. As such, a different implementation involving dynamic casting is used for agbcc, so as not have to change literally all the code in the codebase. 
+	- As such, if you've made any changes to the object event template struct, you will need to mirror these changes in the clone struct. Or just use a modern compiler, which is the preferrable option imo.
 
-## See also
+-----
 
-Other disassembly and/or decompilation projects:
-* [**Pokémon Red and Blue**](https://github.com/pret/pokered)
-* [**Pokémon Gold and Silver (Space World '97 demo)**](https://github.com/pret/pokegold-spaceworld)
-* [**Pokémon Yellow**](https://github.com/pret/pokeyellow)
-* [**Pokémon Trading Card Game**](https://github.com/pret/poketcg)
-* [**Pokémon Pinball**](https://github.com/pret/pokepinball)
-* [**Pokémon Stadium**](https://github.com/pret/pokestadium)
-* [**Pokémon Gold and Silver**](https://github.com/pret/pokegold)
-* [**Pokémon Crystal**](https://github.com/pret/pokecrystal)
-* [**Pokémon Ruby and Sapphire**](https://github.com/pret/pokeruby)
-* [**Pokémon Pinball: Ruby & Sapphire**](https://github.com/pret/pokepinballrs)
-* [**Pokémon FireRed and LeafGreen**](https://github.com/pret/pokefirered)
-* [**Pokémon Mystery Dungeon: Red Rescue Team**](https://github.com/pret/pmd-red)
+To use this feature branch, [click here](https://github.com/tustin2121/pokeemerald/tree/pick-feature/dynamic-clones), then click on the latest commit and manually recreate the changes in your project.
 
+Alternatively, run the following commands to cherry-pick the commit into your repo:
 
-## Contacts
-
-You can find us on [Discord](https://discord.gg/d5dubZ3) and [IRC](https://web.libera.chat/?#pret).
+```shell
+git fetch https://github.com/tustin2121/pokeemerald.git pick-feature/dynamic-clones --no-tags
+git cherry-pick FETCH_HEAD
+```
