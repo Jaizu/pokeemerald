@@ -30,12 +30,10 @@ script BattleFrontier_BattleTowerMultiCorridor_EventScript_SetObjGfx{
     }else{
         setvar(VAR_OBJ_GFX_ID_F, OBJ_EVENT_GFX_BRENDAN_NORMAL)
     }
-	return
 }
 
 script BattleFrontier_BattleTowerMultiCorridor_EventScript_SetLinkPlayerGfx{
 	special(SetBattleTowerLinkPlayerGfx)
-	return
 }
 
 script BattleFrontier_BattleTowerMultiCorridor_EventScript_SetUpObjects{
@@ -50,7 +48,6 @@ script BattleFrontier_BattleTowerMultiCorridor_EventScript_SetDoorCoordinates{
 	setflag(FLAG_ENABLE_MULTI_CORRIDOR_DOOR)
 	setvar(VAR_0x8004, 14) // x coord of far door, used by DrawDoor
 	setvar(VAR_0x8005, 1) // y coord of far door, used by DrawDoor
-    return
 }
 
 script BattleFrontier_BattleTowerMultiCorridor_EventScript_EnterCorridor{
@@ -103,49 +100,41 @@ script BattleFrontier_BattleTowerMultiCorridor_EventScript_WarpToBattleRoom{
             warp(MAP_BATTLE_FRONTIER_BATTLE_TOWER_MULTI_BATTLE_ROOM, 4, 5)
     }
     waitstate
-	return
 }
 
 movement BattleFrontier_BattleTowerMultiCorridor_Movement_PlayerWalkToDoor{
 	walk_down
 	walk_right * 6
-	step_end
 }
 
 movement BattleFrontier_BattleTowerMultiCorridor_Movement_PartnerWalkToDoor{
 	walk_down
 	walk_left * 6
-	step_end
 }
 
 movement BattleFrontier_BattleTowerMultiCorridor_Movement_PlayerAttendantWalkToDoor{
 	walk_right * 6
 	walk_up
 	walk_in_place_faster_right
-	step_end
 }
 
 movement BattleFrontier_BattleTowerMultiCorridor_Movement_PartnerAttendantWalkToDoor{
 	walk_left * 6
 	walk_up
 	walk_in_place_faster_left
-	step_end
 }
 
 movement BattleFrontier_BattleTowerMultiCorridor_Movement_TrainerEnterDoor{
 	delay_16
 	walk_up * 2
 	set_invisible
-	step_end
 }
 
 movement BattleFrontier_BattleTowerMultiCorridor_Movement_AttendantEnterDoor{
 	walk_up
 	set_invisible
-	step_end
 }
 
 movement BattleFrontier_BattleTowerMultiCorridor_Movement_ExitElevator{
 	walk_down
-	step_end
 }

@@ -44,26 +44,22 @@ movement BattleFrontier_BattleTowerCorridor_Movement_PlayerWalkToFarDoor{
 	walk_right * 7
 	walk_up
 	set_invisible
-	step_end
 }
 
 movement BattleFrontier_BattleTowerCorridor_Movement_AttendantWalkToFarDoor{
 	walk_right * 6
 	walk_up
 	set_invisible
-	step_end
 }
 
 movement BattleFrontier_BattleTowerCorridor_Movement_PlayerWalkToDoor{
 	walk_right * 4
 	walk_up
 	set_invisible
-	step_end
 }
 
 movement BattleFrontier_BattleTowerCorridor_Movement_AttendantWalkToDoor{
 	walk_right * 3
 	walk_up
 	set_invisible
-	step_end
 }

@@ -213,12 +213,10 @@ script BattleFrontier_BattleTowerBattleRoom_EventScript_ReadyForOpponent{
     message(BattleFrontier_BattleTowerBattleRoom_Text_ReadyForXOpponent)
     waitmessage
 
-    return
 }
 
 script BattleFrontier_EventScript_IncrementWinStreak{
     frontier_incrementstreak
-    return
 }
 
 script BattleFrontier_BattleTowerBattleRoom_EventScript_SecondAttendantEnter{
@@ -240,7 +238,6 @@ script BattleFrontier_BattleTowerBattleRoom_EventScript_SecondAttendantEnter{
     applymovement(ATTENDANT_2, BattleFrontier_BattleTowerBattleRoom_Movement_SecondAttendantExit)
     waitmovement(0)
 
-    return
 }
 
 script BattleFrontier_BattleTowerBattleRoom_EventScript_MaidenUpNext{
@@ -312,7 +309,6 @@ script BattleFrontier_BattleTowerBattleRoom_EventScript_DetermineIntroType{
         case FRONTIER_BRAIN_STREAK:
         case FRONTIER_BRAIN_STREAK_LONG: addvar(VAR_SYMBOL_SPEECH_STATUS,200)
     }
-    return
 }
 
 script BattleFrontier_BattleTowerBattleRoom_EventScript_AnabelIntro{
@@ -368,7 +364,6 @@ script BattleFrontier_BattleTowerBattleRoom_EventScript_DoTowerBattle{
 
     tower_setinterviewdata
     frontier_get(FRONTIER_DATA_BATTLE_OUTCOME)
-    return
 }
 
 script BattleFrontier_BattleTowerBattleRoom_EventScript_DefeatedAnabel{
@@ -399,7 +394,6 @@ script BattleFrontier_BattleTower_EventScript_AnabelCongratsText{
     if(var(VAR_RESULT) == HAS_SILVER_SYMBOL){
         msgbox(BattleFrontier_BattleTowerBattleRoom_Text_AnabelCongratsYourPassPlease, MSGBOX_DEFAULT)
     }
-    return
 }
 
 script BattleFrontier_BattleTower_EventScript_FrontierPassText{
@@ -409,7 +403,6 @@ if(var(VAR_RESULT) == HAS_NO_SYMBOLS){
     if(var(VAR_RESULT) == HAS_SILVER_SYMBOL){
         message(BattleFrontier_BattleTowerBattleRoom_Text_AbilitySymbolTookGoldenShine)
     }
-return
 }
 
 script BattleFrontier_BattleTower_EventScript_AnabelConclusionText{
@@ -419,52 +412,43 @@ script BattleFrontier_BattleTower_EventScript_AnabelConclusionText{
     if(var(VAR_RESULT) == HAS_SILVER_SYMBOL){
         msgbox(BattleFrontier_BattleTowerBattleRoom_Text_WishICouldBattleYouAgain, MSGBOX_DEFAULT)
     }
-    return
 }
 
 movement BattleFrontier_BattleTowerBattleRoom_Movement_PlayerEnter{
     walk_up * 3
         face_right
-        step_end
 }
 
 movement BattleFrontier_BattleTowerBattleRoom_Movement_PlayerFaceAttendant{
     face_down
-        step_end
 }
 
 movement BattleFrontier_BattleTowerBattleRoom_Movement_PlayerFaceBattle{
     face_right
-        step_end
 }
 
 movement BattleFrontier_BattleTowerBattleRoom_Movement_OpponentEnter{
     walk_down * 4
         face_left
-        step_end
 }
 
 movement BattleFrontier_BattleTowerBattleRoom_Movement_OpponentExit{
     walk_up * 4
-        step_end
 }
 
 movement BattleFrontier_BattleTowerBattleRoom_Movement_AttendantApproachPlayer{
     walk_right * 3
         walk_up
-        step_end
 }
 
 movement BattleFrontier_BattleTowerBattleRoom_Movement_AttendantReturnToPos{
     walk_down
         walk_left * 3
         face_right
-        step_end
 }
 
 movement BattleFrontier_BattleTowerBattleRoom_Movement_SetInvisible{
     set_invisible
-        step_end
 }
 
 movement BattleFrontier_BattleTowerBattleRoom_Movement_SecondAttendantEnter{
@@ -473,32 +457,27 @@ movement BattleFrontier_BattleTowerBattleRoom_Movement_SecondAttendantEnter{
         walk_up
         walk_left * 2
         delay_8
-        step_end
 }
 
 movement BattleFrontier_BattleTowerBattleRoom_Movement_SecondAttendantExit{
     walk_right * 2
         walk_down
         set_invisible
-        step_end
 }
 
 movement BattleFrontier_BattleTowerBattleRoom_Movement_SecondAttendantDelay{
     delay_16 * 4
-        step_end
 }
 
 movement BattleFrontier_BattleTowerBattleRoom_Movement_AttendantFaceSecondAttendant{
     face_right
         delay_16 * 4
         walk_in_place_right
-        step_end
 }
 
 movement BattleFrontier_BattleTowerBattleRoom_Movement_AnabelEnter{
     walk_slow_down * 4
         face_left
-        step_end
 }
 
 script BattleFrontier_BattleTowerBattleRoom_EventScript_WarpToLobby{
@@ -526,71 +505,70 @@ script BattleFrontier_BattleTowerBattleRoom_EventScript_RetireChallenge{
 
 script BattleFrontier_EventScript_SetBrainObjectGfx{
     frontier_setbrainobj
-    return
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_RestoreMonsToFullHealth{
-	"We will restore your POKéMON to\nfull health."
+	"We will restore your POKéMON to\Nfull health."
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_ReadyForXOpponent{
-    "You will be facing opponent no. {STR_VAR_3}.\nAre you ready?"
+    "You will be facing opponent no. {STR_VAR_3}.\NAre you ready?"
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_RecordYourBattle{
-    "Record your battle on your\nFRONTIER PASS?"
+    "Record your battle on your\NFRONTIER PASS?"
 }
 
 text BattleFrontier_BattleTowerLobby_Text_BattleRecordedOnPass{
-    "{PLAYER}'s battle was recorded\non the FRONTIER PASS."
+    "{PLAYER}'s battle was recorded\Non the FRONTIER PASS."
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_SaveAndQuitGame{
-    "Would you like to save and\nquit the game?"
+    "Would you like to save and\Nquit the game?"
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_SavingPleaseWait{
-    "Saving your battle data.\nPlease wait."
+    "Saving your battle data.\NPlease wait."
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_CancelYourChallenge{
-    "Would you like to cancel your BATTLE\nROOM challenge?"
+    "Would you like to cancel your BATTLE\NROOM challenge?"
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_RecordCouldntBeSaved{
-    "There was an error of some sort.\nYour record could not be saved."
+    "There was an error of some sort.\NYour record could not be saved."
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_SalonMaidenOnHerWay{
-    "Excuse me, but…\pOur leader, the SALON MAIDEN, is on\nher way here in hopes of battling you.\pShe should be arriving very shortly."
+    "Excuse me, but…\pOur leader, the SALON MAIDEN, is on\Nher way here in hopes of battling you.\pShe should be arriving very shortly."
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_ReadyForSalonMaiden{
-    "You will be facing the SALON MAIDEN.\nAre you prepared?"
+    "You will be facing the SALON MAIDEN.\NAre you prepared?"
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_GreetingsImAnabel{
-    "Greetings…\nMy name is ANABEL.\pI am the SALON MAIDEN, and I am in\ncharge of running the BATTLE TOWER…\pI have heard several rumors\nabout you…\pIn all honesty, what I have heard does\nnot seem attractive in any way…\pThe reason I've come to see you…\nWell, there is but one reason…"
+    "Greetings…\NMy name is ANABEL.\pI am the SALON MAIDEN, and I am in\Ncharge of running the BATTLE TOWER…\pI have heard several rumors\Nabout you…\pIn all honesty, what I have heard does\Nnot seem attractive in any way…\pThe reason I've come to see you…\NWell, there is but one reason…"
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_LetMeSeeYourTalent{
-    "Let me see your talent in\nits entirety…"
+    "Let me see your talent in\Nits entirety…"
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_AnabelTalentShallBeRecognized{
-    "ANABEL: Fufufu, nicely done…\pYour FRONTIER PASS, please…\nYour talent shall be recognized."
+    "ANABEL: Fufufu, nicely done…\pYour FRONTIER PASS, please…\NYour talent shall be recognized."
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_ReceivedAbilitySymbol{
-    "The Ability Symbol was embossed on\nthe FRONTIER PASS!"
+    "The Ability Symbol was embossed on\Nthe FRONTIER PASS!"
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_UntilNextTime{
-    "… … … … … …\pYou have confidence in your POKéMON\nbattling talent, don't you?\pI urge you to keep battling and\nkeep on winning.\pI will be waiting for you.\nUntil the next time we meet…"
+    "… … … … … …\pYou have confidence in your POKéMON\Nbattling talent, don't you?\pI urge you to keep battling and\Nkeep on winning.\pI will be waiting for you.\NUntil the next time we meet…"
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_AnabelYouCameBack{
-    "ANABEL: You really did come back to\nsee me…\p… … … … … …\pYou've won straight matches to see me…\nI won't have to hold back against you…\pIt's been too long now…\pToo long since I've been able to battle\nwithout thinking about anything…"
+    "ANABEL: You really did come back to\Nsee me…\p… … … … … …\pYou've won straight matches to see me…\NI won't have to hold back against you…\pIt's been too long now…\pToo long since I've been able to battle\Nwithout thinking about anything…"
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_LetsBeginShallWe{
@@ -598,13 +576,13 @@ text BattleFrontier_BattleTowerBattleRoom_Text_LetsBeginShallWe{
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_AnabelCongratsYourPassPlease{
-    "ANABEL: Fufu, congratulations…\nYour FRONTIER PASS, please…"
+    "ANABEL: Fufu, congratulations…\NYour FRONTIER PASS, please…"
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_AbilitySymbolTookGoldenShine{
-    "The Ability Symbol took on\na golden shine!"
+    "The Ability Symbol took on\Na golden shine!"
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_WishICouldBattleYouAgain{
-    "That was fun…\pI have never had a POKéMON battle\nso enjoyable before…\pI wish I could battle with you again…"
+    "That was fun…\pI have never had a POKéMON battle\Nso enjoyable before…\pI wish I could battle with you again…"
 }

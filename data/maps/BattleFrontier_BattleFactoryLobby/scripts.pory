@@ -78,7 +78,7 @@ mapscripts BattleFrontier_BattleFactoryLobby_MapScripts {
 			lockall
 			message(format("Thank you for participating!\p"
 							"I will return your Pokémon in exchange for our rental Pokémon.\p"
-							"I must also save the event results.\n"
+							"I must also save the event results.\N"
 							"Please wait."))
 			waitmessage
 			frontier_checkairshow
@@ -149,7 +149,7 @@ script BattleFrontier_BattleFactoryLobby_EventScript_Attendant {
 	special(SavePlayerParty)
 	if(var(VAR_FRONTIER_BATTLE_MODE) == FRONTIER_MODE_SINGLES)
 	{
-		msgbox(format("Where the intelligence of Trainers\n"
+		msgbox(format("Where the intelligence of Trainers\N"
 					"is put to the test!\p"
 					"Welcome to the Battle Factory!\p"
 					"I am your guide to the Battle Swap Single Tournament."), MSGBOX_DEFAULT)
@@ -188,7 +188,7 @@ script BattleFrontier_BattleFactoryLobby_EventScript_AskTakeChallenge {
 					call(BattleFrontier_BattleFactoryLobby_EventScript_CancelChallenge)
 			}
 			frontier_set(FRONTIER_DATA_LVL_MODE, VAR_RESULT)
-			msgbox(format("Before you begin your challenge,\n"
+			msgbox(format("Before you begin your challenge,\N"
 							"I need to save the game. Is that okay?"), MSGBOX_YESNO)
 			switch(var(VAR_RESULT))
 			{
@@ -289,7 +289,7 @@ script BattleFrontier_BattleFactoryLobby_EventScript_ShowDoublesResults {
 }
 
 script BattleFrontier_BattleFactoryLobby_EventScript_Woman {
-	msgbox(format("Hi!\n"
+	msgbox(format("Hi!\N"
 			"You, there!\p"
 			"Are you thinking that the events here are easy since you don't need to have a raised team of Pokémon?\p"
 			"I wouldn't be too sure about winning that easily.\p"
