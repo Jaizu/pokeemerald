@@ -406,6 +406,14 @@ Becomes:
 .string "Amazing!\p"
 .string "So glad to meet you!$"
 ```
+
+Additionally, `format()` supports a special line break `\N`, which will automatically insert the appropriate `\n` or `\l` line break. While this is an uncommon use case, it's useful in situations where a line break is desired for dramatic/stylistic purposes. In the following example, we want explicit line breaks for the `"..."` texts, but we don't know if the first one should use `\n` or `\l`. Using `\N` makes it easy:
+```
+text MyText {
+    format("You are my favorite trainer!\N...\N...\N...\NBut I'm better!")
+}
+```
+
 The font id can optionally be specified as the second parameter to `format()`.
 ```
 text MyText {
@@ -420,6 +428,8 @@ Becomes:
 .string "So glad to meet you!$"
 ```
 The font configuration JSON file informs Poryscript how many pixels wide each character in the message is, as well as setting a default maximum line length. Fonts have different character widths, and games have different text box sizes. For convenience, Poryscript comes with `font_config.json`, which contains the configuration for pokeemerald's `1_latin` font as `1_latin_rse`, as well as pokefirered's equivalent as `1_latin_frlg`. More fonts can be added to this file by simply creating anothing font id node under the `fonts` key in `font_config.json`.
+
+`cursorOverlapWidth` can be used to ensure there is always enough room for the cursor icon to be displayed in the text box. (This "cursor icon" is the small icon that's shown when the player needs to press A to advance the text box.)
 
 The length of a line can optionally be specified as the third parameter to `format()` if a font id was specified as the second parameter.
 
