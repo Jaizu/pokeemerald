@@ -508,81 +508,83 @@ script BattleFrontier_EventScript_SetBrainObjectGfx{
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_RestoreMonsToFullHealth{
-	"We will restore your POKéMON to\Nfull health."
+	format("We will restore your POKéMON to\Nfull health.")
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_ReadyForXOpponent{
-    "You will be facing opponent no. {STR_VAR_3}.\NAre you ready?"
+    format("You will be facing opponent no. {STR_VAR_3}.\NAre you ready?")
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_RecordYourBattle{
-    "Record your battle on your\NFRONTIER PASS?"
+    format("Record your battle on your\NFRONTIER PASS?")
 }
 
 text BattleFrontier_BattleTowerLobby_Text_BattleRecordedOnPass{
-    "{PLAYER}'s battle was recorded\Non the FRONTIER PASS."
+    format("{PLAYER}'s battle was recorded\Non the FRONTIER PASS.")
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_SaveAndQuitGame{
-    "Would you like to save and\Nquit the game?"
+    format("Would you like to save and\Nquit the game?")
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_SavingPleaseWait{
-    "Saving your battle data.\NPlease wait."
+    format("Saving your battle data.\NPlease wait.")
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_CancelYourChallenge{
-    "Would you like to cancel your BATTLE\NROOM challenge?"
+    format("Would you like to cancel your BATTLE\NROOM challenge?")
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_RecordCouldntBeSaved{
-    "There was an error of some sort.\NYour record could not be saved."
+    format("There was an error of some sort.\NYour record could not be saved.")
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_SalonMaidenOnHerWay{
-    "Excuse me, but…\pOur leader, the SALON MAIDEN, is on\Nher way here in hopes of battling you.\pShe should be arriving very shortly."
+    format("Excuse me, but…\pOur leader, the SALON MAIDEN, is on\Nher way here in hopes of battling you.\pShe should be arriving very shortly.")
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_ReadyForSalonMaiden{
-    "You will be facing the SALON MAIDEN.\NAre you prepared?"
+    format("You will be facing the SALON MAIDEN.\NAre you prepared?")
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_GreetingsImAnabel{
-    "Greetings…\NMy name is ANABEL.\pI am the SALON MAIDEN, and I am in\Ncharge of running the BATTLE TOWER…\pI have heard several rumors\Nabout you…\pIn all honesty, what I have heard does\Nnot seem attractive in any way…\pThe reason I've come to see you…\NWell, there is but one reason…"
+    format("Greetings…\NMy name is ANABEL.\pI am the SALON MAIDEN, and I am in\Ncharge of running the BATTLE TOWER…\pI have heard several rumors\Nabout you…\pIn all honesty, what I have heard does\Nnot seem attractive in any way…\pThe reason I've come to see you…\NWell, there is but one reason…")
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_LetMeSeeYourTalent{
-    "Let me see your talent in\Nits entirety…"
+    format("Let me see your talent in\Nits entirety…")
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_AnabelTalentShallBeRecognized{
-    "ANABEL: Fufufu, nicely done…\pYour FRONTIER PASS, please…\NYour talent shall be recognized."
+    format("ANABEL: Fufufu, nicely done…\pYour FRONTIER PASS, please…\NYour talent shall be recognized.")
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_ReceivedAbilitySymbol{
-    "The Ability Symbol was embossed on\Nthe FRONTIER PASS!"
+    format("The Ability Symbol was embossed on\Nthe FRONTIER PASS!")
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_UntilNextTime{
-    "… … … … … …\pYou have confidence in your POKéMON\Nbattling talent, don't you?\pI urge you to keep battling and\Nkeep on winning.\pI will be waiting for you.\NUntil the next time we meet…"
+    format("… … … … … …\pYou have confidence in your POKéMON\Nbattling talent, don't you?\pI urge you to keep battling and\Nkeep on winning.\pI will be waiting for you.\NUntil the next time we meet…")
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_AnabelYouCameBack{
-    "ANABEL: You really did come back to\Nsee me…\p… … … … … …\pYou've won straight matches to see me…\NI won't have to hold back against you…\pIt's been too long now…\pToo long since I've been able to battle\Nwithout thinking about anything…"
+    format("ANABEL: You really did come back to\Nsee me…\p… … … … … …\pYou've won straight matches to see me…\NI won't have to hold back against you…\pIt's been too long now…\pToo long since I've been able to battle\Nwithout thinking about anything…")
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_LetsBeginShallWe{
-    "Let's begin, shall we?"
+    format("Let's begin, shall we?")
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_AnabelCongratsYourPassPlease{
-    "ANABEL: Fufu, congratulations…\NYour FRONTIER PASS, please…"
+    format("ANABEL: Fufu, congratulations…\NYour FRONTIER PASS, please…")
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_AbilitySymbolTookGoldenShine{
-    "The Ability Symbol took on\Na golden shine!"
+    format("The Ability Symbol took on\Na golden shine!")
 }
 
 text BattleFrontier_BattleTowerBattleRoom_Text_WishICouldBattleYouAgain{
-    "That was fun…\pI have never had a POKéMON battle\Nso enjoyable before…\pI wish I could battle with you again…"
+    format("That was fun…\p"
+            "I have never had a POKéMON battle so enjoyable before…\p"
+            "I wish I could battle with you again…")
 }

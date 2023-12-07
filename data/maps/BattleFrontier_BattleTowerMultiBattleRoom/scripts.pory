@@ -415,13 +415,14 @@ movement BattleFrontier_BattleTowerMultiBattleRoom_Movement_WalkInPlaceLeft{
 }
 
 text BattleFrontier_BattleTowerMultiBattleRoom_Text_ReadyForXOpponent{
-    "You will be facing opponent no. {STR_VAR_3}.\NAre you ready?"
+    format("You will be facing opponent no. {STR_VAR_3}.\NAre you ready?")
 }
 
 text gText_LinkStandby3{
-    "Link standby…"
+    format("Link standby…")
 }
 
 text gText_YourPartnerHasRetired{
-    "Your partner has retired.\pYour BATTLE ROOM challenge\Nwill be canceled."
+    format("Your partner has retired.\p"
+            "Your BATTLE ROOM challenge will be canceled.")
 }
