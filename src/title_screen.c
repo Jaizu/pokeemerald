@@ -400,7 +400,7 @@ static const struct CompressedSpriteSheet sTitleScreenDeoxysFormsSpriteSheet[] =
 
 static const struct CompressedSpritePalette sTitleScreenDeoxysSpritePalette =
 {
-    
+
     .data = sTitleScreenDeoxysPal,
     .tag = 1003,
 };
@@ -676,6 +676,7 @@ static void SpriteCB_TitleScreenDeoxys(struct Sprite *sprite)
     u16 backgroundState = gTasks[sScrollTaskId].data[9];
     u8 mosaicHorizontal;
     u8 mosaicVertical;
+    u16 newForm;
 
     switch (task->tDeoxysState)
     {
@@ -691,7 +692,7 @@ static void SpriteCB_TitleScreenDeoxys(struct Sprite *sprite)
             break;
         case 2:
             if (backgroundState != 3)
-            {   
+            {
                 if (task->tDeoxysTimer != 0)
                 {
                     task->tDeoxysTimer--;
@@ -714,8 +715,6 @@ static void SpriteCB_TitleScreenDeoxys(struct Sprite *sprite)
             }
             break;
         case 4:
-            u16 newForm;
-
             do
             {
                 newForm = Random() % 4;
@@ -763,6 +762,7 @@ static void Task_Titlescreen_AnimateSky(u8 taskId)
     struct Task *task = &gTasks[gSprites[sDeoxysSpriteId].data[0]];
     s16 *data = gTasks[taskId].data;
     u16 offset;
+    u16 newTarget;
 
     data[0] += sCloudScrollSpeeds[task->tDeoxysForm][0];
     data[1] += sCloudScrollSpeeds[task->tDeoxysForm][1];
@@ -802,8 +802,6 @@ static void Task_Titlescreen_AnimateSky(u8 taskId)
             }
             break;
         case 2:
-            u16 newTarget;
-
             do
             {
                 newTarget = Q_8_8(Random() % BACKGROUND_DELTA_MAX + 1);
@@ -1119,13 +1117,13 @@ static void Task_ContinuePressA(u8 taskId)
     if (task->tRedraw)
     {
         FillWindowPixelBuffer(WIN_MAIN, PIXEL_FILL(0));
-        
+
         if (task->tVisible)
         {
             left = GetStringCenterAlignXOffset(FONT_SMALL, sTitleScreenPressA, 160);
             AddTextPrinterParameterized3(WIN_MAIN, FONT_SMALL, left, 7, sTitleScreenTextColor, 0, sTitleScreenPressA);
         }
-        
+
         CopyWindowToVram(WIN_MAIN, COPYWIN_GFX);
         task->tRedraw = FALSE;
     }
