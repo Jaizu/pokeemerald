@@ -498,7 +498,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_RubySapphireBrendan,   OBJ_EVENT_PAL_TAG_RS_BRENDAN},
     {gObjectEventPal_RubySapphireMay,       OBJ_EVENT_PAL_TAG_RS_MAY},
 #ifdef BUGFIX
-    {NULL,                                  OBJ_EVENT_PAL_TAG_NONE}, 
+    {NULL,                                  OBJ_EVENT_PAL_TAG_NONE},
 #else
     {}, // BUG: FindObjectEventPaletteIndexByTag looks for OBJ_EVENT_PAL_TAG_NONE and not 0x0.
         // If it's looking for a tag that isn't in this table, the game locks in an infinite loop.
@@ -1277,7 +1277,7 @@ static u8 InitObjectEventStateFromTemplate(const struct ObjectEventTemplate *tem
 #endif
     u8 objectEventId;
     s16 x, y;
-    
+
     if (template->kind == OBJ_KIND_CLONE) {
         const struct MapHeader *mapHeader;
         mapGroup = cloneTemplate->targetMapGroup;
@@ -1290,10 +1290,10 @@ static u8 InitObjectEventStateFromTemplate(const struct ObjectEventTemplate *tem
         return OBJECT_EVENTS_COUNT;
     objectEvent = &gObjectEvents[objectEventId];
     ClearObjectEvent(objectEvent);
-    
+
     x = cloneTemplate->x + MAP_OFFSET;
     y = cloneTemplate->y + MAP_OFFSET;
-    
+
     objectEvent->active = TRUE;
     objectEvent->triggerGroundEffectsOnMove = TRUE;
     objectEvent->graphicsId = template->graphicsId;
@@ -1340,7 +1340,7 @@ u8 Unref_TryInitLocalObjectEvent(u8 localId)
         else if (InTrainerHill())
             objectEventCount = 2;
         else
-            objectEventCount = gMapHeader.objectEventCount;
+            objectEventCount = gSaveBlock1Ptr->objectEventCount;
 
         for (i = 0; i < objectEventCount; i++)
         {
@@ -1656,7 +1656,7 @@ void TrySpawnObjectEvents(s16 cameraX, s16 cameraY)
         else if (InTrainerHill())
             objectCount = 2;
         else
-            objectCount = gMapHeader.objectEventCount;
+            objectCount = gSaveBlock1Ptr->objectEventCount;
 
         for (i = 0; i < objectCount; i++)
         {

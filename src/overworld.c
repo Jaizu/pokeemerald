@@ -473,7 +473,7 @@ void ApplyNewEncryptionKeyToGameStats(u32 newKey)
 void LoadObjEventTemplatesFromHeader(void)
 {
     int i, c, n = 0;
-    
+
     // Clear map object templates
     CpuFill32(0, gSaveBlock1Ptr->objectEventTemplates, sizeof(gSaveBlock1Ptr->objectEventTemplates));
 
@@ -482,18 +482,18 @@ void LoadObjEventTemplatesFromHeader(void)
         gSaveBlock1Ptr->objectEventTemplates[n] = gMapHeader.events->objectEvents[i];
         n++;
     }
-    
+
     // Check to see if there's any map connections
     if (gMapHeader.connections) {
         int count = gMapHeader.connections->count;
         const struct MapConnection* connection;
         struct MapHeader const* map;
-        
+
         // For every map connection
         for (c = 0; c < count; c++) {
             connection = &gMapHeader.connections->connections[c];
             // If we've exceeded the size of the template array, do no more.
-            if (n >= OBJECT_EVENT_TEMPLATES_COUNT) break; 
+            if (n >= OBJECT_EVENT_TEMPLATES_COUNT) break;
             // Only check connections that can be seen in the overworld (eg, not dive or emerge)
             switch (connection->direction) {
                 case CONNECTION_NORTH:
@@ -506,7 +506,7 @@ void LoadObjEventTemplatesFromHeader(void)
             map = GetMapHeaderFromConnection(connection);
             if (!map || !map->events) continue;
             // Loop through that map's objects and add them to the template list as well
-            for (i = 0; i < map->events->objectEventCount && n < OBJECT_EVENT_TEMPLATES_COUNT; i++) 
+            for (i = 0; i < map->events->objectEventCount && n < OBJECT_EVENT_TEMPLATES_COUNT; i++)
             {
                 const struct ObjectEventTemplate* from = &map->events->objectEvents[i];
 #if MODERN
@@ -517,7 +517,7 @@ void LoadObjEventTemplatesFromHeader(void)
                 struct ObjectEventTemplate_Clone* clone = (struct ObjectEventTemplate_Clone*)&gSaveBlock1Ptr->objectEventTemplates[n];
                 struct ObjectEventTemplate* to = &gSaveBlock1Ptr->objectEventTemplates[n];
 #endif
-                
+
                 // Skip if too far away from the edge
                 switch (connection->direction) {
                     case CONNECTION_NORTH: // above
@@ -566,13 +566,13 @@ void LoadObjEventTemplatesFromHeader(void)
                         to->x += gMapHeader.mapLayout->width;
                         break;
                 }
-                // DebugPrintfLevel(MGBA_LOG_INFO, "Loading clone[n=%d]: lid=%d, target=%d mapid=%d:%d @ (%d, %d)", 
+                // DebugPrintfLevel(MGBA_LOG_INFO, "Loading clone[n=%d]: lid=%d, target=%d mapid=%d:%d @ (%d, %d)",
                 //     n, to->localId, clone->targetLocalId, clone->targetMapGroup, clone->targetMapNum, to->x, to->y);
                 n++;
             }
         }
     }
-    gMapHeader.objectEventCount = n;
+    gSaveBlock1Ptr->objectEventCount = n;
     #undef clone
 }
 
